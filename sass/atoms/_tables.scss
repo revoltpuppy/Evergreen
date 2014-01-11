@@ -1,0 +1,24 @@
+//For tables with the th left of the tds.
+.horizontal-table th{
+	//box model
+	border-top: 1px solid #ccc;
+	padding: 0.37037em 1.1111111111em 1.1111111111em 0;  //15/13.5 Should match the padding on td
+	//layout
+	vertical-align: top;
+}
+.horizontal-table tr:first-child th{
+	//box model
+	border-top: 1px solid black;
+}
+.horizontal-table:last-child{
+	//box model
+	border-bottom-width: 0;
+}
+
+//For normal tables that need the left-padding for whatever reason (e.g. background-colors that make the text look funny).
+.padded-table td{
+    padding-left: 1.1111111111em;  //15/13.5 Should match the padding on td
+}
+.padded-table td:last-child{
+	padding-right: 1.1111111111em;  //15/13.5 Should match the padding on td
+}

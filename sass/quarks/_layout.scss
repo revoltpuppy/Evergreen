@@ -1,0 +1,128 @@
+/*!*
+ * Layout Styles
+ *
+ * Styles for overarching page layout elements like main columns,
+ * rows, and wrappers.
+ *
+ * @section layout
+ */
+.wrapper{
+    margin: 0 auto;
+    display: block;
+}
+.wrapper:before,   //nega-clearfix! Clearfix that wraps the element around TOP margins.
+.wrapper:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[role="banner"]{
+	overflow: hidden;
+	background-color: #f3f3f3;
+}
+
+.page-header{
+	-webkit-transition: all .1s ease-in-out;  //Safari 6, Chrome 25
+            transition: all .1s ease-in-out;  //w3c
+}
+[role="navigation"],
+[role="main"]{
+	width: 100%;
+}
+[role="navigation"]{
+	clear: both;
+	display: table;
+	position: relative;
+}
+@media screen and (min-width:20em){
+	[role="navigation"]{
+	    @include x-rem(font-size, .657);
+		line-height: 1.427619682116684;
+		letter-spacing: .05em;
+	}
+}
+@media screen and (min-width:43em){
+	[role="navigation"]{
+		//box model
+		margin-left: 0;
+		width: 100%;
+		//typography
+        @include x-rem(font-size, 1.063);
+        letter-spacing: normal;
+        line-height: 1.323529411764706;  //22.5/17
+	}
+}
+
+.element-list,
+.element-list{  //Creates an un-bulleted list.
+	//box model
+    margin-left: 0;
+    padding-left: 0;
+    //lists
+    list-style-type: none;
+}
+
+/**
+ * Grid
+ *
+ * Styles related to the grid system.
+ *
+ * @section l-grid
+ */
+ @import "../atoms/grid";
+
+.index-wrapper,
+.content-wrapper{
+	//box model
+    border-top: 5px solid $evergreen-old-style;
+    margin-top: -5px;  //Compensate for 5px border
+    //backgrounds & borders
+    background-color: #F3F3F3;  //IE8
+    background-color: hsla(0,0%,95%,.95);
+    border-radius: 2px;
+}
+
+.main-content,
+.sidebar{
+    margin: 0 2%;
+}
+
+.content-wrapper .main-content{  //specified in .content-wrapper to not affect .index-wrapper
+    max-width: 45em;
+}
+.main-content{
+    margin-top: -5px;
+}
+@media screen and (min-width:43em){
+    .content-wrapper .main-content{
+        margin-right: 6%;  //I bumped this up for better readability on iPad and 800x600
+        margin-left: 6%;
+    }
+}
+@media screen and (min-width:70em){
+	.main-content{
+		position: relative;  //Creates a context for absolutely positioning the tertiary nav
+	}
+}
+.sidebar{
+	border-top: 2px dashed $evergreen-neue;
+}
+@media screen and (min-width:43em){
+	.sidebar{
+    	//box model
+		border-top-width: 0;
+        border-left:1px solid #ccc;
+        margin: 0 auto;
+        padding-left: 8%;
+        //typography
+        color: #333;
+        font-size: 14px;  //IE8
+        font-size: 0.875rem;
+        line-height: 1.607142857142857;  //22.5/14
+    }
+    .sidebar p,
+    .sidebar .base{
+        margin:0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
+    }
+}

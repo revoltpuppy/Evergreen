@@ -1,0 +1,318 @@
+/**
+ * 5. Responsive Overrides
+ *
+ * @section responsive
+ */
+
+/**
+ * 5.1 iPhone
+ *
+ * @subsection r-iphone
+ */
+@media screen and (min-width:20em){
+ 
+    /*Lists have a hard time breaking across columns, so there are some tricky fixes here.*/
+	ul.flexible{
+    	//box model
+    	margin-left: 0;  //Put the margin on each li instead.
+    	//layout
+        -webkit-column-count: 2;
+           -moz-column-count: 2;
+            -ms-column-count: 2;
+                column-count: 2;
+        -webkit-column-gap: 15px;
+           -moz-column-gap: 15px;
+            -ms-column-gap: 15px;
+                column-gap: 15px;
+    }
+    ul.flexible > li{
+    	//box model
+    	margin-bottom: 7.5px;  //IE8
+    	margin-bottom: 0.46875rem;  //7.5/16
+    	margin-left: 1.2662em;  //This should equal the default ul left margin.
+    	//layout
+	    display: block;
+	    //typography
+	    text-indent: -1.2662em;  //This should be the inverse of margin-left.
+    }
+    .flexible > li:before{
+    	//box model
+    	margin-left: 1.2662em;  //This should equal the default ul left margin.
+    	//layout
+    	display: list-item;
+    	float: left;
+    	//positioning
+    	position: relative;
+    	left: -1.2662em;  //This should be the inverse of margin-left.
+    	//typography
+    	text-indent: 0;  //Fixes a bug in Chrome where bullets won't display.
+    	//misc
+	    content: "";
+    }
+}
+
+
+
+
+    @media screen and (min-width:22em){
+        /**
+         * Base Styles
+         */
+        /**
+         * Layout Styles
+         */
+        .supplement-2-7{
+            width: 31.3333333333%;
+        }
+        /**
+         * Module Styles
+         */
+        .wordmark{
+            padding:0 1%;
+            width:62.6666666667%;
+            float:left;
+        }
+        .top-links{
+            clear: left;
+        }
+        .top-links .search-item{
+            display:none;
+        }
+        .search{
+            margin-left: 2%;
+            width: 29.3333333333%;
+            float: right;
+        }
+        
+        .feature-list > li{
+        	margin-right: 2%;
+        	width: 49%;
+	        float:left;
+        }
+        .feature-list > li:nth-child(odd){
+	        clear: left;
+        }
+        .feature-list > li:nth-child(even){
+	        margin-right: 0;
+        }
+    }  /* /min-width:22em */
+    
+    
+    
+        @media screen and (min-width:32em){
+            /**
+             * Base Styles
+             */
+            /**
+             * Layout Styles
+             */
+            .supplement-3-7{
+                margin-left:2%;
+                float:right;
+            }
+            .supplement-2-7{
+                width:26.571428571428571%;
+            }
+            .supplement-3-7{
+                width:40.857142857142857%;
+            }
+            
+            /**
+             * Module Styles
+             */
+            
+            .logo{
+	            width: 58%;
+            }
+            
+            .flexible{
+            	-webkit-column-count: 3;
+				   -moz-column-count: 3;
+				    -ms-column-count: 3;
+				        column-count: 3;
+            }
+            .unit-2-7 .flexible{
+                -webkit-column-count: 2;
+                   -moz-column-count: 2;
+                    -ms-column-count: 2;
+                        column-count: 2;
+            }
+        }  /* /min-width:32em */
+            
+    
+    
+            /**
+             * 5.2 7-Column Grid
+             *
+             * Officially 7-column grid territory.
+             *
+             * @subsection r-7-column
+             */
+            @media screen and (min-width:43em){
+                /**
+                 * Layout Styles
+                 */
+                .page-header{
+                    background-color: transparent;
+                }
+                
+                .search-toggle,
+                .student-toggle{
+					display: none;
+				}
+				[role="search"],
+				.active-search [role="search"]{  //In case active-search JS is toggled.
+					//box model
+					//margin: .618em 0;
+					padding: .618em .618em .618em 0;  //Use padding for height calculations in JS.
+					width: 40%;
+					//layout
+					float: right;
+					//positioning
+					position: static;
+					//backgrounds & borders
+					background-color: transparent;
+				}
+                
+                .index-wrapper{
+	                width: 96%;
+                }
+                .content-wrapper{
+                    width:67.428571428571429%;  //5/7
+                }
+                
+                .copyright{
+                    display: inline;
+                }
+                
+                /**
+                 * Module Styles
+                 */
+                .logo{
+	                width: 48%;
+                }
+				li.internal-users-alt{  //Search tools
+					display: inline;
+				}
+                .primary-nav:after{
+                	//layout
+                    clear: none;
+                    display: inline;
+                    //misc
+                    content: none;
+                }
+                .top-nav-link,
+				.top-nav-link:link,
+				.top-nav-link:visited,
+				.secondary-nav a,
+				.secondary-nav a:link,
+				.secondary-nav a:visited{
+					//typography
+				    font-weight: bold;
+				}
+                
+                .pull-box{
+                    margin-bottom: 1.071428571428571em;  //15px
+                }
+                .pull-quote,
+                .big-fact{
+                    margin: .2727272727em 0 .8181818182em 0;
+                }
+                
+                .unit-3-7 .flexible{
+                    -webkit-column-count: 2;
+                       -moz-column-count: 2;
+                       	-ms-column-count: 2;
+                            column-count: 2;
+                }
+                
+                .feature-list > li{
+                	//box model
+                	margin-right: 2%;
+                	width: 32%;
+                	width: 31.3333333333%\9;  //IE8
+                	//layout
+	                float: left;
+                }
+		        .feature-list > li:nth-child(odd){
+			        clear: none;
+		        }
+                .feature-list > li:nth-child(even){
+	                margin-right: 2%;
+                }
+                .feature-list > li:nth-child(3n){
+	                margin-right: 0;
+                }
+                .feature-list > li:nth-child(3n+1){
+	                clear: left;
+                }
+                /*.feature-list > li:nth-child(2n+3){
+	                margin-right: 2%;
+                }
+                .feature-list > li:nth-child(3n+4){
+	                margin-right: 0;
+                }*/
+            }
+            
+            @media screen and (min-width:70em){
+            
+                /**
+                 * Layout Styles
+                 */
+                .wrapper{
+                    max-width: 82em;
+                }
+                
+                /*.supplement-alt-1-2,
+                .supplement-alt-2-7{
+                	margin-right: 0;
+                    margin-left: -41.722972972972973%;  //It took weird math to get here.
+                    float: left;
+                }*/
+                
+                .index-wrapper,
+                .content-wrapper{
+                    margin-left: 16.285714285714286%;  //1/7
+                }
+                .index-wrapper{
+	                width: 81.714285714285714%;  //6/7
+                }
+                .content-wrapper{
+                    width: 53.142857142857143%;  //4/7
+                }
+                
+                /**
+                 * Module Styles
+                 */
+                .logo{
+	                width: 23%;
+                }
+                .top-nav-link,
+				.secondary-nav-link{
+					font-size: inherit;
+					line-height: inherit;
+				}
+                
+                .unit-3-7 .flexible{
+                    -webkit-column-count: 3;
+                       -moz-column-count: 3;
+                        -ms-column-count: 3;
+                            column-count: 3;
+                }
+
+                .pull-quote,
+                .big-fact{
+                    font-size: 28px;  //IE8
+                    font-size: 1.719rem;
+                    line-height: 1.090710779858208;  //30/27.505
+                }
+                
+                /*.illus-alt{
+	            	//box model
+	                margin: 0 0 0.631100639515315em -41.722972972972973%;  //7.5/11.884  Weird math for the left margin.
+					width: 38.260135135135135%;  //It took weird math to get here.
+	                //layout
+	                clear: left;
+	                float: left;
+	            }*/
+            }

@@ -1,0 +1,158 @@
+/*!*
+ * Base Styles
+ *
+ * Styles generally for generic html elements. Classed or IDed
+ * elements should typically be included in the Modules section.
+ *
+ * @section base
+ *
+ * Table of Contents
+ *
+ * 1. Typography ........... (_typography)
+ * 2. Tables ............... (table)
+ * 3. Forms ................ (form)
+ * 4. Buttons .............. (_buttons)
+ * 5. Hyphenation .......... (hyphens)
+ */
+
+*{
+	-webkit-box-sizing: border-box;  //Older Webkit
+       -moz-box-sizing: border-box;  //Firefox
+            box-sizing: border-box;
+}
+
+body{
+	//box model
+    margin: 0 auto;
+	//backgrounds & borders
+    background-color: #f3f3f3;
+}
+
+img{
+	border-width: 0;
+	max-width: 100%;
+}
+
+video{
+	height: auto;
+	width: 100%;
+}
+
+/**
+ * 1. Typography
+ *
+ * @section _typography
+ */
+@import "typography";
+
+/**
+ * 2. Tables
+ *
+ * @section table
+ */
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-width: 0;
+    margin: 1.481481481481481em 0;  //20/13.5
+    width: 100%;
+}
+th,
+td{
+   text-align: left;
+}
+th{
+    color: #000;
+    padding: 0 1.111111111111111em 0 0;
+    vertical-align: bottom;
+}
+td{
+	//box model
+    border: 0 solid #ccc;
+    border-top-width: 1px;
+    padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;  //5/13.5  15/13.5
+    //typography
+    color: #333;
+    vertical-align: top;
+}
+td:last-child{
+	padding-right: 0;
+}
+td strong,
+tfoot td{
+    color: #000;
+    font-weight: bold;
+}
+tr:first-child td{
+    border-color: #000;
+}
+
+//Collapse top space between cell padding and element margins.
+th > p:first-child,
+td > p:first-child,
+td > ul:first-child,
+td > ol:first-child,
+td > ul:first-child li:first-child > p:first-child,
+td > ol:first-child li:first-child > p:first-child,
+td > h1:first-child,
+td > h2:first-child,
+td > h3:first-child,
+td > h4:first-child,
+td > h5:first-child,
+td > h6:first-child{
+    margin-top: 0;
+}
+//Collapse bottom space between cell padding and element margins.
+th > p:last-child,
+td > p:last-child,
+td > ul:last-child,
+td > ol:last-child,
+td > ul:last-child li:last-child > p:last-child,
+td > ol:last-child li:last-child > p:last-child{
+    margin-bottom: 0;
+}
+
+@import "../atoms/tables";
+
+/**
+ * 3. Forms
+ *
+ * @section form
+ */
+input{
+	//box model
+    border: 1px solid #bbcfd7;
+	height: 27.506px;  /*IE8*/
+	height: 1.719rem;
+    margin-bottom: 1.262201279030629em; //15/11.884
+    padding: 0 2%;
+    //typography
+    font-size: 1em;
+}
+
+/**
+ * 4. Buttons
+ *
+ * @section _buttons
+ */
+@import "../atoms/buttons";
+
+/**
+ * 5. Hyphenation
+ *
+ * @section hyphens
+ */
+a,  //keep linked words whole
+a:link,
+.intro,
+.pull-quote,
+.big-fact{
+    -webkit-hyphens: none;
+       -moz-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none;
+}
+//For words that are so long they may cause overflow, like dichlorodiphenyltrichloroethane. Holy crap!
+.looong-word{
+    word-wrap: break-word;
+}

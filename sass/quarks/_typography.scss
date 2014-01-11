@@ -1,0 +1,254 @@
+/*!*
+ * Typographic Styles
+ *
+ * Base styles that make the text look nice and readable.
+ * 
+ * Table of Contents
+ *
+ * 1. Base Typography ........... (base-type)
+ * 2. Headings .................. (h)
+ * 3. Lists ..................... (l)
+ * 4. Links ..................... (a)
+ * 5. Other Typography .......... (other-type)
+ */
+
+/**
+ * 1. Base Typography
+ *
+ * @section base-type
+ */
+html{
+	font-size: 100%;
+}
+
+body{
+    font-family: $text-face;
+	text-rendering: optimizeLegibility;
+}
+
+body,
+input,
+button{
+	-webkit-font-smoothing: antialiased;  //Reduce text chubbiness
+}
+
+body,
+.base,
+#tertiary-nav,  //deprecated
+.tertiary-nav-h{
+    @include x-rem(font-size, 0.875);  //14px
+    line-height: 1.607142857142857;  //22.5/14
+}
+
+@media screen and (min-width:43em){
+	body,
+	.base{
+		@include x-rem(font-size, 1.063);  //17px
+	    line-height:1.323529411764706;  //22.5/17
+	}
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote,
+figure,
+.base{
+    margin:0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
+}
+
+@media screen and (min-width: 43em){
+    p,
+    ul,
+    ol,
+    dl,
+    blockquote,
+    figure,
+    .base{
+        margin:0.441176470588235em 0 0.882352941176471em 0;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
+    }
+}
+
+// Removing hyphen rules for now.
+// English doesn't have long enough words to warrant this,
+// and we’re not justifying text,
+// but consider it for narrow columns.
+//p{
+//    -webkit-hyphens: auto;
+//       -moz-hyphens: auto;
+//        -ms-hyphens: auto;
+//            hyphens: auto;
+//    -webkit-hyphenate-limit-lines: 2;
+//       -moz-hyphenate-limit-lines: 2;
+//        -ms-hyphenate-limit-lines: 2;
+//            hyphenate-limit-lines: 2;
+//}
+
+/**
+ * 2. Headings
+ *
+ * @section h
+ */
+h1{
+	margin: 0.818419903972065em 0 0 0;
+	@include x-rem(font-size, 2.291);  //36.656px
+    font-weight: normal;
+    line-height: 1.227629855958097;  //45/35.656
+}
+h2{
+    color:#666;
+    font-weight:bold;
+}
+h3{
+    color:#333;
+    font-weight: normal;
+}
+h4{
+    margin: 0.779950083194676em 0 0.363976705490849em 0;
+    @include x-rem(font-size, 1.202);
+    line-height: 1.559900166389351;  //30/19.232
+}
+h2,
+h3{
+    margin-top: 1.324152542372881em;  //30/22.656
+    @include x-rem(font-size, 1.416);  //22.656px
+    line-height: 1.324152542372881; //30/22.656
+}
+h1,
+h2,
+h3{
+	//Bottom margin should match the p's top margin exactly, for consistency. If they don't match, change this rule.
+    @include x-rem(margin-bottom, 0.46875); //7.5/16
+}
+
+@media screen and (min-width: 43em){
+	h1{
+	    margin: 0.673975557153127 0 0 0;   //30/44.5167
+	    @include x-rem(font-size, 2.782);  //44.512px
+		line-height: 1.010963335729691;  //45/44.5167
+	}
+	h2,
+	h3{
+	    margin-top: 1.090750436300175em;  //30/27.504
+	    @include x-rem(font-size, 1.719);  //27.504px
+	    line-height: 1.090750436300175; //30/27.504
+	}
+}
+
+/**
+ * 3. Lists
+ *
+ * @section l
+ */
+ul,
+ol{
+	margin-left: 1.2662em;
+	padding-left: 0;
+    list-style-type: disc;
+}
+ul,
+dl{
+    padding: 0;
+}
+dt{
+	//box model
+	margin-top: 0.535714285714286em;  //22.5/14/3 - Same as p margin-top
+	//typography
+    font-weight: bold;
+}
+dd{
+	margin-bottom: 1.071428571428571em;  //15/14 - Same as p margin-bottom
+    margin-left: 0;
+}
+dd > p:first-child
+dd > ul:first-child,
+dd > ol:first-child
+dd > blockquote:first-child{
+    margin-top: 0;
+}
+
+/**
+ * 4. Links
+ *
+ * @section a
+ */
+a,
+a:link,
+.internal-users a:visited,
+.search-tools a:visited,
+.tertiary-nav-list a:visited{
+	//box model
+    border-bottom: 1px solid mix(white, $blueberry-susan, 80);
+    //typography
+    color: $blueberry-susan;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:visited{
+    border-bottom-color: $wine;
+    color: $wine;
+}
+a:hover,
+.internal-users a:hover,
+.search-tools a:hover,
+.tertiary-nav-list a:hover{
+    border-bottom-color: $sky-blue;
+    color: $sky-blue;
+}
+a:focus,
+a:active{
+    outline: 1px dotted #333;
+}
+	/**
+	 * 4.1 Site Name Link
+	 *
+	 * @section a-site-name
+	 */
+	.logo a,
+	.site-name a{
+		border-bottom-width: 0;
+	}
+	.site-name a,
+	.site-name a:link,
+	.site-name a:visited,
+	.site-name a:hover{
+	    color: #fff;
+	    text-shadow: 0 1px 3px hsl(275, 33%, 11%);
+	}
+	
+
+/**
+ * 5. Other Typography
+ *
+ * @section other-type
+ */
+
+strong{
+	font-weight: bold;
+}
+
+em{
+	font-style: italic;
+}
+
+figcaption,
+small,
+caption,  //table caption
+.caption{
+	font-family: $small-face;
+	@include x-rem(font-size, 0.657);  //10.507px
+    line-height: 1.427619682116684;  //15/10.507
+}
+
+code,
+pre{
+	font-family: monospace, serif;
+}
+
+blockquote{
+	//box model
+	padding-left: 1em;
+	//typography
+	font-style: italic;
+}

@@ -1,0 +1,107 @@
+/**
+ * Buttons
+ *
+ * @section button
+ */
+button,
+.button,
+.button:link,
+.button:visited{
+	//box model
+    border: 1px solid $sky-blue;
+    margin-bottom: 1.262201279030629em;  //15/11.884
+    padding: 5px .5em;
+    //layout
+    display: inline-block;
+    //typography
+    color: #333333;
+    font-size: 17px;  //IE8
+    font-size: 1rem;
+    font-weight: normal;
+    text-shadow: 0 1px 0 $highlight;
+    //backgrounds & borders
+    background-color: mix(white, $sky-blue, 60%);  //IE 9
+    background-image: -webkit-linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //Safari 6, Chrome 25
+    background-image:         linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //w3c
+    border-radius: .2em;
+    //miscelaneous
+    box-shadow: 0 .2em .2em $shadow;
+    -webkit-transition: all .1s ease-in-out;  //Safari 6, Chrome 25
+            transition: all .1s ease-in-out;  //w3c
+}
+button:hover,
+.button:hover{
+	color: $sky-blue;
+	//backgrounds & borders
+    background-color: mix(white, $sky-blue, 80%);  //IE 9
+    background-image: -webkit-linear-gradient(mix(white, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //Safari 6, Chrome 25
+    background-image:         linear-gradient(mix(white, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //w3c
+    //miscelaneous
+    -webkit-transition: all .1s ease-in-out;  //Safari 6, Chrome 25
+            transition: all .1s ease-in-out;  //w3c
+}
+button:focus,
+.button:focus{
+    border-color:#999;
+    outline-width:0;
+}
+button:active,
+.button:active{
+	//backgrounds & borders
+    background-color: mix(white, $sky-blue, 40%);  //IE 9
+    background-image: -webkit-linear-gradient(mix(white, $sky-blue, 40%), mix($morning-light, $sky-blue, 60%));  //Safari 6, Chrome 25
+    background-image:         linear-gradient(mix(white, $sky-blue, 40%), mix($morning-light, $sky-blue, 60%));  //w3c
+    //miscelaneous
+    box-shadow: inset 0 .1em .2em hsla(0,0%,0%,.25);
+}
+
+.prime,
+.prime:link,
+.prime:visited{
+	//box model
+    border-color: $evergreen-old-style;
+    //backgrounds & borders
+    background-color: $evergreen-neue;  //IE 9
+    background-image: -webkit-linear-gradient(mix($morning-light, $evergreen-neue, 40%), $evergreen-neue);  //Safari 6, Chrome 25
+    background-image:         linear-gradient(mix($morning-light, $evergreen-neue, 40%), $evergreen-neue);  //w3c
+}
+.prime:hover{
+	//backgrounds & borders
+    background-color: mix(white, $evergreen-neue, 20%);  //IE 9
+    background-image: -webkit-linear-gradient(mix(white, $evergreen-neue, 60%), mix(white, $evergreen-neue, 20%));  //Safari 6, Chrome 25
+    background-image:         linear-gradient(mix(white, $evergreen-neue, 60%), mix(white, $evergreen-neue, 20%));  //w3c
+}
+.prime:focus{
+    border-color: #999;
+}
+.prime:active{
+	//backgrounds & borders
+    background-color: mix(white, $evergreen-neue, 40%);  //IE 9
+    background-image: -webkit-linear-gradient($evergreen-neue, mix($morning-light, $evergreen-neue, 20%));  //Safari 6, Chrome 25
+    background-image:         linear-gradient($evergreen-neue, mix($morning-light, $evergreen-neue, 20%));  //w3c
+}
+
+.is-disabled,
+.is-disabled:link,
+.is-disabled:visited,
+.is-disabled:hover,
+button[disabled],
+button[disabled]:hover{
+	//typography
+	color: #666;
+	text-shadow: 0 .05em 0 $highlight;
+	//backgrounds & borders
+	background: mix(white, $sky-blue, 60%) none;
+	border-color: #999;
+    //miscelaneous
+    box-shadow: 0 .1em .1em $shadow inset;
+    cursor: not-allowed;
+}
+.prime.is-disabled,
+.prime.is-disabled:link,
+.prime.is-disabled:hover,
+.prime.is-disabled:visited,
+.prime[disabled],
+.prime[disabled]:hover{
+	background: mix(white, $evergreen-neue, 20%) none;
+}

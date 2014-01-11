@@ -1,0 +1,175 @@
+/**
+ * Print Styles
+ *
+ * Print styles for the 2013 Evergreen template.
+ *
+ * To make something not printable, use the class .do-not-print.
+ *
+ * Styles in this file are organized according to the SMACSS principles:
+ * http://smacss.com/
+ *
+ * @project    The Evergreen State College
+ * @package    HTML 5 and CSS
+ * @author     The Evergreen State College
+ * @copyright  2013 by the author
+ * @cssdoc     0.2.22
+ * @license    Copyrighted
+ 
+ * Table of Contents
+ *
+ * 1. Base Styles ................... (base)
+ * 2. Layout Styles ................. (layout)
+ * 3. Module Styles ................. (module)
+ * 4. State Styles .................. (states)
+ */
+
+/**
+ * 1. Base Styles
+ *
+ * @section base
+ * @see http://smacss.com/book/type-base
+ */
+html,
+body{
+	height: auto;
+}
+body{
+	//box model
+	margin: 0 auto;
+}
+
+//Print URLs after links
+a:after,  //IE8
+a::after{
+	//typography
+    font-size: 11px;  //IE8
+    font-size: .657rem;
+    line-height: 1.427619682116684;  //15/10.507
+    //misc
+	content: " (" attr(href) ")";
+}
+//Print internal URLs referencing the root with the root prefix.
+a[href^="/"]:after,  //IE8
+a[href^="/"]::after{
+	content: " (http://evergreen.edu" attr(href) ")";
+}
+
+/**
+ * 2. Layout Styles
+ *
+ * @section layout
+ * @see http://smacss.com/book/type-layout
+ */
+[role=search],
+[role=navigation],
+.off-canvas{
+	display: none;
+}
+body,
+[role=banner],
+wrapper{
+    background: transparent none;  //Don't waste ink
+}
+.wrapper{
+	min-height: none;
+	max-width: none;
+}
+.content-wrapper{
+	//backgrounds & borders
+	background: white none;
+	border-color: black;
+}
+.content-wrapper,
+.sidebar-wrapper,
+.main-content,
+.sidebar{
+	margin: 0;
+	max-width: none;
+}
+
+.page-footer{
+	//box model
+	border-top: 1px solid black;
+	margin: 0;
+	padding-bottom: 0;
+	//typography
+	color: black;
+	//backgrounds & borders
+	background-color: transparent;
+}
+
+.unit-1-1,
+.unit-2-7,
+.unit-3-7,
+.unit-4-7,
+.unit-5-7{
+	margin: 0;
+}
+
+/**
+ * 3. Module Styles
+ *
+ * @section module
+ * @see http://smacss.com/book/type-module
+ */
+.logo{
+	margin: 0;
+}
+.logo a:after,  //IE8
+.logo a::after,
+.site-name a:after,  //IE8
+.site-name a::after{
+	content: "";
+}
+.site-name a,
+.site-name a:link,
+.site-name a:visited{
+	color: black;
+	text-shadow: none;
+}
+.hero,
+.supplement-alt-1-2{
+	//box model
+	margin-left: 2%;
+	width: auto;
+	max-width: 49%;
+	//layout
+	float: right;
+	//positioning
+	position: static;
+	z-index: auto;
+}
+#sitewide-alert,
+.hero,
+#tertiary-nav,
+.do-not-print{
+	display: none;
+}
+
+.box,
+.pull-box{
+	border: 1px solid black;
+	background: transparent none;
+}
+
+.pull-quote,
+.pull-quote + .figcaption{
+	color: hsl(0, 0%, 0%);
+}
+
+.page-footer .org,
+.page-footer .adr,
+.page-footer .street-address,
+.page-footer .location,
+.page-footer .tel{
+	display: inline;
+}
+
+/**
+ * 4. State Styles
+ *
+ * @section state
+ * @see http://smacss.com/book/type-state
+ */
+
+/*This file was written by Justin McDowell. ((O)O)*/

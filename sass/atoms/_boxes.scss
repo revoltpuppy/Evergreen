@@ -1,0 +1,74 @@
+/**
+ * Boxes
+ *
+ * Boxes for containing things, usually with a background color.
+ *
+ * @section box
+ */
+.notice,  //deprecated
+.box,
+p.box{  //WYSIWYG
+	//box model
+    padding: 0 2%;
+    //layout
+    overflow: hidden;
+    //backgrounds & borders
+    background-color: mix(white, $sky-blue, 80%);
+    background-image: url(images/texture-1.png);
+    border-radius: 2px;
+}
+.notice,  //deprecated
+.note{
+    border-left: 5px solid mix(white, $sky-blue, 60%);
+}
+@media screen and (min-width:22em){
+	.notice,  //deprecated
+	.note{
+    	padding-left:-webkit-calc(2% - 5px);  //Chrome 25, Safari 6, Mobile Safari 6, Blackberry Browser 10
+		padding-left:        calc(2% - 5px);  //w3c, IE 9-10, Firefox 19
+	}
+}
+.alert{
+	//border: 1px solid $wine;  //Conflicts with sitewide alert JS. Might be worth changing how that works.
+	color: $wine;
+	background-color: $highlight;
+}
+#sitewide-alert{
+	border-radius: 0;
+	transition: all .5s ease-in;
+}
+//captioned images
+.caption-box{
+	background-color: #f3f3f3;
+	background-color: hsla(0, 0%, 95%, .6666666667)
+}
+.caption-box img{
+	@include x-rem(margin-bottom, 0.625);
+}
+//pull quotes
+.pull-box{
+    background-color: $evergreen-neue;
+}
+
+/**
+ * Full Box
+ *
+ * A box with a header and possibly a footer.
+ *
+ * @section box-full
+ */
+
+.full-box{
+	border: 1px solid $sky-blue;
+	padding: 0;
+	background: $sky-blue url(images/texture-1.png);
+}
+.full-box h2,
+.full-box h3{
+	/*margin: 0;
+	padding: 1.090671126299716em 2% 2% 0.272667781574929em;*/  //30/27.506  7.5/27.506 //Padding here should match the default margin for these elements exactly. If they don't match, change this rule.
+	color: #fff;
+}
+.full-box > .box{
+	background-color: #f5f5f5;
+}

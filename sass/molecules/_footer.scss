@@ -1,0 +1,57 @@
+/**
+ * Footer Styles
+ *
+ * Styles for the page footer.
+ *
+ * Table of Contents
+ *
+ * 1. Footer ........... (mod-footer)
+ */
+
+[role="contentinfo"]{
+	//box-model
+	margin-top: 30px;  //IE8
+	margin-top: 1.875rem;  //30px
+    //layout
+    clear: left;
+    //typography
+    color: #fff;
+    //backgrounds & borders
+    background-color: #000;
+}
+[role="contentinfo"]:after,
+[role="contentinfo"]:before{
+	display: table;
+	clear: both;
+	content: ""
+}
+@media screen and (min-height:35em){
+	margin-top: 60px;  //IE8
+	margin-top: 3.75rem;  //60px
+}
+
+.page-footer a,
+.page-footer a:link,
+.page-footer a:visited{
+	border-color: mix(black, $evergreen-neue, 40%);
+    color: $evergreen-neue;
+}
+.page-footer a:hover{
+	border-color: $sky-blue;
+    color: $sky-blue;
+}
+.footer-map{
+	margin-left: 2%;
+	width: 35%;
+    display: block;
+    float: right;
+}
+.footer-map a{
+	border-width: 0;
+}
+@media screen and (min-width:22em){
+    .footer-map{
+    	width: 50%;
+    	max-width: 280px;
+    }
+}

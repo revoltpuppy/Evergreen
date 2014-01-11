@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@import "sass/css-header";  //Just for funsies
+@import "rem";  //Includes a function that provides a pixel-value fallback for rem size declarations
+/*!*
+ * Responsive Styles
+ *
+ * Styles for a new responsive template, to be rolled out across
+ * the website sooner or later.
+ *
+ * These styles were originally developed by Justin McDowell. They
+ * set up a mobile-first website that expands to three, then seven
+ * columns as the browser width increases. The baseline is set at
+ * 15 pixels.
+ *
+ * Styles in this file are organized according to the SMACSS
+ * principles: http://smacss.com/
+ *
+ * @project    The Evergreen State College
+ * @author     The Evergreen State College
+ * @copyright  2014 by the author
+ * @cssdoc     0.2.22
+ * @license    Copyrighted
+ */
+ 
+/**
+ * Sass Constants
+ *
+ * @section sass-constants
+ */
+$morning-light: #fdf4b6;
+$sky-blue: #0086ee;
+$evergreen-neue: #64933a;
+$evergreen-old-style: #46502b;
+$blueberry-susan: #492c5d;
+$wine: #600f21;
+$black: #000;
+
+$shadow: hsla(275, 33%, 11%, .25);
+$highlight: hsla(52, 95%, 85%, .5); //$morning-light
+
+$display-face: Helvetica, Arial, sans-serif;
+$text-face: Helvetica, Arial, sans-serif;
+$small-face: Verdana, Helvetica, Arial, sans-serif;
+
+@import "sass/quarks/base";
+@import "sass/quarks/layout";
+@import "sass/quarks/modules";
+@import "sass/quarks/states";
+@import "sass/atoms/responsive";
+
+/*This file was written by Justin McDowell. ((O)O)*/

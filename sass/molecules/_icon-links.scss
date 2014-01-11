@@ -1,0 +1,69 @@
+/**
+ * Related Nav
+ *
+ * Related links with iconographic circles.
+ *
+ * @section mod-typography-l-related
+ */
+.related-nav{
+    display: -webkit-flex;  //Note: Firefox does not support flex-wrap.
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+.related-nav > li{
+	//box model
+    margin:1.262201279030629em 0;
+    margin-right: 2%;
+    width: 31.3333333333%;
+    //layout
+    display: block;
+    vertical-align: top;
+    float: left;
+    //typography
+    text-align: center;
+}
+.related-nav > li:nth-child(3n){
+    margin-right: 0;
+}
+.related-nav > li:nth-child(3n+1){
+    clear: left;
+}
+.related-nav-icon{
+	//box model
+    padding: 15%;  //Whatever feels right.
+    //typography
+    text-align: center;
+    //backgrounds & borders
+    background-color: $blueberry-susan;
+    border-radius: 50%;
+    //misc
+    transition: all 0.2s;
+}
+.related-nav a:visited .related-nav-icon{
+    background: $wine
+}
+.related-nav a:hover .related-nav-icon{
+    background: $sky-blue;
+    //misc
+    box-shadow: 0 0 .2em $highlight inset;
+}
+@media screen and (min-width:22em){
+    .related-nav-icon{
+    	margin: 0 auto;
+        width: 75%;
+    }
+}
+@media screen and (min-width:32em){
+    .related-nav > li,
+    .related-nav > li:nth-child(3n){
+    	margin-right: 2%;
+        width: 15%;
+        width: 14.5%\9;  //IE8
+    }
+    .related-nav > li:nth-child(3n+1){
+        clear: none;
+    }
+    .related-nav > li:last-child{
+        margin-right: 0;
+    }
+}

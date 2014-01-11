@@ -1,0 +1,168 @@
+/**
+ * Tertiary Nav
+ *
+ * @subsection molecules/_tertiary-nav
+ */
+#tertiary-nav .accordion{
+    border-width: 0;
+    background-color: transparent;
+    
+    dd{
+	    background-color: hsla(0, 0%, 100%, .25);
+    }
+}
+ul.tertiary-nav-list{  //deprecated
+	margin-left: 0;
+    list-style-type: none;
+}
+.tertiary-nav-h{  //heading for tertiary nav in wider views
+    margin-top: -1px;  //compensate for border
+}
+.tertiary-nav-list li,
+#tertiary-nav dd > ul li{  //WYSIWYG
+    margin:0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
+}
+.tertiary-nav-list a,
+.tertiary-nav-list a:link,
+#tertiary-nav dd > ul a,  //WYSIWYG
+#tertiary-nav dd > ul a:link{  //WYSIWYG
+    border-bottom-width: 0;
+}
+
+@media screen and (min-width: 70em){
+	#tertiary-nav{
+		//box model
+    	margin-right: 0;
+        margin-left: -41.722972972972973%;  //It took weird math to get here.
+        width: 38.260135135135135%;  //It took weird math to get here.
+        //layout
+        float: left;
+        //positioning
+        position: absolute;  //Removes nav from the document flow
+    }
+    .tertiary-nav-h,
+    a.tertiary-nav-h{  //heading for tertiary nav in wider views
+        border-bottom: 1px solid #000;
+        margin-top: -1px;  //compensate for border
+        display: block;
+        color: #000;
+        font-weight: bold;
+    }
+    .tertiary-nav-h{
+        margin: 0.779950083194676em 0 0.363976705490849em 0; //1.169925124792013em 0 0.389975041597338em 0;
+        @include x-rem(font-size, 1.202);
+        line-height: 1.559900166389351;  //30/19.232
+    }
+}
+
+/**
+ * CSS Accordion
+ *
+ * An accordion that relies on radio buttons and labels instead of JavaScript.
+ *
+ * @see http://cssconf.com/talk-seddon.html
+ */
+[name="accordion-group"]{
+	display: none;
+}
+.tertiary-nav-h{
+	//box model
+	margin-bottom: 0;
+	padding: 0.631100639515315em 0;  //15/11.884/2
+}
+.accordion-group label{
+	//typography
+	color: $wine;
+	//misc
+	cursor: pointer;
+	
+	&:hover{
+		color: $sky-blue;
+	}
+}
+.accordion-toggle:before{  //IE8
+	content: "▶ ";
+}
+.accordion-toggle::before{
+	content: "▶ ";
+}
+[name="accordion-group"] ~ .tertiary-nav-h .accordion-toggle{
+	display: block;
+}
+[name="accordion-group"]:checked ~ .tertiary-nav-h .accordion-toggle{
+	display: none;
+}
+.accordion-dismiss:before{  //IE8
+	content: "▼ " !important;
+}
+.accordion-dismiss::before{
+	content: "▼ " !important;
+}
+[name="accordion-group"] ~ h4 .accordion-dismiss{
+	display: none;
+}
+[name="accordion-group"]:checked ~ h4 .accordion-dismiss{
+	display: block;
+}
+.accordion-body{
+	//box model
+	border-bottom: 1px solid black;
+	height: auto;
+	max-height: 0;
+	//layout
+	overflow: hidden;
+	//backgrounds & borders
+	background-color: hsla(0, 0%, 100%, .25);
+	//misc
+	box-shadow: 0 2px 2px $shadow inset;
+	//transition
+	-webkit-transition: max-height .2s ease 0s;;
+	transition: max-height .25s ease 0s;
+}
+.accordion-group li:last-child .accordion-body{
+	border-bottom-width: 0;
+}
+[name="accordion-group"]:checked ~ .accordion-body{
+	//box model
+	max-height: 500px;
+	//transition
+	transition-duration: .75s;
+}
+ul.accordion-inner{
+	padding: 0 2%;  //15/11.884/2
+}
+@media screen and (min-width: 70em){
+	.tertiary-nav-h{
+		padding: 0;
+	}
+	.accordion-group label,
+	.accordion-group label:hover{
+		//typography
+		color: black;
+		//misc
+		cursor: default;
+	}
+	.accordion-toggle:before{  //IE8
+		content: "";
+	}
+	.accordion-toggle::before{
+		content: "";
+	}
+	.accordion-dismiss:before{  //IE8
+		content: "" !important;
+	}
+	.accordion-dismiss::before{
+		content: "" !important;
+	}
+	.accordion-body{
+		border-bottom-width: 0;
+		max-height: 500px;
+		//backgrounds & borders
+		background-color: transparent;
+		//misc
+		box-shadow: none;
+	}
+	[name="accordion-group"]:checked ~ .accordion-body{
+		padding: 0;
+	}
+}

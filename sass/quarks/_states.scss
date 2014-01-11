@@ -1,0 +1,40 @@
+/*!*
+ * State Styles
+ *
+ * Styles generally for elements that might have different states,
+ * depending on how they're set. Typically these are for JS or
+ * otherwise app-like functions.
+ *
+ * @section states
+ */
+
+/**
+ * 1. Primary Nav States
+ *
+ * @section state-nav
+ */
+.is-current-section{
+	background-color: $evergreen-old-style;
+}
+.is-current-section a,
+.is-current-section a:link
+.is-current-section a:visited,
+.is-current-section .is-explored-section:hover,
+.is-current-section .is-explored-section:focus,
+.is-current-section .is-explored-section:active{
+	background-color: $evergreen-old-style;
+}
+
+/**
+ * 2. Accordions
+ *
+ * @section state-accordion
+ */
+
+.is-expanded:before{
+    content:"▼ " !important;
+}
+
+.is-hidden{
+	display: none;
+}
