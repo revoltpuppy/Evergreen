@@ -1,17 +1,12 @@
 /**
- * Footer Styles
+ * Footer
  *
- * Styles for the page footer.
- *
- * Table of Contents
- *
- * 1. Footer ........... (mod-footer)
+ * @section mod-footer
  */
 
 [role="contentinfo"]{
 	//box-model
-	margin-top: 30px;  //IE8
-	margin-top: 1.875rem;  //30px
+	@include x-rem(margin-top, 1.875);  //30px
     //layout
     clear: left;
     //typography
@@ -26,8 +21,7 @@
 	content: ""
 }
 @media screen and (min-height:35em){
-	margin-top: 60px;  //IE8
-	margin-top: 3.75rem;  //60px
+	@include x-rem(margin-top, 3.75);  //60px
 }
 
 .page-footer a,
@@ -45,13 +39,19 @@
 	width: 35%;
     display: block;
     float: right;
-}
-.footer-map a{
-	border-width: 0;
-}
-@media screen and (min-width:22em){
-    .footer-map{
+    
+    @media screen and (min-width:22em){
     	width: 50%;
     	max-width: 280px;
     }
+    
+    a{
+		border-width: 0;
+	}
+}
+    
+@media screen and (min-width:43em){
+	.footer-map img{
+		max-height: 112.5px;
+	}
 }
