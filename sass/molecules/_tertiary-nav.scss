@@ -3,6 +3,12 @@
  *
  * @subsection molecules/_tertiary-nav
  */
+
+#tertiary-nav,  //deprecated
+.tertiary-nav-h{
+    @include base-type;
+}
+
 #tertiary-nav .accordion{
     border-width: 0;
     background-color: transparent;
