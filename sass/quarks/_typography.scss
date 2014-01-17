@@ -33,18 +33,11 @@ button{
 }
 
 body,
-.base,
-#tertiary-nav,  //deprecated
-.tertiary-nav-h{
-    @include x-rem(font-size, 0.875);  //14px
-    line-height: 1.607142857142857;  //22.5/14
-}
-
-@media screen and (min-width:43em){
-	body,
-	.base{
-		@include x-rem(font-size, 1.063);  //17px
-	    line-height:1.323529411764706;  //22.5/17
+.base{
+    @include base-type;
+	
+	@media screen and (min-width:43em){
+		@include base-type-lg;
 	}
 }
 
