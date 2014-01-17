@@ -10,8 +10,7 @@
 .search-list,
 .primary-nav-unit h2,
 .nav li{
-    font-size: 12px;
-    font-size: .743rem;
+    @include x-rem(font-size, .743);
     line-height: 1.262201279030629; /*15/11.884*/
 }
 /**
@@ -33,27 +32,26 @@
     top: 0;
     left: 0;
     z-index: -1;
-}
-.hero-img{
-    width:100%;
-    display:block;
-}
-@media screen and (min-width:43em){
-	.hero{
-        width: 100%;
+    
+    @media screen and (min-width:43em){
+    	width: 100%;
     }
-    .hero-img{
-        width: 55.142857142857143%;  //4-column - 2% for right margins
-        max-width: 799px;
-        display: block;
-    }
-}
-@media screen and (min-width:70em){
-	.hero{
+    
+    @media screen and (min-width:70em){
     	//box model
         max-width: 82em;
         //positioning
         @include x-rem(top, 7);
+    }
+}
+.hero-img{
+    width:100%;
+    display:block;
+    
+	@media screen and (min-width:43em){
+        width: 55.142857142857143%;  //4-column - 2% for right margins
+        max-width: 799px;
+        display: block;
     }
 }
 
@@ -65,7 +63,12 @@
 @import "../molecules/homepage-hero";
     
     .profile-list > li{
+    	@include margin-default;
 	    position: relative;
+	    
+	    @media screen and (min-width:43em){
+		    @include margin-default-lg;
+	    }
     }
     .profile-img{
 	    display: block;
@@ -101,16 +104,13 @@
     color: $evergreen-neue;
     @include x-rem(font-size, 1.202);  //19.232px
 	line-height: 1.559900166389351;  //30/19.232
-}
-@media screen and (min-width: 43em){
-	.intro{
-    	//box model
+	
+	@media screen and (min-width: 43em){
+		//box model
         margin: 1.323529411764706em 0;
         //typography
         @include x-rem(font-size, 1.719);  //27.504
         line-height: 1.363438045375218; //37.5/27.504
-        /*@include x-rem(font-size, 1.063);  //17px
-        line-height: 1.764705882352941;  //30/17*/
 	}
 }
 
@@ -121,9 +121,7 @@
 
 .pull-quote,
 .big-fact{
-    font-size: 17px;  //IE8
-    @include x-rem(font-size, 1.063);
-    line-height: 1.311764705882353;  //22.3/17
+    @include base-type-lg;
 }
 .pull-quote,
 .pull-quote + .figcaption{
@@ -160,12 +158,13 @@
         margin-left: 1em;
         //lists
         list-style-type: disc;
-    }
-    .text-list ul{
-    	//box-model
-        margin-left:1em;
-        //lists
-        list-style-type:square;
+
+	    ul{
+	    	//box-model
+	        margin-left:1em;
+	        //lists
+	        list-style-type:square;
+		}
     }
     
     .singleton a{
@@ -227,60 +226,63 @@
          */
         .audience-nav{
         	background: $sky-blue url(images/texture-1.png);
-        }
-        .audience-nav a{
-	        padding: 0.535714285714286em 2% 1.071428571428571em 2%;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
-	        display: block;
-        }
-        .audience-nav a,
-        .audience-nav a:link,
-        .audience-nav a:hover,
-        .audience-nav a:visited{
-        	border-bottom-width: 0;
-        	color: #fff;
-        }
-        .audience-nav a:hover{
-	        background-color: $evergreen-neue;
+
+	        a{
+		        padding: 0.535714285714286em 2% 1.071428571428571em 2%;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
+		        display: block;
+	        }
+	        
+	        a,
+	        a:link,
+	        a:hover,
+	        a:visited{
+	        	border-bottom-width: 0;
+	        	color: #fff;
+	        }
+	        
+	        a:hover{
+		        background-color: $evergreen-neue;
+	        }
         }
         @media screen and (min-width:20em){
         	.audience-nav{
         		width: 100%;
         		display: table;
 	        	text-align: center;
-        	}
+
+	        	a{
+		        	//box model
+			        width: 100%;
+			        //layout
+			        display: -webkit-flex;
+			            display: -ms-flex;  //IE10
+			                display: flex;
+			        //flexbox
+			        align-items: center;
+			        justify-content: center;
+		        }
+	        }
 	        .audience-nav-row{
 		        display: table-row;  //IE8
 		        display: -webkit-flex;
-		            display: -ms-flex;
+		            display: -ms-flex;  //IE10
 		                display: flex;
 	        }
 	        .audience-nav-item{
 	        	border-bottom: 1px solid #fff;
-		        width:50%;
+		        width: 50%;
 		        display: table-cell;  //IE8
 		        display: -webkit-flex;
-		            display: -ms-flex;
+		            display: -ms-flex;  //IE10
 		                display: flex;
-	        }
-	        .audience-nav-item:first-child{
-		        border-right: 1px solid #fff;
-	        }
-	        .audience-nav a{
-	        	//box model
-		        width: 100%;
-		        //layout
-		        display: -webkit-flex;
-		            display: -ms-flex;
-		                display: flex;
-		        //flexbox
-		        align-items: center;
-		        justify-content: center;
+		                
+		        &:first-child{
+			        border-right: 1px solid #fff;
+		        }
 	        }
         }
         @media screen and (min-width:32em){
         	.audience-nav{
-        		/*margin: 0 2%;
-        		width: 96%;*/
 	        	float: left;
         	}
         }
@@ -301,11 +303,11 @@
         	}*/
         }
         
-        @media screen and (min-width:32em){
-	        /*.news{
+        /*@media screen and (min-width:32em){
+	        .news{
 		        float: left;
-	        }*/
-        }
+	        }
+        }*/
     
         /**
          * 4.1.3 Tag Clouds
@@ -316,13 +318,13 @@
          */
         .few{
 	        @include x-rem(font-size, 0.743);
-        }
-        .few a{
-	        font-weight: normal;
+	        
+	        a{
+		        font-weight: normal;
+	        }
         }
         .many{
-            font-size: 1.063rem;
-            line-height: 1.323529411764706;  //22.5/17
+            @include base-type-lg;
         }
     
 @import "../atoms/media-block";
