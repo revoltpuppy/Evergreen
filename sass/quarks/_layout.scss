@@ -126,3 +126,49 @@
         margin:0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
     }
 }
+
+/**
+ * Hidden Elements
+ *
+ * For displaying less essential elements only when screen size permits.
+ *
+ * @section l-hidden
+ */
+.gt20,
+.gt22,
+.gt32,
+.gt43,
+.gt70,
+.gt88{
+	display: none;
+}
+@media screen and (min-width:20em){
+	.gt20{
+		display: table-cell;
+	}
+}
+@media screen and (min-width:22em){
+	.gt22{
+		display: table-cell;
+	}
+}
+@media screen and (min-width:32em){
+	.gt32{
+		display: table-cell;
+	}
+}
+@media screen and (min-width:43em){
+	.gt43{
+		display: table-cell;
+	}
+}
+@media screen and (min-width:70em){
+	.gt70{
+		display: table-cell;
+	}
+}
+@media screen and (min-width:88em){
+	.gt88{
+		display: table-cell;
+	}
+}
