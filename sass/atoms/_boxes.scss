@@ -48,6 +48,10 @@ p.box{  //WYSIWYG
 //pull quotes
 .pull-box{
     background-color: $evergreen-neue;
+    
+    @media screen and (min-width:43em){
+    	margin-bottom: 1.071428571428571em;  //15px
+    }
 }
 
 /**
