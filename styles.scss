@@ -1,6 +1,7 @@
 @charset "UTF-8";
-@import "sass/css-header";  //Just for funsies
+@import "compass";
 @import "rem";  //Includes a function that provides a pixel-value fallback for rem size declarations
+@import "sass/css-header";  //Just for funsies
 /*!*
  * Responsive Styles
  *
