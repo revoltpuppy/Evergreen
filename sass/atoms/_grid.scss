@@ -95,10 +95,24 @@
 	    float:right;
 	}
 }
+@media screen and (min-width:22em){
+	.supplement-2-7{  //deprecated?
+		width: 31.3333333333%;
+	}
+}
 @media screen and (min-width:32em){
 	.supplement-alt-1-2,
     .supplement-alt-2-7{
         width: 38.260135135135135%;  //It took weird math to get here.
+    }
+    
+    .supplement-2-7{  //deprecated?
+        width: 26.571428571428571%;
+    }
+    .supplement-3-7{  //deprecated?
+        margin-left: 2%;
+        width: 40.857142857142857%;
+        float: right;
     }
 }
 @media screen and (min-width:70em){
