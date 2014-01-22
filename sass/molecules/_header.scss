@@ -55,12 +55,25 @@
 		width: 58%;
 		margin: .618em 2% 0 2%;
 		float: left;
-	}
-	.logo a,
-	.logo a:link,
-	.logo a:visited,
-	.logo a:hover{
-		border-bottom-width: 0;
+		
+		@media screen and (min-width:32em){
+            width: 58%;
+        }
+        
+        @media screen and (min-width:43em){
+            width: 48%;
+        }
+        
+        @media screen and (min-width:70em){
+            width: 23%;
+        }
+	
+		a,
+		a:link,
+		a:visited,
+		a:hover{
+			border-bottom-width: 0;
+		}
 	}
     /**
      * 3.1.1 Search
@@ -170,6 +183,11 @@
 	}
 	.internal-users{
 		margin-top: 0;
+	}
+	.search-tools{
+		margin-left: 0;  //Can be removed once .element-list propogates on .search-tools
+		padding-left: 0;  //Can be removed once .element-list propogates on .search-tools
+		@include base-type;
 	}
 	.search-tools li{
 		display: inline;
