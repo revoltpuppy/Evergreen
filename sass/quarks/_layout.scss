@@ -9,6 +9,10 @@
 .wrapper{
     margin: 0 auto;
     display: block;
+    
+    @media screen and (min-width:70em){
+	    max-width: 82em;
+    }
 }
 .wrapper:before,   //nega-clearfix! Clearfix that wraps the element around TOP margins.
 .wrapper:after{
