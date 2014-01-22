@@ -122,6 +122,15 @@
 .pull-quote,
 .big-fact{
     @include base-type-lg;
+    
+    @media screen and (min-width:43em){
+		margin: .2727272727em 0 .8181818182em 0;
+    }
+    
+    @media screen and (min-width:70em){
+		@include x-rem(font-size, 1.719);  //20px
+		line-height: 1.090710779858208;  //30/27.505
+    }
 }
 .pull-quote,
 .pull-quote + .figcaption{
@@ -171,6 +180,50 @@
         font-weight: normal;
     }
     
+    .feature-list{
+	    
+    	> li{
+		    @media screen and (min-width:22em){
+				margin-right: 2%;
+				width: 49%;
+				float:left;
+				
+				&:nth-child(odd){
+					clear:left;
+				}
+				
+				&:nth-child(even){
+					margin-right: 0;
+				}
+			}
+	    
+		    @media screen and (min-width:43em){
+	        	//box model
+	        	margin-right: 2%;
+	        	width: 32%;
+	        	width: 31.3333333333%\9;  //IE8
+	        	//layout
+	            float: left;
+	            
+	            &:nth-child(odd){
+	            	clear: none;
+	            }
+	            
+	            &:nth-child(even){
+		            margin-right: 2%;
+	            }
+	            
+	            &:nth-child(3n){
+	            	margin-right: 0;
+	            }
+	            
+	            &:nth-child(3n+1){
+	            	clear: left;
+	            }
+		    }
+		}
+    }
+
         /**
          * 4.1.1 Accordion
          *
@@ -216,6 +269,54 @@
         }
         
         @import "../molecules/icon-links";
+
+	    /*Lists have a hard time breaking across columns, so there are some tricky fixes here.*/
+		ul.flexible{
+	    	//box model
+	    	margin-left: 0;  //Put the margin on each li instead.
+	    	//layout
+	        -webkit-column-count: 2;
+	           -moz-column-count: 2;
+	            -ms-column-count: 2;
+	                column-count: 2;
+	        -webkit-column-gap: 15px;
+	           -moz-column-gap: 15px;
+	            -ms-column-gap: 15px;
+	                column-gap: 15px;
+	                
+			@media screen and (min-width:32em){
+				-webkit-column-count: 3;
+				   -moz-column-count: 3;
+				    -ms-column-count: 3;
+				        column-count: 3;
+			}
+	    }
+		@media screen and (min-width:20em){
+		    ul.flexible > li{
+		    	//box model
+		    	margin-bottom: 7.5px;  //IE8
+		    	margin-bottom: 0.46875rem;  //7.5/16
+		    	margin-left: 1.2662em;  //This should equal the default ul left margin.
+		    	//layout
+			    display: block;
+			    //typography
+			    text-indent: -1.2662em;  //This should be the inverse of margin-left.
+		    }
+		    .flexible > li:before{
+		    	//box model
+		    	margin-left: 1.2662em;  //This should equal the default ul left margin.
+		    	//layout
+		    	display: list-item;
+		    	float: left;
+		    	//positioning
+		    	position: relative;
+		    	left: -1.2662em;  //This should be the inverse of margin-left.
+		    	//typography
+		    	text-indent: 0;  //Fixes a bug in Chrome where bullets won't display.
+		    	//misc
+			    content: "";
+		    }
+		}
         
         /**
          * 4.1.2 Audience Nav
@@ -243,13 +344,12 @@
 	        a:hover{
 		        background-color: $evergreen-neue;
 	        }
-        }
-        @media screen and (min-width:20em){
-        	.audience-nav{
-        		width: 100%;
+	        
+	        @media screen and (min-width:20em){
+	        	width: 100%;
         		display: table;
 	        	text-align: center;
-
+	        	
 	        	a{
 		        	//box model
 			        width: 100%;
@@ -262,7 +362,12 @@
 			        justify-content: center;
 		        }
 	        }
-	        .audience-nav-row{
+	        @media screen and (min-width:32em){
+				float: left;
+	        }
+        }
+        @media screen and (min-width:20em){
+        	.audience-nav-row{
 		        display: table-row;  //IE8
 		        display: -webkit-flex;
 		            display: -ms-flex;  //IE10
@@ -280,11 +385,6 @@
 			        border-right: 1px solid #fff;
 		        }
 	        }
-        }
-        @media screen and (min-width:32em){
-        	.audience-nav{
-	        	float: left;
-        	}
         }
         @media screen and (min-width:70em){
         	/*.audience-nav{
