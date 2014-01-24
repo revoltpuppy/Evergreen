@@ -7,7 +7,7 @@ var illusRotationRange = 2;  //how far in either direction an illustration can r
  *
  * Fiddle with this: http://jsfiddle.net/Rtezs/2/
  */
-$(function(){
+/*$(function(){
 	var $search = $("[role='search']"),
 	$internalUsers = $(".internal-users"),
 	$searchH = $search.outerHeight();
@@ -61,7 +61,7 @@ $(function(){
         resetIU();
         $(".page-header").css("margin-top", "");
     });
-});
+});*/
 
 /**
  * setTertiaryNav
