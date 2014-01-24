@@ -29,9 +29,13 @@ p.box{  //WYSIWYG
 	}
 }
 .alert{
+	//box model
 	//border: 1px solid $wine;  //Conflicts with sitewide alert JS. Might be worth changing how that works.
+	//typography
 	color: $wine;
+	//backgrounds & borders
 	background-color: $highlight;
+	border-radius: 0;
 }
 #sitewide-alert{
 	border-radius: 0;
