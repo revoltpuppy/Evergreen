@@ -112,6 +112,11 @@ td > ol:last-child li:last-child > p:last-child{
     margin-bottom: 0;
 }
 
+caption{
+	border-top: 1px solid;
+	caption-side: bottom;
+}
+
 @import "../atoms/tables";
 
 /**
