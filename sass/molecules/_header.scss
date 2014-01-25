@@ -9,16 +9,24 @@
 	 *
 	 * Togglable dropdowns for internal user links and search bar.
 	 */
+	input[name="header-toggle"]{  //Don't show the checkboxes
+		display: none;
+	}
+	input + .header-dropdown{
+		max-height: 0;
+		overflow: hidden;
+		-webkit-transition: .5s all ease;
+		        transition: .5s all ease;
+	}
+	input:checked + .header-dropdown{
+		max-height: 8em;
+		-webkit-transition: .5s all ease;
+		        transition: .5s all ease;
+	}
 	.internal-users,
 	[role="search"]{
 		//box model
 		width: 100%;
-		display: block;
-		//positioning
-		position: absolute;
-		//transitions
-		-webkit-transition: .2s all ease;
-		        transition: .2s all ease;
 	}
 	
 	.internal-users{
@@ -27,25 +35,34 @@
 	}
 	.internal-users > li{
 		//box model
-		padding: 0.673213669603561em; //8/11.8833
+		padding: 0.673213669603561em;  //8/11.8833
 		width: 50%;
 		//layout
 		float: left;
 	}
 	
+	#search-flag + .header-dropdown{
+		@media screen and (min-width:43em){
+			max-height: none;
+			overflow: visible;
+		}
+	}
+	
 	[role="search"]{
-		//margin: 0 .618em;
 		margin: 0;
 		padding: .618em;
 		overflow: hidden;
-		top: -3.236em;  //1.618*2
 		background-color: mix(white, $evergreen-neue, 80%);
-	}
-	.active-internal-users .internal-users,
-	.active-search [role="search"]{
-		//box model
-		margin: 0;
-		top: 0;
+		
+		@media screen and (min-width:43em){
+			//box model
+			padding: .618em .618em .618em 0;  //Use padding for height calculations in JS.
+			width: 40%;
+			//layout
+			float: right;
+			//backgrounds & borders
+			background-color: transparent;
+		}
 	}
 	
 	/**
@@ -101,6 +118,10 @@
 		//typography
 		text-align: center;
 		text-decoration: none;
+		
+		@media screen and (min-width:43em){
+			display: none;
+		}
 	}
 	.search-toggle,
 	.search-toggle:link{
