@@ -1,0 +1,263 @@
+//New Colors
+.morning-light{
+	background-color: $morning-light;
+}
+.sky-blue{
+	background-color: $sky-blue;
+}
+.evergreen-neue{
+	background-color: $evergreen-neue;
+}
+.evergreen-old-style{
+	background-color: $evergreen-old-style;
+}
+.blueberry-susan{
+	background-color: $blueberry-susan;
+}
+.wine{
+	background-color: $wine;
+}
+.black{
+	background-color: $black;
+}
+
+//20% Tint
+.sky-blue-t-20{
+	background-color: mix(white, $sky-blue, 20%);
+}
+.evergreen-neue-t-20{
+	background-color: mix(white, $evergreen-neue, 20%);
+}
+.evergreen-old-style-t-20{
+	background-color: mix(white, $evergreen-old-style, 20%);
+}
+.blueberry-susan-t-20{
+	background-color: mix(white, $blueberry-susan, 20%);
+}
+.wine-t-20{
+	background-color: mix(white, $wine, 20%);
+}
+.black-t-20{
+	background-color: mix(white, $black, 20%);
+}
+
+//40% Tint
+.sky-blue-t-40{
+	background-color: mix(white, $sky-blue, 40%);
+}
+.evergreen-neue-t-40{
+	background-color: mix(white, $evergreen-neue, 40%);
+}
+.evergreen-old-style-t-40{
+	background-color: mix(white, $evergreen-old-style, 40%);
+}
+.blueberry-susan-t-40{
+	background-color: mix(white, $blueberry-susan, 40%);
+}
+.wine-t-40{
+	background-color: mix(white, $wine, 40%);
+}
+.black-t-40{
+	background-color: mix(white, $black, 40%);
+}
+
+//60% Tint
+.sky-blue-t-60{
+	background-color: mix(white, $sky-blue, 60%);
+}
+.evergreen-neue-t-60{
+	background-color: mix(white, $evergreen-neue, 60%);
+}
+.evergreen-old-style-t-60{
+	background-color: mix(white, $evergreen-old-style, 60%);
+}
+.blueberry-susan-t-60{
+	background-color: mix(white, $blueberry-susan, 60%);
+}
+.wine-t-60{
+	background-color: mix(white, $wine, 60%);
+}
+.black-t-60{
+	background-color: mix(white, $black, 60%);
+}
+
+//80% Tint
+.sky-blue-t-80{
+	background-color: mix(white, $sky-blue, 80%);
+}
+.evergreen-neue-t-80{
+	background-color: mix(white, $evergreen-neue, 80%);
+}
+.evergreen-old-style-t-80{
+	background-color: mix(white, $evergreen-old-style, 80%);
+}
+.blueberry-susan-t-80{
+	background-color: mix(white, $blueberry-susan, 80%);
+}
+.wine-t-80{
+	background-color: mix(white, $wine, 80%);
+}
+.black-t-80{
+	background-color: mix(white, $black, 80%);
+}
+
+//90% Tint
+.sky-blue-t-90{
+	background-color: mix(white, $sky-blue, 90%);
+}
+.evergreen-neue-t-90{
+	background-color: mix(white, $evergreen-neue, 90%);
+}
+.evergreen-old-style-t-90{
+	background-color: mix(white, $evergreen-old-style, 90%);
+}
+.blueberry-susan-t-90{
+	background-color: mix(white, $blueberry-susan, 90%);
+}
+.wine-t-90{
+	background-color: mix(white, $wine, 90%);
+}
+.black-t-90{
+	background-color: mix(white, $black, 90%);
+}
+
+//20% Shade
+.sky-blue-s-20{
+	background-color: mix(black, $sky-blue, 20%);
+}
+.evergreen-neue-s-20{
+	background-color: mix(black, $evergreen-neue, 20%);
+}
+.evergreen-old-style-s-20{
+	background-color: mix(black, $evergreen-old-style, 20%);
+}
+.blueberry-susan-s-20{
+	background-color: mix(black, $blueberry-susan, 20%);
+}
+.wine-s-20{
+	background-color: mix(black, $wine, 20%);
+}
+
+//40% Shade
+.sky-blue-s-40{
+	background-color: mix(black, $sky-blue, 40%);
+}
+.evergreen-neue-s-40{
+	background-color: mix(black, $evergreen-neue, 40%);
+}
+.evergreen-old-style-s-40{
+	background-color: mix(black, $evergreen-old-style, 40%);
+}
+.blueberry-susan-s-40{
+	background-color: mix(black, $blueberry-susan, 40%);
+}
+.wine-s-40{
+	background-color: mix(black, $wine, 40%);
+}
+
+//60% Shade
+.sky-blue-s-60{
+	background-color: mix(black, $sky-blue, 60%);
+}
+.evergreen-neue-s-60{
+	background-color: mix(black, $evergreen-neue, 60%);
+}
+.evergreen-old-style-s-60{
+	background-color: mix(black, $evergreen-old-style, 60%);
+}
+.blueberry-susan-s-60{
+	background-color: mix(black, $blueberry-susan, 60%);
+}
+.wine-s-60{
+	background-color: mix(black, $wine, 60%);
+}
+
+//80% Shade
+.sky-blue-s-80{
+	background-color: mix(black, $sky-blue, 80%);
+}
+.evergreen-neue-s-80{
+	background-color: mix(black, $evergreen-neue, 80%);
+}
+.evergreen-old-style-s-80{
+	background-color: mix(black, $evergreen-old-style, 80%);
+}
+.blueberry-susan-s-80{
+	background-color: mix(black, $blueberry-susan, 80%);
+}
+.wine-s-80{
+	background-color: mix(black, $wine, 80%);
+}
+
+
+
+
+//Old Colors
+$red-old-style: #7c1300;
+$gold-old-style: #960;
+$blue-old-style: #205f7a;
+//Note that Evergreen Old Style and Black are held over to the new colors.
+.red-old-style{
+	background-color: #7c1300;
+}
+.gold-old-style{
+	background-color: #960;
+}
+.blue-old-style{
+	background-color: #205f7a;
+}
+
+//20% Tint
+.red-old-style-t-20{
+	background-color: mix(white, $red-old-style, 20%);
+}
+.gold-old-style-t-20{
+	background-color: mix(white, $gold-old-style, 20%);
+}
+.blue-old-style-t-20{
+	background-color: mix(white, $blue-old-style, 20%);
+}
+
+//40% Tint
+.red-old-style-t-40{
+	background-color: mix(white, $red-old-style, 40%);
+}
+.gold-old-style-t-40{
+	background-color: mix(white, $gold-old-style, 40%);
+}
+.blue-old-style-t-40{
+	background-color: mix(white, $blue-old-style, 40%);
+}
+
+//60% Tint
+.red-old-style-t-60{
+	background-color: mix(white, $red-old-style, 60%);
+}
+.gold-old-style-t-60{
+	background-color: mix(white, $gold-old-style, 60%);
+}
+.blue-old-style-t-60{
+	background-color: mix(white, $blue-old-style, 60%);
+}
+
+//80% Tint
+.red-old-style-t-80{
+	background-color: mix(white, $red-old-style, 80%);
+}
+.gold-old-style-t-80{
+	background-color: mix(white, $gold-old-style, 80%);
+}
+.blue-old-style-t-80{
+	background-color: mix(white, $blue-old-style, 80%);
+}
+
+//90% Tint
+.red-old-style-t-90{
+	background-color: mix(white, $red-old-style, 90%);
+}
+.gold-old-style-t-90{
+	background-color: mix(white, $gold-old-style, 90%);
+}
+.blue-old-style-t-90{
+	background-color: mix(white, $blue-old-style, 90%);
+}
