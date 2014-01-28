@@ -113,13 +113,17 @@
         line-height: 1.363438045375218; //37.5/27.504
 	}
 }
+	
+.intro-alt{
+	color: #333;
+	font-weight: bold;
+}
 
 .details{
     @include x-rem(font-size, .657);  //10.507px;
     line-height: 1.427619682116684;  //15/10.507
 }
 
-.pull-quote,
 .big-fact{
     @include base-type-lg;
     
@@ -132,13 +136,7 @@
 		line-height: 1.090710779858208;  //30/27.505
     }
 }
-.pull-quote,
-.pull-quote + .figcaption{
-    color: #f3f3f3;
-}
-.pull-quote{
-    font-style: italic;
-}
+
 .key-number{  //e.g. http://www.evergreen.edu/about/impact/
 	//box model
 	margin: 0.818419903972065em 0 0 0;
