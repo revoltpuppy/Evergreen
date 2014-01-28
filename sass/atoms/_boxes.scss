@@ -37,10 +37,11 @@ p.box{  //WYSIWYG
 	background-color: $highlight;
 	border-radius: 0;
 }
-#sitewide-alert{
+#sitewide-alert{  //deprecated
 	border-radius: 0;
 	transition: all .5s ease-in;
 }
+
 //captioned images
 .caption-box{
 	background-color: #f3f3f3;
@@ -56,6 +57,33 @@ p.box{  //WYSIWYG
     @media screen and (min-width:43em){
     	margin-bottom: 1.071428571428571em;  //15px
     }
+}
+.pull-quote{
+    @include base-type-lg;
+    
+    @media screen and (min-width:43em){
+		margin: .2727272727em 0 .8181818182em 0;
+    }
+    
+    @media screen and (min-width:70em){
+		@include x-rem(font-size, 1.719);  //20px
+		line-height: 1.090710779858208;  //30/27.505
+    }
+}
+.pull-quote,
+.pull-quote + .figcaption{
+    color: #f3f3f3;
+}
+.pull-quote{
+    font-style: italic;
+}
+
+.pull-box-alt{
+	background-color: mix(white, $sky-blue, 80%);
+	
+	.pull-quote{
+		color: #333;
+	}
 }
 
 /**
