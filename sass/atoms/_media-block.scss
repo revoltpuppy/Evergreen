@@ -6,9 +6,11 @@
  * @section mod-media
  */
 .media{
-	display: -ms-flexbox;  //IE10
+	clear: left;  //IE9
+	display:  -ms-flexbox;  //IE10
 	display: -webkit-flex;  //Safari
-	display: flex;  //W3C
+	display:         flex;  //W3C
+	//layout
 }
 .media-img,
 .media-img:link{
