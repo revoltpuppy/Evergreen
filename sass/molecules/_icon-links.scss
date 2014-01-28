@@ -34,13 +34,13 @@
     //typography
     text-align: center;
     //backgrounds & borders
-    background-color: $blueberry-susan;
+    background-color: $wine;
     border-radius: 50%;
     //misc
     transition: all 0.2s;
 }
 .related-nav a:visited .related-nav-icon{
-    background: $wine
+    background: $evergreen-neue;
 }
 .related-nav a:hover .related-nav-icon{
     background: $sky-blue;
