@@ -133,7 +133,7 @@ function pushFooter(){
  * See: http://css-tricks.com/NetMag/FluidWidthVideo/demo.php
  */
 $(function(){
-	var $allVideos = $("iframe[src^='http://player.vimeo'], iframe[src^='http://www.youtube'], object, embed"),  //Get all videos
+	var $allVideos = $("iframe[src*='//player.vimeo'], iframe[src*='//www.youtube'], object, embed"),  //Get all videos
 	$fluidEl = $("figure");
     
 	$allVideos.each(function(){
