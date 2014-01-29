@@ -6,12 +6,14 @@
  * @section grid
  */
 
-.unit-1-7,
+.unit-1-7,  //7-column
 .unit-2-7,
 .unit-3-7,
 .unit-4-7,
 .unit-5-7,
 .unit-6-7,
+.unit-1-3,  //3-column
+.unit-2-3,
 .unit-1-1{
     margin: 0 2%;
 }
@@ -24,7 +26,7 @@
     display: block;
 }
 
-@media screen and (min-width:32em){
+@media screen and (min-width:43em){
 	.unit-1-1,
 	.unit-1-2{
 		//box model
@@ -37,6 +39,15 @@
     	margin: 0 2%;
         width: 46%;
     }
+    
+	.unit-1-3{
+		width: 29.3333333333%;
+		float: left;
+	}
+	.unit-2-3{
+		width: 62.66666666667%;
+		float: left;
+	}
 }
 
 @media screen and (min-width:43em){
