@@ -40,20 +40,20 @@
     transition: all 0.2s;
 }
 .related-nav a:visited .related-nav-icon{
-    background: $evergreen-neue;
+    background: $wine;
 }
 .related-nav a:hover .related-nav-icon{
     background: $sky-blue;
     //misc
     box-shadow: 0 0 .2em $highlight inset;
 }
-@media screen and (min-width:22em){
+@media screen and (min-width: 22em){
     .related-nav-icon{
     	margin: 0 auto;
         width: 75%;
     }
 }
-@media screen and (min-width:32em){
+@media screen and (min-width: 32em){
     .related-nav > li,
     .related-nav > li:nth-child(3n){
     	margin-right: 2%;
