@@ -158,14 +158,11 @@
 		//border: 1px solid #ccc;
 		margin-right: -30px;
 		margin-right: -1.719rem;
-		//height: 27.506px;  /*IE8*/
-		//height: 1.719rem;
 		position: relative;
 		width: 100%;
 		-webkit-appearance: none;
 		   -moz-appearance: none;
 	}
-	[placeholder]:focus:-moz-placeholder,  //Firefox <19
 	[placeholder]:focus::-moz-placeholder{  //Firefox 19+
 		color: transparent;
 	}
@@ -199,8 +196,8 @@
 	.internal-users,
     .search-tools{
 		margin-bottom: 0;
-		@include x-rem(font-size, 0.743);  //12px
-		line-height: 1.089061960903116;
+		@include base-type;
+		line-height: 1.071428571428571;
 	}
 	.internal-users{
 		margin-top: 0;
@@ -208,16 +205,13 @@
 	.search-tools{
 		margin-left: 0;  //Can be removed once .element-list propogates on .search-tools
 		padding-left: 0;  //Can be removed once .element-list propogates on .search-tools
-		@include base-type;
 	}
 	.search-tools li{
 		display: inline;
 	}
-	.search-tools li:after,
 	.search-tools li::after{
 		content: " | ";
 	}
-	.search-tools li:last-child:after,
 	.search-tools li:last-child::after{
 		content: "";
 	}
