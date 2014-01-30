@@ -138,7 +138,7 @@
  *
  * @section l-hidden
  */
-.gt20,
+/*.gt20,
 .gt22,
 .gt32,
 .gt43,
@@ -146,37 +146,37 @@
 .gt88,
 .ins32{
 	display: none;
-}
-@media screen and (min-width:20em){
+}*/
+@media screen and (max-width: 20em){
 	.gt20{
-		display: table-cell;
+		display: none;
 	}
 }
-@media screen and (min-width:22em){
+@media screen and (max-width: 22em){
 	.gt22{
-		display: table-cell;
+		display: none;
 	}
 }
-@media screen and (min-width:32em){
+@media screen and (max-width: 32em){
 	.gt32{
-		display: table-cell;
+		display: none;
 	}
-	.ins32{  //Insert inline elements at this break point
-		display: inline;
+	.ins32{  //deprecated //Insert inline elements at this break point
+		display: none;
 	}
 }
-@media screen and (min-width:43em){
+@media screen and (max-width: 43em){
 	.gt43{
-		display: table-cell;
+		display: none;
 	}
 }
-@media screen and (min-width:70em){
+@media screen and (max-width: 70em){
 	.gt70{
-		display: table-cell;
+		display: none;
 	}
 }
-@media screen and (min-width:88em){
+@media screen and (max-width: 88em){
 	.gt88{
-		display: table-cell;
+		display: none;
 	}
 }
