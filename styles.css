@@ -203,8 +203,6 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 .prime.is-disabled, .prime.is-disabled:link, .prime.is-disabled:hover, .prime.is-disabled:visited, .prime[disabled], .prime[disabled]:hover { background: #83a861 none; }
 
 /** 5. Hyphenation  @section hyphens */
-a, a:link, .intro, .pull-quote, .big-fact { -webkit-hyphens: none; -moz-hyphens: none; -ms-hyphens: none; hyphens: none; }
-
 .looong-word { word-wrap: break-word; }
 
 /**
@@ -273,14 +271,22 @@ a, a:link, .intro, .pull-quote, .big-fact { -webkit-hyphens: none; -moz-hyphens:
 @media screen and (min-width: 43em) { .sidebar { border-top-width: 0; border-left: 1px solid #ccc; margin: 0 auto; padding-left: 8%; color: #333; font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; }
   .sidebar p, .sidebar .base { margin: 0.535714285714286em 0 1.071428571428571em 0; } }
 /** Hidden Elements  For displaying less essential elements only when screen size permits.  @section l-hidden */
-.gt20, .gt22, .gt32, .gt43, .gt70, .gt88 { display: none; }
-
-@media screen and (min-width: 20em) { .gt20 { display: table-cell; } }
-@media screen and (min-width: 22em) { .gt22 { display: table-cell; } }
-@media screen and (min-width: 32em) { .gt32 { display: table-cell; } }
-@media screen and (min-width: 43em) { .gt43 { display: table-cell; } }
-@media screen and (min-width: 70em) { .gt70 { display: table-cell; } }
-@media screen and (min-width: 88em) { .gt88 { display: table-cell; } }
+/*.gt20,
+.gt22,
+.gt32,
+.gt43,
+.gt70,
+.gt88,
+.ins32{
+	display: none;
+}*/
+@media screen and (max-width: 20em) { .gt20 { display: none; } }
+@media screen and (max-width: 22em) { .gt22 { display: none; } }
+@media screen and (max-width: 32em) { .gt32 { display: none; }
+  .ins32 { display: none; } }
+@media screen and (max-width: 43em) { .gt43 { display: none; } }
+@media screen and (max-width: 70em) { .gt70 { display: none; } }
+@media screen and (max-width: 88em) { .gt88 { display: none; } }
 /**
  * Module Styles
  *
