@@ -143,7 +143,8 @@
 .gt32,
 .gt43,
 .gt70,
-.gt88{
+.gt88,
+.ins32{
 	display: none;
 }
 @media screen and (min-width:20em){
@@ -159,6 +160,9 @@
 @media screen and (min-width:32em){
 	.gt32{
 		display: table-cell;
+	}
+	.ins32{  //Insert inline elements at this break point
+		display: inline;
 	}
 }
 @media screen and (min-width:43em){
