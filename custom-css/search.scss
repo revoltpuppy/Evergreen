@@ -1,4 +1,4 @@
-/**
+/*!*
  * Search Styles
  *
  * Style overrides for the Google search engine results page integrated
@@ -58,6 +58,24 @@
     width: auto;
     //layout
     display: block;
+}
+
+//Sort by
+div.gsc-selected-option-container{
+	padding: 0 1em;
+	width: auto !important;
+	max-width: none;
+	min-width: 0;
+}
+
+//Spelling
+//e.g. Showing results for catalog. Search instead for cataglog.
+.gs-result .gs-spelling{
+	padding: 0;
+	display: inline;
+}
+.gs-spelling::after{
+	content: ". "
 }
 
 //Area between the search box and the results
