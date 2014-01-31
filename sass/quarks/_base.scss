@@ -24,8 +24,15 @@
 body{
 	//box model
     margin: 0 auto;
+    min-height: 100vh;
+    //layout
+    display: -webkit-flex;
+    display:         flex;
 	//backgrounds & borders
     background-color: #f3f3f3;
+    //flexbox
+    -webkit-flex-direction: column;
+            flex-direction: column;
 }
 
 img{
