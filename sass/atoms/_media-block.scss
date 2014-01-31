@@ -37,6 +37,10 @@
 	display: block;
 }
 
+.media-img-icon{
+	max-height: 3.75rem;
+}
+
 .media-body{
 	overflow: auto;  //IE9  //Gives block formatting context
 	/*Alternate way to give block formatting context
