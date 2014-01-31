@@ -62,7 +62,7 @@
  */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-body { margin: 0 auto; background-color: #f3f3f3; }
+body { margin: 0 auto; min-height: 100vh; display: -webkit-flex; display: flex; background-color: #f3f3f3; -webkit-flex-direction: column; flex-direction: column; }
 
 img { border-width: 0; max-width: 100%; }
 
@@ -650,6 +650,8 @@ ul.flexible { margin-left: 0; -webkit-column-count: 2; -moz-column-count: 2; -ms
 .media-img-alt { -ms-flex-item-align: center; -webkit-align-self: center; align-self: center; }
 
 .media-img img { margin-top: 7.5px; margin-top: 0.46875rem; display: block; }
+
+.media-img-icon { max-height: 3.75rem; }
 
 .media-body { overflow: auto; /*Alternate way to give block formatting context
 display: table-cell;  //Gives block formatting context (pretty nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
