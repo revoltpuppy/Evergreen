@@ -28,19 +28,30 @@
 .related-nav > li:nth-child(3n+1){
     clear: left;
 }
+.related-nav a,
+.related-nav a:link,
+.related-nav a:visited{
+	color: $evergreen-neue;
+}
+.related-nav a:hover{
+	color: $sky-blue;
+}
+
 .related-nav-icon{
 	//box model
     padding: 15%;  //Whatever feels right.
     //typography
     text-align: center;
     //backgrounds & borders
-    background-color: $wine;
+    background-color: $evergreen-neue;
     border-radius: 50%;
     //misc
     transition: all 0.2s;
 }
+.related-nav a .related-nav-icon,
+.related-nav a:link .related-nav-icon,
 .related-nav a:visited .related-nav-icon{
-    background: $wine;
+    background: $evergreen-neue;
 }
 .related-nav a:hover .related-nav-icon{
     background: $sky-blue;
