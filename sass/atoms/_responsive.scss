@@ -31,12 +31,12 @@
         /**
          * Module Styles
          */
-        .unit-2-7 .flexible{
+        /*.unit-2-7 .flexible{
             -webkit-column-count: 2;
                -moz-column-count: 2;
                 -ms-column-count: 2;
                     column-count: 2;
-        }
+        }*/
     }  /* /min-width:32em */
         
 
@@ -89,13 +89,6 @@
 				//typography
 			    font-weight: bold;
 			}
-            
-            .unit-3-7 .flexible{
-                -webkit-column-count: 2;
-                   -moz-column-count: 2;
-                   	-ms-column-count: 2;
-                        column-count: 2;
-            }
         }
         
         @media screen and (min-width:70em){
@@ -122,13 +115,6 @@
 				font-size: inherit;
 				line-height: inherit;
 			}
-            
-            .unit-3-7 .flexible{
-                -webkit-column-count: 3;
-                   -moz-column-count: 3;
-                    -ms-column-count: 3;
-                        column-count: 3;
-            }
             
             /*.illus-alt{
             	//box model
