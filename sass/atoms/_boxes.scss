@@ -71,7 +71,8 @@ p.box{  //WYSIWYG
     }
 }
 .pull-quote,
-.pull-quote + .figcaption{
+.pull-quote + .figcaption,  //deprecated
+.pull-quote + figcaption{
     color: #f3f3f3;
 }
 .pull-quote{
@@ -79,11 +80,7 @@ p.box{  //WYSIWYG
 }
 
 .pull-box-alt{
-	background-color: mix(white, $sky-blue, 80%);
-	
-	.pull-quote{
-		color: #333;
-	}
+	background-color: $sky-blue;
 }
 
 /**
