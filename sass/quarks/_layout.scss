@@ -16,9 +16,10 @@
 }
 .wrapper:before,   //nega-clearfix! Clearfix that wraps the element around TOP margins.
 .wrapper:after{
-  content: "";
-  display: table;
-  clear: both;
+	width: 0;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 [role="banner"]{
@@ -104,8 +105,8 @@
 }
 @media screen and (min-width:43em){
     .content-wrapper .main-content{
-        margin-right: 6%;  //I bumped this up for better readability on iPad and 800x600
-        margin-left: 6%;
+        margin-right: 5.675675675675676%;  //I bumped this up for better readability on iPad and 800x600
+        margin-left: 5.675675675675676%;
     }
 }
 @media screen and (min-width:70em){
