@@ -16,9 +16,13 @@
 }
 
 //For normal tables that need the left-padding for whatever reason (e.g. background-colors that make the text look funny).
-.padded-table td{
+.padded-table th,
+.padded-table td,
+.accordion-table th,
+.accordion-table td{
     padding-left: 1.1111111111em;  //15/13.5 Should match the padding on td
-}
-.padded-table td:last-child{
-	padding-right: 1.1111111111em;  //15/13.5 Should match the padding on td
+	
+	&:last-child{
+		padding-right: 1.1111111111em;  //15/13.5 Should match the padding on td
+	}
 }
