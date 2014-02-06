@@ -77,8 +77,10 @@
 	.image,
     .image img,  //WYSIWYG
 	.image-alt{
-        //width: 47%;
-        max-width: 345px;
+		//box model
+		margin-right: -6.544901065449%;
+		//max-width: 345px;
+        max-width: 53.500761035008%;
     }
 }
 @media screen and (min-width:70em){
