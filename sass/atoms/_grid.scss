@@ -98,16 +98,18 @@
 	.right,  //deprecated
 	.supplement,  //This should mirror .supplement-1-2; it’s just a more user-friendly name
 	.supplement-alt-1-2,
-	.supplement-alt-2-7,
+	.supplement-alt-2-7,  //deprecated
 	.supplement-1-2,
-	.supplement-2-7{
+	.supplement-2-7{  //deprecated
+	    //box model
 	    margin-left:6%;
 	    width:47%;
+	    //layout
 	    float:right;
 	}
 }
 @media screen and (min-width:22em){
-	.supplement-2-7{  //deprecated?
+	.supplement-2-7{  //deprecated
 		width: 31.3333333333%;
 	}
 }
@@ -117,14 +119,23 @@
         width: 38.260135135135135%;  //It took weird math to get here.
     }
     
-    .supplement-2-7{  //deprecated?
+    .supplement-2-7{  //deprecated
         width: 26.571428571428571%;
     }
-    .supplement-3-7{  //deprecated?
+    .supplement-3-7{  //deprecated
         margin-left: 2%;
         width: 40.857142857142857%;
         float: right;
     }
+}
+@media screen and (min-width: 43em){
+	.right,  //deprecated
+	.supplement,
+	.supplement-1-2{
+		//box model
+		margin-right: -6.544901065449%;
+		width: 53.500761035008%;
+	}
 }
 @media screen and (min-width:70em){
 	.supplement-alt-1-2,
