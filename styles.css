@@ -62,7 +62,7 @@
  */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-body { margin: 0 auto; min-height: 100vh; display: -webkit-flex; display: flex; background-color: #f3f3f3; -webkit-flex-direction: column; flex-direction: column; }
+body { margin: 0 auto; min-height: 100vh; background-color: #f3f3f3; -webkit-flex-direction: column; flex-direction: column; }
 
 img { border-width: 0; max-width: 100%; }
 
@@ -216,7 +216,7 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 .wrapper { margin: 0 auto; display: block; }
 @media screen and (min-width: 70em) { .wrapper { max-width: 82em; } }
 
-.wrapper:before, .wrapper:after { content: ""; display: table; clear: both; }
+.wrapper:before, .wrapper:after { width: 0; content: ""; display: table; clear: both; }
 
 [role="banner"] { overflow: hidden; background-color: #f3f3f3; }
 
@@ -228,6 +228,8 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 
 @media screen and (min-width: 20em) { [role="navigation"] { font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; letter-spacing: .05em; } }
 @media screen and (min-width: 43em) { [role="navigation"] { margin-left: 0; width: 100%; font-size: 17.008px; font-size: 1.063rem; letter-spacing: normal; line-height: 1.323529411764706; } }
+.site-content { flex: 1; }
+
 .element-list, .element-list { margin-left: 0; padding-left: 0; list-style-type: none; }
 
 /** Grid  Styles related to the grid system.  @section l-grid */
@@ -255,6 +257,7 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 @media screen and (min-width: 32em) { .supplement-alt-1-2, .supplement-alt-2-7 { width: 38.260135135135135%; }
   .supplement-2-7 { width: 26.571428571428571%; }
   .supplement-3-7 { margin-left: 2%; width: 40.857142857142857%; float: right; } }
+@media screen and (min-width: 43em) { .right, .supplement, .supplement-1-2 { margin-right: -6.5449%; width: 53.500761035008%; } }
 @media screen and (min-width: 70em) { .supplement-alt-1-2, .supplement-alt-2-7 { margin-right: 0; margin-left: -41.72297%; float: left; } }
 .index-wrapper, .content-wrapper { border-top: 5px solid #46502b; margin-top: -5px; background-color: #F3F3F3; background-color: rgba(242, 242, 242, 0.95); border-radius: 2px; }
 
@@ -264,7 +267,7 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 
 .main-content { margin-top: -5px; }
 
-@media screen and (min-width: 43em) { .content-wrapper .main-content { margin-right: 6%; margin-left: 6%; } }
+@media screen and (min-width: 43em) { .content-wrapper .main-content { margin-right: 5.675675675675676%; margin-left: 5.675675675675676%; } }
 @media screen and (min-width: 70em) { .main-content { position: relative; } }
 .sidebar { border-top: 2px dashed #64933a; }
 
@@ -480,7 +483,7 @@ ul.tertiary-nav-list { margin-left: 0; list-style-type: none; }
 
 .tertiary-nav-list a, .tertiary-nav-list a:link, #tertiary-nav dd > ul a, #tertiary-nav dd > ul a:link { border-bottom-width: 0; }
 
-@media screen and (min-width: 70em) { #tertiary-nav { margin-right: 0; margin-left: -41.72297%; width: 38.260135135135135%; float: left; position: absolute; }
+@media screen and (min-width: 70em) { #tertiary-nav { margin-right: 0; margin-left: -40.94368%; width: 37.747336377473364%; float: left; position: absolute; }
   .tertiary-nav-h, a.tertiary-nav-h { border-bottom: 1px solid #000; margin-top: -1px; display: block; color: #000; font-weight: bold; }
   .tertiary-nav-h { margin: 0.779950083194676em 0 0.363976705490849em 0; font-size: 19.232px; font-size: 1.202rem; line-height: 1.559900166389351; } }
 /** Homepage Tertiary Nav  @section tertiary-nav-homepage */
@@ -600,9 +603,13 @@ ul.accordion-inner { padding: 0 2%; }
 
 .related-nav > li:nth-child(3n+1) { clear: left; }
 
-.related-nav-icon { padding: 15%; text-align: center; background-color: #600f21; border-radius: 50%; transition: all 0.2s; }
+.related-nav a, .related-nav a:link, .related-nav a:visited { color: #64933a; }
 
-.related-nav a:visited .related-nav-icon { background: #600f21; }
+.related-nav a:hover { color: #0086ee; }
+
+.related-nav-icon { padding: 15%; text-align: center; background-color: #64933a; border-radius: 50%; transition: all 0.2s; }
+
+.related-nav a .related-nav-icon, .related-nav a:link .related-nav-icon, .related-nav a:visited .related-nav-icon { background: #64933a; }
 
 .related-nav a:hover .related-nav-icon { background: #0086ee; box-shadow: 0 0 0.2em rgba(253, 243, 180, 0.5) inset; }
 
@@ -611,31 +618,52 @@ ul.accordion-inner { padding: 0 2%; }
   .related-nav > li:nth-child(3n+1) { clear: none; }
   .related-nav > li:last-child { margin-right: 0; } }
 /*Lists have a hard time breaking across columns, so there are some tricky fixes here.*/
-ul.flexible { margin-left: 0; -webkit-column-count: 2; -moz-column-count: 2; -ms-column-count: 2; column-count: 2; -webkit-column-gap: 15px; -moz-column-gap: 15px; -ms-column-gap: 15px; column-gap: 15px; }
-@media screen and (min-width: 32em) { ul.flexible { -webkit-column-count: 3; -moz-column-count: 3; -ms-column-count: 3; column-count: 3; } }
+ul.flexible {     	/*@media screen and (min-width:20em){
+	    	//box model
+	    	margin-left: 0;  //Put the margin on each li instead.
+	    	//layout
+	        -webkit-column-count: 2;
+	           -moz-column-count: 2;
+	            -ms-column-count: 2;
+	                column-count: 2;
+	        -webkit-column-gap: 15px;
+	           -moz-column-gap: 15px;
+	            -ms-column-gap: 15px;
+	                column-gap: 15px;
+	    } 
+		@media screen and (min-width:32em){
+			-webkit-column-count: 3;
+			   -moz-column-count: 3;
+			    -ms-column-count: 3;
+			        column-count: 3;
+		}*/ }
 
-@media screen and (min-width: 20em) { ul.flexible > li { margin-bottom: 7.5px; margin-bottom: 0.46875rem; margin-left: 1.2662em; display: block; text-indent: -1.2662em; }
-  .flexible > li:before { margin-left: 1.2662em; display: list-item; float: left; position: relative; left: -1.2662em; text-indent: 0; content: ""; } }
-/** 4.1.2 Audience Nav  The audience nav on the homepage (e.g Prospective Students, Current Students, etc.).  @subsubsection mod-typography-l-audience */
-.audience-nav { background: #0086ee url(images/texture-1.png); }
-.audience-nav a { padding: 0.535714285714286em 2% 1.071428571428571em 2%; display: block; }
-.audience-nav a, .audience-nav a:link, .audience-nav a:hover, .audience-nav a:visited { border-bottom-width: 0; color: #fff; }
-.audience-nav a:hover { background-color: #64933a; }
-@media screen and (min-width: 20em) { .audience-nav { width: 100%; display: table; text-align: center; }
-  .audience-nav a { width: 100%; display: -webkit-flex; display: -ms-flex; display: flex; align-items: center; justify-content: center; } }
-@media screen and (min-width: 32em) { .audience-nav { float: left; } }
+@media screen and (min-width: 20em) { .flexible > li { margin: 0 2%; margin-bottom: 0.46875rem; width: 46%; float: left;     /*&:before{ 	//box model 	margin-left: 1.2662em;  //This should equal the default ul left margin. 	//layout 	display: list-item; 	float: left; 	//positioning 	position: relative; 	left: -1.2662em;  //This should be the inverse of margin-left. 	//typography 	text-indent: 0;  //Fixes a bug in Chrome where bullets won't display. 	//misc
+	    content: ""; }*/ }
+  .flexible > li:nth-child(odd) { clear: left; } }
+@media screen and (min-width: 32em) { .flexible > li { width: 29%; }
+  .flexible > li:nth-child(odd) { clear: none; }
+  .flexible > li:nth-child(3n+1) { clear: left; } }
 
-@media screen and (min-width: 20em) { .audience-nav-row { display: table-row; display: -webkit-flex; display: -ms-flex; display: flex; }
-  .audience-nav-item { border-bottom: 1px solid #fff; width: 50%; display: table-cell; display: -webkit-flex; display: -ms-flex; display: flex; }
-  .audience-nav-item:first-child { border-right: 1px solid #fff; } }
-@media screen and (min-width: 70em) { /*.audience-nav{ 		margin: 0 0 0 -68.600682593856655%;  //It took weird math to get here.
-	        	width: 16.6666666667%;  //1/6 	} 	.audience-nav-row, 	.audience-nav-item{
-	        	display: block; 	} 	.audience-nav-item{
-	        	width: 100%; 	} 	.audience-nav-item:first-child{ 		border-right-width: 0; 	}*/ }
-        /*@media screen and (min-width:32em){
-	        .news{
-		        float: left;
-	        } }*/
+@media screen and (min-width: 32em) { .unit-2-7 .flexible { -webkit-column-count: 2; -moz-column-count: 2; -ms-column-count: 2; column-count: 2; } }
+@media screen and (min-width: 70em) { .unit-3-7 .flexible { -webkit-column-count: 2; -moz-column-count: 2; -ms-column-count: 2; column-count: 2; } }
+@media screen and (min-width: 70em) { .unit-3-7 .flexible { -webkit-column-count: 3; -moz-column-count: 3; -ms-column-count: 3; column-count: 3; } }
+
+		/** 4.1.2 Link Icons  Links with icons attached to them, e.g. PDFs or social media chicklets.  @subsubsection mod-typography-a-icons */
+.link-icon::before, .link-icon-alt::before { height: 1rem; width: 1rem; display: inline-block; overflow: hidden; vertical-align: middle; text-indent: 100%; white-space: nowrap; background-repeat: no-repeat; -webkit-background-size: 1rem 1rem; -moz-background-size: 1rem 1rem; background-size: 1rem 1rem; content: ""; }
+
+.link-icon::after { margin-left: .5em; }
+
+.link-icon-alt::before { margin-right: .5em; }
+
+.icon-blog::before { background-image: url("/_inc/images/icons/external/blog32x32.png"); content: "Blog"; }
+
+.icon-facebook::before { background-image: url("/_inc/images/icons/external/facebook32x32.png"); content: "Facebook"; }
+
+.icon-twitter::before { background-image: url("/_inc/images/icons/external/twitter32x32.png"); content: "Twitter"; }
+
+.icon-youtube::before { background-image: url("/_inc/images/icons/external/youtube32x32.png"); content: "YouTube"; }
+
 /** 4.1.3 Tag Clouds  Tag cloud sizing.  @subsubsection mod-typography-l-tagcloud */
 .few { font-size: 11.888px; font-size: 0.743rem; }
 .few a { font-weight: normal; }
@@ -702,12 +730,11 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 @media screen and (min-width: 43em) { .pull-quote { margin: .2727272727em 0 .8181818182em 0; } }
 @media screen and (min-width: 70em) { .pull-quote { font-size: 27.504px; font-size: 1.719rem; line-height: 1.090710779858208; } }
 
-.pull-quote, .pull-quote + .figcaption { color: #f3f3f3; }
+.pull-quote, .pull-quote + .figcaption, .pull-quote + figcaption { color: #f3f3f3; }
 
 .pull-quote { font-style: italic; }
 
-.pull-box-alt { background-color: #cce6fb; }
-.pull-box-alt .pull-quote { color: #333; }
+.pull-box-alt { background-color: #0086ee; }
 
 /** Full Box  A box with a header and possibly a footer.  @section box-full */
 .full-box { border: 1px solid #0086ee; padding: 0; background: #0086ee url(images/texture-1.png); }
@@ -718,7 +745,7 @@ padding: 1.090671126299716em 2% 2% 0.272667781574929em;*/ color: #fff; }
 .full-box > .box { background-color: #f5f5f5; }
 
 /** Images  Image modules, typically for laying them out within an article.  @section img */
-.left, .illus, .illus-alt, .illus-full, .image, .image img, .image-alt, .image-full, .image-full img { border: 1px solid #00355f; margin: 0 auto; max-width: 100%; display: block; border-radius: 2px; background-color: #00355f; -webkit-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); box-shadow: 0 2px 2px rgba(30, 19, 37, 0.25); }
+.left, .illus, .illus-alt, .illus-full, .image, .image img, .image-alt, .image-full, .image-full img { border: 1px solid #00355f; margin: 0 auto; max-width: 100%; display: block; border-radius: 2px; color: white; background-color: #00355f; -webkit-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); box-shadow: 0 2px 2px rgba(30, 19, 37, 0.25); }
 
 .illus-full, .image-full, .image-full img { margin: .631100639515315em auto 1.262201279030629em auto; max-width: 99%; max-width: -webkit-calc(100% - 2px); max-width: calc(100% - 2px); }
 
@@ -726,9 +753,9 @@ padding: 1.090671126299716em 2% 2% 0.272667781574929em;*/ color: #fff; }
 
 @media screen and (min-width: 32em) { .left, .illus, .illus-alt, .image, .image img, .image-alt { max-width: 49%; }
   .left, .illus, .illus-alt, .image, .image img, .image-alt { margin: 0 0 0.631100639515315em 2%; clear: right; float: right; } }
-@media screen and (min-width: 43em) { .left, .illus, .illus-alt, .image, .image img, .image-alt { max-width: 345px; } }
+@media screen and (min-width: 43em) { .left, .illus, .illus-alt, .image, .image img, .image-alt { margin-right: -6.5449%; max-width: 53.500761035008%; } }
 @media screen and (min-width: 70em) { .illus-alt, .image-alt { margin: 0 0 0.6311em -41.72297%; width: 38.260135135135135%; clear: left; float: left; } }
-/** 3.7 Event Calendar    @section mod-event-calendar */
+/** 3.7 Event Calendar  @section mod-event-calendar */
 .event-dt { font-size: 11.888px; font-size: 0.743rem; font-weight: bold; letter-spacing: .1em; line-height: 1.892664872139973; text-transform: uppercase; }
 
 .event-calendar .h-event { margin-top: 0.535714285714286em; margin-bottom: 1.071428571428571em; }
@@ -766,7 +793,7 @@ padding: 1.090671126299716em 2% 2% 0.272667781574929em;*/ color: #fff; }
   /*.wordmark{ padding:0 1%; width:62.6666666667%; float:left; } .top-links{ clear: left; } .top-links .search-item{ display:none; } .search{ margin-left: 2%; width: 29.3333333333%; float: right; }*/ }
 /* /min-width:22em */
 @media screen and (min-width: 32em) { /** Module Styles */
-  .unit-2-7 .flexible { -webkit-column-count: 2; -moz-column-count: 2; -ms-column-count: 2; column-count: 2; } }
+  /*.unit-2-7 .flexible{ -webkit-column-count: 2; -moz-column-count: 2; -ms-column-count: 2; column-count: 2; }*/ }
 /* /min-width:32em */
 /** 5.2 7-Column Grid  Officially 7-column grid territory.  @subsection r-7-column */
 @media screen and (min-width: 43em) { /** Layout Styles */
@@ -777,15 +804,13 @@ padding: 1.090671126299716em 2% 2% 0.272667781574929em;*/ color: #fff; }
   /** Module Styles */
   li.internal-users-alt { display: inline; }
   .primary-nav:after { clear: none; display: inline; content: none; }
-  .top-nav-link, .top-nav-link:link, .top-nav-link:visited, .secondary-nav a, .secondary-nav a:link, .secondary-nav a:visited { font-weight: bold; }
-  .unit-3-7 .flexible { -webkit-column-count: 2; -moz-column-count: 2; -ms-column-count: 2; column-count: 2; } }
+  .top-nav-link, .top-nav-link:link, .top-nav-link:visited, .secondary-nav a, .secondary-nav a:link, .secondary-nav a:visited { font-weight: bold; } }
 @media screen and (min-width: 70em) { /** Layout Styles */
   .index-wrapper, .content-wrapper { margin-left: 16.285714285714286%; }
   .index-wrapper { width: 81.714285714285714%; }
   .content-wrapper { width: 53.142857142857143%; }
   /** Module Styles */
   .top-nav-link, .secondary-nav-link { font-size: inherit; line-height: inherit; }
-  .unit-3-7 .flexible { -webkit-column-count: 3; -moz-column-count: 3; -ms-column-count: 3; column-count: 3; }
             /*.illus-alt{ 	//box model margin: 0 0 0.631100639515315em -41.722972972972973%;  //7.5/11.884  Weird math for the left margin.
 				width: 38.260135135135135%;  //It took weird math to get here. //layout clear: left; float: left; }*/ }
 /*This file was written by Justin McDowell. ((O)O)*/
