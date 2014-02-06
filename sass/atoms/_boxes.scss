@@ -44,8 +44,11 @@ p.box{  //WYSIWYG
 
 //captioned images
 .caption-box{
+	//typography
+	text-shadow: 0 1px 0 hsla(0, 0%, 100%, .5);
+	//backgronds and borders
 	background-color: #f3f3f3;
-	background-color: hsla(0, 0%, 95%, .6666666667)
+	background-color: hsla(0, 0%, 95%, .6666666667);
 }
 .caption-box img{
 	@include x-rem(margin-bottom, 0.625);
