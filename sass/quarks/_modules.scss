@@ -64,6 +64,9 @@
     
     .profile-list > li{
     	@include margin-default;
+    	//layout
+    	overflow: hidden;
+    	//position
 	    position: relative;
 	    
 	    @media screen and (min-width:43em){
@@ -71,7 +74,32 @@
 	    }
     }
     .profile-img{
+    	//box model
+    	margin-left: -50%;
+	    width: 200%;
+	    max-width: 685px;
+	    //layout
 	    display: block;
+	    
+	    @media screen and (min-width: 20em){
+		    margin-left: -25%;
+		    width: 150%;
+	    }
+	    
+	    @media screen and (min-width: 32em){
+		    margin-left: 0%;
+		    width: 100%;
+	    }
+	    
+	    @media screen and (min-width: 43em){
+		    width: 120%;
+		    margin-left: -10%;
+	    }
+	    
+	    @media screen and (min-width: 60em){
+		    width: 100%;
+		    margin-left: 0%;
+	    }
     }
     .profile-list .box{
     	@include x-rem(margin-top, -1.40625);  //22.5/16
