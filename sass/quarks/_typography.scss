@@ -248,6 +248,14 @@ caption,  //table caption
     line-height: 1.427619682116684;  //15/10.507
 }
 
+small{
+	color: #333;
+	
+	[role="contentinfo"] &{
+		color: #ccc;
+	}
+}
+
 code,
 pre{
 	font-family: monospace, serif;
