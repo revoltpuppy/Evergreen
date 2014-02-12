@@ -37,7 +37,7 @@
 }
 [role="navigation"]{
 	clear: both;
-	display: table;
+	//display: table;  //IE8, Safari 5
 	position: relative;
 }
 @media screen and (min-width:20em){
@@ -143,15 +143,6 @@
  *
  * @section l-hidden
  */
-/*.gt20,
-.gt22,
-.gt32,
-.gt43,
-.gt70,
-.gt88,
-.ins32{
-	display: none;
-}*/
 @media screen and (max-width: 20em){
 	.gt20{
 		display: none;
