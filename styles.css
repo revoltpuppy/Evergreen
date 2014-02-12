@@ -226,7 +226,7 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 
 [role="navigation"], [role="main"] { width: 100%; }
 
-[role="navigation"] { clear: both; display: table; position: relative; }
+[role="navigation"] { clear: both; position: relative; }
 
 @media screen and (min-width: 20em) { [role="navigation"] { font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; letter-spacing: .05em; } }
 @media screen and (min-width: 43em) { [role="navigation"] { margin-left: 0; width: 100%; font-size: 17.008px; font-size: 1.063rem; letter-spacing: normal; line-height: 1.323529411764706; } }
@@ -276,15 +276,6 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 @media screen and (min-width: 43em) { .sidebar { border-top-width: 0; border-left: 1px solid #ccc; margin: 0 auto; padding-left: 8%; color: #333; font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; }
   .sidebar p, .sidebar .base { margin: 0.535714285714286em 0 1.071428571428571em 0; } }
 /** Hidden Elements  For displaying less essential elements only when screen size permits.  @section l-hidden */
-/*.gt20,
-.gt22,
-.gt32,
-.gt43,
-.gt70,
-.gt88,
-.ins32{
-	display: none;
-}*/
 @media screen and (max-width: 20em) { .gt20 { display: none; } }
 @media screen and (max-width: 22em) { .gt22 { display: none; } }
 @media screen and (max-width: 32em) { .gt32 { display: none; }
@@ -381,9 +372,9 @@ li.internal-users-alt { display: none; }
 .top-nav, .top-nav-list, .menu-button, .search-toggle, .student-toggle { color: white; background-color: #64933a; }
 
 /** 3.1.2 Primary Nav  @subsubsection mod-header-primary-nav */
-.top-nav-list { margin: 0 auto; margin-top: 0; width: 100%; min-height: 44px; display: table-row; position: relative; text-align: center; list-style-type: none; }
+.top-nav-list { margin: 0 auto; margin-top: 0; width: 100%; min-height: 44px; position: relative; text-align: center; list-style-type: none; }
 @media screen and (min-width: 20em) { .top-nav-list { display: -webkit-flex; display: -ms-flexbox; display: flex; -ms-flex-align: stretch; align-items: stretch; }
-  .top-nav-list > li { border-left: 1px solid #333; min-height: 44px; width: 21%; display: table-cell; display: -webkit-flex; display: -ms-flexbox; display: flex; overflow: hidden; vertical-align: middle; }
+  .top-nav-list > li { border-left: 1px solid #333; min-height: 44px; width: 21%; display: inline-block; display: -webkit-flex; display: -ms-flexbox; display: flex; overflow: hidden; }
   .top-nav-list > li:first-child { border-left-width: 0; width: 16%; } }
 @media screen and (min-width: 32em) { .top-nav-list > li, .top-nav-list > li:first-child { width: 20%; } }
 @media screen and (min-width: 43em) { .top-nav-list > li { height: auto; } }
