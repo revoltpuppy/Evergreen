@@ -247,7 +247,7 @@
 	    width: 100%;
 		min-height: 44px;
 		//layout
-	    display: table-row;
+	    //display: table-row;
 	    //positioning
 	    position: relative;
 	    //tyopography
@@ -270,12 +270,13 @@
 				min-height: 44px;  //IE8
 				width: 21%;  //100/5
 				//layout
-			    display: table-cell;  //IE8
+			    //display: table-cell;  //IE8
+			    display: inline-block;  //IE8, Safari 5
 				display: -webkit-flex;
 				    display: -ms-flexbox;  //IE10
 		    	        display: flex;
 			    overflow: hidden;
-			    vertical-align: middle;  //Works with table-cell, not with flex, so IE8
+			    //vertical-align: middle;  //Works with table-cell, not with flex, so IE8
 			    
 			    &:first-child{
 			    	border-left-width: 0;
