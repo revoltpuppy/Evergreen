@@ -36,7 +36,7 @@ body,
 .base{
     @include base-type;
 	
-	@media screen and (min-width:43em){
+	@media screen and (min-width: 43em){
 		@include base-type-lg;
 	}
 }
@@ -181,19 +181,18 @@ dd > blockquote:first-child{
  * @section a
  */
 a,
-a:link,
 .internal-users a:visited,
 .search-tools a:visited,
 .tertiary-nav-list a:visited{
 	//box model
-    border-bottom: 1px solid mix(white, $blueberry-susan, 80);
+    border-bottom: 1px solid mix(white, $blueberry-susan, 75);
     //typography
     color: $blueberry-susan;
     font-weight: bold;
     text-decoration: none;
 }
 a:visited{
-    border-bottom-color: $wine;
+    border-bottom-color: mix(white, $wine, 75);
     color: $wine;
 }
 a:hover,
@@ -205,7 +204,8 @@ a:hover,
 }
 a:focus,
 a:active{
-    outline: 1px dotted #333;
+    outline-width: 0;
+    background-color: transparentize($blueberry-susan, .9);
 }
 	/**
 	 * 4.1 Site Name Link
@@ -216,7 +216,6 @@ a:active{
 		border-bottom-width: 0;
 	}
 	.site-name a,
-	.site-name a:link,
 	.site-name a:visited,
 	.site-name a:hover{
 	    color: #fff;
