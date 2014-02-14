@@ -176,6 +176,11 @@
     font-weight: normal;
     line-height: 1.227629855958097;  //45/35.656
 }
+
+.machine-text{
+	font-family: Consolas, "Liberation Mono", Courier, Courier New, monospace;
+}
+
 .main-content > p:last-child:after,
 .main-content > ul:last-child > li:last-child:after,
 .main-content > ol:last-child > li:last-child:after,
@@ -311,6 +316,7 @@
 
 	    /*Lists have a hard time breaking across columns, so there are some tricky fixes here.*/
 	    ul.flexible{
+	    	overflow: hidden;
 	    	/*@media screen and (min-width:20em){
 		    	//box model
 		    	margin-left: 0;  //Put the margin on each li instead.
