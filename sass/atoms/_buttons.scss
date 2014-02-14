@@ -5,7 +5,6 @@
  */
 button,
 .button,
-.button:link,
 .button:visited{
 	//box model
     border: 1px solid $sky-blue;
@@ -56,7 +55,6 @@ button:active,
 }
 
 .prime,
-.prime:link,
 .prime:visited{
 	//box model
     border-color: $evergreen-old-style;
@@ -82,7 +80,6 @@ button:active,
 }
 
 .is-disabled,
-.is-disabled:link,
 .is-disabled:visited,
 .is-disabled:hover,
 button[disabled],
@@ -98,7 +95,6 @@ button[disabled]:hover{
     cursor: not-allowed;
 }
 .prime.is-disabled,
-.prime.is-disabled:link,
 .prime.is-disabled:hover,
 .prime.is-disabled:visited,
 .prime[disabled],
