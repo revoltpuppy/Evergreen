@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/** Sass Constants  @section sass-constants */
+/** Sass Mixins  @section sass-mixins */
+.course-index { font-size: 0.875rem; line-height: 1.607142857142857; }
+.course-index > thead { display: none; }
+.course-index > tbody, .course-index > tbody > tr, .course-index > tbody > tr > td { display: block; }
+.course-index > tbody > tr { margin: 0.535714285714286em 0 1.071428571428571em 0; border: 1px solid #c1b7c7; overflow: hidden; text-align: center; background-color: #ece9ee; border-radius: 2px; box-shadow: 0 1px 1px rgba(30, 19, 37, 0.25); }
+.course-index > tbody > tr.cancelled { background-color: #f3f3f3; border-color: #d1cad6; border-style: dashed; box-shadow: none; }
+.course-index > tbody > tr > td { border-width: 0; padding: 0; }
+.course-index > tbody > tr > td.offering, .course-index > tbody > tr > td.standing, .course-index > tbody > tr > td.credits, .course-index > tbody > tr > td.time { display: inline; }
+.course-index > tbody > tr > td.is-hidden { display: none; }
+@media screen and (min-width: 70em) { .course-index > thead { display: table-header-group; }
+  .course-index > tbody { display: table-row-group; }
+  .course-index > tbody > tr { border-width: 0; display: table-row; text-align: left; background-color: transparent; border-radius: 0; box-shadow: none; }
+  .course-index > tbody > tr > td { padding: 0.37037em 1.11111em 1.11111em 0; display: table-cell; }
+  .course-index > tbody > tr > td.offering, .course-index > tbody > tr > td.standing, .course-index > tbody > tr > td.credits, .course-index > tbody > tr > td.time { display: table-cell; } }
+
+.title { margin: 0 2%; }
+
+.offering, .standing, .credits, .time { margin: 0.535714285714286em 0 1.071428571428571em 0; }
+
+.offering:after, .standing:after { content: " •"; }
+@media screen and (min-width: 70em) { .offering:after, .standing:after { content: ""; } }
+
+.credits:after { content: " credits •"; }
+@media screen and (min-width: 70em) { .credits:after { content: ""; } }
+
+.time:after { width: 0; clear: both; display: table; content: ""; }
+
+.fall, .winter, .spring, .summer { margin-top: 0.9375rem; width: 25%; float: left; color: white; text-align: center; }
+.cancelled .fall, .cancelled .winter, .cancelled .spring, .cancelled .summer { background-color: #dad4de; }
+.fall abbr, .winter abbr, .spring abbr, .summer abbr { border-bottom-width: 0; }
+
+.fall { clear: left; background-color: #c09a00; }
+
+.winter { background-color: #0064b2; }
+
+.spring { background-color: #766085; }
+
+.summer { background-color: #64933a; }
+
+.keyword-list > li { margin: 0.234375rem 0; display: inline-block; color: white; }
+.keyword-list > li > a, .keyword-list > li > a:visited { padding: 0 0.4375rem; display: block; color: white; font-weight: normal; background-color: #c1b7c7; }
+.keyword-list > li > a:before, .keyword-list > li > a:visited:before { content: "#"; }
+.keyword-list > li > a:hover { color: #a8d5f9; background-color: #492c5d; }
