@@ -72,10 +72,10 @@
 }
 @media screen and (min-width:43em){
 	.left,  //deprecated
-	.illus,  //deprecated
+	.main-content > .illus,  //deprecated
     .illus-alt,  //deprecated
-	.image,
-    .image img,  //WYSIWYG
+	.main-content > .image,
+    .main-content > .image img,  //WYSIWYG
 	.image-alt{
 		//box model
 		margin-right: -6.544901065449%;
