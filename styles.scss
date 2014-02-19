@@ -54,14 +54,15 @@ $small-face: Verdana, Helvetica, Arial, sans-serif;
 }
 @mixin base-type-lg{
 	@include x-rem(font-size, 1.063);  //17px
-	line-height:1.323529411764706;  //22.5/17
+	//line-height: 1.323529411764706;  //22.5/17
+	line-height: 1.47058823529412;  //25/17
 }
 
 @mixin margin-default{
-	margin:0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
+	margin: 0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
 }
 @mixin margin-default-lg{
-	margin:0.441176470588235em 0 0.882352941176471em 0;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
+	margin: 0.441176470588235em 0 0.882352941176471em 0;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
 }
 
 @import "sass/quarks/base";
