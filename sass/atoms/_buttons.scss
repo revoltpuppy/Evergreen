@@ -25,19 +25,14 @@ button,
     border-radius: .2em;
     //miscelaneous
     box-shadow: 0 .2em .2em $shadow;
-    -webkit-transition: all .1s ease-in-out;  //Safari 6, Chrome 25
-            transition: all .1s ease-in-out;  //w3c
 }
 button:hover,
 .button:hover{
 	color: $sky-blue;
 	//backgrounds & borders
     background-color: mix(white, $sky-blue, 80%);  //IE 9
-    background-image: -webkit-linear-gradient(mix(white, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //Safari 6, Chrome 25
-    background-image:         linear-gradient(mix(white, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //w3c
-    //miscelaneous
-    -webkit-transition: all .1s ease-in-out;  //Safari 6, Chrome 25
-            transition: all .1s ease-in-out;  //w3c
+    background-image: -webkit-linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //Safari 6, Chrome 25
+    background-image:         linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //w3c
 }
 button:focus,
 .button:focus{
@@ -66,8 +61,8 @@ button:active,
 .prime:hover{
 	//backgrounds & borders
     background-color: mix(white, $evergreen-neue, 20%);  //IE 9
-    background-image: -webkit-linear-gradient(mix(white, $evergreen-neue, 60%), mix(white, $evergreen-neue, 20%));  //Safari 6, Chrome 25
-    background-image:         linear-gradient(mix(white, $evergreen-neue, 60%), mix(white, $evergreen-neue, 20%));  //w3c
+    background-image: -webkit-linear-gradient(mix($morning-light, $evergreen-neue, 60%), mix(white, $evergreen-neue, 20%));  //Safari 6, Chrome 25
+    background-image:         linear-gradient(mix($morning-light, $evergreen-neue, 60%), mix(white, $evergreen-neue, 20%));  //w3c
 }
 .prime:focus{
     border-color: #999;
