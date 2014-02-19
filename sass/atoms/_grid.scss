@@ -140,8 +140,12 @@
 @media screen and (min-width:70em){
 	.supplement-alt-1-2,
     .supplement-alt-2-7{
+    	//box model
     	margin-right: 0;
         margin-left: -41.722972972972973%;  //It took weird math to get here.
+        //layout
         float: left;
+        //typography
+        @include base-type;
     }
 }
