@@ -119,6 +119,7 @@ $small-face: Verdana, Helvetica, Arial, sans-serif;
 		
 		> tbody > tr > td{
 			//box model
+			border-top-width: 1px;
 			padding: 0.37037em 1.11111em 1.11111em 0;
 			//layout
 			display: table-cell;
@@ -133,8 +134,41 @@ $small-face: Verdana, Helvetica, Arial, sans-serif;
 	}
 }
 
+.compare{
+	//box model
+	@include margin-default;
+	margin-left: 1em;
+	margin-right: 1em;
+	//layout
+	float: left;
+	
+	@media screen and (min-width: 70em){
+		//box model
+		margin: 0;
+		//layout
+		float: none;
+	}
+}
+
 .title{
 	margin: 0 2%;
+}
+
+.program-title{
+	@media screen and (min-width: 70em){
+		@include base-type-lg;
+	}
+	
+	.message{
+		//box model
+		padding: 0 0.3125rem;
+		//typography
+		color: $wine;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		//backgrounds & borders
+		background-color: $highlight;
+	}
 }
 
 .offering,
@@ -168,6 +202,34 @@ $small-face: Verdana, Helvetica, Arial, sans-serif;
 	content: "";
 }
 
+.fall{
+	//layout
+	clear: left;
+	
+	&,
+	abbr{
+		background-color: #c09a00;
+	}
+}
+.winter{
+	&,
+	abbr{
+		background-color: mix(black, $sky-blue, 25%);
+	}
+}
+.spring{
+	&,
+	abbr{
+		background-color: mix(white, $blueberry-susan, 25%);
+	}
+}
+.summer{
+	&,
+	abbr{
+		background-color: $evergreen-neue;
+	}
+}
+
 .fall,
 .winter,
 .spring,
@@ -181,29 +243,24 @@ $small-face: Verdana, Helvetica, Arial, sans-serif;
 	color: white;
 	text-align: center;
 	
-	.cancelled &{
-		background-color: mix(white, $blueberry-susan, 80%);
+	abbr{
+		//box model
+		border-bottom-width: 0;
+		padding: 0.234375rem;
+		//layout
+		display: block;
+		//backgrounds & borders
+		border-radius: 2px;
 	}
 	
-	abbr{
-		border-bottom-width: 0;
+	@media screen and (min-width: 70em){
+		//box model
+		width: auto;
+		//layout
+		float: none;
+		//backgrounds & borders
+		background-color: transparent;
 	}
-}
-
-.fall{
-	//layout
-	clear: left;
-	//backgrounds & borders
-	background-color: #c09a00;
-}
-.winter{
-	background-color: mix(black, $sky-blue, 25%);
-}
-.spring{
-	background-color: mix(white, $blueberry-susan, 25%);
-}
-.summer{
-	background-color: $evergreen-neue;
 }
 
 .keyword-list{
@@ -216,26 +273,56 @@ $small-face: Verdana, Helvetica, Arial, sans-serif;
 		//typography
 		color: white;
 		
-		> a,
-		> a:visited{
+		> a{
 			//box model
-			padding: 0 0.4375rem;  //7.5px
+			border-bottom-width: 0;
+			margin: 0 0.4375rem 0 0;  //7.5px
 			//layout
 			display: block;
-			//typography
-			color: white;
-			font-weight: normal;
-			//backgrounds & borders
-			background-color: mix(white, $blueberry-susan, 66%);
 			
 			&:before{
 				content: "#";
 			}
 		}
 		
+		> a,
+		> a:visited{
+			//typography
+			color: mix(white, $blueberry-susan, 50%);
+			font-weight: normal;
+		}
+		
 		> a:hover{
 			color: mix(white, $sky-blue, 66%);
 			background-color: $blueberry-susan;
+		}
+		
+		&:last-child a{
+			margin-right: 0;
+		}
+	}
+}
+
+.cancelled{
+	opacity: .4;
+	
+	.fall,
+	.winter,
+	.spring,
+	.summer{
+		background-color: mix(white, $blueberry-susan, 80%);
+		
+		abbr{
+			background-color: transparent;
+		}
+	}
+	
+	@media screen and (min-width: 70em){
+		.fall,
+		.winter,
+		.spring,
+		.summer{
+			background-color: transparent;
 		}
 	}
 }
