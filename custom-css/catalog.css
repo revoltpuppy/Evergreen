@@ -12,10 +12,16 @@
 @media screen and (min-width: 70em) { .course-index > thead { display: table-header-group; }
   .course-index > tbody { display: table-row-group; }
   .course-index > tbody > tr { border-width: 0; display: table-row; text-align: left; background-color: transparent; border-radius: 0; box-shadow: none; }
-  .course-index > tbody > tr > td { padding: 0.37037em 1.11111em 1.11111em 0; display: table-cell; }
+  .course-index > tbody > tr > td { border-top-width: 1px; padding: 0.37037em 1.11111em 1.11111em 0; display: table-cell; }
   .course-index > tbody > tr > td.offering, .course-index > tbody > tr > td.standing, .course-index > tbody > tr > td.credits, .course-index > tbody > tr > td.time { display: table-cell; } }
 
+.compare { margin: 0.535714285714286em 0 1.071428571428571em 0; margin-left: 1em; margin-right: 1em; float: left; }
+@media screen and (min-width: 70em) { .compare { margin: 0; float: none; } }
+
 .title { margin: 0 2%; }
+
+@media screen and (min-width: 70em) { .program-title { font-size: 1.063rem; line-height: 1.323529411764706; } }
+.program-title .message { padding: 0 0.3125rem; color: #600f21; letter-spacing: .1em; text-transform: uppercase; background-color: rgba(253, 243, 180, 0.5); }
 
 .offering, .standing, .credits, .time { margin: 0.535714285714286em 0 1.071428571428571em 0; }
 
@@ -27,19 +33,27 @@
 
 .time:after { width: 0; clear: both; display: table; content: ""; }
 
+.fall { clear: left; }
+.fall, .fall abbr { background-color: #c09a00; }
+
+.winter, .winter abbr { background-color: #0064b2; }
+
+.spring, .spring abbr { background-color: #766085; }
+
+.summer, .summer abbr { background-color: #64933a; }
+
 .fall, .winter, .spring, .summer { margin-top: 0.9375rem; width: 25%; float: left; color: white; text-align: center; }
-.cancelled .fall, .cancelled .winter, .cancelled .spring, .cancelled .summer { background-color: #dad4de; }
-.fall abbr, .winter abbr, .spring abbr, .summer abbr { border-bottom-width: 0; }
-
-.fall { clear: left; background-color: #c09a00; }
-
-.winter { background-color: #0064b2; }
-
-.spring { background-color: #766085; }
-
-.summer { background-color: #64933a; }
+.fall abbr, .winter abbr, .spring abbr, .summer abbr { border-bottom-width: 0; padding: 0.234375rem; display: block; border-radius: 2px; }
+@media screen and (min-width: 70em) { .fall, .winter, .spring, .summer { width: auto; float: none; background-color: transparent; } }
 
 .keyword-list > li { margin: 0.234375rem 0; display: inline-block; color: white; }
-.keyword-list > li > a, .keyword-list > li > a:visited { padding: 0 0.4375rem; display: block; color: white; font-weight: normal; background-color: #c1b7c7; }
-.keyword-list > li > a:before, .keyword-list > li > a:visited:before { content: "#"; }
+.keyword-list > li > a { border-bottom-width: 0; margin: 0 0.4375rem 0 0; display: block; }
+.keyword-list > li > a:before { content: "#"; }
+.keyword-list > li > a, .keyword-list > li > a:visited { color: #a495ae; font-weight: normal; }
 .keyword-list > li > a:hover { color: #a8d5f9; background-color: #492c5d; }
+.keyword-list > li:last-child a { margin-right: 0; }
+
+.cancelled { opacity: .4; }
+.cancelled .fall, .cancelled .winter, .cancelled .spring, .cancelled .summer { background-color: #dad4de; }
+.cancelled .fall abbr, .cancelled .winter abbr, .cancelled .spring abbr, .cancelled .summer abbr { background-color: transparent; }
+@media screen and (min-width: 70em) { .cancelled .fall, .cancelled .winter, .cancelled .spring, .cancelled .summer { background-color: transparent; } }
