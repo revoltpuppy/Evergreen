@@ -406,77 +406,77 @@
 		}
 		
 		/**
-         * 4.1.2 Link Icons
-         *
-         * Links with icons attached to them, e.g. PDFs or social media chicklets.
-         *
-         * @subsubsection mod-typography-a-icons
-         */
-        .link-icon::before,
-        .link-icon-alt::before{
-        	//box model
-        	height: 1rem;
-        	width: 1rem;
-        	//layout
-        	display: inline-block;
-        	overflow: hidden;
-        	vertical-align: middle;
-        	//typography
-        	text-indent: 100%;
-        	white-space: nowrap;
-        	//backgrounds & borders
-        	background-repeat: no-repeat;
-	        -webkit-background-size: 1rem 1rem;
-	           -moz-background-size: 1rem 1rem;
-	                background-size: 1rem 1rem;
-	        //misc
-	        content: "";
-        }
-        .link-icon::after{
-	        margin-left: .5em;
-        }
-        .link-icon-alt::before{
-	        margin-right: .5em;
-        }
-        .icon-blog::before{
-        	//backgrounds & borders
-	        background-image: url("/_inc/images/icons/external/blog32x32.png");
-	        content: "Blog";
-        }
-        .icon-facebook::before{
-        	//backgrounds & borders
-	        background-image: url("/_inc/images/icons/external/facebook32x32.png");
-	        content: "Facebook";
-        }
-        .icon-twitter::before{
-        	//backgrounds & borders
-	        background-image: url("/_inc/images/icons/external/twitter32x32.png");
-	        content: "Twitter";
-        }
-        .icon-youtube::before{
-        	//backgrounds & borders
-	        background-image: url("/_inc/images/icons/external/youtube32x32.png");
-	        content: "YouTube";
-        }
-        
-        
-        /**
-         * 4.1.3 Tag Clouds
-         *
-         * Tag cloud sizing.
-         *
-         * @subsubsection mod-typography-l-tagcloud
-         */
-        .few{
-	        @include x-rem(font-size, 0.743);
-	        
-	        a{
-		        font-weight: normal;
-	        }
-        }
-        .many{
-            @include base-type-lg;
-        }
+     * 4.1.2 Link Icons
+     *
+     * Links with icons attached to them, e.g. PDFs or social media chicklets.
+     *
+     * @subsubsection mod-typography-a-icons
+     */
+    .link-icon::before,
+    .link-icon-alt::before{
+    	//box model
+    	height: 1rem;
+    	width: 1rem;
+    	//layout
+    	display: inline-block;
+    	overflow: hidden;
+    	vertical-align: middle;
+    	//typography
+    	text-indent: 100%;
+    	white-space: nowrap;
+    	//backgrounds & borders
+    	background-repeat: no-repeat;
+      -webkit-background-size: 1rem 1rem;
+         -moz-background-size: 1rem 1rem;
+              background-size: 1rem 1rem;
+      //misc
+      content: "";
+    }
+    .link-icon::after{
+      margin-left: .5em;
+    }
+    .link-icon-alt::before{
+      margin-right: .5em;
+    }
+    .icon-blog::before{
+    	//backgrounds & borders
+      background-image: url("/_inc/images/icons/external/blog32x32.png");
+      content: "Blog";
+    }
+    .icon-facebook::before{
+    	//backgrounds & borders
+      background-image: url("/_inc/images/icons/external/facebook32x32.png");
+      content: "Facebook";
+    }
+    .icon-twitter::before{
+    	//backgrounds & borders
+      background-image: url("/_inc/images/icons/external/twitter32x32.png");
+      content: "Twitter";
+    }
+    .icon-youtube::before{
+    	//backgrounds & borders
+      background-image: url("/_inc/images/icons/external/youtube32x32.png");
+      content: "YouTube";
+    }
+    
+    
+    /**
+     * 4.1.3 Tag Clouds
+     *
+     * Tag cloud sizing.
+     *
+     * @subsubsection mod-typography-l-tagcloud
+     */
+    .few{
+      @include x-rem(font-size, 0.743);
+      
+      a{
+        font-weight: normal;
+      }
+		}
+		.many{
+		    @include base-type-lg;
+		}
     
 @import "../atoms/media-block";
 @import "../atoms/boxes";
@@ -527,5 +527,5 @@
 }*/
 
 #tinymce{  //WYSIWYG
-	margin: 0 4em;
+	margin: 0 7em;
 }
