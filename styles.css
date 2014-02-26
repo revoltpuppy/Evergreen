@@ -788,7 +788,7 @@ padding: 1.090671126299716em 2% 2% 0.272667781574929em;*/ color: #fff; }
 .blog:before{
 	background-color: #F3F3F3; content: "Blog"; display: table; font-size: 10.507px;  //IE8 font-size: 0.657rem; margin: -7.345px auto 0;  //IE8 margin: -0.459rem auto; padding: 0 0.657rem; text-align: center;
 }*/
-#tinymce { margin: 0 4em; }
+#tinymce { margin: 0 7em; }
 
 /**
  * State Styles
