@@ -16,17 +16,23 @@
 .media-img:link{
 	//box model
 	border-bottom-width: 0;
-	margin: 0 2% 1.071428571428571em 0;
+	margin-bottom: 1.071428571428571em;  //15px
+	padding-right: 1.071428571428571em;  //15px
 	max-width: 31.3333333333%;
 	//layout
 	float: left;  //IE9
 	           -ms-flex: 0 0 auto;  //IE10
 	-webkit-flex-shrink: 0;  //Do not allow the image to shrink. Note: this does respect the max-width property.
 	        flex-shrink: 0;  //W3C
+	
+	@media screen and (min-width: 43em){
+		padding-right: 0.882352941176471em;  //15px
+	}
 }
 
-//Vertically center .media-img. Extends .media-img.
-.media-img-alt{
+//Vertically center .media-img. Extends .media-img or .media-body.
+.media-img-alt,  //deprecated, use .media-child-alt instead
+.media-child-alt{
 	-ms-flex-item-align: center;  //IE10
 	 -webkit-align-self: center;  //Safari
 	         align-self: center;  //W3C
