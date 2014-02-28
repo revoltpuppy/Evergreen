@@ -263,11 +263,11 @@
         .accordion,
         .accordion-table{
         	//box model
-            border: 1px solid #ccc;
+            border: 1px solid  mix(white, $blueberry-susan, 75%);
             //layout
             overflow: hidden;
             //backgrounds & borders
-            background-color: #e5e5e5;
+            background-color:  mix(white, $blueberry-susan, 85%);
             border-radius: 8px;
         }
         .accordion dt a,
@@ -275,11 +275,22 @@
             padding: 0.631100639515315em 2%;  //15/11.884/2
         }
         .accordion dt{
-            border-top: 1px solid #666;  //Use border-top, cuz dts aren't last-childs
+            border-top: 1px solid mix(black, $blueberry-susan, 50%);  //Use border-top, cuz dts aren't last-childs
             margin-top: 0;
-        }
-        .accordion dt:first-child{  //Use first-child cuz dts aren't last-childs
-            border-top-width: 0;
+        
+						&:first-child{  //Use first-child cuz dts aren't last-childs
+            	border-top-width: 0;
+            }
+            
+            &:hover{
+	            //backgrounds & borders
+	            background-color: mix(white, $blueberry-susan, 90%);
+	            border-color:  mix(white, $blueberry-susan, 80%);
+	            border-top-color: mix(black, $blueberry-susan, 33%);
+	            //transition
+	            -webkit-transition: background-color .2s ease-out;
+	                    transition: background-color .2s ease-out;
+            }
         }
         .accordion dt a{
         	//box model
@@ -289,7 +300,11 @@
             display: block;
         }
         .accordion dt a:before{
-            content:"▶ ";
+        		//box model
+        		margin-right: 2%;
+        		//layout
+        		display: inline-block;
+            content:"▶";
         }
         .accordion dd{
         	//box model
