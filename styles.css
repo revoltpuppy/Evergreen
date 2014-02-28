@@ -598,17 +598,17 @@ ul.accordion-inner { padding: 0 2%; }
   .feature-list > li:nth-child(3n+1) { clear: left; } }
 
 /** 4.1.1 Accordion  @subsubsection mod-typography-l-accordion */
-.accordion, .accordion-table { border: 1px solid #ccc; overflow: hidden; background-color: #e5e5e5; border-radius: 8px; }
+.accordion, .accordion-table { border: 1px solid #d1cad6; overflow: hidden; background-color: #e3dfe6; border-radius: 8px; }
 
 .accordion dt a, .accordion dd { padding: 0.631100639515315em 2%; }
 
-.accordion dt { border-top: 1px solid #666; margin-top: 0; }
-
+.accordion dt { border-top: 1px solid #24162e; margin-top: 0; }
 .accordion dt:first-child { border-top-width: 0; }
+.accordion dt:hover { background-color: #ece9ee; border-color: #dad4de; border-top-color: #301d3e; -webkit-transition: background-color .2s ease-out; transition: background-color .2s ease-out; }
 
 .accordion dt a { border-bottom-width: 0; width: 100%; display: block; }
 
-.accordion dt a:before { content: "▶ "; }
+.accordion dt a:before { margin-right: 2%; display: inline-block; content: "▶"; }
 
 .accordion dd { margin-bottom: 0; background-color: #f2f2f2; box-shadow: inset 0 2px 2px #999; }
 
@@ -694,9 +694,10 @@ ul.flexible { overflow: hidden;     	/*@media screen and (min-width:20em){
 /** Media Block  A common pattern wherein copy is floated next to a graphic.  @section mod-media */
 .media { clear: left; display: -ms-flexbox; display: -webkit-flex; display: flex; }
 
-.media-img, .media-img:link { border-bottom-width: 0; margin: 0 2% 1.071428571428571em 0; max-width: 31.3333333333%; float: left; -ms-flex: 0 0 auto; -webkit-flex-shrink: 0; flex-shrink: 0; }
+.media-img, .media-img:link { border-bottom-width: 0; margin-bottom: 1.071428571428571em; padding-right: 1.071428571428571em; max-width: 31.3333333333%; float: left; -ms-flex: 0 0 auto; -webkit-flex-shrink: 0; flex-shrink: 0; }
+@media screen and (min-width: 43em) { .media-img, .media-img:link { padding-right: 0.882352941176471em; } }
 
-.media-img-alt { -ms-flex-item-align: center; -webkit-align-self: center; align-self: center; }
+.media-img-alt, .media-child-alt { -ms-flex-item-align: center; -webkit-align-self: center; align-self: center; }
 
 .media-img img { margin-top: 7.5px; margin-top: 0.46875rem; display: block; }
 
@@ -805,7 +806,7 @@ padding: 1.090671126299716em 2% 2% 0.272667781574929em;*/ color: #fff; }
 .is-current-section a, .is-current-section a:link .is-current-section a:visited, .is-current-section .is-explored-section:hover, .is-current-section .is-explored-section:focus, .is-current-section .is-explored-section:active { background-color: #46502b; }
 
 /** 2. Accordions  @section state-accordion */
-.is-expanded:before { content: "▼ " !important; }
+.is-expanded:before { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); -webkit-transition: all .2s linear; transition: all .2s linear; }
 
 .is-hidden { display: none; }
 
