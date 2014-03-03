@@ -41,6 +41,25 @@ $small-face: Verdana, Helvetica, Arial, sans-serif;
 	margin:0.441176470588235em 0 0.882352941176471em 0;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
 }
 
+.compare-box{
+	//box model
+	max-width: 200px;
+	//position
+	position: fixed;
+	right: 2%;
+	bottom: -6em;
+	//typography
+	text-align: center;
+	//misc
+	box-shadow: 0 0 2px $shadow;
+}
+
+.compare-box-active{
+	bottom: 0;
+	-webkit-transition: bottom .25s;  //Safari 6
+	        transition: bottom .25s;
+}
+
 .course-index{
 	@include base-type;  //We want this table to always use the smaller copy size
 	
