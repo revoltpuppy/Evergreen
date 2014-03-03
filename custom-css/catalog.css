@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /** Sass Constants  @section sass-constants */
 /** Sass Mixins  @section sass-mixins */
+.compare-box { max-width: 200px; position: fixed; right: 2%; bottom: -6em; text-align: center; box-shadow: 0 0 2px rgba(30, 19, 37, 0.25); }
+
+.compare-box-active { bottom: 0; -webkit-transition: bottom .25s; transition: bottom .25s; }
+
 .course-index { font-size: 0.875rem; line-height: 1.607142857142857; }
 .course-index > thead { display: none; }
 .course-index > tbody, .course-index > tbody > tr, .course-index > tbody > tr > td { display: block; }
