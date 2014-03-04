@@ -9,23 +9,21 @@
 .box,
 p.box{  //WYSIWYG
 	//box model
-	padding: 0 2%;
-    //layout
-    overflow: hidden;
-    //backgrounds & borders
-    background-color: mix(white, $sky-blue, 80%);
-    background-image: url(images/texture-1.png);
-    border-radius: 2px;
+	padding: 0 1em;
+	//layout
+	overflow: hidden;
+	//backgrounds & borders
+	background-color: mix(white, $sky-blue, 80%);
+	background-image: url(images/texture-1.png);
+	border-radius: 2px;
 }
 .notice,  //deprecated
 .note{
-    border-left: 5px solid mix(white, $sky-blue, 60%);
-}
-@media screen and (min-width:22em){
-	.notice,  //deprecated
-	.note{
-    	padding-left:-webkit-calc(2% - 5px);  //Chrome 25, Safari 6, Mobile Safari 6, Blackberry Browser 10
-		padding-left:        calc(2% - 5px);  //w3c, IE 9-10, Firefox 19
+	border-left: 5px solid mix(white, $sky-blue, 60%);
+	
+	@media screen and (min-width: 22em){
+			padding-left: -webkit-calc(1em - 5px);  //Chrome 25, Safari 6, Mobile Safari 6, Blackberry Browser 10
+			padding-left:         calc(1em - 5px);
 	}
 }
 .alert{
@@ -46,32 +44,33 @@ p.box{  //WYSIWYG
 .caption-box{
 	//typography
 	text-shadow: 0 1px 0 hsla(0, 0%, 100%, .5);
-	//backgronds and borders
-	background-color: #f3f3f3;
+	//backgrounds and borders
 	background-color: hsla(0, 0%, 95%, .6666666667);
+	
+	img{
+		@include x-rem(margin-bottom, 0.625);
+	}
 }
-.caption-box img{
-	@include x-rem(margin-bottom, 0.625);
-}
+
 //pull quotes
 .pull-box{
     background-color: $evergreen-neue;
     
-    @media screen and (min-width:43em){
+    @media screen and (min-width: 43em){
     	margin-bottom: 1.071428571428571em;  //15px
     }
 }
 .pull-quote{
-    @include base-type-lg;
-    
-    @media screen and (min-width:43em){
+	@include base-type-lg;
+	
+	@media screen and (min-width: 43em){
 		margin: .2727272727em 0 .8181818182em 0;
-    }
-    
-    @media screen and (min-width:70em){
+	}
+	
+	@media screen and (min-width: 70em){
 		@include x-rem(font-size, 1.719);  //20px
 		line-height: 1.090710779858208;  //30/27.505
-    }
+	}
 }
 .pull-quote,
 .pull-quote + .figcaption,  //deprecated
@@ -101,8 +100,6 @@ p.box{  //WYSIWYG
 }
 .full-box h2,
 .full-box h3{
-	/*margin: 0;
-	padding: 1.090671126299716em 2% 2% 0.272667781574929em;*/  //30/27.506  7.5/27.506 //Padding here should match the default margin for these elements exactly. If they don't match, change this rule.
 	color: #fff;
 }
 .full-box > .box{
