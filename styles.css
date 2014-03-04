@@ -732,17 +732,16 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 	}
 }*/
 /** Boxes  Boxes for containing things, usually with a background color.  @section box */
-.notice, .box, p.box { padding: 0 2%; overflow: hidden; background-color: #cce6fb; background-image: url(images/texture-1.png); border-radius: 2px; }
+.notice, .box, p.box { padding: 0 1em; overflow: hidden; background-color: #cce6fb; background-image: url(images/texture-1.png); border-radius: 2px; }
 
 .notice, .note { border-left: 5px solid #99cef8; }
+@media screen and (min-width: 22em) { .notice, .note { padding-left: -webkit-calc(1em - 5px); padding-left: calc(1em - 5px); } }
 
-@media screen and (min-width: 22em) { .notice, .note { padding-left: -webkit-calc(2% - 5px); padding-left: calc(2% - 5px); } }
 .alert { color: #600f21; background-color: rgba(253, 243, 180, 0.5); border-radius: 0; }
 
 #sitewide-alert { border-radius: 0; transition: all .5s ease-in; }
 
-.caption-box { text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); background-color: #f3f3f3; background-color: rgba(242, 242, 242, 0.66667); }
-
+.caption-box { text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); background-color: rgba(242, 242, 242, 0.66667); }
 .caption-box img { margin-bottom: 10px; margin-bottom: 0.625rem; }
 
 .pull-box { background-color: #64933a; }
@@ -761,8 +760,7 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 /** Full Box  A box with a header and possibly a footer.  @section box-full */
 .full-box { border: 1px solid #0086ee; padding: 0; background: #0086ee url(images/texture-1.png); }
 
-.full-box h2, .full-box h3 { /*margin: 0;
-padding: 1.090671126299716em 2% 2% 0.272667781574929em;*/ color: #fff; }
+.full-box h2, .full-box h3 { color: #fff; }
 
 .full-box > .box { background-color: #f5f5f5; }
 
