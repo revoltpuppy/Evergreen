@@ -242,13 +242,11 @@ small,
 caption,  //table caption
 .details,  //deprecated
 .caption{
-	font-family: $small-face;
-	@include x-rem(font-size, 0.657);  //10.507px
-    line-height: 1.427619682116684;  //15/10.507
+	@include small-type;
 }
 
 small{
-	color: #333;
+	//color: #333;
 	
 	[role="contentinfo"] &{
 		color: #ccc;
