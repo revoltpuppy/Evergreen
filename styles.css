@@ -142,7 +142,6 @@ em { font-style: italic; }
 
 figcaption, small, caption, .details, .caption { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; }
 
-small { color: #333; }
 [role="contentinfo"] small { color: #ccc; }
 
 code, pre { font-family: monospace, serif; }
@@ -598,7 +597,7 @@ ul.accordion-inner { padding: 0 2%; }
   .feature-list > li:nth-child(3n+1) { clear: left; } }
 
 /** 4.1.1 Accordion  @subsubsection mod-typography-l-accordion */
-.accordion, .accordion-table { border: 1px solid #d1cad6; overflow: hidden; background-color: #e3dfe6; border-radius: 8px; }
+.accordion, .accordion-table { border: 1px solid #d1cad6; overflow: hidden; background-color: #e3dfe6; border-radius: 2px; }
 
 .accordion dt a, .accordion dd { padding: 0.631100639515315em 2%; }
 
