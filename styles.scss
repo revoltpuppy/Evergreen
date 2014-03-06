@@ -57,6 +57,11 @@ $small-face: Verdana, Helvetica, Arial, sans-serif;
 	//line-height: 1.323529411764706;  //22.5/17
 	line-height: 1.47058823529412;  //25/17
 }
+@mixin small-type{
+	font-family: $small-face;
+	@include x-rem(font-size, 0.657);  //10.507px
+	line-height: 1.427619682116684;  //15/10.507
+}
 
 @mixin margin-default{
 	margin: 0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
