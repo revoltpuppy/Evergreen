@@ -185,7 +185,8 @@
 .main-content > ul:last-child > li:last-child:after,
 .main-content > ol:last-child > li:last-child:after,
 .main-content > dl:last-child > dd:last-child:after{
-    content: "\00A0" url("/_inc/images/endnote.png");
+	white-space: nowrap;
+	content: "\00A0" url("/_inc/images/endnote.png");
 }
 
     /**
