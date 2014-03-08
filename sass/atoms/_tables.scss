@@ -1,3 +1,7 @@
+table a{
+	border-bottom-width: 0;  //Link borders clash with table borders and bring in extra complexity.
+}
+
 //For tables with the th left of the tds.
 .horizontal-table th{
 	//box model
