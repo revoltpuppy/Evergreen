@@ -169,6 +169,8 @@ th > p:last-child, td > p:last-child, td > ul:last-child, td > ol:last-child, td
 
 caption { border-top: 1px solid; caption-side: bottom; }
 
+table a { border-bottom-width: 0; }
+
 .horizontal-table th { border-top: 1px solid #ccc; padding: 0.37037em 1.1111111111em 1.1111111111em 0; vertical-align: top; }
 
 .horizontal-table tr:first-child th { border-top: 1px solid black; }
@@ -579,7 +581,7 @@ ul.accordion-inner { padding: 0 2%; }
 
 .machine-text { font-family: Consolas, "Liberation Mono", Courier, Courier New, monospace; }
 
-.main-content > p:last-child:after, .main-content > ul:last-child > li:last-child:after, .main-content > ol:last-child > li:last-child:after, .main-content > dl:last-child > dd:last-child:after { content: "\00A0" url("/_inc/images/endnote.png"); }
+.main-content > p:last-child:after, .main-content > ul:last-child > li:last-child:after, .main-content > ol:last-child > li:last-child:after, .main-content > dl:last-child > dd:last-child:after { white-space: nowrap; content: "\00A0" url("/_inc/images/endnote.png"); }
 
 /** 4.1 Lists  @subsection mod-typography-l */
 .text-list { margin-left: 1em; list-style-type: disc; }
