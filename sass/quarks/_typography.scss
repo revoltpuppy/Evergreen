@@ -89,17 +89,17 @@ h1{
 	font-weight: normal;
 	line-height: 1.446015424164524;  //45/31.12
 
-	@media screen and (min-wdith: 32em){
+	@media screen and (min-width: 32em){
 		margin-top: 0.818419903972065em;
 		font-size: 2.291rem;  //36.656px
-	    line-height: 1.227629855958097;  //45/35.656
+		line-height: 1.227629855958097;  //45/35.656
 	}
     
-    @media screen and (min-width: 43em){
-    	margin-top: 0.673975557153127;   //30/44.5167
-	    @include x-rem(font-size, 2.782);  //44.512px
+	@media screen and (min-width: 43em){
+		margin-top: 0.673975557153127;   //30/44.5167
+		@include x-rem(font-size, 2.782);  //44.512px
 		line-height: 1.010963335729691;  //45/44.5167
-    }
+	}
 }
 h2{
 	//box model
