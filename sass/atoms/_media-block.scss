@@ -7,7 +7,6 @@
  */
 .media{
 	clear: left;  //IE9
-	display:  -ms-flexbox;  //IE10
 	display: -webkit-flex;  //Safari
 	display:         flex;  //W3C
 	//layout
@@ -21,7 +20,6 @@
 	max-width: 31.3333333333%;
 	//layout
 	float: left;  //IE9
-	           -ms-flex: 0 0 auto;  //IE10
 	-webkit-flex-shrink: 0;  //Do not allow the image to shrink. Note: this does respect the max-width property.
 	        flex-shrink: 0;  //W3C
 	
@@ -33,7 +31,6 @@
 //Vertically center .media-img. Extends .media-img or .media-body.
 .media-img-alt,  //deprecated, use .media-child-alt instead
 .media-child-alt{
-	-ms-flex-item-align: center;  //IE10
 	 -webkit-align-self: center;  //Safari
 	         align-self: center;  //W3C
 }
