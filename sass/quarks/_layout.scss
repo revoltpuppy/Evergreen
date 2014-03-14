@@ -60,6 +60,9 @@
 }
 
 .site-content{
+	//box model
+	min-height: 80vh;
+	//flexbox
 	flex: 1;
 }
 
