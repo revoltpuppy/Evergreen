@@ -527,6 +527,52 @@
     }
 }
 
+/**
+ * 3.8 Embeded Content
+ *
+ * @section mod-embeded-content
+ */
+.lazy-load{
+  //box model
+  border-bottom-width: 0;
+  max-width: 100%;
+  //layout
+  display: block;
+  overflow: hidden;
+  //position
+  position: relative;
+  
+  &::after{
+    //box model
+    height: 100%;
+    width: 100%;
+    //layout
+    -webkit-align-items: center;
+            align-items: center;
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-justify-content: center;
+            justify-content: center;
+    //position
+    position: absolute;
+    top: 0;
+    //typography
+    text-align: center;
+    //backgrounds & borders
+    background-image: url(http://evergreen.edu/_inc/images/texture-1.png);
+    //misc
+    content: url(http://evergreen.edu/_inc/images/icons/green/play.png);
+  }
+  
+  &:hover::after{
+    opacity: .85;
+  }
+  
+  img{
+	  display: block;
+  }
+}
+
 /*.blog{
 	border-top: 1px solid #000;
 }
