@@ -97,7 +97,7 @@ p, ul, ol, dl, blockquote, figure, .base { margin: 0.535714285714286em 0 1.07142
 @media screen and (min-width: 43em) { p, ul, ol, dl, blockquote, figure, .base { margin: 0.441176470588235em 0 0.882352941176471em 0; } }
 /** 2. Headings  @section h */
 h1 { margin: 0.96401028277635em 0 0 0; font-size: 1.945rem; font-weight: normal; line-height: 1.446015424164524; }
-@media screen and (min-wdith: 32em) { h1 { margin-top: 0.818419903972065em; font-size: 2.291rem; line-height: 1.227629855958097; } }
+@media screen and (min-width: 32em) { h1 { margin-top: 0.818419903972065em; font-size: 2.291rem; line-height: 1.227629855958097; } }
 @media screen and (min-width: 43em) { h1 { margin-top: 0.673975557153127; font-size: 44.512px; font-size: 2.782rem; line-height: 1.010963335729691; } }
 
 h2 { margin-top: 1.324152542372881em; color: #666; font-size: 22.656px; font-size: 1.416rem; font-weight: bold; line-height: 1.324152542372881; }
@@ -241,7 +241,7 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 
 @media screen and (min-width: 20em) { [role="navigation"] { font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; letter-spacing: .05em; } }
 @media screen and (min-width: 43em) { [role="navigation"] { margin-left: 0; width: 100%; font-size: 17.008px; font-size: 1.063rem; letter-spacing: normal; line-height: 1.323529411764706; } }
-.site-content { flex: 1; }
+.site-content { min-height: 80vh; flex: 1; }
 
 .element-list, .element-list { margin-left: 0; padding-left: 0; list-style-type: none; }
 
@@ -693,12 +693,12 @@ ul.flexible { overflow: hidden;     	/*@media screen and (min-width:20em){
 .many { font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; }
 
 /** Media Block  A common pattern wherein copy is floated next to a graphic.  @section mod-media */
-.media { clear: left; display: -ms-flexbox; display: -webkit-flex; display: flex; }
+.media { clear: left; display: -webkit-flex; display: flex; }
 
-.media-img, .media-img:link { border-bottom-width: 0; margin-bottom: 1.071428571428571em; padding-right: 1.071428571428571em; max-width: 31.3333333333%; float: left; -ms-flex: 0 0 auto; -webkit-flex-shrink: 0; flex-shrink: 0; }
+.media-img, .media-img:link { border-bottom-width: 0; margin-bottom: 1.071428571428571em; padding-right: 1.071428571428571em; max-width: 31.3333333333%; float: left; -webkit-flex-shrink: 0; flex-shrink: 0; }
 @media screen and (min-width: 43em) { .media-img, .media-img:link { padding-right: 0.882352941176471em; } }
 
-.media-img-alt, .media-child-alt { -ms-flex-item-align: center; -webkit-align-self: center; align-self: center; }
+.media-img-alt, .media-child-alt { -webkit-align-self: center; align-self: center; }
 
 .media-img img { margin-top: 7.5px; margin-top: 0.46875rem; display: block; }
 
@@ -782,6 +782,12 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 .event-calendar .h-event { margin-top: 0.535714285714286em; margin-bottom: 1.071428571428571em; }
 
 @media screen and (min-width: 43em) { .event-calendar .h-event { margin-top: 0.441176470588235em; margin-bottom: 0.882352941176471em; } }
+/** 3.8 Embeded Content  @section mod-embeded-content */
+.lazy-load { border-bottom-width: 0; max-width: 100%; display: block; overflow: hidden; position: relative; }
+.lazy-load::after { height: 100%; width: 100%; -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; position: absolute; top: 0; text-align: center; background-image: url(http://evergreen.edu/_inc/images/texture-1.png); content: url(http://evergreen.edu/_inc/images/icons/green/play.png); }
+.lazy-load:hover::after { opacity: .85; }
+.lazy-load img { display: block; }
+
 /*.blog{
 	border-top: 1px solid #000;
 }
