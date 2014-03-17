@@ -94,3 +94,18 @@
         float: left;
     }
 }
+
+/**
+ * Badges
+ *
+ * Logos, labels, and stickers that are not necessarily
+ * important content to the audience, but are important to
+ * content owners and third parties. e.g. NASCAR
+ */
+/*.badge{
+	max-width: 33.3333333333%;
+	
+	@media screen and (min-width:32em){
+		max-width: 16.6666666666%;
+	}
+}*/
