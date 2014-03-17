@@ -127,10 +127,10 @@
 
 .intro{
 	//box model
-	margin: 1.169925124792013;  //22.5/19.232
+	margin: 1.169925124792013em 0;  //22.5/19.232
 	//typography
-    color: $evergreen-neue;
-    @include x-rem(font-size, 1.202);  //19.232px
+	color: $evergreen-neue;
+	@include x-rem(font-size, 1.202);  //19.232px
 	line-height: 1.559900166389351;  //30/19.232
 	
 	@media screen and (min-width: 43em){
