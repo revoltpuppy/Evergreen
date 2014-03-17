@@ -96,7 +96,7 @@ h1{
 	}
     
 	@media screen and (min-width: 43em){
-		margin-top: 0.673975557153127;   //30/44.5167
+		margin-top: 0.673975557153127em;   //30/44.5167
 		@include x-rem(font-size, 2.782);  //44.512px
 		line-height: 1.010963335729691;  //45/44.5167
 	}
