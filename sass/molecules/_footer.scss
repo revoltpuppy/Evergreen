@@ -18,17 +18,18 @@
 [role="contentinfo"]:before{
 	display: table;
 	clear: both;
-	content: ""
-}
-@media screen and (min-height:35em){
-	@include x-rem(margin-top, 3.75);  //60px
+	content: "";
+
+	@media screen and (min-height:35em){
+		@include x-rem(margin-top, 3.75);  //60px
+	}
 }
 
 .page-footer a,
 .page-footer a:link,
 .page-footer a:visited{
 	border-color: mix(black, $evergreen-neue, 40%);
-    color: $evergreen-neue;
+	color: $evergreen-neue;
 }
 .page-footer a:hover{
 	border-color: $sky-blue;
