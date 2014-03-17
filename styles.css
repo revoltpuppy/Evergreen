@@ -98,7 +98,7 @@ p, ul, ol, dl, blockquote, figure, .base { margin: 0.535714285714286em 0 1.07142
 /** 2. Headings  @section h */
 h1 { margin: 0.96401028277635em 0 0 0; font-size: 1.945rem; font-weight: normal; line-height: 1.446015424164524; }
 @media screen and (min-width: 32em) { h1 { margin-top: 0.818419903972065em; font-size: 2.291rem; line-height: 1.227629855958097; } }
-@media screen and (min-width: 43em) { h1 { margin-top: 0.673975557153127; font-size: 44.512px; font-size: 2.782rem; line-height: 1.010963335729691; } }
+@media screen and (min-width: 43em) { h1 { margin-top: 0.673975557153127em; font-size: 44.512px; font-size: 2.782rem; line-height: 1.010963335729691; } }
 
 h2 { margin-top: 1.324152542372881em; color: #666; font-size: 22.656px; font-size: 1.416rem; font-weight: bold; line-height: 1.324152542372881; }
 @media screen and (min-width: 43em) { h2 { margin-top: 1.090750436300175em; font-size: 27.504px; font-size: 1.719rem; line-height: 1.090750436300175; } }
@@ -550,8 +550,8 @@ ul.accordion-inner { padding: 0 2%; }
 [role="contentinfo"] { margin-top: 30px; margin-top: 1.875rem; clear: left; color: #fff; background-color: #000; }
 
 [role="contentinfo"]:after, [role="contentinfo"]:before { display: table; clear: both; content: ""; }
+@media screen and (min-height: 35em) { [role="contentinfo"]:after, [role="contentinfo"]:before { margin-top: 60px; margin-top: 3.75rem; } }
 
-@media screen and (min-height: 35em) { margin-top: 60px; margin-top: 3.75rem; }
 .page-footer a, .page-footer a:link, .page-footer a:visited { border-color: #3c5822; color: #64933a; }
 
 .page-footer a:hover { border-color: #0086ee; color: #0086ee; }
@@ -566,7 +566,7 @@ ul.accordion-inner { padding: 0 2%; }
 
 .follow { margin-top: 0; }
 
-.intro { margin: 1.169925124792013; color: #64933a; font-size: 19.232px; font-size: 1.202rem; line-height: 1.559900166389351; }
+.intro { margin: 1.169925124792013em 0; color: #64933a; font-size: 19.232px; font-size: 1.202rem; line-height: 1.559900166389351; }
 @media screen and (min-width: 43em) { .intro { margin: 1.323529411764706em 0; font-size: 27.504px; font-size: 1.719rem; line-height: 1.363438045375218; } }
 
 .intro-alt { color: #333; font-weight: bold; }
@@ -776,6 +776,14 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
   .left, .illus, .illus-alt, .image, .image img, .image-alt { margin: 0 0 0.631100639515315em 2%; clear: right; float: right; } }
 @media screen and (min-width: 43em) { .left, .main-content > .illus, .illus-alt, .main-content > .image, .main-content > .image img, .image-alt { margin-right: -6.5449%; max-width: 53.500761035008%; } }
 @media screen and (min-width: 70em) { .illus-alt, .image-alt { margin: 0 0 0.6311em -41.72297%; width: 38.260135135135135%; clear: left; float: left; } }
+/** Badges  Logos, labels, and stickers that are not necessarily important content to the audience, but are important to content owners and third parties. e.g. NASCAR */
+/*.badge{
+	max-width: 33.3333333333%;
+	
+	@media screen and (min-width:32em){
+		max-width: 16.6666666666%;
+	}
+}*/
 /** 3.7 Event Calendar  @section mod-event-calendar */
 .event-dt { font-size: 11.888px; font-size: 0.743rem; font-weight: bold; letter-spacing: .1em; line-height: 1.892664872139973; text-transform: uppercase; }
 
