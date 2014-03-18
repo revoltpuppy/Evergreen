@@ -255,7 +255,7 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
   .unit-1-2 { margin: 0 2%; width: 46%; }
   .unit-1-3 { width: 29.3333333333%; float: left; }
   .unit-2-3 { width: 62.66666666667%; float: left; } }
-@media screen and (min-width: 43em) { .unit-1-7, .unit-2-7, .unit-3-7, .unit-4-7, .unit-5-7, .unit-6-7 { margin: 0 2%; float: left; }
+@media screen and (min-width: 43em) { .unit-2-6, .unit-4-6, .unit-1-7, .unit-2-7, .unit-3-7, .unit-4-7, .unit-5-7, .unit-6-7 { margin: 0 2%; float: left; }
   .unit-1-1 { width: 96%; clear: left; }
   .unit-1-7 { width: 10.285714285714286%; }
   .unit-2-7 { width: 24.571428571428571%; }
@@ -524,7 +524,7 @@ ul.tertiary-nav-list { margin-left: 0; list-style-type: none; }
 
 .accordion-dismiss:before { content: "▼ " !important; }
 
-.accordion-dismiss::before { content: "▼ " !important; }
+.accordion-dismiss::before { content: "▼ " !important; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
 
 [name="accordion-group"] ~ h4 .accordion-dismiss { display: none; }
 
