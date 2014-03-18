@@ -61,3 +61,6 @@
 .cancelled .fall, .cancelled .winter, .cancelled .spring, .cancelled .summer { background-color: #dad4de; }
 .cancelled .fall abbr, .cancelled .winter abbr, .cancelled .spring abbr, .cancelled .summer abbr { background-color: transparent; }
 @media screen and (min-width: 70em) { .cancelled .fall, .cancelled .winter, .cancelled .spring, .cancelled .summer { background-color: transparent; } }
+
+/** Program Pages  Styles for the detail pages for each of the individual programs. */
+.program-faculty { border: 1px solid #00355f; border-radius: 50%; }
