@@ -51,41 +51,45 @@
 }
 
 @media screen and (min-width:43em){
+	.unit-2-6,
+	.unit-4-6,
 	.unit-1-7,
-    .unit-2-7,
-    .unit-3-7,
-    .unit-4-7,
-    .unit-5-7,
-    .unit-6-7{
-        margin:0 2%;
-        float:left;
-    }
-    .unit-1-1{
-        width: 96%;
-        clear: left;
-    }
-    .unit-1-7{
-        width: 10.285714285714286%;
-    }
-    .unit-2-7{
-        width: 24.571428571428571%;
-    }
-    .unit-3-7{
-        width: 38.857142857142857%;
-    }
-    .unit-4-7{
-        width: 53.142857142857143%;
-    }
-    .unit-5-7{
-        width: 67.428571428571429%;
-    }
-    .unit-6-7{
-        width: 81.714285714285714%;
-    }
-    
-    .push-1{
-        margin-left:16.285714285714286%;
-    }
+	.unit-2-7,
+	.unit-3-7,
+	.unit-4-7,
+	.unit-5-7,
+	.unit-6-7{
+		margin:0 2%;
+		float:left;
+	}
+	
+	.unit-1-1{
+		width: 96%;
+		clear: left;
+	}
+	
+	.unit-1-7{
+		width: 10.285714285714286%;
+	}
+	.unit-2-7{
+		width: 24.571428571428571%;
+	}
+	.unit-3-7{
+		width: 38.857142857142857%;
+	}
+	.unit-4-7{
+		width: 53.142857142857143%;
+	}
+	.unit-5-7{
+		width: 67.428571428571429%;
+	}
+	.unit-6-7{
+		width: 81.714285714285714%;
+	}
+	
+	.push-1{
+		margin-left:16.285714285714286%;
+	}
 }
 
 /**
