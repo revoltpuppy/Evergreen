@@ -115,6 +115,8 @@ ul.tertiary-nav-list{  //deprecated
 }
 .accordion-dismiss::before{
 	content: "▼ " !important;
+	-webkit-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
 }
 [name="accordion-group"] ~ h4 .accordion-dismiss{
 	display: none;
