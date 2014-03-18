@@ -345,3 +345,16 @@ $small-face: Verdana, Helvetica, Arial, sans-serif;
 		}
 	}
 }
+
+/**
+ * Program Pages
+ *
+ * Styles for the detail pages for each of the individual programs.
+ */
+
+.program-faculty{
+	//box model
+	border: 1px solid mix(black, $sky-blue, 60%);
+	//backgrounds & borders;
+	border-radius: 50%;
+}
