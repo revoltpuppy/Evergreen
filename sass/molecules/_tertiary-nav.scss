@@ -4,7 +4,27 @@
  * @subsection molecules/_tertiary-nav
  */
 
-#tertiary-nav,  //deprecated
+/**
+ * Don't delete this! It's for the new nav arrangement, but we
+ * don't want to go live with it right now and screw everything
+ * up.
+ */
+/*#tertiary-nav{
+	max-width: 96%;
+	
+	@media screen and (min-width: 32em){
+		margin: 0 auto 1rem;
+		max-width: 66.6666666666%;
+	}
+	
+	@media screen and (min-width: 43em){
+		margin-top: 1rem;
+		width: 17.803302225413%;
+		max-width: 248px;
+	}
+}*/
+
+#tertiary-nav,
 .tertiary-nav-h{
     @include base-type;
 }
@@ -17,9 +37,11 @@
 	    background-color: hsla(0, 0%, 100%, .25);
     }
 }
-ul.tertiary-nav-list{  //deprecated
+.tertiary-nav-list,
+.tertiary-related-links,
+.tertiary-related-links > li > ul{
 	margin-left: 0;
-    list-style-type: none;
+	list-style-type: none;
 }
 .tertiary-nav-h{  //heading for tertiary nav in wider views
     margin-top: -1px;  //compensate for border
@@ -29,9 +51,8 @@ ul.tertiary-nav-list{  //deprecated
     margin:0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
 }
 .tertiary-nav-list a,
-.tertiary-nav-list a:link,
 #tertiary-nav dd > ul a,  //WYSIWYG
-#tertiary-nav dd > ul a:link{  //WYSIWYG
+.tertiary-related-links a{
     border-bottom-width: 0;
 }
 
@@ -81,48 +102,71 @@ ul.tertiary-nav-list{  //deprecated
  * @see http://cssconf.com/talk-seddon.html
  */
 [name="accordion-group"]{
-	display: none;
+	display: none;  //Hide all actual checkboxes; they are activated by their labels
 }
+.accordion-h::before{
+	//layout
+	display: inline-block;
+	//misc
+	content: "▶\00A0";  //non-breaking space
+	
+	@media screen and (min-width: 70em){
+		content: "";
+	}
+}
+[name="accordion-group"] + .accordion-h::before{
+  -webkit-transition: -webkit-transform .1s linear;  /*Safari 6*/
+          transition:         transform .1s linear;
+}
+[name="accordion-group"]:checked + .accordion-h::before{
+  /*animations, transforms, and transitions*/
+  -webkit-transform: rotate(90deg);  /*Chrome, Safari*/
+      -ms-transform: rotate(90deg);  /*IE9*/
+          transform: rotate(90deg);
+  -webkit-transition: -webkit-transform .1s linear;
+          transition:         transform .1s linear;
+}
+
 .tertiary-nav-h{
 	//box model
 	margin-bottom: 0;
 	padding: 0.631100639515315em 0;  //15/11.884/2
-}
-.accordion-group label{
-	//typography
-	color: $wine;
-	//misc
-	cursor: pointer;
 	
-	&:hover{
-		color: $sky-blue;
+	label{
+		//typography
+		color: $wine;
+		//misc
+		cursor: pointer;
+		
+		&:hover{
+			color: $sky-blue;
+		}
+	}
+	
+	@media screen and (min-width: 70em){
+		label{
+			//typography
+			color: black;
+			//misc
+			cursor: default;
+			
+			&:hover{
+				color: black;
+			}
+		}
 	}
 }
-.accordion-toggle:before{  //IE8
-	content: "▶ ";
-}
-.accordion-toggle::before{
-	content: "▶ ";
-}
 [name="accordion-group"] ~ .tertiary-nav-h .accordion-toggle{
-	display: block;
+	display: inline;
 }
 [name="accordion-group"]:checked ~ .tertiary-nav-h .accordion-toggle{
 	display: none;
-}
-.accordion-dismiss:before{  //IE8
-	content: "▼ " !important;
-}
-.accordion-dismiss::before{
-	content: "▼ " !important;
-	-webkit-transform: rotate(-90deg);
-	        transform: rotate(-90deg);
 }
 [name="accordion-group"] ~ h4 .accordion-dismiss{
 	display: none;
 }
 [name="accordion-group"]:checked ~ h4 .accordion-dismiss{
-	display: block;
+	display: inline;
 }
 .accordion-body{
 	//box model
@@ -139,7 +183,7 @@ ul.tertiary-nav-list{  //deprecated
 	-webkit-transition: max-height .2s ease 0s;;
 	transition: max-height .25s ease 0s;
 }
-.accordion-group li:last-child .accordion-body{
+#tertiary-nav li:last-child .accordion-body{
 	border-bottom-width: 0;
 }
 [name="accordion-group"]:checked ~ .accordion-body{
@@ -161,18 +205,6 @@ ul.accordion-inner{
 		color: black;
 		//misc
 		cursor: default;
-	}
-	.accordion-toggle:before{  //IE8
-		content: "";
-	}
-	.accordion-toggle::before{
-		content: "";
-	}
-	.accordion-dismiss:before{  //IE8
-		content: "" !important;
-	}
-	.accordion-dismiss::before{
-		content: "" !important;
 	}
 	.accordion-body{
 		border-bottom-width: 0;
