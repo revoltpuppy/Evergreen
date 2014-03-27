@@ -26,7 +26,8 @@ p.box{  //WYSIWYG
 		padding-left:         calc(1em - 5px);
 	}
 }
-.alert{
+.alert,
+p.alert{
 	//box model
 	//border: 1px solid $wine;  //Conflicts with sitewide alert JS. Might be worth changing how that works.
 	//typography
