@@ -23,16 +23,17 @@
 
 body{
 	//box model
-    margin: 0 auto;
-    min-height: 100vh;
-    //layout
-    //display: -webkit-flex;
-    //display:         flex;
+	margin: 0;
+	min-height: 100vh;
+	//layout
+	-webkit-align-items: center;
+	        align-items: center;
+	display: -webkit-flex;
+	display:         flex;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
 	//backgrounds & borders
-    background-color: #f3f3f3;
-    //flexbox
-    -webkit-flex-direction: column;
-            flex-direction: column;
+	background-color: #f3f3f3;
 }
 
 img{
