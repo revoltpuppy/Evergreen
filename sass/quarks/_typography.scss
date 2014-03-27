@@ -34,7 +34,7 @@ button{
 
 body,
 .base{
-    @include base-type;
+	@include base-type;
 	
 	@media screen and (min-width: 43em){
 		@include base-type-lg;
@@ -120,16 +120,16 @@ h3{
 	//box model
 	margin-top: 1.363636363636364em;  //30/22
 	//typography
-    color:#333;
-    @include x-rem(font-size, 1.375);  //22px - otherwise appears optically taller than h2
-    font-weight: normal;
-    line-height: 1.363636363636364;  //30/22
+	color:#333;
+	@include x-rem(font-size, 1.375);  //22px - otherwise appears optically taller than h2
+	font-weight: normal;
+	line-height: 1.363636363636364;  //30/22
     
-    @media screen and (min-width: 43em){
-    	margin-top: 1.176286072772898em;  //30/25.504
-	    @include x-rem(font-size, 1.594);  //25.504px - otherwise appears optically taller than h2
-	    line-height: 1.176286072772898; //30/25.504
-    }
+	@media screen and (min-width: 43em){
+		margin-top: 1.176286072772898em;  //30/25.504
+		@include x-rem(font-size, 1.594);  //25.504px - otherwise appears optically taller than h2
+		line-height: 1.176286072772898; //30/25.504
+	}
 }
 h4{
     margin: 0.779950083194676em 0 0.363976705490849em 0;
