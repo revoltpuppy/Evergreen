@@ -138,7 +138,10 @@
 	}
 	.search-toggle:hover,
 	.student-toggle:hover{
-		background-color: $blueberry-susan;
+		//backgrounds & borders
+		//background-color: $blueberry-susan; //Causes a weird bug on mobile that keeps active link purple
+		//misc
+		cursor: pointer;
 	}
 	.search-toggle > img,
 	.student-toggle > img{
@@ -345,24 +348,24 @@
 			}
 		}
 	}
-    .top-nav-link,
+	.top-nav-link,
 	.top-nav-link:link,
 	.top-nav-link:visited{
 		//box model
-        border-bottom-width: 0;
+		border-bottom-width: 0;
 		padding: 17px 2px;  //IE8
 		padding: 0.46875rem 0.25rem;  //7.5/16 2.48/16
 		width: 100%;
 		//typography
-	    color: #fff;
-	    
-	    @media screen and (min-width:22em){
+		color: #fff;
+		
+		@media screen and (min-width:22em){
 			font-weight: bold;
-	    }
-	    
-	    @media screen and (min-width:32em){
+		}
+		
+		@media screen and (min-width:32em){
 			text-shadow: none;
-	    }
+		}
 	}
 	
 	.secondary-nav-list{
@@ -392,9 +395,8 @@
 			> li:last-child{
 				margin: 0;
 			}
+			
 			> li{
-				//box model
-				//margin: 0.71315146386224em 0 1.42630292772448em;  //7.5/10.5167 15/10.5167
 				margin: 0;
 				width: 25%;
 				//layout
@@ -403,12 +405,6 @@
 				line-height: 2.85260585544895;
 			}
 		}
-		
-		/*@media screen and (min-width: 22em){
-			> li{
-				width: 25%;
-			}
-		}*/
 		
 		@media screen and (min-width: 22em){
 			//layout
