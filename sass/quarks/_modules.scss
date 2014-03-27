@@ -178,7 +178,7 @@
 }
 
 .machine-text{
-	font-family: Consolas, "Liberation Mono", Courier, Courier New, monospace;
+	font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
 .main-content > p:last-child:after,
@@ -463,6 +463,16 @@
     	//backgrounds & borders
       background-image: url("/_inc/images/icons/external/facebook32x32.png");
       content: "Facebook";
+    }
+    .icon-instagram::before{
+    	//backgrounds & borders
+      background-image: url("/_inc/images/icons/external/instagram32x32.png");
+      content: "Instagram";
+    }
+    .icon-pinterest::before{
+    	//backgrounds & borders
+      background-image: url("/_inc/images/icons/external/pinterest32x32.png");
+      content: "Pinterest";
     }
     .icon-twitter::before{
     	//backgrounds & borders
