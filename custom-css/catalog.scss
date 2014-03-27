@@ -355,6 +355,21 @@ $small-face: Verdana, Helvetica, Arial, sans-serif;
 .program-faculty{
 	//box model
 	border: 1px solid mix(black, $sky-blue, 60%);
+	height: 3rem;
 	//backgrounds & borders;
 	border-radius: 50%;
+}
+
+.program-prerequisites,
+.program-prerequisites-content,
+.program-description{
+	@include margin-default;
+}
+
+.catalog-season{
+	height: 1.375rem;  //Matches height of h3
+	
+	@media screen and (min-width: 43em){
+		font-size: 1.594rem;  //Matches height of h3
+	}
 }
