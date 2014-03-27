@@ -63,4 +63,9 @@
 @media screen and (min-width: 70em) { .cancelled .fall, .cancelled .winter, .cancelled .spring, .cancelled .summer { background-color: transparent; } }
 
 /** Program Pages  Styles for the detail pages for each of the individual programs. */
-.program-faculty { border: 1px solid #00355f; border-radius: 50%; }
+.program-faculty { border: 1px solid #00355f; height: 3rem; border-radius: 50%; }
+
+.program-prerequisites, .program-prerequisites-content, .program-description { margin: 0.535714285714286em 0 1.071428571428571em 0; }
+
+.catalog-season { height: 1.375rem; }
+@media screen and (min-width: 43em) { .catalog-season { font-size: 1.594rem; } }
