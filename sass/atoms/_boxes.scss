@@ -12,11 +12,28 @@ p.box{  //WYSIWYG
 	padding: 0 1em;
 	//layout
 	overflow: hidden;
+	//typography
+	color: mix(black, $sky-blue, 50%);
 	//backgrounds & borders
 	background-color: mix(white, $sky-blue, 80%);
-	background-image: url(images/texture-1.png);
+	background-image: url("images/texture-1.png");
 	border-radius: 2px;
 }
+
+.notice h2,  //deprecated
+.box h2{
+	color: mix(black, $sky-blue, 33%);
+}
+
+.notice h3,  //deprecated
+.box h3,
+.notice h4,  //deprecated
+.box h4,
+.notice h5,  //deprecated
+.box h5{
+	color: mix(black, $sky-blue, 50%);
+}
+
 .notice,  //deprecated
 .note{
 	border-left: 5px solid mix(white, $sky-blue, 60%);
