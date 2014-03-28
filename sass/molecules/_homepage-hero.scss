@@ -147,16 +147,14 @@
 		.homepage-hero-copy-alt &{
 			//layout
 			float: right;  //IE9
-			//flexbox
-			-ms-flex-item-align: flex-end;  //IE10
-			-webkit-align-self:  flex-end;  //Safari
-			        align-self:  flex-end;  //W3C
+			-webkit-align-self: flex-end;  //Safari
+			        align-self: flex-end;  //W3C
 		}
 	}
 	.homepage-hero-img{
 		//box model
 		margin-left: -25%;
-    	width: 150%;
+		width: 150%;
 	}
 }
 @media screen and (min-width: 43em){
