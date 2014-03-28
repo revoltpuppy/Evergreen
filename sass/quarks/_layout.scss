@@ -34,6 +34,11 @@
 	-webkit-transition: all .1s ease-in-out;  //Safari 6, Chrome 25
           transition: all .1s ease-in-out;
 }
+
+[role="main"]{
+	position: relative;
+}
+
 [role="navigation"],
 [role="main"]{
 	width: 100%;
@@ -64,7 +69,10 @@
 .site-content{
 	//box model
 	margin-bottom: 1.875rem;  //30px
+	width: 100%;
 	//min-height: 80vh;
+	//position
+	position: relative;
 
 	@media screen and (min-height: 35em){
 		margin-bottom: 3.75rem;  //60px
