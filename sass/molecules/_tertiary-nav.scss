@@ -9,7 +9,7 @@
  * don't want to go live with it right now and screw everything
  * up.
  */
-/*#tertiary-nav{
+#tertiary-nav{
 	max-width: 96%;
 	
 	@media screen and (min-width: 32em){
@@ -20,9 +20,9 @@
 	@media screen and (min-width: 43em){
 		margin-top: 1rem;
 		width: 17.803302225413%;
-		max-width: 248px;
+		//max-width: 248px;
 	}
-}*/
+}
 
 #tertiary-nav,
 .tertiary-nav-h{
@@ -53,33 +53,36 @@
 .tertiary-nav-list a,
 #tertiary-nav dd > ul a,  //WYSIWYG
 .tertiary-related-links a{
-    border-bottom-width: 0;
+	//box model
+	border-bottom-width: 0;
+	//typography
+	font-weight: normal;
 }
 
 @media screen and (min-width: 70em){
 	#tertiary-nav{
 		//box model
-    	margin-right: 0;
-        margin-left: -40.943683409436834%;  //It took weird math to get here.
-        width: 37.747336377473364%;  //It took weird math to get here.
-        //layout
-        float: left;
-        //positioning
-        position: absolute;  //Removes nav from the document flow
-    }
-    .tertiary-nav-h,
-    a.tertiary-nav-h{  //heading for tertiary nav in wider views
-        border-bottom: 1px solid #000;
-        margin-top: -1px;  //compensate for border
-        display: block;
-        color: #000;
-        font-weight: bold;
-    }
-    .tertiary-nav-h{
-        margin: 0.779950083194676em 0 0.363976705490849em 0; //1.169925124792013em 0 0.389975041597338em 0;
-        @include x-rem(font-size, 1.202);
-        line-height: 1.559900166389351;  //30/19.232
-    }
+		margin-right: 0;
+		margin-left: -40.943683409436834%;  //It took weird math to get here.
+		width: 37.747336377473364%;  //It took weird math to get here.
+		//layout
+		float: left;
+		//positioning
+		position: absolute;  //Removes nav from the document flow
+	}
+	.tertiary-nav-h,
+	a.tertiary-nav-h{  //heading for tertiary nav in wider views
+		border-bottom: 1px solid mix(black, $sky-blue, 50%);
+		margin-top: -1px;  //compensate for border
+		display: block;
+		color: mix(black, $sky-blue, 50%);
+		font-weight: bold;
+	}
+	.tertiary-nav-h{
+		margin: 0.779950083194676em 0 0.363976705490849em 0; //1.169925124792013em 0 0.389975041597338em 0;
+		@include x-rem(font-size, 1.202);
+		line-height: 1.559900166389351;  //30/19.232
+	}
 }
 
 /**
@@ -144,14 +147,16 @@
 	}
 	
 	@media screen and (min-width: 70em){
+		padding: 0;
+		
 		label{
 			//typography
-			color: black;
+			color: mix(black, $sky-blue, 50%);
 			//misc
 			cursor: default;
 			
 			&:hover{
-				color: black;
+				color: mix(black, $sky-blue, 50%);
 			}
 		}
 	}
@@ -182,6 +187,15 @@
 	//transition
 	-webkit-transition: max-height .2s ease 0s;;
 	transition: max-height .25s ease 0s;
+	
+	@media screen and (min-width: 70em){
+		border-bottom-width: 0;
+		max-height: 500px;
+		//backgrounds & borders
+		background-color: transparent;
+		//misc
+		box-shadow: none;
+	}
 }
 #tertiary-nav li:last-child .accordion-body{
 	border-bottom-width: 0;
@@ -191,14 +205,16 @@
 	max-height: 500px;
 	//transition
 	transition-duration: .75s;
+	
+	@media screen and (min-width: 70em){
+		padding: 0;
+	}
 }
 ul.accordion-inner{
 	padding: 0 2%;  //15/11.884/2
 }
-@media screen and (min-width: 70em){
-	.tertiary-nav-h{
-		padding: 0;
-	}
+
+/*@media screen and (min-width: 70em){
 	.accordion-group label,
 	.accordion-group label:hover{
 		//typography
@@ -206,15 +222,4 @@ ul.accordion-inner{
 		//misc
 		cursor: default;
 	}
-	.accordion-body{
-		border-bottom-width: 0;
-		max-height: 500px;
-		//backgrounds & borders
-		background-color: transparent;
-		//misc
-		box-shadow: none;
-	}
-	[name="accordion-group"]:checked ~ .accordion-body{
-		padding: 0;
-	}
-}
+}*/
