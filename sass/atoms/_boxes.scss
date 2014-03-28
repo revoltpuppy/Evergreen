@@ -13,7 +13,7 @@ p.box{  //WYSIWYG
 	//layout
 	overflow: hidden;
 	//typography
-	color: mix(black, $sky-blue, 50%);
+	color: mix(black, $sky-blue, 66%);
 	//backgrounds & borders
 	background-color: mix(white, $sky-blue, 80%);
 	background-image: url("images/texture-1.png");
@@ -22,7 +22,7 @@ p.box{  //WYSIWYG
 
 .notice h2,  //deprecated
 .box h2{
-	color: mix(black, $sky-blue, 33%);
+	color: mix(black, $sky-blue, 50%);
 }
 
 .notice h3,  //deprecated
@@ -31,7 +31,7 @@ p.box{  //WYSIWYG
 .box h4,
 .notice h5,  //deprecated
 .box h5{
-	color: mix(black, $sky-blue, 50%);
+	color: mix(black, $sky-blue, 66%);
 }
 
 .notice,  //deprecated
