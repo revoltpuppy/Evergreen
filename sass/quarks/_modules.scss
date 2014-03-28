@@ -599,5 +599,8 @@
 }*/
 
 #tinymce{  //WYSIWYG
+	//box model
 	margin: 0 7em;
+	//layout
+	display: block;
 }
