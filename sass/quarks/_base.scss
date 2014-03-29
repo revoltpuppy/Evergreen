@@ -65,6 +65,19 @@ table{
     margin: 1.481481481481481em 0;  //20/13.5
     width: 100%;
 }
+
+caption{  //styled after h4
+	//box model
+	border-top: 1px solid;
+	margin: 0 0 0.363976705490849em 0;
+	//typography
+	font-size: 1.202rem;  //19.232px
+	font-style: italic;
+	line-height: 1.559900166389351;  //30/19.232
+	//table
+	caption-side: bottom;
+}
+
 th,
 td{
    text-align: left;
@@ -118,11 +131,6 @@ td > ol:last-child,
 td > ul:last-child li:last-child > p:last-child,
 td > ol:last-child li:last-child > p:last-child{
     margin-bottom: 0;
-}
-
-caption{
-	border-top: 1px solid;
-	caption-side: bottom;
 }
 
 @import "../atoms/tables";
