@@ -33,6 +33,10 @@
 .page-header{
 	-webkit-transition: all .1s ease-in-out;  //Safari 6, Chrome 25
           transition: all .1s ease-in-out;
+  
+  @media screen and (min-width: 43em){
+	  background-color: transparent;
+  }
 }
 
 [role="main"]{
@@ -106,6 +110,32 @@
 	background-color: #F3F3F3;  //IE8
 	background-color: hsla(0,0%,95%,.95);
 	border-radius: 2px;
+	
+	@media screen and (min-width:70em){
+		margin-left: 16.285714285714286%;  //1/7
+	}
+}
+
+.index-wrapper{
+	
+	@media screen and (min-width: 43em){
+		width: 96%;
+	}
+	
+	@media screen and (min-width:70em){
+		width: 81.714285714285714%;  //6/7
+	}
+}
+
+.content-wrapper{
+	
+	@media screen and (min-width: 43em){
+		width: 67.428571428571429%;  //5/7
+	}
+	
+	@media screen and (min-width:70em){
+		width: 53.142857142857143%;  //4/7
+	}
 }
 
 .sidebar-wrapper{
@@ -118,11 +148,22 @@
 	margin: 0 2%;
 }
 
+.index-wrapper .main-content{
+
+	@media screen and (min-width:70em){
+		margin: 0 3.626279863481%;
+	}
+}
+
 .content-wrapper .main-content{  //specified in .content-wrapper to not affect .index-wrapper
 	max-width: 45em;
 }
 .main-content{
 	margin-top: -5px;
+	
+	@media screen and (min-width:70em){
+		position: relative;  //Creates a context for absolutely positioning the tertiary nav
+	}
 }
 @media screen and (min-width:43em){
 	.content-wrapper .main-content{
@@ -130,16 +171,10 @@
 		margin-left: 5.675675675675676%;
 	}
 }
-@media screen and (min-width:70em){
-	.main-content{
-		position: relative;  //Creates a context for absolutely positioning the tertiary nav
-	}
-}
 .sidebar{
 	border-top: 2px dashed $evergreen-neue;
-}
-@media screen and (min-width:43em){
-	.sidebar{
+
+	@media screen and (min-width:43em){
 		//box model
 		border-top-width: 0;
 		border-left:1px solid #ccc;
@@ -150,10 +185,11 @@
 		font-size: 14px;  //IE8
 		font-size: 0.875rem;
 		line-height: 1.607142857142857;  //22.5/14
-	}
-	.sidebar p,
-	.sidebar .base{
-		margin:0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
+
+		p,
+		.base{
+			margin:0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
+		}
 	}
 }
 
