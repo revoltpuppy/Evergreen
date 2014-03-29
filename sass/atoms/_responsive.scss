@@ -3,125 +3,53 @@
  *
  * @section responsive
  */
-@media screen and (min-width:22em){
-    /**
-     * Module Styles
-     */
-    /*.wordmark{
-        padding:0 1%;
-        width:62.6666666667%;
-        float:left;
-    }
-    .top-links{
-        clear: left;
-    }
-    .top-links .search-item{
-        display:none;
-    }
-    .search{
-        margin-left: 2%;
-        width: 29.3333333333%;
-        float: right;
-    }*/
-}  /* /min-width:22em */
-
-
-
-    @media screen and (min-width:32em){
-        /**
-         * Module Styles
-         */
-        /*.unit-2-7 .flexible{
-            -webkit-column-count: 2;
-               -moz-column-count: 2;
-                -ms-column-count: 2;
-                    column-count: 2;
-        }*/
-    }  /* /min-width:32em */
         
-
-
-        /**
-         * 5.2 7-Column Grid
-         *
-         * Officially 7-column grid territory.
-         *
-         * @subsection r-7-column
-         */
-        @media screen and (min-width:43em){
-            /**
-             * Layout Styles
-             */
-            .page-header{
-                background-color: transparent;
-            }
-            
-			.index-wrapper{
-                width: 96%;
-            }
-            .content-wrapper{
-                width:67.428571428571429%;  //5/7
-            }
-            
-            .copyright{
-                display: inline;
-            }
-            
-            /**
-             * Module Styles
-             */
-            li.internal-users-alt{  //Search tools
-				display: inline;
-			}
-            .primary-nav:after{
-            	//layout
-                clear: none;
-                display: inline;
-                //misc
-                content: none;
-            }
-            .top-nav-link,
-			.top-nav-link:link,
-			.top-nav-link:visited,
-			.secondary-nav a,
-			.secondary-nav a:link,
-			.secondary-nav a:visited{
-				//typography
-			    font-weight: bold;
-			}
-        }
-        
-        @media screen and (min-width:70em){
-            /**
-             * Layout Styles
-             */
-            
-            .index-wrapper,
-            .content-wrapper{
-                margin-left: 16.285714285714286%;  //1/7
-            }
-            .index-wrapper{
-                width: 81.714285714285714%;  //6/7
-            }
-            .content-wrapper{
-                width: 53.142857142857143%;  //4/7
-            }
-            
-            /**
-             * Module Styles
-             */
-            .top-nav-link,
-			.secondary-nav-link{
-				font-size: inherit;
-				line-height: inherit;
-			}
-            
-            /*.illus-alt{
-            	//box model
-                margin: 0 0 0.631100639515315em -41.722972972972973%;  //7.5/11.884  Weird math for the left margin.
-				width: 38.260135135135135%;  //It took weird math to get here.
-                //layout
-                clear: left;
-                float: left;
-            }*/
-        }
+/**
+* 5.2 7-Column Grid
+*
+* Officially 7-column grid territory.
+*
+* @subsection r-7-column
+*/
+@media screen and (min-width: 43em){
+	/**
+	* Layout Styles
+	*/	
+	.copyright{
+		display: inline;
+	}
+	
+	/**
+	* Module Styles
+	*/
+	li.internal-users-alt{  //Search tools
+		display: inline;
+	}
+	.primary-nav:after{
+		//layout
+		clear: none;
+		display: inline;
+		//misc
+		content: none;
+	}
+	.top-nav-link,
+	.top-nav-link:link,
+	.top-nav-link:visited,
+	.secondary-nav a,
+	.secondary-nav a:link,
+	.secondary-nav a:visited{
+		//typography
+		font-weight: bold;
+		}
+	}
+	
+@media screen and (min-width:70em){	
+	/**
+	* Module Styles
+	*/
+	.top-nav-link,
+	.secondary-nav-link{
+		font-size: inherit;
+		line-height: inherit;
+	}
+}
