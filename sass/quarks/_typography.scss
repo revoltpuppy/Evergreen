@@ -150,10 +150,10 @@ h3{
  */
 ul,
 ol{
-	margin-left: 1.2662em;
+	margin-left: 1.76470588235294em;
 	padding-left: 0;
-    list-style-type: disc;
 }
+
 ul,
 dl{
     padding: 0;
@@ -239,7 +239,7 @@ em{
 
 figcaption,
 small,
-caption,  //table caption
+//caption,  //table caption
 .details,  //deprecated
 .caption{
 	@include small-type;
