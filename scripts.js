@@ -68,7 +68,7 @@ var illusRotationRange = 2;  //how far in either direction an illustration can r
  *
  * Style the tertiary nav according to screen size.
  */
-function setTertiaryNav(){
+/*function setTertiaryNav(){
 	var $tertiaryNavDls = $("#tertiary-nav").children("dl");
 	console.log(bWidth);
 	if(bWidth <= 69*rem){
@@ -86,7 +86,7 @@ function setTertiaryNav(){
 	    $("#tertiary-nav-toggle").addClass("tertiary-nav-h");
 	}
 };
-setTertiaryNav();
+setTertiaryNav();*/
 
 /**
  * Simple Accordion
@@ -240,7 +240,7 @@ $(document).ready(function(){
 	 * Window Resizing
 	 */
 	$(window).resize(function(){
-		setTertiaryNav();
+		//setTertiaryNav();
 		//Maintain aspect ratio during screen resizing
 		fluidMediaResize($allVideos);
 	});
