@@ -151,7 +151,7 @@ blockquote { padding-left: 1em; font-style: italic; }
 /** 2. Tables  @section table */
 table { border-collapse: collapse; border-spacing: 0; border-width: 0; margin: 1.481481481481481em 0; width: 100%; }
 
-caption { border-top: 1px solid; margin: 0 0 0.363976705490849em 0; font-size: 1.202rem; font-style: italic; line-height: 1.559900166389351; caption-side: bottom; }
+caption { margin: 0 0 0.363976705490849em 0; color: #492c5d; font-size: 1.202rem; font-style: italic; line-height: 1.559900166389351; }
 
 th, td { text-align: left; }
 
