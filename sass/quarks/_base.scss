@@ -68,14 +68,13 @@ table{
 
 caption{  //styled after h4
 	//box model
-	border-top: 1px solid;
+	//border-top: 1px solid;
 	margin: 0 0 0.363976705490849em 0;
 	//typography
+	color: $blueberry-susan;
 	font-size: 1.202rem;  //19.232px
 	font-style: italic;
 	line-height: 1.559900166389351;  //30/19.232
-	//table
-	caption-side: bottom;
 }
 
 th,
