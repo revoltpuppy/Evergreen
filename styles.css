@@ -616,7 +616,11 @@ ul.accordion-inner { padding: 0 2%; }
 
 .main-content > p:last-child:after, .main-content > ul:last-child > li:last-child:after, .main-content > ol:last-child > li:last-child:after, .main-content > dl:last-child > dd:last-child:after { white-space: nowrap; content: "\00A0" url("/_inc/images/endnote.png"); }
 
-/** 4.1 Lists  @subsection mod-typography-l */
+/**
+* 4.1 Lists
+*
+* @subsection mod-typography-l
+*/
 .text-list { margin-left: 1em; list-style-type: disc; }
 .text-list ul { margin-left: 1em; list-style-type: square; }
 
@@ -630,6 +634,10 @@ ul.accordion-inner { padding: 0 2%; }
   .feature-list > li:nth-child(even) { margin-right: 2%; }
   .feature-list > li:nth-child(3n) { margin-right: 0; }
   .feature-list > li:nth-child(3n+1) { clear: left; } }
+
+.lineup > li { display: inline-block; }
+
+.lineup > li img { max-height: 1rem; display: block; }
 
 /** 4.1.1 Accordion  @subsubsection mod-typography-l-accordion */
 .accordion, .accordion-table { border: 1px solid #d1cad6; overflow: hidden; background-color: #e3dfe6; border-radius: 2px; }
