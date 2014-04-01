@@ -187,33 +187,34 @@
 	content: "\00A0" url("/_inc/images/endnote.png");
 }
 
-    /**
-     * 4.1 Lists
-     *
-     * @subsection mod-typography-l
-     */
-    .text-list{  //Creates a standard bulleted list.
-    	//box-model
-        margin-left: 1em;
-        //lists
-        list-style-type: disc;
-
-	    ul{
-	    	//box-model
-	        margin-left:1em;
-	        //lists
-	        list-style-type:square;
+	/**
+	* 4.1 Lists
+	*
+	* @subsection mod-typography-l
+	*/
+	.text-list{  //Creates a standard bulleted list.
+		//box-model
+		margin-left: 1em;
+		//lists
+		list-style-type: disc;
+		
+		ul{
+			//box-model
+			margin-left:1em;
+			//lists
+			list-style-type:square;
 		}
-    }
+	}
+		
+	.singleton a{
+		font-weight: normal;
+	}
     
-    .singleton a{
-        font-weight: normal;
-    }
-    
-    .feature-list{
-	    
-    	> li{
-		    @media screen and (min-width:22em){
+	.feature-list{
+	
+		> li{
+		
+			@media screen and (min-width:22em){
 				margin-right: 2%;
 				width: 49%;
 				float:left;
@@ -227,32 +228,43 @@
 				}
 			}
 	    
-		    @media screen and (min-width:43em){
-	        	//box model
-	        	margin-right: 2%;
-	        	width: 32%;
-	        	width: 31.3333333333%\9;  //IE8
-	        	//layout
-	            float: left;
-	            
-	            &:nth-child(odd){
-	            	clear: none;
-	            }
-	            
-	            &:nth-child(even){
-		            margin-right: 2%;
-	            }
-	            
-	            &:nth-child(3n){
-	            	margin-right: 0;
-	            }
-	            
-	            &:nth-child(3n+1){
-	            	clear: left;
-	            }
-		    }
+			@media screen and (min-width:43em){
+				//box model
+				margin-right: 2%;
+				width: 32%;
+				width: 31.3333333333%\9;  //IE8
+				//layout
+				float: left;
+				
+				&:nth-child(odd){
+					clear: none;
+				}
+				
+				&:nth-child(even){
+					margin-right: 2%;
+				}
+				
+				&:nth-child(3n){
+					margin-right: 0;
+				}
+				
+				&:nth-child(3n+1){
+					clear: left;
+				}
+			}
 		}
-    }
+	}
+	
+	.lineup > li{
+		display: inline-block;
+	}
+	
+	.lineup > li img{
+		//box model
+		max-height: 1rem;
+		//layout
+		display: block;
+	}
 
         /**
          * 4.1.1 Accordion
