@@ -123,3 +123,49 @@ p.alert{
 .full-box > .box{
 	background-color: #f5f5f5;
 }
+
+/**
+ * UI Group
+ *
+ * A different kind of box; a group of elements, typically UI
+ * that need visual separation from one another, or from other
+ * elements.
+ 
+ * @section ui-group
+ */
+.ui-group{
+	//box model
+	border: 1px solid mix(white, $blueberry-susan, 75%);
+	margin-bottom: 0.234375rem;  //3.75px
+	padding: 0 0.46875rem;  //7.5px
+	//backgrounds & borders
+	background-color: mix(white, $blueberry-susan, 85%);
+	border-radius: 2px;
+		
+	&:hover{
+		//backgrounds & borders
+		background-color: mix(white, $blueberry-susan, 90%);
+		border-color: mix(white, $blueberry-susan, 80%);
+		//transitions
+		-webkit-transition: all .2s ease-out;
+		        transition: all .2s ease-out;
+	}
+	
+	@media screen and (min-width: 43em){
+		&.unit-1-2{
+			margin: 0.234375rem;  //3.75px
+			width: -webkit-calc(50% - 0.46875rem);  //Safari 6
+			width:         calc(50% - 0.46875rem);  //7.5px
+		}
+		&.unit-1-3{
+			margin: 0.234375rem;  //3.75px
+			width: -webkit-calc(33.3333333333% - 0.46875rem);  //Safari 6
+			width:         calc(33.3333333333% - 0.46875rem);  //7.5px
+		}
+		
+		.media{
+			//padding: 0 0.9375rem;  //17px
+			width: 100%;
+		}
+	}
+}
