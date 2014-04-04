@@ -11,91 +11,11 @@
  * @license    Copyrighted
  */
 
-/**
- * Sass Constants
- *
- * @section sass-constants
- */
-$morning-light: #fdf4b6;
-$sky-blue: #0086ee;
-$evergreen-neue: #64933a;
-$evergreen-old-style: #46502b;
-$blueberry-susan: #492c5d;
-$wine: #600f21;
-$black: #000;
-
-$shadow: hsla(275, 33%, 11%, .25);
-$highlight: hsla(52, 95%, 85%, .5); //$morning-light
-
-$display-face: Helvetica, Arial, sans-serif;
-$text-face: Helvetica, Arial, sans-serif;
-$small-face: Verdana, Helvetica, Arial, sans-serif;
-
-/**
- * Sass Mixins
- *
- * @section sass-mixins
- */
-@mixin base-type{
-	font-size: 0.875rem;  //14px
-	line-height: 1.607142857142857;  //22.5/14
-}
-@mixin base-type-lg{
-	font-size: 1.063rem;  //17px
-	line-height: 1.323529411764706;  //22.5/17
-}
-
-@mixin margin-default{
-	margin: 0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
-}
-@mixin margin-default-lg{
-	margin: 0.441176470588235em 0 0.882352941176471em 0;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
-}
-
-.studies-list{
-	.unit-1-2{
-		margin-bottom: 0.234375rem;  //3.75px
+.ui-group{
+	a.media{
+		border-bottom-width: 0;
 	}
-	
-	li:nth-child(odd){
-		clear: left;
-	}
-	
-	.media{
-		//box model
-		border: 1px solid mix(white, $blueberry-susan, 75%);
-		padding: 0 0.46875rem;  //7.5px
-		//backgrounds & borders
-		background-color: mix(white, $blueberry-susan, 85%);
-		border-radius: 2px;
-		
-		&:hover{
-			//backgrounds & borders
-			background-color: mix(white, $blueberry-susan, 90%);
-			border-color: mix(white, $blueberry-susan, 80%);
-			//transitions
-			-webkit-transition: all .2s ease-out;
-			        transition: all .2s ease-out;
-		}
-	}
-	
 	.media-img img{
 		border-radius: 50%;
-	}
-	
-	/*h4{
-		line-height: 1.29991680532446;  //25px  //Keep this until multi-line flexbox, then it shouldn't matter
-	}*/
-	
-	@media screen and (min-width: 43em){
-		.unit-1-2{
-			margin: 0.234375rem;  //3.75px
-			width: -webkit-calc(50% - 0.46875rem);  //Safari 6
-			width:         calc(50% - 0.46875rem);  //7.5px
-		}
-		
-		.media{
-			padding: 0 0.9375rem;  //17px
-		}
 	}
 }
