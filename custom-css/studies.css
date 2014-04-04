@@ -10,15 +10,5 @@
  * @cssdoc     0.2.22
  * @license    Copyrighted
  */
-/** Sass Constants  @section sass-constants */
-/** Sass Mixins  @section sass-mixins */
-.studies-list { /*h4{
-	line-height: 1.29991680532446;  //25px  //Keep this until multi-line flexbox, then it shouldn't matter
-}*/ }
-.studies-list .unit-1-2 { margin-bottom: 0.234375rem; }
-.studies-list li:nth-child(odd) { clear: left; }
-.studies-list .media { border: 1px solid #d1cad6; padding: 0 0.46875rem; background-color: #e3dfe6; border-radius: 2px; }
-.studies-list .media:hover { background-color: #ece9ee; border-color: #dad4de; -webkit-transition: all .2s ease-out; transition: all .2s ease-out; }
-.studies-list .media-img img { border-radius: 50%; }
-@media screen and (min-width: 43em) { .studies-list .unit-1-2 { margin: 0.234375rem; width: -webkit-calc(50% - 0.46875rem); width: calc(50% - 0.46875rem); }
-  .studies-list .media { padding: 0 0.9375rem; } }
+.ui-group a.media { border-bottom-width: 0; }
+.ui-group .media-img img { border-radius: 50%; }
