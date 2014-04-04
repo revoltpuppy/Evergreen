@@ -7,6 +7,7 @@
  */
 .media{
 	clear: left;  //IE9
+	display: block;  //IE9
 	display: -webkit-flex;  //Safari
 	display:         flex;  //W3C
 	//layout
@@ -45,6 +46,10 @@
 }
 
 .media-body{
+	//box model
+	max-width: 66.6666666666%;
+	//layout
+	float: left;
 	overflow: auto;  //IE9  //Gives block formatting context
 	/*Alternate way to give block formatting context
 	display: table-cell;  //Gives block formatting context (pretty nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
