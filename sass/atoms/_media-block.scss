@@ -46,10 +46,6 @@
 }
 
 .media-body{
-	//box model
-	max-width: 66.6666666666%;
-	//layout
-	float: left;
 	overflow: auto;  //IE9  //Gives block formatting context
 	/*Alternate way to give block formatting context
 	display: table-cell;  //Gives block formatting context (pretty nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
@@ -62,7 +58,6 @@
 
 //Put .media-img on the right. Extends .media
 .media-alt{
-	    -ms-flex-direction: row-reverse;
 	-webkit-flex-direction: row-reverse;
 	        flex-direction: row-reverse;
 }
@@ -74,17 +69,15 @@
 
 //Put .media-img on the top. Extends .media
 .media-column{
-        -ms-flex-direction: column;
 	-webkit-flex-direction: column;
 	        flex-direction: column;
-	    -ms-align-items: stretch;
 	-webkit-align-items: stretch;
 	        align-items: stretch;
 }
 .media-column .media-img{
   margin-right: 0;
   max-width: 100%;
-  float: none;  /*IE9*/
+  float: none;  //IE9
   text-align: center;
 }
 .media-column .media-img img{
