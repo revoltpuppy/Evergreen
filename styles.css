@@ -449,6 +449,9 @@ li.internal-users-alt { display: none; }
 /** Homepage Hero Image  @section mod-hero-homepage */
 .homepage-hero, .homepage-hero-content { height: 100%; overflow: hidden; }
 
+.homepage-hero-picture img { display: block; }
+@media screen and (min-width: 70em) { .homepage-hero-picture img { width: 100%; } }
+
 .homepage-hero-img { margin-left: -50%; width: 200%; max-width: none; display: block; }
 .homepage-hero-img-alt .homepage-hero-img { margin-left: 0; }
 
@@ -483,10 +486,8 @@ li.internal-users-alt { display: none; }
   .homepage-hero-img { margin-left: -10%; width: 120%; } }
 @media screen and (min-width: 70em) { .homepage-hero { display: table; }
   .homepage-hero-copy { width: 28.571428571428571%; }
-  	/*.homepage-hero-copy h1{ 		//box model 	margin: 4.092099519860323em 0;  //150/36.656 	//typography 	@include x-rem(font-size, 2.291);  //36.656 	line-height: 1.227629855958097;  //45/36.656 	} .homepage-hero-copy h1:first-line{ 		@include x-rem(font-size, 3.146);  //50.336 		line-height: 0.893992371265099;  //45/50.336 	}*/
   .homepage-hero-img { margin-left: 0; width: 100%; } }
-@media screen and (min-width: 86em) { /*.homepage-hero-copy{ 	    width: 42.857142857142857%; }*/
-  .homepage-hero-copy h1 { font-size: 36.656px; font-size: 2.291rem; line-height: 1.227629855958097; }
+@media screen and (min-width: 86em) { .homepage-hero-copy h1 { font-size: 36.656px; font-size: 2.291rem; line-height: 1.227629855958097; }
   .homepage-hero-copy h1:first-line { font-size: 50.336px; font-size: 3.146rem; line-height: 0.893992371265099; } }
 .profile-list > li { margin: 0.535714285714286em 0 1.071428571428571em 0; overflow: hidden; position: relative; }
 @media screen and (min-width: 43em) { .profile-list > li { margin: 0.441176470588235em 0 0.882352941176471em 0; } }
@@ -749,19 +750,19 @@ ul.flexible { overflow: hidden;     	/*@media screen and (min-width:20em){
 
 .media-img-icon { max-height: 3.75rem; }
 
-.media-body { max-width: 66.6666666666%; float: left; overflow: auto; /*Alternate way to give block formatting context
+.media-body { overflow: auto; /*Alternate way to give block formatting context
 display: table-cell;  //Gives block formatting context (pretty nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
 width: 3000px;  //Stretches box to fit the remaining width; this is not the actual value that comes out.*/ }
 
 .media-body :first-child { margin-top: 7.5px; margin-top: 0.46875rem; }
 
-.media-alt { -ms-flex-direction: row-reverse; -webkit-flex-direction: row-reverse; flex-direction: row-reverse; }
+.media-alt { -webkit-flex-direction: row-reverse; flex-direction: row-reverse; }
 
 .media-alt .media-img { margin-right: 0; margin-left: 2%; float: right; }
 
-.media-column { -ms-flex-direction: column; -webkit-flex-direction: column; flex-direction: column; -ms-align-items: stretch; -webkit-align-items: stretch; align-items: stretch; }
+.media-column { -webkit-flex-direction: column; flex-direction: column; -webkit-align-items: stretch; align-items: stretch; }
 
-.media-column .media-img { margin-right: 0; max-width: 100%; float: none; /*IE9*/ text-align: center; }
+.media-column .media-img { margin-right: 0; max-width: 100%; float: none; text-align: center; }
 
 .media-column .media-img img { margin: 0 auto; }
 
