@@ -9,6 +9,16 @@
 	height: 100%;
 	overflow: hidden;
 }
+//.homepage-hero-picture is the picturefill image
+.homepage-hero-picture img{
+	display: block;
+	
+	@media screen and (min-width: 70em){
+		width: 100%;
+	}
+}
+
+//.homepage-hero-img is the fallback image
 .homepage-hero-img{
 	margin-left: -50%;
 	width: 200%;
@@ -187,39 +197,23 @@
 	.homepage-hero{
     	display: table;  //Gives it a block formatting context
 	}
-    .homepage-hero-copy{
-	    width: 28.571428571428571%;
-    }
-	/*.homepage-hero-copy h1{
-		//box model
-    	margin: 4.092099519860323em 0;  //150/36.656
-    	//typography
-    	@include x-rem(font-size, 2.291);  //36.656
-    	line-height: 1.227629855958097;  //45/36.656
+	.homepage-hero-copy{
+		width: 28.571428571428571%;
 	}
-    .homepage-hero-copy h1:first-line{
-		@include x-rem(font-size, 3.146);  //50.336
-		line-height: 0.893992371265099;  //45/50.336
-	}*/
-    .homepage-hero-img{
-	    margin-left: 0;
-	    width: 100%;
-    }
+	.homepage-hero-img{
+		margin-left: 0;
+		width: 100%;
+	}
 }
 @media screen and (min-width: 86em){
-	/*.homepage-hero-copy{
-	    width: 42.857142857142857%;
-    }*/
 	.homepage-hero-copy h1{
-		//box model
-    	//margin: 4.092099519860323em 0;  //150/36.656
-    	//typography
-    	@include x-rem(font-size, 2.291);  //36.656
-    	line-height: 1.227629855958097;  //45/36.656
-    	
-    	&:first-line{
-    		@include x-rem(font-size, 3.146);  //50.336
-    		line-height: 0.893992371265099;  //45/50.336
-    	}
+  	//typography
+  	@include x-rem(font-size, 2.291);  //36.656
+  	line-height: 1.227629855958097;  //45/36.656
+  	
+  	&:first-line{
+  		@include x-rem(font-size, 3.146);  //50.336
+  		line-height: 0.893992371265099;  //45/50.336
+  	}
 	}
 }
