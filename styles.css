@@ -287,8 +287,9 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 @media screen and (min-width: 43em) { .content-wrapper { width: 67.428571428571429%; } }
 @media screen and (min-width: 70em) { .content-wrapper { width: 53.142857142857143%; } }
 
-.sidebar-wrapper { background-color: #F3F3F3; background-color: rgba(242, 242, 242, 0.95); }
-
+/*.sidebar-wrapper{
+	background-color: hsla(0,0%,95%,.95);
+}*/
 .main-content, .sidebar { margin: 0 2%; }
 
 @media screen and (min-width: 70em) { .index-wrapper .main-content { margin: 0 3.626279863481%; } }
@@ -475,7 +476,7 @@ li.internal-users-alt { display: none; }
   .homepage-hero-copy { width: 66.6666666667%; }
   .homepage-hero-copy h1 { color: white; text-shadow: 0 2px 1px #0e0812; } }
 @media screen and (min-width: 22em) { .homepage-hero-copy h1:first-line { font-size: 31.12px; font-size: 1.945rem; line-height: 0.723007712082262; } }
-@media screen and (min-width: 32em) { .homepage-hero-content { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; }
+@media screen and (min-width: 32em) { .homepage-hero-content { display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; -webkit-justify-content: center; justify-content: center; }
   .homepage-hero-copy { width: 64.6666666667%; color: white; text-shadow: 0 1px 2px #0e0812; }
   .homepage-hero-copy-alt .homepage-hero-copy { float: right; -webkit-align-self: flex-end; align-self: flex-end; }
   .homepage-hero-img { margin-left: -25%; width: 150%; } }
@@ -750,7 +751,7 @@ ul.flexible { overflow: hidden;     	/*@media screen and (min-width:20em){
 
 .media-img-icon { max-height: 3.75rem; }
 
-.media-body { overflow: auto; /*Alternate way to give block formatting context
+.media-body { -webkit-flex-grow: 1; flex-grow: 1; overflow: auto; /*Alternate way to give block formatting context
 display: table-cell;  //Gives block formatting context (pretty nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
 width: 3000px;  //Stretches box to fit the remaining width; this is not the actual value that comes out.*/ }
 
