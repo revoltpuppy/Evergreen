@@ -46,6 +46,8 @@
 }
 
 .media-body{
+	-webkit-flex-grow: 1;
+	        flex-grow: 1;
 	overflow: auto;  //IE9  //Gives block formatting context
 	/*Alternate way to give block formatting context
 	display: table-cell;  //Gives block formatting context (pretty nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
