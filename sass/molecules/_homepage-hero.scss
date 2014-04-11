@@ -134,13 +134,10 @@
 	.homepage-hero-content{
 		//layout
 		display: -webkit-flex;  //Safari, Android Browser
-		display:  -ms-flexbox;  //IE 10, IE Mobile
 		display:         flex;  //W3C
 		//flexbox
 		-webkit-flex-direction: column;  //Safari
-		    -ms-flex-direction: column;  //IE10, IE Mobile
 		        flex-direction: column;
-		-ms-flex-pack:           center;  //IE10, IE Mobile
 		-webkit-justify-content: center;  //Safari
 		        justify-content: center;
 	}
