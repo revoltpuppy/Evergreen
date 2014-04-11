@@ -1,15 +1,40 @@
-/** Print Styles  Print styles for the 2013 Evergreen template.  To make something not printable, use the class .do-not-print.  Styles in this file are organized according to the SMACSS principles: http://smacss.com/  @project    The Evergreen State College @package    HTML 5 and CSS @author     The Evergreen State College @copyright  2013 by the author @cssdoc     0.2.22 @license    Copyrighted  Table of Contents  1. Base Styles ................... (base) 2. Layout Styles ................. (layout) 3. Module Styles ................. (module) 4. State Styles .................. (states) */
+/**
+ * Print Styles
+ *
+ * Print styles for the 2013 Evergreen template.
+ *
+ * To make something not printable, use the class .do-not-print.
+ *
+ * Styles in this file are organized according to the SMACSS principles:
+ * http://smacss.com/
+ *
+ * @project    The Evergreen State College
+ * @package    HTML 5 and CSS
+ * @author     The Evergreen State College
+ * @copyright  2013 by the author
+ * @cssdoc     0.2.22
+ * @license    Copyrighted
+ 
+ * Table of Contents
+ *
+ * 1. Base Styles ................... (base)
+ * 2. Layout Styles ................. (layout)
+ * 3. Module Styles ................. (module)
+ * 4. State Styles .................. (states)
+ */
 /** 1. Base Styles  @section base @see http://smacss.com/book/type-base */
 html, body { height: auto; }
 
-body { margin: 0 auto; }
+body { margin: 0 auto; display: block; }
 
-a:after, a::after { font-size: 11px; font-size: .657rem; line-height: 1.427619682116684; content: " (" attr(href) ")"; }
+a::after { font-size: .657rem; line-height: 1.427619682116684; content: " (" attr(href) ")"; }
 
-a[href^="/"]:after, a[href^="/"]::after { content: " (http://evergreen.edu" attr(href) ")"; }
+a[href^="/"]::after { content: " (http://evergreen.edu" attr(href) ")"; }
 
 /** 2. Layout Styles  @section layout @see http://smacss.com/book/type-layout */
 [role=search], [role=navigation], .off-canvas { display: none; }
+
+.site-content, [role="main"] { position: static; }
 
 body, [role=banner], wrapper { background: transparent none; }
 
@@ -26,9 +51,11 @@ body, [role=banner], wrapper { background: transparent none; }
 /** 3. Module Styles  @section module @see http://smacss.com/book/type-module */
 .logo { margin: 0; }
 
-.logo a:after, .logo a::after, .site-name a:after, .site-name a::after { content: ""; }
+.logo a::after, .site-name a::after { content: ""; }
 
 .site-name a, .site-name a:link, .site-name a:visited { color: black; text-shadow: none; }
+
+.main-background { display: none; }
 
 .hero, .supplement-alt-1-2 { margin-left: 2%; width: auto; max-width: 49%; float: right; position: static; z-index: auto; }
 
