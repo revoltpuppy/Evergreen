@@ -1,4 +1,4 @@
-/**
+/*!*
  * Print Styles
  *
  * Print styles for the 2013 Evergreen template.
@@ -36,20 +36,19 @@ body{
 body{
 	//box model
 	margin: 0 auto;
+	//layout
+	display: block;
 }
 
 //Print URLs after links
-a:after,  //IE8
 a::after{
 	//typography
-    font-size: 11px;  //IE8
-    font-size: .657rem;
-    line-height: 1.427619682116684;  //15/10.507
-    //misc
+	font-size: .657rem;
+	line-height: 1.427619682116684;  //15/10.507
+	//misc
 	content: " (" attr(href) ")";
 }
 //Print internal URLs referencing the root with the root prefix.
-a[href^="/"]:after,  //IE8
 a[href^="/"]::after{
 	content: " (http://evergreen.edu" attr(href) ")";
 }
@@ -64,6 +63,10 @@ a[href^="/"]::after{
 [role=navigation],
 .off-canvas{
 	display: none;
+}
+.site-content,
+[role="main"]{
+	position: static;
 }
 body,
 [role=banner],
@@ -115,9 +118,7 @@ wrapper{
 .logo{
 	margin: 0;
 }
-.logo a:after,  //IE8
 .logo a::after,
-.site-name a:after,  //IE8
 .site-name a::after{
 	content: "";
 }
@@ -127,7 +128,10 @@ wrapper{
 	color: black;
 	text-shadow: none;
 }
-.hero,
+.main-background{
+	display: none;
+}
+.hero,  //deprecated
 .supplement-alt-1-2{
 	//box model
 	margin-left: 2%;
