@@ -87,7 +87,7 @@ video { height: auto; width: 100%; }
 /** 1. Base Typography  @section base-type */
 html { font-size: 100%; }
 
-body { font-family: Helvetica, Arial, sans-serif; text-rendering: optimizeLegibility; }
+body { font-family: Soleil, Helvetica, Arial, sans-serif; text-rendering: optimizeLegibility; }
 
 body, input, button { -webkit-font-smoothing: antialiased; }
 
@@ -142,7 +142,7 @@ strong { font-weight: bold; }
 
 em { font-style: italic; }
 
-figcaption, small, .details, .caption { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; }
+figcaption, small, .details, .caption { font-family: Verdana, Soleil, Helvetica, Arial, sans-serif; font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; }
 
 [role="contentinfo"] small { color: #ccc; }
 
