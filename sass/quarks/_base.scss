@@ -145,13 +145,12 @@ td > ol:last-child li:last-child > p:last-child{
  */
 input{
 	//box model
-    border: 1px solid #bbcfd7;
-	height: 27.506px;  /*IE8*/
+	border: 1px solid #bbcfd7;
 	height: 1.719rem;
-    margin-bottom: 1.262201279030629em; //15/11.884
-    padding: 0 2%;
-    //typography
-    font-size: 1em;
+	margin-bottom: 1.262201279030629em; //15/11.884
+	padding: 0 .5em;
+	//typography
+	font-size: 1em;
 }
 
 select{
