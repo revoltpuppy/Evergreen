@@ -66,16 +66,6 @@
 }
 
 @media screen and (min-width: 70em){
-	#tertiary-nav{
-		//box model
-		//margin-right: 0;
-		//margin-left: -40.943683409436834%;  //It took weird math to get here.
-		//width: 37.747336377473364%;  //It took weird math to get here.
-		//layout
-		//float: left;
-		//positioning
-		//position: absolute;  //Removes nav from the document flow
-	}
 	.tertiary-nav-h,
 	a.tertiary-nav-h{  //heading for tertiary nav in wider views
 		border-bottom: 1px solid mix(black, $sky-blue, 50%);
@@ -85,25 +75,6 @@
 		font-weight: bold;
 	}
 }
-
-/**
- * Don't delete this! It's for the new nav arrangement, but we
- * don't want to go live with it right now and screw everything
- * up.
- */
-/*#tertiary-nav{
-	max-width: 96%;
-	
-	@media screen and (min-width: 32em){
-		margin: 0 auto 1rem;
-		max-width: 66.6666666666%;
-	}
-	
-	@media screen and (min-width: 43em){
-		margin-top: 1rem;
-		width: 17.803302225413%;
-	}
-}*/
 
 /**
  * Homepage Tertiary Nav
@@ -235,13 +206,3 @@
 ul.accordion-inner{
 	padding: 0 2%;  //15/11.884/2
 }
-
-/*@media screen and (min-width: 70em){
-	.accordion-group label,
-	.accordion-group label:hover{
-		//typography
-		color: black;
-		//misc
-		cursor: default;
-	}
-}*/
