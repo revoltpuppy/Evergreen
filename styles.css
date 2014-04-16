@@ -87,7 +87,7 @@ video { height: auto; width: 100%; }
 /** 1. Base Typography  @section base-type */
 html { font-size: 100%; }
 
-body { font-family: Soleil, Helvetica, Arial, sans-serif; text-rendering: optimizeLegibility; }
+body { font-family: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif; text-rendering: optimizeLegibility; }
 
 body, input, button { -webkit-font-smoothing: antialiased; }
 
@@ -142,7 +142,7 @@ strong { font-weight: bold; }
 
 em { font-style: italic; }
 
-figcaption, small, .details, .caption { font-family: Verdana, Soleil, Helvetica, Arial, sans-serif; font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; }
+figcaption, small, .details, .caption { font-family: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif; font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; }
 
 [role="contentinfo"] small { color: #ccc; }
 
@@ -521,20 +521,6 @@ li.internal-users-alt { display: none; }
 .tertiary-nav-list a, #tertiary-nav dd > ul a, .tertiary-related-links a { border-bottom-width: 0; font-weight: normal; }
 
 @media screen and (min-width: 70em) { .tertiary-nav-h, a.tertiary-nav-h { border-bottom: 1px solid #004377; margin-top: -1px; display: block; color: #004377; font-weight: bold; } }
-/** Don't delete this! It's for the new nav arrangement, but we don't want to go live with it right now and screw everything up. */
-/*#tertiary-nav{
-	max-width: 96%;
-	
-	@media screen and (min-width: 32em){
-		margin: 0 auto 1rem;
-		max-width: 66.6666666666%;
-	}
-	
-	@media screen and (min-width: 43em){
-		margin-top: 1rem;
-		width: 17.803302225413%;
-	}
-}*/
 /** Homepage Tertiary Nav  @section tertiary-nav-homepage */
 @media screen and (min-width: 70em) { #tertiary-nav.tertiary-nav-homepage { margin-left: -25.52083%; width: 23.484848484848%; } }
 
@@ -573,15 +559,6 @@ li.internal-users-alt { display: none; }
 
 ul.accordion-inner { padding: 0 2%; }
 
-/*@media screen and (min-width: 70em){
-	.accordion-group label,
-	.accordion-group label:hover{
-		//typography
-		color: black;
-		//misc
-		cursor: default;
-	}
-}*/
 /** Footer  @section mod-footer */
 [role="contentinfo"] { margin-top: auto; clear: left; color: #fff; background-color: #000; }
 
@@ -739,6 +716,11 @@ ul.flexible { overflow: hidden;     	/*@media screen and (min-width:20em){
 
 .many { font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; }
 
+		/** 4.1.4 Alphabetical Order Index  An index of the letters of the alphabet, for skipping around the page.  @subsubsection mod-typography-l-alpha-index */
+.alpha-index { margin-left: 0; padding-left: 0; display: block; /*IE9*/ display: -webkit-flex; /*Chrome<29, Safari<7, Opera, Mobile Safari, Android, Blackberry*/ display: flex; -webkit-justify-content: space-around; justify-content: space-around; background-color: #e3f3fe; list-style-type: none; }
+
+.alpha-index > li { display: inline; }
+
 /** Media Block  A common pattern wherein copy is floated next to a graphic.  @section mod-media */
 .media { clear: left; display: block; display: -webkit-flex; display: flex; }
 
@@ -848,6 +830,11 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 .event-calendar .h-event { margin-top: 0.535714285714286em; margin-bottom: 1.071428571428571em; }
 
 @media screen and (min-width: 43em) { .event-calendar .h-event { margin-top: 0.441176470588235em; margin-bottom: 0.882352941176471em; } }
+/** 3.7.1 Homepage Upcoming Events  The box on the homepage featuring upcoming events from the calendar. This should track pretty closely to the tertiary nav higher up on the page.  @section mod-upcoming-events-homepage */
+.upcoming-events-homepage { margin: 0 auto; max-width: 96%; }
+@media screen and (min-width: 32em) { .upcoming-events-homepage { margin: 0 auto 1rem; max-width: 66.6666666666%; } }
+@media screen and (min-width: 70em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -25.52083%; width: 23.484848484848%; position: absolute; } }
+
 /** 3.8 Embeded Content  @section mod-embeded-content */
 .lazy-load { border-bottom-width: 0; max-width: 100%; display: block; overflow: hidden; position: relative; }
 .lazy-load::after { height: 100%; width: 100%; -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; position: absolute; top: 0; text-align: center; background-image: url(http://evergreen.edu/_inc/images/texture-1.png); content: url(http://evergreen.edu/_inc/images/icons/green/play.png); }
