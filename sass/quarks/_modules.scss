@@ -513,6 +513,28 @@
 		.many{
 		    @include base-type-lg;
 		}
+		
+		/**
+     * 4.1.4 Alphabetical Order Index
+     *
+     * An index of the letters of the alphabet, for skipping around the page.
+     *
+     * @subsubsection mod-typography-l-alpha-index
+     */
+    .alpha-index{
+			margin-left: 0;
+			padding-left: 0;
+			display: block;  /*IE9*/
+			display: -webkit-flex; /*Chrome<29, Safari<7, Opera, Mobile Safari, Android, Blackberry*/
+			display:         flex;
+			-webkit-justify-content: space-around;
+			        justify-content: space-around;
+			background-color: #e3f3fe;
+			list-style-type: none;
+    }
+    .alpha-index > li{
+			display: inline;
+    }
     
 @import "../atoms/media-block";
 @import "../atoms/boxes";
@@ -546,6 +568,35 @@
         margin-bottom: 0.882352941176471em;  //15/17  So, 22.5 + 7.5 + 15 = 45
     }
 }
+
+	/**
+	 * 3.7.1 Homepage Upcoming Events
+	 *
+	 * The box on the homepage featuring upcoming events from the
+	 * calendar. This should track pretty closely to the tertiary
+	 * nav higher up on the page.
+	 *
+	 * @section mod-upcoming-events-homepage
+	 */
+	.upcoming-events-homepage{
+		//box model
+		margin: 0 auto;
+		max-width: 96%;
+		
+		@media screen and (min-width: 32em){
+			margin: 0 auto 1rem;
+			max-width: 66.6666666666%;
+		}
+		
+		@media screen and (min-width: 70em){
+			//box model
+			margin-top: 1rem;
+			margin-left: -25.520833333333%;
+			width: 23.484848484848%;
+			//position
+			position: absolute;  //Removes nav from the document flow
+		}
+	}
 
 /**
  * 3.8 Embeded Content
