@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+@import "../tools";
+
+.dir-people-index{
+	display: block;
+	
+	> thead{
+		display: none;
+	}
+	
+	> tbody,
+	> tbody > tr,
+	> tbody > tr > td{
+		display: block;
+	}
+	
+	> tbody > tr{
+		//box model
+		border: 1px solid mix(white, $blueberry-susan, 66%);
+		@include margin-default;
+		//backgrounds & borders
+		background-color: mix(white, $blueberry-susan, 90%);
+		border-radius: 2px;
+		//misc
+		box-shadow: 0 1px 1px $shadow;
+	}
+	
+	> tbody > tr > td{
+		border-top-width: 0;
+		margin: 0 1em;
+	}
+	
+	@media screen and (min-width: 32em){
+		> thead{
+			display: table-header-group;
+		}
+		
+		> tbody{
+			display: table-row-group;
+		}
+		
+		> tbody > tr{
+			//box model
+			border-width: 0;
+			//layout
+			display: table-row;
+			//typography
+			text-align: left;
+			//backgrounds & borders
+			background-color: transparent;
+			border-radius: 0;
+			//misc
+			box-shadow: none;
+		}
+		
+		> tbody > tr > td{
+			//box model
+			border-top-width: 1px;
+			margin: 0;
+			padding: 0.37037em 1.11111em 1.11111em 0;
+			//layout
+			display: table-cell;
+		}
+	}
+}
+
+.dir-people-index .p-name,
+.dir-key{
+	font-weight: bold;
+}
+
+.dir-phone-list .dir-key{
+	font-style: italic;
+	font-weight: normal;
+}
