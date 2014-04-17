@@ -138,6 +138,8 @@ p.alert{
 	border: 1px solid mix(white, $blueberry-susan, 75%);
 	margin-bottom: 0.234375rem;  //3.75px
 	padding: 0 0.46875rem;  //7.5px
+	//layout
+	overflow: hidden;
 	//backgrounds & borders
 	background-color: mix(white, $blueberry-susan, 85%);
 	border-radius: 2px;
