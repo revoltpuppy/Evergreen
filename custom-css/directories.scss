@@ -28,6 +28,7 @@
 	
 	> tbody > tr > td{
 		border-top-width: 0;
+		padding: 0;
 		margin: 0 1em;
 	}
 	
@@ -65,12 +66,40 @@
 	}
 }
 
-.dir-people-index .p-name,
-.dir-key{
+.dir-people-index .p-name{
 	font-weight: bold;
 }
 
-.dir-phone-list .dir-key{
-	font-style: italic;
-	font-weight: normal;
+.dir-key{
+	font-weight: bold;
+	
+	.dir-phone-list &{
+		font-weight: normal;
+	}
+}
+
+/*.dir-icon{
+	max-height: 1em;
+}*/
+
+.dir-email::before{
+	content: "Email: ";
+}
+.dir-location::before{
+	content: "Location: ";
+}
+.dir-mailstop::before{
+	content: "Mailstop: ";
+}
+.dir-phone::before{
+	content: "Phone: ";
+}
+
+@media screen and (min-width: 32em){
+	.dir-email::before,
+	.dir-location::before,
+	.dir-mailstop::before,
+	.dir-phone::before{
+		content: "";
+	}
 }
