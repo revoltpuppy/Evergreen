@@ -14,6 +14,9 @@
  * @section state-nav
  */
 .is-current-section{
+	//typography
+	color: white;
+	//backgrounds and borders
 	background-color: $evergreen-old-style;
 }
 .is-current-section a,
@@ -39,6 +42,22 @@
             transform: rotate(90deg);
     -webkit-transition: all .2s linear;  //Safari 6
             transition: all .2s linear;
+}
+
+/**
+ * 2. UI
+ *
+ * @section state-ui
+ */
+
+.is-selected-ui{
+	//box model
+	padding: .33em;
+	//typography
+	color: white;
+	font-weight: bold;
+	//backgrounds and borders
+	background-color: $blueberry-susan;
 }
 
 .is-hidden{
