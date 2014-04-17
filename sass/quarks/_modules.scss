@@ -521,6 +521,18 @@
      *
      * @subsubsection mod-typography-l-alpha-index
      */
+    .alpha-label{
+    	//box model
+    	border: 1px solid mix(white, $blueberry-susan, 75%);
+    	border-bottom-width: 0;
+	    margin-bottom: -1px;
+	    padding: 0 1em;
+	    //layout
+	    display: inline-block;
+			//backgrounds & borders
+			background-color: mix(white, $blueberry-susan, 85%);
+			border-radius: 2px 2px 0 0;
+    }
     .alpha-index{
     	//box model
 			border: 1px solid mix(white, $blueberry-susan, 75%);
@@ -537,6 +549,10 @@
 			border-radius: 2px;
 			//lists
 			list-style-type: none;
+    }
+    .alpha-label + .alpha-index{
+	    border-radius-top-left: 0;
+	    margin-top: 0;
     }
     .alpha-index > li{
 			display: inline;  //Safari 6, IE 9
