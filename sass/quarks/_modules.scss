@@ -522,18 +522,24 @@
      * @subsubsection mod-typography-l-alpha-index
      */
     .alpha-index{
+    	//box model
+			border: 1px solid mix(white, $blueberry-susan, 75%);
 			margin-left: 0;
 			padding-left: 0;
-			display: block;  /*IE9*/
-			display: -webkit-flex; /*Chrome<29, Safari<7, Opera, Mobile Safari, Android, Blackberry*/
+			//layout
+			display: block;  //IE9
+			display: -webkit-flex; //Safari 6
 			display:         flex;
-			-webkit-justify-content: space-around;
+			-webkit-justify-content: space-around;  //Safari 6
 			        justify-content: space-around;
-			background-color: #e3f3fe;
+			//backgrounds & borders
+			background-color: mix(white, $blueberry-susan, 85%);
+			border-radius: 2px;
+			//lists
 			list-style-type: none;
     }
     .alpha-index > li{
-			display: inline;
+			display: inline;  //Safari 6, IE 9
     }
     
 @import "../atoms/media-block";
