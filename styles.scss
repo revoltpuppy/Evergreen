@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import "compass";
-@import "rem";  //Includes a function that provides a pixel-value fallback for rem size declarations
 @import "sass/css-header";  //Just for funsies
 /*!*
  * Responsive Styles
@@ -22,53 +21,8 @@
  * @cssdoc     0.2.22
  * @license    Copyrighted
  */
- 
-/**
- * Sass Constants
- *
- * @section sass-constants
- */
-$morning-light: #fdf4b6;
-$sky-blue: #0086ee;
-$evergreen-neue: #64933a;
-$evergreen-old-style: #46502b;
-$blueberry-susan: #492c5d;
-$wine: #600f21;
-$black: #000;
 
-$shadow: hsla(275, 33%, 11%, .25);
-$highlight: hsla(52, 95%, 85%, .5); //$morning-light
-
-$display-face: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
-$text-face: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
-$small-face: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
-
-/**
- * Sass Mixins
- *
- * @section sass-mixins
- */
-@mixin base-type{
-	@include x-rem(font-size, 0.875);  //14px
-	line-height: 1.607142857142857;  //22.5/14
-}
-@mixin base-type-lg{
-	@include x-rem(font-size, 1.063);  //17px
-	//line-height: 1.323529411764706;  //22.5/17
-	line-height: 1.47058823529412;  //25/17
-}
-@mixin small-type{
-	font-family: $small-face;
-	@include x-rem(font-size, 0.657);  //10.507px
-	line-height: 1.427619682116684;  //15/10.507
-}
-
-@mixin margin-default{
-	margin: 0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
-}
-@mixin margin-default-lg{
-	margin: 0.441176470588235em 0 0.882352941176471em 0;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
-}
+@import "tools";  //constants, mixins, functions, etc.
 
 @import "sass/quarks/base";
 @import "sass/quarks/layout";
