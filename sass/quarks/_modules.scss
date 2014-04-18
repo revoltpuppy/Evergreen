@@ -539,22 +539,31 @@
 			margin-left: 0;
 			padding-left: 0;
 			//layout
-			display: block;  //IE9
-			display: -webkit-flex; //Safari 6
-			display:         flex;
-			-webkit-justify-content: space-around;  //Safari 6
-			        justify-content: space-around;
+			display: block;
+			//typography
+			word-wrap: break-word;
 			//backgrounds & borders
 			background-color: mix(white, $blueberry-susan, 85%);
 			border-radius: 2px;
 			//lists
 			list-style-type: none;
+			
+			@media screen and (min-width: 20em){
+				//layout
+				display: -webkit-flex; //Safari 6
+				display:         flex;
+				-webkit-justify-content: space-around;  //Safari 6
+				        justify-content: space-around;
+			}
     }
     .alpha-label + .alpha-index{
 	    border-radius-top-left: 0;
 	    margin-top: 0;
     }
     .alpha-index > li{
+    	//box model
+    	padding: 0 2px;
+    	//layout
 			display: inline;  //Safari 6, IE 9
     }
     
