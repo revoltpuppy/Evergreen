@@ -719,11 +719,12 @@ ul.flexible { overflow: hidden;     	/*@media screen and (min-width:20em){
 		/** 4.1.4 Alphabetical Order Index  An index of the letters of the alphabet, for skipping around the page.  @subsubsection mod-typography-l-alpha-index */
 .alpha-label { border: 1px solid #d1cad6; border-bottom-width: 0; margin-bottom: -1px; padding: 0 1em; display: inline-block; background-color: #e3dfe6; border-radius: 2px 2px 0 0; }
 
-.alpha-index { border: 1px solid #d1cad6; margin-left: 0; padding-left: 0; display: block; display: -webkit-flex; display: flex; -webkit-justify-content: space-around; justify-content: space-around; background-color: #e3dfe6; border-radius: 2px; list-style-type: none; }
+.alpha-index { border: 1px solid #d1cad6; margin-left: 0; padding-left: 0; display: block; word-wrap: break-word; background-color: #e3dfe6; border-radius: 2px; list-style-type: none; }
+@media screen and (min-width: 20em) { .alpha-index { display: -webkit-flex; display: flex; -webkit-justify-content: space-around; justify-content: space-around; } }
 
 .alpha-label + .alpha-index { border-radius-top-left: 0; margin-top: 0; }
 
-.alpha-index > li { display: inline; }
+.alpha-index > li { padding: 0 2px; display: inline; }
 
 /** Media Block  A common pattern wherein copy is floated next to a graphic.  @section mod-media */
 .media { clear: left; display: block; display: -webkit-flex; display: flex; }
@@ -871,7 +872,7 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 .is-expanded:before { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); -webkit-transition: all .2s linear; transition: all .2s linear; }
 
 /** 2. UI  @section state-ui */
-.is-selected-ui { padding: .33em; color: white; font-weight: bold; background-color: #492c5d; }
+.is-selected-ui { padding: 0 0.33em; color: white; font-weight: bold; background-color: #492c5d; }
 
 .is-hidden { display: none; }
 
