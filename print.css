@@ -23,8 +23,6 @@
  * 4. State Styles .................. (states)
  */
 /** 1. Base Styles  @section base @see http://smacss.com/book/type-base */
-html, body { height: auto; }
-
 body { margin: 0 auto; display: block; }
 
 a::after { font-size: .657rem; line-height: 1.427619682116684; content: " (" attr(href) ")"; }
