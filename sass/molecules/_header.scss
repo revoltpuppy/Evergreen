@@ -473,8 +473,6 @@
 	@include x-rem(margin-top, 3.75);  //60/16
 	
 	@media screen and (min-width:125em){
-		background-color: hsla(76, 30%, 24%, .85);
-		
 		h1{
 			margin-right: 2%;
 			margin-left: 2%;
