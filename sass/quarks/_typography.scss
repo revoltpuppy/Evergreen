@@ -39,6 +39,10 @@ body,
 	@media screen and (min-width: 43em){
 		@include base-type-lg;
 	}
+	
+	@media screen and (min-width: 125em){
+		@include base-type-xl;
+	}
 }
 
 p,
@@ -48,19 +52,15 @@ dl,
 blockquote,
 figure,
 .base{
-    margin:0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
-}
-
-@media screen and (min-width: 43em){
-    p,
-    ul,
-    ol,
-    dl,
-    blockquote,
-    figure,
-    .base{
-        margin:0.441176470588235em 0 0.882352941176471em 0;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
-    }
+	margin: 0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
+	
+	@media screen and (min-width: 43em){
+		margin: 0.441176470588235em 0 0.882352941176471em 0;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
+	}
+	
+	@media screen and (min-width: 125em){
+		margin: 0.51996672212978em 0 1.03993344425957em 0;  //10/19.232 20/19.232  So 30 + 10 + 20 = 60
+	}
 }
 
 // Removing hyphen rules for now.
@@ -84,21 +84,35 @@ figure,
  * @section h
  */
 h1{
+	//box model
 	margin: 0.96401028277635em 0 0 0;  //30/31.12
+	//typography
 	font-size: 1.945rem;  //31.12px
 	font-weight: normal;
 	line-height: 1.446015424164524;  //45/31.12
 
 	@media screen and (min-width: 32em){
+		//box model
 		margin-top: 0.818419903972065em;
+		//typography
 		font-size: 2.291rem;  //36.656px
 		line-height: 1.227629855958097;  //45/35.656
 	}
     
 	@media screen and (min-width: 43em){
+		//box model
 		margin-top: 0.673975557153127em;   //30/44.5167
+		//typography
 		@include x-rem(font-size, 2.782);  //44.512px
 		line-height: 1.010963335729691;  //45/44.5167
+	}
+	
+	@media screen and (min-width: 125em){
+		//box model
+		margin-top: 1.19198982835346em;  //60/50.366
+		//typography
+		font-size: 3.146rem;  //50.336
+		line-height: 1.19198982835346;  //60/50.336
 	}
 }
 h2{
@@ -106,14 +120,24 @@ h2{
     margin-top: 1.324152542372881em;  //30/22.656
     //typography
     color:#666;
-    @include x-rem(font-size, 1.416);  //22.656px
+    font-size: 1.416rem;  //22.656px
     font-weight:bold;
-    line-height: 1.324152542372881; //30/22.656
+    line-height: 1.324152542372881;  //30/22.656
     
     @media screen and (min-width: 43em){
+    	//box model
     	margin-top: 1.090750436300175em;  //30/27.504
+    	//typography
 	    @include x-rem(font-size, 1.719);  //27.504px
 	    line-height: 1.090750436300175; //30/27.504
+    }
+    
+    @media screen and (min-width: 125em){
+    	//box model
+    	margin-top: 0.96401028277635em;  //30/31.12
+    	//typography
+	    font-size: 1.945rem;  //31.12px
+	    line-height: 0.96401028277635;  //30/31.12
     }
 }
 h3{
@@ -121,26 +145,49 @@ h3{
 	margin-top: 1.363636363636364em;  //30/22
 	//typography
 	color:#333;
-	@include x-rem(font-size, 1.375);  //22px - otherwise appears optically taller than h2
+	font-size: 1.375rem;  //22px - otherwise appears optically taller than h2
 	font-weight: normal;
 	line-height: 1.363636363636364;  //30/22
     
 	@media screen and (min-width: 43em){
+		//box model
 		margin-top: 1.176286072772898em;  //30/25.504
+		//typography
 		@include x-rem(font-size, 1.594);  //25.504px - otherwise appears optically taller than h2
-		line-height: 1.176286072772898; //30/25.504
+		line-height: 1.176286072772898;  //30/25.504
+	}
+    
+	@media screen and (min-width: 125em){
+		//box model
+		margin-top: 1.07142857142857em;  //30/28
+		//typography
+		font-size: 1.75rem;  //28px - otherwise appears optically taller than h2
+		line-height: 1.07142857142857;  //30/28
 	}
 }
 h4{
-    margin: 0.779950083194676em 0 0.363976705490849em 0;
+    margin-top: 0.779950083194676em;  //15/19.232
     @include x-rem(font-size, 1.202);  //19.232px
     line-height: 1.559900166389351;  //30/19.232
+    
+    @media screen and (min-width: 125em){
+    	//box model
+	    margin-top: 1.090750436300175em;  //30/27.504
+	    //typography
+	    @include x-rem(font-size, 1.719);  //27.504px
+	    line-height: 1.090750436300175;  //30/27.504
+    }
 }
 h1,
 h2,
-h3{
+h3,
+h4{
 	//Bottom margin should match the p's top margin exactly, for consistency. If they don't match, change this rule.
-    @include x-rem(margin-bottom, 0.46875); //7.5/16
+	@include x-rem(margin-bottom, 0.46875); //7.5px
+
+	@media screen and (min-width: 125em){
+		margin-bottom: .625rem;  //10px
+	}  
 }
 
 /**
@@ -162,11 +209,19 @@ dt{
 	//box model
 	margin-top: 0.535714285714286em;  //22.5/14/3 - Same as p margin-top
 	//typography
-    font-weight: bold;
+	font-weight: bold;
+	
+	@media screen and (min-width: 125em){
+		margin-top: 0.51996672212978em;  //10/19.232 - Same as p margin-top
+	}
 }
 dd{
 	margin-bottom: 1.071428571428571em;  //15/14 - Same as p margin-bottom
-    margin-left: 0;
+	margin-left: 0;
+	
+	@media screen and (min-width: 125em){
+		margin-bottom: 1.03993344425957em;  //20/19.232 - Same as p margin-bottom
+	}
 }
 dd > p:first-child
 dd > ul:first-child,
@@ -207,6 +262,7 @@ a:active{
     outline-width: 0;
     background-color: transparentize($blueberry-susan, .9);
 }
+
 	/**
 	 * 4.1 Site Name Link
 	 *
@@ -214,12 +270,24 @@ a:active{
 	 */
 	.site-name a{
 		border-bottom-width: 0;
-	}
-	.site-name a,
-	.site-name a:visited,
-	.site-name a:hover{
-	    color: #fff;
-	    text-shadow: 0 1px 3px hsl(275, 33%, 11%);
+	
+		&,
+		&:visited,
+		&:hover{
+		    color: #fff;
+		    text-shadow: 0 1px 3px hsl(275, 33%, 11%);
+		    
+		    @media screen and (min-width: 70em){
+		    	text-shadow:
+						-1px 1px $shadow,
+						-1px 2px $shadow,
+						-1px 3px $shadow,
+						-1px 4px $shadow,
+						-1px 5px $shadow,
+						-1px 6px $shadow,
+						-1px 7px 0.5px $shadow
+		    }
+		}
 	}
 	
 
@@ -243,6 +311,11 @@ small,
 .details,  //deprecated
 .caption{
 	@include small-type;
+	
+	@media screen and (min-width: 125em){
+		font-family: $text-face;
+		@include base-type;
+	}
 }
 
 small{
