@@ -23,9 +23,12 @@
 	}
 }
 
-#tertiary-nav,
-.tertiary-nav-h{
+#tertiary-nav{
     @include base-type;
+    
+    @media screen and (min-width: 70em){
+	    @include base-type-lg
+    }
 }
 
 #tertiary-nav .accordion{
@@ -43,11 +46,16 @@
 	list-style-type: none;
 }
 .tertiary-nav-h{  //heading for tertiary nav in wider views
+	//box model
 	margin-top: -1px;  //compensate for border
+	//typography
+	@include base-type;
 	
 	@media screen and (min-width: 70em){
-		margin: 0.779950083194676em 0 0.363976705490849em 0; //1.169925124792013em 0 0.389975041597338em 0;
-		@include x-rem(font-size, 1.202);
+		//box model
+		margin: 0.779950083194676em 0 0.363976705490849em 0;
+		//typography
+		@include x-rem(font-size, 1.202);  //19.232px
 		line-height: 1.559900166389351;  //30/19.232
 	}
 }
@@ -83,8 +91,6 @@
  */
 #tertiary-nav.tertiary-nav-homepage{
 	@media screen and (min-width:70em){
-		//margin-left: -22.760511882998172%;
-		//width: 20.749542961608775%;
 		margin-left: -25.520833333333%;
 		width: 23.484848484848%;
 	}
