@@ -133,10 +133,18 @@
 	
 	@media screen and (min-width: 43em){
 		//box model
-        margin: 1.323529411764706em 0;
-        //typography
-        @include x-rem(font-size, 1.719);  //27.504
-        line-height: 1.363438045375218; //37.5/27.504
+		margin: 1.323529411764706em 0;
+		//typography
+		@include x-rem(font-size, 1.719);  //27.504
+		line-height: 1.363438045375218; //37.5/27.504
+	}
+	
+	@media screen and (min-width: 125em){
+		//box model
+		margin: 1.44601542416452em 0;  //45/31.12
+		//typography
+		font-size: 1.945rem;  //31.12
+		line-height: 1.44601542416452;  //45/31.12
 	}
 }
 	
