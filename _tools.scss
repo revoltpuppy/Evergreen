@@ -31,8 +31,11 @@ $small-face: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, s
 }
 @mixin base-type-lg{
 	@include x-rem(font-size, 1.063);  //17px
-	//line-height: 1.323529411764706;  //22.5/17
 	line-height: 1.47058823529412;  //25/17
+}
+@mixin base-type-xl{
+	@include x-rem(font-size, 1.202);  //19.232px
+	line-height: 1.29991680532446;  //25/19.232
 }
 @mixin small-type{
 	font-family: $small-face;
