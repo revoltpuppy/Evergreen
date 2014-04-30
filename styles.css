@@ -292,10 +292,13 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 @media screen and (min-width: 125em) { .supplement-alt-1-2, .supplement-alt-2-7 { font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; } }
 
 .index-wrapper, .content-wrapper { border-top: 5px solid #46502b; margin-top: -5px; background-color: #F3F3F3; background-color: rgba(242, 242, 242, 0.95); border-radius: 2px; }
-@media screen and (min-width: 70em) { .index-wrapper, .content-wrapper { margin-left: 16.285714285714286%; } }
+@media screen and (min-width: 43em) { .index-wrapper, .content-wrapper { margin-left: 16.285714285714286%; } }
 
-@media screen and (min-width: 43em) { .index-wrapper { width: 96%; } }
-@media screen and (min-width: 70em) { .index-wrapper { width: 81.714285714285714%; } }
+.index-wrapper { /*@media screen and (min-width: 43em){
+	width: 96%;
+}*/ }
+@media screen and (min-width: 43em) { .index-wrapper { margin-left: 20%; width: 78%; } }
+@media screen and (min-width: 70em) { .index-wrapper { margin-left: 18.292682926829%; width: 81.714285714285714%; } }
 
 @media screen and (min-width: 43em) { .content-wrapper { margin-left: 20%; width: 78%; } }
 @media screen and (min-width: 70em) { .content-wrapper { margin-left: 16.285714285714286%; width: 53.142857142857143%; } }
@@ -305,14 +308,15 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 
 .main-content, .sidebar { margin: 0 2%; }
 
+@media screen and (min-width: 43em) { .index-wrapper .main-content { margin-left: 5.675675675675676%; } }
 @media screen and (min-width: 70em) { .index-wrapper .main-content { margin: 0 3.626279863481%; } }
 
 .content-wrapper .main-content { max-width: 45em; }
+@media screen and (min-width: 43em) { .content-wrapper .main-content { margin-right: 5.675675675675676%; margin-left: 5.675675675675676%; } }
 
 .main-content { margin-top: -5px; }
 @media screen and (min-width: 70em) { .main-content { position: relative; } }
 
-@media screen and (min-width: 43em) { .content-wrapper .main-content { margin-right: 5.675675675675676%; margin-left: 5.675675675675676%; } }
 .sidebar { border-top: 2px dashed #64933a; }
 @media screen and (min-width: 43em) { .sidebar { margin-right: 5.675675675675676%; margin-left: 5.675675675675676%; } }
 @media screen and (min-width: 70em) { .sidebar { border-top-width: 0; border-left: 1px solid #ccc; margin: 0 auto; padding-left: 1em; color: #333; font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; }
@@ -516,7 +520,7 @@ li.internal-users-alt { display: none; }
 #tertiary-nav { margin: 0 auto; max-width: 96%; }
 @media screen and (min-width: 32em) { #tertiary-nav { margin: 0 auto 1rem; max-width: 66.6666666666%; } }
 @media screen and (min-width: 43em) { #tertiary-nav { margin-top: 1rem; width: 22.200520833333%; position: absolute; }
-  .index-wrapper #tertiary-nav { margin-top: 0; width: auto; position: static; } }
+  .index-wrapper #tertiary-nav { width: 20.01953125%; } }
 @media screen and (min-width: 70em) { #tertiary-nav { width: 17.803302225413%; }
   .index-wrapper #tertiary-nav { margin-top: 1rem; position: absolute; } }
 
@@ -537,6 +541,7 @@ li.internal-users-alt { display: none; }
 
 @media screen and (min-width: 43em) { .tertiary-nav-h, a.tertiary-nav-h { border-bottom: 1px solid #004377; margin-top: -1px; display: block; font-weight: bold; } }
 /** Homepage Tertiary Nav  @section tertiary-nav-homepage */
+@media screen and (min-width: 43em) { #tertiary-nav.tertiary-nav-homepage { margin-left: -21.58203%; width: 21.58203125%; } }
 @media screen and (min-width: 70em) { #tertiary-nav.tertiary-nav-homepage { margin-left: -25.52083%; width: 23.484848484848%; } }
 
 /** CSS Accordion  An accordion that relies on radio buttons and labels instead of JavaScript.  @see http://cssconf.com/talk-seddon.html */
@@ -853,7 +858,10 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 
 @media screen and (min-width: 43em) { .event-calendar .h-event { margin-top: 0.441176470588235em; margin-bottom: 0.882352941176471em; } }
 /** 3.7.1 Homepage Upcoming Events  The box on the homepage featuring upcoming events from the calendar. This should track pretty closely to the tertiary nav higher up on the page.  @section mod-upcoming-events-homepage */
-.upcoming-events-homepage { margin: 0 auto; max-width: 96%; }
+.upcoming-events-homepage { margin: 0 auto; max-width: 96%; /*@media screen and (min-width: 43em){
+	margin: 0 auto 1rem;
+	max-width: 66.6666666666%;
+}*/ }
 @media screen and (min-width: 32em) { .upcoming-events-homepage { margin: 0 auto 1rem; max-width: 66.6666666666%; } }
 @media screen and (min-width: 70em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -25.52083%; width: 23.484848484848%; position: absolute; } }
 
