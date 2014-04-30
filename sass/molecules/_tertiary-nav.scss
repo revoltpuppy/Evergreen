@@ -14,30 +14,49 @@
 		max-width: 66.6666666666%;
 	}
 	
-	@media screen and (min-width: 70em){
+	@media screen and (min-width: 43em){
 		//box model
 		margin-top: 1rem;
-		width: 17.803302225413%;
+		width: 22.200520833333%;  //1/5, or technically 341/1536
 		//position
 		position: absolute;  //Removes nav from the document flow
+		
+		.index-wrapper &{
+			//box model
+			margin-top: 0;
+			width: auto;
+			//position
+			position: static;
+		}
+	}
+	
+	@media screen and (min-width: 70em){
+		width: 17.803302225413%;
+		
+		.index-wrapper &{
+			//box model
+			margin-top: 1rem;
+			//position
+			position: absolute;  //Removes nav from the document flow
+		}
 	}
 }
 
 #tertiary-nav{
-    @include base-type;
-    
-    @media screen and (min-width: 70em){
-	    @include base-type-lg
-    }
+	@include base-type;
+  
+	@media screen and (min-width: 70em){
+		@include base-type-lg
+	}
 }
 
 #tertiary-nav .accordion{
-    border-width: 0;
-    background-color: transparent;
-    
-    dd{
-	    background-color: hsla(0, 0%, 100%, .25);
-    }
+	border-width: 0;
+	background-color: transparent;
+	
+	dd{
+		background-color: hsla(0, 0%, 100%, .25);
+	}
 }
 .tertiary-nav-list,
 .tertiary-related-links,
@@ -51,7 +70,7 @@
 	//typography
 	@include base-type;
 	
-	@media screen and (min-width: 70em){
+	@media screen and (min-width: 43em){
 		//box model
 		margin: 0.779950083194676em 0 0.363976705490849em 0;
 		//typography
@@ -73,13 +92,13 @@
 	font-weight: normal;
 }
 
-@media screen and (min-width: 70em){
+@media screen and (min-width: 43em){
 	.tertiary-nav-h,
 	a.tertiary-nav-h{  //heading for tertiary nav in wider views
 		border-bottom: 1px solid mix(black, $sky-blue, 50%);
 		margin-top: -1px;  //compensate for border
 		display: block;
-		color: mix(black, $sky-blue, 50%);
+		//color: mix(black, $sky-blue, 50%);
 		font-weight: bold;
 	}
 }
@@ -112,7 +131,7 @@
 	//misc
 	content: "▶\00A0";  //non-breaking space
 	
-	@media screen and (min-width: 70em){
+	@media screen and (min-width: 43em){
 		content: "";
 	}
 }
@@ -145,7 +164,7 @@
 		}
 	}
 	
-	@media screen and (min-width: 70em){
+	@media screen and (min-width: 43em){
 		padding: 0;
 		
 		label{
@@ -187,7 +206,7 @@
 	-webkit-transition: max-height .2s ease 0s;;
 	transition: max-height .25s ease 0s;
 	
-	@media screen and (min-width: 70em){
+	@media screen and (min-width: 43em){
 		border-bottom-width: 0;
 		max-height: 500px;
 		//backgrounds & borders
@@ -205,10 +224,14 @@
 	//transition
 	transition-duration: .75s;
 	
-	@media screen and (min-width: 70em){
+	@media screen and (min-width: 43em){
 		padding: 0;
 	}
 }
 ul.accordion-inner{
 	padding: 0 2%;  //15/11.884/2
+	
+	@media screen and (min-width: 43em){
+		padding: 0;
+	}
 }
