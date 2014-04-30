@@ -111,18 +111,24 @@
 	background-color: hsla(0,0%,95%,.95);
 	border-radius: 2px;
 	
-	@media screen and (min-width:70em){
+	@media screen and (min-width: 43em){
 		margin-left: 16.285714285714286%;  //1/7
 	}
 }
 
 .index-wrapper{
 	
-	@media screen and (min-width: 43em){
+	/*@media screen and (min-width: 43em){
 		width: 96%;
-	}
+	}*/
 	
+	@media screen and (min-width: 43em){
+		margin-left: 20%;
+		width: 78%;
+	}
+		
 	@media screen and (min-width: 70em){
+		margin-left: 18.292682926829%;
 		width: 81.714285714285714%;  //6/7
 	}
 }
@@ -161,25 +167,27 @@
 
 .index-wrapper .main-content{
 
-	@media screen and (min-width:70em){
+	@media screen and (min-width: 43em){
+		margin-left: 5.675675675675676%;  //matches .content-wrapper .main-content
+	}
+	@media screen and (min-width: 70em){
 		margin: 0 3.626279863481%;
 	}
 }
 
 .content-wrapper .main-content{  //specified in .content-wrapper to not affect .index-wrapper
 	max-width: 45em;
+	
+	@media screen and (min-width:43em){
+		margin-right: 5.675675675675676%;  //I bumped this up for better readability on iPad and 800x600
+		margin-left: 5.675675675675676%;
+	}
 }
 .main-content{
 	margin-top: -5px;
 	
 	@media screen and (min-width: 70em){
 		position: relative;  //Creates a context for absolutely positioning the homepage tertiary nav
-	}
-}
-@media screen and (min-width:43em){
-	.content-wrapper .main-content{
-		margin-right: 5.675675675675676%;  //I bumped this up for better readability on iPad and 800x600
-		margin-left: 5.675675675675676%;
 	}
 }
 .sidebar{
