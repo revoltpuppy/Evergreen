@@ -23,10 +23,10 @@
 		
 		.index-wrapper &{
 			//box model
-			margin-top: 0;
-			width: auto;
+			//margin-top: 0;
+			width: 20.01953125%;  //410/2048
 			//position
-			position: static;
+			//position: static;
 		}
 	}
 	
@@ -109,7 +109,13 @@
  * @section tertiary-nav-homepage
  */
 #tertiary-nav.tertiary-nav-homepage{
-	@media screen and (min-width:70em){
+	
+	@media screen and (min-width: 43em){
+		margin-left: -21.58203125%;  //442/2048
+		width: 21.58203125%;  //442/2048
+	}
+	
+	@media screen and (min-width: 70em){
 		margin-left: -25.520833333333%;
 		width: 23.484848484848%;
 	}
