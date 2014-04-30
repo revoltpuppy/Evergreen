@@ -86,7 +86,6 @@
         }
 	
 		a,
-		a:link,
 		a:visited,
 		a:hover{
 			border-bottom-width: 0;
@@ -123,17 +122,15 @@
 			display: none;
 		}
 	}
-	.search-toggle,
-	.search-toggle:link{
+	.search-toggle{
 		border-radius: 0 0 4.5px 0;
 	}
-	.student-toggle,
-	.student-toggle:link{
+	.student-toggle{
 		border-right: 1px solid #333;
 		border-radius: 0 0 0 4.5px;
 	}
-	.search-toggle:link,
-	.student-toggle:link{
+	.search-toggle,
+	.student-toggle{
 		border-bottom-width: 0;
 	}
 	.search-toggle:hover,
@@ -225,6 +222,10 @@
 	
 	li.internal-users-alt{
 		display: none;
+		
+		@media screen and (min-width: 43em){
+			display: inline;
+		}
 	}
     
 .menu-button,
@@ -338,23 +339,24 @@
 			display: -webkit-flex;  //Safari 7
 			display:     -ms-flex;  //IE10
 			display:         flex;
-			//flexbox
 			-ms-flex-pack:           center;  //IE10
 			-webkit-justify-content: center;  //Safari 7
 			justify-content:         center;
 			-ms-flex-align:      center;  //IE10
 			-webkit-align-items: center;  //Safari 7
 			align-items:         center;
+			//typography
+			font-weight: normal;
 			//misc
 			text-shadow: 0 1px 1em hsl(275, 33%, 11%);
-			
-			&:link{
-				font-weight: normal;
-			}
+		}
+		
+		@media screen and (min-width:70em){
+			font-size: inherit;
+			line-height: inherit;
 		}
 	}
 	.top-nav-link,
-	.top-nav-link:link,
 	.top-nav-link:visited{
 		//box model
 		border-bottom-width: 0;
@@ -370,6 +372,10 @@
 		
 		@media screen and (min-width:32em){
 			text-shadow: none;
+		}
+		
+		@media screen and (min-width: 43em){
+			font-weight: bold;
 		}
 	}
 	
@@ -439,7 +445,6 @@
 	.secondary-nav-link{
 	
 		&,
-		&:link,
 		&:visited{
 			//box model
 			border-bottom: 0;
@@ -457,6 +462,11 @@
 				padding: 0 1em;
 				//layout
 				display: inline-block;
+			}
+		
+			@media screen and (min-width:70em){
+				font-size: inherit;
+				line-height: inherit;
 			}
 		}
 		
