@@ -188,19 +188,20 @@
 		-webkit-appearance: none;
 		   -moz-appearance: none;
 		box-shadow: none;
-	}
-	.top-search button:hover{
-		background-color: #ccc;
+		
+		&:hover{
+			background-color: #ccc;
+		}
 	}
 	.top-search-button{
 		vertical-align: top;
 		width: 18px;
 	}
 	.internal-users,
-    .search-tools{
+  .search-tools{
 		margin-bottom: 0;
 		@include base-type;
-		line-height: 1.071428571428571;
+		//line-height: 1.071428571428571;
 	}
 	.internal-users{
 		margin-top: 0;
@@ -208,16 +209,20 @@
 	.search-tools{
 		margin-left: 0;  //Can be removed once .element-list propogates on .search-tools
 		padding-left: 0;  //Can be removed once .element-list propogates on .search-tools
+		
+		li{
+			display: inline;
+			
+			&::after{
+				content: " | ";
+			}
+			
+			&:last-child::after{
+				content: "";
+			}
+		}
 	}
-	.search-tools li{
-		display: inline;
-	}
-	.search-tools li::after{
-		content: " | ";
-	}
-	.search-tools li:last-child::after{
-		content: "";
-	}
+	
 	li.internal-users-alt{
 		display: none;
 	}
@@ -238,76 +243,76 @@
     background-color: $evergreen-neue;
 }
     
-    /**
-     * 3.1.2 Primary Nav
-     *
-     * @subsubsection mod-header-primary-nav
-     */
-    .top-nav-list{
-    	//box model
-	    margin: 0 auto;
-	    margin-top: 0;
-	    width: 100%;
+  /**
+   * 3.1.2 Primary Nav
+   *
+   * @subsubsection mod-header-primary-nav
+   */
+  .top-nav-list{
+  	//box model
+    margin: 0 auto;
+    margin-top: 0;
+    width: 100%;
 		min-height: 44px;
 		//layout
-	    //display: table-row;
-	    //positioning
-	    position: relative;
-	    //tyopography
-	    text-align: center;
-	    //list
-	    list-style-type: none;
-	    
-	    @media screen and (min-width:20em){
-	    	//layout
+    //display: table-row;
+    //positioning
+    position: relative;
+    //tyopography
+    text-align: center;
+    //list
+    list-style-type: none;
+    
+    @media screen and (min-width:20em){
+			//layout
 			display: -webkit-flex;
 			    display: -ms-flexbox;  //IE10
-	    	        display: flex;
-		    //flexbox
-		    -ms-flex-align: stretch;  //IE10
-		       align-items: stretch;
-		    
-		    > li{
-		    	//box model
+    	        display: flex;
+	    //flexbox
+	    -ms-flex-align: stretch;  //IE10
+	       align-items: stretch;
+	    
+	    > li{
+	    	//box model
 				border-left: 1px solid #333;
 				min-height: 44px;  //IE8
 				width: 21%;  //100/5
 				//layout
-			    //display: table-cell;  //IE8
-			    display: inline-block;  //IE8, Safari 5
+		    //display: table-cell;  //IE8
+		    display: inline-block;  //IE8, Safari 5
 				display: -webkit-flex;
-				    display: -ms-flexbox;  //IE10
-		    	        display: flex;
-			    overflow: hidden;
-			    //vertical-align: middle;  //Works with table-cell, not with flex, so IE8
-			    
-			    &:first-child{
-			    	border-left-width: 0;
+			      display: -ms-flexbox;  //IE10
+				        display: flex;
+		    overflow: hidden;
+		    //vertical-align: middle;  //Works with table-cell, not with flex, so IE8
+		    
+		    &:first-child{
+		    	border-left-width: 0;
 					width: 16%;
 				}
 			}
-	    }
-	    
-	    @media screen and (min-width:32em){
+    }
+    
+    @media screen and (min-width:32em){
 			> li,
 			> li:first-child{
 				width: 20%;
 			}
 		}
-		
+	
 		@media screen and (min-width:43em){
 			> li{
 				height: auto;
 			}
 		}
-	    
-	    &:before,
-	    &:after{
-	    	width: 0;
-		    display: table;
-		    clear: both;
-		    content: "";
-	    }
+    
+    &:before,
+    &:after{
+    	width: 0;
+	    display: table;
+	    clear: both;
+	    content: "";
+    }
 	}
 	
 	.top-nav-link{
