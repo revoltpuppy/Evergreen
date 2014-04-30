@@ -13,43 +13,30 @@
 */
 @media screen and (min-width: 43em){
 	/**
-	* Layout Styles
-	*/	
-	.copyright{
-		display: inline;
-	}
-	
-	/**
 	* Module Styles
 	*/
-	li.internal-users-alt{  //Search tools
-		display: inline;
-	}
-	.primary-nav:after{
+	/*.primary-nav:after{
 		//layout
 		clear: none;
 		display: inline;
 		//misc
 		content: none;
-	}
-	.top-nav-link,
-	.top-nav-link:link,
-	.top-nav-link:visited,
-	.secondary-nav a,
-	.secondary-nav a:link,
-	.secondary-nav a:visited{
+	}*/
+	/*.top-nav-link,
+	.top-nav-link:visited{
 		//typography
 		font-weight: bold;
 		}
-	}
+	}*/
+}
 	
-@media screen and (min-width:70em){	
+@media screen and (min-width:70em){
 	/**
 	* Module Styles
 	*/
-	.top-nav-link,
+	/*.top-nav-link,
 	.secondary-nav-link{
 		font-size: inherit;
 		line-height: inherit;
-	}
+	}*/
 }
