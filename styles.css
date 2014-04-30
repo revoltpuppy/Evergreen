@@ -366,7 +366,7 @@ input:checked + .header-dropdown { max-height: 8em; -webkit-transition: .5s all 
 @media screen and (min-width: 32em) { .logo { width: 58%; } }
 @media screen and (min-width: 43em) { .logo { width: 48%; } }
 @media screen and (min-width: 70em) { .logo { width: 23%; } }
-.logo a, .logo a:link, .logo a:visited, .logo a:hover { border-bottom-width: 0; }
+.logo a, .logo a:visited, .logo a:hover { border-bottom-width: 0; }
 
 /** 3.1.1 Search  @section mod-header-search */
 [for="q"], [for="top-search-query"] { height: 0; width: 0; display: block; overflow: hidden; position: absolute; }
@@ -376,11 +376,11 @@ input:checked + .header-dropdown { max-height: 8em; -webkit-transition: .5s all 
 .search-toggle, .student-toggle { padding: 0 .618em; min-width: 22px; float: right; text-align: center; text-decoration: none; }
 @media screen and (min-width: 43em) { .search-toggle, .student-toggle { display: none; } }
 
-.search-toggle, .search-toggle:link { border-radius: 0 0 4.5px 0; }
+.search-toggle { border-radius: 0 0 4.5px 0; }
 
-.student-toggle, .student-toggle:link { border-right: 1px solid #333; border-radius: 0 0 0 4.5px; }
+.student-toggle { border-right: 1px solid #333; border-radius: 0 0 0 4.5px; }
 
-.search-toggle:link, .student-toggle:link { border-bottom-width: 0; }
+.search-toggle, .student-toggle { border-bottom-width: 0; }
 
 .search-toggle:hover, .student-toggle:hover { cursor: pointer; }
 
@@ -411,6 +411,7 @@ input:checked + .header-dropdown { max-height: 8em; -webkit-transition: .5s all 
 .search-tools li:last-child::after { content: ""; }
 
 li.internal-users-alt { display: none; }
+@media screen and (min-width: 43em) { li.internal-users-alt { display: inline; } }
 
 .menu-button, .search-toggle, .student-toggle { font-size: 17.008px; font-size: 1.063rem; line-height: 1.764705882352941; }
 
@@ -428,12 +429,13 @@ li.internal-users-alt { display: none; }
 .top-nav-link { display: block; }
 .top-nav-link:hover { background-color: #857192; box-shadow: 0 0 2px rgba(253, 243, 180, 0.5) inset; -webkit-transition: all .1s ease-out; transition: all .1s ease-out; }
 .top-nav-link:focus { background-color: #492c5d; }
-@media screen and (min-width: 20em) { .top-nav-link { display: -webkit-flex; display: -ms-flex; display: flex; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; text-shadow: 0 1px 1em #1e1325; }
-  .top-nav-link:link { font-weight: normal; } }
+@media screen and (min-width: 20em) { .top-nav-link { display: -webkit-flex; display: -ms-flex; display: flex; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; font-weight: normal; text-shadow: 0 1px 1em #1e1325; } }
+@media screen and (min-width: 70em) { .top-nav-link { font-size: inherit; line-height: inherit; } }
 
-.top-nav-link, .top-nav-link:link, .top-nav-link:visited { border-bottom-width: 0; padding: 17px 2px; padding: 0.46875rem 0.25rem; width: 100%; color: #fff; }
-@media screen and (min-width: 22em) { .top-nav-link, .top-nav-link:link, .top-nav-link:visited { font-weight: bold; } }
-@media screen and (min-width: 32em) { .top-nav-link, .top-nav-link:link, .top-nav-link:visited { text-shadow: none; } }
+.top-nav-link, .top-nav-link:visited { border-bottom-width: 0; padding: 17px 2px; padding: 0.46875rem 0.25rem; width: 100%; color: #fff; }
+@media screen and (min-width: 22em) { .top-nav-link, .top-nav-link:visited { font-weight: bold; } }
+@media screen and (min-width: 32em) { .top-nav-link, .top-nav-link:visited { text-shadow: none; } }
+@media screen and (min-width: 43em) { .top-nav-link, .top-nav-link:visited { font-weight: bold; } }
 
 .secondary-nav-list { border-top: 1px solid #46502b; margin: 0; padding: 0; overflow: hidden; text-align: center; background: #64933a url(images/texture-1.png); list-style-type: none; }
 .secondary-nav-list > li:first-child { margin-top: 0.71315146386224em; }
@@ -444,8 +446,9 @@ li.internal-users-alt { display: none; }
   .secondary-nav-list > li { width: auto; display: inline-block; float: none; } }
 @media screen and (min-width: 43em) { .secondary-nav-list > li { font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; line-height: 3.21428571428571; } }
 
-.secondary-nav-link, .secondary-nav-link:link, .secondary-nav-link:visited { border-bottom: 0; height: 100%; width: 100%; display: block; color: white; font-weight: normal; }
-@media screen and (min-width: 22em) { .secondary-nav-link, .secondary-nav-link:link, .secondary-nav-link:visited { height: auto; padding: 0 1em; display: inline-block; } }
+.secondary-nav-link, .secondary-nav-link:visited { border-bottom: 0; height: 100%; width: 100%; display: block; color: white; font-weight: normal; }
+@media screen and (min-width: 22em) { .secondary-nav-link, .secondary-nav-link:visited { height: auto; padding: 0 1em; display: inline-block; } }
+@media screen and (min-width: 70em) { .secondary-nav-link, .secondary-nav-link:visited { font-size: inherit; line-height: inherit; } }
 .secondary-nav-link:hover { background-color: #857192; box-shadow: 0 0 2px rgba(253, 243, 180, 0.5) inset; -webkit-transition: all .1s ease-out; transition: all .1s ease-out; }
 .secondary-nav-link:focus { background-color: #492c5d; }
 
@@ -909,12 +912,9 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 *
 * @subsection r-7-column
 */
-@media screen and (min-width: 43em) { /** Layout Styles */
-  .copyright { display: inline; }
-  /** Module Styles */
-  li.internal-users-alt { display: inline; }
-  .primary-nav:after { clear: none; display: inline; content: none; }
-  .top-nav-link, .top-nav-link:link, .top-nav-link:visited, .secondary-nav a, .secondary-nav a:link, .secondary-nav a:visited { font-weight: bold; } }
+@media screen and (min-width: 43em) { /** Module Styles */
+  /*.primary-nav:after{ 	//layout 	clear: none; 	display: inline; 	//misc 	content: none; }*/
+  /*.top-nav-link, .top-nav-link:visited{ 	//typography 	font-weight: bold; 	} }*/ }
 @media screen and (min-width: 70em) { /** Module Styles */
-  .top-nav-link, .secondary-nav-link { font-size: inherit; line-height: inherit; } }
+  /*.top-nav-link, .secondary-nav-link{ 	font-size: inherit; 	line-height: inherit; }*/ }
 /*This file was written by Justin McDowell. ((O)O)*/
