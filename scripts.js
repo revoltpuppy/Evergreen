@@ -109,20 +109,6 @@ $('.accordion > dt > a').click(function(event) {
 });
 
 /**
- * pushFooter
- *
- * Push footer to the bottom when necessary.
- */
-/*var wrapper = $(".wrapper");
-var pageFooter = $(".page-footer");
-var dh = $("body").height() - $(document).height();
-function pushFooter(){
-	if(dh > 0){
-    	wrapper.css("margin-bottom", (dh + pageFooter.height()) + "px");
-    }
-}*/
-
-/**
  * Fluid Multimedia
  * 
  * Fluid multimedia with default embed codes (makes things easy for content owners)
@@ -204,9 +190,6 @@ $(".lazy-load").click(function(e){
  * Document is fully loaded
  */
 $(document).ready(function(){
-	//pushFooter();  //Push the footer when the page loads.
-	/*$(window).resize(pushFooter);*/  //Also if the browser window is resized.
-    
 	/**
 	 * Random Rotation
 	 * 
