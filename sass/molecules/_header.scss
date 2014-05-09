@@ -323,6 +323,8 @@
 		&:hover{
 			//backgrounds & borders
 			background-color: mix(white, $blueberry-susan, 33%);
+			//typography
+			color: white;
 			//misc
 			box-shadow: 0 0 2px $highlight inset;
 			-webkit-transition: all .1s ease-out;
@@ -473,6 +475,8 @@
 		&:hover{
 			//backgrounds & borders
 			background-color: mix(white, $blueberry-susan, 33%);
+			//typography
+			color: white;
 			//misc
 			box-shadow: 0 0 2px $highlight inset;
 			-webkit-transition: all .1s ease-out;
