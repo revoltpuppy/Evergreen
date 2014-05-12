@@ -192,6 +192,9 @@
 }
 .sidebar{
 	border-top: 2px dashed $evergreen-neue;
+	//backgrounds & borders
+	background-color: #F3F3F3;  //IE8
+	background-color: hsla(0,0%,95%,.95);
 	
 	@media screen and (min-width: 43em){
 		margin-right: 5.675675675675676%;  //These values should match .main-content
