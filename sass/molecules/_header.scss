@@ -197,8 +197,7 @@
 	.internal-users,
   .search-tools{
 		margin-bottom: 0;
-		@include base-type;
-		//line-height: 1.071428571428571;
+		@include base-type-lg;
 	}
 	.internal-users{
 		margin-top: 0;
