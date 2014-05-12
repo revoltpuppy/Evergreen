@@ -317,7 +317,7 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 .main-content { margin-top: -5px; }
 @media screen and (min-width: 70em) { .main-content { position: relative; } }
 
-.sidebar { border-top: 2px dashed #64933a; }
+.sidebar { border-top: 2px dashed #64933a; background-color: #F3F3F3; background-color: rgba(242, 242, 242, 0.95); }
 @media screen and (min-width: 43em) { .sidebar { margin-right: 5.675675675675676%; margin-left: 5.675675675675676%; } }
 @media screen and (min-width: 70em) { .sidebar { border-top-width: 0; border-left: 1px solid #ccc; margin: 0 auto; padding-left: 1em; color: #333; font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; }
   .sidebar p, .sidebar .base { margin: 0.535714285714286em 0 1.071428571428571em 0; } }
@@ -401,7 +401,7 @@ input:checked + .header-dropdown { max-height: 8em; -webkit-transition: .5s all 
 
 .top-search-button { vertical-align: top; width: 18px; }
 
-.internal-users, .search-tools { margin-bottom: 0; font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; }
+.internal-users, .search-tools { margin-bottom: 0; font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; }
 
 .internal-users { margin-top: 0; }
 
