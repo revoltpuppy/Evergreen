@@ -73,6 +73,8 @@ p.alert{
 //pull quotes
 .pull-box{
     background-color: $evergreen-neue;
+		-moz-osx-font-smoothing: auto;  //Better rendering of reverse-out text
+		 -webkit-font-smoothing: subpixel-antialiased;  //Better rendering of reverse-out text
     
     @media screen and (min-width: 43em){
     	margin-bottom: 1.071428571428571em;  //15px
