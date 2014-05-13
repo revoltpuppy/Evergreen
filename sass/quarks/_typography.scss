@@ -29,7 +29,8 @@ body{
 body,
 input,
 button{
-	-webkit-font-smoothing: antialiased;  //Reduce text chubbiness
+	-webkit-font-smoothing: antialiased;  //Reduce text chubbiness in Safari, Chrome
+	-moz-osx-font-smoothing: grayscale;  //Reduce text chubbiness in Firefox
 }
 
 body,
