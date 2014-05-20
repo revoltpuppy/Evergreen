@@ -46,6 +46,10 @@
 
 .summer, .summer abbr { background-color: #64933a; }
 
+.summer-session-1, .summer-session-1 abbr { background-color: #46502b; }
+
+.summer-session-2, .summer-session-2 abbr { background-color: #600f21; }
+
 .fall, .winter, .spring, .summer { margin-top: 0.9375rem; width: 25%; float: left; color: white; text-align: center; }
 .fall abbr, .winter abbr, .spring abbr, .summer abbr { border-bottom-width: 0; padding: 0.234375rem; display: block; border-radius: 2px; }
 @media screen and (min-width: 55em) { .fall, .winter, .spring, .summer { width: auto; float: none; background-color: transparent; } }
