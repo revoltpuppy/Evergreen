@@ -210,6 +210,19 @@
 	}
 }
 
+.summer-session-1{
+	&,
+	abbr{
+		background-color:  $evergreen-old-style;
+	}
+}
+.summer-session-2{
+	&,
+	abbr{
+		background-color:  $wine;
+	}
+}
+
 .fall,
 .winter,
 .spring,
