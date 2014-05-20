@@ -214,11 +214,15 @@
 	
 	@media screen and (min-width: 43em){
 		border-bottom-width: 0;
-		max-height: 500px;
+		max-height: 600px;
 		//backgrounds & borders
 		background-color: transparent;
 		//misc
 		box-shadow: none;
+	}
+	
+	@media screen and (min-width: 70em){
+		max-height: none;
 	}
 }
 #tertiary-nav li:last-child .accordion-body{
