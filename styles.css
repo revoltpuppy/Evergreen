@@ -124,6 +124,8 @@ ul, ol { margin-left: 1.76470588235294em; padding-left: 0; }
 
 ul, dl { padding: 0; }
 
+ol ol { list-style-type: lower-alpha; }
+
 dt { margin-top: 0.535714285714286em; font-weight: bold; }
 @media screen and (min-width: 125em) { dt { margin-top: 0.51996672212978em; } }
 
@@ -159,6 +161,8 @@ figcaption, small, .details, .caption { font-family: Verdana, Avenir, "Avenir Ne
 code, pre { font-family: monospace, serif; }
 
 blockquote { padding-left: 1em; font-style: italic; }
+
+hr { border: 0; height: 5px; margin: 2.8125rem 0; background-color: #64933a; }
 
 /** 2. Tables  @section table */
 table { border-collapse: collapse; border-spacing: 0; border-width: 0; margin: 1.481481481481481em 0; width: 100%; }
@@ -605,7 +609,7 @@ ul.accordion-inner { padding: 0 2%; }
 .follow { margin-top: 0; }
 
 .intro { margin: 1.169925124792013em 0; color: #64933a; font-size: 19.232px; font-size: 1.202rem; line-height: 1.559900166389351; }
-@media screen and (min-width: 43em) { .intro { margin: 1.323529411764706em 0; font-size: 27.504px; font-size: 1.719rem; line-height: 1.363438045375218; } }
+@media screen and (min-width: 43em) { .intro { margin: 1.09075043630017em 0; font-size: 27.504px; font-size: 1.719rem; line-height: 1.363438045375218; } }
 @media screen and (min-width: 125em) { .intro { margin: 1.44601542416452em 0; font-size: 1.945rem; line-height: 1.44601542416452; } }
 
 .intro-alt { color: #333; font-weight: bold; }
@@ -882,7 +886,7 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 .blog:before{
 	background-color: #F3F3F3; content: "Blog"; display: table; font-size: 10.507px;  //IE8 font-size: 0.657rem; margin: -7.345px auto 0;  //IE8 margin: -0.459rem auto; padding: 0 0.657rem; text-align: center;
 }*/
-#tinymce { margin: 0 7em; display: block; }
+#tinymce { margin: 0 auto; padding: 0 2em; max-width: 48em; display: block; }
 
 /**
  * State Styles
