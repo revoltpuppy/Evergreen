@@ -133,7 +133,7 @@
 	
 	@media screen and (min-width: 43em){
 		//box model
-		margin: 1.323529411764706em 0;
+		margin: 1.09075043630017em 0;  //30/27.504
 		//typography
 		@include x-rem(font-size, 1.719);  //27.504
 		line-height: 1.363438045375218; //37.5/27.504
@@ -708,7 +708,9 @@
 
 #tinymce{  //WYSIWYG
 	//box model
-	margin: 0 7em;
+	margin: 0 auto;
+	padding: 0 2em;
+	max-width: 48em;
 	//layout
 	display: block;
 }
