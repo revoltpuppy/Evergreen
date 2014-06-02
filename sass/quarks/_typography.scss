@@ -206,6 +206,11 @@ ul,
 dl{
     padding: 0;
 }
+
+ol ol{
+	list-style-type: lower-alpha;
+}
+
 dt{
 	//box model
 	margin-top: 0.535714285714286em;  //22.5/14/3 - Same as p margin-top
@@ -337,4 +342,13 @@ blockquote{
 	padding-left: 1em;
 	//typography
 	font-style: italic;
+}
+
+hr{
+	//box model
+	border: 0;
+	height: 5px;
+	margin: 2.8125rem 0;  //45/16
+	//backgrounds & borders
+	background-color: $evergreen-neue;
 }
