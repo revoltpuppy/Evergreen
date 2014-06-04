@@ -27,7 +27,7 @@
  */
 .main-background{
 	width:100%;
-	position: absolute;
+	position: fixed;
 	//@include x-rem(top, 5.25);  //84/16
 	top: 0;
 	left: 0;
@@ -632,7 +632,7 @@
 			max-width: 66.6666666666%;
 		}*/
 		
-		@media screen and (min-width: 70em){
+		@media screen and (min-width: 43em){
 			//box model
 			margin-top: 1rem;
 			margin-left: -25.520833333333%;
