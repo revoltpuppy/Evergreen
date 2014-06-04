@@ -16,7 +16,19 @@
  */
 
 *{
-	-webkit-box-sizing: border-box;  //Older Webkit
+	-webkit-box-sizing: border-box;  //Safari 5
+     -moz-box-sizing: border-box;  //Firefox
+          box-sizing: border-box;
+}
+
+//For the following, I am taking pity on IE<8 because I'm using
+//the appropriate double-colon syntax for pseudo-elements. If I
+//condensed this style declaration with the above *, IE<8 would
+//choke on the whole thing, breaking the border-box declaration
+//for the universal selector.
+*::before,
+*::after{
+	-webkit-box-sizing: border-box;  //Safari 5
      -moz-box-sizing: border-box;  //Firefox
           box-sizing: border-box;
 }
