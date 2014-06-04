@@ -62,6 +62,8 @@
  */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
+*::before, *::after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
 body { margin: 0; min-height: 100vh; -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; background-color: #f3f3f3; }
 
 img { border-width: 0; max-width: 100%; }
@@ -406,7 +408,8 @@ input:checked + .header-dropdown { max-height: 8em; -webkit-transition: .5s all 
 
 .top-search-button { vertical-align: top; width: 18px; }
 
-.internal-users, .search-tools { margin-bottom: 0; font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; }
+.internal-users, .search-tools { margin-bottom: 0; font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; }
+@media screen and (min-width: 32em) { .internal-users, .search-tools { font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; } }
 
 .internal-users { margin-top: 0; }
 
@@ -462,7 +465,7 @@ li.internal-users-alt { display: none; }
 @media screen and (min-height: 35em) { .site-name h1 { margin-bottom: 0.673904em; } }
 
 /** 2. Background Image  @section mod-background */
-.main-background { width: 100%; position: absolute; top: 0; left: 0; z-index: -1; }
+.main-background { width: 100%; position: fixed; top: 0; left: 0; z-index: -1; }
 @media screen and (min-width: 43em) { .main-background { width: 100%; } }
 @media screen and (min-width: 70em) { .main-background { max-width: 82em; } }
 
@@ -872,7 +875,7 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 	max-width: 66.6666666666%;
 }*/ }
 @media screen and (min-width: 32em) { .upcoming-events-homepage { margin: 0 auto 1rem; max-width: 66.6666666666%; } }
-@media screen and (min-width: 70em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -25.52083%; width: 23.484848484848%; position: absolute; } }
+@media screen and (min-width: 43em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -25.52083%; width: 23.484848484848%; position: absolute; } }
 
 /** 3.8 Embeded Content  @section mod-embeded-content */
 .lazy-load { border-bottom-width: 0; max-width: 100%; display: block; overflow: hidden; position: relative; }
