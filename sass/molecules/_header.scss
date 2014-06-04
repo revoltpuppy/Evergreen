@@ -197,7 +197,11 @@
 	.internal-users,
   .search-tools{
 		margin-bottom: 0;
-		@include base-type-lg;
+		@include base-type;
+		
+  	@media screen and (min-width: 32em){
+			@include base-type-lg;
+		}
 	}
 	.internal-users{
 		margin-top: 0;
