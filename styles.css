@@ -64,7 +64,7 @@
 
 *::before, *::after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-body { margin: 0; min-height: 100vh; -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; background-color: #f3f3f3; }
+body { margin: 0; min-height: 100vh; -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; background-color: #f3f3f3; background-color: #f2f2f2; }
 
 img { border-width: 0; max-width: 100%; }
 
@@ -516,8 +516,7 @@ li.internal-users-alt { display: none; }
   .homepage-hero-img { margin-left: 0; width: 100%; } }
 @media screen and (min-width: 86em) { .homepage-hero-copy h1 { font-size: 36.656px; font-size: 2.291rem; line-height: 1.227629855958097; }
   .homepage-hero-copy h1:first-line { font-size: 50.336px; font-size: 3.146rem; line-height: 0.893992371265099; } }
-.profile-list > li { margin: 0.535714285714286em 0 1.071428571428571em 0; overflow: hidden; position: relative; }
-@media screen and (min-width: 43em) { .profile-list > li { margin: 0.441176470588235em 0 0.882352941176471em 0; } }
+.profile-list > li { overflow: hidden; position: relative; }
 
 .profile-img { margin-left: -50%; width: 200%; max-width: 685px; display: block; }
 @media screen and (min-width: 20em) { .profile-img { margin-left: -25%; width: 150%; } }
@@ -875,7 +874,8 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 	max-width: 66.6666666666%;
 }*/ }
 @media screen and (min-width: 32em) { .upcoming-events-homepage { margin: 0 auto 1rem; max-width: 66.6666666666%; } }
-@media screen and (min-width: 43em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -25.52083%; width: 23.484848484848%; position: absolute; } }
+@media screen and (min-width: 43em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -21.58203%; width: 21.58203125%; position: absolute; } }
+@media screen and (min-width: 70em) { .upcoming-events-homepage { margin-left: -25.52083%; width: 23.484848484848%; } }
 
 /** 3.8 Embeded Content  @section mod-embeded-content */
 .lazy-load { border-bottom-width: 0; max-width: 100%; display: block; overflow: hidden; position: relative; }
