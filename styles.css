@@ -484,7 +484,7 @@ li.internal-users-alt { display: none; }
 
 .homepage-hero a, .homepage-hero a:link, .homepage-hero a:visited, .homepage-hero a:hover { border-width: 0; color: inherit; font-weight: inherit; }
 
-.homepage-hero .call-to-action { padding: 0 2%; display: inline-block; color: white; background-color: #492c5d; }
+.homepage-hero .call-to-action { padding: 0 2%; display: inline-block; color: white; background-color: #64933a; }
 .homepage-hero .call-to-action:hover { background-color: #0086ee; }
 
 .homepage-hero-content { max-width: 82em; }
@@ -495,6 +495,7 @@ li.internal-users-alt { display: none; }
 .homepage-hero-copy em { font-style: normal; font-weight: bold; letter-spacing: .075em; text-transform: uppercase; }
 .homepage-hero-copy-alt .homepage-hero-copy { float: right; }
 .homepage-hero-img-detailed .homepage-hero-copy { margin-left: 0; padding: 0 2%; background-color: rgba(73, 44, 93, 0.34); border-radius: 2px; }
+.homepage-hero-special .homepage-hero-copy { background-color: rgba(73, 44, 93, 0.67); }
 
 @media screen and (min-width: 20em) { .homepage-hero { width: 100%; overflow: hidden; position: relative; }
   .homepage-hero-content { position: absolute; bottom: 0; }
@@ -513,6 +514,7 @@ li.internal-users-alt { display: none; }
   .homepage-hero-img { margin-left: -10%; width: 120%; } }
 @media screen and (min-width: 70em) { .homepage-hero { display: table; }
   .homepage-hero-copy { width: 28.571428571428571%; }
+  .homepage-hero-special .homepage-hero-copy { width: 42.857142857143%; }
   .homepage-hero-img { margin-left: 0; width: 100%; } }
 @media screen and (min-width: 86em) { .homepage-hero-copy h1 { font-size: 36.656px; font-size: 2.291rem; line-height: 1.227629855958097; }
   .homepage-hero-copy h1:first-line { font-size: 50.336px; font-size: 3.146rem; line-height: 0.893992371265099; } }
