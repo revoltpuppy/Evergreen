@@ -46,7 +46,7 @@
 	//typography
 	color: white;
 	//backgrounds and borders
-	background-color: $blueberry-susan;
+	background-color: $evergreen-neue;
 	
 	&:hover{
     	background-color: $sky-blue;
@@ -88,6 +88,10 @@
 		//backgrounds & borders
 		background-color: transparentize($blueberry-susan, .66);
 		border-radius: 2px;
+	}
+	
+	.homepage-hero-special &{
+		background-color: transparentize($blueberry-susan, .33);
 	}
 }
 @media screen and (min-width: 20em){
@@ -195,7 +199,11 @@
     	display: table;  //Gives it a block formatting context
 	}
 	.homepage-hero-copy{
-		width: 28.571428571428571%;
+		width: 28.571428571428571%;  //2/7
+		
+		.homepage-hero-special &{
+			width: 42.857142857143%;
+		}
 	}
 	.homepage-hero-img{
 		margin-left: 0;
