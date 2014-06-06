@@ -61,14 +61,14 @@
 @import "../molecules/homepage-hero";
     
     .profile-list > li{
-    	@include margin-default;
+    	//@include margin-default;
     	//layout
     	overflow: hidden;
     	//position
 	    position: relative;
 	    
 	    @media screen and (min-width:43em){
-		    @include margin-default-lg;
+		    //@include margin-default-lg;
 	    }
     }
     .profile-img{
@@ -635,10 +635,15 @@
 		@media screen and (min-width: 43em){
 			//box model
 			margin-top: 1rem;
-			margin-left: -25.520833333333%;
-			width: 23.484848484848%;
+			margin-left: -21.58203125%;  //442/2048
+			width: 21.58203125%;  //442/2048
 			//position
 			position: absolute;  //Removes nav from the document flow
+		}
+		
+		@media screen and (min-width: 70em){
+			margin-left: -25.520833333333%;
+			width: 23.484848484848%;
 		}
 	}
 
