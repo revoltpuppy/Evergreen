@@ -96,32 +96,32 @@ caption{  //styled after h4
 
 th,
 td{
-   text-align: left;
+	text-align: left;
 }
 th{
-    color: #000;
-    padding: 0 1.111111111111111em 0 0;
-    vertical-align: bottom;
+	color: #000;
+	padding: 0 1.111111111111111em 0 0;
+	vertical-align: bottom;
 }
 td{
 	//box model
-    border: 0 solid #ccc;
-    border-top-width: 1px;
-    padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;  //5/13.5  15/13.5
-    //typography
-    color: #333;
-    vertical-align: top;
+	border: 0 solid #ccc;
+	border-top-width: 1px;
+	padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;  //5/13.5  15/13.5
+	//typography
+	color: #333;
+	vertical-align: top;
 }
 td:last-child{
 	padding-right: 0;
 }
 td strong,
 tfoot td{
-    color: #000;
-    font-weight: bold;
+	color: #000;
+	font-weight: bold;
 }
 tr:first-child td{
-    border-color: #000;
+	border-color: #000;
 }
 
 //Collapse top space between cell padding and element margins.
@@ -173,11 +173,11 @@ select{
 	padding: 0.30357142857143em .5em;  //4.25/14 So, (4.25 * 2) + 14 = 22.5
 	//typography
 	@include base-type;
-    text-shadow: 0 1px 0 $highlight;
+	text-shadow: 0 1px 0 $highlight;
 	//backgrounds & borders
-    background-color: mix(white, $sky-blue, 80%);  //IE 9
-    //background-image: -webkit-linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //Safari 6, Chrome 25
-    //background-image:         linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //w3c
+	background-color: mix(white, $sky-blue, 80%);  //IE 9
+	//background-image: -webkit-linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //Safari 6, Chrome 25
+	//background-image:         linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //w3c
 	border-radius: 2px;
 	//misc
 	-webkit-appearance: none;
@@ -191,9 +191,9 @@ select{
 		border-bottom-style: dashed;
 		//color: $sky-blue;
 		//backgrounds & borders
-	    background-color: mix(white, $sky-blue, 90%);  //IE 9
-	    //background-image: -webkit-linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //Safari 6, Chrome 25
-	    //background-image:         linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //w3c
+		background-color: mix(white, $sky-blue, 90%);  //IE 9
+		//background-image: -webkit-linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //Safari 6, Chrome 25
+		//background-image:         linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //w3c
 	}
 	
 	/*@media screen and (min-width: 43em){
@@ -203,6 +203,7 @@ select{
 		@include base-type-lg;
 	}*/
 }
+@import "../atoms/search";
 
 /**
  * 4. Buttons
