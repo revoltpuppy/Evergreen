@@ -187,10 +187,10 @@
 	font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-.main-content > p:last-child:after,
-.main-content > ul:last-child > li:last-child:after,
-.main-content > ol:last-child > li:last-child:after,
-.main-content > dl:last-child > dd:last-child:after{
+.main-content > p:last-child::after,
+.main-content > ul:last-child > li:last-child::after,
+.main-content > ol:last-child > li:last-child::after,
+.main-content > dl:last-child > dd:last-child::after{
 	white-space: nowrap;
 	content: "\00A0" url("/_inc/images/endnote.png");
 }
