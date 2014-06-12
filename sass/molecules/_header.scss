@@ -10,7 +10,9 @@
 	 * Togglable dropdowns for internal user links and search bar.
 	 */
 	input[name="header-toggle"]{  //Don't show the checkboxes
-		display: none;
+		//display: none; Note, this causes a bug in Mobile Safari where one checkbox label can’t be pressed immediately after another.
+		position: absolute;  //Removes from the document flow
+		visibility: hidden;  //Hides the beckbox
 	}
 	input + .header-dropdown{
 		max-height: 0;
