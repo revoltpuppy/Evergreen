@@ -358,7 +358,7 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 /** 1. Header  @section mod-header */
 /** Header  @section mod-header */
 /** Mobile Header Widgets  Togglable dropdowns for internal user links and search bar. */
-input[name="header-toggle"] { display: none; }
+input[name="header-toggle"] { position: absolute; visibility: hidden; }
 
 input + .header-dropdown { max-height: 0; overflow: hidden; -webkit-transition: .5s all ease; transition: .5s all ease; }
 
@@ -662,7 +662,7 @@ ul.accordion-inner { padding: 0 2%; }
 
 .machine-text { font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace; }
 
-.main-content > p:last-child:after, .main-content > ul:last-child > li:last-child:after, .main-content > ol:last-child > li:last-child:after, .main-content > dl:last-child > dd:last-child:after { white-space: nowrap; content: "\00A0" url("/_inc/images/endnote.png"); }
+.main-content > p:last-child::after, .main-content > ul:last-child > li:last-child::after, .main-content > ol:last-child > li:last-child::after, .main-content > dl:last-child > dd:last-child::after { white-space: nowrap; content: "\00A0" url("/_inc/images/endnote.png"); }
 
 /**
 * 4.1 Lists
