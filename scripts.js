@@ -3,92 +3,6 @@ var bWidth = document.documentElement.clientWidth; //browser width
 var illusRotationRange = 2;  //how far in either direction an illustration can rotate, in degrees
 
 /**
- * Slide components down from the top
- *
- * Fiddle with this: http://jsfiddle.net/Rtezs/2/
- */
-/*$(function(){
-	var $search = $("[role='search']"),
-	$internalUsers = $(".internal-users"),
-	$searchH = $search.outerHeight();
-	$iuH = $internalUsers.outerHeight();
-    //console.log("Search height: " + $searchH + ", Internal Users height: " + $iuH);
-    
-    $internalUsers.css("top", "-" + $iuH + "px");
-    $search.css("top", "-" + $searchH + "px");
-    
-    function resetSearch(){
-        $("body").removeClass("active-search");
-        //console.log("Body classes: " + $("body").attr("class"));
-        $search.css("top", "-" + $searchH + "px");
-        $(".page-header").css("margin-top", $iuH + "px");
-        //console.log("Search reset.");
-    }
-    function resetIU(){
-        $("body").removeClass("active-internal-users");
-        //console.log("Body classes: " + $("body").attr("class"));
-        $internalUsers.css("top", "-" + $iuH + "px");
-        $(".page-header").css("margin-top", $searchH + "px");
-        //console.log("Internal Users reset.");
-    }
-    
-    $('.search-toggle').click(function(e){
-        e.preventDefault();
-        if($("body").hasClass("active-search")){
-        	resetSearch();
-	        $(".page-header").css("margin-top", 0);
-        } else{
-	        $("body").removeClass("active-internal-users").addClass("active-search");
-            //console.log("Body classes: " + $("body").attr("class"));
-	        $search.css("top", 0);
-            resetIU();
-	    }
-    });
-    $('.student-toggle').click(function(e){
-        e.preventDefault();
-        if($("body").hasClass("active-internal-users")){
-        	resetIU();
-	        $(".page-header").css("margin-top", 0);
-        } else{
-	        $("body").removeClass("active-search").addClass("active-internal-users");
-            //console.log("Body classes: " + $("body").attr("class"));
-	        $internalUsers.css("top", 0);
-            resetSearch();
-	    }
-    });
-    $(window).resize(function(){
-        resetSearch();
-        resetIU();
-        $(".page-header").css("margin-top", "");
-    });
-});*/
-
-/**
- * setTertiaryNav
- *
- * Style the tertiary nav according to screen size.
- */
-/*function setTertiaryNav(){
-	var $tertiaryNavDls = $("#tertiary-nav").children("dl");
-	console.log(bWidth);
-	if(bWidth <= 69*rem){
-		//if there is not an accordion, make one
-		if(!$tertiaryNavDls.hasClass("accordion")){
-			console.log(!$tertiaryNavDls.hasClass("accordion"));
-		    $(".tertiary-nav-h").each(function(){
-		         var text = $(this).contents().wrap("<a href='#'>");  //Wrap tertiary-nav-headers in links for accordion action.
-		    });
-		    $tertiaryNavDls.addClass("accordion");
-		    console.log("Ready for accordion.");
-		}
-	} else{  //If the screen size is not small enough, be rid of the accordion
-		$tertiaryNavDls.removeClass("accordion");
-	    $("#tertiary-nav-toggle").addClass("tertiary-nav-h");
-	}
-};
-setTertiaryNav();*/
-
-/**
  * Simple Accordion
  *
  * Simple accordion without all the jQuery UI problems.
@@ -107,38 +21,6 @@ $('.accordion > dt > a').click(function(event) {
     }
     return false;
 });
-
-/**
- * Fluid Multimedia
- * 
- * Fluid multimedia with default embed codes (makes things easy for content owners)
- * See: http://css-tricks.com/NetMag/FluidWidthVideo/demo.php
- */
-/*$(function(){
-	var $allVideos = $("iframe[src*='//player.vimeo'], iframe[src*='//www.youtube'], object, embed");  //Get all videos
-	//$fluidEl = $("figure");
-    
-	$allVideos.each(function(){
-		//Get the width of the containing element
-        $dataWidth = $(this).parent().width();
-		$(this)
-			//jQuery .data does not work on object/embed elements
-			.attr('data-width', $dataWidth)  //Set the target width
-			.attr('data-aspectRatio', this.height / this.width)  //Set the video's aspect ratio
-			.removeAttr('height')  //Remove any explicitly specified height and width attributes
-			.removeAttr('width');
-	});
-	$(window).resize(function(){
-		$allVideos.each(function(){
-			var $el = $(this);
-			//console.log($el.attr('data-width'));
-			$el  //Set the height and width of the element
-				.attr('data-width', $(this).parent().width())
-				.width($el.attr('data-width'))
-				.height($el.attr('data-width') * $el.attr('data-aspectRatio'));
-		});
-	}).resize();
-});*/
 
 /**
  * Fluid Media
