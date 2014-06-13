@@ -485,7 +485,7 @@ li.internal-users-alt { display: none; }
 @media screen and (min-width: 20em) { .secondary-nav-list > li:first-child, .secondary-nav-list > li:last-child { margin: 0; }
   .secondary-nav-list > li { margin: 0; width: 25%; float: left; line-height: 2.85260585544895; } }
 @media screen and (min-width: 22em) { .secondary-nav-list { display: -webkit-flex; display: flex; -webkit-justify-content: flex-end; justify-content: flex-end; }
-  .secondary-nav-list > li { width: auto; display: inline-block; float: none; } }
+  .secondary-nav-list > li { width: auto; display: inline-block; float: none; white-space: nowrap; } }
 @media screen and (min-width: 43em) { .secondary-nav-list > li { font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; line-height: 3.21428571428571; } }
 
 .secondary-nav-link, .secondary-nav-link:visited { border-bottom: 0; height: 100%; width: 100%; display: block; color: white; font-weight: normal; }
