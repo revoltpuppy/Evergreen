@@ -429,7 +429,7 @@
 			display:         flex;
 			//flexbox
 			-webkit-justify-content: flex-end;  //Safari 7
-			justify-content:         flex-end;
+			        justify-content: flex-end;
 
 			> li{
 				//box model
@@ -437,6 +437,8 @@
 				//layout
 				display: inline-block;  //IE9
 				float: none;
+				//typography
+				white-space: nowrap;
 			}
 		}
 		
