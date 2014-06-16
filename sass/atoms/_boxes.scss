@@ -16,8 +16,7 @@ p.box{  //WYSIWYG
 	color: mix(black, $sky-blue, 66%);
 	//backgrounds & borders
 	background-color: mix(white, $sky-blue, 80%);
-	//background-image: url("images/texture-1.png");
-	@include background-default;
+	background-image: url("images/texture-1.png");
 	border-radius: 2px;
 }
 
