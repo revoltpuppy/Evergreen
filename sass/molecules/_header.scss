@@ -395,7 +395,8 @@
 		//typography
 		text-align: center;
 		//backgrounds & borders
-		background: $evergreen-neue url(images/texture-1.png);
+		background-color: $evergreen-neue;
+		@include background-default;
 		//list
 		list-style-type: none;
 		
