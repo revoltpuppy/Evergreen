@@ -44,6 +44,47 @@
  */
 /** Sass Constants  @section sass-constants */
 /** Sass Mixins  @section sass-mixins */
+/* Replaces PNG background-image with multiple repeating gradients instead. Unfortunately, Chrome totally craps out in the rendering department, so this will have to wait for another day. */
+/*@mixin background-default{
+	background-image:  //Safari 6
+		// diagonal lines
+		-webkit-repeating-linear-gradient(
+			-45deg,
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 2px,
+			hsla(0, 0%, 0%, 0) 3px
+		),
+		// 1px dots
+		-webkit-radial-gradient(
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 1px,
+			hsla(0, 0%, 0%, 0) 2px
+		);
+	background-image:
+		// diagonal lines
+		repeating-linear-gradient(
+			-45deg,
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 2px,
+			hsla(0, 0%, 0%, 0) 3px
+		),
+		// 1px dots
+		radial-gradient(
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 1px,
+			hsla(0, 0%, 0%, 0) 2px
+		);
+	
+	background-size:
+		// diagonal lines
+		100% 100%,
+		// 1px dots
+		10px 10px;
+}*/
 /**
  * Base Styles
  *
@@ -528,7 +569,7 @@ li.internal-users-alt { display: none; }
 .homepage-hero-copy h1:first-line { font-size: 22.656px; font-size: 1.416rem; line-height: 0.993114406779661; }
 .homepage-hero-copy em { font-style: normal; font-weight: bold; letter-spacing: .075em; text-transform: uppercase; }
 .homepage-hero-copy-alt .homepage-hero-copy { float: right; }
-.homepage-hero-img-detailed .homepage-hero-copy { margin-left: 0; padding: 0 2%; background-color: rgba(73, 44, 93, 0.34); border-radius: 2px; }
+.homepage-hero-img-detailed .homepage-hero-copy { margin-left: 0; padding: 0 2%; background-color: rgba(73, 44, 93, 0.5); border-radius: 2px; }
 .homepage-hero-special .homepage-hero-copy { background-color: rgba(73, 44, 93, 0.67); }
 
 @media screen and (min-width: 20em) { .homepage-hero { width: 100%; overflow: hidden; position: relative; }
