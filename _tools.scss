@@ -25,6 +25,13 @@ $small-face: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, s
  *
  * @section sass-mixins
  */
+@mixin margin-default{
+	margin: 0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
+}
+@mixin margin-default-lg{
+	margin: 0.441176470588235em 0 0.882352941176471em 0;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
+}
+
 @mixin base-type{
 	@include x-rem(font-size, 0.875);  //14px
 	line-height: 1.607142857142857;  //22.5/14
@@ -43,9 +50,27 @@ $small-face: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, s
 	line-height: 1.427619682116684;  //15/10.507
 }
 
-@mixin margin-default{
-	margin: 0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
-}
-@mixin margin-default-lg{
-	margin: 0.441176470588235em 0 0.882352941176471em 0;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
+@mixin background-default{
+	background-image:
+		// diagonal lines
+		-moz-repeating-linear-gradient(
+			-45deg,
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 2px,
+			hsla(0, 0%, 0%, 0) 3px
+		),
+		// 1px dots
+		-moz-radial-gradient(
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 1px,
+			hsla(0, 0%, 0%, 0) 2px
+		);
+	
+	background-size:
+		// diagonal lines
+		100% 100%,
+		// 1px dots
+		10px 10px;
 }
