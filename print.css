@@ -40,7 +40,7 @@ body, [role=banner], wrapper { background: transparent none; }
 
 .content-wrapper { background: white none; border-color: black; }
 
-.content-wrapper, .sidebar-wrapper, .main-content, .sidebar { margin: 0; max-width: none; }
+.content-wrapper, .sidebar-wrapper, .content-wrapper .main-content, .sidebar { margin: 0; max-width: none; }
 
 .page-footer { border-top: 1px solid black; margin: 0; padding-bottom: 0; color: black; background-color: transparent; }
 
