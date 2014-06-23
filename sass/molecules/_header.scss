@@ -150,51 +150,17 @@
 	.student-toggle > img{
 		padding-top: 1px;  //Compensate for matching search icon height
 	}
-	#top-search-query,
+	#top-search-query,  //deprecated, use #q
+	#q,
 	.top-search button{
 		margin-bottom: 0;
-		//font-size: 1em;
 	}
-	/*#top-search-query{
-		//border: 1px solid #ccc;
-		margin-right: -30px;
-		margin-right: -1.719rem;
-		position: relative;
-		width: 100%;
-		-webkit-appearance: none;
-		   -moz-appearance: none;
-	}*/
 	[placeholder]:focus::-moz-placeholder{  //Firefox 19+
 		color: transparent;
 	}
 	[placeholder]:focus::-webkit-input-placeholder{  //Safari & Chrome
 		color: transparent;
 	}
-	/*.top-search button{
-		border-width: 1px 1px 1px 0;
-		height: 27.506px;  //IE8
-		height: 1.719rem;
-		padding: 2px;
-		width: 27.506px;  //IE8
-		width: 1.719rem;
-		position: relative;
-		background: none #fff;
-		border-color: #ccc;
-		border-radius: 0 0 0 0;
-		vertical-align: top;
-		cursor: pointer;
-		-webkit-appearance: none;
-		   -moz-appearance: none;
-		box-shadow: none;
-		
-		&:hover{
-			background-color: #ccc;
-		}
-	}*/
-	/*.top-search-button{
-		vertical-align: top;
-		width: 18px;
-	}*/
 	.internal-users,
   .search-tools{
 		margin-bottom: 0;
