@@ -408,46 +408,12 @@ input:checked + .header-dropdown { max-height: 8em; -webkit-transition: .5s all 
 
 .student-toggle > img { padding-top: 1px; }
 
-#top-search-query, .top-search button { margin-bottom: 0; }
+#top-search-query, #q, .top-search button { margin-bottom: 0; }
 
-/*#top-search-query{
-	//border: 1px solid #ccc;
-	margin-right: -30px;
-	margin-right: -1.719rem;
-	position: relative;
-	width: 100%;
-	-webkit-appearance: none;
-	   -moz-appearance: none;
-}*/
 [placeholder]:focus::-moz-placeholder { color: transparent; }
 
 [placeholder]:focus::-webkit-input-placeholder { color: transparent; }
 
-/*.top-search button{
-	border-width: 1px 1px 1px 0;
-	height: 27.506px;  //IE8
-	height: 1.719rem;
-	padding: 2px;
-	width: 27.506px;  //IE8
-	width: 1.719rem;
-	position: relative;
-	background: none #fff;
-	border-color: #ccc;
-	border-radius: 0 0 0 0;
-	vertical-align: top;
-	cursor: pointer;
-	-webkit-appearance: none;
-	   -moz-appearance: none;
-	box-shadow: none;
-	
-	&:hover{
-		background-color: #ccc;
-	}
-}*/
-/*.top-search-button{
-	vertical-align: top;
-	width: 18px;
-}*/
 .internal-users, .search-tools { margin-bottom: 0; font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; }
 @media screen and (min-width: 32em) { .internal-users, .search-tools { font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; } }
 
