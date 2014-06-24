@@ -64,7 +64,7 @@
 
 *::before, *::after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-body { margin: 0; min-height: 100vh; -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; background-color: #f3f3f3; background-color: #f2f2f2; }
+body { margin: 0; min-height: 100vh; -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; background-color: #f2f2f2; }
 
 img { border-width: 0; max-width: 100%; }
 
@@ -870,20 +870,36 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 		max-width: 16.6666666666%;
 	}
 }*/
-/** 3.7 Event Calendar  @section mod-event-calendar */
-.event-dt { font-size: 11.888px; font-size: 0.743rem; font-weight: bold; letter-spacing: .1em; line-height: 1.892664872139973; text-transform: uppercase; }
+/** Event Calendar  @section mod-event-calendar */
+/*.event-dt{
+	@include small-type;
+	font-weight: bold;
+	line-height: 1.892664872139973;
+	text-transform: uppercase;
+}
+.event-calendar .h-event{
+	margin-top: 0.535714285714286em;  //22.5/14/3
+	margin-bottom: 1.071428571428571em;  //15/14  So, 22.5 + 7.5 + 15 = 45
+}
+@media screen and (min-width:43em){
+	.event-calendar .h-event{
+		margin-top: 0.441176470588235em;  //22.5/17/3
+		margin-bottom: 0.882352941176471em;  //15/17  So, 22.5 + 7.5 + 15 = 45
+	}
+}*/
+.calendar-dt { margin: 0 auto; max-width: 3em; text-align: center; background-color: #f2f2f2; }
 
-.event-calendar .h-event { margin-top: 0.535714285714286em; margin-bottom: 1.071428571428571em; }
+.calendar-month { padding: 0 .5em; width: 100%; display: block; color: white; font-family: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif; font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; background-color: #64933a; border-radius: 2px; }
 
-@media screen and (min-width: 43em) { .event-calendar .h-event { margin-top: 0.441176470588235em; margin-bottom: 0.882352941176471em; } }
-/** 3.7.1 Homepage Upcoming Events  The box on the homepage featuring upcoming events from the calendar. This should track pretty closely to the tertiary nav higher up on the page.  @section mod-upcoming-events-homepage */
+/** Homepage Upcoming Events  The box on the homepage featuring upcoming events from the calendar. This should track pretty closely to the tertiary nav higher up on the page.  @section mod-upcoming-events-homepage */
 .upcoming-events-homepage { margin: 0 auto; max-width: 96%; /*@media screen and (min-width: 43em){
 	margin: 0 auto 1rem;
 	max-width: 66.6666666666%;
 }*/ }
+.upcoming-events-homepage .media-body { text-align: center; }
 @media screen and (min-width: 32em) { .upcoming-events-homepage { margin: 0 auto 1rem; max-width: 66.6666666666%; } }
-@media screen and (min-width: 43em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -21.58203%; width: 21.58203125%; position: absolute; } }
-@media screen and (min-width: 70em) { .upcoming-events-homepage { margin-left: -25.52083%; width: 23.484848484848%; } }
+@media screen and (min-width: 43em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -21.58203%; width: 21.58203125%; font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; position: absolute; } }
+@media screen and (min-width: 70em) { .upcoming-events-homepage { margin-left: -25.52083%; width: 23.484848484848%; font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; } }
 
 /** 3.8 Embeded Content  @section mod-embeded-content */
 .lazy-load { border-bottom-width: 0; max-width: 100%; display: block; overflow: hidden; position: relative; }
