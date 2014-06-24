@@ -581,35 +581,58 @@
 
 
 /**
- * 3.7 Event Calendar
+ * Event Calendar
  *
  * @section mod-event-calendar
  */
-.event-dt{
-	//box model
-	//padding: 0 2%;
-	//typography
-	@include x-rem(font-size, 0.743);
+/*.event-dt{
+	@include small-type;
 	font-weight: bold;
-	letter-spacing: .1em;
 	line-height: 1.892664872139973;
 	text-transform: uppercase;
-	//backgrounds & borders
-	//background-color: mix(white, $sky-blue, 40%);
 }
 .event-calendar .h-event{
 	margin-top: 0.535714285714286em;  //22.5/14/3
 	margin-bottom: 1.071428571428571em;  //15/14  So, 22.5 + 7.5 + 15 = 45
 }
 @media screen and (min-width:43em){
-    .event-calendar .h-event{
-        margin-top: 0.441176470588235em;  //22.5/17/3
-        margin-bottom: 0.882352941176471em;  //15/17  So, 22.5 + 7.5 + 15 = 45
-    }
+	.event-calendar .h-event{
+		margin-top: 0.441176470588235em;  //22.5/17/3
+		margin-bottom: 0.882352941176471em;  //15/17  So, 22.5 + 7.5 + 15 = 45
+	}
+}*/
+
+.calendar-dt{
+	//box model
+	margin: 0 auto;
+	max-width: 3em;
+	//typography
+	text-align: center;
+	//backgrounds and borders
+	background-color: hsl(0, 0%, 95%);
 }
 
+.calendar-month{
+	//box model
+	padding: 0 .5em;
+	width: 100%;
+	//layout
+	display: block;
+	//typography
+	color: hsl(0, 0%, 100%);
+	@include small-type;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	//backgrounds and borders
+	background-color: $evergreen-neue;
+	border-radius: 2px;
+}
+
+
+
 	/**
-	 * 3.7.1 Homepage Upcoming Events
+	 * Homepage Upcoming Events
 	 *
 	 * The box on the homepage featuring upcoming events from the
 	 * calendar. This should track pretty closely to the tertiary
@@ -621,6 +644,10 @@
 		//box model
 		margin: 0 auto;
 		max-width: 96%;
+		
+		.media-body{
+			text-align: center;
+		}
 		
 		@media screen and (min-width: 32em){
 			margin: 0 auto 1rem;
@@ -637,13 +664,17 @@
 			margin-top: 1rem;
 			margin-left: -21.58203125%;  //442/2048
 			width: 21.58203125%;  //442/2048
+			//typography
+			@include base-type;
 			//position
 			position: absolute;  //Removes nav from the document flow
 		}
 		
 		@media screen and (min-width: 70em){
+			//box model
 			margin-left: -25.520833333333%;
 			width: 23.484848484848%;
+			@include base-type-lg;
 		}
 	}
 
