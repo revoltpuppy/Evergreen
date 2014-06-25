@@ -276,6 +276,8 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 
 /** Grid  Styles related to the grid system.  @section l-grid */
 /** Grid  Unit layout and sizing for the grid system.  @section grid */
+.grid-list { display: flex; flex-wrap: wrap; }
+
 .unit-1-7, .unit-2-7, .unit-3-7, .unit-4-7, .unit-5-7, .unit-6-7, .unit-1-3, .unit-1-3-alt, .unit-2-3, .unit-1-1 { margin: 0 2%; }
 
 .row { width: 100%; clear: both; display: block; }
@@ -887,19 +889,22 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 		margin-bottom: 0.882352941176471em;  //15/17  So, 22.5 + 7.5 + 15 = 45
 	}
 }*/
-.calendar-dt { margin: 0 auto; max-width: 3em; text-align: center; background-color: #f2f2f2; }
+.calendar-dt { margin: 0 auto; max-width: 3em; overflow: hidden; text-align: center; background-color: #f2f2f2; border-radius: 2px; }
 
-.calendar-month { padding: 0 .5em; width: 100%; display: block; color: white; font-family: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif; font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; background-color: #64933a; border-radius: 2px; }
+.calendar-month { padding: 0 .5em; width: 100%; display: block; color: white; font-family: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif; font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; background-color: #600f21; }
 
 /** Homepage Upcoming Events  The box on the homepage featuring upcoming events from the calendar. This should track pretty closely to the tertiary nav higher up on the page.  @section mod-upcoming-events-homepage */
 .upcoming-events-homepage { margin: 0 auto; max-width: 96%; /*@media screen and (min-width: 43em){
 	margin: 0 auto 1rem;
 	max-width: 66.6666666666%;
 }*/ }
+.upcoming-events-homepage li { border-bottom: 1px solid #c1b7c7; margin: 0.535714285714286em 0 1.071428571428571em 0; }
+.upcoming-events-homepage li:last-child { border-bottom-width: 0; }
 .upcoming-events-homepage .media-body { text-align: center; }
 @media screen and (min-width: 32em) { .upcoming-events-homepage { margin: 0 auto 1rem; max-width: 66.6666666666%; } }
 @media screen and (min-width: 43em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -21.58203%; width: 21.58203125%; font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; position: absolute; } }
-@media screen and (min-width: 70em) { .upcoming-events-homepage { margin-left: -25.52083%; width: 23.484848484848%; font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; } }
+@media screen and (min-width: 70em) { .upcoming-events-homepage { margin-left: -25.52083%; width: 23.484848484848%; font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; }
+  .upcoming-events-homepage li { margin: 0.441176470588235em 0 0.882352941176471em 0; } }
 
 /** 3.8 Embeded Content  @section mod-embeded-content */
 .lazy-load { border-bottom-width: 0; max-width: 100%; display: block; overflow: hidden; position: relative; }
