@@ -606,10 +606,13 @@
 	//box model
 	margin: 0 auto;
 	max-width: 3em;
+	//layout
+	overflow: hidden;
 	//typography
 	text-align: center;
 	//backgrounds and borders
 	background-color: hsl(0, 0%, 95%);
+	border-radius: 2px;
 }
 
 .calendar-month{
@@ -625,8 +628,7 @@
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	//backgrounds and borders
-	background-color: $evergreen-neue;
-	border-radius: 2px;
+	background-color: $wine;
 }
 
 
@@ -644,6 +646,15 @@
 		//box model
 		margin: 0 auto;
 		max-width: 96%;
+		
+		li{
+			border-bottom: 1px solid mix(white, $blueberry-susan, 66%);
+			@include margin-default;
+			
+			&:last-child{
+				border-bottom-width: 0;
+			}
+		}
 		
 		.media-body{
 			text-align: center;
@@ -675,6 +686,10 @@
 			margin-left: -25.520833333333%;
 			width: 23.484848484848%;
 			@include base-type-lg;
+			
+			li{
+				@include margin-default-lg;
+			}
 		}
 	}
 
