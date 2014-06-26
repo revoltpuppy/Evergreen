@@ -75,17 +75,18 @@
 	        flex-direction: column;
 	-webkit-align-items: stretch;
 	        align-items: stretch;
+	        
+	.media-img{
+	  padding-right: 0;
+	  max-width: 100%;
+	  float: none;  //IE9
+	  text-align: center;
+	  
+	  img{
+		  margin: 0 auto;
+	  }
+	}
 }
-.media-column .media-img{
-  margin-right: 0;
-  max-width: 100%;
-  float: none;  //IE9
-  text-align: center;
-}
-.media-column .media-img img{
-  margin: 0 auto;
-}
-
 
 /*@media screen and (min-width:32em){
 	.media-list .media{
