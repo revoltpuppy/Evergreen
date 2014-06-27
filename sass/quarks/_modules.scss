@@ -596,6 +596,7 @@
 
 .calendar-dt{
 	//box model
+	border: 1px solid mix(white, $blueberry-susan, 66%);
 	margin: 0 auto;
 	max-width: 3em;
 	//layout
@@ -681,6 +682,35 @@
 			
 			li{
 				@include margin-default-lg;
+			}
+		}
+	}
+	
+	.upcoming-events-homepage2{
+		@media screen and (min-width: 20em){
+			overflow: auto;
+			
+			ul{
+				//layout
+				display: table;
+				table-layout: fixed;
+			}
+			
+			li{
+				//box model
+				padding: 0 1em;
+				width: -webkit-calc(100% - 2em);
+				width:         calc(100% - 2em);
+				//layout
+				display: table-cell;
+				//typography
+				text-align: center;
+			}
+		}
+		
+		@media screen and (min-width: 43em){
+			li{
+				
 			}
 		}
 	}
