@@ -35,3 +35,10 @@ table a{
 .striped-table > tbody > tr:nth-child(odd){
 	background-color: mix(white, $blueberry-susan, 90%);
 }
+
+/**
+ * DataTables
+ */
+.dataTables_filter label{
+	font-weight: bold;
+}
