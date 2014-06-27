@@ -200,6 +200,9 @@ table a { border-bottom-width: 0; }
 
 .striped-table > tbody > tr:nth-child(odd) { background-color: #ece9ee; }
 
+/** DataTables */
+.dataTables_filter label { font-weight: bold; }
+
 /** 3. Forms  @section form */
 input { border: 1px solid #bbcfd7; height: 1.719rem; margin-bottom: 1.262201279030629em; padding: 0 .5em; font-size: 1em; }
 
@@ -256,7 +259,7 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 
 .wrapper:before, .wrapper:after { width: 0; content: ""; display: table; clear: both; }
 
-[role="banner"] { overflow: hidden; background-color: #f3f3f3; }
+[role="banner"] { overflow: hidden; background-color: #f3f3f3; box-shadow: 0 0 3px rgba(30, 19, 37, 0.25); }
 
 .page-header { -webkit-transition: all .1s ease-in-out; transition: all .1s ease-in-out; }
 @media screen and (min-width: 43em) { .page-header { background-color: transparent; } }
@@ -276,15 +279,18 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 
 /** Grid  Styles related to the grid system.  @section l-grid */
 /** Grid  Unit layout and sizing for the grid system.  @section grid */
-.grid-list { display: flex; flex-wrap: wrap; }
+.grid-list { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
 
-.unit-1-7, .unit-2-7, .unit-3-7, .unit-4-7, .unit-5-7, .unit-6-7, .unit-1-3, .unit-1-3-alt, .unit-2-3, .unit-1-1 { margin: 0 2%; }
+.unit-1-7, .unit-2-7, .unit-3-7, .unit-4-7, .unit-5-7, .unit-6-7, .unit-1-3, .unit-1-3-alt, .unit-2-3, .unit-1-2, .unit-1-1 { margin: 0 2%; }
 
-.row { width: 100%; clear: both; display: block; }
+.unit-1-7 { margin: 0; padding: 0 1em; }
 
-@media screen and (min-width: 43em) { .unit-1-1 { margin: 0 2%; width: 96%; clear: left; float: left; } }
+.row { width: 100%; clear: both; display: block; overflow: hidden; }
 
-@media screen and (min-width: 43em) { .unit-1-2 { margin: 0 2%; width: 46%; float: left; } }
+@media screen and (min-width: 43em) { .unit-1-1 { width: 96%; clear: left; float: left; } }
+
+.unit-1-2 { width: 96%; float: left; }
+@media screen and (min-width: 32em) { .unit-1-2 { margin: 0 2%; width: 46%; float: left; } }
 
 @media screen and (min-width: 43em) { .unit-1-3 { width: 29.3333333333%; float: left; } }
 
@@ -294,7 +300,8 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 @media screen and (min-width: 43em) { .unit-2-3 { width: 62.66666666667%; float: left; } }
 
 @media screen and (min-width: 43em) { .unit-2-6, .unit-4-6, .unit-1-7, .unit-2-7, .unit-3-7, .unit-4-7, .unit-5-7, .unit-6-7 { margin: 0 2%; float: left; }
-  .unit-1-7 { width: 10.285714285714286%; }
+  .unit-1-7 { margin: 0; padding: 0 1em; }
+  .unit-1-7 { width: 10.285714285714286%; width: -webkit-calc(14.285714285714% - 2em); width: calc(14.285714285714% - 2em); }
   .unit-2-7 { width: 24.571428571428571%; }
   .unit-3-7 { width: 38.857142857142857%; }
   .unit-4-7 { width: 53.142857142857143%; }
@@ -682,57 +689,48 @@ ul.accordion-inner { padding: 0 2%; }
 /** Related Nav  Related links with iconographic circles.  @section mod-typography-l-related */
 .related-nav { display: -webkit-flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
 
-.related-nav > li { margin: 1.262201279030629em 0; margin-right: 2%; width: 31.3333333333%; display: block; vertical-align: top; float: left; text-align: center; }
+.related-nav > li { margin: 0.9375rem 0; margin-right: 2em; width: -webkit-calc(33.3333333333% - 1.3333333333em); width: calc(33.3333333333% - 1.3333333333em); display: block; vertical-align: top; float: left; text-align: center; }
+@media screen and (min-width: 32em) { .related-nav > li { margin-right: 1em; width: -webkit-calc(16.6666666667% - 0.8333333333em); width: calc(16.6666666667% - 0.8333333333em); } }
 
 .related-nav > li:nth-child(3n) { margin-right: 0; }
+@media screen and (min-width: 32em) { .related-nav > li:nth-child(3n) { margin-right: 1em; } }
 
-.related-nav > li:nth-child(3n+1) { clear: left; }
+.related-nav > li:nth-child(3n+1) { margin-left: 0; clear: left; }
+@media screen and (min-width: 32em) { .related-nav > li:nth-child(3n+1) { clear: none; } }
+
+.related-nav > li:last-child { margin-right: 0; }
 
 .related-nav a, .related-nav a:link, .related-nav a:visited { color: #64933a; }
 
 .related-nav a:hover { color: #0086ee; }
 
 .related-nav-icon { padding: 15%; text-align: center; background-color: #64933a; border-radius: 50%; transition: all 0.2s; }
+@media screen and (min-width: 22em) { .related-nav-icon { margin: 0 auto; width: 75%; } }
 
 .related-nav a .related-nav-icon, .related-nav a:link .related-nav-icon, .related-nav a:visited .related-nav-icon { background: #64933a; }
 
 .related-nav a:hover .related-nav-icon { background: #0086ee; box-shadow: 0 0 0.2em rgba(253, 243, 180, 0.5) inset; }
 
-@media screen and (min-width: 22em) { .related-nav-icon { margin: 0 auto; width: 75%; } }
-@media screen and (min-width: 32em) { .related-nav > li, .related-nav > li:nth-child(3n) { margin-right: 2%; width: 15%; width: 14.5%\9; }
-  .related-nav > li:nth-child(3n+1) { clear: none; }
-  .related-nav > li:last-child { margin-right: 0; } }
 /*Lists have a hard time breaking across columns, so there are some tricky fixes here.*/
-ul.flexible { overflow: hidden;     	/*@media screen and (min-width:20em){
-	    	//box model
-	    	margin-left: 0;  //Put the margin on each li instead.
-	    	//layout
-	        -webkit-column-count: 2;
-	           -moz-column-count: 2;
-	            -ms-column-count: 2;
-	                column-count: 2;
-	        -webkit-column-gap: 15px;
-	           -moz-column-gap: 15px;
-	            -ms-column-gap: 15px;
-	                column-gap: 15px;
-	    } 
-		@media screen and (min-width:32em){
-			-webkit-column-count: 3;
-			   -moz-column-count: 3;
-			    -ms-column-count: 3;
-			        column-count: 3;
-		}*/ }
+@media screen and (min-width: 20em) { ul.flexible { margin-left: 0; -webkit-column-count: 2; -moz-column-count: 2; -ms-column-count: 2; column-count: 2; -webkit-column-gap: 15px; -moz-column-gap: 15px; -ms-column-gap: 15px; column-gap: 15px; list-style-position: inside; } }
+@media screen and (min-width: 32em) { ul.flexible { -webkit-column-count: 3; -moz-column-count: 3; -ms-column-count: 3; column-count: 3; } }
 
-@media screen and (min-width: 20em) { .flexible > li { margin: 0 2%; margin-bottom: 0.46875rem; width: 46%; float: left;     /*&:before{ 	//box model 	margin-left: 1.2662em;  //This should equal the default ul left margin. 	//layout 	display: list-item; 	float: left; 	//positioning 	position: relative; 	left: -1.2662em;  //This should be the inverse of margin-left. 	//typography 	text-indent: 0;  //Fixes a bug in Chrome where bullets won't display. 	//misc
-	    content: ""; }*/ }
-  .flexible > li:nth-child(odd) { clear: left; } }
-@media screen and (min-width: 32em) { .flexible > li { width: 29%; }
-  .flexible > li:nth-child(odd) { clear: none; }
-  .flexible > li:nth-child(3n+1) { clear: left; } }
+@media screen and (min-width: 20em) { .flexible > li { margin: 0 2% 0.46875rem 2%; overflow: hidden;     	/*&::before{ 		//box model 		margin-left: -1em; 		//position 		position: absolute; 		//misc
+	    	content: "• " 	}*/     	/*&:nth-child(odd){
+	    	clear: left; 	}*/ } }
+@media screen and (min-width: 32em) { .flexible > li { /*width: 29%;
 
-@media screen and (min-width: 32em) { .unit-2-7 .flexible { -webkit-column-count: 2; -moz-column-count: 2; -ms-column-count: 2; column-count: 2; } }
-@media screen and (min-width: 70em) { .unit-3-7 .flexible { -webkit-column-count: 2; -moz-column-count: 2; -ms-column-count: 2; column-count: 2; } }
-@media screen and (min-width: 70em) { .unit-3-7 .flexible { -webkit-column-count: 3; -moz-column-count: 3; -ms-column-count: 3; column-count: 3; } }
+&:nth-child(odd){
+	clear: none;
+}
+
+&:nth-child(3n+1){
+	clear: left;
+}*/ } }
+
+@media screen and (min-width: 32em) { .unit-2-7 .flexible { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; } }
+@media screen and (min-width: 70em) { .unit-3-7 .flexible { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; } }
+@media screen and (min-width: 70em) { .unit-3-7 .flexible { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; } }
 
 		/** 4.1.2 Link Icons  Links with icons attached to them, e.g. PDFs or social media chicklets.  @subsubsection mod-typography-a-icons */
 .link-icon::before, .link-icon-alt::before { height: 1rem; width: 1rem; display: inline-block; overflow: hidden; vertical-align: middle; text-indent: 100%; white-space: nowrap; background-repeat: no-repeat; -webkit-background-size: 1rem 1rem; -moz-background-size: 1rem 1rem; background-size: 1rem 1rem; content: ""; }
@@ -792,9 +790,7 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 .media-alt .media-img { margin-right: 0; margin-left: 2%; float: right; }
 
 .media-column { -webkit-flex-direction: column; flex-direction: column; -webkit-align-items: stretch; align-items: stretch; }
-
-.media-column .media-img { margin-right: 0; max-width: 100%; float: none; text-align: center; }
-
+.media-column .media-img { padding-right: 0; max-width: 100%; float: none; text-align: center; }
 .media-column .media-img img { margin: 0 auto; }
 
 /*@media screen and (min-width:32em){
@@ -810,7 +806,7 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 	}
 }*/
 /** Boxes  Boxes for containing things, usually with a background color.  @section box */
-.notice, .box, p.box { padding: 0 1em; overflow: hidden; color: #002d50; background-color: #cce6fb; background-image: url("images/texture-1.png"); border-radius: 2px; }
+.notice, .box, p.box { padding: 0 1em; overflow: hidden; color: #002d50; background-color: rgba(204, 230, 251, 0.9); background-image: url("images/texture-1.png"); border-radius: 2px; }
 
 .notice h2, .box h2 { color: #004377; }
 
@@ -823,10 +819,10 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 
 #sitewide-alert { border-radius: 0; transition: all .5s ease-in; }
 
-.caption-box { text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); background-color: rgba(242, 242, 242, 0.66667); }
+.caption-box { text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); background-color: rgba(242, 242, 242, 0.9); }
 .caption-box img { margin-bottom: 10px; margin-bottom: 0.625rem; }
 
-.pull-box { background-color: #64933a; -moz-osx-font-smoothing: auto; -webkit-font-smoothing: subpixel-antialiased; }
+.pull-box { background-color: rgba(100, 147, 58, 0.9); -moz-osx-font-smoothing: auto; -webkit-font-smoothing: subpixel-antialiased; }
 @media screen and (min-width: 43em) { .pull-box { margin-bottom: 1.071428571428571em; } }
 
 .pull-quote { margin: 0.44117647058824em 0 0.88235294117647em 0; font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; }
@@ -849,8 +845,8 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 /** UI Group  A different kind of box; a group of elements, typically UI that need visual separation from one another, or from other elements.  @section ui-group */
 .ui-group { border: 1px solid #d1cad6; margin-bottom: 0.46875rem; padding: 0 1em; overflow: hidden; background-color: #e3dfe6; border-radius: 2px; }
 .ui-group:hover { background-color: #ece9ee; border-color: #dad4de; -webkit-transition: all .2s ease-out; transition: all .2s ease-out; }
-@media screen and (min-width: 43em) { .ui-group.unit-1-2 { margin: 0.234375rem; width: -webkit-calc(50% - 0.46875rem); width: calc(50% - 0.46875rem); }
-  .ui-group.unit-1-3 { margin: 0.234375rem; width: -webkit-calc(33.3333333333% - 0.46875rem); width: calc(33.3333333333% - 0.46875rem); }
+@media screen and (min-width: 32em) { .ui-group.unit-1-2 { margin: 0.234375rem; width: -webkit-calc(50% - 0.46875rem); width: calc(50% - 0.46875rem); } }
+@media screen and (min-width: 43em) { .ui-group.unit-1-3 { margin: 0.234375rem; width: -webkit-calc(33.3333333333% - 0.46875rem); width: calc(33.3333333333% - 0.46875rem); }
   .ui-group .media { width: 100%; } }
 
 /** Images  Image modules, typically for laying them out within an article.  @section img */
@@ -889,7 +885,7 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 		margin-bottom: 0.882352941176471em;  //15/17  So, 22.5 + 7.5 + 15 = 45
 	}
 }*/
-.calendar-dt { margin: 0 auto; max-width: 3em; overflow: hidden; text-align: center; background-color: #f2f2f2; border-radius: 2px; }
+.calendar-dt { border: 1px solid #c1b7c7; margin: 0 auto; max-width: 3em; overflow: hidden; text-align: center; background-color: #f2f2f2; border-radius: 2px; }
 
 .calendar-month { padding: 0 .5em; width: 100%; display: block; color: white; font-family: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif; font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; background-color: #600f21; }
 
@@ -905,6 +901,10 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 @media screen and (min-width: 43em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -21.58203%; width: 21.58203125%; font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; position: absolute; } }
 @media screen and (min-width: 70em) { .upcoming-events-homepage { margin-left: -25.52083%; width: 23.484848484848%; font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; }
   .upcoming-events-homepage li { margin: 0.441176470588235em 0 0.882352941176471em 0; } }
+
+@media screen and (min-width: 20em) { .upcoming-events-homepage2 { overflow: auto; }
+  .upcoming-events-homepage2 ul { display: table; table-layout: fixed; }
+  .upcoming-events-homepage2 li { padding: 0 1em; width: -webkit-calc(100% - 2em); width: calc(100% - 2em); display: table-cell; text-align: center; } }
 
 /** 3.8 Embeded Content  @section mod-embeded-content */
 .lazy-load { border-bottom-width: 0; max-width: 100%; display: block; overflow: hidden; position: relative; }
