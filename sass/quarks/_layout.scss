@@ -26,8 +26,12 @@
 }
 
 [role="banner"]{
+	//layout
 	overflow: hidden;
+	//backgrounds & borders
 	background-color: #f3f3f3;
+	//misc
+	box-shadow: 0 0 3px $shadow;
 }
 
 .page-header{
