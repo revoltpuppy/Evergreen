@@ -6,8 +6,10 @@
  * @section grid
  */
 .grid-list{
-	display: flex;
-	flex-wrap: wrap;
+	display: -webkit-flex;
+	display:         flex;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
 }
 
 .unit-1-7,  // 7-column
@@ -24,12 +26,21 @@
     margin: 0 2%;
 }
 
+// I’m trying to update this so that box and grid gutters feel
+// better at smaller sizes. I’m starting with just unit-1-7 for
+// right now.
+.unit-1-7{
+	margin: 0;
+	padding: 0 1em;
+}
+
 .row{
 	//box model
     width: 100%;
     //layout
     clear: both;
     display: block;
+    overflow: hidden;
 }
 
 .unit-1-1{
@@ -103,7 +114,14 @@
 	}
 	
 	.unit-1-7{
-		width: 10.285714285714286%;
+		margin: 0;
+		padding: 0 1em;
+	}
+	
+	.unit-1-7{
+		width: 10.285714285714286%;  //deprecated
+		width: -webkit-calc(14.285714285714% - 2em);  //Safari 6
+		width:         calc(14.285714285714% - 2em);
 	}
 	.unit-2-7{
 		width: 24.571428571428571%;
