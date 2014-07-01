@@ -283,6 +283,9 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 
 .unit-1-7, .unit-2-7, .unit-3-7, .unit-4-7, .unit-5-7, .unit-6-7, .unit-1-3, .unit-2-3, .unit-1-2, .unit-1-1 { margin: 0 2%; }
 
+@media screen and (min-width: 43em) { .unit-1-1 { width: 96%; clear: left; float: left; } }
+@media screen and (min-width: 70em) { .unit-1-1 { margin: 0; width: 100%; } }
+
 @media screen and (min-width: 43em) { .unit-1-3-alt { margin: 0 1em 0 0; width: -webkit-calc(50% - .5em); width: calc(50% - .5em); float: left; }
   .unit-1-3-alt:nth-child(even) { margin-right: 0; } }
 @media screen and (min-width: 70em) { .unit-1-3-alt { margin: 0 2em 0 0; width: -webkit-calc(33.3333333333% - 1.6666666667%); width: calc(33.3333333333% - 1.6666666667%); }
@@ -301,11 +304,9 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 
 .unit-1-3-alt:last-child, .unit-1-7:last-child, .unit-2-7:last-child { margin-right: 0; }
 
-.row { width: 100%; clear: both; display: block; overflow: hidden; }
+.row { width: 100%; clear: both; display: block; }
 
 .grid { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: center; justify-content: center; }
-
-@media screen and (min-width: 43em) { .unit-1-1 { width: 96%; clear: left; float: left; } }
 
 .unit-1-2 { width: 96%; float: left; }
 @media screen and (min-width: 32em) { .unit-1-2 { margin: 0 2%; width: 46%; float: left; } }
