@@ -15,7 +15,7 @@ p.box{  //WYSIWYG
 	//typography
 	color: mix(black, $sky-blue, 66%);
 	//backgrounds & borders
-	background-color: transparentize(mix(white, $sky-blue, 80%), .1);
+	background-color: transparentize(mix(white, $sky-blue, 80%), .05);
 	background-image: url("images/texture-1.png");
 	border-radius: 2px;
 }
@@ -63,7 +63,7 @@ p.alert{
 	//typography
 	text-shadow: 0 1px 0 hsla(0, 0%, 100%, .5);
 	//backgrounds and borders
-	background-color: hsla(0, 0%, 95%, .9);
+	background-color: hsla(0, 0%, 95%, .95);
 	
 	img{
 		@include x-rem(margin-bottom, 0.625);
@@ -72,7 +72,7 @@ p.alert{
 
 //pull quotes
 .pull-box{
-    background-color: transparentize($evergreen-neue, .1);
+    background-color: transparentize($evergreen-neue, .05);
 		-moz-osx-font-smoothing: auto;  //Better rendering of reverse-out text
 		 -webkit-font-smoothing: subpixel-antialiased;  //Better rendering of reverse-out text
     
