@@ -5,11 +5,27 @@
  *
  * @section grid
  */
-.grid-list{
-	display: -webkit-flex;
+
+.row{
+	//box model
+	width: 100%;
+	//layout
+	clear: both;
+	display: block;
+}
+
+.grid{
+	display: -webkit-flex;  // Safari
 	display:         flex;
-	-webkit-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;  // Safari
 	        flex-wrap: wrap;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+
+.grid-list{
+	-webkit-justify-content: flex-start;
+	        justify-content: flex-start;
 }
 
 .unit-1-7,  // 7-column
@@ -28,6 +44,7 @@
 // I’m trying to update this so that box and grid gutters feel
 // better at smaller sizes. I’m starting with just a few units
 // for right now.
+
 .unit-1-1{
 	@media screen and (min-width: 43em){
 		//box model
@@ -117,27 +134,14 @@
 	}
 }
 
+.standalone-unit{
+	padding: 0 1em;
+}
+
 .unit-1-3-alt:last-child,
 .unit-1-7:last-child,
 .unit-2-7:last-child{
 	margin-right: 0;
-}
-
-.row{
-	//box model
-	width: 100%;
-	//layout
-	clear: both;
-	display: block;
-}
-
-.grid{
-	display: -webkit-flex;  // Safari
-	display:         flex;
-	-webkit-flex-wrap: wrap;  // Safari
-	        flex-wrap: wrap;
-	-webkit-justify-content: center;
-	        justify-content: center;
 }
 
 .unit-1-2{
@@ -196,13 +200,6 @@
 		margin: 0 2%;
 		float: left;
 	}
-	
-	/*.unit-2-7{
-		width: 24.571428571428571%;
-	}
-	.unit-3-7{
-		width: 38.857142857142857%;
-	}*/
 	.unit-4-7{
 		width: 53.142857142857143%;
 	}
@@ -230,10 +227,10 @@
 	.supplement-1-2,
 	.supplement-2-7{  //deprecated
 	    //box model
-	    margin-left:6%;
-	    width:47%;
+	    margin-left: 6%;
+	    width: 47%;
 	    //layout
-	    float:right;
+	    float: right;
 	}
 }
 @media screen and (min-width:22em){
@@ -265,10 +262,10 @@
 .supplement-alt-2-7{  //deprecated
   @media screen and (min-width: 20em){
 	  //box model
-	  margin-left:6%;
-	  width:47%;
+	  margin-left: 6%;
+	  width: 47%;
 	  //layout
-	  float:right;
+	  float: right;
 	}
 	@media screen and (min-width: 32em){
 		width: 38.260135135135135%;  //It took weird math to get here.
