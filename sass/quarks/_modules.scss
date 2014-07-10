@@ -33,11 +33,11 @@
 	left: 0;
 	z-index: -1;
 	
-	@media screen and (min-width:43em){
+	@media screen and (min-width: 43em){
 		width: 100%;
 	}
     
-	@media screen and (min-width:70em){
+	@media screen and (min-width: 70em){
 		//box model
 		max-width: 82em;
 	}
@@ -46,7 +46,7 @@
 	width:100%;
 	display:block;
     
-	@media screen and (min-width:43em){
+	@media screen and (min-width: 43em){
 		width: 55.142857142857143%;  //4-column - 2% for right margins
 		max-width: 799px;
 		display: block;
@@ -67,7 +67,7 @@
     	//position
 	    position: relative;
 	    
-	    @media screen and (min-width:43em){
+	    @media screen and (min-width: 43em){
 		    //@include margin-default-lg;
 	    }
     }
@@ -432,11 +432,9 @@
 		}
 		
 		/**
-     * 4.1.2 Link Icons
+     * Link Icons
      *
      * Links with icons attached to them, e.g. PDFs or social media chicklets.
-     *
-     * @subsubsection mod-typography-a-icons
      */
     .link-icon::before,
     .link-icon-alt::before{
@@ -497,11 +495,9 @@
     
     
     /**
-     * 4.1.3 Tag Clouds
+     * Tag Clouds
      *
      * Tag cloud sizing.
-     *
-     * @subsubsection mod-typography-l-tagcloud
      */
     .few{
       @include x-rem(font-size, 0.743);
@@ -515,11 +511,9 @@
 		}
 		
 		/**
-     * 4.1.4 Alphabetical Order Index
+     * Alphabetical Order Index
      *
      * An index of the letters of the alphabet, for skipping around the page.
-     *
-     * @subsubsection mod-typography-l-alpha-index
      */
     .alpha-label{
     	//box model
@@ -565,6 +559,39 @@
     	padding: 0 2px;
     	//layout
 			display: inline;  //Safari 6, IE 9
+    }
+    
+    /**
+     * Badge List
+     *
+     * Lists of logos, badges, or sponsors.
+     */
+    .badge-list{
+	    -webkit-align-items: center;
+	            align-items: center;
+	    display: -webkit-flex;
+	    display:         flex;
+	    -webkit-flex-wrap: wrap;
+	            flex-wrap: wrap;
+	    -webkit-justify-content: space-around;
+	            justify-content: space-around;
+	    overflow: hidden;
+	    
+	    > li{
+	    	//box model
+		    margin: 0 1em;
+		    //layout
+		    float: left;
+		    //typography
+		    text-align: center;
+	    }
+    }
+    .badge{
+	    max-height: 100px;
+    }
+    
+    .badge-alt{
+	    max-width: 100px;
     }
     
 @import "../atoms/media-block";
