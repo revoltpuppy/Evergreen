@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+@import "../tools";
+
+.faculty-directory{
+	@include base-type;  //We want this table to always use the smaller copy size
+
+	> thead{
+		display: none;
+	}
+	
+	> tbody > tr{
+		//box model
+		border: 1px solid mix(white, $blueberry-susan, 66%);
+		@include margin-default;
+		padding: 0 1em;
+		//layout
+		display: block;
+		overflow: hidden;
+		//backgrounds & borders
+		background-color: mix(white, $blueberry-susan, 90%);
+		border-radius: 2px;
+		//misc
+		box-shadow: 0 1px 1px $shadow;
+	
+		> td{
+			//box model
+			border-width: 0;
+			padding: 0;
+			//layout
+			display: block;
+		}
+		
+		.p-tel::before{
+			font-weight: bold;
+			content: "Phone: ";
+		}
+		
+		.u-email::before{
+			font-weight: bold;
+			content: "Email: ";
+		}
+		
+		.p-extended-address::before{
+			font-weight: bold;
+			content: "Location: ";
+		}
+	}
+	
+	.u-photo{
+		//box model
+		@include margin-default;
+		margin-left: 1em;
+		max-width: 75px;
+		//layout
+		float: right;
+	}
+	
+	@media screen and (min-width: 43em){
+		thead{
+			display: table-header-group;
+		}
+		
+		> tbody > tr{
+			//box model
+			border-width: 0;
+			padding: 0;
+			//layout
+			display: table-row;
+			//backgrounds & borders
+			background-color: transparent;
+			border-radius: 0;
+			//misc
+			box-shadow: none;
+		
+			> td{
+				//box model
+				border-top-width: 1px;
+				padding: 0.37037em 1.11111em 1.11111em 0;
+				//layout
+				display: table-cell;
+			}
+		
+			.p-tel::before{
+				content: "";
+			}
+			
+			.u-email::before{
+				content: "";
+			}
+			
+			.p-extended-address::before{
+				content: "";
+			}
+		}
+		
+		.u-photo{
+			//box model
+			margin: 0;
+			//layout
+			float: none;
+		}
+	}	
+}
