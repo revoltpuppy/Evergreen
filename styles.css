@@ -965,7 +965,7 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 /** 2. UI  @section state-ui */
 .is-selected-ui { padding: 0 0.33em; color: white; font-weight: bold; background-color: #492c5d; }
 
-.is-hidden { display: none; }
+.is-hidden { display: none !important; }
 
 /** 5. Responsive Overrides  @section responsive */
 /**
