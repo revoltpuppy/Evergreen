@@ -38,6 +38,7 @@
 		//box model
 		border: 1px solid mix(white, $blueberry-susan, 66%);
 		@include margin-default;
+		padding: 0 1em;
 		//layout
 		overflow: hidden;
 		//typography
