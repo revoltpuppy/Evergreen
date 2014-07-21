@@ -587,11 +587,11 @@
 	    }
     }
     .badge{
-	    max-height: 100px;
+	    max-height: 80px;
     }
     
     .badge-alt{
-	    max-width: 100px;
+	    max-width: 80px;
     }
     
 @import "../atoms/media-block";
@@ -741,6 +741,54 @@
 			}
 		}
 	}
+
+/**
+ * Event Schedule
+ *
+ * @section mod-event-calendar
+ */
+.schedule{
+	.h-event{
+		//box model
+		margin-bottom: 3em;
+		padding-right: 1em;
+		padding-left: 1em;
+		//layout
+		overflow: hidden;
+		//backgrounds & borders
+		border-radius: 2px;
+		
+		&:nth-child(even){
+			background-color: mix(white, $blueberry-susan, 85%);
+		}
+	}
+	
+	.schedule-event-required{
+		border: 2px solid $wine;
+		
+		.p-name{
+			color: $wine;
+		}
+	}
+	
+	.schedule-event-time{
+		//box model
+		padding-right: 1em;
+		width: 25%;
+		//layout
+		float: left;
+		//typography
+		color: $evergreen-old-style;
+		font-weight: bold;
+	}
+	
+	.schedule-event-details{
+		//box model
+		width: 75%;
+		//layout
+		float: left;
+	}
+}
 
 /**
  * 3.8 Embeded Content
