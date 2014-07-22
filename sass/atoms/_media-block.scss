@@ -1,7 +1,15 @@
 /**
  * Media Block
  *
- * A common pattern wherein copy is floated next to a graphic.
+ * A common pattern wherein copy is tightly coupled to a graphic.
+ *
+ * .media
+ * +---------+------------+
+ * |         |            |
+ * | .media- | .media-    |
+ * |  img    |  body      |
+ * |         |            |
+ * +---------+------------+
  *
  * @section mod-media
  */
@@ -37,10 +45,11 @@
 }
 
 .media-img img{
-	@include x-rem(margin-top, 0.46875);  //Align the .media-body content with the .media-img content.
+	margin-top: 0.46875rem;  //Align the .media-body content with the .media-img content.
 	display: block;
 }
 
+// Extends .media-img img(?)
 .media-img-icon{
 	max-height: 3.75rem;
 }
@@ -55,10 +64,10 @@
 }
 
 .media-body :first-child{
-	@include x-rem(margin-top, 0.46875);  //Align the .media-body content with the .media-img content.
+	margin-top: 0.46875rem;  //Align the .media-body content with the .media-img content.
 }
 
-//Put .media-img on the right. Extends .media
+// Put .media-img on the right. Extends .media
 .media-alt{
 	-webkit-flex-direction: row-reverse;
 	        flex-direction: row-reverse;
