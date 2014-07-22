@@ -587,11 +587,11 @@
 	    }
     }
     .badge{
-	    max-height: 80px;
+	    max-height: 90px;
     }
     
     .badge-alt{
-	    max-width: 80px;
+	    max-width: 115px;  //For badges in landscape mode
     }
     
 @import "../atoms/media-block";
