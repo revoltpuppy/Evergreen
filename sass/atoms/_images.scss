@@ -37,21 +37,21 @@
 .image-full,
 .image-full img{  //WYSIWYG
     margin: .631100639515315em auto 1.262201279030629em auto; //15/11.884/2 15/11.884  //This should have the same vertical metrics as a p
-    max-width: 99%;  //IE8
+    /*max-width: 99%;  //IE8
     max-width: -webkit-calc(100% - 2px);
-    max-width:         calc(100% - 2px);
+    max-width:         calc(100% - 2px);*/
 }
 
 .supplement-illus{  //Illustrations in supplemental boxes. Should be paired with text.  //deprecated; use image-full
-    max-width: 99%;  //IE8
+    /*max-width: 99%;  //IE8
     max-width: -webkit-calc(100% - 2px);
-    max-width:         calc(100% - 2px);
+    max-width:         calc(100% - 2px);*/
 }
 
 @media screen and (min-width:32em){
 	.left,  //deprecated
 	.illus,  //deprecated
-    .illus-alt,  //deprecated
+	.illus-alt,  //deprecated
 	.image,
 	.image img,  //WYSIWYG
 	.image-alt{
