@@ -4,12 +4,12 @@
  * A common pattern wherein copy is tightly coupled to a graphic.
  *
  * .media
- * +---------+------------+
- * |         |            |
- * | .media- | .media-    |
- * |  img    |  body      |
- * |         |            |
- * +---------+------------+
+ * +---------+------------------+
+ * |         |                  |
+ * | .media- | .media-          |
+ * |  img    |  body            |
+ * |         |                  |
+ * +---------+------------------+
  *
  * @section mod-media
  */
