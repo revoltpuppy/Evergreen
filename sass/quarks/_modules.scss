@@ -754,6 +754,10 @@
 		padding-right: 1em;
 		padding-left: 1em;
 		//layout
+		display: -webkit-flex;
+		display:         flex;
+		-webkit-flex-direction: column;
+		        flex-direction: column;
 		overflow: hidden;
 		//backgrounds & borders
 		border-radius: 2px;
@@ -774,19 +778,12 @@
 	.schedule-event-time{
 		//box model
 		padding-right: 1em;
-		width: 25%;
-		//layout
-		float: left;
 		//typography
 		color: $evergreen-old-style;
 		font-weight: bold;
 	}
 	
 	.schedule-event-details{
-		//box model
-		width: 75%;
-		//layout
-		float: left;
 	}
 }
 
