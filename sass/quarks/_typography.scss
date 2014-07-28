@@ -229,10 +229,11 @@ dd{
 		margin-bottom: 1.03993344425957em;  //20/19.232 - Same as p margin-bottom
 	}
 }
-dd > p:first-child
+dd > p:first-child,
 dd > ul:first-child,
-dd > ol:first-child
-dd > blockquote:first-child{
+dd > ol:first-child,
+dd > blockquote:first-child,
+dd > blockquote:first-child > p:first-child{
     margin-top: 0;
 }
 
