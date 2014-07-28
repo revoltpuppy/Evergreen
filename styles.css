@@ -60,9 +60,11 @@
  * 4. Buttons .............. (_buttons)
  * 5. Hyphenation .......... (hyphens)
  */
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-*::before, *::after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+* { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; }
+
+*::before, *::after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; }
 
 body { margin: 0; min-height: 100vh; -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; background-color: #f2f2f2; }
 
@@ -134,7 +136,7 @@ dt { margin-top: 0.535714285714286em; font-weight: bold; }
 dd { margin-bottom: 1.071428571428571em; margin-left: 0; }
 @media screen and (min-width: 125em) { dd { margin-bottom: 1.03993344425957em; } }
 
-dd > p:first-child dd > ul:first-child, dd > ol:first-child dd > blockquote:first-child { margin-top: 0; }
+dd > p:first-child, dd > ul:first-child, dd > ol:first-child, dd > blockquote:first-child, dd > blockquote:first-child > p:first-child { margin-top: 0; }
 
 /** 4. Links  @section a */
 a, .internal-users a:visited, .search-tools a:visited, .tertiary-nav-list a:visited { border-bottom: 1px solid #d1cad6; color: #492c5d; font-weight: bold; text-decoration: none; }
@@ -788,11 +790,11 @@ ul.accordion-inner { padding: 0 2%; }
 .badge-list { -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: space-around; justify-content: space-around; overflow: hidden; }
 .badge-list > li { margin: 0 1em; float: left; text-align: center; }
 
-.badge { max-height: 100px; }
+.badge { max-height: 90px; }
 
-.badge-alt { max-width: 100px; }
+.badge-alt { max-width: 115px; }
 
-/** Media Block  A common pattern wherein copy is floated next to a graphic.  @section mod-media */
+/** Media Block  A common pattern wherein copy is tightly coupled to a graphic.  .media +---------+------------------+ |         |                  | | .media- | .media-          | |  img    |  body            | |         |                  | +---------+------------------+  @section mod-media */
 .media { clear: left; display: block; display: -webkit-flex; display: flex; }
 
 .media-img, .media-img:link { border-bottom-width: 0; margin-bottom: 1.071428571428571em; padding-right: 1.071428571428571em; max-width: 31.3333333333%; float: left; -webkit-flex-shrink: 0; flex-shrink: 0; }
@@ -800,7 +802,7 @@ ul.accordion-inner { padding: 0 2%; }
 
 .media-img-alt, .media-child-alt { -webkit-align-self: center; align-self: center; }
 
-.media-img img { margin-top: 7.5px; margin-top: 0.46875rem; display: block; }
+.media-img img { margin-top: 0.46875rem; display: block; }
 
 .media-img-icon { max-height: 3.75rem; }
 
@@ -808,7 +810,7 @@ ul.accordion-inner { padding: 0 2%; }
 display: table-cell;  //Gives block formatting context (pretty nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
 width: 3000px;  //Stretches box to fit the remaining width; this is not the actual value that comes out.*/ }
 
-.media-body :first-child { margin-top: 7.5px; margin-top: 0.46875rem; }
+.media-body :first-child { margin-top: 0.46875rem; }
 
 .media-alt { -webkit-flex-direction: row-reverse; flex-direction: row-reverse; }
 
@@ -877,9 +879,13 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 /** Images  Image modules, typically for laying them out within an article.  @section img */
 .left, .illus, .illus-alt, .illus-full, .image, .image img, .image-alt, .image-full, .image-full img { border: 1px solid #00355f; margin: 0 auto; max-width: 100%; display: block; border-radius: 2px; color: white; background-color: #00355f; -webkit-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); box-shadow: 0 2px 2px rgba(30, 19, 37, 0.25); }
 
-.illus-full, .image-full, .image-full img { margin: .631100639515315em auto 1.262201279030629em auto; max-width: 99%; max-width: -webkit-calc(100% - 2px); max-width: calc(100% - 2px); }
+.illus-full, .image-full, .image-full img { margin: .631100639515315em auto 1.262201279030629em auto; /*max-width: 99%;  //IE8
+max-width: -webkit-calc(100% - 2px);
+max-width:         calc(100% - 2px);*/ }
 
-.supplement-illus { max-width: 99%; max-width: -webkit-calc(100% - 2px); max-width: calc(100% - 2px); }
+.supplement-illus { /*max-width: 99%;  //IE8
+max-width: -webkit-calc(100% - 2px);
+max-width:         calc(100% - 2px);*/ }
 
 @media screen and (min-width: 32em) { .left, .illus, .illus-alt, .image, .image img, .image-alt { max-width: 49%; }
   .left, .illus, .illus-alt, .image, .image img, .image-alt { margin: 0 0 0.631100639515315em 2%; clear: right; float: right; } }
@@ -930,6 +936,13 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 @media screen and (min-width: 20em) { .upcoming-events-homepage2 { overflow: auto; }
   .upcoming-events-homepage2 ul { display: table; table-layout: fixed; }
   .upcoming-events-homepage2 li { padding: 0 1em; width: -webkit-calc(100% - 2em); width: calc(100% - 2em); display: table-cell; text-align: center; } }
+
+/** Event Schedule  @section mod-event-calendar */
+.schedule .h-event { margin-bottom: 3em; padding-right: 1em; padding-left: 1em; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; overflow: hidden; border-radius: 2px; }
+.schedule .h-event:nth-child(even) { background-color: #e3dfe6; }
+.schedule .schedule-event-required { border: 2px solid #600f21; }
+.schedule .schedule-event-required .p-name { color: #600f21; }
+.schedule .schedule-event-time { padding-right: 1em; color: #46502b; font-weight: bold; }
 
 /** 3.8 Embeded Content  @section mod-embeded-content */
 .lazy-load { border-bottom-width: 0; max-width: 100%; display: block; overflow: hidden; position: relative; }
