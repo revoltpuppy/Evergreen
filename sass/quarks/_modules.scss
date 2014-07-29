@@ -750,7 +750,6 @@
 .schedule{
 	.h-event{
 		//box model
-		margin-bottom: 3em;
 		padding-right: 1em;
 		padding-left: 1em;
 		//layout
@@ -767,8 +766,39 @@
 		}
 	}
 	
+	.schedule-event-evening{
+	
+		&:nth-of-type(odd){
+			background-color: mix(white, $sky-blue, 90%);
+		}
+		
+		&:nth-of-type(even){
+			background-color: mix(white, $sky-blue, 80%);
+		}
+		
+		.p-name{
+			color: mix(black, $sky-blue, 60%);
+		}
+	}
+	
+	.schedule-event-evening-start::before{
+		//box model
+		border-bottom: 1px solid $sky-blue;
+		width: 100%;
+		//layout
+		display: block;
+		//typography
+		text-align: center;
+		//misc
+		content: "Evening Events";
+	}
+	
 	.schedule-event-required{
 		border: 2px solid $wine;
+		
+		+ .schedule-event-required{
+			margin-top: 2px;
+		}
 		
 		.p-name{
 			color: $wine;
