@@ -227,15 +227,15 @@ select:hover { border-bottom-style: dashed; background-color: #e5f2fd; }
 /** Buttons  @section button */
 button, .button, .button:visited { border: 1px solid #0086ee; margin-bottom: 1.262201279030629em; padding: 5px .5em; display: inline-block; color: #333333; font-size: 17px; font-size: 1rem; font-weight: normal; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #99cef8; background-image: -webkit-linear-gradient(#cadec1, #66b6f4); background-image: linear-gradient(#cadec1, #66b6f4); border-radius: .2em; box-shadow: 0 0.2em 0.2em rgba(30, 19, 37, 0.25); }
 
-button:hover, .button:hover { color: #0086ee; background-color: #cce6fb; background-image: -webkit-linear-gradient(#cadec1, #99cef8); background-image: linear-gradient(#cadec1, #99cef8); }
+button:hover, .button:hover { color: #00508e; background-color: #cce6fb; background-image: -webkit-linear-gradient(#cadec1, #99cef8); background-image: linear-gradient(#cadec1, #99cef8); }
 
 button:focus, .button:focus { border-color: #999; outline-width: 0; }
 
 button:active, .button:active { background-color: #66b6f4; background-image: -webkit-linear-gradient(#66b6f4, #97c8cc); background-image: linear-gradient(#66b6f4, #97c8cc); box-shadow: inset 0 0.1em 0.2em rgba(0, 0, 0, 0.25); }
 
-.prime, .prime:visited { border-color: #46502b; background-color: #64933a; background-image: -webkit-linear-gradient(#a1b96b, #64933a); background-image: linear-gradient(#a1b96b, #64933a); }
+.prime, .prime:visited { border-color: #46502b; color: white; text-shadow: 0 -1px 0 rgba(30, 19, 37, 0.25); background-color: #64933a; background-image: -webkit-linear-gradient(#a1b96b, #64933a); background-image: linear-gradient(#a1b96b, #64933a); }
 
-.prime:hover { background-color: #83a861; background-image: -webkit-linear-gradient(#bfcd84, #83a861); background-image: linear-gradient(#bfcd84, #83a861); }
+.prime:hover { border-bottom-color: #46502b; color: #46502b; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #83a861; background-image: -webkit-linear-gradient(#bfcd84, #83a861); background-image: linear-gradient(#bfcd84, #83a861); }
 
 .prime:focus { border-color: #999; }
 
@@ -938,9 +938,14 @@ max-width:         calc(100% - 2px);*/ }
   .upcoming-events-homepage2 li { padding: 0 1em; width: -webkit-calc(100% - 2em); width: calc(100% - 2em); display: table-cell; text-align: center; } }
 
 /** Event Schedule  @section mod-event-calendar */
-.schedule .h-event { margin-bottom: 3em; padding-right: 1em; padding-left: 1em; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; overflow: hidden; border-radius: 2px; }
+.schedule .h-event { padding-right: 1em; padding-left: 1em; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; overflow: hidden; border-radius: 2px; }
 .schedule .h-event:nth-child(even) { background-color: #e3dfe6; }
+.schedule .schedule-event-evening:nth-of-type(odd) { background-color: #e5f2fd; }
+.schedule .schedule-event-evening:nth-of-type(even) { background-color: #cce6fb; }
+.schedule .schedule-event-evening .p-name { color: #00355f; }
+.schedule .schedule-event-evening-start::before { border-bottom: 1px solid #0086ee; width: 100%; display: block; text-align: center; content: "Evening Events"; }
 .schedule .schedule-event-required { border: 2px solid #600f21; }
+.schedule .schedule-event-required + .schedule-event-required { margin-top: 2px; }
 .schedule .schedule-event-required .p-name { color: #600f21; }
 .schedule .schedule-event-time { padding-right: 1em; color: #46502b; font-weight: bold; }
 
