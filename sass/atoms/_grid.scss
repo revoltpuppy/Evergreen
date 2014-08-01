@@ -61,6 +61,31 @@
 	}
 }
 
+.unit-1-2{
+	//box model
+	margin: 0;
+	width: 100%;
+	//layout
+	float: left;
+	
+	@media screen and (min-width: 32em){
+		//box model
+		margin: 0 1em 0 0;
+		width: -webkit-calc(50% - .5em);
+		width:         calc(50% - .5em);
+		//layout
+		float: left;
+		
+		&:nth-child(odd){
+			clear: left;
+		}
+		
+		&:nth-child(even){
+			margin-right: 0;
+		}
+	}
+}
+
 .unit-1-3-alt{  // Switches up from a one- to a two- and then to a three-column layout.
 	
 	@media screen and (min-width: 43em){
@@ -101,8 +126,8 @@
 	@media screen and (min-width: 43em){
 		//box model
 		width: 10.285714285714286%;  //deprecated
-		width: -webkit-calc(14.285714285714% - 2em);  // Safari 6
-		width:         calc(14.285714285714% - 2em);
+		width: -webkit-calc(14.285714285714% - 1em);  // Safari 6
+		width:         calc(14.285714285714% - 1em);
 		//layout
 		float: left;
 	}
@@ -142,21 +167,6 @@
 .unit-1-7:last-child,
 .unit-2-7:last-child{
 	margin-right: 0;
-}
-
-.unit-1-2{
-	//box model
-	width: 96%;
-	//layout
-	float: left;
-	
-	@media screen and (min-width: 32em){
-		//box model
-		margin: 0 2%;
-		width: 46%;
-		//layout
-		float: left;
-	}
 }
 
 .unit-1-3{  // Switches from a one- to a three-column layout.
