@@ -72,13 +72,13 @@ p.alert{
 
 //pull quotes
 .pull-box{
-    background-color: transparentize($evergreen-neue, .05);
-		-moz-osx-font-smoothing: auto;  //Better rendering of reverse-out text
-		 -webkit-font-smoothing: subpixel-antialiased;  //Better rendering of reverse-out text
-    
-    @media screen and (min-width: 43em){
-    	margin-bottom: 1.071428571428571em;  //15px
-    }
+	background-color: transparentize($evergreen-neue, .05);
+	-moz-osx-font-smoothing: auto;  //Better rendering of reverse-out text
+	 -webkit-font-smoothing: subpixel-antialiased;  //Better rendering of reverse-out text
+	
+	@media screen and (min-width: 43em){
+		margin-bottom: 1.071428571428571em;  //15px
+	}
 }
 .pull-quote{
 	//box model
@@ -104,8 +104,9 @@ p.alert{
 }
 .pull-quote,
 .pull-quote + .figcaption,  //deprecated
-.pull-quote + figcaption{
-    color: #f3f3f3;
+.pull-quote + figcaption,
+.pull-quite + cite{
+	color: #f3f3f3;
 }
 .pull-quote{
     font-style: italic;
