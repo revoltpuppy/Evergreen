@@ -346,7 +346,7 @@
 	    }
 	  }
 	  
-	  @import "../molecules/icon-links";
+	  @import "../molecules/icons";
 
     /*Lists have a hard time breaking across columns, so there are some tricky fixes here.*/
     ul.flexible{
@@ -765,6 +765,30 @@
 		}
 	}
 	
+	.schedule-event-required{
+		border: 2px solid $evergreen-neue;
+		
+		+ .schedule-event-required{
+			margin-top: 2px;
+		}
+		
+		&:nth-of-type(odd){
+			background-color: mix(white, $evergreen-neue, 90%);
+		}
+		
+		&:nth-of-type(even){
+			background-color: mix(white, $evergreen-neue, 80%);
+		}
+		
+		.p-name{
+			color: $evergreen-old-style;
+		}
+	}
+	
+	.schedule-event-morning{
+		background-color: $morning-light;
+	}
+	
 	.schedule-event-evening{
 	
 		&:nth-of-type(odd){
@@ -792,17 +816,7 @@
 		content: "Evening Events";
 	}
 	
-	.schedule-event-required{
-		border: 2px solid $wine;
-		
-		+ .schedule-event-required{
-			margin-top: 2px;
-		}
-		
-		.p-name{
-			color: $wine;
-		}
-	}
+	
 	
 	.schedule-event-time{
 		//box model
