@@ -78,7 +78,6 @@
 	//box model
 	margin-bottom: 1.875rem;  //30px
 	width: 100%;
-	//min-height: 80vh;
 	//position
 	position: relative;
 
@@ -87,7 +86,10 @@
 	}
 }
 
-.element-list{  //Creates an un-bulleted list.
+// Element list is a generic container that is meant to house lists
+// of designed elements, i.e. not a bulleted text list. It is meant
+// to apply to uls and ols.
+.element-list{
 	//box model
 	margin-left: 0;
 	padding-left: 0;
@@ -119,11 +121,9 @@
 	}
 }
 
+// Wraps all the content on index pages and pages without a
+// secondary content area.
 .index-wrapper{
-	
-	/*@media screen and (min-width: 43em){
-		width: 96%;
-	}*/
 	
 	@media screen and (min-width: 43em){
 		margin-left: 20%;
@@ -136,11 +136,11 @@
 	}
 }
 
+// Wraps all the content on most pages on the site.
 .content-wrapper{
 	
 	@media screen and (min-width: 43em){
 		margin-left: 20%;  //1/5
-		//width: 67.428571428571429%;  //5/7
 		width: 78%; //4/5
 	}
 	
@@ -150,6 +150,7 @@
 	}
 }
 
+// Wraps the secondary content area.
 .sidebar-wrapper{
 	//backgrounds & borders
 	background-color: #F3F3F3;  //IE8
@@ -166,6 +167,9 @@
 	}
 }
 
+
+// .main-content and .sidebar are the two primary regions of
+// content on the page.
 .main-content,
 .sidebar{
 	margin: 0 2%;
@@ -233,7 +237,8 @@
 /**
  * Hidden Elements
  *
- * For displaying less essential elements only when screen size permits.
+ * For displaying less essential elements only when screen size
+ * permits. Use sparingly!
  *
  * @section l-hidden
  */
