@@ -398,9 +398,6 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 .index-wrapper, .content-wrapper { border-top: 5px solid #46502b; margin-top: -5px; background-color: #F3F3F3; background-color: rgba(242, 242, 242, 0.95); border-radius: 2px; }
 @media screen and (min-width: 43em) { .index-wrapper, .content-wrapper { margin-left: 16.285714285714286%; } }
 
-.index-wrapper { /*@media screen and (min-width: 43em){
-	width: 96%;
-}*/ }
 @media screen and (min-width: 43em) { .index-wrapper { margin-left: 20%; width: 78%; } }
 @media screen and (min-width: 70em) { .index-wrapper { margin-left: 18.292682926829%; width: 81.714285714285714%; } }
 
@@ -429,7 +426,7 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 @media screen and (min-width: 125em) { .sidebar { font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; }
   .sidebar p, .sidebar .base { margin: 0.441176470588235em 0 0.882352941176471em 0; } }
 
-/** Hidden Elements  For displaying less essential elements only when screen size permits.  @section l-hidden */
+/** Hidden Elements  For displaying less essential elements only when screen size permits. Use sparingly!  @section l-hidden */
 @media screen and (max-width: 20em) { .gt20 { display: none; } }
 @media screen and (max-width: 22em) { .gt22 { display: none; } }
 @media screen and (max-width: 32em) { .gt32 { display: none; }
@@ -472,6 +469,7 @@ input:checked + .header-dropdown { max-height: 8em; -webkit-transition: .5s all 
 @media screen and (min-width: 43em) { .logo { width: 48%; } }
 @media screen and (min-width: 70em) { .logo { width: 36%; } }
 .logo a, .logo a:visited, .logo a:hover { border-bottom-width: 0; }
+.logo img { max-height: 4em; }
 
 /** Header Search  @section mod-header-search */
 [for="q"] { height: 0; width: 0; display: block; overflow: hidden; position: absolute; }
@@ -762,7 +760,10 @@ ul.accordion-inner { padding: 0 2%; }
 .accordion-table .group { font-weight: bold; color: #492c5d; }
 .accordion-table .group:hover { color: #0086ee; cursor: pointer; }
 
-/** Related Nav  Related links with iconographic circles.  @section mod-typography-l-related */
+/** Inline Icons  Icons that appear before strings of text. For example, [x] Close, where [x] is the icon. */
+.inline-icon { margin-right: .25em; max-height: 1em; display: inline; }
+
+/** Related Nav  Related links with iconographic circles. */
 .related-nav { display: -webkit-flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
 
 .related-nav > li { margin: 0.9375rem 0; margin-right: 2em; width: -webkit-calc(33.3333333333% - 1.3333333333em); width: calc(33.3333333333% - 1.3333333333em); display: block; vertical-align: top; float: left; text-align: center; }
@@ -997,13 +998,16 @@ max-width:         calc(100% - 2px);*/ }
 /** Event Schedule  @section mod-event-calendar */
 .schedule .h-event { padding: 1em; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; overflow: hidden; border-radius: 2px; }
 .schedule .h-event:nth-child(even) { background-color: #e3dfe6; }
+.schedule .schedule-event-required { border: 2px solid #64933a; }
+.schedule .schedule-event-required + .schedule-event-required { margin-top: 2px; }
+.schedule .schedule-event-required:nth-of-type(odd) { background-color: #eff4eb; }
+.schedule .schedule-event-required:nth-of-type(even) { background-color: #e0e9d7; }
+.schedule .schedule-event-required .p-name { color: #46502b; }
+.schedule .schedule-event-morning { background-color: #fdf4b6; }
 .schedule .schedule-event-evening:nth-of-type(odd) { background-color: #e5f2fd; }
 .schedule .schedule-event-evening:nth-of-type(even) { background-color: #cce6fb; }
 .schedule .schedule-event-evening .p-name { color: #00355f; }
 .schedule .schedule-event-evening-start::before { border-bottom: 1px solid #0086ee; width: 100%; display: block; text-align: center; content: "Evening Events"; }
-.schedule .schedule-event-required { border: 2px solid #600f21; }
-.schedule .schedule-event-required + .schedule-event-required { margin-top: 2px; }
-.schedule .schedule-event-required .p-name { color: #600f21; }
 .schedule .schedule-event-time { padding-right: 1em; color: #46502b; font-weight: bold; }
 
 /** 3.8 Embeded Content  @section mod-embeded-content */
