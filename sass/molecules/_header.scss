@@ -65,6 +65,10 @@
 			//backgrounds & borders
 			background-color: transparent;
 		}
+		
+		@media screen and (min-width: 125em){
+			width: 20%;
+		}
 	}
 	
 	/**
@@ -75,17 +79,29 @@
 		margin: .618em 2% 0 2%;
 		float: left;
 		
-		@media screen and (min-width:32em){
-            width: 58%;
-        }
-        
-        @media screen and (min-width:43em){
-            width: 48%;
-        }
-        
-        @media screen and (min-width:70em){
-            width: 36%;
-        }
+		@media screen and (min-width: 32em){
+			width: 58%;
+		}
+		
+		@media screen and (min-width: 43em){
+			width: 48%;
+		}
+		
+		@media screen and (min-width: 70em){
+			width: 36%;
+		}
+		
+		@media screen and (min-width: 125em){
+			//box model
+			margin-right: auto;
+			margin-bottom: 1em;
+			margin-left: auto;
+			width: 20%;
+			//layout
+			float: none;
+			//typography
+			text-align: center;
+		}
 	
 		a,
 		a:visited,
@@ -95,6 +111,10 @@
 		
 		img{
 			max-height: 4em;
+			
+			@media screen and (min-width: 125em){
+				max-height: 6em;
+			}
 		}
 	}
 	/**
