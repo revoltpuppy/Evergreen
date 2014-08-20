@@ -61,6 +61,15 @@
 	       align-items: center;
 	display: -webkit-flex;
 	display:         flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+
+	li{
+		display: -webkit-flex;
+		display:         flex;
+		-webkit-justify-content: center;
+		        justify-content: center;
+	}
 }
 
 .bx-wrapper .bx-pager,
