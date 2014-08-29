@@ -1,0 +1,238 @@
+/*!*
+ * Base Styles
+ *
+ * Styles generally for generic html elements. Classed or IDed
+ * elements should typically be included in the Modules section.
+ *
+ * @section base
+ *
+ * Table of Contents
+ *
+ * 1. Typography ........... (_typography)
+ * 2. Tables ............... (table)
+ * 3. Forms ................ (form)
+ * 4. Buttons .............. (_buttons)
+ * 5. Hyphenation .......... (hyphens)
+ */
+
+html{
+	-webkit-box-sizing: border-box;  //Safari 5
+	   -moz-box-sizing: border-box;  //Firefox 28
+	        box-sizing: border-box;
+}
+
+*{
+	-webkit-box-sizing: inherit;  //Safari 5
+	   -moz-box-sizing: inherit;  //Firefox 28
+	        box-sizing: inherit;
+}
+
+//For the following, I am taking pity on IE8- because I'm using
+//the appropriate double-colon syntax for pseudo-elements. If I
+//condensed this style declaration with the above *, IE8- would
+//choke on the whole thing, breaking the border-box declaration
+//for the universal selector.
+*::before,
+*::after{
+	-webkit-box-sizing: inherit;  //Safari 5
+	   -moz-box-sizing: inherit;  //Firefox 28
+	        box-sizing: inherit;
+}
+
+body{
+	//box model
+	margin: 0;
+	min-height: 100vh;
+	//layout
+	-webkit-align-items: center;
+	        align-items: center;
+	display: -webkit-flex;
+	display:         flex;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	//backgrounds & borders
+	background-color: hsl(0, 0%, 95%);
+}
+
+img{
+	border-width: 0;
+	max-width: 100%;
+}
+
+audio{
+	max-width: 100%;
+}
+
+video{
+	height: auto;
+	width: 100%;
+}
+
+/**
+ * 1. Typography
+ *
+ * @section _typography
+ */
+@import "base/typography";
+
+/**
+ * 2. Tables
+ *
+ * @section table
+ */
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-width: 0;
+    margin: 1.481481481481481em 0;  //20/13.5
+    width: 100%;
+}
+
+caption{  //styled after h4
+	//box model
+	//border-top: 1px solid;
+	margin: 0 0 0.363976705490849em 0;
+	//typography
+	color: $blueberry-susan;
+	font-size: 1.202rem;  //19.232px
+	font-style: italic;
+	line-height: 1.559900166389351;  //30/19.232
+}
+
+th,
+td{
+	text-align: left;
+}
+th{
+	color: #000;
+	padding: 0 1.111111111111111em 0 0;
+	vertical-align: bottom;
+}
+td{
+	//box model
+	border: 0 solid #ccc;
+	border-top-width: 1px;
+	padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;  //5/13.5  15/13.5
+	//typography
+	color: #333;
+	vertical-align: top;
+}
+td:last-child{
+	padding-right: 0;
+}
+td strong,
+tfoot td{
+	color: #000;
+	font-weight: bold;
+}
+tr:first-child td{
+	border-color: #000;
+}
+
+//Collapse top space between cell padding and element margins.
+th > p:first-child,
+td > p:first-child,
+td > ul:first-child,
+td > ol:first-child,
+td > ul:first-child li:first-child > p:first-child,
+td > ol:first-child li:first-child > p:first-child,
+td > h1:first-child,
+td > h2:first-child,
+td > h3:first-child,
+td > h4:first-child,
+td > h5:first-child,
+td > h6:first-child{
+    margin-top: 0;
+}
+//Collapse bottom space between cell padding and element margins.
+th > p:last-child,
+td > p:last-child,
+td > ul:last-child,
+td > ol:last-child,
+td > ul:last-child li:last-child > p:last-child,
+td > ol:last-child li:last-child > p:last-child{
+    margin-bottom: 0;
+}
+
+@import "base/tables";
+
+/**
+ * 3. Forms
+ *
+ * @section form
+ */
+input{
+	//box model
+	border: 1px solid #bbcfd7;
+	height: 1.719rem;
+	margin-bottom: 1.262201279030629em; //15/11.884
+	padding: 0 .5em;
+	//typography
+	font-size: 1em;
+}
+
+select{
+	//box model
+	border: 1px solid $sky-blue;
+	@include margin-default;
+	padding: 0.30357142857143em .5em;  //4.25/14 So, (4.25 * 2) + 14 = 22.5
+	//typography
+	@include base-type;
+	text-shadow: 0 1px 0 $highlight;
+	//backgrounds & borders
+	background-color: mix(white, $sky-blue, 80%);  //IE 9
+	//background-image: -webkit-linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //Safari 6, Chrome 25
+	//background-image:         linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //w3c
+	border-radius: 2px;
+	//misc
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	box-shadow: 0 .1em .1em $shadow inset;
+	cursor: pointer;
+	
+	&:hover{
+		//box model
+		border-bottom-style: dashed;
+		//color: $sky-blue;
+		//backgrounds & borders
+		background-color: mix(white, $sky-blue, 90%);  //IE 9
+		//background-image: -webkit-linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //Safari 6, Chrome 25
+		//background-image:         linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //w3c
+	}
+	
+	/*@media screen and (min-width: 43em){
+		//box model
+		padding: 0.23529411764706em .5em;  //4/17 So, (4 * 2) + 17 = 25;
+		//typography
+		@include base-type-lg;
+	}*/
+}
+@import "modules/search";
+
+/**
+ * 4. Buttons
+ *
+ * @section _buttons
+ */
+@import "base/buttons";
+
+/**
+ * 5. Hyphenation
+ *
+ * @section hyphens
+ */
+//a,  //keep linked words whole
+//a:link,
+//.intro,
+//.pull-quote,
+//.big-fact{
+//    -webkit-hyphens: none;
+//       -moz-hyphens: none;
+//        -ms-hyphens: none;
+//            hyphens: none;
+//}
+//For words that are so long they may cause overflow, like dichlorodiphenyltrichloroethane. Holy crap!
+.looong-word{
+    word-wrap: break-word;
+}

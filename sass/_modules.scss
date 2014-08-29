@@ -1,0 +1,904 @@
+/*!*
+ * Module Styles
+ *
+ * Styles for specific or reusable, components.
+ *
+ * @section module
+ */
+
+.top-links,
+.search-list,
+.primary-nav-unit h2,
+.nav li{
+    @include x-rem(font-size, .743);
+    line-height: 1.262201279030629; /*15/11.884*/
+}
+/**
+ * 1. Header
+ *
+ * @section mod-header
+ */
+@import "modules/header";
+    
+/**
+ * 2. Background Image
+ *
+ * @section mod-background
+ */
+.main-background{
+	width:100%;
+	position: fixed;
+	//@include x-rem(top, 5.25);  //84/16
+	top: 0;
+	left: 0;
+	z-index: -1;
+	
+	@media screen and (min-width: 43em){
+		width: 100%;
+	}
+    
+	@media screen and (min-width: 70em){
+		//box model
+		max-width: 82em;
+	}
+}
+.main-background-img{
+	width:100%;
+	display:block;
+    
+	@media screen and (min-width: 43em){
+		width: 55.142857142857143%;  //4-column - 2% for right margins
+		max-width: 799px;
+		display: block;
+	}
+}
+
+/**
+ * 3. Homepage Hero Image
+ *
+ * @section mod-hero-homepage
+ */
+@import "modules/homepage-hero";
+    
+    .profile-list > li{
+    	//@include margin-default;
+    	//layout
+    	overflow: hidden;
+    	//position
+	    position: relative;
+	    
+	    @media screen and (min-width: 43em){
+		    //@include margin-default-lg;
+	    }
+    }
+    .profile-img{
+    	//box model
+    	margin-left: -50%;
+	    width: 200%;
+	    max-width: 685px;
+	    //layout
+	    display: block;
+	    
+	    @media screen and (min-width: 20em){
+		    margin-left: -25%;
+		    width: 150%;
+	    }
+	    
+	    @media screen and (min-width: 32em){
+		    margin-left: 0%;
+		    width: 100%;
+	    }
+	    
+	    @media screen and (min-width: 43em){
+		    width: 120%;
+		    margin-left: -10%;
+	    }
+	    
+	    @media screen and (min-width: 60em){
+		    width: 100%;
+		    margin-left: 0%;
+	    }
+    }
+    .profile-list .box{
+    	@include x-rem(margin-top, -1.40625);  //22.5/16
+	    //margin-top: -2.142857142857143em;  //30/14
+	    position: absolute;
+	    bottom: 0;
+    }
+
+@import "modules/tertiary-nav";
+@import "modules/footer";
+
+/**
+ * 4. Typography
+ *
+ * Special typography-as-modules.
+ *
+ * @section mod-typography
+ */
+.lead{
+    margin-bottom:0;
+}
+.follow{
+    margin-top:0;
+}
+
+.intro{
+	//box model
+	margin: 1.169925124792013em 0;  //22.5/19.232
+	//typography
+	color: $evergreen-neue;
+	@include x-rem(font-size, 1.202);  //19.232px
+	line-height: 1.559900166389351;  //30/19.232
+	
+	@media screen and (min-width: 43em){
+		//box model
+		margin: 1.09075043630017em 0;  //30/27.504
+		//typography
+		@include x-rem(font-size, 1.719);  //27.504
+		line-height: 1.363438045375218; //37.5/27.504
+	}
+	
+	@media screen and (min-width: 125em){
+		//box model
+		margin: 1.44601542416452em 0;  //45/31.12
+		//typography
+		font-size: 1.945rem;  //31.12
+		line-height: 1.44601542416452;  //45/31.12
+	}
+}
+	
+.intro-alt{
+	color: #333;
+	font-weight: bold;
+}
+
+.details{
+    @include x-rem(font-size, .657);  //10.507px;
+    line-height: 1.427619682116684;  //15/10.507
+}
+
+.big-fact{
+    @include base-type-lg;
+    
+    @media screen and (min-width:43em){
+		margin: .2727272727em 0 .8181818182em 0;
+    }
+    
+    @media screen and (min-width:70em){
+		@include x-rem(font-size, 1.719);  //20px
+		line-height: 1.090710779858208;  //30/27.505
+    }
+}
+
+.key-number{  //e.g. http://www.evergreen.edu/about/impact/
+	//box model
+	margin: 0.818419903972065em 0 0 0;
+	//layout
+	display: block;
+	//typography
+	color: $evergreen-neue;
+	@include x-rem(font-size, 2.291);  //36.656px
+    font-weight: normal;
+    line-height: 1.227629855958097;  //45/35.656
+}
+
+.machine-text{
+	font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
+}
+
+.main-content > p:last-child::after,
+.main-content > ul:last-child > li:last-child::after,
+.main-content > ol:last-child > li:last-child::after,
+.main-content > dl:last-child > dd:last-child::after{
+	white-space: nowrap;
+	content: "\00A0" url("/_inc/images/endnote.png");
+}
+
+	/**
+	* 4.1 Lists
+	*
+	* @subsection mod-typography-l
+	*/
+	.text-list{  //Creates a standard bulleted list.
+		//box-model
+		margin-left: 1em;
+		//lists
+		list-style-type: disc;
+		
+		ul{
+			//box-model
+			margin-left:1em;
+			//lists
+			list-style-type:square;
+		}
+	}
+		
+	.singleton a{
+		font-weight: normal;
+	}
+    
+	.feature-list{
+	
+		> li{
+		
+			@media screen and (min-width:22em){
+				margin-right: 2%;
+				width: 49%;
+				float:left;
+				
+				&:nth-child(odd){
+					clear:left;
+				}
+				
+				&:nth-child(even){
+					margin-right: 0;
+				}
+			}
+	    
+			@media screen and (min-width:43em){
+				//box model
+				margin-right: 2%;
+				width: 32%;
+				width: 31.3333333333%\9;  //IE8
+				//layout
+				float: left;
+				
+				&:nth-child(odd){
+					clear: none;
+				}
+				
+				&:nth-child(even){
+					margin-right: 2%;
+				}
+				
+				&:nth-child(3n){
+					margin-right: 0;
+				}
+				
+				&:nth-child(3n+1){
+					clear: left;
+				}
+			}
+		}
+	}
+	
+	.lineup > li{
+		display: inline-block;
+	}
+	
+	.lineup > li img{
+		//box model
+		max-height: 1rem;
+		//layout
+		display: block;
+	}
+
+	  /**
+	   * 4.1.1 Accordion
+	   *
+	   * @subsubsection mod-typography-l-accordion
+	   */
+	  .accordion,
+	  .accordion-table{
+			//box model
+			border: 1px solid  mix(white, $blueberry-susan, 75%);
+			//layout
+			overflow: hidden;
+			//backgrounds & borders
+			background-color:  mix(white, $blueberry-susan, 85%);
+			border-radius: 2px;
+	  }
+	  .accordion dt a,
+	  .accordion dd{
+			padding: 0.631100639515315em 2%;  //15/11.884/2
+	  }
+	  .accordion dt{
+			border-top: 1px solid mix(black, $blueberry-susan, 50%);  //Use border-top, cuz dts aren't last-childs
+			margin-top: 0;
+			
+			&:first-child{  //Use first-child cuz dts aren't last-childs
+				border-top-width: 0;
+			}
+			
+			&:hover{
+			  //backgrounds & borders
+			  background-color: mix(white, $blueberry-susan, 90%);
+			  border-color:  mix(white, $blueberry-susan, 80%);
+			  border-top-color: mix(black, $blueberry-susan, 33%);
+			  //transition
+			  -webkit-transition: background-color .2s ease-out;
+			          transition: background-color .2s ease-out;
+			}
+	  }
+	  .accordion dt a{
+			//box model
+			border-bottom-width: 0;
+			width: 100%;
+			//layout
+			display: block;
+	  }
+	  .accordion dt a:before{
+			//box model
+			margin-right: 2%;
+			//layout
+			display: inline-block;
+			content:"▶";
+	  }
+	  .accordion dd{
+			//box model
+			margin-bottom: 0;
+			//backgrounds & borders
+			background-color: hsl(0, 0%, 95%);
+			//misc
+			box-shadow: inset 0 2px 2px #999;
+	  }
+	  
+	  .accordion-table .group{
+	    font-weight: bold;
+	    color: $blueberry-susan;
+	    
+	    &:hover{
+	    	//typography
+	      color: $sky-blue;
+	      //misc
+	      cursor: pointer;
+	    }
+	  }
+	  
+	  @import "modules/icons";
+
+    /*Lists have a hard time breaking across columns, so there are some tricky fixes here.*/
+    ul.flexible{
+    	//overflow: hidden;
+    	@media screen and (min-width:20em){
+	    	//box model
+	    	margin-left: 0;
+	    	//layout
+        -webkit-column-count: 2;
+           -moz-column-count: 2;
+            -ms-column-count: 2;
+                column-count: 2;
+        -webkit-column-gap: 15px;
+           -moz-column-gap: 15px;
+            -ms-column-gap: 15px;
+                column-gap: 15px;
+				list-style-position: inside;  //a compromise that makes bullets visible
+	    }
+                
+			@media screen and (min-width:32em){
+				-webkit-column-count: 3;
+				   -moz-column-count: 3;
+				    -ms-column-count: 3;
+				        column-count: 3;
+			}
+    }
+		.flexible > li{
+			@media screen and (min-width: 20em){
+	    	//box model
+	    	margin: 0 2% 0.46875rem 2%;  //7.5/16
+	    	//width: 46%;
+	    	//layout
+	    	//float: left;
+	    	overflow: hidden;
+	    	
+	    	/*&::before{
+	    		//box model
+	    		margin-left: -1em;
+	    		//position
+	    		position: absolute;
+	    		//misc
+		    	content: "• "
+	    	}*/
+	    	
+	    	/*&:nth-child(odd){
+		    	clear: left;
+	    	}*/
+			}
+			
+			@media screen and (min-width: 32em){
+				/*width: 29%;
+				
+				&:nth-child(odd){
+					clear: none;
+				}
+				
+				&:nth-child(3n+1){
+					clear: left;
+				}*/
+			}
+		}
+		
+		@media screen and (min-width:32em){
+	        .unit-2-7 .flexible{
+	            -webkit-column-count: 2;
+	               -moz-column-count: 2;
+	                    column-count: 2;
+	        }
+	    }
+	    
+	    .unit-3-7 .flexible{
+			@media screen and (min-width: 70em){
+				-webkit-column-count: 2;
+				   -moz-column-count: 2;
+				        column-count: 2;
+			}
+			
+			@media screen and (min-width: 70em){
+			    -webkit-column-count: 3;
+             -moz-column-count: 3;
+                  column-count: 3;
+            }
+		}
+		
+		/**
+     * Link Icons
+     *
+     * Links with icons attached to them, e.g. PDFs or social media chicklets.
+     */
+    .link-icon::before,
+    .link-icon-alt::before{
+    	//box model
+    	height: 1rem;
+    	width: 1rem;
+    	//layout
+    	display: inline-block;
+    	overflow: hidden;
+    	vertical-align: middle;
+    	//typography
+    	text-indent: 100%;
+    	white-space: nowrap;
+    	//backgrounds & borders
+    	background-repeat: no-repeat;
+      -webkit-background-size: 1rem 1rem;
+         -moz-background-size: 1rem 1rem;
+              background-size: 1rem 1rem;
+      //misc
+      content: "";
+    }
+    .link-icon::after{
+      margin-left: .5em;
+    }
+    .link-icon-alt::before{
+      margin-right: .5em;
+    }
+    .icon-blog::before{
+    	//backgrounds & borders
+      background-image: url("/_inc/images/icons/external/blog32x32.png");
+      content: "Blog";
+    }
+    .icon-facebook::before{
+    	//backgrounds & borders
+      background-image: url("/_inc/images/icons/external/facebook32x32.png");
+      content: "Facebook";
+    }
+    .icon-instagram::before{
+    	//backgrounds & borders
+      background-image: url("/_inc/images/icons/external/instagram32x32.png");
+      content: "Instagram";
+    }
+    .icon-pinterest::before{
+    	//backgrounds & borders
+      background-image: url("/_inc/images/icons/external/pinterest32x32.png");
+      content: "Pinterest";
+    }
+    .icon-twitter::before{
+    	//backgrounds & borders
+      background-image: url("/_inc/images/icons/external/twitter32x32.png");
+      content: "Twitter";
+    }
+    .icon-youtube::before{
+    	//backgrounds & borders
+      background-image: url("/_inc/images/icons/external/youtube32x32.png");
+      content: "YouTube";
+    }
+    
+    
+    /**
+     * Tag Clouds
+     *
+     * Tag cloud sizing.
+     */
+    .few{
+      @include x-rem(font-size, 0.743);
+      
+      a{
+        font-weight: normal;
+      }
+		}
+		.many{
+		    @include base-type-lg;
+		}
+		
+		/**
+     * Alphabetical Order Index
+     *
+     * An index of the letters of the alphabet, for skipping around the page.
+     */
+    .alpha-label{
+    	//box model
+    	border: 1px solid mix(white, $blueberry-susan, 75%);
+    	border-bottom-width: 0;
+	    margin-bottom: -1px;
+	    padding: 0 1em;
+	    //layout
+	    display: inline-block;
+			//backgrounds & borders
+			background-color: mix(white, $blueberry-susan, 85%);
+			border-radius: 2px 2px 0 0;
+    }
+    .alpha-index{
+    	//box model
+			border: 1px solid mix(white, $blueberry-susan, 75%);
+			margin-left: 0;
+			padding-left: 0;
+			//layout
+			display: block;
+			//typography
+			word-wrap: break-word;
+			//backgrounds & borders
+			background-color: mix(white, $blueberry-susan, 85%);
+			border-radius: 2px;
+			//lists
+			list-style-type: none;
+			
+			@media screen and (min-width: 32em){
+				//layout
+				display: -webkit-flex; //Safari 6
+				display:         flex;
+				-webkit-justify-content: space-around;  //Safari 6
+				        justify-content: space-around;
+			}
+    }
+    .alpha-label + .alpha-index{
+	    border-radius-top-left: 0;
+	    margin-top: 0;
+    }
+    .alpha-index > li{
+    	//box model
+    	padding: 0 2px;
+    	//layout
+			display: inline;  //Safari 6, IE 9
+    }
+    
+    /**
+     * Badge List
+     *
+     * Lists of logos, badges, or sponsors.
+     */
+    .badge-list{
+	    -webkit-align-items: center;
+	            align-items: center;
+	    display: -webkit-flex;
+	    display:         flex;
+	    -webkit-flex-wrap: wrap;
+	            flex-wrap: wrap;
+	    -webkit-justify-content: space-around;
+	            justify-content: space-around;
+	    overflow: hidden;
+	    
+	    > li{
+	    	//box model
+		    margin: 0 1em;
+		    //layout
+		    float: left;
+		    //typography
+		    text-align: center;
+	    }
+    }
+    .badge{
+	    max-height: 90px;
+    }
+    
+    .badge-alt{
+	    max-width: 115px;  //For badges in landscape mode
+    }
+    
+@import "modules/media-segment";
+@import "modules/boxes";
+@import "modules/images";
+
+
+/**
+ * Event Calendar
+ *
+ * @section mod-event-calendar
+ */
+/*.event-dt{
+	@include small-type;
+	font-weight: bold;
+	line-height: 1.892664872139973;
+	text-transform: uppercase;
+}
+.event-calendar .h-event{
+	margin-top: 0.535714285714286em;  //22.5/14/3
+	margin-bottom: 1.071428571428571em;  //15/14  So, 22.5 + 7.5 + 15 = 45
+}
+@media screen and (min-width:43em){
+	.event-calendar .h-event{
+		margin-top: 0.441176470588235em;  //22.5/17/3
+		margin-bottom: 0.882352941176471em;  //15/17  So, 22.5 + 7.5 + 15 = 45
+	}
+}*/
+
+.calendar-dt{
+	//box model
+	border: 1px solid mix(white, $blueberry-susan, 66%);
+	margin: 0 auto;
+	max-width: 3em;
+	//layout
+	overflow: hidden;
+	//typography
+	text-align: center;
+	//backgrounds and borders
+	background-color: hsl(0, 0%, 95%);
+	border-radius: 2px;
+}
+
+.calendar-month{
+	//box model
+	padding: 0 .5em;
+	width: 100%;
+	//layout
+	display: block;
+	//typography
+	color: hsl(0, 0%, 100%);
+	@include small-type;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	//backgrounds and borders
+	background-color: $wine;
+}
+
+
+
+	/**
+	 * Homepage Upcoming Events
+	 *
+	 * The box on the homepage featuring upcoming events from the
+	 * calendar. This should track pretty closely to the tertiary
+	 * nav higher up on the page.
+	 *
+	 * @section mod-upcoming-events-homepage
+	 */
+	.upcoming-events-homepage{
+		//box model
+		margin: 0 auto;
+		max-width: 96%;
+		
+		li{
+			border-bottom: 1px solid mix(white, $blueberry-susan, 66%);
+			@include margin-default;
+			
+			&:last-child{
+				border-bottom-width: 0;
+			}
+		}
+		
+		.media-body{
+			text-align: center;
+		}
+		
+		@media screen and (min-width: 32em){
+			margin: 0 auto 1rem;
+			max-width: 66.6666666666%;
+		}
+		
+		/*@media screen and (min-width: 43em){
+			margin: 0 auto 1rem;
+			max-width: 66.6666666666%;
+		}*/
+		
+		@media screen and (min-width: 43em){
+			//box model
+			margin-top: 1rem;
+			margin-left: -21.58203125%;  //442/2048
+			width: 21.58203125%;  //442/2048
+			//typography
+			@include base-type;
+			//position
+			position: absolute;  //Removes nav from the document flow
+		}
+		
+		@media screen and (min-width: 70em){
+			//box model
+			margin-left: -25.520833333333%;
+			width: 23.484848484848%;
+			@include base-type-lg;
+			
+			li{
+				@include margin-default-lg;
+			}
+		}
+	}
+	
+	.upcoming-events-homepage2{
+		@media screen and (min-width: 20em){
+			overflow: auto;
+			
+			ul{
+				//layout
+				display: table;
+				table-layout: fixed;
+			}
+			
+			li{
+				//box model
+				padding: 0 1em;
+				width: -webkit-calc(100% - 2em);
+				width:         calc(100% - 2em);
+				//layout
+				display: table-cell;
+				//typography
+				text-align: center;
+			}
+		}
+		
+		@media screen and (min-width: 43em){
+			li{
+				
+			}
+		}
+	}
+
+/**
+ * Event Schedule
+ *
+ * @section mod-event-calendar
+ */
+.schedule{
+	.h-event{
+		//box model
+		padding: 1em;
+		//layout
+		display: -webkit-flex;
+		display:         flex;
+		-webkit-flex-direction: column;
+		        flex-direction: column;
+		overflow: hidden;
+		//backgrounds & borders
+		border-radius: 2px;
+		
+		&:nth-child(even){
+			background-color: mix(white, $blueberry-susan, 85%);
+		}
+	}
+	
+	.schedule-event-required{
+		border: 2px solid $evergreen-neue;
+		
+		+ .schedule-event-required{
+			margin-top: 2px;
+		}
+		
+		&:nth-of-type(odd){
+			background-color: mix(white, $evergreen-neue, 90%);
+		}
+		
+		&:nth-of-type(even){
+			background-color: mix(white, $evergreen-neue, 80%);
+		}
+		
+		.p-name{
+			color: $evergreen-old-style;
+		}
+	}
+	
+	.schedule-event-morning{
+		background-color: $morning-light;
+	}
+	
+	.schedule-event-evening{
+	
+		&:nth-of-type(odd){
+			background-color: mix(white, $sky-blue, 90%);
+		}
+		
+		&:nth-of-type(even){
+			background-color: mix(white, $sky-blue, 80%);
+		}
+		
+		.p-name{
+			color: mix(black, $sky-blue, 60%);
+		}
+	}
+	
+	.schedule-event-evening-start::before{
+		//box model
+		border-bottom: 1px solid $sky-blue;
+		width: 100%;
+		//layout
+		display: block;
+		//typography
+		text-align: center;
+		//misc
+		content: "Evening Events";
+	}
+	
+	
+	
+	.schedule-event-time{
+		//box model
+		padding-right: 1em;
+		//typography
+		color: $evergreen-old-style;
+		font-weight: bold;
+	}
+	
+	.schedule-event-details{
+	}
+}
+
+/**
+ * 3.8 Embeded Content
+ *
+ * @section mod-embeded-content
+ */
+.lazy-load{
+  //box model
+  border-bottom-width: 0;
+  max-width: 100%;
+  //layout
+  display: block;
+  overflow: hidden;
+  //position
+  position: relative;
+  
+  &::after{
+    //box model
+    height: 100%;
+    width: 100%;
+    //layout
+    -webkit-align-items: center;
+            align-items: center;
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-justify-content: center;
+            justify-content: center;
+    //position
+    position: absolute;
+    top: 0;
+    //typography
+    text-align: center;
+    //backgrounds & borders
+    background-image: url(http://evergreen.edu/_inc/images/texture-1.png);
+    //misc
+    content: url(http://evergreen.edu/_inc/images/icons/green/play.png);
+  }
+  
+  &:hover::after{
+    opacity: .85;
+  }
+  
+  img{
+  	//box model
+  	margin: 0;
+  	//layout
+	  display: block;
+  }
+}
+
+/*.blog{
+	border-top: 1px solid #000;
+}
+.blog:before{
+	background-color: #F3F3F3;
+    content: "Blog";
+    display: table;
+    font-size: 10.507px;  //IE8
+    font-size: 0.657rem;
+    margin: -7.345px auto 0;  //IE8
+    margin: -0.459rem auto;
+    padding: 0 0.657rem;
+    text-align: center;
+}*/
+
+#tinymce{  //WYSIWYG
+	//box model
+	margin: 0 auto;
+	padding: 0 2em;
+	max-width: 48em;
+	//layout
+	display: block;
+}

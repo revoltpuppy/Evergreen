@@ -24,10 +24,9 @@
 
 @import "tools";  //constants, mixins, functions, etc.
 
-@import "sass/quarks/base";
-@import "sass/quarks/layout";
-@import "sass/quarks/modules";
-@import "sass/quarks/states";
-@import "sass/atoms/responsive";
+@import "sass/base";
+@import "sass/layout";
+@import "sass/modules";
+@import "sass/states";
 
 /*This file was written by Justin McDowell. ((O)O)*/
