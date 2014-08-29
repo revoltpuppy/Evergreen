@@ -28,6 +28,18 @@
 
 .bx-wrapper img{
 	display: block;
+	margin: 0 auto;  //Centers images that are smaller than the width of the carousel
+}
+
+/* to allow vertical scrolling of page on windows phones */
+.bx-wrapper {
+	-ms-touch-action: pan-y;
+}
+
+/* fix for windows phone bug that clicking bottom part of space between pager items selects last pager item */
+.bx-wrapper .bx-pager .bx-pager-item {
+	font-size: 0;
+	line-height: 0;
 }
 
 
@@ -38,8 +50,6 @@
 .bx-wrapper .bx-viewport {
 	//box model
 	border: 1px solid mix(black, $sky-blue, 60%);
-	//positioning
-	left: -5px;
 	//backgrounds & borders
 	background: black;
 	//miscelaneous
@@ -57,19 +67,10 @@
 	//box model
 	margin: 0;
 	//layout
-	-webkit-align-items: center;
-	       align-items: center;
+	-webkit-align-items: center;  //Vertically centers images that are smaller than the height of the carousel
+	        align-items: center;
 	display: -webkit-flex;
 	display:         flex;
-	-webkit-justify-content: center;
-	        justify-content: center;
-
-	li{
-		display: -webkit-flex;
-		display:         flex;
-		-webkit-justify-content: center;
-		        justify-content: center;
-	}
 }
 
 .bx-wrapper .bx-pager,

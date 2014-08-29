@@ -7,15 +7,20 @@
  */
 .bx-wrapper { position: relative; margin: 0 auto 60px; padding: 0; *zoom: 1; }
 
-.bx-wrapper img { display: block; }
+.bx-wrapper img { display: block; margin: 0 auto; }
+
+/* to allow vertical scrolling of page on windows phones */
+.bx-wrapper { -ms-touch-action: pan-y; }
+
+/* fix for windows phone bug that clicking bottom part of space between pager items selects last pager item */
+.bx-wrapper .bx-pager .bx-pager-item { font-size: 0; line-height: 0; }
 
 /**
  * Theme
  */
-.bx-wrapper .bx-viewport { border: 1px solid #00355f; left: -5px; background: black; box-shadow: 0 2px 2px rgba(30, 19, 37, 0.25); /*fix other elements on the page moving (on Chrome)*/ -webkit-transform: translatez(0); -moz-transform: translatez(0); -ms-transform: translatez(0); -o-transform: translatez(0); transform: translatez(0); }
+.bx-wrapper .bx-viewport { border: 1px solid #00355f; background: black; box-shadow: 0 2px 2px rgba(30, 19, 37, 0.25); /*fix other elements on the page moving (on Chrome)*/ -webkit-transform: translatez(0); -moz-transform: translatez(0); -ms-transform: translatez(0); -o-transform: translatez(0); transform: translatez(0); }
 
-.bx-wrapper .bxslider { margin: 0; -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; }
-.bx-wrapper .bxslider li { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; }
+.bx-wrapper .bxslider { margin: 0; -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; }
 
 .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto { position: absolute; bottom: -30px; width: 100%; }
 
