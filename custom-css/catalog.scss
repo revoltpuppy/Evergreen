@@ -189,45 +189,100 @@
 	
 	&,
 	abbr{
+		//box model
+		border-color: #c09a00;
 		background-color: #c09a00;
 	}
 }
 .winter{
 	&,
 	abbr{
+		//box model
+		border-color: mix(black, $sky-blue, 25%);
+		//backgrounds & borders
 		background-color: mix(black, $sky-blue, 25%);
+		
+		&.closed{
+			//box model
+			border-style: dashed;
+			//typography
+			color: mix(black, $sky-blue, 50%);
+			//backgrounds & borders
+			background-color: mix(white, $sky-blue, 66%);
+		}
 	}
 }
 .spring{
 	&,
 	abbr{
+		//box model
+		border-color: mix(white, $blueberry-susan, 25%);
+		//backgrounds & borders
 		background-color: mix(white, $blueberry-susan, 25%);
+		
+		&.closed{
+			//box model
+			border-style: dashed;
+			//typography
+			color: mix(black, $blueberry-susan, 25%);
+			//backgrounds & borders
+			background-color: mix(white, $blueberry-susan, 75%);
+		}
 	}
 }
 .summer{
 	&,
 	abbr{
+		//box model
+		border-color: $evergreen-neue;
+		//backgrounds & borders
 		background-color: $evergreen-neue;
+		
+		&.closed{
+			//box model
+			border-style: dashed;
+			//typography
+			color: mix(black, $evergreen-neue, 25%);
+			//backgrounds & borders
+			background-color: mix(white, $evergreen-neue, 50%);
+		}
 	}
 }
 
 .summer-session-1{
 	&,
 	abbr{
-		background-color:  $evergreen-old-style;
+		//box model
+		border-color: $evergreen-old-style;
+		//backgrounds & borders
+		background-color: $evergreen-old-style;
 	}
 }
 .summer-session-2{
 	&,
 	abbr{
-		background-color:  $wine;
+		//box model
+		border-color: $wine;
+		//backgrounds & borders
+		background-color: $wine;
+		
+		&.closed{
+			//box model
+			border-style: dashed;
+			//typography
+			color: mix(black, $wine, 25%);
+			//backgrounds & borders
+			background-color: mix(white, $wine, 50%);
+		}
 	}
 }
 
 .fall,
 .winter,
 .spring,
-.summer{
+.summer,
+.summer-session-1,
+.summer-session-2{
 	//box model
 	margin-top: 0.9375rem;
 	width: 25%;
@@ -239,7 +294,9 @@
 	
 	abbr{
 		//box model
-		border-bottom-width: 0;
+		border-style: solid;
+		border-width: 1px;
+		//border-bottom-width: 0;
 		padding: 0.234375rem;
 		//layout
 		display: block;

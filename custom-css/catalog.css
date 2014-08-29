@@ -38,21 +38,25 @@
 .time:after { width: 0; clear: both; display: table; content: ""; }
 
 .fall { clear: left; }
-.fall, .fall abbr { background-color: #c09a00; }
+.fall, .fall abbr { border-color: #c09a00; background-color: #c09a00; }
 
-.winter, .winter abbr { background-color: #0064b2; }
+.winter, .winter abbr { border-color: #0064b2; background-color: #0064b2; }
+.winter.closed, .winter abbr.closed { border-style: dashed; color: #004377; background-color: #a8d5f9; }
 
-.spring, .spring abbr { background-color: #766085; }
+.spring, .spring abbr { border-color: #766085; background-color: #766085; }
+.spring.closed, .spring abbr.closed { border-style: dashed; color: #362145; background-color: #d1cad6; }
 
-.summer, .summer abbr { background-color: #64933a; }
+.summer, .summer abbr { border-color: #64933a; background-color: #64933a; }
+.summer.closed, .summer abbr.closed { border-style: dashed; color: #4b6e2b; background-color: #b1c99c; }
 
-.summer-session-1, .summer-session-1 abbr { background-color: #46502b; }
+.summer-session-1, .summer-session-1 abbr { border-color: #46502b; background-color: #46502b; }
 
-.summer-session-2, .summer-session-2 abbr { background-color: #600f21; }
+.summer-session-2, .summer-session-2 abbr { border-color: #600f21; background-color: #600f21; }
+.summer-session-2.closed, .summer-session-2 abbr.closed { border-style: dashed; color: #480b18; background-color: #af8790; }
 
-.fall, .winter, .spring, .summer { margin-top: 0.9375rem; width: 25%; float: left; color: white; text-align: center; }
-.fall abbr, .winter abbr, .spring abbr, .summer abbr { border-bottom-width: 0; padding: 0.234375rem; display: block; border-radius: 2px; }
-@media screen and (min-width: 55em) { .fall, .winter, .spring, .summer { width: auto; float: none; background-color: transparent; } }
+.fall, .winter, .spring, .summer, .summer-session-1, .summer-session-2 { margin-top: 0.9375rem; width: 25%; float: left; color: white; text-align: center; }
+.fall abbr, .winter abbr, .spring abbr, .summer abbr, .summer-session-1 abbr, .summer-session-2 abbr { border-style: solid; border-width: 1px; padding: 0.234375rem; display: block; border-radius: 2px; }
+@media screen and (min-width: 55em) { .fall, .winter, .spring, .summer, .summer-session-1, .summer-session-2 { width: auto; float: none; background-color: transparent; } }
 
 .keyword-list > li { margin: 0.234375rem 0; display: inline-block; color: white; }
 .keyword-list > li > a { border-bottom-width: 0; margin: 0 0.4375rem 0 0; display: block; }
