@@ -1,10 +1,40 @@
 /*!*
- * Layout Styles
+ * II. Layout Styles
  *
  * Styles for overarching page layout elements like main columns,
  * rows, and wrappers.
  *
- * @section layout
+ * Table of Contents
+ *
+ * A. Grid
+ * B. Page-level Layout
+ * C. Header Layout
+ * D. Content Layout
+ * E. Hidden Elements
+ */
+
+/**
+ * A. Grid
+ *
+ * Styles related to the grid system.
+ *
+ * @section l-grid
+ */
+ @import "layout/grid";
+
+// Element list is a generic container that is meant to house lists
+// of designed elements, i.e. not a bulleted text list. It is meant
+// to apply to uls and ols.
+.element-list{
+	//box model
+	margin-left: 0;
+	padding-left: 0;
+	//lists
+	list-style-type: none;
+}
+
+/**
+ * B. Page-level Layout
  */
 .wrapper{
 	//box model
@@ -24,6 +54,10 @@
 	display: table;
 	clear: both;
 }
+
+/**
+ * C. Header Layout
+ */
 
 [role="banner"]{
 	//layout
@@ -74,6 +108,10 @@
 	}
 }
 
+/**
+ * D. Content Layout
+ */
+
 .site-content{
 	//box model
 	margin-bottom: 1.875rem;  //30px
@@ -85,26 +123,6 @@
 		margin-bottom: 3.75rem;  //60px
 	}
 }
-
-// Element list is a generic container that is meant to house lists
-// of designed elements, i.e. not a bulleted text list. It is meant
-// to apply to uls and ols.
-.element-list{
-	//box model
-	margin-left: 0;
-	padding-left: 0;
-	//lists
-	list-style-type: none;
-}
-
-/**
- * Grid
- *
- * Styles related to the grid system.
- *
- * @section l-grid
- */
- @import "layout/grid";
 
 .index-wrapper,
 .content-wrapper{
@@ -235,12 +253,10 @@
 }
 
 /**
- * Hidden Elements
+ * E. Hidden Elements
  *
  * For displaying less essential elements only when screen size
  * permits. Use sparingly!
- *
- * @section l-hidden
  */
 @media screen and (max-width: 20em){
 	.gt20{

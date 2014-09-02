@@ -1,9 +1,22 @@
 /**
- * Boxes
+ * G. Boxes
  *
- * Boxes for containing things, usually with a background color.
+ * Boxes for containing things, usually with a background color or
+ * texture.
  *
- * @section box
+ * Table of Contents
+ *
+ * 1. Default Box
+ * 2. Note
+ * 3. Alert
+ * 4. Captioned Figures
+ * 5. Pull Quotes
+ * 6. Full Box
+ * 7. UI Group
+ */
+ 
+/**
+ * 1. Default Box
  */
 .notice,  //deprecated
 .box,
@@ -34,6 +47,11 @@ p.box{  //WYSIWYG
 	color: mix(black, $sky-blue, 66%);
 }
 
+/**
+ * 2. Note
+ *
+ * Stands out a little bit more than a default box.
+ */
 .notice,  //deprecated
 .note{
 	border-left: 5px solid mix(white, $sky-blue, 60%);
@@ -43,6 +61,12 @@ p.box{  //WYSIWYG
 		padding-left:         calc(1em - 5px);
 	}
 }
+
+/**
+ * 3. Alerts
+ *
+ * Stands out a lot more than a default box.
+ */
 .alert,
 p.alert{
 	//box model
@@ -58,7 +82,12 @@ p.alert{
 	transition: all .5s ease-in;
 }
 
-//captioned images
+/**
+ * 4. Captioned Figures
+ *
+ * Lends a bit more readability to boxes while still standing out
+ * against the content a little bit more.
+ */
 .caption-box{
 	//typography
 	text-shadow: 0 1px 0 hsla(0, 0%, 100%, .5);
@@ -70,7 +99,9 @@ p.alert{
 	}
 }
 
-//pull quotes
+/**
+ * 5. Pull Quotes
+ */
 .pull-box{
 	background-color: transparentize($evergreen-neue, .05);
 	-moz-osx-font-smoothing: auto;  //Better rendering of reverse-out text
@@ -117,7 +148,7 @@ p.alert{
 }
 
 /**
- * Full Box
+ * 6. Full Box
  *
  * A box with a header and possibly a footer.
  *
@@ -138,7 +169,7 @@ p.alert{
 }
 
 /**
- * UI Group
+ * 7. UI Group
  *
  * A different kind of box; a group of elements, typically UI
  * that need visual separation from one another, or from other

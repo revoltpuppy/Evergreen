@@ -1,17 +1,19 @@
 /*!*
- * State Styles
+ * IV. State Styles
  *
  * Styles generally for elements that might have different states,
  * depending on how they're set. Typically these are for JS or
  * otherwise app-like functions.
  *
- * @section states
+ * Table of Contents
+ *
+ * A. Primary Nav States
+ * B. Accordions
+ * C. UI
  */
 
 /**
- * 1. Primary Nav States
- *
- * @section state-nav
+ * A. Primary Nav States
  */
 .is-current-section{
 	//typography
@@ -29,9 +31,7 @@
 }
 
 /**
- * 2. Accordions
- *
- * @section state-accordion
+ * B. Accordions
  */
 
 .is-expanded:before{
@@ -45,9 +45,7 @@
 }
 
 /**
- * 2. UI
- *
- * @section state-ui
+ * C. UI
  */
 
 .is-selected-ui{

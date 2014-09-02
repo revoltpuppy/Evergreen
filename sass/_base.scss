@@ -1,18 +1,17 @@
 /*!*
- * Base Styles
+ * I. Base Styles
  *
  * Styles generally for generic html elements. Classed or IDed
  * elements should typically be included in the Modules section.
  *
- * @section base
- *
  * Table of Contents
  *
- * 1. Typography ........... (_typography)
- * 2. Tables ............... (table)
- * 3. Forms ................ (form)
- * 4. Buttons .............. (_buttons)
- * 5. Hyphenation .......... (hyphens)
+ * A. Typography
+ * B. Tables
+ * C. Forms
+ * D. Search
+ * E. Buttons
+ * F. Hyphenation
  */
 
 html{
@@ -69,16 +68,12 @@ video{
 }
 
 /**
- * 1. Typography
- *
- * @section _typography
+ * A. Typography
  */
 @import "base/typography";
 
 /**
- * 2. Tables
- *
- * @section table
+ * B. Tables
  */
 table{
     border-collapse: collapse;
@@ -157,9 +152,7 @@ td > ol:last-child li:last-child > p:last-child{
 @import "base/tables";
 
 /**
- * 3. Forms
- *
- * @section form
+ * C. Forms
  */
 input{
 	//box model
@@ -208,19 +201,19 @@ select{
 		@include base-type-lg;
 	}*/
 }
+
+/**
+ * D. Search
+ */
 @import "modules/search";
 
 /**
- * 4. Buttons
- *
- * @section _buttons
+ * E. Buttons
  */
 @import "base/buttons";
 
 /**
- * 5. Hyphenation
- *
- * @section hyphens
+ * F. Hyphenation
  */
 //a,  //keep linked words whole
 //a:link,

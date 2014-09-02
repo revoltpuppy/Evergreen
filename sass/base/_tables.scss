@@ -1,8 +1,8 @@
 table a{
-	border-bottom-width: 0;  //Link borders clash with table borders and bring in extra complexity.
+	border-bottom-width: 0;  // Link borders clash with table borders and bring in extra complexity.
 }
 
-//For tables with the th left of the tds.
+// For tables with the th left of the tds.
 .horizontal-table th{
 	//box model
 	border-top: 1px solid #ccc;
@@ -19,13 +19,14 @@ table a{
 	border-bottom-width: 0;
 }
 
-//For normal tables that need the left-padding for whatever reason (e.g. background-colors that make the text look funny).
+// For normal tables that need the left-padding for whatever reason
+// (e.g. background-colors that make the text look funny).
 .padded-table th,
 .padded-table td,
 .accordion-table th,
 .accordion-table td,
 .striped-table td{
-    padding-left: 1.1111111111em;  //15/13.5 Should match the padding on td
+	padding-left: 1.1111111111em;  //15/13.5 Should match the padding on td
 	
 	&:last-child{
 		padding-right: 1.1111111111em;  //15/13.5 Should match the padding on td

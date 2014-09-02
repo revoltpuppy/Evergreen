@@ -1,5 +1,11 @@
+/**
+ * D. Search
+ *
+ * The search form on the top right of every page.
+ */
+
 [type="search"]{
-	margin-right: -30px;
+	margin-right: -30px;  //IE8
 	margin-right: -1.719rem;
 	position: relative;
 	width: 100%;

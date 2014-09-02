@@ -1,9 +1,18 @@
 /**
- * Tertiary Nav
+ * D. Tertiary Nav
  *
- * @subsection molecules/_tertiary-nav
+ * The contextual nav that each site can have (typically on the
+ * left-hand side).
+ *
+ * Table of Contents
+ *
+ * 1. Default Tertiary Nav
+ * 2. Homepage Tertiary Nav
  */
 
+/**
+ * 1. Default Tertiary Nav
+ */
 #tertiary-nav{
 	//box model
 	margin: 0 auto;
@@ -104,9 +113,7 @@
 }
 
 /**
- * Homepage Tertiary Nav
- *
- * @section tertiary-nav-homepage
+ * 2. Homepage Tertiary Nav
  */
 #tertiary-nav.tertiary-nav-homepage{
 	

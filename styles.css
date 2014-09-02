@@ -45,20 +45,19 @@
 /** Sass Constants  @section sass-constants */
 /** Sass Mixins  @section sass-mixins */
 /**
- * Base Styles
+ * I. Base Styles
  *
  * Styles generally for generic html elements. Classed or IDed
  * elements should typically be included in the Modules section.
  *
- * @section base
- *
  * Table of Contents
  *
- * 1. Typography ........... (_typography)
- * 2. Tables ............... (table)
- * 3. Forms ................ (form)
- * 4. Buttons .............. (_buttons)
- * 5. Hyphenation .......... (hyphens)
+ * A. Typography
+ * B. Tables
+ * C. Forms
+ * D. Search
+ * E. Buttons
+ * F. Hyphenation
  */
 html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
@@ -74,7 +73,7 @@ audio { max-width: 100%; }
 
 video { height: auto; width: 100%; }
 
-/** 1. Typography  @section _typography */
+/** A. Typography */
 /**
  * Typographic Styles
  *
@@ -168,7 +167,7 @@ blockquote { padding-left: 1em; font-style: italic; }
 
 hr { border: 0; height: 5px; margin: 2.8125rem 0; background-color: #64933a; }
 
-/** 2. Tables  @section table */
+/** B. Tables */
 table { border-collapse: collapse; border-spacing: 0; border-width: 0; margin: 1.481481481481481em 0; width: 100%; }
 
 caption { margin: 0 0 0.363976705490849em 0; color: #492c5d; font-size: 1.202rem; font-style: italic; line-height: 1.559900166389351; }
@@ -205,7 +204,7 @@ table a { border-bottom-width: 0; }
 /** DataTables */
 .dataTables_filter label { font-weight: bold; }
 
-/** 3. Forms  @section form */
+/** C. Forms */
 input { border: 1px solid #bbcfd7; height: 1.719rem; margin-bottom: 1.262201279030629em; padding: 0 .5em; font-size: 1em; }
 
 select { border: 1px solid #0086ee; margin: 0.535714285714286em 0 1.071428571428571em 0; padding: 0.30357142857143em .5em; font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #cce6fb; border-radius: 2px; -webkit-appearance: none; -moz-appearance: none; appearance: none; box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset; cursor: pointer; /*@media screen and (min-width: 43em){
@@ -216,6 +215,8 @@ select { border: 1px solid #0086ee; margin: 0.535714285714286em 0 1.071428571428
 }*/ }
 select:hover { border-bottom-style: dashed; background-color: #e5f2fd; }
 
+/** D. Search */
+/** D. Search  The search form on the top right of every page. */
 [type="search"] { margin-right: -30px; margin-right: -1.719rem; position: relative; width: 100%; -webkit-appearance: none; -moz-appearance: none; }
 
 .top-search button, .search button { border-color: #ccc; border-width: 1px 1px 1px 0; height: 27.506px; height: 1.719rem; padding: 2px; width: 27.506px; width: 1.719rem; float: right; vertical-align: top; position: relative; background: none #fff; border-radius: 0 0 0 0; cursor: pointer; -webkit-appearance: none; -moz-appearance: none; box-shadow: none; }
@@ -223,7 +224,7 @@ select:hover { border-bottom-style: dashed; background-color: #e5f2fd; }
 
 .top-search-button, .search-button { width: 18px; vertical-align: top; }
 
-/** 4. Buttons  @section _buttons */
+/** E. Buttons */
 /** Buttons  @section button */
 button, .button, .button:visited { border: 1px solid #0086ee; margin-bottom: 1.262201279030629em; padding: 5px .5em; display: inline-block; color: #333333; font-size: 17px; font-size: 1rem; font-weight: normal; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #99cef8; background-image: -webkit-linear-gradient(#cadec1, #66b6f4); background-image: linear-gradient(#cadec1, #66b6f4); border-radius: .2em; box-shadow: 0 0.2em 0.2em rgba(30, 19, 37, 0.25); }
 
@@ -233,6 +234,7 @@ button:focus, .button:focus { border-color: #999; outline-width: 0; }
 
 button:active, .button:active { background-color: #66b6f4; background-image: -webkit-linear-gradient(#66b6f4, #97c8cc); background-image: linear-gradient(#66b6f4, #97c8cc); box-shadow: inset 0 0.1em 0.2em rgba(0, 0, 0, 0.25); }
 
+/** Primary Action Button  The primary action button is meant to be the single default action that a user will expect to take. E.g., Submit would be the .prime button while Cancel would be the default button. */
 .prime, .prime:visited { border-color: #46502b; color: white; text-shadow: 0 -1px 0 rgba(30, 19, 37, 0.25); background-color: #64933a; background-image: -webkit-linear-gradient(#a1b96b, #64933a); background-image: linear-gradient(#a1b96b, #64933a); }
 
 .prime:hover { border-bottom-color: #46502b; color: #46502b; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #83a861; background-image: -webkit-linear-gradient(#bfcd84, #83a861); background-image: linear-gradient(#bfcd84, #83a861); }
@@ -241,45 +243,29 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 
 .prime:active { background-color: #a2be88; background-image: -webkit-linear-gradient(#64933a, #82a652); background-image: linear-gradient(#64933a, #82a652); }
 
+/** Disabled Buttons  Gives a disabled, unclickable appearances for buttons that can't be clicked, but should still be present in the design. Disabled buttons should have their actions taken away from them, or have the disabled attribute. */
 .is-disabled, .is-disabled:visited, .is-disabled:hover, button[disabled], button[disabled]:hover { color: #666; text-shadow: 0 0.05em 0 rgba(253, 243, 180, 0.5); background: #99cef8 none; border-color: #999; box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset; cursor: not-allowed; }
 
 .prime.is-disabled, .prime.is-disabled:hover, .prime.is-disabled:visited, .prime[disabled], .prime[disabled]:hover { background: #83a861 none; }
 
-/** 5. Hyphenation  @section hyphens */
+/** F. Hyphenation */
 .looong-word { word-wrap: break-word; }
 
 /**
- * Layout Styles
+ * II. Layout Styles
  *
  * Styles for overarching page layout elements like main columns,
  * rows, and wrappers.
  *
- * @section layout
+ * Table of Contents
+ *
+ * A. Grid
+ * B. Page-level Layout
+ * C. Header Layout
+ * D. Content Layout
+ * E. Hidden Elements
  */
-.wrapper { margin: 0 auto; width: 100%; display: block; }
-@media screen and (min-width: 70em) { .wrapper { max-width: 82em; } }
-
-.wrapper:before, .wrapper:after { width: 0; content: ""; display: table; clear: both; }
-
-[role="banner"] { overflow: hidden; background-color: #f3f3f3; box-shadow: 0 0 3px rgba(30, 19, 37, 0.25); }
-
-.page-header { -webkit-transition: all .1s ease-in-out; transition: all .1s ease-in-out; }
-@media screen and (min-width: 43em) { .page-header { background-color: transparent; } }
-
-[role="main"] { position: relative; }
-
-[role="navigation"], [role="main"] { width: 100%; }
-
-[role="navigation"] { clear: both; position: relative; }
-
-@media screen and (min-width: 20em) { [role="navigation"] { font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; letter-spacing: .05em; } }
-@media screen and (min-width: 43em) { [role="navigation"] { margin-left: 0; width: 100%; font-size: 17.008px; font-size: 1.063rem; letter-spacing: normal; line-height: 1.323529411764706; } }
-.site-content { margin-bottom: 1.875rem; width: 100%; position: relative; }
-@media screen and (min-height: 35em) { .site-content { margin-bottom: 3.75rem; } }
-
-.element-list { margin-left: 0; padding-left: 0; list-style-type: none; }
-
-/** Grid  Styles related to the grid system.  @section l-grid */
+/** A. Grid  Styles related to the grid system.  @section l-grid */
 /** Grid  Unit layout and sizing for the grid system.  @section grid */
 .row { width: 100%; clear: both; display: block; }
 
@@ -395,6 +381,32 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 @media screen and (min-width: 70em) { .supplement-alt-1-2 { margin-right: 0; margin-left: -41.72297%; float: left; font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; } }
 @media screen and (min-width: 125em) { .supplement-alt-1-2 { font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; } }
 
+.element-list { margin-left: 0; padding-left: 0; list-style-type: none; }
+
+/** B. Page-level Layout */
+.wrapper { margin: 0 auto; width: 100%; display: block; }
+@media screen and (min-width: 70em) { .wrapper { max-width: 82em; } }
+
+.wrapper:before, .wrapper:after { width: 0; content: ""; display: table; clear: both; }
+
+/** C. Header Layout */
+[role="banner"] { overflow: hidden; background-color: #f3f3f3; box-shadow: 0 0 3px rgba(30, 19, 37, 0.25); }
+
+.page-header { -webkit-transition: all .1s ease-in-out; transition: all .1s ease-in-out; }
+@media screen and (min-width: 43em) { .page-header { background-color: transparent; } }
+
+[role="main"] { position: relative; }
+
+[role="navigation"], [role="main"] { width: 100%; }
+
+[role="navigation"] { clear: both; position: relative; }
+
+@media screen and (min-width: 20em) { [role="navigation"] { font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; letter-spacing: .05em; } }
+@media screen and (min-width: 43em) { [role="navigation"] { margin-left: 0; width: 100%; font-size: 17.008px; font-size: 1.063rem; letter-spacing: normal; line-height: 1.323529411764706; } }
+/** D. Content Layout */
+.site-content { margin-bottom: 1.875rem; width: 100%; position: relative; }
+@media screen and (min-height: 35em) { .site-content { margin-bottom: 3.75rem; } }
+
 .index-wrapper, .content-wrapper { border-top: 5px solid #46502b; margin-top: -5px; background-color: #F3F3F3; background-color: rgba(242, 242, 242, 0.95); border-radius: 2px; }
 @media screen and (min-width: 43em) { .index-wrapper, .content-wrapper { margin-left: 16.285714285714286%; } }
 
@@ -426,7 +438,7 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 @media screen and (min-width: 125em) { .sidebar { font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; }
   .sidebar p, .sidebar .base { margin: 0.441176470588235em 0 0.882352941176471em 0; } }
 
-/** Hidden Elements  For displaying less essential elements only when screen size permits. Use sparingly!  @section l-hidden */
+/** E. Hidden Elements  For displaying less essential elements only when screen size permits. Use sparingly! */
 @media screen and (max-width: 20em) { .gt20 { display: none; } }
 @media screen and (max-width: 22em) { .gt22 { display: none; } }
 @media screen and (max-width: 32em) { .gt32 { display: none; }
@@ -435,17 +447,36 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 @media screen and (max-width: 70em) { .gt70 { display: none; } }
 @media screen and (max-width: 88em) { .gt88 { display: none; } }
 /**
- * Module Styles
+ * III. Module Styles
  *
  * Styles for specific or reusable, components.
  *
- * @section module
+ * Table of Contents
+ * 
+ * A. Header
+ * B. Background Image
+ * C. Homepage Hero Image
+ * D. Tertiary Nav
+ * E. Page Footer
+ * F. Special Typography
+ * G. Lists
+ *   1. Accordion
+ *   2. Link Icons
+ *   3. Tag Clouds
+ *   4. Alphabetical Order Index
+ *   5. Badge List
+ * H. Media Segment
+ * I. Boxes
+ * J. Images
+ * K. Event Calendar
+ * L. Embedded Content
+ * M. CMS
  */
 .top-links, .search-list, .primary-nav-unit h2, .nav li { font-size: 11.888px; font-size: 0.743rem; line-height: 1.262201279030629; /*15/11.884*/ }
 
-/** 1. Header  @section mod-header */
-/** Header  @section mod-header */
-/** Mobile Header Widgets  Togglable dropdowns for internal user links and search bar. */
+/** A. Header */
+/** A. Header  The header at the top of every page.  Table of Contents  1. Mobile Header Widgets 2. Logo 3. Header Search 4. Primary Nav 5. Secondary Nav 6. Site Name */
+/** 1. Mobile Header Widgets  Togglable dropdowns for internal user links and search bar. */
 input[name="header-toggle"] { position: absolute; visibility: hidden; }
 
 input + .header-dropdown { max-height: 0; overflow: hidden; -webkit-transition: .5s all ease; transition: .5s all ease; }
@@ -464,7 +495,7 @@ input:checked + .header-dropdown { max-height: 8em; -webkit-transition: .5s all 
 @media screen and (min-width: 43em) { [role="search"] { padding: .618em .618em .618em 0; width: 40%; float: right; background-color: transparent; } }
 @media screen and (min-width: 125em) { [role="search"] { width: 20%; } }
 
-/** Logo */
+/** 2. Logo */
 .logo { width: 58%; margin: .618em 2% 0 2%; float: left; }
 @media screen and (min-width: 32em) { .logo { width: 58%; } }
 @media screen and (min-width: 43em) { .logo { width: 48%; } }
@@ -474,7 +505,7 @@ input:checked + .header-dropdown { max-height: 8em; -webkit-transition: .5s all 
 .logo img { max-height: 4em; }
 @media screen and (min-width: 125em) { .logo img { max-height: 6em; } }
 
-/** Header Search  @section mod-header-search */
+/** 3. Header Search  @section mod-header-search */
 [for="q"] { height: 0; width: 0; display: block; overflow: hidden; position: absolute; }
 
 .off-canvas { margin-right: 2%; }
@@ -517,7 +548,7 @@ li.internal-users-alt { display: none; }
 
 .top-nav, .top-nav-list, .menu-button, .search-toggle, .student-toggle { color: white; background-color: #64933a; }
 
-/** 3.1.2 Primary Nav  @subsubsection mod-header-primary-nav */
+/** 4. Primary Nav  The green nav at the top of every page. */
 .top-nav-list { margin: 0 auto; margin-top: 0; width: 100%; min-height: 44px; position: relative; text-align: center; list-style-type: none; }
 @media screen and (min-width: 20em) { .top-nav-list { display: -webkit-flex; display: -ms-flexbox; display: flex; -ms-flex-align: stretch; align-items: stretch; }
   .top-nav-list > li { border-left: 1px solid #333; min-height: 44px; width: 21%; display: inline-block; display: -webkit-flex; display: -ms-flexbox; display: flex; overflow: hidden; }
@@ -537,6 +568,7 @@ li.internal-users-alt { display: none; }
 @media screen and (min-width: 32em) { .top-nav-link, .top-nav-link:visited { text-shadow: none; } }
 @media screen and (min-width: 43em) { .top-nav-link, .top-nav-link:visited { font-weight: bold; } }
 
+/** 5. Secondary Nav  The textured nav immediately below the primary nav on the homepage only. */
 .secondary-nav-list { border-top: 1px solid #46502b; margin: 0; padding: 0; overflow: hidden; text-align: center; background: #64933a url(images/texture-1.png); list-style-type: none; }
 .secondary-nav-list > li:first-child { margin-top: 0.71315146386224em; }
 .secondary-nav-list > li:last-child { margin-bottom: 1.42630292772448em; }
@@ -552,11 +584,12 @@ li.internal-users-alt { display: none; }
 .secondary-nav-link:hover { background-color: #857192; color: white; box-shadow: 0 0 2px rgba(253, 243, 180, 0.5) inset; -webkit-transition: all .1s ease-out; transition: all .1s ease-out; }
 .secondary-nav-link:focus { background-color: #492c5d; }
 
+/** 6. Site Name  The name of the department’s site, e.g. About Evergreen, Web Resources, or Registration */
 .site-name { margin-top: 60px; margin-top: 3.75rem; }
 @media screen and (min-width: 125em) { .site-name h1 { margin-right: 2%; margin-left: 2%; } }
 @media screen and (min-height: 35em) { .site-name h1 { margin-bottom: 0.673904em; } }
 
-/** 2. Background Image  @section mod-background */
+/** B. Background Image */
 .main-background { width: 100%; position: fixed; top: 0; left: 0; z-index: -1; }
 @media screen and (min-width: 43em) { .main-background { width: 100%; } }
 @media screen and (min-width: 70em) { .main-background { max-width: 82em; } }
@@ -564,8 +597,8 @@ li.internal-users-alt { display: none; }
 .main-background-img { width: 100%; display: block; }
 @media screen and (min-width: 43em) { .main-background-img { width: 55.142857142857143%; max-width: 799px; display: block; } }
 
-/** 3. Homepage Hero Image  @section mod-hero-homepage */
-/** Homepage Hero Image  @section mod-hero-homepage */
+/** C. Homepage Hero Image */
+/** C. Homepage Hero Image  @section mod-hero-homepage */
 .homepage-hero, .homepage-hero-content { height: 100%; overflow: hidden; }
 
 .homepage-hero-picture img { display: block; }
@@ -620,7 +653,9 @@ li.internal-users-alt { display: none; }
 
 .profile-list .box { margin-top: -22.5px; margin-top: -1.40625rem; position: absolute; bottom: 0; }
 
-/** Tertiary Nav  @subsection molecules/_tertiary-nav */
+/** D. Tertiary Nav */
+/** D. Tertiary Nav  The contextual nav that each site can have (typically on the left-hand side).  Table of Contents  1. Default Tertiary Nav 2. Homepage Tertiary Nav */
+/** 1. Default Tertiary Nav */
 #tertiary-nav { margin: 0 auto; max-width: 96%; }
 @media screen and (min-width: 32em) { #tertiary-nav { margin: 0 auto 1rem; max-width: 66.6666666666%; } }
 @media screen and (min-width: 43em) { #tertiary-nav { margin-top: 1rem; width: 22.200520833333%; position: absolute; }
@@ -644,7 +679,7 @@ li.internal-users-alt { display: none; }
 .tertiary-nav-list a, #tertiary-nav dd > ul a, .tertiary-related-links a { border-bottom-width: 0; font-weight: normal; }
 
 @media screen and (min-width: 43em) { .tertiary-nav-h, a.tertiary-nav-h { border-bottom: 1px solid #004377; margin-top: -1px; display: block; font-weight: bold; } }
-/** Homepage Tertiary Nav  @section tertiary-nav-homepage */
+/** 2. Homepage Tertiary Nav */
 @media screen and (min-width: 43em) { #tertiary-nav.tertiary-nav-homepage { margin-left: -21.58203%; width: 21.58203125%; } }
 @media screen and (min-width: 70em) { #tertiary-nav.tertiary-nav-homepage { margin-left: -25.52083%; width: 23.484848484848%; } }
 
@@ -685,7 +720,8 @@ li.internal-users-alt { display: none; }
 ul.accordion-inner { padding: 0 2%; }
 @media screen and (min-width: 43em) { ul.accordion-inner { padding: 0; } }
 
-/** Footer  @section mod-footer */
+/** E. Page Footer */
+/** E. Footer  The footer at the bottom of every page. */
 [role="contentinfo"] { margin-top: auto; padding: 0 1em; clear: left; color: #fff; background-color: #000; }
 
 [role="contentinfo"]:after, [role="contentinfo"]:before { display: table; clear: both; content: ""; }
@@ -699,7 +735,7 @@ ul.accordion-inner { padding: 0 2%; }
 .footer-map a { border-width: 0; }
 
 @media screen and (min-width: 43em) { .footer-map img { max-height: 112.5px; } }
-/** 4. Typography  Special typography-as-modules.  @section mod-typography */
+/** F. Special Typography  Special, non-base element typography. */
 .lead { margin-bottom: 0; }
 
 .follow { margin-top: 0; }
@@ -723,9 +759,7 @@ ul.accordion-inner { padding: 0 2%; }
 .main-content > p:last-child::after, .main-content > ul:last-child > li:last-child::after, .main-content > ol:last-child > li:last-child::after, .main-content > dl:last-child > dd:last-child::after { white-space: nowrap; content: "\00A0" url("/_inc/images/endnote.png"); }
 
 /**
-* 4.1 Lists
-*
-* @subsection mod-typography-l
+* G. Lists
 */
 .text-list { margin-left: 1em; list-style-type: disc; }
 .text-list ul { margin-left: 1em; list-style-type: square; }
@@ -745,7 +779,7 @@ ul.accordion-inner { padding: 0 2%; }
 
 .lineup > li img { max-height: 1rem; display: block; }
 
-/** 4.1.1 Accordion  @subsubsection mod-typography-l-accordion */
+/** 1. Accordion  @subsubsection mod-typography-l-accordion */
 .accordion, .accordion-table { border: 1px solid #d1cad6; overflow: hidden; background-color: #e3dfe6; border-radius: 2px; }
 
 .accordion dt a, .accordion dd { padding: 0.631100639515315em 2%; }
@@ -763,10 +797,11 @@ ul.accordion-inner { padding: 0 2%; }
 .accordion-table .group { font-weight: bold; color: #492c5d; }
 .accordion-table .group:hover { color: #0086ee; cursor: pointer; }
 
-/** Inline Icons  Icons that appear before strings of text. For example, [x] Close, where [x] is the icon. */
+/** Icons */
+/** 1. Inline Icons  Icons that appear before strings of text. For example, [x] Close, where [x] is the icon. */
 .inline-icon { margin-right: .25em; max-height: 1em; display: inline; }
 
-/** Related Nav  Related links with iconographic circles. */
+/** 2. Related Nav  Related links with iconographic circles. */
 .related-nav { display: -webkit-flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
 
 .related-nav > li { margin: 0.9375rem 0; margin-right: 2em; width: -webkit-calc(33.3333333333% - 1.3333333333em); width: calc(33.3333333333% - 1.3333333333em); display: block; vertical-align: top; float: left; text-align: center; }
@@ -812,7 +847,7 @@ ul.accordion-inner { padding: 0 2%; }
 @media screen and (min-width: 70em) { .unit-3-7 .flexible { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; } }
 @media screen and (min-width: 70em) { .unit-3-7 .flexible { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; } }
 
-		/** Link Icons  Links with icons attached to them, e.g. PDFs or social media chicklets. */
+		/** 2. Link Icons  Links with icons attached to them, e.g. PDFs or social media chicklets. */
 .link-icon::before, .link-icon-alt::before { height: 1rem; width: 1rem; display: inline-block; overflow: hidden; vertical-align: middle; text-indent: 100%; white-space: nowrap; background-repeat: no-repeat; -webkit-background-size: 1rem 1rem; -moz-background-size: 1rem 1rem; background-size: 1rem 1rem; content: ""; }
 
 .link-icon::after { margin-left: .5em; }
@@ -831,13 +866,13 @@ ul.accordion-inner { padding: 0 2%; }
 
 .icon-youtube::before { background-image: url("/_inc/images/icons/external/youtube32x32.png"); content: "YouTube"; }
 
-/** Tag Clouds  Tag cloud sizing. */
+/** 3. Tag Clouds  Tag cloud sizing. */
 .few { font-size: 11.888px; font-size: 0.743rem; }
 .few a { font-weight: normal; }
 
 .many { font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; }
 
-		/** Alphabetical Order Index  An index of the letters of the alphabet, for skipping around the page. */
+		/** 4. Alphabetical Order Index  An index of the letters of the alphabet, for skipping around the page. */
 .alpha-label { border: 1px solid #d1cad6; border-bottom-width: 0; margin-bottom: -1px; padding: 0 1em; display: inline-block; background-color: #e3dfe6; border-radius: 2px 2px 0 0; }
 
 .alpha-index { border: 1px solid #d1cad6; margin-left: 0; padding-left: 0; display: block; word-wrap: break-word; background-color: #e3dfe6; border-radius: 2px; list-style-type: none; }
@@ -847,7 +882,7 @@ ul.accordion-inner { padding: 0 2%; }
 
 .alpha-index > li { padding: 0 2px; display: inline; }
 
-/** Badge List  Lists of logos, badges, or sponsors. */
+/** 5. Badge List  Lists of logos, badges, or sponsors. */
 .badge-list { -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: space-around; justify-content: space-around; overflow: hidden; }
 .badge-list > li { margin: 0 1em; float: left; text-align: center; }
 
@@ -855,7 +890,8 @@ ul.accordion-inner { padding: 0 2%; }
 
 .badge-alt { max-width: 115px; }
 
-/** Media Block  A common pattern wherein copy is tightly coupled to a graphic.  .media +---------+------------------+ |         |                  | | .media- | .media-          | |  img    |  body            | |         |                  | +---------+------------------+  @section mod-media */
+/** H. Media Segment */
+/** H. Media Block  A common pattern wherein copy is tightly coupled to a graphic.  .media +---------+------------------+ |         |                  | | .media- | .media-          | |  img    |  body            | |         |                  | +---------+------------------+ */
 .media { clear: left; display: block; display: -webkit-flex; display: flex; }
 
 .media-img, .media-img:link { border-bottom-width: 0; margin-bottom: 1.071428571428571em; padding-right: 1.071428571428571em; max-width: 31.3333333333%; float: left; -webkit-flex-shrink: 0; flex-shrink: 0; }
@@ -893,23 +929,29 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 		margin-right: 0;
 	}
 }*/
-/** Boxes  Boxes for containing things, usually with a background color.  @section box */
+/** I. Boxes */
+/** G. Boxes  Boxes for containing things, usually with a background color or texture.  Table of Contents  1. Default Box 2. Note 3. Alert 4. Captioned Figures 5. Pull Quotes 6. Full Box 7. UI Group */
+/** 1. Default Box */
 .notice, .box, p.box { padding: 0 1em; overflow: hidden; color: #002d50; background-color: rgba(204, 230, 251, 0.95); background-image: url("images/texture-1.png"); border-radius: 2px; }
 
 .notice h2, .box h2 { color: #004377; }
 
 .notice h3, .box h3, .notice h4, .box h4, .notice h5, .box h5 { color: #002d50; }
 
+/** 2. Note  Stands out a little bit more than a default box. */
 .notice, .note { border-left: 5px solid #99cef8; }
 @media screen and (min-width: 22em) { .notice, .note { padding-left: -webkit-calc(1em - 5px); padding-left: calc(1em - 5px); } }
 
+/** 3. Alerts  Stands out a lot more than a default box. */
 .alert, p.alert { color: #600f21; background-color: rgba(253, 243, 180, 0.5); border-radius: 0; }
 
 #sitewide-alert { border-radius: 0; transition: all .5s ease-in; }
 
+/** 4. Captioned Figures  Lends a bit more readability to boxes while still standing out against the content a little bit more. */
 .caption-box { text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); background-color: rgba(242, 242, 242, 0.95); }
 .caption-box img { margin-bottom: 10px; margin-bottom: 0.625rem; }
 
+/** 5. Pull Quotes */
 .pull-box { background-color: rgba(100, 147, 58, 0.95); -moz-osx-font-smoothing: auto; -webkit-font-smoothing: subpixel-antialiased; }
 @media screen and (min-width: 43em) { .pull-box { margin-bottom: 1.071428571428571em; } }
 
@@ -923,21 +965,22 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 
 .pull-box-alt { background-color: #0086ee; }
 
-/** Full Box  A box with a header and possibly a footer.  @section box-full */
+/** 6. Full Box  A box with a header and possibly a footer.  @section box-full */
 .full-box { border: 1px solid #0086ee; padding: 0; background: #0086ee url(images/texture-1.png); }
 
 .full-box h2, .full-box h3 { color: #fff; }
 
 .full-box > .box { background-color: #f5f5f5; }
 
-/** UI Group  A different kind of box; a group of elements, typically UI that need visual separation from one another, or from other elements.  @section ui-group */
+/** 7. UI Group  A different kind of box; a group of elements, typically UI that need visual separation from one another, or from other elements.  @section ui-group */
 .ui-group { border: 1px solid #d1cad6; margin-bottom: 0.46875rem; padding: 0 1em; overflow: hidden; background-color: #e3dfe6; border-radius: 2px; }
 .ui-group:hover { background-color: #ece9ee; border-color: #dad4de; -webkit-transition: all .2s ease-out; transition: all .2s ease-out; }
 @media screen and (min-width: 32em) { .ui-group.unit-1-2 { margin: 0.234375rem; width: -webkit-calc(50% - 0.46875rem); width: calc(50% - 0.46875rem); } }
 @media screen and (min-width: 43em) { .ui-group.unit-1-3 { margin: 0.234375rem; width: -webkit-calc(33.3333333333% - 0.46875rem); width: calc(33.3333333333% - 0.46875rem); }
   .ui-group .media { width: 100%; } }
 
-/** Images  Image modules, typically for laying them out within an article.  @section img */
+/** J. Images */
+/** J. Images  Image modules, typically for laying them out within an article. */
 .left, .illus, .illus-alt, .illus-full, .image, .image img, .image-alt, .image-full, .image-full img { border: 1px solid #00355f; margin: 0 auto; max-width: 100%; display: block; border-radius: 2px; color: white; background-color: #00355f; -webkit-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); box-shadow: 0 2px 2px rgba(30, 19, 37, 0.25); }
 
 .illus-full, .image-full, .image-full img { margin: .631100639515315em auto 1.262201279030629em auto; /*max-width: 99%;  //IE8
@@ -960,7 +1003,7 @@ max-width:         calc(100% - 2px);*/ }
 		max-width: 16.6666666666%;
 	}
 }*/
-/** Event Calendar  @section mod-event-calendar */
+/** K. Event Calendar  @section mod-event-calendar */
 /*.event-dt{
 	@include small-type;
 	font-weight: bold;
@@ -1013,7 +1056,7 @@ max-width:         calc(100% - 2px);*/ }
 .schedule .schedule-event-evening-start::before { border-bottom: 1px solid #0086ee; width: 100%; display: block; text-align: center; content: "Evening Events"; }
 .schedule .schedule-event-time { padding-right: 1em; color: #46502b; font-weight: bold; }
 
-/** 3.8 Embeded Content  @section mod-embeded-content */
+/** L. Embeded Content */
 .lazy-load { border-bottom-width: 0; max-width: 100%; display: block; overflow: hidden; position: relative; }
 .lazy-load::after { height: 100%; width: 100%; -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; position: absolute; top: 0; text-align: center; background-image: url(http://evergreen.edu/_inc/images/texture-1.png); content: url(http://evergreen.edu/_inc/images/icons/green/play.png); }
 .lazy-load:hover::after { opacity: .85; }
@@ -1023,28 +1066,33 @@ max-width:         calc(100% - 2px);*/ }
 	border-top: 1px solid #000;
 }
 .blog:before{
-	background-color: #F3F3F3; content: "Blog"; display: table; font-size: 10.507px;  //IE8 font-size: 0.657rem; margin: -7.345px auto 0;  //IE8 margin: -0.459rem auto; padding: 0 0.657rem; text-align: center;
+	background-color: #F3F3F3; content: "Blog"; display: table; font-size: 0.657rem; margin: -0.459rem auto; padding: 0 0.657rem; text-align: center;
 }*/
+/** M. CMS  Styles to make the CMS WYSIWYG editor look nice. Not seen on published site. */
 #tinymce { margin: 0 auto; padding: 0 2em; max-width: 48em; display: block; }
 
 /**
- * State Styles
+ * IV. State Styles
  *
  * Styles generally for elements that might have different states,
  * depending on how they're set. Typically these are for JS or
  * otherwise app-like functions.
  *
- * @section states
+ * Table of Contents
+ *
+ * A. Primary Nav States
+ * B. Accordions
+ * C. UI
  */
-/** 1. Primary Nav States  @section state-nav */
+/** A. Primary Nav States */
 .is-current-section { color: white; background-color: #46502b; }
 
 .is-current-section a, .is-current-section a:link .is-current-section a:visited, .is-current-section .is-explored-section:hover, .is-current-section .is-explored-section:focus, .is-current-section .is-explored-section:active { background-color: #46502b; }
 
-/** 2. Accordions  @section state-accordion */
+/** B. Accordions */
 .is-expanded:before { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); -webkit-transition: all .2s linear; transition: all .2s linear; }
 
-/** 2. UI  @section state-ui */
+/** C. UI */
 .is-selected-ui { padding: 0 0.33em; color: white; font-weight: bold; background-color: #492c5d; }
 
 .is-hidden { display: none !important; }

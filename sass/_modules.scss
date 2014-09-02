@@ -1,9 +1,28 @@
 /*!*
- * Module Styles
+ * III. Module Styles
  *
  * Styles for specific or reusable, components.
  *
- * @section module
+ * Table of Contents
+ * 
+ * A. Header
+ * B. Background Image
+ * C. Homepage Hero Image
+ * D. Tertiary Nav
+ * E. Page Footer
+ * F. Special Typography
+ * G. Lists
+ *   1. Accordion
+ *   2. Link Icons
+ *   3. Tag Clouds
+ *   4. Alphabetical Order Index
+ *   5. Badge List
+ * H. Media Segment
+ * I. Boxes
+ * J. Images
+ * K. Event Calendar
+ * L. Embedded Content
+ * M. CMS
  */
 
 .top-links,
@@ -14,16 +33,12 @@
     line-height: 1.262201279030629; /*15/11.884*/
 }
 /**
- * 1. Header
- *
- * @section mod-header
+ * A. Header
  */
 @import "modules/header";
     
 /**
- * 2. Background Image
- *
- * @section mod-background
+ * B. Background Image
  */
 .main-background{
 	width:100%;
@@ -54,67 +69,70 @@
 }
 
 /**
- * 3. Homepage Hero Image
- *
- * @section mod-hero-homepage
+ * C. Homepage Hero Image
  */
 @import "modules/homepage-hero";
     
-    .profile-list > li{
-    	//@include margin-default;
-    	//layout
-    	overflow: hidden;
-    	//position
-	    position: relative;
-	    
-	    @media screen and (min-width: 43em){
-		    //@include margin-default-lg;
-	    }
-    }
-    .profile-img{
-    	//box model
-    	margin-left: -50%;
-	    width: 200%;
-	    max-width: 685px;
-	    //layout
-	    display: block;
-	    
-	    @media screen and (min-width: 20em){
-		    margin-left: -25%;
-		    width: 150%;
-	    }
-	    
-	    @media screen and (min-width: 32em){
-		    margin-left: 0%;
-		    width: 100%;
-	    }
-	    
-	    @media screen and (min-width: 43em){
-		    width: 120%;
-		    margin-left: -10%;
-	    }
-	    
-	    @media screen and (min-width: 60em){
-		    width: 100%;
-		    margin-left: 0%;
-	    }
-    }
-    .profile-list .box{
-    	@include x-rem(margin-top, -1.40625);  //22.5/16
-	    //margin-top: -2.142857142857143em;  //30/14
-	    position: absolute;
-	    bottom: 0;
-    }
+.profile-list > li{
+	//@include margin-default;
+	//layout
+	overflow: hidden;
+	//position
+  position: relative;
+  
+  @media screen and (min-width: 43em){
+    //@include margin-default-lg;
+  }
+}
+.profile-img{
+	//box model
+	margin-left: -50%;
+  width: 200%;
+  max-width: 685px;
+  //layout
+  display: block;
+  
+  @media screen and (min-width: 20em){
+    margin-left: -25%;
+    width: 150%;
+  }
+  
+  @media screen and (min-width: 32em){
+    margin-left: 0%;
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 43em){
+    width: 120%;
+    margin-left: -10%;
+  }
+  
+  @media screen and (min-width: 60em){
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+.profile-list .box{
+	@include x-rem(margin-top, -1.40625);  //22.5/16
+  //margin-top: -2.142857142857143em;  //30/14
+  position: absolute;
+  bottom: 0;
+}
 
+/**
+ * D. Tertiary Nav
+ */
 @import "modules/tertiary-nav";
+
+/**
+ * E. Page Footer
+ */
 @import "modules/footer";
 
 /**
- * 4. Typography
+ * F. Special Typography
  *
- * Special typography-as-modules.
- *
- * @section mod-typography
+ * Special, non-base element typography.
  */
 .lead{
     margin-bottom:0;
@@ -154,21 +172,21 @@
 }
 
 .details{
-    @include x-rem(font-size, .657);  //10.507px;
-    line-height: 1.427619682116684;  //15/10.507
+	@include x-rem(font-size, .657);  //10.507px;
+	line-height: 1.427619682116684;  //15/10.507
 }
 
 .big-fact{
-    @include base-type-lg;
-    
-    @media screen and (min-width:43em){
+	@include base-type-lg;
+	
+	@media screen and (min-width:43em){
 		margin: .2727272727em 0 .8181818182em 0;
-    }
-    
-    @media screen and (min-width:70em){
-		@include x-rem(font-size, 1.719);  //20px
+	}
+	
+	@media screen and (min-width:70em){
+	@include x-rem(font-size, 1.719);  //20px
 		line-height: 1.090710779858208;  //30/27.505
-    }
+	}
 }
 
 .key-number{  //e.g. http://www.evergreen.edu/about/impact/
@@ -179,8 +197,8 @@
 	//typography
 	color: $evergreen-neue;
 	@include x-rem(font-size, 2.291);  //36.656px
-    font-weight: normal;
-    line-height: 1.227629855958097;  //45/35.656
+	font-weight: normal;
+	line-height: 1.227629855958097;  //45/35.656
 }
 
 .machine-text{
@@ -196,9 +214,7 @@
 }
 
 	/**
-	* 4.1 Lists
-	*
-	* @subsection mod-typography-l
+	* G. Lists
 	*/
 	.text-list{  //Creates a standard bulleted list.
 		//box-model
@@ -275,7 +291,7 @@
 	}
 
 	  /**
-	   * 4.1.1 Accordion
+	   * 1. Accordion
 	   *
 	   * @subsubsection mod-typography-l-accordion
 	   */
@@ -432,7 +448,7 @@
 		}
 		
 		/**
-     * Link Icons
+     * 2. Link Icons
      *
      * Links with icons attached to them, e.g. PDFs or social media chicklets.
      */
@@ -495,7 +511,7 @@
     
     
     /**
-     * Tag Clouds
+     * 3. Tag Clouds
      *
      * Tag cloud sizing.
      */
@@ -511,7 +527,7 @@
 		}
 		
 		/**
-     * Alphabetical Order Index
+     * 4. Alphabetical Order Index
      *
      * An index of the letters of the alphabet, for skipping around the page.
      */
@@ -562,7 +578,7 @@
     }
     
     /**
-     * Badge List
+     * 5. Badge List
      *
      * Lists of logos, badges, or sponsors.
      */
@@ -594,13 +610,24 @@
 	    max-width: 115px;  //For badges in landscape mode
     }
     
+/**
+ * H. Media Segment
+ */
 @import "modules/media-segment";
+
+/**
+ * I. Boxes
+ */
 @import "modules/boxes";
+
+/**
+ * J. Images
+ */
 @import "modules/images";
 
 
 /**
- * Event Calendar
+ * K. Event Calendar
  *
  * @section mod-event-calendar
  */
@@ -831,9 +858,7 @@
 }
 
 /**
- * 3.8 Embeded Content
- *
- * @section mod-embeded-content
+ * L. Embeded Content
  */
 .lazy-load{
   //box model
@@ -886,13 +911,18 @@
 	background-color: #F3F3F3;
     content: "Blog";
     display: table;
-    font-size: 10.507px;  //IE8
     font-size: 0.657rem;
-    margin: -7.345px auto 0;  //IE8
     margin: -0.459rem auto;
     padding: 0 0.657rem;
     text-align: center;
 }*/
+
+/**
+ * M. CMS
+ *
+ * Styles to make the CMS WYSIWYG editor look nice. Not seen on
+ * published site.
+ */
 
 #tinymce{  //WYSIWYG
 	//box model

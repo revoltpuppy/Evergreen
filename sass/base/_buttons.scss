@@ -49,6 +49,13 @@ button:active,
 	box-shadow: inset 0 .1em .2em hsla(0,0%,0%,.25);
 }
 
+/**
+ * Primary Action Button
+ *
+ * The primary action button is meant to be the single default
+ * action that a user will expect to take. E.g., Submit would be
+ * the .prime button while Cancel would be the default button.
+ */
 .prime,
 .prime:visited{
 	//box model
@@ -82,6 +89,15 @@ button:active,
 	background-image:         linear-gradient($evergreen-neue, mix($morning-light, $evergreen-neue, 20%));  //w3c
 }
 
+
+/**
+ * Disabled Buttons
+ *
+ * Gives a disabled, unclickable appearances for buttons that can't
+ * be clicked, but should still be present in the design. Disabled
+ * buttons should have their actions taken away from them, or have
+ * the disabled attribute.
+ */
 .is-disabled,
 .is-disabled:visited,
 .is-disabled:hover,
