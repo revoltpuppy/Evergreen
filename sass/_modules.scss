@@ -12,17 +12,13 @@
  * E. Page Footer
  * F. Special Typography
  * G. Lists
- *   1. Accordion
- *   2. Link Icons
- *   3. Tag Clouds
- *   4. Alphabetical Order Index
- *   5. Badge List
- * H. Media Segment
- * I. Boxes
- * J. Images
- * K. Event Calendar
- * L. Embedded Content
- * M. CMS
+ * H. Icons
+ * I. Media Segment
+ * J. Boxes
+ * K. Images
+ * L. Event Calendar
+ * M. Embedded Content
+ * N. CMS
  */
 
 .top-links,
@@ -213,421 +209,34 @@
 	content: "\00A0" url("/_inc/images/endnote.png");
 }
 
-	/**
-	* G. Lists
-	*/
-	.text-list{  //Creates a standard bulleted list.
-		//box-model
-		margin-left: 1em;
-		//lists
-		list-style-type: disc;
-		
-		ul{
-			//box-model
-			margin-left:1em;
-			//lists
-			list-style-type:square;
-		}
-	}
-		
-	.singleton a{
-		font-weight: normal;
-	}
-    
-	.feature-list{
-	
-		> li{
-		
-			@media screen and (min-width:22em){
-				margin-right: 2%;
-				width: 49%;
-				float:left;
-				
-				&:nth-child(odd){
-					clear:left;
-				}
-				
-				&:nth-child(even){
-					margin-right: 0;
-				}
-			}
-	    
-			@media screen and (min-width:43em){
-				//box model
-				margin-right: 2%;
-				width: 32%;
-				width: 31.3333333333%\9;  //IE8
-				//layout
-				float: left;
-				
-				&:nth-child(odd){
-					clear: none;
-				}
-				
-				&:nth-child(even){
-					margin-right: 2%;
-				}
-				
-				&:nth-child(3n){
-					margin-right: 0;
-				}
-				
-				&:nth-child(3n+1){
-					clear: left;
-				}
-			}
-		}
-	}
-	
-	.lineup > li{
-		display: inline-block;
-	}
-	
-	.lineup > li img{
-		//box model
-		max-height: 1rem;
-		//layout
-		display: block;
-	}
+/**
+ * G. Lists
+ */
+@import "modules/lists";
 
-	  /**
-	   * 1. Accordion
-	   *
-	   * @subsubsection mod-typography-l-accordion
-	   */
-	  .accordion,
-	  .accordion-table{
-			//box model
-			border: 1px solid  mix(white, $blueberry-susan, 75%);
-			//layout
-			overflow: hidden;
-			//backgrounds & borders
-			background-color:  mix(white, $blueberry-susan, 85%);
-			border-radius: 2px;
-	  }
-	  .accordion dt a,
-	  .accordion dd{
-			padding: 0.631100639515315em 2%;  //15/11.884/2
-	  }
-	  .accordion dt{
-			border-top: 1px solid mix(black, $blueberry-susan, 50%);  //Use border-top, cuz dts aren't last-childs
-			margin-top: 0;
-			
-			&:first-child{  //Use first-child cuz dts aren't last-childs
-				border-top-width: 0;
-			}
-			
-			&:hover{
-			  //backgrounds & borders
-			  background-color: mix(white, $blueberry-susan, 90%);
-			  border-color:  mix(white, $blueberry-susan, 80%);
-			  border-top-color: mix(black, $blueberry-susan, 33%);
-			  //transition
-			  -webkit-transition: background-color .2s ease-out;
-			          transition: background-color .2s ease-out;
-			}
-	  }
-	  .accordion dt a{
-			//box model
-			border-bottom-width: 0;
-			width: 100%;
-			//layout
-			display: block;
-	  }
-	  .accordion dt a:before{
-			//box model
-			margin-right: 2%;
-			//layout
-			display: inline-block;
-			content:"▶";
-	  }
-	  .accordion dd{
-			//box model
-			margin-bottom: 0;
-			//backgrounds & borders
-			background-color: hsl(0, 0%, 95%);
-			//misc
-			box-shadow: inset 0 2px 2px #999;
-	  }
-	  
-	  .accordion-table .group{
-	    font-weight: bold;
-	    color: $blueberry-susan;
-	    
-	    &:hover{
-	    	//typography
-	      color: $sky-blue;
-	      //misc
-	      cursor: pointer;
-	    }
-	  }
-	  
-	  @import "modules/icons";
-
-    /*Lists have a hard time breaking across columns, so there are some tricky fixes here.*/
-    ul.flexible{
-    	//overflow: hidden;
-    	@media screen and (min-width:20em){
-	    	//box model
-	    	margin-left: 0;
-	    	//layout
-        -webkit-column-count: 2;
-           -moz-column-count: 2;
-            -ms-column-count: 2;
-                column-count: 2;
-        -webkit-column-gap: 15px;
-           -moz-column-gap: 15px;
-            -ms-column-gap: 15px;
-                column-gap: 15px;
-				list-style-position: inside;  //a compromise that makes bullets visible
-	    }
-                
-			@media screen and (min-width:32em){
-				-webkit-column-count: 3;
-				   -moz-column-count: 3;
-				    -ms-column-count: 3;
-				        column-count: 3;
-			}
-    }
-		.flexible > li{
-			@media screen and (min-width: 20em){
-	    	//box model
-	    	margin: 0 2% 0.46875rem 2%;  //7.5/16
-	    	//width: 46%;
-	    	//layout
-	    	//float: left;
-	    	overflow: hidden;
-	    	
-	    	/*&::before{
-	    		//box model
-	    		margin-left: -1em;
-	    		//position
-	    		position: absolute;
-	    		//misc
-		    	content: "• "
-	    	}*/
-	    	
-	    	/*&:nth-child(odd){
-		    	clear: left;
-	    	}*/
-			}
-			
-			@media screen and (min-width: 32em){
-				/*width: 29%;
-				
-				&:nth-child(odd){
-					clear: none;
-				}
-				
-				&:nth-child(3n+1){
-					clear: left;
-				}*/
-			}
-		}
-		
-		@media screen and (min-width:32em){
-	        .unit-2-7 .flexible{
-	            -webkit-column-count: 2;
-	               -moz-column-count: 2;
-	                    column-count: 2;
-	        }
-	    }
-	    
-	    .unit-3-7 .flexible{
-			@media screen and (min-width: 70em){
-				-webkit-column-count: 2;
-				   -moz-column-count: 2;
-				        column-count: 2;
-			}
-			
-			@media screen and (min-width: 70em){
-			    -webkit-column-count: 3;
-             -moz-column-count: 3;
-                  column-count: 3;
-            }
-		}
-		
-		/**
-     * 2. Link Icons
-     *
-     * Links with icons attached to them, e.g. PDFs or social media chicklets.
-     */
-    .link-icon::before,
-    .link-icon-alt::before{
-    	//box model
-    	height: 1rem;
-    	width: 1rem;
-    	//layout
-    	display: inline-block;
-    	overflow: hidden;
-    	vertical-align: middle;
-    	//typography
-    	text-indent: 100%;
-    	white-space: nowrap;
-    	//backgrounds & borders
-    	background-repeat: no-repeat;
-      -webkit-background-size: 1rem 1rem;
-         -moz-background-size: 1rem 1rem;
-              background-size: 1rem 1rem;
-      //misc
-      content: "";
-    }
-    .link-icon::after{
-      margin-left: .5em;
-    }
-    .link-icon-alt::before{
-      margin-right: .5em;
-    }
-    .icon-blog::before{
-    	//backgrounds & borders
-      background-image: url("/_inc/images/icons/external/blog32x32.png");
-      content: "Blog";
-    }
-    .icon-facebook::before{
-    	//backgrounds & borders
-      background-image: url("/_inc/images/icons/external/facebook32x32.png");
-      content: "Facebook";
-    }
-    .icon-instagram::before{
-    	//backgrounds & borders
-      background-image: url("/_inc/images/icons/external/instagram32x32.png");
-      content: "Instagram";
-    }
-    .icon-pinterest::before{
-    	//backgrounds & borders
-      background-image: url("/_inc/images/icons/external/pinterest32x32.png");
-      content: "Pinterest";
-    }
-    .icon-twitter::before{
-    	//backgrounds & borders
-      background-image: url("/_inc/images/icons/external/twitter32x32.png");
-      content: "Twitter";
-    }
-    .icon-youtube::before{
-    	//backgrounds & borders
-      background-image: url("/_inc/images/icons/external/youtube32x32.png");
-      content: "YouTube";
-    }
-    
-    
-    /**
-     * 3. Tag Clouds
-     *
-     * Tag cloud sizing.
-     */
-    .few{
-      @include x-rem(font-size, 0.743);
-      
-      a{
-        font-weight: normal;
-      }
-		}
-		.many{
-		    @include base-type-lg;
-		}
-		
-		/**
-     * 4. Alphabetical Order Index
-     *
-     * An index of the letters of the alphabet, for skipping around the page.
-     */
-    .alpha-label{
-    	//box model
-    	border: 1px solid mix(white, $blueberry-susan, 75%);
-    	border-bottom-width: 0;
-	    margin-bottom: -1px;
-	    padding: 0 1em;
-	    //layout
-	    display: inline-block;
-			//backgrounds & borders
-			background-color: mix(white, $blueberry-susan, 85%);
-			border-radius: 2px 2px 0 0;
-    }
-    .alpha-index{
-    	//box model
-			border: 1px solid mix(white, $blueberry-susan, 75%);
-			margin-left: 0;
-			padding-left: 0;
-			//layout
-			display: block;
-			//typography
-			word-wrap: break-word;
-			//backgrounds & borders
-			background-color: mix(white, $blueberry-susan, 85%);
-			border-radius: 2px;
-			//lists
-			list-style-type: none;
-			
-			@media screen and (min-width: 32em){
-				//layout
-				display: -webkit-flex; //Safari 6
-				display:         flex;
-				-webkit-justify-content: space-around;  //Safari 6
-				        justify-content: space-around;
-			}
-    }
-    .alpha-label + .alpha-index{
-	    border-radius-top-left: 0;
-	    margin-top: 0;
-    }
-    .alpha-index > li{
-    	//box model
-    	padding: 0 2px;
-    	//layout
-			display: inline;  //Safari 6, IE 9
-    }
-    
-    /**
-     * 5. Badge List
-     *
-     * Lists of logos, badges, or sponsors.
-     */
-    .badge-list{
-	    -webkit-align-items: center;
-	            align-items: center;
-	    display: -webkit-flex;
-	    display:         flex;
-	    -webkit-flex-wrap: wrap;
-	            flex-wrap: wrap;
-	    -webkit-justify-content: space-around;
-	            justify-content: space-around;
-	    overflow: hidden;
-	    
-	    > li{
-	    	//box model
-		    margin: 0 1em;
-		    //layout
-		    float: left;
-		    //typography
-		    text-align: center;
-	    }
-    }
-    .badge{
-	    max-height: 90px;
-    }
-    
-    .badge-alt{
-	    max-width: 115px;  //For badges in landscape mode
-    }
+/**
+ * H. Icons
+ */
+@import "modules/icons";
     
 /**
- * H. Media Segment
+ * I. Media Segment
  */
 @import "modules/media-segment";
 
 /**
- * I. Boxes
+ * J. Boxes
  */
 @import "modules/boxes";
 
 /**
- * J. Images
+ * K. Images
  */
 @import "modules/images";
 
 
 /**
- * K. Event Calendar
+ * L. Event Calendar
  *
  * @section mod-event-calendar
  */
@@ -858,7 +467,7 @@
 }
 
 /**
- * L. Embeded Content
+ * M. Embeded Content
  */
 .lazy-load{
   //box model
@@ -918,7 +527,7 @@
 }*/
 
 /**
- * M. CMS
+ * N. CMS
  *
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
