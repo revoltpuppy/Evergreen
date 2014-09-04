@@ -755,7 +755,7 @@ ul.accordion-inner { padding: 0 2%; }
 .main-content > p:last-child::after, .main-content > ul:last-child > li:last-child::after, .main-content > ol:last-child > li:last-child::after, .main-content > dl:last-child > dd:last-child::after { white-space: nowrap; content: "\00A0" url("/_inc/images/endnote.png"); }
 
 /** G. Lists */
-/** G. Lists  Table of Contents  1. Text List 2. Feature List 3. Lineup 4. Accordion 5. Flexible Lists 6. Link Icons 7. Tag Clouds 8. Alphabetical Order Index 9. Badge List */
+/** G. Lists  Table of Contents  1. Text List 2. Feature List 3. Lineup 4. Accordion 5. Flexible Lists 6. Link Icons 7. Tag Clouds 8. Alphabetical Order Index 9. Badge List 10. Zebra-Striped */
 /** 1. Text List  Creates a standard bulleted list. Mostly used to override lists behaving badly. */
 .text-list { margin-left: 1em; list-style-type: disc; }
 .text-list ul { margin-left: 1em; list-style-type: square; }
@@ -863,6 +863,10 @@ ul.accordion-inner { padding: 0 2%; }
 .badge { max-height: 90px; }
 
 .badge-alt { max-width: 115px; }
+
+/** 10. Zebra-Striped  A parent container, whose direct children are zebra-striped. Strictly speaking, this doesn't have to be a list element. */
+.zebra-striped > * { padding: 1em; }
+.zebra-striped > *:nth-child(even) { background-color: #e3dfe6; }
 
 /** H. Icons */
 /** Icons */

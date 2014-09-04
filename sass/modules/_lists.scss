@@ -3,15 +3,16 @@
  *
  * Table of Contents
  *
- * 1. Text List
- * 2. Feature List
- * 3. Lineup
- * 4. Accordion
- * 5. Flexible Lists
- * 6. Link Icons
- * 7. Tag Clouds
- * 8. Alphabetical Order Index
- * 9. Badge List
+ *  1. Text List
+ *  2. Feature List
+ *  3. Lineup
+ *  4. Accordion
+ *  5. Flexible Lists
+ *  6. Link Icons
+ *  7. Tag Clouds
+ *  8. Alphabetical Order Index
+ *  9. Badge List
+ * 10. Zebra-Striped
  */
 
 /**
@@ -432,4 +433,22 @@ ul.flexible{
 
 .badge-alt{
   max-width: 115px;  //For badges in landscape mode
+}
+
+
+/**
+ * 10. Zebra-Striped
+ *
+ * A parent container, whose direct children are zebra-striped.
+ * Strictly speaking, this doesn't have to be a list element.
+ */
+.zebra-striped{
+	
+	> *{
+		padding: 1em;
+		
+		&:nth-child(even){
+			background-color: mix(white, $blueberry-susan, 85%);
+		}
+	}
 }
