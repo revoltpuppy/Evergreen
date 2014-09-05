@@ -866,7 +866,7 @@ ul.accordion-inner { padding: 0 2%; }
 
 /** 10. Zebra-Striped  A parent container, whose direct children are zebra-striped. Strictly speaking, this doesn't have to be a list element. */
 .zebra-striped > * { padding: 1em; }
-.zebra-striped > *:nth-child(even) { background-color: #e3dfe6; }
+.zebra-striped > *:nth-child(odd) { background-color: #e3dfe6; }
 
 /** H. Icons */
 /** Icons */

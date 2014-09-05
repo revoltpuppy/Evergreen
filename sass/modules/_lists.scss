@@ -447,7 +447,7 @@ ul.flexible{
 	> *{
 		padding: 1em;
 		
-		&:nth-child(even){
+		&:nth-child(odd){
 			background-color: mix(white, $blueberry-susan, 85%);
 		}
 	}
