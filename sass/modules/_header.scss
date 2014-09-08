@@ -242,7 +242,8 @@ li.internal-users-alt{
 .top-nav-list,
 .menu-button,
 .search-toggle,
-.student-toggle{
+.student-toggle,
+.top-nav-list .active{
     color: white;
     background-color: $evergreen-neue;
 }
