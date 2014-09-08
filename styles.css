@@ -274,7 +274,7 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 
 .grid-list { -webkit-justify-content: flex-start; justify-content: flex-start; }
 
-.unit-1-7, .unit-2-7, .unit-3-7, .unit-4-7, .unit-5-7, .unit-6-7, .unit-1-3, .unit-2-3, .unit-1-2, .unit-1-1 { margin: 0 2%; }
+.unit-1-7, .unit-2-7, .unit-3-7, .unit-4-7, .unit-6-7, .unit-1-3, .unit-2-3, .unit-1-2, .unit-1-1 { margin: 0 2%; }
 
 @media screen and (min-width: 43em) { .unit-1-1 { width: 96%; clear: left; float: left; } }
 @media screen and (min-width: 70em) { .unit-1-1 { margin: 0; width: 100%; } }
@@ -287,35 +287,6 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 .grid .unit-1-2 { margin: 0; padding-right: 1em; width: 100%; float: left; }
 @media screen and (min-width: 32em) { .grid .unit-1-2 { margin-right: 0; width: 50%; } }
 
-/*.unit-1-3-alt{  // Switches up from a one- to a two- and then to a three-column layout.
-	
-	@media screen and (min-width: 43em){
-		//box model
-		margin: 0 1em 0 0;
-		width: -webkit-calc(50% - .5em);  // Safari 6
-		width:         calc(50% - .5em);
-		//layout
-		float: left;
-		
-		&:nth-child(even){
-			margin-right: 0;
-		}
-	}
-	
-	@media screen and (min-width: 70em){
-		margin: 0 2em 0 0;
-		width: -webkit-calc(33.3333333333% - 1.6666666667%);  // Safari 6
-		width:         calc(33.3333333333% - 1.6666666667%);
-		
-		&:nth-child(even){
-			margin-right: 2em;
-		}
-		
-		&:nth-child(3n){
-			margin-right: 0;
-		}
-	}
-}*/
 .grid .unit-1-3-alt { margin: 0; padding-right: 1em; width: 100%; float: left; }
 @media screen and (min-width: 43em) { .grid .unit-1-3-alt { margin-right: 0; width: 50%; }
   .grid .unit-1-3-alt:nth-child(odd) { clear: left; } }
@@ -341,6 +312,20 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 .grid .unit-3-7 { margin: 0; padding-right: 1em; width: 100%; }
 @media screen and (min-width: 43em) { .grid .unit-3-7 { width: 42.857142857143%; float: left; } }
 
+/*.grid .unit-4-7{
+	margin: 0;
+	padding-right: 1em;
+	
+	@media screen and (min-width: 43em){
+		//box model
+		width: 57.142857142857%;
+		//layout
+		float: left;
+	}
+}*/
+.unit-5-7 { margin: 0; padding-right: 1em; }
+@media screen and (min-width: 43em) { .unit-5-7 { width: 71.428571428571%; float: left; } }
+
 .standalone-unit { padding: 0 1em; }
 
 .unit-1-3-alt:last-child, .unit-1-7:last-child, .unit-2-7:last-child { margin-right: 0; }
@@ -365,9 +350,9 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 }*/
 @media screen and (min-width: 43em) { .unit-2-3 { width: 62.66666666667%; float: left; } }
 
-@media screen and (min-width: 43em) { .unit-2-6, .unit-4-6, .unit-4-7, .unit-5-7, .unit-6-7 { margin: 0 2%; float: left; }
+@media screen and (min-width: 43em) { .unit-2-6, .unit-4-6, .unit-4-7, .unit-6-7 { margin: 0 2%; float: left; }
   .unit-4-7 { width: 53.142857142857143%; }
-  .unit-5-7 { width: 67.428571428571429%; }
+  /*.unit-5-7{ 	width: 67.428571428571429%; }*/
   .unit-6-7 { width: 81.714285714285714%; }
   .push-1 { margin-left: 16.285714285714286%; } }
 /** Supplemental Content  section @supplement */
@@ -581,8 +566,9 @@ li.internal-users-alt { display: none; }
 .secondary-nav-link:focus { background-color: #492c5d; }
 
 /** 6. Site Name  The name of the department’s site, e.g. About Evergreen, Web Resources, or Registration */
-.site-name { margin-top: 60px; margin-top: 3.75rem; }
-@media screen and (min-width: 125em) { .site-name h1 { margin-right: 2%; margin-left: 2%; } }
+.site-name { margin-top: 3.75rem; }
+.site-name h1 { margin-right: 2%; margin-left: 2%; }
+@media screen and (min-width: 43em) { .site-name h1 { margin-right: 0; margin-left: 0; } }
 @media screen and (min-height: 35em) { .site-name h1 { margin-bottom: 0.673904em; } }
 
 /** B. Background Image */
