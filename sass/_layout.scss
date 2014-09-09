@@ -43,6 +43,12 @@
 	//layout
 	display: block;
 	
+	&.grid,
+	&.grid-alt{
+		display: -webkit-flex;
+		display:         flex;
+	}
+	
 	@media screen and (min-width: 70em){
 		max-width: 82em;
 	}

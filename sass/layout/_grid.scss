@@ -32,7 +32,8 @@
 	        justify-content: center;
 }
 
-.grid-list{  //Extends .grid
+//.grid-list,  //deprecated, use .grid-alt instead
+.grid-alt{  //Extends .grid
 	-webkit-justify-content: flex-start;
 	        justify-content: flex-start;
 }
