@@ -225,14 +225,14 @@ select:hover { border-bottom-style: dashed; background-color: #e5f2fd; }
 .top-search-button, .search-button { width: 18px; vertical-align: top; }
 
 /** E. Buttons */
-/** Buttons  @section button */
-button, .button, .button:visited { border: 1px solid #0086ee; margin-bottom: 1.262201279030629em; padding: 5px .5em; display: inline-block; color: #333333; font-size: 17px; font-size: 1rem; font-weight: normal; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #99cef8; background-image: -webkit-linear-gradient(#cadec1, #66b6f4); background-image: linear-gradient(#cadec1, #66b6f4); border-radius: .2em; box-shadow: 0 0.2em 0.2em rgba(30, 19, 37, 0.25); }
+/** Buttons  @section button  (Note: Built-in Drupal forms require "input[type='submit']" instead of button.) */
+button, .button, .button:visited, input[type="submit"] { border: 1px solid #0086ee; margin-bottom: 1.262201279030629em; padding: 5px .5em; display: inline-block; color: #333333; font-size: 17px; font-size: 1rem; font-weight: normal; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #99cef8; background-image: -webkit-linear-gradient(#cadec1, #66b6f4); background-image: linear-gradient(#cadec1, #66b6f4); border-radius: .2em; box-shadow: 0 0.2em 0.2em rgba(30, 19, 37, 0.25); }
 
-button:hover, .button:hover { color: #00508e; background-color: #cce6fb; background-image: -webkit-linear-gradient(#cadec1, #99cef8); background-image: linear-gradient(#cadec1, #99cef8); }
+button:hover, .button:hover, input[type="submit"]:hover { color: #00508e; background-color: #cce6fb; background-image: -webkit-linear-gradient(#cadec1, #99cef8); background-image: linear-gradient(#cadec1, #99cef8); }
 
-button:focus, .button:focus { border-color: #999; outline-width: 0; }
+button:focus, .button:focus, input[type="submit"]:focus { border-color: #999; outline-width: 0; }
 
-button:active, .button:active { background-color: #66b6f4; background-image: -webkit-linear-gradient(#66b6f4, #97c8cc); background-image: linear-gradient(#66b6f4, #97c8cc); box-shadow: inset 0 0.1em 0.2em rgba(0, 0, 0, 0.25); }
+button:active, .button:active, input[type="submit"]:active { background-color: #66b6f4; background-image: -webkit-linear-gradient(#66b6f4, #97c8cc); background-image: linear-gradient(#66b6f4, #97c8cc); box-shadow: inset 0 0.1em 0.2em rgba(0, 0, 0, 0.25); }
 
 /** Primary Action Button  The primary action button is meant to be the single default action that a user will expect to take. E.g., Submit would be the .prime button while Cancel would be the default button. */
 .prime, .prime:visited { border-color: #46502b; color: white; text-shadow: 0 -1px 0 rgba(30, 19, 37, 0.25); background-color: #64933a; background-image: -webkit-linear-gradient(#a1b96b, #64933a); background-image: linear-gradient(#a1b96b, #64933a); }
@@ -542,7 +542,7 @@ li.internal-users-alt { display: none; }
 
 .menu-button, .search-toggle, .student-toggle { font-size: 17.008px; font-size: 1.063rem; line-height: 1.764705882352941; }
 
-.top-nav, .top-nav-list, .menu-button, .search-toggle, .student-toggle { color: white; background-color: #64933a; }
+.top-nav, .top-nav-list, .menu-button, .search-toggle, .student-toggle, .top-nav-list .active { color: white; background-color: #64933a; }
 
 /** 4. Primary Nav  The green nav at the top of every page. */
 .top-nav-list { margin: 0 auto; margin-top: 0; width: 100%; min-height: 44px; position: relative; text-align: center; list-style-type: none; }

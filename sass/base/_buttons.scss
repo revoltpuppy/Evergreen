@@ -2,13 +2,14 @@
  * Buttons
  *
  * @section button
- 
- (note: built-in Drupal forms require "input[type='submit']" instead of button.)
+ *
+ * (Note: Built-in Drupal forms require "input[type='submit']"
+ * instead of button.)
  */
 button,
 .button,
 .button:visited, 
-input[type='submit']{
+input[type="submit"]{
 	//box model
 	border: 1px solid $sky-blue;
 	margin-bottom: 1.262201279030629em;  //15/11.884
@@ -31,7 +32,7 @@ input[type='submit']{
 }
 button:hover,
 .button:hover, 
-input[type='submit']:hover{
+input[type="submit"]:hover{
 	color: mix(black, $sky-blue, 40%);
 	//backgrounds & borders
 	background-color: mix(white, $sky-blue, 80%);  //IE 9
@@ -40,13 +41,13 @@ input[type='submit']:hover{
 }
 button:focus,
 .button:focus, 
-input[type='submit']:focus{
+input[type="submit"]:focus{
 	border-color:#999;
 	outline-width:0;
 }
 button:active,
 .button:active, 
-input[type='submit']:active{
+input[type="submit"]:active{
 	//backgrounds & borders
 	background-color: mix(white, $sky-blue, 40%);  //IE 9
 	background-image: -webkit-linear-gradient(mix(white, $sky-blue, 40%), mix($morning-light, $sky-blue, 60%));  //Safari 6, Chrome 25
