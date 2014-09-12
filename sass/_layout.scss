@@ -43,6 +43,12 @@
 	//layout
 	display: block;
 	
+	&.grid,
+	&.grid-alt{
+		display: -webkit-flex;
+		display:         flex;
+	}
+	
 	@media screen and (min-width: 70em){
 		max-width: 82em;
 	}
@@ -190,7 +196,11 @@
 // content on the page.
 .main-content,
 .sidebar{
-	margin: 0 2%;
+	margin: 0 .75em;
+	
+	@media screen and (min-width: 22em){
+		margin: 0 1em;
+	}
 }
 
 .index-wrapper .main-content{

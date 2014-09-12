@@ -509,17 +509,18 @@ li.internal-users-alt{
  * Resources, or Registration
  */
 .site-name{
-	@include x-rem(margin-top, 3.75);  //60/16
+	margin-top: 3.75rem;  //60/16
 	
-	@media screen and (min-width:125em){
-		h1{
-			margin-right: 2%;
-			margin-left: 2%;
-		}
-	}
-	
-	@media screen and (min-height:35em){  //Note this is a height-based media query
-		h1{
+	h1{
+		margin-right: 2%;
+		margin-left: 2%;
+		
+		/*@media screen and (min-width: 43em){
+			margin-right: 0;
+			margin-left: 0;
+		}*/
+		
+		@media screen and (min-height: 35em){  //Note this is a height-based media query
 			margin-bottom: 0.673904em;
 		}
 	}

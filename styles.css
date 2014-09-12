@@ -272,9 +272,9 @@ button:active, .button:active, input[type="submit"]:active { background-color: #
 /** Flexbox-based grid layout  See http://philipwalton.github.io/solved-by-flexbox/demos/grids/ */
 .grid { margin-right: -1em; display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: center; justify-content: center; }
 
-.grid-list { -webkit-justify-content: flex-start; justify-content: flex-start; }
+.grid-alt { -webkit-justify-content: flex-start; justify-content: flex-start; }
 
-.unit-1-7, .unit-2-7, .unit-3-7, .unit-4-7, .unit-5-7, .unit-6-7, .unit-1-3, .unit-2-3, .unit-1-2, .unit-1-1 { margin: 0 2%; }
+.unit-1-7, .unit-2-7, .unit-3-7, .unit-4-7, .unit-6-7, .unit-1-3, .unit-2-3, .unit-1-2, .unit-1-1 { margin: 0 2%; }
 
 @media screen and (min-width: 43em) { .unit-1-1 { width: 96%; clear: left; float: left; } }
 @media screen and (min-width: 70em) { .unit-1-1 { margin: 0; width: 100%; } }
@@ -312,6 +312,20 @@ button:active, .button:active, input[type="submit"]:active { background-color: #
 .grid .unit-3-7 { margin: 0; padding-right: 1em; width: 100%; }
 @media screen and (min-width: 43em) { .grid .unit-3-7 { width: 42.857142857143%; float: left; } }
 
+/*.grid .unit-4-7{
+	margin: 0;
+	padding-right: 1em;
+	
+	@media screen and (min-width: 43em){
+		//box model
+		width: 57.142857142857%;
+		//layout
+		float: left;
+	}
+}*/
+.unit-5-7 { margin: 0; padding-right: 1em; }
+@media screen and (min-width: 43em) { .unit-5-7 { width: 71.428571428571%; float: left; } }
+
 .standalone-unit { padding: 0 1em; }
 
 .unit-1-3-alt:last-child, .unit-1-7:last-child, .unit-2-7:last-child { margin-right: 0; }
@@ -336,9 +350,9 @@ button:active, .button:active, input[type="submit"]:active { background-color: #
 }*/
 @media screen and (min-width: 43em) { .unit-2-3 { width: 62.66666666667%; float: left; } }
 
-@media screen and (min-width: 43em) { .unit-2-6, .unit-4-6, .unit-4-7, .unit-5-7, .unit-6-7 { margin: 0 2%; float: left; }
+@media screen and (min-width: 43em) { .unit-2-6, .unit-4-6, .unit-4-7, .unit-6-7 { margin: 0 2%; float: left; }
   .unit-4-7 { width: 53.142857142857143%; }
-  .unit-5-7 { width: 67.428571428571429%; }
+  /*.unit-5-7{ 	width: 67.428571428571429%; }*/
   .unit-6-7 { width: 81.714285714285714%; }
   .push-1 { margin-left: 16.285714285714286%; } }
 /** Supplemental Content  section @supplement */
@@ -356,6 +370,7 @@ button:active, .button:active, input[type="submit"]:active { background-color: #
 
 /** B. Page-level Layout */
 .wrapper { margin: 0 auto; width: 100%; display: block; }
+.wrapper.grid, .wrapper.grid-alt { display: -webkit-flex; display: flex; }
 @media screen and (min-width: 70em) { .wrapper { max-width: 82em; } }
 
 .wrapper:before, .wrapper:after { width: 0; content: ""; display: table; clear: both; }
@@ -391,7 +406,8 @@ button:active, .button:active, input[type="submit"]:active { background-color: #
 @media screen and (min-width: 43em) { .sidebar-wrapper { margin-left: 20%; width: 78%; } }
 @media screen and (min-width: 70em) { .sidebar-wrapper { margin-left: 2%; width: 24.571428571429%; } }
 
-.main-content, .sidebar { margin: 0 2%; }
+.main-content, .sidebar { margin: 0 .75em; }
+@media screen and (min-width: 22em) { .main-content, .sidebar { margin: 0 1em; } }
 
 @media screen and (min-width: 43em) { .index-wrapper .main-content { margin-left: 5.675675675675676%; } }
 @media screen and (min-width: 70em) { .index-wrapper .main-content { margin: 0 3.626279863481%; } }
@@ -552,8 +568,11 @@ li.internal-users-alt { display: none; }
 .secondary-nav-link:focus { background-color: #492c5d; }
 
 /** 6. Site Name  The name of the department’s site, e.g. About Evergreen, Web Resources, or Registration */
-.site-name { margin-top: 60px; margin-top: 3.75rem; }
-@media screen and (min-width: 125em) { .site-name h1 { margin-right: 2%; margin-left: 2%; } }
+.site-name { margin-top: 3.75rem; }
+.site-name h1 { margin-right: 2%; margin-left: 2%; /*@media screen and (min-width: 43em){
+	margin-right: 0;
+	margin-left: 0;
+}*/ }
 @media screen and (min-height: 35em) { .site-name h1 { margin-bottom: 0.673904em; } }
 
 /** B. Background Image */
