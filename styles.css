@@ -524,16 +524,16 @@ li.internal-users-alt { display: none; }
 @media screen and (min-width: 43em) { .top-nav-list > li { height: auto; } }
 .top-nav-list:before, .top-nav-list:after { width: 0; display: table; clear: both; content: ""; }
 
-.top-nav-link { display: block; }
-.top-nav-link:hover { background-color: #857192; color: white; box-shadow: 0 0 2px rgba(253, 243, 180, 0.5) inset; -webkit-transition: all .1s ease-out; transition: all .1s ease-out; }
-.top-nav-link:focus { background-color: #492c5d; }
-@media screen and (min-width: 20em) { .top-nav-link { display: -webkit-flex; display: -ms-flex; display: flex; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; font-weight: normal; text-shadow: 0 1px 1em #1e1325; } }
-@media screen and (min-width: 70em) { .top-nav-link { font-size: inherit; line-height: inherit; } }
+.top-nav-list a, .top-nav-link { display: block; }
+.top-nav-list a:hover, .top-nav-link:hover { background-color: #857192; color: white; box-shadow: 0 0 2px rgba(253, 243, 180, 0.5) inset; -webkit-transition: all .1s ease-out; transition: all .1s ease-out; }
+.top-nav-list a:focus, .top-nav-link:focus { background-color: #492c5d; }
+@media screen and (min-width: 20em) { .top-nav-list a, .top-nav-link { display: -webkit-flex; display: -ms-flex; display: flex; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; font-weight: normal; text-shadow: 0 1px 1em #1e1325; } }
+@media screen and (min-width: 70em) { .top-nav-list a, .top-nav-link { font-size: inherit; line-height: inherit; } }
 
-.top-nav-link, .top-nav-link:visited { border-bottom-width: 0; padding: 17px 2px; padding: 0.46875rem 0.25rem; width: 100%; color: #fff; }
-@media screen and (min-width: 22em) { .top-nav-link, .top-nav-link:visited { font-weight: bold; } }
-@media screen and (min-width: 32em) { .top-nav-link, .top-nav-link:visited { text-shadow: none; } }
-@media screen and (min-width: 43em) { .top-nav-link, .top-nav-link:visited { font-weight: bold; } }
+.top-nav-list a, .top-nav-list a:visited, .top-nav-link, .top-nav-link:visited { border-bottom-width: 0; padding: 17px 2px; padding: 0.46875rem 0.25rem; width: 100%; color: #fff; }
+@media screen and (min-width: 22em) { .top-nav-list a, .top-nav-list a:visited, .top-nav-link, .top-nav-link:visited { font-weight: bold; } }
+@media screen and (min-width: 32em) { .top-nav-list a, .top-nav-list a:visited, .top-nav-link, .top-nav-link:visited { text-shadow: none; } }
+@media screen and (min-width: 43em) { .top-nav-list a, .top-nav-list a:visited, .top-nav-link, .top-nav-link:visited { font-weight: bold; } }
 
 /** 5. Secondary Nav  The textured nav immediately below the primary nav on the homepage only. */
 .secondary-nav-list { border-top: 1px solid #46502b; margin: 0; padding: 0; overflow: hidden; text-align: center; background: #64933a url(images/texture-1.png); list-style-type: none; }
