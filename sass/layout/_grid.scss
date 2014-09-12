@@ -80,7 +80,7 @@
 	@media screen and (min-width: 32em){
 		//box model
 		margin: 0 1em 0 0;
-		width: -webkit-calc(50% - .5em);
+		width: -webkit-calc(50% - .5em);  // Safari 6
 		width:         calc(50% - .5em);
 		//layout
 		float: left;
@@ -109,37 +109,7 @@
 	}
 }
 
-/*.unit-1-3-alt{  // Switches up from a one- to a two- and then to a three-column layout.
-	
-	@media screen and (min-width: 43em){
-		//box model
-		margin: 0 1em 0 0;
-		width: -webkit-calc(50% - .5em);  // Safari 6
-		width:         calc(50% - .5em);
-		//layout
-		float: left;
-		
-		&:nth-child(even){
-			margin-right: 0;
-		}
-	}
-	
-	@media screen and (min-width: 70em){
-		margin: 0 2em 0 0;
-		width: -webkit-calc(33.3333333333% - 1.6666666667%);  // Safari 6
-		width:         calc(33.3333333333% - 1.6666666667%);
-		
-		&:nth-child(even){
-			margin-right: 2em;
-		}
-		
-		&:nth-child(3n){
-			margin-right: 0;
-		}
-	}
-}*/
-
-.grid .unit-1-3-alt{
+.grid .unit-1-3-alt{  // Switches up from a one- to a two- and then to a three-column layout.
 	//box model
 	margin: 0;
 	padding-right: 1em;
@@ -253,9 +223,9 @@
 	padding: 0 1em;
 }
 
-.unit-1-3-alt:last-child,  //deprecated
-.unit-1-7:last-child,  //deprecated
-.unit-2-7:last-child{  //deprecated
+.unit-1-3-alt:last-child,  // deprecated
+.unit-1-7:last-child,  // deprecated
+.unit-2-7:last-child{  // deprecated
 	margin-right: 0;
 }
 
@@ -328,10 +298,10 @@
  */
 
 @media screen and (min-width:20em){
-	.right,  //deprecated
+	.right,  // deprecated
 	.supplement,  //This should mirror .supplement-1-2; it’s just a more user-friendly name
-	.supplement-1-2,
-	.supplement-2-7{  //deprecated
+	.supplement-1-2,  // deprecated
+	.supplement-2-7{  // deprecated
 	    //box model
 	    margin-left: 6%;
 	    width: 47%;
@@ -340,22 +310,22 @@
 	}
 }
 @media screen and (min-width:22em){
-	.supplement-2-7{  //deprecated
+	.supplement-2-7{  // deprecated
 		width: 31.3333333333%;
 	}
 }
 @media screen and (min-width:32em){
-	.supplement-2-7{  //deprecated
+	.supplement-2-7{  // deprecated
 		width: 26.571428571428571%;
 	}
-	.supplement-3-7{  //deprecated
+	.supplement-3-7{  // deprecated
 		margin-left: 2%;
 		width: 40.857142857142857%;
 		float: right;
 	}
 }
 @media screen and (min-width: 43em){
-	.right,  //deprecated
+	.right,  // deprecated
 	.supplement,
 	.supplement-1-2{
 		//box model
