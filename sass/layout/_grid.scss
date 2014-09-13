@@ -285,8 +285,8 @@
 }
 
 @media screen and (min-width:43em){
-	.unit-2-6,  //deprecated; use .unit-1-3 instead
-	.unit-4-6,  //deprecated; use .unit-2-3 instead
+	/*.unit-2-6,  // deprecated; use .unit-1-3 instead
+	.unit-4-6,  // deprecated; use .unit-2-3 instead*/
 	.unit-4-7,
 	.unit-6-7{
 		margin: 0 2%;
@@ -302,9 +302,9 @@
 		width: 81.714285714285714%;
 	}
 	
-	.push-1{
-		margin-left:16.285714285714286%;
-	}
+	/*.push-1{
+		margin-left: 16.285714285714286%;
+	}*/
 }
 
 /**
