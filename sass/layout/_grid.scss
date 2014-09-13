@@ -191,15 +191,14 @@
 	margin: 0;
 	padding-right: 1em;
 	width: 33.3333333333%;
+	//layout
+	float: left;
 	
 	@media screen and (min-width: 43em){
 		//box model
 		width: 14.285714285714%;
-		//layout
-		float: left;
 	}
 }
-
 
 .grid .unit-2-7{
 	margin: 0;
