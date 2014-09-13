@@ -266,10 +266,10 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
  * E. Hidden Elements
  */
 /** A. Grid  Styles related to the grid system.  @section l-grid */
-/** Grid  Unit layout and sizing for the grid system.  @section grid */
+/** A. Grid  Unit layout and sizing for the grid system.  Table of Contents  1. Flexbox-based Grid Layout 2. Float-based Grid Layout 3. Supplemental Content */
 .row { width: 100%; clear: both; display: block; }
 
-/** Flexbox-based grid layout  See http://philipwalton.github.io/solved-by-flexbox/demos/grids/ */
+/** 1. Flexbox-based Grid Layout  See http://philipwalton.github.io/solved-by-flexbox/demos/grids/  Use the flexbox-based grid whenever possible. Styles still in the float-based grid are being updated over time. All grid units should eventually be flexbox-based. */
 .grid { margin-right: -1em; display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: center; justify-content: center; }
 
 .grid-alt { -webkit-justify-content: flex-start; justify-content: flex-start; }
@@ -294,6 +294,12 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
   .grid .unit-1-3-alt:nth-child(odd) { clear: none; }
   .grid .unit-1-3-alt:nth-child(3n+1) { clear: left; } }
 
+.unit-1-6 { margin: 0; padding-right: 1em; width: 33.3333333333%; float: left; }
+@media screen and (min-width: 43em) { .unit-1-6 { width: 16.666666666667%; } }
+
+.unit-1-6-alt { margin: 0; padding-right: 1em; width: 33.3333333333%; float: left; }
+@media screen and (min-width: 32em) { .unit-1-6-alt { width: 16.666666666667%; } }
+
 .unit-1-7 { margin: 0 1em 0 0; }
 @media screen and (min-width: 43em) { .unit-1-7 { width: 10.285714285714286%; width: -webkit-calc(14.285714285714% - 1em); width: calc(14.285714285714% - 1em); float: left; } }
 
@@ -303,8 +309,8 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 .unit-3-7 { margin: 0; }
 @media screen and (min-width: 43em) { .unit-3-7 { margin: 0 2em 0 0; width: -webkit-calc(42.857142857143% - 1.3333333333em); width: calc(42.857142857143% - 1.3333333333em); float: left; } }
 
-.grid .unit-1-7 { margin: 0; padding-right: 1em; width: 33.3333333333%; }
-@media screen and (min-width: 43em) { .grid .unit-1-7 { width: 14.285714285714%; float: left; } }
+.grid .unit-1-7 { margin: 0; padding-right: 1em; width: 33.3333333333%; float: left; }
+@media screen and (min-width: 43em) { .grid .unit-1-7 { width: 14.285714285714%; } }
 
 .grid .unit-2-7 { margin: 0; padding-right: 1em; width: 100%; }
 @media screen and (min-width: 43em) { .grid .unit-2-7 { width: 28.571428571429%; float: left; } }
@@ -330,32 +336,18 @@ button:active, .button:active { background-color: #66b6f4; background-image: -we
 
 .unit-1-3-alt:last-child, .unit-1-7:last-child, .unit-2-7:last-child { margin-right: 0; }
 
-/** Old Grid Units  These grid units still need to be converted to the flexbox-based grid. */
+/** 2. Float-based Grid Layout  These grid units still need to be converted to the flexbox-based grid system. */
 @media screen and (min-width: 43em) { .unit-1-3 { width: 29.3333333333%; float: left; } }
 
-/*.unit-1-3-alt{  // Switches up from a one- to a two- and then to a three-column layout.
-	@media screen and (min-width: 43em){
-		//box model
-		width: 46%;
-		//layout
-		float: left;
-	}
-	
-	@media screen and (min-width: 70em){
-		//box model
-		width: 29.3333333333%;
-		//layout
-		float: left;
-	}
-}*/
 @media screen and (min-width: 43em) { .unit-2-3 { width: 62.66666666667%; float: left; } }
 
-@media screen and (min-width: 43em) { .unit-2-6, .unit-4-6, .unit-4-7, .unit-6-7 { margin: 0 2%; float: left; }
+@media screen and (min-width: 43em) { /*.unit-2-6,  // deprecated; use .unit-1-3 instead .unit-4-6,  // deprecated; use .unit-2-3 instead*/
+  .unit-4-7, .unit-6-7 { margin: 0 2%; float: left; }
   .unit-4-7 { width: 53.142857142857143%; }
   /*.unit-5-7{ 	width: 67.428571428571429%; }*/
   .unit-6-7 { width: 81.714285714285714%; }
-  .push-1 { margin-left: 16.285714285714286%; } }
-/** Supplemental Content  section @supplement */
+  /*.push-1{ 	margin-left: 16.285714285714286%; }*/ }
+/** 3. Supplemental Content  section @supplement */
 @media screen and (min-width: 20em) { .right, .supplement, .supplement-1-2, .supplement-2-7 { margin-left: 6%; width: 47%; float: right; } }
 @media screen and (min-width: 22em) { .supplement-2-7 { width: 31.3333333333%; } }
 @media screen and (min-width: 32em) { .supplement-2-7 { width: 26.571428571428571%; }
@@ -864,19 +856,40 @@ ul.accordion-inner { padding: 0 2%; }
 .inline-icon { margin-right: .25em; max-height: 1em; display: inline; }
 
 /** 2. Related Nav  Related links with iconographic circles. */
-.related-nav { display: -webkit-flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
+/*.related-nav{
+	display: -webkit-flex;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}*/
+.related-nav > li { margin: 0.9375rem 0; /*margin-right: 2em;
+width: -webkit-calc(33.3333333333% - 1.3333333333em);
+width:         calc(33.3333333333% - 1.3333333333em);*/ display: block; vertical-align: top; float: left; text-align: center; }
+@media screen and (min-width: 32em) { .related-nav > li { /*margin-right: 1em;
+width: -webkit-calc(16.6666666667% - 0.8333333333em);
+width:         calc(16.6666666667% - 0.8333333333em);*/ } }
 
-.related-nav > li { margin: 0.9375rem 0; margin-right: 2em; width: -webkit-calc(33.3333333333% - 1.3333333333em); width: calc(33.3333333333% - 1.3333333333em); display: block; vertical-align: top; float: left; text-align: center; }
-@media screen and (min-width: 32em) { .related-nav > li { margin-right: 1em; width: -webkit-calc(16.6666666667% - 0.8333333333em); width: calc(16.6666666667% - 0.8333333333em); } }
+/*.related-nav > li:nth-child(3n){
+	margin-right: 0;
+	
+	@media screen and (min-width: 32em){
+		//box model
+		margin-right: 1em;
+	}
+}
+.related-nav > li:nth-child(3n+1){
+	//box model
+	margin-left: 0;
+	//layout
+	clear: left;
+	
+	@media screen and (min-width: 32em){
+		clear: none;
+	}
+}
 
-.related-nav > li:nth-child(3n) { margin-right: 0; }
-@media screen and (min-width: 32em) { .related-nav > li:nth-child(3n) { margin-right: 1em; } }
-
-.related-nav > li:nth-child(3n+1) { margin-left: 0; clear: left; }
-@media screen and (min-width: 32em) { .related-nav > li:nth-child(3n+1) { clear: none; } }
-
-.related-nav > li:last-child { margin-right: 0; }
-
+.related-nav > li:last-child{
+	margin-right: 0;
+}*/
 .related-nav a, .related-nav a:link, .related-nav a:visited { color: #64933a; }
 
 .related-nav a:hover { color: #0086ee; }

@@ -148,6 +148,36 @@
 	}
 }
 
+.unit-1-6{
+	//box model
+	margin: 0;
+	padding-right: 1em;
+	width: 33.3333333333%;
+	//layout
+	float: left;
+	
+	
+	@media screen and (min-width: 43em){
+		//box model
+		width: 16.666666666667%;
+	}
+}
+
+.unit-1-6-alt{  // Switches from 3 to 6 columns at an earlier breakpoint.
+	//box model
+	margin: 0;
+	padding-right: 1em;
+	width: 33.3333333333%;
+	//layout
+	float: left;
+	
+	
+	@media screen and (min-width: 32em){
+		//box model
+		width: 16.666666666667%;
+	}
+}
+
 .unit-1-7{  //deprecated; use .grid .unit-1-7 instead
 	margin: 0 1em 0 0;
 	

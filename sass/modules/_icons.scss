@@ -22,17 +22,17 @@
  *
  * Related links with iconographic circles.
  */
-.related-nav{
-	display: -webkit-flex;  //Note: Firefox does not support flex-wrap.
+/*.related-nav{
+	display: -webkit-flex;
 	-webkit-flex-wrap: wrap;
 	        flex-wrap: wrap;
-}
+}*/
 .related-nav > li{
 	//box model
 	margin: 0.9375rem 0;  // 15/16
-	margin-right: 2em;
+	/*margin-right: 2em;
 	width: -webkit-calc(33.3333333333% - 1.3333333333em);
-	width:         calc(33.3333333333% - 1.3333333333em);
+	width:         calc(33.3333333333% - 1.3333333333em);*/
 	//layout
 	display: block;
 	vertical-align: top;
@@ -41,12 +41,12 @@
 	text-align: center;
 	
 	@media screen and (min-width: 32em){
-		margin-right: 1em;
+		/*margin-right: 1em;
 		width: -webkit-calc(16.6666666667% - 0.8333333333em);
-		width:         calc(16.6666666667% - 0.8333333333em);
+		width:         calc(16.6666666667% - 0.8333333333em);*/
 	}
 }
-.related-nav > li:nth-child(3n){
+/*.related-nav > li:nth-child(3n){
 	margin-right: 0;
 	
 	@media screen and (min-width: 32em){
@@ -67,7 +67,7 @@
 
 .related-nav > li:last-child{
 	margin-right: 0;
-}
+}*/
 
 .related-nav a,
 .related-nav a:link,
