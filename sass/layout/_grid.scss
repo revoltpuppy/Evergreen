@@ -1,9 +1,13 @@
 /**
- * Grid
+ * A. Grid
  *
  * Unit layout and sizing for the grid system.
  *
- * @section grid
+ * Table of Contents
+ *
+ * 1. Flexbox-based Grid Layout
+ * 2. Float-based Grid Layout
+ * 3. Supplemental Content
  */
 
 .row{
@@ -16,9 +20,13 @@
 
 
 /**
- * Flexbox-based grid layout
+ * 1. Flexbox-based Grid Layout
  *
  * See http://philipwalton.github.io/solved-by-flexbox/demos/grids/
+ *
+ * Use the flexbox-based grid whenever possible. Styles still in
+ * the float-based grid are being updated over time. All grid units
+ * should eventually be flexbox-based.
  */
 .grid{
 	//box model
@@ -109,7 +117,7 @@
 	}
 }
 
-.grid .unit-1-3-alt{
+.grid .unit-1-3-alt{ // Switches up from a one- to a two- and then to a three-column layout.
 	//box model
 	margin: 0;
 	padding-right: 1em;
@@ -300,7 +308,7 @@
 }
 
 /**
- * Supplemental Content
+ * 3. Supplemental Content
  *
  * section @supplement
  */
