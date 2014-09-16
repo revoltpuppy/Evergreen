@@ -225,14 +225,14 @@ select:hover { border-bottom-style: dashed; background-color: #e5f2fd; }
 .top-search-button, .search-button { width: 18px; vertical-align: top; }
 
 /** E. Buttons */
-/** Buttons  @section button */
-button, .button, .button:visited { border: 1px solid #0086ee; margin-bottom: 1.262201279030629em; padding: 5px .5em; display: inline-block; color: #333333; font-size: 17px; font-size: 1rem; font-weight: normal; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #99cef8; background-image: -webkit-linear-gradient(#cadec1, #66b6f4); background-image: linear-gradient(#cadec1, #66b6f4); border-radius: .2em; box-shadow: 0 0.2em 0.2em rgba(30, 19, 37, 0.25); }
+/** Buttons  @section button  (Note: Built-in Drupal forms require "input[type='submit']" instead of button.) */
+button, .button, .button:visited, input[type="submit"] { border: 1px solid #0086ee; margin-bottom: 1.262201279030629em; padding: 5px .5em; display: inline-block; color: #333333; font-size: 17px; font-size: 1rem; font-weight: normal; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #99cef8; background-image: -webkit-linear-gradient(#cadec1, #66b6f4); background-image: linear-gradient(#cadec1, #66b6f4); border-radius: .2em; box-shadow: 0 0.2em 0.2em rgba(30, 19, 37, 0.25); }
 
-button:hover, .button:hover { color: #00508e; background-color: #cce6fb; background-image: -webkit-linear-gradient(#cadec1, #99cef8); background-image: linear-gradient(#cadec1, #99cef8); }
+button:hover, .button:hover, input[type="submit"]:hover { color: #00508e; background-color: #cce6fb; background-image: -webkit-linear-gradient(#cadec1, #99cef8); background-image: linear-gradient(#cadec1, #99cef8); }
 
-button:focus, .button:focus { border-color: #999; outline-width: 0; }
+button:focus, .button:focus, input[type="submit"]:focus { border-color: #999; outline-width: 0; }
 
-button:active, .button:active { background-color: #66b6f4; background-image: -webkit-linear-gradient(#66b6f4, #97c8cc); background-image: linear-gradient(#66b6f4, #97c8cc); box-shadow: inset 0 0.1em 0.2em rgba(0, 0, 0, 0.25); }
+button:active, .button:active, input[type="submit"]:active { background-color: #66b6f4; background-image: -webkit-linear-gradient(#66b6f4, #97c8cc); background-image: linear-gradient(#66b6f4, #97c8cc); box-shadow: inset 0 0.1em 0.2em rgba(0, 0, 0, 0.25); }
 
 /** Primary Action Button  The primary action button is meant to be the single default action that a user will expect to take. E.g., Submit would be the .prime button while Cancel would be the default button. */
 .prime, .prime:visited { border-color: #46502b; color: white; text-shadow: 0 -1px 0 rgba(30, 19, 37, 0.25); background-color: #64933a; background-image: -webkit-linear-gradient(#a1b96b, #64933a); background-image: linear-gradient(#a1b96b, #64933a); }
@@ -521,7 +521,7 @@ li.internal-users-alt { display: none; }
 
 .menu-button, .search-toggle, .student-toggle { font-size: 17.008px; font-size: 1.063rem; line-height: 1.764705882352941; }
 
-.top-nav, .top-nav-list, .menu-button, .search-toggle, .student-toggle { color: white; background-color: #64933a; }
+.top-nav, .top-nav-list, .menu-button, .search-toggle, .student-toggle, .top-nav-list .active { color: white; background-color: #64933a; }
 
 /** 4. Primary Nav  The green nav at the top of every page. */
 .top-nav-list { margin: 0 auto; margin-top: 0; width: 100%; min-height: 44px; position: relative; text-align: center; list-style-type: none; }
@@ -532,16 +532,16 @@ li.internal-users-alt { display: none; }
 @media screen and (min-width: 43em) { .top-nav-list > li { height: auto; } }
 .top-nav-list:before, .top-nav-list:after { width: 0; display: table; clear: both; content: ""; }
 
-.top-nav-link { display: block; }
-.top-nav-link:hover { background-color: #857192; color: white; box-shadow: 0 0 2px rgba(253, 243, 180, 0.5) inset; -webkit-transition: all .1s ease-out; transition: all .1s ease-out; }
-.top-nav-link:focus { background-color: #492c5d; }
-@media screen and (min-width: 20em) { .top-nav-link { display: -webkit-flex; display: -ms-flex; display: flex; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; font-weight: normal; text-shadow: 0 1px 1em #1e1325; } }
-@media screen and (min-width: 70em) { .top-nav-link { font-size: inherit; line-height: inherit; } }
+.top-nav-list a, .top-nav-link { display: block; }
+.top-nav-list a:hover, .top-nav-link:hover { background-color: #857192; color: white; box-shadow: 0 0 2px rgba(253, 243, 180, 0.5) inset; -webkit-transition: all .1s ease-out; transition: all .1s ease-out; }
+.top-nav-list a:focus, .top-nav-link:focus { background-color: #492c5d; }
+@media screen and (min-width: 20em) { .top-nav-list a, .top-nav-link { display: -webkit-flex; display: -ms-flex; display: flex; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; font-weight: normal; text-shadow: 0 1px 1em #1e1325; } }
+@media screen and (min-width: 70em) { .top-nav-list a, .top-nav-link { font-size: inherit; line-height: inherit; } }
 
-.top-nav-link, .top-nav-link:visited { border-bottom-width: 0; padding: 17px 2px; padding: 0.46875rem 0.25rem; width: 100%; color: #fff; }
-@media screen and (min-width: 22em) { .top-nav-link, .top-nav-link:visited { font-weight: bold; } }
-@media screen and (min-width: 32em) { .top-nav-link, .top-nav-link:visited { text-shadow: none; } }
-@media screen and (min-width: 43em) { .top-nav-link, .top-nav-link:visited { font-weight: bold; } }
+.top-nav-list a, .top-nav-list a:visited, .top-nav-link, .top-nav-link:visited { border-bottom-width: 0; padding: 17px 2px; padding: 0.46875rem 0.25rem; width: 100%; color: #fff; }
+@media screen and (min-width: 22em) { .top-nav-list a, .top-nav-list a:visited, .top-nav-link, .top-nav-link:visited { font-weight: bold; } }
+@media screen and (min-width: 32em) { .top-nav-list a, .top-nav-list a:visited, .top-nav-link, .top-nav-link:visited { text-shadow: none; } }
+@media screen and (min-width: 43em) { .top-nav-list a, .top-nav-list a:visited, .top-nav-link, .top-nav-link:visited { font-weight: bold; } }
 
 /** 5. Secondary Nav  The textured nav immediately below the primary nav on the homepage only. */
 .secondary-nav-list { border-top: 1px solid #46502b; margin: 0; padding: 0; overflow: hidden; text-align: center; background: #64933a url(images/texture-1.png); list-style-type: none; }
