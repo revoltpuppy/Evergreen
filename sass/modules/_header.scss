@@ -242,7 +242,8 @@ li.internal-users-alt{
 .top-nav-list,
 .menu-button,
 .search-toggle,
-.student-toggle{
+.student-toggle,
+.top-nav-list .active{
     color: white;
     background-color: $evergreen-neue;
 }
@@ -319,6 +320,7 @@ li.internal-users-alt{
   }
 }
 
+.top-nav-list a,
 .top-nav-link{
 	//layout
 	display: block;
@@ -361,6 +363,8 @@ li.internal-users-alt{
 		line-height: inherit;
 	}
 }
+.top-nav-list a,
+.top-nav-list a:visited,
 .top-nav-link,
 .top-nav-link:visited{
 	//box model
