@@ -16,7 +16,7 @@
  * I. Media Segment
  * J. Boxes
  * K. Images
- * L. Event Calendar
+ * L. Calendars
  * M. Embedded Content
  * N. CMS
  */
@@ -236,61 +236,66 @@
 
 
 /**
- * L. Event Calendar
+ * L. Calendars
  *
  * @section mod-event-calendar
  */
-/*.event-dt{
-	@include small-type;
-	font-weight: bold;
-	line-height: 1.892664872139973;
-	text-transform: uppercase;
-}
-.event-calendar .h-event{
-	margin-top: 0.535714285714286em;  //22.5/14/3
-	margin-bottom: 1.071428571428571em;  //15/14  So, 22.5 + 7.5 + 15 = 45
-}
-@media screen and (min-width:43em){
+	/**
+	 * 1. Event Calendar
+	 *
+	 * @section mod-event-calendar
+	 */
+	/*.event-dt{
+		@include small-type;
+		font-weight: bold;
+		line-height: 1.892664872139973;
+		text-transform: uppercase;
+	}
 	.event-calendar .h-event{
 		margin-top: 0.441176470588235em;  //22.5/17/3
 		margin-bottom: 0.882352941176471em;  //15/17  So, 22.5 + 7.5 + 15 = 45
 	}
-}*/
-
-.calendar-dt{
-	//box model
-	border: 1px solid mix(white, $blueberry-susan, 66%);
-	margin: 0 auto;
-	max-width: 3em;
-	//layout
-	overflow: hidden;
-	//typography
-	text-align: center;
-	//backgrounds and borders
-	background-color: hsl(0, 0%, 95%);
-	border-radius: 2px;
-}
-
-.calendar-month{
-	//box model
-	padding: 0 .5em;
-	width: 100%;
-	//layout
-	display: block;
-	//typography
-	color: hsl(0, 0%, 100%);
-	@include small-type;
-	font-weight: bold;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	//backgrounds and borders
-	background-color: $wine;
-}
-
-
-
+	@media screen and (min-width:43em){
+		.event-calendar .h-event{
+			margin-top: 0.441176470588235em;  //22.5/17/3
+			margin-bottom: 0.882352941176471em;  //15/17  So, 22.5 + 7.5 + 15 = 45
+		}
+	}*/
+	
+	.calendar-dt{
+		//box model
+		border: 1px solid mix(white, $blueberry-susan, 66%);
+		margin: 0 auto;
+		max-width: 3em;
+		//layout
+		overflow: hidden;
+		//typography
+		text-align: center;
+		//backgrounds and borders
+		background-color: hsl(0, 0%, 95%);
+		border-radius: 2px;
+	}
+	
+	.calendar-month{
+		//box model
+		padding: 0 .5em;
+		width: 100%;
+		//layout
+		display: block;
+		//typography
+		color: hsl(0, 0%, 100%);
+		@include small-type;
+		font-weight: bold;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		//backgrounds and borders
+		background-color: $wine;
+	}
+	
+	
+	
 	/**
-	 * Homepage Upcoming Events
+	 * 2. Homepage Upcoming Events
 	 *
 	 * The box on the homepage featuring upcoming events from the
 	 * calendar. This should track pretty closely to the tertiary
@@ -377,94 +382,96 @@
 			}
 		}
 	}
-
-/**
- * Event Schedule
- *
- * @section mod-event-calendar
- */
-.schedule{
-	.h-event{
-		//box model
-		padding: 1em;
-		//layout
-		display: -webkit-flex;
-		display:         flex;
-		-webkit-flex-direction: column;
-		        flex-direction: column;
-		overflow: hidden;
-		//backgrounds & borders
-		border-radius: 2px;
-		
-		&:nth-child(even){
-			background-color: mix(white, $blueberry-susan, 85%);
-		}
-	}
 	
-	.schedule-event-required{
-		border: 2px solid $evergreen-neue;
+	/**
+	 * 3. Schedule of Events
+	 *
+	 * @section mod-event-calendar
+	 */
+	.schedule{
+		@include margin-default;
 		
-		+ .schedule-event-required{
-			margin-top: 2px;
+		.h-event{
+			//box model
+			padding: 1em;
+			//layout
+			display: -webkit-flex;
+			display:         flex;
+			-webkit-flex-direction: column;
+			        flex-direction: column;
+			overflow: hidden;
+			//backgrounds & borders
+			border-radius: 2px;
+			
+			&:nth-child(even){
+				background-color: mix(white, $blueberry-susan, 85%);
+			}
 		}
 		
-		&:nth-of-type(odd){
-			background-color: mix(white, $evergreen-neue, 90%);
+		.schedule-event-required{
+			border: 2px solid $evergreen-neue;
+			
+			+ .schedule-event-required{
+				margin-top: 2px;
+			}
+			
+			&:nth-of-type(odd){
+				background-color: mix(white, $evergreen-neue, 90%);
+			}
+			
+			&:nth-of-type(even){
+				background-color: mix(white, $evergreen-neue, 80%);
+			}
+			
+			.p-name{
+				color: $evergreen-old-style;
+			}
 		}
 		
-		&:nth-of-type(even){
-			background-color: mix(white, $evergreen-neue, 80%);
+		.schedule-event-morning{
+			background-color: $morning-light;
 		}
 		
-		.p-name{
+		.schedule-event-evening{
+		
+			&:nth-of-type(odd){
+				background-color: mix(white, $sky-blue, 90%);
+			}
+			
+			&:nth-of-type(even){
+				background-color: mix(white, $sky-blue, 80%);
+			}
+			
+			.p-name{
+				color: mix(black, $sky-blue, 60%);
+			}
+		}
+		
+		.schedule-event-evening-start::before{
+			//box model
+			border-bottom: 1px solid $sky-blue;
+			width: 100%;
+			//layout
+			display: block;
+			//typography
+			text-align: center;
+			//misc
+			content: "Evening Events";
+		}
+		
+		
+		
+		.schedule-event-time{
+			//box model
+			padding-right: 1em;
+			//typography
 			color: $evergreen-old-style;
-		}
-	}
-	
-	.schedule-event-morning{
-		background-color: $morning-light;
-	}
-	
-	.schedule-event-evening{
-	
-		&:nth-of-type(odd){
-			background-color: mix(white, $sky-blue, 90%);
+			font-weight: bold;
 		}
 		
-		&:nth-of-type(even){
-			background-color: mix(white, $sky-blue, 80%);
-		}
-		
-		.p-name{
-			color: mix(black, $sky-blue, 60%);
+		.schedule-event-details{
 		}
 	}
-	
-	.schedule-event-evening-start::before{
-		//box model
-		border-bottom: 1px solid $sky-blue;
-		width: 100%;
-		//layout
-		display: block;
-		//typography
-		text-align: center;
-		//misc
-		content: "Evening Events";
-	}
-	
-	
-	
-	.schedule-event-time{
-		//box model
-		padding-right: 1em;
-		//typography
-		color: $evergreen-old-style;
-		font-weight: bold;
-	}
-	
-	.schedule-event-details{
-	}
-}
 
 /**
  * M. Embeded Content
