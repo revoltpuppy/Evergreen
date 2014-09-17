@@ -143,11 +143,9 @@ ul.flexible{
   	//layout
     -webkit-column-count: 2;
        -moz-column-count: 2;
-        -ms-column-count: 2;
             column-count: 2;
     -webkit-column-gap: 15px;
        -moz-column-gap: 15px;
-        -ms-column-gap: 15px;
             column-gap: 15px;
 		list-style-position: inside;  //a compromise that makes bullets visible
   }
@@ -155,7 +153,6 @@ ul.flexible{
 	@media screen and (min-width: 32em){
 		-webkit-column-count: 3;
 		   -moz-column-count: 3;
-		    -ms-column-count: 3;
 		        column-count: 3;
 	}
 }
@@ -170,8 +167,8 @@ ul.flexible{
 	}
 }
 
-@media screen and (min-width:32em){
-	.unit-2-7 .flexible{
+.unit-2-7 .flexible{
+	@media screen and (min-width:32em){
 		-webkit-column-count: 2;
 		   -moz-column-count: 2;
 		        column-count: 2;
@@ -211,11 +208,9 @@ ul.flexible{
 	white-space: nowrap;
 	//backgrounds & borders
 	background-repeat: no-repeat;
-  -webkit-background-size: 1rem 1rem;
-     -moz-background-size: 1rem 1rem;
-          background-size: 1rem 1rem;
-  //misc
-  content: "";
+	background-size: 1rem 1rem;
+	//misc
+	content: "";
 }
 .link-icon::after{
   margin-left: .5em;
