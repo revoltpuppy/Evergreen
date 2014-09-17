@@ -443,7 +443,7 @@ button:active, .button:active, input[type="submit"]:active { background-color: #
  * I. Media Segment
  * J. Boxes
  * K. Images
- * L. Event Calendar
+ * L. Calendars
  * M. Embedded Content
  * N. CMS
  */
@@ -737,29 +737,19 @@ ul.accordion-inner { padding: 0 2%; }
 .main-content > p:last-child::after, .main-content > ul:last-child > li:last-child::after, .main-content > ol:last-child > li:last-child::after, .main-content > dl:last-child > dd:last-child::after { white-space: nowrap; content: "\00A0" url("/_inc/images/endnote.png"); }
 
 /** G. Lists */
-/** G. Lists  Table of Contents  1. Text List 2. Feature List 3. Lineup 4. Accordion 5. Flexible Lists 6. Link Icons 7. Tag Clouds 8. Alphabetical Order Index 9. Badge List 10. Zebra-Striped */
+/** G. Lists  Table of Contents  1. Text List 2. Lineup 3. Accordion 4. Flexible Lists 5. Link Icons 6. Tag Clouds 7. Alphabetical Order Index 8. Badge List 9. Zebra-Striped */
 /** 1. Text List  Creates a standard bulleted list. Mostly used to override lists behaving badly. */
 .text-list { margin-left: 1em; list-style-type: disc; }
 .text-list ul { margin-left: 1em; list-style-type: square; }
 
 .singleton a { font-weight: normal; }
 
-/** 2. Feature List  For lists showing off rows of three features.  @see http://evergreen.edu/campuslife */
-@media screen and (min-width: 22em) { .feature-list > li { margin-right: 2%; width: 49%; float: left; }
-  .feature-list > li:nth-child(odd) { clear: left; }
-  .feature-list > li:nth-child(even) { margin-right: 0; } }
-@media screen and (min-width: 43em) { .feature-list > li { margin-right: 2%; width: 31.3333333333%; float: left; }
-  .feature-list > li:nth-child(odd) { clear: none; }
-  .feature-list > li:nth-child(even) { margin-right: 2%; }
-  .feature-list > li:nth-child(3n) { margin-right: 0; }
-  .feature-list > li:nth-child(3n+1) { clear: left; } }
-
-/** 3. Lineup  For inlining lists. I’m not sure where this is being used. Maybe in the directory? */
+/** 2. Lineup  For inlining lists. I’m not sure where this is being used. Maybe in the directory? */
 .lineup > li { display: inline-block; }
 
 .lineup > li img { max-height: 1rem; display: block; }
 
-/** 4. Accordion  @subsubsection mod-typography-l-accordion */
+/** 3. Accordion  @subsubsection mod-typography-l-accordion */
 .accordion, .accordion-table { border: 1px solid #d1cad6; overflow: hidden; background-color: #e3dfe6; border-radius: 2px; }
 
 .accordion dt a, .accordion dd { padding: 0.631100639515315em 2%; }
@@ -777,34 +767,19 @@ ul.accordion-inner { padding: 0 2%; }
 .accordion-table .group { font-weight: bold; color: #492c5d; }
 .accordion-table .group:hover { color: #0086ee; cursor: pointer; }
 
-/** 5. Flexible Lists  Responsive lists that break across columns.  @see http://evergreen.edu/studies */
-@media screen and (min-width: 20em) { ul.flexible { margin-left: 0; -webkit-column-count: 2; -moz-column-count: 2; -ms-column-count: 2; column-count: 2; -webkit-column-gap: 15px; -moz-column-gap: 15px; -ms-column-gap: 15px; column-gap: 15px; list-style-position: inside; } }
-@media screen and (min-width: 32em) { ul.flexible { -webkit-column-count: 3; -moz-column-count: 3; -ms-column-count: 3; column-count: 3; } }
+/** 4. Flexible Lists  Responsive lists that break across columns.  @see http://evergreen.edu/studies */
+@media screen and (min-width: 20em) { ul.flexible { margin-left: 0; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 15px; -moz-column-gap: 15px; column-gap: 15px; list-style-position: inside; } }
+@media screen and (min-width: 32em) { ul.flexible { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; } }
 
-@media screen and (min-width: 20em) { .flexible > li { margin: 0 2% 0.46875rem 2%; overflow: hidden; 	/*&::before{
-		//box model
-		margin-left: -1em;
-		//position
-		position: absolute;
-		//misc 	content: "• "
-	}*/ 	/*&:nth-child(odd){ 	clear: left;
-	}*/ } }
-@media screen and (min-width: 32em) { .flexible > li { /*width: 29%;
-
-&:nth-child(odd){
-	clear: none;
-}
-
-&:nth-child(3n+1){
-	clear: left;
-}*/ } }
+@media screen and (min-width: 20em) { .flexible > li { margin: 0 2% 0.46875rem 2%; overflow: hidden; } }
 
 @media screen and (min-width: 32em) { .unit-2-7 .flexible { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; } }
+
 @media screen and (min-width: 70em) { .unit-3-7 .flexible { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; } }
 @media screen and (min-width: 70em) { .unit-3-7 .flexible { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; } }
 
-/** 6. Link Icons  Links with icons attached to them, e.g. PDFs or social media chicklets. */
-.link-icon::before, .link-icon-alt::before { height: 1rem; width: 1rem; display: inline-block; overflow: hidden; vertical-align: middle; text-indent: 100%; white-space: nowrap; background-repeat: no-repeat; -webkit-background-size: 1rem 1rem; -moz-background-size: 1rem 1rem; background-size: 1rem 1rem; content: ""; }
+/** 5. Link Icons  Links with icons attached to them, e.g. PDFs or social media chicklets. */
+.link-icon::before, .link-icon-alt::before { height: 1rem; width: 1rem; display: inline-block; overflow: hidden; vertical-align: middle; text-indent: 100%; white-space: nowrap; background-repeat: no-repeat; background-size: 1rem 1rem; content: ""; }
 
 .link-icon::after { margin-left: .5em; }
 
@@ -822,13 +797,13 @@ ul.accordion-inner { padding: 0 2%; }
 
 .icon-youtube::before { background-image: url("/_inc/images/icons/external/youtube32x32.png"); content: "YouTube"; }
 
-/** 7. Tag Clouds  Tag cloud sizing. */
+/** 6. Tag Clouds  Tag cloud sizing. */
 .few { font-size: 0.743rem; }
 .few a { font-weight: normal; }
 
 .many { font-size: 17.008px; font-size: 1.063rem; line-height: 1.47058823529412; }
 
-/** 8. Alphabetical Order Index  An index of the letters of the alphabet, for skipping around the page. */
+/** 7. Alphabetical Order Index  An index of the letters of the alphabet, for skipping around the page. */
 .alpha-label { border: 1px solid #d1cad6; border-bottom-width: 0; margin-bottom: -1px; padding: 0 1em; display: inline-block; background-color: #e3dfe6; border-radius: 2px 2px 0 0; }
 
 .alpha-index { border: 1px solid #d1cad6; margin-left: 0; padding-left: 0; display: block; word-wrap: break-word; background-color: #e3dfe6; border-radius: 2px; list-style-type: none; }
@@ -838,7 +813,7 @@ ul.accordion-inner { padding: 0 2%; }
 
 .alpha-index > li { padding: 0 2px; display: inline; }
 
-/** 9. Badge List  Lists of logos, badges, or sponsors.  @see http://evergreen.edu/admissions */
+/** 8. Badge List  Lists of logos, badges, or sponsors.  @see http://evergreen.edu/admissions */
 .badge-list { -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: space-around; justify-content: space-around; overflow: hidden; }
 .badge-list > li { margin: 0 1em; float: left; text-align: center; }
 
@@ -846,7 +821,7 @@ ul.accordion-inner { padding: 0 2%; }
 
 .badge-alt { max-width: 115px; }
 
-/** 10. Zebra-Striped  A parent container, whose direct children are zebra-striped. Strictly speaking, this doesn't have to be a list element. */
+/** 9. Zebra-Striped  A parent container, whose direct children are zebra-striped. Strictly speaking, this doesn't have to be a list element. */
 .zebra-striped > * { padding: 1em; }
 .zebra-striped > *:nth-child(odd) { background-color: #e3dfe6; }
 
@@ -856,40 +831,8 @@ ul.accordion-inner { padding: 0 2%; }
 .inline-icon { margin-right: .25em; max-height: 1em; display: inline; }
 
 /** 2. Related Nav  Related links with iconographic circles. */
-/*.related-nav{
-	display: -webkit-flex;
-	-webkit-flex-wrap: wrap;
-	        flex-wrap: wrap;
-}*/
-.related-nav > li { margin: 0.9375rem 0; /*margin-right: 2em;
-width: -webkit-calc(33.3333333333% - 1.3333333333em);
-width:         calc(33.3333333333% - 1.3333333333em);*/ display: block; vertical-align: top; float: left; text-align: center; }
-@media screen and (min-width: 32em) { .related-nav > li { /*margin-right: 1em;
-width: -webkit-calc(16.6666666667% - 0.8333333333em);
-width:         calc(16.6666666667% - 0.8333333333em);*/ } }
+.related-nav > li { margin: 0.9375rem 0; display: block; vertical-align: top; float: left; text-align: center; }
 
-/*.related-nav > li:nth-child(3n){
-	margin-right: 0;
-	
-	@media screen and (min-width: 32em){
-		//box model
-		margin-right: 1em;
-	}
-}
-.related-nav > li:nth-child(3n+1){
-	//box model
-	margin-left: 0;
-	//layout
-	clear: left;
-	
-	@media screen and (min-width: 32em){
-		clear: none;
-	}
-}
-
-.related-nav > li:last-child{
-	margin-right: 0;
-}*/
 .related-nav a, .related-nav a:link, .related-nav a:visited { color: #64933a; }
 
 .related-nav a:hover { color: #0086ee; }
@@ -1014,32 +957,14 @@ max-width:         calc(100% - 2px);*/ }
 		max-width: 16.6666666666%;
 	}
 }*/
-/** L. Event Calendar  @section mod-event-calendar */
-/*.event-dt{
-	@include small-type;
-	font-weight: bold;
-	line-height: 1.892664872139973;
-	text-transform: uppercase;
-}
-.event-calendar .h-event{
-	margin-top: 0.535714285714286em;  //22.5/14/3
-	margin-bottom: 1.071428571428571em;  //15/14  So, 22.5 + 7.5 + 15 = 45
-}
-@media screen and (min-width:43em){
-	.event-calendar .h-event{
-		margin-top: 0.441176470588235em;  //22.5/17/3
-		margin-bottom: 0.882352941176471em;  //15/17  So, 22.5 + 7.5 + 15 = 45
-	}
-}*/
+/** L. Calendars  @section mod-event-calendar */
+/** 1. Event Calendar  @section mod-event-calendar */
 .calendar-dt { border: 1px solid #c1b7c7; margin: 0 auto; max-width: 3em; overflow: hidden; text-align: center; background-color: #f2f2f2; border-radius: 2px; }
 
 .calendar-month { padding: 0 .5em; width: 100%; display: block; color: white; font-family: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif; font-size: 10.512px; font-size: 0.657rem; line-height: 1.427619682116684; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; background-color: #600f21; }
 
-/** Homepage Upcoming Events  The box on the homepage featuring upcoming events from the calendar. This should track pretty closely to the tertiary nav higher up on the page.  @section mod-upcoming-events-homepage */
-.upcoming-events-homepage { margin: 0 auto; max-width: 96%; /*@media screen and (min-width: 43em){
-	margin: 0 auto 1rem;
-	max-width: 66.6666666666%;
-}*/ }
+/** 2. Homepage Upcoming Events  The box on the homepage featuring upcoming events from the calendar. This should track pretty closely to the tertiary nav higher up on the page.  @section mod-upcoming-events-homepage */
+.upcoming-events-homepage { margin: 0 auto; max-width: 96%; }
 .upcoming-events-homepage li { border-bottom: 1px solid #c1b7c7; margin: 0.535714285714286em 0 1.071428571428571em 0; }
 .upcoming-events-homepage li:last-child { border-bottom-width: 0; }
 .upcoming-events-homepage .media-body { text-align: center; }
@@ -1052,7 +977,8 @@ max-width:         calc(100% - 2px);*/ }
   .upcoming-events-homepage2 ul { display: table; table-layout: fixed; }
   .upcoming-events-homepage2 li { padding: 0 1em; width: -webkit-calc(100% - 2em); width: calc(100% - 2em); display: table-cell; text-align: center; } }
 
-/** Event Schedule  @section mod-event-calendar */
+/** 3. Schedule of Events  @section mod-event-calendar */
+.schedule { margin: 0.535714285714286em 0 1.071428571428571em 0; }
 .schedule .h-event { padding: 1em; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; overflow: hidden; border-radius: 2px; }
 .schedule .h-event:nth-child(even) { background-color: #e3dfe6; }
 .schedule .schedule-event-required { border: 2px solid #64933a; }
