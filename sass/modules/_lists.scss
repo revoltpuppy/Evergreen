@@ -3,16 +3,15 @@
  *
  * Table of Contents
  *
- *  1. Text List
- *  2. Feature List
- *  3. Lineup
- *  4. Accordion
- *  5. Flexible Lists
- *  6. Link Icons
- *  7. Tag Clouds
- *  8. Alphabetical Order Index
- *  9. Badge List
- * 10. Zebra-Striped
+ * 1. Text List
+ * 2. Lineup
+ * 3. Accordion
+ * 4. Flexible Lists
+ * 5. Link Icons
+ * 6. Tag Clouds
+ * 7. Alphabetical Order Index
+ * 8. Badge List
+ * 9. Zebra-Striped
  */
 
 /**
@@ -40,59 +39,7 @@
 }
 
 /**
- * 2. Feature List
- *
- * For lists showing off rows of three features.
- *
- * @see http://evergreen.edu/campuslife
- */
-
-.feature-list{
-
-	> li{
-	
-		@media screen and (min-width: 22em){
-			margin-right: 2%;
-			width: 49%;
-			float: left;
-			
-			&:nth-child(odd){
-				clear: left;
-			}
-			
-			&:nth-child(even){
-				margin-right: 0;
-			}
-		}
-    
-		@media screen and (min-width: 43em){
-			//box model
-			margin-right: 2%;
-			width: 31.3333333333%;
-			//layout
-			float: left;
-			
-			&:nth-child(odd){
-				clear: none;
-			}
-			
-			&:nth-child(even){
-				margin-right: 2%;
-			}
-			
-			&:nth-child(3n){
-				margin-right: 0;
-			}
-			
-			&:nth-child(3n+1){
-				clear: left;
-			}
-		}
-	}
-}
-
-/**
- * 3. Lineup
+ * 2. Lineup
  *
  * For inlining lists. I’m not sure where this is being used. Maybe
  * in the directory?
@@ -109,7 +56,7 @@
 }
 
 /**
- * 4. Accordion
+ * 3. Accordion
  *
  * @subsubsection mod-typography-l-accordion
  */
@@ -181,7 +128,7 @@
 }
 
 /**
- * 5. Flexible Lists
+ * 4. Flexible Lists
  *
  * Responsive lists that break across columns.
  *
@@ -220,31 +167,6 @@ ul.flexible{
   	//layout
   	//float: left;
   	overflow: hidden;
-  	
-  	/*&::before{
-  		//box model
-  		margin-left: -1em;
-  		//position
-  		position: absolute;
-  		//misc
-    	content: "• "
-  	}*/
-  	
-  	/*&:nth-child(odd){
-    	clear: left;
-  	}*/
-	}
-	
-	@media screen and (min-width: 32em){
-		/*width: 29%;
-		
-		&:nth-child(odd){
-			clear: none;
-		}
-		
-		&:nth-child(3n+1){
-			clear: left;
-		}*/
 	}
 }
 
@@ -271,7 +193,7 @@ ul.flexible{
 }
 
 /**
- * 6. Link Icons
+ * 5. Link Icons
  *
  * Links with icons attached to them, e.g. PDFs or social media chicklets.
  */
@@ -334,7 +256,7 @@ ul.flexible{
 
 
 /**
- * 7. Tag Clouds
+ * 6. Tag Clouds
  *
  * Tag cloud sizing.
  */
@@ -350,7 +272,7 @@ ul.flexible{
 }
 
 /**
- * 8. Alphabetical Order Index
+ * 7. Alphabetical Order Index
  *
  * An index of the letters of the alphabet, for skipping around the page.
  */
@@ -401,7 +323,7 @@ ul.flexible{
 }
 
 /**
- * 9. Badge List
+ * 8. Badge List
  *
  * Lists of logos, badges, or sponsors.
  *
@@ -437,7 +359,7 @@ ul.flexible{
 
 
 /**
- * 10. Zebra-Striped
+ * 9. Zebra-Striped
  *
  * A parent container, whose direct children are zebra-striped.
  * Strictly speaking, this doesn't have to be a list element.
