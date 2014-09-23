@@ -13,37 +13,25 @@
 .image-full,
 .image-full img{  //WYSIWYG
 	//box model
-    border: 1px solid mix(black, $sky-blue, 60%);
-    margin:0 auto;
-    max-width: 100%;
-    //layout
-    display:block;
-    border-radius: 2px;
-    //typography
-    color: white;  //for readability in the WYSIWYG
-    //backgrounds & borders
-    background-color: mix(black, $sky-blue, 60%);
-    //transforms
-    -webkit-transform: rotate(2deg);
-        -ms-transform: rotate(2deg);
-            transform: rotate(2deg);
-    //miscelaneous
-    box-shadow: 0 2px 2px $shadow;
+	border: 1px solid mix(black, $sky-blue, 60%);
+	height: auto;
+	margin: 0 auto;
+	max-width: 100%;
+	//layout
+	display: block;
+	border-radius: 2px;
+	//typography
+	color: white;  //for readability in the WYSIWYG
+	//backgrounds & borders
+	background-color: mix(black, $sky-blue, 60%);
+	//miscelaneous
+	box-shadow: 0 2px 2px $shadow;
 }
 
 .illus-full,  //deprecated
 .image-full,
 .image-full img{  //WYSIWYG
-    margin: .631100639515315em auto 1.262201279030629em auto; //15/11.884/2 15/11.884  //This should have the same vertical metrics as a p
-    /*max-width: 99%;  //IE8
-    max-width: -webkit-calc(100% - 2px);
-    max-width:         calc(100% - 2px);*/
-}
-
-.supplement-illus{  //Illustrations in supplemental boxes. Should be paired with text.  //deprecated; use image-full
-    /*max-width: 99%;  //IE8
-    max-width: -webkit-calc(100% - 2px);
-    max-width:         calc(100% - 2px);*/
+	margin: .631100639515315em auto 1.262201279030629em auto; //15/11.884/2 15/11.884  //This should have the same vertical metrics as a p
 }
 
 @media screen and (min-width:32em){
@@ -53,33 +41,31 @@
 	.image,
 	.image img,  //WYSIWYG
 	.image-alt{
-        max-width: 49%;
-    }
-    .left,  //deprecated
-    .illus,  //deprecated
-    .illus-alt,  //deprecated
-    .image,
-    .image img,  //WYSIWYG
-    .image-alt{
-    	//box model
-        margin: 0 0 0.631100639515315em 2%;  //7.5/11.884
-        //layout
-        clear: right;
-        float: right;
-    }
+		max-width: 49%;
+  }
+  .left,  //deprecated
+  .illus,  //deprecated
+  .illus-alt,  //deprecated
+  .image,
+  .image img,  //WYSIWYG
+  .image-alt{
+		//box model
+		margin: 0 0 0.631100639515315em 2%;  //7.5/11.884
+		//layout
+		clear: right;
+		float: right;
+  }
 }
 @media screen and (min-width:43em){
 	.left,  //deprecated
-	.main-content > .illus,  //deprecated
-    .illus-alt,  //deprecated
+	.illus-alt,  //deprecated
 	.main-content > .image,
-    .main-content > .image img,  //WYSIWYG
+	.main-content > .image img,  //WYSIWYG
 	.image-alt{
 		//box model
 		margin-right: -6.544901065449%;
-		//max-width: 345px;
-        max-width: 53.500761035008%;
-    }
+		max-width: 53.500761035008%;
+	}
 }
 @media screen and (min-width:70em){
 	.illus-alt,  //deprecated
@@ -88,9 +74,9 @@
 		margin: 0 0 0.631100639515315em -41.722972972972973%;  //7.5/11.884  Weird math for the left margin.
 		width: 38.260135135135135%;  //It took weird math to get here.
 		//layout
-        clear: left;
-        float: left;
-    }
+		clear: left;
+		float: left;
+	}
 }
 
 /**
