@@ -9,6 +9,11 @@
  * where [x] is the icon.
  */
 
+.icon{
+	display: inline-block;
+	fill: currentColor;
+}
+
 .inline-icon{
 	//box model
 	margin-right: .25em;
@@ -33,19 +38,33 @@
 	text-align: center;
 }
 
-.related-nav a,
-.related-nav a:link,
-.related-nav a:visited{
-	color: $evergreen-neue;
-}
-.related-nav a:hover{
-	color: $sky-blue;
+.related-nav a{
+
+	&,
+	&:visited{
+		color: $evergreen-neue;
+	
+		.related-nav-icon{
+			background: $evergreen-neue;
+		}
+	}
+	
+	&:hover{
+		color: $sky-blue;
+		
+		.related-nav-icon{
+			background: $sky-blue;
+			//misc
+			box-shadow: 0 0 .2em $highlight inset;
+		}		
+	}
 }
 
 .related-nav-icon{
 	//box model
 	padding: 15%;  //Whatever feels right.
 	//typography
+	color: white;
 	text-align: center;
 	//backgrounds & borders
 	background-color: $evergreen-neue;
@@ -57,14 +76,4 @@
 		margin: 0 auto;
 		width: 75%;
 	}
-}
-.related-nav a .related-nav-icon,
-.related-nav a:link .related-nav-icon,
-.related-nav a:visited .related-nav-icon{
-	background: $evergreen-neue;
-}
-.related-nav a:hover .related-nav-icon{
-	background: $sky-blue;
-	//misc
-	box-shadow: 0 0 .2em $highlight inset;
 }
