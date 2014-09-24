@@ -61,19 +61,33 @@
 }
 
 .related-nav-icon{
-	//box model
+	// box model
 	padding: 15%;  //Whatever feels right.
-	//typography
+	padding-top: 85%;  //For responsive SVG.
+	// positioning
+	position: relative;  //For responsive SVG.
+	// typography
 	color: white;
 	text-align: center;
 	//backgrounds & borders
 	background-color: $evergreen-neue;
 	border-radius: 50%;
-	//misc
+	// misc
 	transition: all 0.2s;
 
 	@media screen and (min-width: 22em){
 		margin: 0 auto;
+		padding-top: 60%;  //same as child width
 		width: 75%;
+	}
+	
+	img,  // deprecated, icons should have class .icon
+	.icon{
+		// box model
+		width: 60%;  //100 - 25 - 15 to account for container width and padding
+		// positioning
+		position: absolute;  //For responsive SVG.
+		top: 20%;
+		left: 20%;
 	}
 }

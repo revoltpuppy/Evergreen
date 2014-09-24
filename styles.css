@@ -840,8 +840,9 @@ ul.accordion-inner { padding: 0 2%; }
 .related-nav a:hover { color: #0086ee; }
 .related-nav a:hover .related-nav-icon { background: #0086ee; box-shadow: 0 0 0.2em rgba(253, 243, 180, 0.5) inset; }
 
-.related-nav-icon { padding: 15%; color: white; text-align: center; background-color: #64933a; border-radius: 50%; transition: all 0.2s; }
-@media screen and (min-width: 22em) { .related-nav-icon { margin: 0 auto; width: 75%; } }
+.related-nav-icon { padding: 15%; padding-top: 85%; position: relative; color: white; text-align: center; background-color: #64933a; border-radius: 50%; transition: all 0.2s; }
+@media screen and (min-width: 22em) { .related-nav-icon { margin: 0 auto; padding-top: 60%; width: 75%; } }
+.related-nav-icon img, .related-nav-icon .icon { width: 60%; position: absolute; top: 20%; left: 20%; }
 
 /** I. Media Segment */
 /** H. Media Block  A common pattern wherein copy is tightly coupled to a graphic.  .media +---------+------------------+ |         |                  | | .media- | .media-          | |  img    |  body            | |         |                  | +---------+------------------+ */
