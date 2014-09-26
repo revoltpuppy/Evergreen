@@ -59,7 +59,7 @@
 }
 
 .unit-1-1{
-	@media screen and (min-width: 43em){
+	@media (min-width: 43em){
 		//box model
 		width: 96%;
 		//layout
@@ -67,7 +67,7 @@
 		float: left;
 	}
 	
-	@media screen and (min-width: 70em){
+	@media (min-width: 70em){
 		//box model
 		margin: 0;
 		width: 100%;
@@ -81,7 +81,7 @@
 	//layout
 	float: left;
 	
-	@media screen and (min-width: 32em){
+	@media (min-width: 32em){
 		//box model
 		margin: 0 1em 0 0;
 		width: -webkit-calc(50% - .5em);
@@ -107,7 +107,7 @@
 	//layout
 	float: left;
 	
-	@media screen and (min-width: 32em){
+	@media (min-width: 32em){
 		margin-right: 0;
 		width: 50%;
 	}
