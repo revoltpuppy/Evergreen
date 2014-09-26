@@ -67,7 +67,7 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
 
 body { margin: 0; min-height: 100vh; -webkit-align-items: center; align-items: center; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; background-color: #f2f2f2; }
 
-img { border-width: 0; max-width: 100%; }
+img, svg { border-width: 0; max-width: 100%; }
 
 audio { max-width: 100%; }
 
@@ -830,21 +830,21 @@ ul.accordion-inner { padding: 0 2%; }
 /** H. Icons */
 /** Icons */
 /** 1. Inline Icons  Icons that appear before strings of text. For example, [x] Close, where [x] is the icon. */
+.icon { display: inline-block; fill: currentColor; }
+
 .inline-icon { margin-right: .25em; max-height: 1em; display: inline; }
 
 /** 2. Related Nav  Related links with iconographic circles. */
 .related-nav > li { margin: 0.9375rem 0; display: block; vertical-align: top; float: left; text-align: center; }
 
-.related-nav a, .related-nav a:link, .related-nav a:visited { color: #64933a; }
-
+.related-nav a, .related-nav a:visited { color: #64933a; }
+.related-nav a .related-nav-icon, .related-nav a:visited .related-nav-icon { background: #64933a; }
 .related-nav a:hover { color: #0086ee; }
-
-.related-nav-icon { padding: 15%; text-align: center; background-color: #64933a; border-radius: 50%; transition: all 0.2s; }
-@media screen and (min-width: 22em) { .related-nav-icon { margin: 0 auto; width: 75%; } }
-
-.related-nav a .related-nav-icon, .related-nav a:link .related-nav-icon, .related-nav a:visited .related-nav-icon { background: #64933a; }
-
 .related-nav a:hover .related-nav-icon { background: #0086ee; box-shadow: 0 0 0.2em rgba(253, 243, 180, 0.5) inset; }
+
+.related-nav-icon { padding: 15%; padding-top: 85%; position: relative; color: white; text-align: center; background-color: #64933a; border-radius: 50%; transition: all 0.2s; }
+@media screen and (min-width: 22em) { .related-nav-icon { margin: 0 auto; padding-top: 60%; width: 75%; } }
+.related-nav-icon img, .related-nav-icon .icon { width: 60%; position: absolute; top: 20%; left: 20%; }
 
 /** I. Media Segment */
 /** H. Media Block  A common pattern wherein copy is tightly coupled to a graphic.  .media +---------+------------------+ |         |                  | | .media- | .media-          | |  img    |  body            | |         |                  | +---------+------------------+ */
@@ -937,19 +937,13 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 
 /** K. Images */
 /** J. Images  Image modules, typically for laying them out within an article. */
-.left, .illus, .illus-alt, .illus-full, .image, .image img, .image-alt, .image-full, .image-full img { border: 1px solid #00355f; margin: 0 auto; max-width: 100%; display: block; border-radius: 2px; color: white; background-color: #00355f; -webkit-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); box-shadow: 0 2px 2px rgba(30, 19, 37, 0.25); }
+.left, .illus, .illus-alt, .illus-full, .image, .image img, .image-alt, .image-full, .image-full img { border: 1px solid #00355f; height: auto; margin: 0 auto; max-width: 100%; display: block; border-radius: 2px; color: white; background-color: #00355f; box-shadow: 0 2px 2px rgba(30, 19, 37, 0.25); }
 
-.illus-full, .image-full, .image-full img { margin: .631100639515315em auto 1.262201279030629em auto; /*max-width: 99%;  //IE8
-max-width: -webkit-calc(100% - 2px);
-max-width:         calc(100% - 2px);*/ }
-
-.supplement-illus { /*max-width: 99%;  //IE8
-max-width: -webkit-calc(100% - 2px);
-max-width:         calc(100% - 2px);*/ }
+.illus-full, .image-full, .image-full img { margin: .631100639515315em auto 1.262201279030629em auto; }
 
 @media screen and (min-width: 32em) { .left, .illus, .illus-alt, .image, .image img, .image-alt { max-width: 49%; }
   .left, .illus, .illus-alt, .image, .image img, .image-alt { margin: 0 0 0.631100639515315em 2%; clear: right; float: right; } }
-@media screen and (min-width: 43em) { .left, .main-content > .illus, .illus-alt, .main-content > .image, .main-content > .image img, .image-alt { margin-right: -6.5449%; max-width: 53.500761035008%; } }
+@media screen and (min-width: 43em) { .left, .illus-alt, .main-content > .image, .main-content > .image img, .image-alt { margin-right: -6.5449%; max-width: 53.500761035008%; } }
 @media screen and (min-width: 70em) { .illus-alt, .image-alt { margin: 0 0 0.6311em -41.72297%; width: 38.260135135135135%; clear: left; float: left; } }
 /** Badges  Logos, labels, and stickers that are not necessarily important content to the audience, but are important to content owners and third parties. e.g. NASCAR */
 /*.badge{
