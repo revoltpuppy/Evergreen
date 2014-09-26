@@ -95,7 +95,7 @@ p.alert{
 	background-color: hsla(0, 0%, 95%, .95);
 	
 	img{
-		@include x-rem(margin-bottom, 0.625);
+		margin-bottom: 0.625rem;
 	}
 }
 
@@ -121,7 +121,7 @@ p.alert{
 		//box model
 		margin: 0.36358347876672em 0 0.72716695753345em 0;  //10/27.504 20/27.504
 		//typography
-		@include x-rem(font-size, 1.719);  //27.504px
+		font-size: 1.719rem;  //27.504px
 		line-height: 1.09075043630017;  //30/27.504
 	}
 	
@@ -140,7 +140,7 @@ p.alert{
 	color: #f3f3f3;
 }
 .pull-quote{
-    font-style: italic;
+	font-style: italic;
 }
 
 .pull-box-alt{

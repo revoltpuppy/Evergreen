@@ -83,7 +83,7 @@
 		//box model
 		margin: 0.779950083194676em 0 0.363976705490849em 0;
 		//typography
-		@include x-rem(font-size, 1.202);  //19.232px
+		font-size: 1.202rem;  //19.232px
 		line-height: 1.559900166389351;  //30/19.232
 	}
 }

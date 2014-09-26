@@ -1,4 +1,4 @@
-@import "rem";  //Includes a function that provides a pixel-value fallback for rem size declarations
+//@import "rem";  //Includes a function that provides a pixel-value fallback for rem size declarations for IE 8
 
 /**
  * Sass Constants
@@ -77,20 +77,20 @@ $small-face: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, s
 }
 
 @mixin base-type{
-	@include x-rem(font-size, 0.875);  //14px
+	font-size: 0.875rem;  //14px
 	line-height: 1.607142857142857;  //22.5/14
 }
 @mixin base-type-lg{
-	@include x-rem(font-size, 1.063);  //17px
+	font-size: 1.063rem;  //17px
 	line-height: 1.47058823529412;  //25/17
 }
 @mixin base-type-xl{
-	@include x-rem(font-size, 1.202);  //19.232px
+	font-size: 1.202rem;  //19.232px
 	line-height: 1.29991680532446;  //25/19.232
 }
 @mixin small-type{
 	font-family: $small-face;
-	@include x-rem(font-size, 0.657);  //10.507px
+	font-size: 0.657rem;  //10.507px
 	line-height: 1.427619682116684;  //15/10.507
 }
 

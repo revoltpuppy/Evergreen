@@ -97,7 +97,7 @@
 }
 @media screen and (min-width: 20em){
 	[role="navigation"]{
-		@include x-rem(font-size, .657);
+		font-size: .657rem;
 		line-height: 1.427619682116684;
 		letter-spacing: .05em;
 	}
@@ -108,7 +108,7 @@
 		margin-left: 0;
 		width: 100%;
 		//typography
-		@include x-rem(font-size, 1.063);
+		font-size: 1.063;
 		letter-spacing: normal;
 		line-height: 1.323529411764706;  //22.5/17
 	}

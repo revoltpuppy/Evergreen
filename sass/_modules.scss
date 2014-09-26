@@ -25,7 +25,7 @@
 .search-list,
 .primary-nav-unit h2,
 .nav li{
-	@include x-rem(font-size, .743);
+	font-size: .743rem;
 	line-height: 1.262201279030629; /*15/11.884*/
 }
 /**
@@ -39,7 +39,6 @@
 .main-background{
 	width:100%;
 	position: fixed;
-	//@include x-rem(top, 5.25);  //84/16
 	top: 0;
 	left: 0;
 	z-index: -1;
@@ -109,7 +108,7 @@
   }
 }
 .profile-list .box{
-	@include x-rem(margin-top, -1.40625);  //22.5/16
+	margin-top: -1.40625rem;  //22.5/16
   //margin-top: -2.142857142857143em;  //30/14
   position: absolute;
   bottom: 0;
@@ -142,14 +141,14 @@
 	margin: 1.169925124792013em 0;  //22.5/19.232
 	//typography
 	color: $evergreen-neue;
-	@include x-rem(font-size, 1.202);  //19.232px
+	font-size: 1.202rem;  //19.232px
 	line-height: 1.559900166389351;  //30/19.232
 	
 	@media screen and (min-width: 43em){
 		//box model
 		margin: 1.09075043630017em 0;  //30/27.504
 		//typography
-		@include x-rem(font-size, 1.719);  //27.504
+		font-size: 1.719rem;  //27.504
 		line-height: 1.363438045375218; //37.5/27.504
 	}
 	
@@ -168,7 +167,7 @@
 }
 
 .details{
-	@include x-rem(font-size, .657);  //10.507px;
+	font-size: .657rem;  //10.507px;
 	line-height: 1.427619682116684;  //15/10.507
 }
 
@@ -180,7 +179,7 @@
 	}
 	
 	@media screen and (min-width:70em){
-	@include x-rem(font-size, 1.719);  //20px
+		font-size: 1.719rem;  //20px
 		line-height: 1.090710779858208;  //30/27.505
 	}
 }
@@ -192,7 +191,7 @@
 	display: block;
 	//typography
 	color: $evergreen-neue;
-	@include x-rem(font-size, 2.291);  //36.656px
+	font-size: 2.291rem;  //36.656px
 	font-weight: normal;
 	line-height: 1.227629855958097;  //45/35.656
 }

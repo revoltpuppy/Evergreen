@@ -234,7 +234,7 @@ li.internal-users-alt{
 .menu-button,
 .search-toggle,
 .student-toggle{
-    @include x-rem(font-size, 1.063);  //17px
+    font-size: 1.063rem;  //17px
     line-height: 1.764705882352941;  //30/17
 }
 

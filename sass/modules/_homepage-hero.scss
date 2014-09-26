@@ -59,11 +59,11 @@
 	margin: 0 2%;
 	
 	h1{
-    	@include x-rem(font-size, 1.202);
+    font-size: 1.202rem;
 		line-height: 1.169925124792013;  //22.5/19.232
 		
 		&:first-line{
-			@include x-rem(font-size, 1.416);
+			font-size: 1.416rem;
 			line-height: 0.993114406779661;  //22.5/22.656
 		}
 	}
@@ -130,7 +130,7 @@
     	//margin: 1.559900166389351em 0;  //30/19.232
 	}
     .homepage-hero-copy h1:first-line{
-		@include x-rem(font-size, 1.945);
+		font-size: 1.945rem;
 		line-height: 0.723007712082262;  //22.5/31.12
 	}
 }
@@ -180,12 +180,12 @@
     		//box model
 	    	//margin: 3.972457627118644em 0;  //90/22.656
 	    	//typography
-	    	@include x-rem(font-size, 1.416);
+	    	font-size: 1.416rem;
 	    	line-height: 1.324152542372881;  //30/22.656
 	    	
 	    	&:first-line{
-		    	@include x-rem(font-size, 2.291);
-				line-height: 0.818419903972065;  //30/36.656
+		    	font-size: 2.291rem;
+					line-height: 0.818419903972065;  //30/36.656
 	    	}
     	}
 	}
@@ -213,11 +213,11 @@
 @media screen and (min-width: 86em){
 	.homepage-hero-copy h1{
   	//typography
-  	@include x-rem(font-size, 2.291);  //36.656
+  	font-size: 2.291rem;  //36.656
   	line-height: 1.227629855958097;  //45/36.656
   	
   	&:first-line{
-  		@include x-rem(font-size, 3.146);  //50.336
+  		font-size: 3.146rem;  //50.336
   		line-height: 0.893992371265099;  //45/50.336
   	}
 	}
