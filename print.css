@@ -25,7 +25,7 @@
 /** 1. Base Styles  @section base @see http://smacss.com/book/type-base */
 body { margin: 0 auto; display: block; }
 
-a::after { font-size: .657rem; line-height: 1.427619682116684; content: " (" attr(href) ")"; }
+a::after { font-size: .657rem; line-height: 1.427619682116684; word-wrap: break-word; overflow-wrap: break-word; content: " (" attr(href) ")"; }
 
 a[href^="/"]::after { content: " (http://evergreen.edu" attr(href) ")"; }
 
