@@ -270,28 +270,29 @@ li.internal-users-alt{
   
   @media screen and (min-width:20em){
 		//layout
+		-webkit-align-items: stretch;  //Safari
+		     -ms-flex-align: stretch;  //IE10
+		        align-items: stretch;
 		display: -webkit-flex;
-		    display: -ms-flexbox;  //IE10
+		 display: -ms-flexbox;  //IE10
   	        display: flex;
-    //flexbox
-    -ms-flex-align: stretch;  //IE10
-       align-items: stretch;
     
-    > li{
-    	//box model
+		> li{
+			//box model
 			border-left: 1px solid #333;
 			min-height: 44px;  //IE8
 			width: 21%;  //100/5
 			//layout
-	    //display: table-cell;  //IE8
-	    display: inline-block;  //IE8, Safari 5
-			display: -webkit-flex;
-		      display: -ms-flexbox;  //IE10
+			display: inline-block;  //IE9
+			display: -webkit-flex;  //Safari
+			 display: -ms-flexbox;  //IE10
 			        display: flex;
-	    overflow: hidden;
-	    //vertical-align: middle;  //Works with table-cell, not with flex, so IE8
+			overflow: hidden;
+	    //typography
+	    letter-spacing: -.001em;
 	    
 	    &:first-child{
+	    	//box model
 	    	border-left-width: 0;
 				width: 16%;
 			}
@@ -301,7 +302,13 @@ li.internal-users-alt{
   @media screen and (min-width:32em){
 		> li,
 		> li:first-child{
+			//box model
 			width: 20%;
+			//layout
+			-webkit-flex-grow: 1;
+			        flex-grow: 1;
+			//typography
+			letter-spacing: normal;
 		}
 	}
 
