@@ -363,7 +363,7 @@ ul.flexible{
 .zebra-striped{
 	
 	> *{
-		padding: 1em;
+		padding-left: 1em;
 		
 		&:nth-child(odd){
 			background-color: mix(white, $blueberry-susan, 85%);

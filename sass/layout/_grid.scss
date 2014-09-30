@@ -38,6 +38,10 @@
 	        flex-wrap: wrap;
 	-webkit-justify-content: center;
 	        justify-content: center;
+	
+	&.zebra-striped{
+		margin-right: 0;
+	}
 }
 
 //.grid-list,  //deprecated, use .grid-alt instead
@@ -53,25 +57,16 @@
 .unit-6-7,
 .unit-1-3,  // Switches from a one- to a three-column layout.
 .unit-2-3,
-.unit-1-2,
-.unit-1-1{
+.unit-1-2{
 	margin: 0 2%;
 }
 
 .unit-1-1{
-	@media (min-width: 43em){
-		//box model
-		width: 96%;
-		//layout
-		clear: left;
-		float: left;
-	}
-	
-	@media (min-width: 70em){
-		//box model
-		margin: 0;
-		width: 100%;
-	}
+	padding-right: 1em;
+	width: 100%;
+	//layout
+	clear: left;  //IE 9
+	float: left;  //IE 9
 }
 
 .unit-1-2{
