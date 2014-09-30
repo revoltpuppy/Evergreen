@@ -41,6 +41,8 @@ a::after{
 	//typography
 	font-size: .657rem;
 	line-height: 1.427619682116684;  //15/10.507
+	    word-wrap: break-word;  //IE, Firefox
+	overflow-wrap: break-word;
 	//misc
 	content: " (" attr(href) ")";
 }

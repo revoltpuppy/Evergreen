@@ -9,6 +9,11 @@
  * where [x] is the icon.
  */
 
+.icon{
+	display: inline-block;
+	fill: currentColor;
+}
+
 .inline-icon{
 	//box model
 	margin-right: .25em;
@@ -22,85 +27,67 @@
  *
  * Related links with iconographic circles.
  */
-/*.related-nav{
-	display: -webkit-flex;
-	-webkit-flex-wrap: wrap;
-	        flex-wrap: wrap;
-}*/
 .related-nav > li{
 	//box model
 	margin: 0.9375rem 0;  // 15/16
-	/*margin-right: 2em;
-	width: -webkit-calc(33.3333333333% - 1.3333333333em);
-	width:         calc(33.3333333333% - 1.3333333333em);*/
 	//layout
 	display: block;
 	vertical-align: top;
 	float: left;
 	//typography
 	text-align: center;
-	
-	@media screen and (min-width: 32em){
-		/*margin-right: 1em;
-		width: -webkit-calc(16.6666666667% - 0.8333333333em);
-		width:         calc(16.6666666667% - 0.8333333333em);*/
-	}
-}
-/*.related-nav > li:nth-child(3n){
-	margin-right: 0;
-	
-	@media screen and (min-width: 32em){
-		//box model
-		margin-right: 1em;
-	}
-}
-.related-nav > li:nth-child(3n+1){
-	//box model
-	margin-left: 0;
-	//layout
-	clear: left;
-	
-	@media screen and (min-width: 32em){
-		clear: none;
-	}
 }
 
-.related-nav > li:last-child{
-	margin-right: 0;
-}*/
+.related-nav a{
 
-.related-nav a,
-.related-nav a:link,
-.related-nav a:visited{
-	color: $evergreen-neue;
-}
-.related-nav a:hover{
-	color: $sky-blue;
+	&,
+	&:visited{
+		color: $evergreen-neue;
+	
+		.related-nav-icon{
+			background: $evergreen-neue;
+		}
+	}
+	
+	&:hover{
+		color: $sky-blue;
+		
+		.related-nav-icon{
+			background: $sky-blue;
+			//misc
+			box-shadow: 0 0 .2em $highlight inset;
+		}		
+	}
 }
 
 .related-nav-icon{
-	//box model
+	// box model
 	padding: 15%;  //Whatever feels right.
-	//typography
+	padding-top: 85%;  //For responsive SVG.
+	// positioning
+	position: relative;  //For responsive SVG.
+	// typography
+	color: white;
 	text-align: center;
 	//backgrounds & borders
 	background-color: $evergreen-neue;
 	border-radius: 50%;
-	//misc
+	// misc
 	transition: all 0.2s;
 
 	@media screen and (min-width: 22em){
 		margin: 0 auto;
+		padding-top: 60%;  //same as child width
 		width: 75%;
 	}
-}
-.related-nav a .related-nav-icon,
-.related-nav a:link .related-nav-icon,
-.related-nav a:visited .related-nav-icon{
-    background: $evergreen-neue;
-}
-.related-nav a:hover .related-nav-icon{
-    background: $sky-blue;
-    //misc
-    box-shadow: 0 0 .2em $highlight inset;
+	
+	img,  // deprecated, icons should have class .icon
+	.icon{
+		// box model
+		width: 60%;  //100 - 25 - 15 to account for container width and padding
+		// positioning
+		position: absolute;  //For responsive SVG.
+		top: 20%;
+		left: 20%;
+	}
 }

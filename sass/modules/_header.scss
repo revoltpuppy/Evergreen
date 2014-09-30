@@ -170,7 +170,7 @@ input:checked + .header-dropdown{
 .search-toggle:hover,
 .student-toggle:hover{
 	//backgrounds & borders
-	//background-color: $blueberry-susan; //Causes a weird bug on mobile that keeps active link purple
+	//background-color: $blueberry-susan; // Causes a weird bug on mobile that keeps active link purple
 	//misc
 	cursor: pointer;
 }
@@ -181,17 +181,20 @@ input:checked + .header-dropdown{
 	display: block;
 }
 .student-toggle > img{
-	padding-top: 1px;  //Compensate for matching search icon height
+	padding-top: 1px;  // Compensate for matching search icon height
 }
-#top-search-query,  //deprecated, use #q
+#top-search-query,  // deprecated, use #q
 #q,
 .top-search button{
 	margin-bottom: 0;
 }
-[placeholder]:focus::-moz-placeholder{  //Firefox 19+
+[placeholder]:focus::-webkit-input-placeholder{  // Safari & Chrome
 	color: transparent;
 }
-[placeholder]:focus::-webkit-input-placeholder{  //Safari & Chrome
+[placeholder]:focus::-moz-placeholder{  // Firefox
+	color: transparent;
+}
+[placeholder]:focus:-ms-placeholder{  // IE
 	color: transparent;
 }
 .internal-users,
@@ -207,8 +210,8 @@ input:checked + .header-dropdown{
 	margin-top: 0;
 }
 .search-tools{
-	margin-left: 0;  //Can be removed once .element-list propogates on .search-tools
-	padding-left: 0;  //Can be removed once .element-list propogates on .search-tools
+	margin-left: 0;  // Can be removed once .element-list propogates on .search-tools
+	padding-left: 0;  // Can be removed once .element-list propogates on .search-tools
 	
 	li{
 		display: inline;
@@ -234,15 +237,16 @@ li.internal-users-alt{
 .menu-button,
 .search-toggle,
 .student-toggle{
-    @include x-rem(font-size, 1.063);  //17px
-    line-height: 1.764705882352941;  //30/17
+    font-size: 1.063rem;  // 17px
+    line-height: 1.764705882352941;  // 30/17
 }
 
 .top-nav,
 .top-nav-list,
 .menu-button,
 .search-toggle,
-.student-toggle{
+.student-toggle,
+.top-nav-list .active{
     color: white;
     background-color: $evergreen-neue;
 }
@@ -258,8 +262,6 @@ li.internal-users-alt{
   margin-top: 0;
   width: 100%;
 	min-height: 44px;
-	//layout
-  //display: table-row;
   //positioning
   position: relative;
   //tyopography
@@ -267,47 +269,14 @@ li.internal-users-alt{
   //list
   list-style-type: none;
   
-  @media screen and (min-width:20em){
+  @media screen and (min-width: 20em){
 		//layout
+		-webkit-align-items: stretch;  // Safari
+		     -ms-flex-align: stretch;  // IE10
+		        align-items: stretch;
 		display: -webkit-flex;
-		    display: -ms-flexbox;  //IE10
+		 display: -ms-flexbox;  // IE10
   	        display: flex;
-    //flexbox
-    -ms-flex-align: stretch;  //IE10
-       align-items: stretch;
-    
-    > li{
-    	//box model
-			border-left: 1px solid #333;
-			min-height: 44px;  //IE8
-			width: 21%;  //100/5
-			//layout
-	    //display: table-cell;  //IE8
-	    display: inline-block;  //IE8, Safari 5
-			display: -webkit-flex;
-		      display: -ms-flexbox;  //IE10
-			        display: flex;
-	    overflow: hidden;
-	    //vertical-align: middle;  //Works with table-cell, not with flex, so IE8
-	    
-	    &:first-child{
-	    	border-left-width: 0;
-				width: 16%;
-			}
-		}
-  }
-  
-  @media screen and (min-width:32em){
-		> li,
-		> li:first-child{
-			width: 20%;
-		}
-	}
-
-	@media screen and (min-width:43em){
-		> li{
-			height: auto;
-		}
 	}
   
   &:before,
@@ -319,7 +288,53 @@ li.internal-users-alt{
   }
 }
 
+.top-nav-list > li{
+	@media screen and (min-width: 20em){
+		//box model
+		border-left: 1px solid #333;
+		min-height: 44px;  // IE8
+		//width: 21%;  // 100/5
+		//layout
+		display: inline-block;  // IE9
+		display: -webkit-flex;  // Safari
+		 display: -ms-flexbox;  // IE10
+		        display: flex;
+		-webkit-flex-grow: 1;
+		        flex-grow: 1;
+		overflow: hidden;
+    //typography
+    
+    &:first-child{
+    	//box model
+    	border-left-width: 0;
+			//width: 16%;
+			//layout
+			-webkit-flex-grow: 0;
+			        flex-grow: 0;
+		}
+	}
+  
+  @media screen and (min-width:32em){
+		//box model
+		width: 20%;
+		//layout
+		-webkit-flex-grow: 1;
+		        flex-grow: 1;
+		//typography
+		letter-spacing: normal;
+	}
+
+	@media screen and (min-width:43em){
+		height: auto;
+	}
+}
+
+.top-nav-list a,
 .top-nav-link{
+	//box model
+	padding: 0.46875rem 0.25rem;  // 7.5/16 2.48/16
+	border-bottom-width: 0;
+	width: 100%;
 	//layout
 	display: block;
 	
@@ -341,14 +356,14 @@ li.internal-users-alt{
 	
 	@media screen and (min-width: 20em){
 		//layout
-		display: -webkit-flex;  //Safari 7
-		display:     -ms-flex;  //IE10
+		display: -webkit-flex;  // Safari 7
+		display:     -ms-flex;  // IE10
 		display:         flex;
-		-ms-flex-pack:           center;  //IE10
-		-webkit-justify-content: center;  //Safari 7
+		-ms-flex-pack:           center;  // IE10
+		-webkit-justify-content: center;  // Safari 7
 		justify-content:         center;
-		-ms-flex-align:      center;  //IE10
-		-webkit-align-items: center;  //Safari 7
+		-ms-flex-align:      center;  // IE10
+		-webkit-align-items: center;  // Safari 7
 		align-items:         center;
 		//typography
 		font-weight: normal;
@@ -356,18 +371,22 @@ li.internal-users-alt{
 		text-shadow: 0 1px 1em hsl(275, 33%, 11%);
 	}
 	
+	@media screen and (min-width: 22em){
+		//box model
+		padding-right: .66em;
+		padding-left: .66em;
+	}
+	
 	@media screen and (min-width:70em){
 		font-size: inherit;
 		line-height: inherit;
 	}
 }
+.top-nav-list a,
+.top-nav-list a:visited,
 .top-nav-link,
 .top-nav-link:visited{
 	//box model
-	border-bottom-width: 0;
-	padding: 17px 2px;  //IE8
-	padding: 0.46875rem 0.25rem;  //7.5/16 2.48/16
-	width: 100%;
 	//typography
 	color: #fff;
 	
@@ -405,11 +424,11 @@ li.internal-users-alt{
 	list-style-type: none;
 	
 	> li:first-child{
-		margin-top: 0.71315146386224em;  //7.5/10.5167
+		margin-top: 0.71315146386224em;  // 7.5/10.5167
 	}
 	
 	> li:last-child{
-		margin-bottom: 1.42630292772448em;  //15/10.5167
+		margin-bottom: 1.42630292772448em;  // 15/10.5167
 	}
 	
 	@media screen and (min-width: 20em){
@@ -430,17 +449,17 @@ li.internal-users-alt{
 	
 	@media screen and (min-width: 22em){
 		//layout
-		display: -webkit-flex;  //Safari 7
+		display: -webkit-flex;  // Safari 7
 		display:         flex;
 		//flexbox
-		-webkit-justify-content: flex-end;  //Safari 7
+		-webkit-justify-content: flex-end;  // Safari 7
 		        justify-content: flex-end;
 
 		> li{
 			//box model
 			width: auto;
 			//layout
-			display: inline-block;  //IE9
+			display: inline-block;  // IE9
 			float: none;
 			//typography
 			white-space: nowrap;
@@ -450,7 +469,7 @@ li.internal-users-alt{
 	@media screen and (min-width: 43em){
 		> li{
 			@include base-type;
-			line-height: 3.21428571428571;  //45/14
+			line-height: 3.21428571428571;  // 45/14
 		}
 	}
 }
@@ -505,7 +524,7 @@ li.internal-users-alt{
  * Resources, or Registration
  */
 .site-name{
-	margin-top: 3.75rem;  //60/16
+	margin-top: 3.75rem;  // 60/16
 	
 	h1{
 		margin-right: 2%;
@@ -516,7 +535,7 @@ li.internal-users-alt{
 			margin-left: 0;
 		}*/
 		
-		@media screen and (min-height: 35em){  //Note this is a height-based media query
+		@media screen and (min-height: 35em){  // Note this is a height-based media query
 			margin-bottom: 0.673904em;
 		}
 	}

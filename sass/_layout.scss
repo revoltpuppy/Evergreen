@@ -91,24 +91,23 @@
 [role="main"]{
 	width: 100%;
 }
+
 [role="navigation"]{
 	clear: both;
 	position: relative;
-}
-@media screen and (min-width: 20em){
-	[role="navigation"]{
-		@include x-rem(font-size, .657);
+
+	@media screen and (min-width: 20em){
+		font-size: .657rem;
 		line-height: 1.427619682116684;
 		letter-spacing: .05em;
 	}
-}
-@media screen and (min-width: 43em){
-	[role="navigation"]{
+
+	@media screen and (min-width: 43em){
 		//box model
 		margin-left: 0;
 		width: 100%;
 		//typography
-		@include x-rem(font-size, 1.063);
+		font-size: 1.063rem;
 		letter-spacing: normal;
 		line-height: 1.323529411764706;  //22.5/17
 	}
