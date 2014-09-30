@@ -66,8 +66,8 @@
 .keyword-list > li:last-child a { margin-right: 0; }
 
 .cancelled { opacity: .4; }
-.cancelled .fall, .cancelled .winter, .cancelled .spring, .cancelled .summer { background-color: #dad4de; }
-.cancelled .fall abbr, .cancelled .winter abbr, .cancelled .spring abbr, .cancelled .summer abbr { background-color: transparent; }
+.cancelled .fall, .cancelled .winter, .cancelled .spring, .cancelled .summer { color: black; background-color: #dad4de; }
+.cancelled .fall abbr, .cancelled .winter abbr, .cancelled .spring abbr, .cancelled .summer abbr { background-color: #dad4de; }
 @media screen and (min-width: 55em) { .cancelled .fall, .cancelled .winter, .cancelled .spring, .cancelled .summer { background-color: transparent; } }
 
 /** Program Pages  Styles for the detail pages for each of the individual programs. */

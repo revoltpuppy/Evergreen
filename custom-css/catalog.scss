@@ -361,10 +361,13 @@
 	.winter,
 	.spring,
 	.summer{
+		//typography
+		color: black;
+		//backgrounds & borders
 		background-color: mix(white, $blueberry-susan, 80%);
 		
 		abbr{
-			background-color: transparent;
+			background-color: mix(white, $blueberry-susan, 80%);
 		}
 	}
 	
