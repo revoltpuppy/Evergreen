@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@import "../tools";
+
+@media print{
+	.scholarships,
+	.scholarship-details,
+	.scholarship-description{
+		//typography
+		@include small-type;
+		font-family: $text-face;
+	}
+}
