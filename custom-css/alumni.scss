@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@import "../tools";
+
+@media print{
+	/* Note, this should be temporary. Links should be appended to
+	   print pieces. */
+	a::after,
+	a[href^="/"]::after{
+		content: "";
+	}
+}
