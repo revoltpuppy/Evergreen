@@ -745,7 +745,7 @@ ul.accordion-inner { padding: 0 2%; }
 
 .machine-text { font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace; }
 
-.main-content > p:last-child::after, .main-content > ul:last-child > li:last-child::after, .main-content > ol:last-child > li:last-child::after, .main-content > dl:last-child > dd:last-child::after { white-space: nowrap; content: "\00A0" url("/_inc/images/endnote.png"); }
+.main-content > p:last-child::after, .main-content > ul:last-child > li:last-child::after, .main-content > ol:last-child > li:last-child::after, .main-content > dl:last-child > dd:last-child::after { white-space: nowrap; content: "\00A0" url("/_inc/images/endnote.svg"); }
 
 /** G. Lists */
 /** G. Lists  Table of Contents  1. Text List 2. Lineup 3. Accordion 4. Flexible Lists 5. Link Icons 6. Tag Clouds 7. Alphabetical Order Index 8. Badge List 9. Zebra-Striped */
