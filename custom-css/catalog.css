@@ -5,7 +5,7 @@
 
 .compare-box-active { bottom: 0; -webkit-transition: bottom .25s; transition: bottom .25s; }
 
-.course-index { font-size: 0.875rem; line-height: 1.607142857142857; }
+.course-index { font-size: 0.875rem; line-height: 1.42857142857143; }
 .course-index > thead { display: none; }
 .course-index > tbody, .course-index > tbody > tr, .course-index > tbody > tr > td { display: block; }
 .course-index > tbody > tr { border: 1px solid #c1b7c7; margin: 0.535714285714286em 0 1.071428571428571em 0; padding: 0 1em; overflow: hidden; text-align: center; background-color: #ece9ee; border-radius: 2px; box-shadow: 0 1px 1px rgba(30, 19, 37, 0.25); }

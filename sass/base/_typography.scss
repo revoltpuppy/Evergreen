@@ -35,14 +35,14 @@ button{
 
 body,
 .base{
-	@include base-type;
+	@include base-type;  // Step 0.5
 	
 	@media screen and (min-width: 43em){
-		@include base-type-lg;
+		@include base-type-lg;  // Step 1
 	}
 	
 	@media screen and (min-width: 125em){
-		@include base-type-xl;
+		@include base-type-xl;  // Step 2
 	}
 }
 
@@ -88,9 +88,9 @@ h1{
 	//box model
 	margin: 0.96401028277635em 0 0 0;  //30/31.12
 	//typography
-	font-size: 1.945rem;  //31.12px
+	font-size: 1.945rem;  //31.12px  Step 4
 	font-weight: normal;
-	line-height: 1.446015424164524;  //45/31.12
+	line-height: 0.96401028277635;  //30/31.12
 
 	@media screen and (min-width: 32em){
 		//box model
@@ -104,7 +104,7 @@ h1{
 		//box model
 		margin-top: 0.673975557153127em;   //30/44.5167
 		//typography
-		font-size: 2.782rem;  //44.512px
+		font-size: 2.782rem;  //44.512px  Step 5
 		line-height: 1.010963335729691;  //45/44.5167
 	}
 	
@@ -112,24 +112,24 @@ h1{
 		//box model
 		margin-top: 1.19198982835346em;  //60/50.366
 		//typography
-		font-size: 3.146rem;  //50.336
+		font-size: 3.146rem;  //50.336  Step 6
 		line-height: 1.19198982835346;  //60/50.336
 	}
 }
 h2{
 	//box model
-  margin-top: 1.324152542372881em;  //30/22.656
+  margin-top: 1.55990016638935em;  //30/19.232
   //typography
   color:#666;
-  font-size: 1.416rem;  //22.656px
+  font-size: 1.202rem;  //19.232px  Step 2
   font-weight:bold;
-  line-height: 1.324152542372881;  //30/22.656
+  line-height: 1.55990016638935;  //30/19.232
   
   @media screen and (min-width: 43em){
   	//box model
   	margin-top: 1.090750436300175em;  //30/27.504
   	//typography
-    font-size: 1.719rem;  //27.504px
+    font-size: 1.719rem;  //27.504px  Step 3
     line-height: 1.090750436300175; //30/27.504
   }
   
@@ -137,24 +137,24 @@ h2{
   	//box model
   	margin-top: 0.96401028277635em;  //30/31.12
   	//typography
-    font-size: 1.945rem;  //31.12px
+    font-size: 1.945rem;  //31.12px  Step 4
     line-height: 0.96401028277635;  //30/31.12
   }
 }
 h3{
 	//box model
-	margin-top: 1.363636363636364em;  //30/22
+	margin-top: 1.32352941176471em;  //22.5/17
 	//typography
 	color:#333;
-	font-size: 1.375rem;  //22px - otherwise appears optically taller than h2
+	font-size: 1.063rem;  //17px  Step 1
 	font-weight: normal;
-	line-height: 1.363636363636364;  //30/22
+	line-height: 1.32352941176471;  //22.5/17
     
 	@media screen and (min-width: 43em){
 		//box model
 		margin-top: 1.176286072772898em;  //30/25.504
 		//typography
-		font-size: 1.594rem;  //25.504px - otherwise appears optically taller than h2
+		font-size: 1.594rem;  //25.504px - otherwise appears optically taller than h2  Step 3(ish)
 		line-height: 1.176286072772898;  //30/25.504
 	}
     
@@ -162,27 +162,50 @@ h3{
 		//box model
 		margin-top: 1.07142857142857em;  //30/28
 		//typography
-		font-size: 1.75rem;  //28px - otherwise appears optically taller than h2
+		font-size: 1.75rem;  //28px - otherwise appears optically taller than h2  Step 4(ish)
 		line-height: 1.07142857142857;  //30/28
 	}
 }
-h4{
-  margin-top: 0.779950083194676em;  //15/19.232
-  font-size: 1.202rem;  //19.232px
-  line-height: 1.559900166389351;  //30/19.232
+h4,
+h5,
+h6{
+	//box model
+  margin-top: 1.07142857142857em;  //15/14
+  //typography
+  font-size: 0.875rem;  //19.232px  Step .5
+  line-height: 1.60714285714286;  //22.5/14
+  
+  @media screen and (min-width: 43em){
+  	//box model
+  	margin-top: 1.46814133307233em;  //30/20.434
+  	//typography
+    font-size: 1.202rem;  //20.434px  Step 2
+    line-height: 1.46814133307233; //30/20.434
+  }
   
   @media screen and (min-width: 125em){
   	//box model
     margin-top: 1.090750436300175em;  //30/27.504
     //typography
-    font-size: 1.719rem;  //27.504px
+    font-size: 1.719rem;  //27.504px  Step 3
     line-height: 1.090750436300175;  //30/27.504
   }
+}
+h5{
+  color: #666;
+  font-weight: bold;
+}
+h6{
+	color: #666;
+  font-style: italic;
+  font-weight: normal;
 }
 h1,
 h2,
 h3,
-h4{
+h4,
+h5,
+h6{
 	//Bottom margin should match the p's top margin exactly, for consistency. If they don't match, change this rule.
 	margin-bottom: 0.46875rem; //7.5px
 

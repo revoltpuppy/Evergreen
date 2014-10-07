@@ -94,7 +94,7 @@ body { font-family: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, san
 
 body, input, button { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-body, .base { font-size: 0.875rem; line-height: 1.607142857142857; }
+body, .base { font-size: 0.875rem; line-height: 1.42857142857143; }
 @media screen and (min-width: 43em) { body, .base { font-size: 1.063rem; line-height: 1.47058823529412; } }
 @media screen and (min-width: 125em) { body, .base { font-size: 1.202rem; line-height: 1.29991680532446; } }
 
@@ -103,24 +103,29 @@ p, ul, ol, dl, blockquote, figure, .base { margin: 0.535714285714286em 0 1.07142
 @media screen and (min-width: 125em) { p, ul, ol, dl, blockquote, figure, .base { margin: 0.51996672212978em 0 1.03993344425957em 0; } }
 
 /** 2. Headings  @section h */
-h1 { margin: 0.96401028277635em 0 0 0; font-size: 1.945rem; font-weight: normal; line-height: 1.446015424164524; }
+h1 { margin: 0.96401028277635em 0 0 0; font-size: 1.945rem; font-weight: normal; line-height: 0.96401028277635; }
 @media screen and (min-width: 32em) { h1 { margin-top: 0.818419903972065em; font-size: 2.291rem; line-height: 1.227629855958097; } }
 @media screen and (min-width: 43em) { h1 { margin-top: 0.673975557153127em; font-size: 2.782rem; line-height: 1.010963335729691; } }
 @media screen and (min-width: 125em) { h1 { margin-top: 1.19198982835346em; font-size: 3.146rem; line-height: 1.19198982835346; } }
 
-h2 { margin-top: 1.324152542372881em; color: #666; font-size: 1.416rem; font-weight: bold; line-height: 1.324152542372881; }
+h2 { margin-top: 1.55990016638935em; color: #666; font-size: 1.202rem; font-weight: bold; line-height: 1.55990016638935; }
 @media screen and (min-width: 43em) { h2 { margin-top: 1.090750436300175em; font-size: 1.719rem; line-height: 1.090750436300175; } }
 @media screen and (min-width: 125em) { h2 { margin-top: 0.96401028277635em; font-size: 1.945rem; line-height: 0.96401028277635; } }
 
-h3 { margin-top: 1.363636363636364em; color: #333; font-size: 1.375rem; font-weight: normal; line-height: 1.363636363636364; }
+h3 { margin-top: 1.32352941176471em; color: #333; font-size: 1.063rem; font-weight: normal; line-height: 1.32352941176471; }
 @media screen and (min-width: 43em) { h3 { margin-top: 1.176286072772898em; font-size: 1.594rem; line-height: 1.176286072772898; } }
 @media screen and (min-width: 125em) { h3 { margin-top: 1.07142857142857em; font-size: 1.75rem; line-height: 1.07142857142857; } }
 
-h4 { margin-top: 0.779950083194676em; font-size: 1.202rem; line-height: 1.559900166389351; }
-@media screen and (min-width: 125em) { h4 { margin-top: 1.090750436300175em; font-size: 1.719rem; line-height: 1.090750436300175; } }
+h4, h5, h6 { margin-top: 1.07142857142857em; font-size: 0.875rem; line-height: 1.60714285714286; }
+@media screen and (min-width: 43em) { h4, h5, h6 { margin-top: 1.46814133307233em; font-size: 1.202rem; line-height: 1.46814133307233; } }
+@media screen and (min-width: 125em) { h4, h5, h6 { margin-top: 1.090750436300175em; font-size: 1.719rem; line-height: 1.090750436300175; } }
 
-h1, h2, h3, h4 { margin-bottom: 0.46875rem; }
-@media screen and (min-width: 125em) { h1, h2, h3, h4 { margin-bottom: .625rem; } }
+h5 { color: #666; font-weight: bold; }
+
+h6 { color: #666; font-style: italic; font-weight: normal; }
+
+h1, h2, h3, h4, h5, h6 { margin-bottom: 0.46875rem; }
+@media screen and (min-width: 125em) { h1, h2, h3, h4, h5, h6 { margin-bottom: .625rem; } }
 
 /** 3. Lists  @section l */
 ul, ol { margin-left: 1.76470588235294em; padding-left: 0; }
@@ -157,7 +162,7 @@ strong { font-weight: bold; }
 em { font-style: italic; }
 
 figcaption, small, .details, .caption { font-family: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif; font-size: 0.657rem; line-height: 1.427619682116684; }
-@media screen and (min-width: 125em) { figcaption, small, .details, .caption { font-family: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif; font-size: 0.875rem; line-height: 1.607142857142857; } }
+@media screen and (min-width: 125em) { figcaption, small, .details, .caption { font-family: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif; font-size: 0.875rem; line-height: 1.42857142857143; } }
 
 [role="contentinfo"] small { color: #ccc; }
 
@@ -207,7 +212,7 @@ table a { border-bottom-width: 0; }
 /** C. Forms */
 input { border: 1px solid #bbcfd7; height: 1.719rem; margin-bottom: 1.262201279030629em; padding: 0 .5em; font-size: 1em; }
 
-select { border: 1px solid #0086ee; margin: 0.535714285714286em 0 1.071428571428571em 0; padding: 0.30357142857143em .5em; font-size: 0.875rem; line-height: 1.607142857142857; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #cce6fb; border-radius: 2px; -webkit-appearance: none; -moz-appearance: none; appearance: none; box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset; cursor: pointer; /*@media screen and (min-width: 43em){
+select { border: 1px solid #0086ee; margin: 0.535714285714286em 0 1.071428571428571em 0; padding: 0.30357142857143em .5em; font-size: 0.875rem; line-height: 1.42857142857143; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #cce6fb; border-radius: 2px; -webkit-appearance: none; -moz-appearance: none; appearance: none; box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset; cursor: pointer; /*@media screen and (min-width: 43em){
 	//box model
 	padding: 0.23529411764706em .5em;  //4/17 So, (4 * 2) + 17 = 25;
 	//typography
@@ -357,7 +362,7 @@ button:active, .button:active, input[type="submit"]:active { background-color: #
 @media screen and (min-width: 43em) { .right, .supplement, .supplement-1-2 { margin-right: -6.5449%; width: 53.500761035008%; } }
 @media screen and (min-width: 20em) { .supplement-alt-1-2 { margin-left: 6%; width: 47%; float: right; } }
 @media screen and (min-width: 32em) { .supplement-alt-1-2 { width: 38.260135135135135%; } }
-@media screen and (min-width: 70em) { .supplement-alt-1-2 { margin-right: 0; margin-left: -41.72297%; float: left; font-size: 0.875rem; line-height: 1.607142857142857; } }
+@media screen and (min-width: 70em) { .supplement-alt-1-2 { margin-right: 0; margin-left: -41.72297%; float: left; font-size: 0.875rem; line-height: 1.42857142857143; } }
 @media screen and (min-width: 125em) { .supplement-alt-1-2 { font-size: 1.063rem; line-height: 1.47058823529412; } }
 
 .element-list { margin-left: 0; padding-left: 0; list-style-type: none; }
@@ -414,7 +419,7 @@ button:active, .button:active, input[type="submit"]:active { background-color: #
 
 .sidebar { border-top: 2px dashed #64933a; }
 @media screen and (min-width: 43em) { .sidebar { margin-right: 5.675675675675676%; margin-left: 5.675675675675676%; } }
-@media screen and (min-width: 70em) { .sidebar { border-top-width: 0; border-left: 1px solid #ccc; margin: 0 auto; padding-left: 1em; color: #333; font-size: 0.875rem; line-height: 1.607142857142857; }
+@media screen and (min-width: 70em) { .sidebar { border-top-width: 0; border-left: 1px solid #ccc; margin: 0 auto; padding-left: 1em; color: #333; font-size: 0.875rem; line-height: 1.42857142857143; }
   .sidebar p, .sidebar .base { margin: 0.535714285714286em 0 1.071428571428571em 0; } }
 @media screen and (min-width: 125em) { .sidebar { font-size: 1.063rem; line-height: 1.47058823529412; }
   .sidebar p, .sidebar .base { margin: 0.441176470588235em 0 0.882352941176471em 0; } }
@@ -510,7 +515,7 @@ input:checked + .header-dropdown { max-height: 8em; -webkit-transition: .5s all 
 
 [placeholder]:focus:-ms-placeholder { color: transparent; }
 
-.internal-users, .search-tools { margin-bottom: 0; font-size: 0.875rem; line-height: 1.607142857142857; }
+.internal-users, .search-tools { margin-bottom: 0; font-size: 0.875rem; line-height: 1.42857142857143; }
 @media screen and (min-width: 32em) { .internal-users, .search-tools { font-size: 1.063rem; line-height: 1.47058823529412; } }
 
 .internal-users { margin-top: 0; }
@@ -557,7 +562,7 @@ li.internal-users-alt { display: none; }
   .secondary-nav-list > li { margin: 0; width: 25%; float: left; line-height: 2.85260585544895; } }
 @media screen and (min-width: 22em) { .secondary-nav-list { display: -webkit-flex; display: flex; -webkit-justify-content: flex-end; justify-content: flex-end; }
   .secondary-nav-list > li { width: auto; display: inline-block; float: none; white-space: nowrap; } }
-@media screen and (min-width: 43em) { .secondary-nav-list > li { font-size: 0.875rem; line-height: 1.607142857142857; line-height: 3.21428571428571; } }
+@media screen and (min-width: 43em) { .secondary-nav-list > li { font-size: 0.875rem; line-height: 1.42857142857143; line-height: 3.21428571428571; } }
 
 .secondary-nav-link, .secondary-nav-link:visited { border-bottom: 0; height: 100%; width: 100%; display: block; color: white; font-weight: normal; }
 @media screen and (min-width: 22em) { .secondary-nav-link, .secondary-nav-link:visited { height: auto; padding: 0 1em; display: inline-block; } }
@@ -647,7 +652,7 @@ li.internal-users-alt { display: none; }
 @media screen and (min-width: 70em) { #tertiary-nav { width: 17.803302225413%; }
   .index-wrapper #tertiary-nav { margin-top: 1rem; position: absolute; } }
 
-#tertiary-nav { font-size: 0.875rem; line-height: 1.607142857142857; }
+#tertiary-nav { font-size: 0.875rem; line-height: 1.42857142857143; }
 @media screen and (min-width: 70em) { #tertiary-nav { font-size: 1.063rem; line-height: 1.47058823529412; } }
 
 #tertiary-nav .accordion { border-width: 0; background-color: transparent; }
@@ -655,7 +660,7 @@ li.internal-users-alt { display: none; }
 
 .tertiary-nav-list, .tertiary-related-links, .tertiary-related-links > li > ul { margin-left: 0; list-style-type: none; }
 
-.tertiary-nav-h { margin-top: -1px; font-size: 0.875rem; line-height: 1.607142857142857; }
+.tertiary-nav-h { margin-top: -1px; font-size: 0.875rem; line-height: 1.42857142857143; }
 @media screen and (min-width: 43em) { .tertiary-nav-h { margin: 0.779950083194676em 0 0.363976705490849em 0; font-size: 1.202rem; line-height: 1.559900166389351; } }
 
 .tertiary-nav-list li, .tertiary-related-links > li > ul > li, #tertiary-nav dd > ul li { margin: 0.535714285714286em 0 1.071428571428571em 0; }
@@ -969,7 +974,7 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 .upcoming-events-homepage li:last-child { border-bottom-width: 0; }
 .upcoming-events-homepage .media-body { text-align: center; }
 @media screen and (min-width: 32em) { .upcoming-events-homepage { margin: 0 auto 1rem; max-width: 66.6666666666%; } }
-@media screen and (min-width: 43em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -21.58203%; width: 21.58203125%; font-size: 0.875rem; line-height: 1.607142857142857; position: absolute; } }
+@media screen and (min-width: 43em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -21.58203%; width: 21.58203125%; font-size: 0.875rem; line-height: 1.42857142857143; position: absolute; } }
 @media screen and (min-width: 70em) { .upcoming-events-homepage { margin-left: -25.52083%; width: 23.484848484848%; font-size: 1.063rem; line-height: 1.47058823529412; }
   .upcoming-events-homepage li { margin: 0.441176470588235em 0 0.882352941176471em 0; } }
 
