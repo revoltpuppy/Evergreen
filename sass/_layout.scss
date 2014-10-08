@@ -133,14 +133,21 @@
 .content-wrapper{
 	//box model
 	border-top: 5px solid $evergreen-old-style;
+	margin: 0 .25em;
 	margin-top: -5px;  //Compensate for 5px border
+	//layout
+	overflow: hidden;
 	//backgrounds & borders
 	background-color: #F3F3F3;  //IE8
 	background-color: hsla(0,0%,95%,.95);
 	border-radius: 2px;
 	
 	@media screen and (min-width: 43em){
+		//box model
+		margin-right: 0;
 		margin-left: 16.285714285714286%;  //1/7
+		//layout
+		overflow: visible;
 	}
 }
 
@@ -175,13 +182,20 @@
 
 // Wraps the secondary content area.
 .sidebar-wrapper{
+	//box model
+	margin: 0 .25em;
+	//layout
+	overflow: hidden;
 	//backgrounds & borders
 	background-color: #F3F3F3;  //IE8
 	background-color: hsla(0,0%,95%,.95);
 
 	@media screen and (min-width: 43em){
+		//box model
 		margin-left: 20%;
 		width: 78%;
+		//layout
+		overflow: visible;
 	}
 	
 	@media screen and (min-width: 70em){

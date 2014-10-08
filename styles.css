@@ -345,8 +345,11 @@ button:active, .button:active, input[type="submit"]:active { background-color: #
 
 .standalone-unit { padding: 0 1em; }
 
-.unit-1-3-alt:last-child, .unit-1-7:last-child, .unit-2-7:last-child { margin-right: 0; }
-
+/*.unit-1-3-alt:last-child,  // deprecated
+.unit-1-7:last-child,  // deprecated
+.unit-2-7:last-child{  // deprecated
+	margin-right: 0;
+}*/
 /** 2. Float-based Grid Layout  These grid units still need to be converted to the flexbox-based grid system. */
 @media screen and (min-width: 43em) { /*.unit-2-6,  // deprecated; use .unit-1-3 instead .unit-4-6,  // deprecated; use .unit-2-3 instead*/
   .unit-4-7, .unit-6-7 { margin: 0 2%; float: left; }
@@ -392,8 +395,8 @@ button:active, .button:active, input[type="submit"]:active { background-color: #
 .site-content { margin-bottom: 1.875rem; width: 100%; position: relative; }
 @media screen and (min-height: 35em) { .site-content { margin-bottom: 3.75rem; } }
 
-.index-wrapper, .content-wrapper { border-top: 5px solid #46502b; margin-top: -5px; background-color: #F3F3F3; background-color: rgba(242, 242, 242, 0.95); border-radius: 2px; }
-@media screen and (min-width: 43em) { .index-wrapper, .content-wrapper { margin-left: 16.285714285714286%; } }
+.index-wrapper, .content-wrapper { border-top: 5px solid #46502b; margin: 0 .25em; margin-top: -5px; overflow: hidden; background-color: #F3F3F3; background-color: rgba(242, 242, 242, 0.95); border-radius: 2px; }
+@media screen and (min-width: 43em) { .index-wrapper, .content-wrapper { margin-right: 0; margin-left: 16.285714285714286%; overflow: visible; } }
 
 @media screen and (min-width: 43em) { .index-wrapper { margin-left: 20%; width: 78%; } }
 @media screen and (min-width: 70em) { .index-wrapper { margin-left: 18.292682926829%; width: 81.714285714285714%; } }
@@ -401,8 +404,8 @@ button:active, .button:active, input[type="submit"]:active { background-color: #
 @media screen and (min-width: 43em) { .content-wrapper { margin-left: 20%; width: 78%; } }
 @media screen and (min-width: 70em) { .content-wrapper { margin-left: 16.285714285714286%; width: 53.142857142857143%; } }
 
-.sidebar-wrapper { background-color: #F3F3F3; background-color: rgba(242, 242, 242, 0.95); }
-@media screen and (min-width: 43em) { .sidebar-wrapper { margin-left: 20%; width: 78%; } }
+.sidebar-wrapper { margin: 0 .25em; overflow: hidden; background-color: #F3F3F3; background-color: rgba(242, 242, 242, 0.95); }
+@media screen and (min-width: 43em) { .sidebar-wrapper { margin-left: 20%; width: 78%; overflow: visible; } }
 @media screen and (min-width: 70em) { .sidebar-wrapper { margin-left: 2%; width: 24.571428571429%; } }
 
 .main-content, .sidebar { margin: 0 .75em; }
@@ -669,7 +672,7 @@ li.internal-users-alt { display: none; }
 
 @media screen and (min-width: 43em) { .tertiary-nav-h, a.tertiary-nav-h { border-bottom: 1px solid #004377; margin-top: -1px; display: block; font-weight: bold; } }
 /** 2. Homepage Tertiary Nav */
-@media screen and (min-width: 43em) { #tertiary-nav.tertiary-nav-homepage { margin-left: -21.58203%; width: 21.58203125%; } }
+@media screen and (min-width: 43em) { #tertiary-nav.tertiary-nav-homepage { margin-left: -24.58203%; width: 21.58203125%; } }
 @media screen and (min-width: 70em) { #tertiary-nav.tertiary-nav-homepage { margin-left: -25.52083%; width: 23.484848484848%; } }
 
 /** CSS Accordion  An accordion that relies on radio buttons and labels instead of JavaScript.  @see http://cssconf.com/talk-seddon.html */
@@ -745,7 +748,8 @@ ul.accordion-inner { padding: 0 2%; }
 
 .machine-text { font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace; }
 
-.main-content > p:last-child::after, .main-content > ul:last-child > li:last-child::after, .main-content > ol:last-child > li:last-child::after, .main-content > dl:last-child > dd:last-child::after { white-space: nowrap; content: "\00A0" url("/_inc/images/endnote.svg"); }
+.main-content > p:last-child::after, .main-content > ul:last-child > li:last-child::after, .main-content > ol:last-child > li:last-child::after, .main-content > dl:last-child > dd:last-child::after { white-space: nowrap; content: "\00A0" url("/_inc/images/endnote.png"); }
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 150dpi) { .main-content > p:last-child::after, .main-content > ul:last-child > li:last-child::after, .main-content > ol:last-child > li:last-child::after, .main-content > dl:last-child > dd:last-child::after { content: "\00A0" url("/_inc/images/endnote.svg"); } }
 
 /** G. Lists */
 /** G. Lists  Table of Contents  1. Text List 2. Lineup 3. Accordion 4. Flexible Lists 5. Link Icons 6. Tag Clouds 7. Alphabetical Order Index 8. Badge List 9. Zebra-Striped */
@@ -969,12 +973,12 @@ width: 3000px;  //Stretches box to fit the remaining width; this is not the actu
 .calendar-month { padding: 0 .5em; width: 100%; display: block; color: white; font-family: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif; font-size: 0.657rem; line-height: 1.427619682116684; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; background-color: #600f21; }
 
 /** 2. Homepage Upcoming Events  The box on the homepage featuring upcoming events from the calendar. This should track pretty closely to the tertiary nav higher up on the page.  @section mod-upcoming-events-homepage */
-.upcoming-events-homepage { margin: 0 auto; max-width: 96%; }
+.upcoming-events-homepage { margin: 0 auto; }
 .upcoming-events-homepage li { border-bottom: 1px solid #c1b7c7; margin: 0.535714285714286em 0 1.071428571428571em 0; }
 .upcoming-events-homepage li:last-child { border-bottom-width: 0; }
 .upcoming-events-homepage .media-body { text-align: center; }
 @media screen and (min-width: 32em) { .upcoming-events-homepage { margin: 0 auto 1rem; max-width: 66.6666666666%; } }
-@media screen and (min-width: 43em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -21.58203%; width: 21.58203125%; font-size: 0.875rem; line-height: 1.42857142857143; position: absolute; } }
+@media screen and (min-width: 43em) { .upcoming-events-homepage { margin-top: 1rem; margin-left: -24.58203%; width: 21.58203125%; font-size: 0.875rem; line-height: 1.42857142857143; position: absolute; } }
 @media screen and (min-width: 70em) { .upcoming-events-homepage { margin-left: -25.52083%; width: 23.484848484848%; font-size: 1.063rem; line-height: 1.47058823529412; }
   .upcoming-events-homepage li { margin: 0.441176470588235em 0 0.882352941176471em 0; } }
 
