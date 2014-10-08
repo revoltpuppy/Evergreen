@@ -205,7 +205,11 @@
 .main-content > ol:last-child > li:last-child::after,
 .main-content > dl:last-child > dd:last-child::after{
 	white-space: nowrap;
-	content: "\00A0" url("/_inc/images/endnote.svg");
+	content: "\00A0" url("/_inc/images/endnote.png");
+	
+	@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 150dpi){
+		content: "\00A0" url("/_inc/images/endnote.svg");
+	}
 }
 
 /**
