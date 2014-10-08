@@ -315,7 +315,7 @@
 		@media screen and (min-width: 43em){
 			//box model
 			margin-top: 1rem;
-			margin-left: -21.58203125%;  //442/2048
+			margin-left: -24.58203125%;  //442/2048 + 3%
 			width: 21.58203125%;  //442/2048
 			//typography
 			@include base-type;
