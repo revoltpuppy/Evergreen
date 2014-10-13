@@ -103,7 +103,7 @@ p, ul, ol, dl, blockquote, figure, .base { margin: 0.535714285714286em 0 1.07142
 @media screen and (min-width: 125em) { p, ul, ol, dl, blockquote, figure, .base { margin: 0.51996672212978em 0 1.03993344425957em 0; } }
 
 /** 2. Headings  @section h */
-h1 { margin: 0.96401028277635em 0 0 0; font-size: 1.945rem; font-weight: normal; line-height: 0.96401028277635; }
+h1 { margin: 0.96401028277635em 0 0 0; font-size: 1.945rem; font-weight: normal; line-height: 1.44601542416452; }
 @media screen and (min-width: 32em) { h1 { margin-top: 0.818419903972065em; font-size: 2.291rem; line-height: 1.227629855958097; } }
 @media screen and (min-width: 43em) { h1 { margin-top: 0.673975557153127em; font-size: 2.782rem; line-height: 1.010963335729691; } }
 @media screen and (min-width: 125em) { h1 { margin-top: 1.19198982835346em; font-size: 3.146rem; line-height: 1.19198982835346; } }
@@ -231,22 +231,22 @@ select:hover { border-bottom-style: dashed; background-color: #e5f2fd; }
 
 /** E. Buttons */
 /** Buttons  @section button  (Note: Built-in Drupal forms require "input[type='submit']" instead of button.) */
-button, .button, .button:visited, input[type="submit"] { border: 1px solid #0086ee; margin-bottom: 1.262201279030629em; padding: 5px .5em; display: inline-block; color: #333333; font-size: 17px; font-size: 1rem; font-weight: normal; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #99cef8; background-image: -webkit-linear-gradient(#cadec1, #66b6f4); background-image: linear-gradient(#cadec1, #66b6f4); border-radius: .2em; box-shadow: 0 0.2em 0.2em rgba(30, 19, 37, 0.25); }
+button, .button, .button:visited, input[type="submit"] { border: 1px solid #0086ee; height: auto; margin-bottom: 1.262201279030629em; padding: 5px .5em; display: inline-block; color: #333333; font-family: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif; font-weight: normal; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #99cef8; background-image: linear-gradient(#cadec1, #66b6f4); border-radius: .2em; box-shadow: 0 0.2em 0.2em rgba(30, 19, 37, 0.25); }
 
-button:hover, .button:hover, input[type="submit"]:hover { color: #00508e; background-color: #cce6fb; background-image: -webkit-linear-gradient(#cadec1, #99cef8); background-image: linear-gradient(#cadec1, #99cef8); }
+button:hover, .button:hover, input[type="submit"]:hover { color: #00508e; background-color: #cce6fb; background-image: linear-gradient(#cadec1, #99cef8); }
 
 button:focus, .button:focus, input[type="submit"]:focus { border-color: #999; outline-width: 0; }
 
-button:active, .button:active, input[type="submit"]:active { background-color: #66b6f4; background-image: -webkit-linear-gradient(#66b6f4, #97c8cc); background-image: linear-gradient(#66b6f4, #97c8cc); box-shadow: inset 0 0.1em 0.2em rgba(0, 0, 0, 0.25); }
+button:active, .button:active, input[type="submit"]:active { background-color: #66b6f4; background-image: linear-gradient(#66b6f4, #97c8cc); box-shadow: inset 0 0.1em 0.2em rgba(0, 0, 0, 0.25); }
 
 /** Primary Action Button  The primary action button is meant to be the single default action that a user will expect to take. E.g., Submit would be the .prime button while Cancel would be the default button. */
-.prime, .prime:visited { border-color: #46502b; color: white; text-shadow: 0 -1px 0 rgba(30, 19, 37, 0.25); background-color: #64933a; background-image: -webkit-linear-gradient(#a1b96b, #64933a); background-image: linear-gradient(#a1b96b, #64933a); }
+.prime, .prime:visited { border-color: #46502b; color: white; text-shadow: 0 -1px 0 rgba(30, 19, 37, 0.25); background-color: #64933a; background-image: linear-gradient(#a1b96b, #64933a); }
 
-.prime:hover { border-bottom-color: #46502b; color: #46502b; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #83a861; background-image: -webkit-linear-gradient(#bfcd84, #83a861); background-image: linear-gradient(#bfcd84, #83a861); }
+.prime:hover { border-bottom-color: #46502b; color: #46502b; text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5); background-color: #83a861; background-image: linear-gradient(#bfcd84, #83a861); }
 
 .prime:focus { border-color: #999; }
 
-.prime:active { background-color: #a2be88; background-image: -webkit-linear-gradient(#64933a, #82a652); background-image: linear-gradient(#64933a, #82a652); }
+.prime:active { background-color: #a2be88; background-image: linear-gradient(#64933a, #82a652); }
 
 /** Disabled Buttons  Gives a disabled, unclickable appearances for buttons that can't be clicked, but should still be present in the design. Disabled buttons should have their actions taken away from them, or have the disabled attribute. */
 .is-disabled, .is-disabled:visited, .is-disabled:hover, button[disabled], button[disabled]:hover { color: #666; text-shadow: 0 0.05em 0 rgba(253, 243, 180, 0.5); background: #99cef8 none; border-color: #999; box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset; cursor: not-allowed; }

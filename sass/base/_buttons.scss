@@ -12,20 +12,20 @@ button,
 input[type="submit"]{
 	//box model
 	border: 1px solid $sky-blue;
-	margin-bottom: 1.262201279030629em;  //15/11.884
+	height: auto;
+	margin-bottom: 1.262201279030629em;  // 15/11.884
 	padding: 5px .5em;
 	//layout
 	display: inline-block;
 	//typography
 	color: #333333;
-	font-size: 17px;  //IE8
-	font-size: 1rem;
+	font-family: $display-face;
 	font-weight: normal;
+	//line-height:  1.32352941176471;  // 22.5/17
 	text-shadow: 0 1px 0 $highlight;
 	//backgrounds & borders
-	background-color: mix(white, $sky-blue, 60%);  //IE 9
-	background-image: -webkit-linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //Safari 6, Chrome 25
-	background-image:         linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //w3c
+	background-color: mix(white, $sky-blue, 60%);  // IE 9
+	background-image: linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));
 	border-radius: .2em;
 	//miscelaneous
 	box-shadow: 0 .2em .2em $shadow;
@@ -35,9 +35,8 @@ button:hover,
 input[type="submit"]:hover{
 	color: mix(black, $sky-blue, 40%);
 	//backgrounds & borders
-	background-color: mix(white, $sky-blue, 80%);  //IE 9
-	background-image: -webkit-linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //Safari 6, Chrome 25
-	background-image:         linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //w3c
+	background-color: mix(white, $sky-blue, 80%);  // IE 9
+	background-image: linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));
 }
 button:focus,
 .button:focus, 
@@ -50,8 +49,7 @@ button:active,
 input[type="submit"]:active{
 	//backgrounds & borders
 	background-color: mix(white, $sky-blue, 40%);  //IE 9
-	background-image: -webkit-linear-gradient(mix(white, $sky-blue, 40%), mix($morning-light, $sky-blue, 60%));  //Safari 6, Chrome 25
-	background-image:         linear-gradient(mix(white, $sky-blue, 40%), mix($morning-light, $sky-blue, 60%));  //w3c
+	background-image: linear-gradient(mix(white, $sky-blue, 40%), mix($morning-light, $sky-blue, 60%));
 	//miscelaneous
 	box-shadow: inset 0 .1em .2em hsla(0,0%,0%,.25);
 }
@@ -72,8 +70,7 @@ input[type="submit"]:active{
 	text-shadow: 0 -1px 0 $shadow;
 	//backgrounds & borders
 	background-color: $evergreen-neue;  //IE 9
-	background-image: -webkit-linear-gradient(mix($morning-light, $evergreen-neue, 40%), $evergreen-neue);  //Safari 6, Chrome 25
-	background-image:         linear-gradient(mix($morning-light, $evergreen-neue, 40%), $evergreen-neue);  //w3c
+	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 40%), $evergreen-neue);
 }
 .prime:hover{
 	//box model
@@ -83,8 +80,7 @@ input[type="submit"]:active{
 	text-shadow: 0 1px 0 $highlight;
 	//backgrounds & borders
 	background-color: mix(white, $evergreen-neue, 20%);  //IE 9
-	background-image: -webkit-linear-gradient(mix($morning-light, $evergreen-neue, 60%), mix(white, $evergreen-neue, 20%));  //Safari 6, Chrome 25
-	background-image:         linear-gradient(mix($morning-light, $evergreen-neue, 60%), mix(white, $evergreen-neue, 20%));  //w3c
+	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 60%), mix(white, $evergreen-neue, 20%));
 }
 .prime:focus{
 	border-color: #999;
@@ -92,8 +88,7 @@ input[type="submit"]:active{
 .prime:active{
 	//backgrounds & borders
 	background-color: mix(white, $evergreen-neue, 40%);  //IE 9
-	background-image: -webkit-linear-gradient($evergreen-neue, mix($morning-light, $evergreen-neue, 20%));  //Safari 6, Chrome 25
-	background-image:         linear-gradient($evergreen-neue, mix($morning-light, $evergreen-neue, 20%));  //w3c
+	background-image: linear-gradient($evergreen-neue, mix($morning-light, $evergreen-neue, 20%));
 }
 
 
