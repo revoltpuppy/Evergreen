@@ -342,40 +342,35 @@
  * section @supplement
  */
 
-@media screen and (min-width:20em){
-	.right,  // deprecated
-	.supplement,  //This should mirror .supplement-1-2; it’s just a more user-friendly name
-	.supplement-1-2,  // deprecated
-	.supplement-2-7{  // deprecated
-	    //box model
-	    margin-left: 6%;
-	    width: 47%;
-	    //layout
-	    float: right;
+
+.right,  // deprecated
+.supplement,  //This should mirror .supplement-1-2; it’s just a more user-friendly name
+.supplement-1-2{  // deprecated
+	@media screen and (min-width:32em){
+    //box model
+    margin-left: 1em;
+    width: calc(66% - 1em);
+    //layout
+    float: right;
 	}
-}
-@media screen and (min-width:22em){
-	.supplement-2-7{  // deprecated
-		width: 31.3333333333%;
-	}
-}
-@media screen and (min-width:32em){
-	.supplement-2-7{  // deprecated
-		width: 26.571428571428571%;
-	}
-	.supplement-3-7{  // deprecated
-		margin-left: 2%;
-		width: 40.857142857142857%;
-		float: right;
-	}
-}
-@media screen and (min-width: 43em){
-	.right,  // deprecated
-	.supplement,
-	.supplement-1-2{
+	
+	/*@media screen and (min-width:32em){
+    //box model
+    margin-left: 1em;
+    width: calc(50% - 1em);
+	}*/
+
+	@media screen and (min-width: 43em){
 		//box model
 		margin-right: -6.544901065449%;
-		width: 53.500761035008%;
+		//width: calc(53.500761035008% - 1em);
+		width: calc(69.500761035008% - 1em);
+	}
+
+	@media screen and (min-width: 70em){
+		//box model
+		margin-right: -6.544901065449%;
+		width: calc(53.500761035008% - 1em);
 	}
 }
 
