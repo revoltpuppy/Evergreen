@@ -1,5 +1,1 @@
-@charset "UTF-8";
-/** Sass Constants  @section sass-constants */
-/** Sass Mixins  @section sass-mixins */
-@media print { /* Note, this should be temporary. Links should be appended to print pieces. */
-  a::after, a[href^="/"]::after { content: ""; } }
+@media print{a::after,a[href^="/"]::after{content:""}}

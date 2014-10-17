@@ -1,4 +1,4 @@
-/**
+@charset "UTF-8";/*!*
  * Search Styles
  *
  * Style overrides for the Google search engine results page integrated
@@ -11,49 +11,4 @@
  * @copyright  2013 by the author
  * @cssdoc     0.2.22
  * @license    Copyrighted
- */
-#___gcse_0 .cse .gsc-control-cse, #___gcse_0 .gsc-control-cse { /*search tool wrapper*/ border-width: 0; padding: 0; background-color: transparent; }
-
-.gsc-control-cse table { margin: 0; }
-
-.gsc-control-cse td { border-width: 0; padding: 0; }
-
-.gsc-control-wrapper-cse form.gsc-search-box, .gsc-control-wrapper-cse table.gsc-search-box { margin: 0; }
-
-.gsc-input, .gsc-search-button, .gsc-clear-button { padding: 0; }
-
-.gsc-input .gsc-input-box { height: auto; }
-
-.gsc-control-cse .gsib_a { padding: 4px 8px; }
-
-.gsst_b .gsst_a { border-bottom: none; }
-
-.gsc-search-box input.gsc-search-button, .cse .gsc-search-box .gsc-search-button input.gsc-search-button-v2, .gsc-search-box input.gsc-search-button-v2 { height: auto; margin: 0; padding: 7px 27px; width: auto; display: block; }
-
-div.gsc-selected-option-container { padding: 0 1em; width: auto !important; max-width: none; min-width: 0; }
-
-.gs-result .gs-spelling { padding: 0; display: inline; }
-
-.gs-spelling::after { content: ". "; }
-
-.gsc-control-wrapper-cse .gsc-above-wrapper-area { padding: 0; }
-
-.gsc-results { width: 100%; }
-
-.gsc-results .gsc-webResult.gsc-result, .gsc-results .gsc-webResult.gsc-result:hover, .gsc-results .gsc-webResult.gsc-result.gsc-promotion:hover { border-width: 0; background-color: transparent; }
-
-.gsc-webResult.gsc-result.gsc-promotion { border-width: 0; padding: 0.37037037037037em 2% 1.111111111111111em 2%; /*5/13.5*/ /*15/13.5*/ background-color: #c8e7fd; }
-
-.gsc-result .gs-result .gs-title { height: auto; }
-
-#___gcse_0 .gsc-control-cse, #___gcse_0 .gsc-control-cse .gsc-table-result, #___gcse_0 .gs-result .gsc-control-cse, #___gcse_0 .gs-result .gsc-control-cse .gsc-table-result { font-size: 14px; font-size: 0.875rem; line-height: 1.607142857142857; }
-
-.gs-result .gsc-thumbnail-inside, .gs-result .gsc-url-top { padding: 0; }
-
-#___gcse_0 .gsc-control-cse .gs-spelling, #___gcse_0 .gsc-control-cse .gs-result .gs-title { font-size: 17px; font-size: 1.063rem; line-height: 1.323529411764706; }
-
-.gssb_c { margin: 0; }
-
-.gssb_e .gsc-completion-container, .gssb_a, .gsc-completion-container tr > td { border-width: 0; }
-
-.gsc-completion-container .gssb_l { margin: 0; }
+ */#___gcse_0 .cse .gsc-control-cse,#___gcse_0 .gsc-control-cse{border-width:0;padding:0;background-color:transparent}.gsc-control-cse table{margin:0}.gsc-control-cse td{border-width:0;padding:0}.gsc-control-wrapper-cse form.gsc-search-box,.gsc-control-wrapper-cse table.gsc-search-box{margin:0}.gsc-input,.gsc-search-button,.gsc-clear-button{padding:0}.gsc-input .gsc-input-box{height:auto}.gsc-control-cse .gsib_a{padding:4px 8px}.gsst_b .gsst_a{border-bottom:none}.gsc-search-box input.gsc-search-button,.cse .gsc-search-box .gsc-search-button input.gsc-search-button-v2,.gsc-search-box input.gsc-search-button-v2{height:auto;margin:0;padding:7px 27px;width:auto;display:block}div.gsc-selected-option-container{padding:0 1em;width:auto !important;max-width:none;min-width:0}.gs-result .gs-spelling{padding:0;display:inline}.gs-spelling::after{content:". "}.gsc-control-wrapper-cse .gsc-above-wrapper-area{padding:0}.gsc-results{width:100%}.gsc-results .gsc-webResult.gsc-result,.gsc-results .gsc-webResult.gsc-result:hover,.gsc-results .gsc-webResult.gsc-result.gsc-promotion:hover{border-width:0;background-color:transparent}.gsc-webResult.gsc-result.gsc-promotion{border-width:0;padding:0.37037037037037em 2% 1.111111111111111em 2%;background-color:#c8e7fd}.gsc-result .gs-result .gs-title{height:auto}#___gcse_0 .gsc-control-cse,#___gcse_0 .gsc-control-cse .gsc-table-result,#___gcse_0 .gs-result .gsc-control-cse,#___gcse_0 .gs-result .gsc-control-cse .gsc-table-result{font-size:14px;font-size:0.875rem;line-height:1.607142857142857}.gs-result .gsc-thumbnail-inside,.gs-result .gsc-url-top{padding:0}#___gcse_0 .gsc-control-cse .gs-spelling,#___gcse_0 .gsc-control-cse .gs-result .gs-title{font-size:17px;font-size:1.063rem;line-height:1.323529411764706}.gssb_c{margin:0}.gssb_e .gsc-completion-container,.gssb_a,.gsc-completion-container tr>td{border-width:0}.gsc-completion-container .gssb_l{margin:0}

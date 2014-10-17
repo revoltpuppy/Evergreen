@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/**
+/*!*
  * Fields of Study Styles
  *
  * Styles for the fields of study pages.
@@ -9,6 +8,4 @@
  * @copyright  2013 by the author
  * @cssdoc     0.2.22
  * @license    Copyrighted
- */
-.ui-group a.media { border-bottom-width: 0; }
-.ui-group .media-img img { border-radius: 50%; }
+ */.ui-group a.media{border-bottom-width:0}.ui-group .media-img img{border-radius:50%}
