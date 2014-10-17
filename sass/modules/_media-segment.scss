@@ -12,10 +12,10 @@
  * +---------+------------------+
  */
 .media{
-	clear: left;  //IE9
-	display: block;  //IE9
-	display: -webkit-flex;  //Safari
-	display:         flex;  //W3C
+	clear: left;  // IE 9
+	display: block;  // IE 9
+	display: -webkit-flex;  // Safari
+	display:         flex;  // W3C
 	//layout
 }
 .media-img,
@@ -38,8 +38,8 @@
 //Vertically center .media-img. Extends .media-img or .media-body.
 .media-img-alt,  //deprecated, use .media-child-alt instead
 .media-child-alt{
-	 -webkit-align-self: center;  //Safari
-	         align-self: center;  //W3C
+	 -webkit-align-self: center;  // Safari
+	         align-self: center;  // W3C
 }
 
 .media-img img{
@@ -53,16 +53,16 @@
 }
 
 .media-body{
-	-webkit-flex-grow: 1;
-	        flex-grow: 1;
-	overflow: auto;  //IE9  //Gives block formatting context
+	//layout
+	flex: 1 1 auto;
+	overflow: auto;  //IE 9  // Gives block formatting context
 	/*Alternate way to give block formatting context
-	display: table-cell;  //Gives block formatting context (pretty nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
-	width: 3000px;  //Stretches box to fit the remaining width; this is not the actual value that comes out.*/
+	display: table-cell;  // Gives block formatting context (pretty nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
+	width: 3000px;  // Stretches box to fit the remaining width; this is not the actual value that comes out.*/
 }
 
 .media-body :first-child{
-	margin-top: 0.46875rem;  //Align the .media-body content with the .media-img content.
+	margin-top: 0.46875rem;  // Align the .media-body content with the .media-img content.
 }
 
 // Put .media-img on the right. Extends .media
@@ -73,10 +73,10 @@
 .media-alt .media-img{
 	margin-right: 0;
 	margin-left: 2%;
-	float: right;  //IE9
+	float: right;  // IE 9
 }
 
-//Put .media-img on the top. Extends .media
+// Put .media-img on the top. Extends .media
 .media-column{
 	-webkit-flex-direction: column;
 	        flex-direction: column;
@@ -86,7 +86,7 @@
 	.media-img{
 	  padding-right: 0;
 	  max-width: 100%;
-	  float: none;  //IE9
+	  float: none;  // IE 9
 	  text-align: center;
 	  
 	  img{
