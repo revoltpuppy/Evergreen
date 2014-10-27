@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
 		autoprefixer: {
 			options: {
-				browsers: ['last 3 versions']
+				browsers: ['last 3 Chrome versions', 'last 3 Firefox versions', 'last 2 Safari versions', 'last 3 Explorer versions']
 			},
 			default_styles: {
 				src: 'styles.css',
