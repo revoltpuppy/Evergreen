@@ -3,7 +3,11 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-
+		
+		/**
+		 * Add support for older browsers by adding vendor prefixes to
+		 * Sass properties, based on data from caniuse.com.
+		 */
 		autoprefixer: {
 			options: {
 				browsers: ['last 3 Chrome versions', 'last 3 Firefox versions', 'last 2 Safari versions', 'last 3 Explorer versions']
@@ -23,7 +27,18 @@ module.exports = function(grunt) {
 				dest: 'custom-css/' // -> dest/css/file1.css, dest/css/file2.css
 			},
 		},
+		
+		/**
+		 * Give hints on fixing bugs in JavaScript.
+		 */
+		jshint: {
+			Gruntfile: ['Gruntfile.js'],
+			scripts: ['scripts.js']
+		},
 
+		/**
+		 * Process Sass into CSS.
+		 */
 		sass: {
 			stylesheets: {  // process specific files
 				options: {
@@ -41,22 +56,13 @@ module.exports = function(grunt) {
 					}
 				]
 			},
-			/*custom_css:{  // process a whole folder
-				options: {
-					style: 'compressed'
-				},
-				files: [
-					{
-		        expand: true,
-		        cwd: 'custom-css/',
-		        src: ['*.scss'],
-		        dest: 'custom-css/',
-		        ext: '.css'
-		      }
-				]
-			}*/
 		},
     
+    /**
+     * Compress JS by removing whitespace. Different from
+     * minification in that it doesn't replace variable and
+     * function names, which is easier to debug.
+     */
 		uglify: {
 			//options: {
 				//banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -65,17 +71,33 @@ module.exports = function(grunt) {
 				src: 'scripts.js',
 				dest: 'js/build/scripts.min.js'
 			}
-		}
+		},
+
+		watch: {
+			gruntfile: {  // Validate Gruntfile.
+				files: 'Gruntfile.js',
+				tasks: ['jshint'],
+			},
+			css: {  // Autoprefix, then process Sass into CSS.
+				files: ['styles.scss', 'print.scss', 'custom-css/*.scss'],
+				tasks: ['autoprefixer', 'sass']
+			},
+			js: {  // Uglify JavaScript.
+				files: ['scripts.js'],
+				tasks: ['uglify']
+			},
+		},
     
 	});
 
 	// Load the plugins.
 	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s).
-	//grunt.registerTask('default', ['sass', 'uglify']);
 	grunt.registerTask('default', ['sass', 'autoprefixer', 'uglify']);
 
 };
