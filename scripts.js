@@ -39,7 +39,7 @@ function fluidMedia(media){
       .attr('data-aspectRatio', this.height / this.width);  //Set the video's aspect ratio
     fluidMediaResize(media);
   });
-};
+}
 function fluidMediaResize(media){
   media.each(function(){
     var $el = $(this);
@@ -48,7 +48,7 @@ function fluidMediaResize(media){
 			.width($el.attr('data-width'))
 			.height($el.attr('data-width') * $el.attr('data-aspectRatio'));
   });
-};
+}
 
 
 /**
@@ -90,7 +90,7 @@ $(document).ready(function(){
 	 */
 	var alertURL = "/_inc/js/alert.txt";
 	$.get(alertURL, function(message){
-		if(message != ""){
+		if(message !== ""){
 		  $("#sitewide-alert").addClass("alert").append(message);
 		}
 	});
