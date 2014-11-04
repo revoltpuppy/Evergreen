@@ -30,14 +30,12 @@
  */
 .grid{
 	//box model
-	margin-right: -1em;  //Compensates for the extra gutter on the last grid unit
+	margin-right: -1em;  // Compensates for the extra gutter on the last grid unit
+	width: 100%;  // IE 10
 	//layout
-	display: -webkit-flex;  // Safari
-	display:         flex;
-	-webkit-flex-wrap: wrap;  // Safari
-	        flex-wrap: wrap;
-	-webkit-justify-content: center;
-	        justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	
 	&.zebra-striped{
 		margin-right: 0;
@@ -46,8 +44,7 @@
 
 //.grid-list,  //deprecated, use .grid-alt instead
 .grid-alt{  //Extends .grid
-	-webkit-justify-content: flex-start;
-	        justify-content: flex-start;
+	justify-content: flex-start;
 }
 
 .unit-1-7,  // 7-column
