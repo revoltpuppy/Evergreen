@@ -135,8 +135,6 @@
 	border-top: 5px solid $evergreen-old-style;
 	margin: 0 .25em;
 	margin-top: -5px;  //Compensate for 5px border
-	//layout
-	overflow: hidden;
 	//backgrounds & borders
 	background-color: #F3F3F3;  //IE8
 	background-color: hsla(0,0%,95%,.95);
@@ -168,6 +166,7 @@
 
 // Wraps all the content on most pages on the site.
 .content-wrapper{
+	border-bottom: 2px dashed $evergreen-neue;
 	
 	@media screen and (min-width: 43em){
 		margin-left: 20%;  //1/5
@@ -175,6 +174,7 @@
 	}
 	
 	@media screen and (min-width: 70em){
+		border-bottom: 0;
 		margin-left: 16.285714285714286%;  //1/7
 		width: 53.142857142857143%;  //4/7
 	}
@@ -242,7 +242,7 @@
 	}
 }
 .sidebar{
-	border-top: 2px dashed $evergreen-neue;
+	//border-top: 2px dashed $evergreen-neue;
 	
 	@media screen and (min-width: 43em){
 		margin-right: 5.675675675675676%;  //These values should match .main-content
