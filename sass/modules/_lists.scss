@@ -276,10 +276,15 @@ ul.flexible{
 	//box model
 	border: 1px solid mix(white, $blueberry-susan, 75%);
 	border-bottom-width: 0;
-  margin-bottom: -1px;
-  padding: 0 1em;
-  //layout
-  display: inline-block;
+	margin-bottom: -1px;
+	padding: 0 1em;
+	//layout
+	display: inline-block;
+	//position
+	position: sticky;
+	//position
+	top: .5em;
+	z-index: 1;
 	//backgrounds & borders
 	background-color: mix(white, $blueberry-susan, 85%);
 	border-radius: 2px 2px 0 0;
@@ -291,6 +296,9 @@ ul.flexible{
 	padding-left: 0;
 	//layout
 	display: block;
+	//position
+	position: sticky;
+	top: calc(.5em + .875rem * 1.60714);
 	//typography
 	word-wrap: break-word;
 	//backgrounds & borders
@@ -306,10 +314,14 @@ ul.flexible{
 		-webkit-justify-content: space-around;  //Safari 6
 		        justify-content: space-around;
 	}
+	
+	@media screen and (min-width: 43em){
+		top: calc(.5em + 1.202rem * 1.46814);
+	}
 }
 .alpha-label + .alpha-index{
   border-radius-top-left: 0;
-  margin-top: 0;
+  margin-top: -1px;
 }
 .alpha-index > li{
 	//box model
