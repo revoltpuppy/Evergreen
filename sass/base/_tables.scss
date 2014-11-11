@@ -40,6 +40,20 @@ table a{
 /**
  * DataTables
  */
+.dataTable{
+	th:hover{
+		cursor: pointer;
+	}
+}
+
+.sorting_asc::before{
+	//content: "▶\00A0";  //non-breaking space
+	content: "↓\00A0";  //non-breaking space
+}
+.sorting_desc::before{
+	content: "↑\00A0";  //non-breaking space
+}
+
 .dataTables_filter label{
 	font-weight: bold;
 }
