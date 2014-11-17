@@ -64,14 +64,14 @@
 	.image-alt{
 		//box model
 		margin-right: -6.544901065449%;
-		max-width: 53.500761035008%;
+		max-width: calc(53.881278538813% - 1em);
 	}
 }
 @media screen and (min-width:70em){
 	.illus-alt,  //deprecated
 	.image-alt{
 		//box model
-		margin: 0 0 0.631100639515315em -41.722972972972973%;  //7.5/11.884  Weird math for the left margin.
+		margin: 0 0 0.631100639515315em -40.943683409437%;  //7.5/11.884  Weird math for the left margin.
 		width: 38.260135135135135%;  //It took weird math to get here.
 		//layout
 		clear: left;
