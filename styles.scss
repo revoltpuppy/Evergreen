@@ -1,4 +1,10 @@
 @charset "UTF-8";
+@-ms-viewport{
+  width: device-width;
+}
+@viewport{
+	width: device-width;
+}
 //@import "compass";
 @import "sass/css-header";  //Just for funsies
 /*!*
