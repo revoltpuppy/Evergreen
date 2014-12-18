@@ -28,6 +28,21 @@ module.exports = function(grunt) {
 			},
 		},
 		
+		imagemin: {                          // Task
+			dynamic: {                         // Another target
+				options: {
+					optimizationLevel: 7,
+					progressive: true
+				},
+				files: [{
+					expand: true,                  // Enable dynamic expansion
+					cwd: 'images/src/',            // Src matches are relative to this path
+					src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+					dest: 'images/build/'          // Destination path prefix
+				}]
+			}
+	  },
+		
 		/**
 		 * Give hints on fixing bugs in JavaScript.
 		 */
@@ -73,6 +88,9 @@ module.exports = function(grunt) {
 			}
 		},
 
+		/**
+		 * Watch directories and execute Grunt tasks when they change.
+		 */
 		watch: {
 			gruntfile: {  // Validate Gruntfile.
 				files: 'Gruntfile.js',
@@ -90,14 +108,16 @@ module.exports = function(grunt) {
     
 	});
 
-	// Load the plugins.
+	// Load the plugins (alphabetical order).
 	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	// Default task(s).
-	grunt.registerTask('default', ['sass', 'autoprefixer', 'uglify']);
+	// Default task(s) (in the order you want to run them).
+	grunt.registerTask('default', ['sass', 'autoprefixer', 'newer:uglify']);
 
 };
