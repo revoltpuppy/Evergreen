@@ -78,6 +78,7 @@ video{
  * B. Tables
  */
 table{
+		//box model
     border-collapse: collapse;
     border-spacing: 0;
     border-width: 0;
@@ -112,6 +113,8 @@ td{
 	padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;  //5/13.5  15/13.5
 	//typography
 	color: #333;
+  font-feature-settings: "lnum", "tnum" "ordn";  // "lnum" is needed for lining numbers in Firefox.
+	font-variant-numeric: lining-nums ordinal tabular-nums;  // "lining-nums" is not applying in Firefox.
 	vertical-align: top;
 }
 td:last-child{

@@ -23,6 +23,23 @@ html{
 
 body{
 	font-family: $text-face;
+	// OpenType features available in Proxima Nova
+	// c2sc - Small capitals from capitals (Note: don't use font-feature-settings for small-caps)
+	// frac - Fractions
+	// liga - Standard ligatures
+	// lnum - Lining figures ("uppercase" numbers)
+	// onum - Oldstyle figures ("lowercase" numbers)
+	// ordn - Ordinals (1st, 2nd)
+	// pnum - Proportional figures (Varying width numbers)
+	// salt - Stylistic alternates
+	// smcp - Small capitals (Note: don't use font-feature-settings for small-caps)
+	// ss## - Stylistic sets (## is 01-20; I don't know how many sets this font has)
+	// subs - Subscripts
+	// sups - Superscripts
+	// tnum - Tabular figures (Fixed-width numbers)
+	font-feature-settings: "liga", "onum", "ordn";  // Low-level OpenType features; these could be turned off eventually
+	font-variant-ligatures: common-ligatures discretionary-ligatures;
+	font-variant-numeric: ordinal oldstyle-nums;
 	text-rendering: optimizeLegibility;
 }
 
