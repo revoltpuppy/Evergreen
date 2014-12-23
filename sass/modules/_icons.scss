@@ -23,11 +23,12 @@
 }
 
 /**
- * 2. Related Nav
+ * 2. Related Nav (aka The Transporter)
  *
  * Related links with iconographic circles.
  */
-.related-nav > li{
+.related-nav > li,  //deprecated name
+.transporter > li{
 	//box model
 	margin: 0.9375rem 0;  // 15/16
 	//layout
@@ -38,7 +39,8 @@
 	text-align: center;
 }
 
-.related-nav a{
+.related-nav a,  //deprecated name
+.transporter a{
 
 	&,
 	&:visited{
@@ -60,7 +62,8 @@
 	}
 }
 
-.related-nav-icon{
+.related-nav-icon,  //deprecated name
+.transporter-icon{
 	// box model
 	padding: 15%;  //Whatever feels right.
 	padding-top: 85%;  //For responsive SVG.
