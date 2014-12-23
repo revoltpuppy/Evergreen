@@ -93,6 +93,39 @@ module.exports = function(grunt) {
 				]
 			},
 		},
+		
+		/**
+		 * Create spritesheets out of SVG files in a folder.
+		 */
+		svgstore: {
+			options: {
+				prefix : 'icon-', // This will prefix each ID
+				svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
+					//viewBox : '0 0 100 100',
+					//xmlns: 'http://www.w3.org/2000/svg'
+				},
+				inheritviewbox: true,
+			},
+			transporter: {
+				/*files: {
+					'' : [''],  // dest : src
+				}*/
+				src: ['images/src/icons/transporter/*.svg'],
+				dest: 'images/build/transporter.svg',
+			},
+		},
+		/*svgsprite: {
+			options: {
+				//cleanwith: 'svgo',	//SVG optimizer
+			},
+			transporter: {
+				src: ['images/src/icons'],
+				dest: 'images/build/icons',
+				options: {
+					sprite: 'transporter',  //filename
+				}
+			},
+	  },*/
     
     /**
      * Compress JS by removing whitespace. Different from
@@ -135,6 +168,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-svgstore');
+	/*grunt.loadNpmTasks('grunt-svg-sprite');*/
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
