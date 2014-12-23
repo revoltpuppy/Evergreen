@@ -26,6 +26,10 @@ module.exports = function(grunt) {
 				src: 'custom-css/*.css', // -> src/css/file1.css, src/css/file2.css
 				dest: 'custom-css/' // -> dest/css/file1.css, dest/css/file2.css
 			},
+			dev_styles: {
+				src: 'styles-dev.css',
+				dest: 'styles-dev.css'
+			},
 		},
 		
 		imagemin: {                          // Task
@@ -55,7 +59,7 @@ module.exports = function(grunt) {
 		 * Process Sass into CSS.
 		 */
 		sass: {
-			stylesheets: {  // process specific files
+			build: {  // process specific files
 				options: {
 					style: 'compressed'
 				},
@@ -69,6 +73,23 @@ module.exports = function(grunt) {
 						dest: 'custom-css/',
 						ext: '.css'
 					}
+				]
+			},
+			dev: {  // process specific files
+				options: {
+					lineNumbers: true,
+					style: 'expanded',
+				},
+				files: [
+					{'styles-dev.css': 'styles.scss'},  // 'destination': 'source'
+					/*{'print.css': 'print.scss'},
+					{                               // process this whole folder
+						expand: true,
+						cwd: 'custom-css/',
+						src: ['*.scss'],
+						dest: 'custom-css/',
+						ext: '.css'
+					}*/
 				]
 			},
 		},
