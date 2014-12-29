@@ -130,7 +130,7 @@
 }
 
 .index-wrapper,
-.content-wrapper,
+//.content-wrapper,
 .primary-content-wrapper{  // placeholder for future changes (see below)
 	/** 
 	 * Primary-content-wrapper needs to eventually usurp
@@ -174,7 +174,7 @@
 }
 
 // Wraps all the content on most pages on the site.
-.content-wrapper,
+//.content-wrapper,
 .primary-content-wrapper{  //placeholder for future changes
 	border-bottom: 2px dashed $evergreen-neue;
 	
@@ -236,8 +236,8 @@
 	}
 }
 
-.content-wrapper .main-content,  // specified in .content-wrapper to not affect .index-wrapper
-.primary-content-wrapper .main-content{  // placeholder for future changes
+//.content-wrapper .main-content,
+.primary-content-wrapper .main-content{  // specified in .content-wrapper to not affect .index-wrapper
 	max-width: 45em;
 	
 	@media screen and (min-width:43em){
