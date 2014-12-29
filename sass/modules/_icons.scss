@@ -27,7 +27,8 @@
  *
  * Related links with iconographic circles.
  */
-.related-nav > li{
+.related-nav > li,  // deprecated, use .transporter > li instead
+.transporter > li{
 	//box model
 	margin: 0.9375rem 0;  // 15/16
 	//layout
@@ -60,7 +61,8 @@
 	}
 }
 
-.related-nav-icon{
+.related-nav-icon,  // deprecated, use .transporter-icon instead
+.transporter-icon{
 	// box model
 	padding: 15%;  //Whatever feels right.
 	padding-top: 85%;  //For responsive SVG.
