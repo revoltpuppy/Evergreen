@@ -23,8 +23,8 @@ module.exports = function(grunt) {
 			custom_css: {  // process a whole folder
 				expand: true,
 				flatten: true,
-				src: 'custom-css/*.css', // -> src/css/file1.css, src/css/file2.css
-				dest: 'custom-css/' // -> dest/css/file1.css, dest/css/file2.css
+				src: 'custom-css/build/*.css', // -> src/css/file1.css, src/css/file2.css
+				dest: 'custom-css/build/' // -> dest/css/file1.css, dest/css/file2.css
 			},
 			dev_styles: {
 				src: 'styles-dev.css',
@@ -68,9 +68,9 @@ module.exports = function(grunt) {
 					{'print.css': 'print.scss'},
 					{                               // process this whole folder
 						expand: true,
-						cwd: 'custom-css/',
+						cwd: 'custom-css/src',  // source folder
 						src: ['*.scss'],
-						dest: 'custom-css/',
+						dest: 'custom-css/build',  // destination folder
 						ext: '.css'
 					}
 				]
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
 				tasks: ['jshint'],
 			},
 			css: {  // Autoprefix, then process Sass into CSS.
-				files: ['styles.scss', 'print.scss', 'sass/**/*.scss', 'custom-css/*.scss'],
+				files: ['styles.scss', 'print.scss', 'sass/**/*.scss', 'custom-css/src/*.scss'],
 				tasks: ['sass', 'autoprefixer']
 			},
 			js: {  // Uglify JavaScript.

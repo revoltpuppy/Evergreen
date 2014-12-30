@@ -12,8 +12,13 @@
 	clear: left;
 	//typography
 	color: #fff;
+	@include base-type;
 	//backgrounds & borders
 	background-color: #000;
+	
+	@media screen and (min-width: 70em){
+		@include base-type-lg;
+	}
 }
 [role="contentinfo"]:after,
 [role="contentinfo"]:before{
@@ -30,7 +35,7 @@
 }
 .page-footer a:hover{
 	border-color: $sky-blue;
-    color: $sky-blue;
+	color: $sky-blue;
 }
 .footer-map{
 	margin-left: 2%;

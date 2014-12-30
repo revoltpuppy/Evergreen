@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import "../tools";
+@import "../../tools";
 
 @media print{
 	.scholarships,
@@ -9,5 +9,11 @@
 		//typography
 		@include small-type;
 		font-family: $text-face;
+	}
+	
+	.site-name,
+	.sidebar-wrapper,
+	.page-footer{
+		display: none;
 	}
 }
