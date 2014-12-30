@@ -22,9 +22,11 @@
  */
  @import "layout/grid";
 
-// Element list is a generic container that is meant to house lists
-// of designed elements, i.e. not a bulleted text list. It is meant
-// to apply to uls and ols.
+/**
+ * Element list is a generic container that is meant to house lists
+ * of designed elements, i.e. not a bulleted text list. It is meant
+ * to apply to uls and ols.
+ */
 .element-list{
 	//box model
 	margin-left: 0;

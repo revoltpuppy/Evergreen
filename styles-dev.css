@@ -1485,7 +1485,12 @@ button[disabled]:hover {
   }
 }
 
-/* line 28, sass/_layout.scss */
+/**
+ * Element list is a generic container that is meant to house lists
+ * of designed elements, i.e. not a bulleted text list. It is meant
+ * to apply to uls and ols.
+ */
+/* line 30, sass/_layout.scss */
 .element-list {
   margin-left: 0;
   padding-left: 0;
@@ -1495,26 +1500,26 @@ button[disabled]:hover {
 /**
  * B. Page-level Layout
  */
-/* line 39, sass/_layout.scss */
+/* line 41, sass/_layout.scss */
 .wrapper {
   margin: 0 auto;
   width: 100%;
   display: block;
 }
-/* line 46, sass/_layout.scss */
+/* line 48, sass/_layout.scss */
 .wrapper.grid, .wrapper.grid-alt {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 @media screen and (min-width: 70em) {
-  /* line 39, sass/_layout.scss */
+  /* line 41, sass/_layout.scss */
   .wrapper {
     max-width: 82em;
   }
 }
 
-/* line 56, sass/_layout.scss */
+/* line 58, sass/_layout.scss */
 .wrapper:before,
 .wrapper:after {
   width: 0;
@@ -1526,42 +1531,42 @@ button[disabled]:hover {
 /**
  * C. Header Layout
  */
-/* line 68, sass/_layout.scss */
+/* line 70, sass/_layout.scss */
 [role="banner"] {
   overflow: hidden;
   background-color: #f3f3f3;
   box-shadow: 0 0 3px rgba(30, 19, 37, 0.25);
 }
 
-/* line 77, sass/_layout.scss */
+/* line 79, sass/_layout.scss */
 .page-header {
   transition: all .1s ease-in-out;
 }
 @media screen and (min-width: 43em) {
-  /* line 77, sass/_layout.scss */
+  /* line 79, sass/_layout.scss */
   .page-header {
     background-color: transparent;
   }
 }
 
-/* line 86, sass/_layout.scss */
+/* line 88, sass/_layout.scss */
 [role="main"] {
   position: relative;
 }
 
-/* line 90, sass/_layout.scss */
+/* line 92, sass/_layout.scss */
 [role="navigation"],
 [role="main"] {
   width: 100%;
 }
 
-/* line 95, sass/_layout.scss */
+/* line 97, sass/_layout.scss */
 [role="navigation"] {
   clear: both;
   position: relative;
 }
 @media screen and (min-width: 20em) {
-  /* line 95, sass/_layout.scss */
+  /* line 97, sass/_layout.scss */
   [role="navigation"] {
     font-size: .657rem;
     line-height: 1.427619682116684;
@@ -1569,7 +1574,7 @@ button[disabled]:hover {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 95, sass/_layout.scss */
+  /* line 97, sass/_layout.scss */
   [role="navigation"] {
     margin-left: 0;
     width: 100%;
@@ -1582,20 +1587,20 @@ button[disabled]:hover {
 /**
  * D. Content Layout
  */
-/* line 120, sass/_layout.scss */
+/* line 122, sass/_layout.scss */
 .site-content {
   margin-bottom: 1.875rem;
   width: 100%;
   position: relative;
 }
 @media screen and (min-height: 35em) {
-  /* line 120, sass/_layout.scss */
+  /* line 122, sass/_layout.scss */
   .site-content {
     margin-bottom: 3.75rem;
   }
 }
 
-/* line 132, sass/_layout.scss */
+/* line 134, sass/_layout.scss */
 .index-wrapper,
 .primary-content-wrapper {
   /** 
@@ -1614,7 +1619,7 @@ button[disabled]:hover {
   border-radius: 2px;
 }
 @media screen and (min-width: 43em) {
-  /* line 132, sass/_layout.scss */
+  /* line 134, sass/_layout.scss */
   .index-wrapper,
   .primary-content-wrapper {
     margin-right: 0;
@@ -1624,33 +1629,33 @@ button[disabled]:hover {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 163, sass/_layout.scss */
+  /* line 165, sass/_layout.scss */
   .index-wrapper {
     margin-left: 20%;
     width: 78%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 163, sass/_layout.scss */
+  /* line 165, sass/_layout.scss */
   .index-wrapper {
     margin-left: 18.292682926829%;
     width: 81.714285714285714%;
   }
 }
 
-/* line 178, sass/_layout.scss */
+/* line 180, sass/_layout.scss */
 .primary-content-wrapper {
   border-bottom: 2px dashed #64933a;
 }
 @media screen and (min-width: 43em) {
-  /* line 178, sass/_layout.scss */
+  /* line 180, sass/_layout.scss */
   .primary-content-wrapper {
     margin-left: 20%;
     width: 78%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 178, sass/_layout.scss */
+  /* line 180, sass/_layout.scss */
   .primary-content-wrapper {
     border-bottom: 0;
     margin-left: 16.285714285714286%;
@@ -1658,7 +1663,7 @@ button[disabled]:hover {
   }
 }
 
-/* line 194, sass/_layout.scss */
+/* line 196, sass/_layout.scss */
 .sidebar-wrapper {
   margin: 0 .25em;
   overflow: hidden;
@@ -1666,7 +1671,7 @@ button[disabled]:hover {
   background-color: rgba(242, 242, 242, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 194, sass/_layout.scss */
+  /* line 196, sass/_layout.scss */
   .sidebar-wrapper {
     margin-left: 20%;
     width: 78%;
@@ -1674,20 +1679,20 @@ button[disabled]:hover {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 194, sass/_layout.scss */
+  /* line 196, sass/_layout.scss */
   .sidebar-wrapper {
     margin: 0 2%;
     width: 26.571428571429%;
   }
 }
 
-/* line 220, sass/_layout.scss */
+/* line 222, sass/_layout.scss */
 .main-content,
 .sidebar {
   margin: 0 .75em;
 }
 @media screen and (min-width: 22em) {
-  /* line 220, sass/_layout.scss */
+  /* line 222, sass/_layout.scss */
   .main-content,
   .sidebar {
     margin: 0 1em;
@@ -1695,50 +1700,50 @@ button[disabled]:hover {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 229, sass/_layout.scss */
+  /* line 231, sass/_layout.scss */
   .index-wrapper .main-content {
     margin-left: 5.675675675675676%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 229, sass/_layout.scss */
+  /* line 231, sass/_layout.scss */
   .index-wrapper .main-content {
     margin: 0 3.626279863481%;
   }
 }
 
-/* line 240, sass/_layout.scss */
+/* line 242, sass/_layout.scss */
 .primary-content-wrapper .main-content {
   max-width: 45em;
 }
 @media screen and (min-width: 43em) {
-  /* line 240, sass/_layout.scss */
+  /* line 242, sass/_layout.scss */
   .primary-content-wrapper .main-content {
     margin-right: 5.675675675675676%;
     margin-left: 5.675675675675676%;
   }
 }
 
-/* line 248, sass/_layout.scss */
+/* line 250, sass/_layout.scss */
 .main-content {
   margin-top: -5px;
 }
 @media screen and (min-width: 70em) {
-  /* line 248, sass/_layout.scss */
+  /* line 250, sass/_layout.scss */
   .main-content {
     position: relative;
   }
 }
 
 @media screen and (min-width: 43em) {
-  /* line 255, sass/_layout.scss */
+  /* line 257, sass/_layout.scss */
   .sidebar {
     margin-right: 5.675675675675676%;
     margin-left: 5.675675675675676%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 255, sass/_layout.scss */
+  /* line 257, sass/_layout.scss */
   .sidebar {
     border-top-width: 0;
     border-left: 1px solid #ccc;
@@ -1748,19 +1753,19 @@ button[disabled]:hover {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
-  /* line 273, sass/_layout.scss */
+  /* line 275, sass/_layout.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.535714285714286em 0 1.071428571428571em 0;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 255, sass/_layout.scss */
+  /* line 257, sass/_layout.scss */
   .sidebar {
     font-size: 1.063rem;
     line-height: 1.47058823529412;
   }
-  /* line 282, sass/_layout.scss */
+  /* line 284, sass/_layout.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.441176470588235em 0 0.882352941176471em 0;
@@ -1774,42 +1779,42 @@ button[disabled]:hover {
  * permits. Use sparingly!
  */
 @media screen and (max-width: 20em) {
-  /* line 296, sass/_layout.scss */
+  /* line 298, sass/_layout.scss */
   .gt20 {
     display: none;
   }
 }
 @media screen and (max-width: 22em) {
-  /* line 301, sass/_layout.scss */
+  /* line 303, sass/_layout.scss */
   .gt22 {
     display: none;
   }
 }
 @media screen and (max-width: 32em) {
-  /* line 306, sass/_layout.scss */
+  /* line 308, sass/_layout.scss */
   .gt32 {
     display: none;
   }
 
-  /* line 309, sass/_layout.scss */
+  /* line 311, sass/_layout.scss */
   .ins32 {
     display: none;
   }
 }
 @media screen and (max-width: 43em) {
-  /* line 314, sass/_layout.scss */
+  /* line 316, sass/_layout.scss */
   .gt43 {
     display: none;
   }
 }
 @media screen and (max-width: 70em) {
-  /* line 319, sass/_layout.scss */
+  /* line 321, sass/_layout.scss */
   .gt70 {
     display: none;
   }
 }
 @media screen and (max-width: 88em) {
-  /* line 324, sass/_layout.scss */
+  /* line 326, sass/_layout.scss */
   .gt88 {
     display: none;
   }
@@ -4366,9 +4371,40 @@ p.alert {
 }
 
 /**
+ * 4. Bulletin
+ *
+ * The section that says, “This is Week X”.
+ *
+ * @section mod-event-calendar
+ */
+/* line 463, sass/_modules.scss */
+.bulletin {
+  border-bottom: 1px solid #b6aabe;
+  background-color: #ece9ee;
+}
+
+/* line 469, sass/_modules.scss */
+.chrono-meter > li {
+  border: 1px solid #b6aabe;
+  clear: left;
+  float: left;
+  border-radius: 2px;
+}
+
+/* line 479, sass/_modules.scss */
+.chrono-stop-current {
+  background-color: #dad4de;
+}
+
+/* line 483, sass/_modules.scss */
+.chrono-stop-complete {
+  background-color: #b6aabe;
+}
+
+/**
  * M. Embeded Content
  */
-/* line 459, sass/_modules.scss */
+/* line 491, sass/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -4376,7 +4412,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 469, sass/_modules.scss */
+/* line 501, sass/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -4395,11 +4431,11 @@ p.alert {
   background-image: url(http://evergreen.edu/_inc/images/texture-1.png);
   content: url(http://evergreen.edu/_inc/images/icons/green/play.png);
 }
-/* line 491, sass/_modules.scss */
+/* line 523, sass/_modules.scss */
 .lazy-load:hover::after {
   opacity: .85;
 }
-/* line 495, sass/_modules.scss */
+/* line 527, sass/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
@@ -4423,7 +4459,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 523, sass/_modules.scss */
+/* line 555, sass/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
