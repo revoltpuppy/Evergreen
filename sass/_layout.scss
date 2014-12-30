@@ -49,7 +49,7 @@
 		display:         flex;
 	}
 	
-	@media screen and (min-width: 70em){
+	@include breakpoint($drax){
 		max-width: 82em;
 	}
 }
@@ -78,7 +78,7 @@
 	-webkit-transition: all .1s ease-in-out;  //Safari 6, Chrome 25
           transition: all .1s ease-in-out;
   
-  @media screen and (min-width: 43em){
+  @include breakpoint($gamora){
 	  background-color: transparent;
   }
 }
@@ -96,13 +96,13 @@
 	clear: both;
 	position: relative;
 
-	@media screen and (min-width: 20em){
+	@include breakpoint($lil-groot){
 		font-size: .657rem;
 		line-height: 1.427619682116684;
 		letter-spacing: .05em;
 	}
 
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		//box model
 		margin-left: 0;
 		width: 100%;
@@ -149,7 +149,7 @@
 	background-color: hsla(0,0%,95%,.95);
 	border-radius: 2px;
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		// box model
 		margin-right: 0;
 		margin-left: 16.285714285714286%;  // 1/7
@@ -162,12 +162,12 @@
 // secondary content area.
 .index-wrapper{
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		margin-left: 20%;
 		width: 78%;
 	}
 		
-	@media screen and (min-width: 70em){
+	@include breakpoint($drax){
 		margin-left: 18.292682926829%;
 		width: 81.714285714285714%;  //6/7
 	}
@@ -178,12 +178,12 @@
 .primary-content-wrapper{  //placeholder for future changes
 	border-bottom: 2px dashed $evergreen-neue;
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		margin-left: 20%;  //1/5
 		width: 78%; //4/5
 	}
 	
-	@media screen and (min-width: 70em){
+	@include breakpoint($drax){
 		border-bottom: 0;
 		margin-left: 16.285714285714286%;  //1/7
 		width: 53.142857142857143%;  //4/7
@@ -200,7 +200,7 @@
 	background-color: #F3F3F3;  //IE8
 	background-color: hsla(0,0%,95%,.95);
 
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		//box model
 		margin-left: 20%;
 		width: 78%;
@@ -208,7 +208,7 @@
 		overflow: visible;
 	}
 	
-	@media screen and (min-width: 70em){
+	@include breakpoint($drax){
 		margin: 0 2%;
 		width: 26.571428571429%;  //2/7
 	}
@@ -221,17 +221,17 @@
 .sidebar{
 	margin: 0 .75em;
 	
-	@media screen and (min-width: 22em){
+	@include breakpoint($rocket){
 		margin: 0 1em;
 	}
 }
 
 .index-wrapper .main-content{
 
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		margin-left: 5.675675675675676%;  //matches .content-wrapper .main-content
 	}
-	@media screen and (min-width: 70em){
+	@include breakpoint($drax){
 		margin: 0 3.626279863481%;
 	}
 }
@@ -240,7 +240,7 @@
 .primary-content-wrapper .main-content{  // specified in .content-wrapper to not affect .index-wrapper
 	max-width: 45em;
 	
-	@media screen and (min-width:43em){
+	@include breakpoint($gamora){
 		margin-right: 5.675675675675676%;  //I bumped this up for better readability on iPad and 800x600
 		margin-left: 5.675675675675676%;
 	}
@@ -248,19 +248,19 @@
 .main-content{
 	margin-top: -5px;
 	
-	@media screen and (min-width: 70em){
+	@include breakpoint($drax){
 		position: relative;  //Creates a context for absolutely positioning the homepage tertiary nav
 	}
 }
 .sidebar{
 	//border-top: 2px dashed $evergreen-neue;
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		margin-right: 5.675675675675676%;  //These values should match .main-content
 		margin-left: 5.675675675675676%;
 	}
 
-	@media screen and (min-width: 70em){
+	@include breakpoint($drax){
 		//box model
 		border-top-width: 0;
 		border-left: 1px solid #ccc;
@@ -276,7 +276,7 @@
 		}
 	}
 	
-	@media screen and (min-width: 125em){
+	@include breakpoint($groot){
 		@include base-type-lg;
 		 
 		p,
