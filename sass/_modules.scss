@@ -264,15 +264,15 @@
 	 * @section mod-event-calendar
 	 */	
 	.calendar-dt{
-		//box model
+		// box model
 		border: 1px solid mix(white, $blueberry-susan, 66%);
 		margin: 0 auto;
-		max-width: 3em;
-		//layout
+		width: 3em;
+		// layout
 		overflow: hidden;
-		//typography
+		// typography
 		text-align: center;
-		//backgrounds and borders
+		// backgrounds and borders
 		background-color: hsl(0, 0%, 95%);
 		border-radius: 2px;
 	}
@@ -291,6 +291,36 @@
 		text-transform: uppercase;
 		//backgrounds and borders
 		background-color: $wine;
+	}
+	
+	.calendar-dt-mini{  // A calendar that starts small and then expands to normal size.
+		@media screen{
+			width: 2em;
+			
+			.calendar-month{
+				// box model
+				height: 2px;
+				// layout
+				overflow: hidden;
+				// typography
+				color: transparent;
+			}
+			
+			.calendar-day{
+				// box model
+				height: 1.42857em;  // matches line-height of type
+				// layout
+				display: block;
+			}
+		}
+	}
+	
+	.calendar-dt-null{
+		background-color: mix(white, $blueberry-susan, 80%);
+		
+		.calendar-month{
+			background-color: mix(white, $blueberry-susan, 60%);
+		}
 	}
 	
 	
@@ -476,28 +506,130 @@
 	 * @section mod-event-calendar
 	 */
 	.bulletin{
+		// box model
 		border-bottom: 1px solid mix(white, $blueberry-susan, 60%);
+		// backgrounds & borders
 		background-color: mix(white, $blueberry-susan, 90%);
+		// typography
+		@include base-type;
+		
+		@include breakpoint($drax){
+			@include base-type-lg;
+		}
+		
+		> .wrapper{
+			width: calc(100% - 2em);  // min-margins
+		}
+	}
+	
+	.bulletin .grid{
+		align-items: center;
+	}
+	
+	.bulletin-header,
+	.bulletin-body{
+		width: 100%;
+		padding-left: 1em;  // grid system
+	}
+	
+	.bulletin-header{		
+		@include breakpoint($lil-groot){
+			width: 33.3333333333%;
+		}
+		
+		@include breakpoint($gamora){
+			width: 14.285714285714%;
+		}
+		
+		h2{
+			// box-model
+			@include margin-default;
+			
+			@include breakpoint($lil-groot){
+				// typography
+				text-align: right;
+			}
+		}
 	}
 	.chrono-meter{
+		//box model
+		width: 100%;
+		// layout
+		display: flex;
+		justify-content: space-between;
 		
-		> li{
-			//box model
-			border: 1px solid mix(white, $blueberry-susan, 60%);
-			//layout
+		@include breakpoint($lil-groot){
+			// box model
+			margin-right: 1em;
+			width: auto;
+			// layout
+			flex-direction: column;
+			float: left;
+			overflow: hidden;
+		}
+		
+		@include breakpoint($gamora){
+			// box model
+			margin-right: 0;
+			width: 100%;
+			// layout
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+		
+	.chrono-meter	> li{
+		// box model
+		border: 1px solid mix(white, $blueberry-susan, 60%);
+		height: 7.5px;
+		width: 7.5px;
+		// layout
+		display: inline-block;
+		
+		@include breakpoint($lil-groot){
+			// box model
+			margin-bottom: 2px;
+			// layout
 			clear: left;
 			float: left;
-			//backgrounds & borders
+			// backgrounds & borders
 			border-radius: 2px;
 		}
 	}
 	.chrono-stop-current{
-		//backgrounds & borders
+		// backgrounds & borders
 		background-color: mix(white, $blueberry-susan, 80%);
 	}
 	.chrono-stop-complete{
-		//backgrounds & borders
+		// backgrounds & borders
 		background-color: mix(white, $blueberry-susan, 60%);
+	}
+	
+	.bulletin-body{
+		@include breakpoint($lil-groot){
+			width: 66.6666666667%;
+		}
+		
+		@include breakpoint($gamora){
+			width: 85.714285714286%;
+		}
+	}
+	.bulletin-calendar{
+		@include breakpoint($lil-groot){
+			/*border-left: 1px solid mix(white, $blueberry-susan, 60%);
+			padding-left: 1em;*/
+		}
+		
+		@include breakpoint($gamora){
+				display: flex;
+		}
+	}
+	.bulletin-calendar > li{
+		@include breakpoint($gamora){
+			float: left;
+			padding-left: 1em;
+			width: 33.333333333%;
+		}
 	}
 
 /**
