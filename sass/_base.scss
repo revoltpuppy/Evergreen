@@ -221,17 +221,15 @@ select{
 /**
  * F. Hyphenation
  */
-//a,  //keep linked words whole
-//a:link,
-//.intro,
-//.pull-quote,
-//.big-fact{
-//    -webkit-hyphens: none;
-//       -moz-hyphens: none;
-//        -ms-hyphens: none;
-//            hyphens: none;
-//}
-//For words that are so long they may cause overflow, like dichlorodiphenyltrichloroethane. Holy crap!
-.looong-word{
-    word-wrap: break-word;
+/*a,  //keep linked words whole
+a:link,
+.intro,
+.pull-quote,
+.big-fact{
+	hyphens: none;
+}*/
+
+.looong-word{  // For words that are so long they may cause overflow, like dichlorodiphenyltrichloroethane. Holy crap!
+    word-wrap: break-word;  // Firefox, IE
+    overflow-wrap: break-word;
 }
