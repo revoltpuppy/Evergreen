@@ -229,6 +229,11 @@ input:checked + .header-dropdown{
 li.internal-users-alt{
 	display: none;
 	
+	img{
+		height: 10px;
+		width: 10px;
+	}
+	
 	@media screen and (min-width: 43em){
 		display: inline;
 	}
