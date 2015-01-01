@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.student-groups{
+	table-layout: fixed;
+}
+
+.website-list a{
+	word-wrap: break-word;  //Firefox, IE
+	overflow-wrap: break-word;
+}
