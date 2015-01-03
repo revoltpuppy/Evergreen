@@ -1,4 +1,10 @@
+@charset "UTF-8";
 /*!*
+ * View the source and fork these styles on Github:
+ *
+ * @see https://github.com/revoltpuppy/Evergreen
+ */
+/**
  * Print Styles
  *
  * Print styles for the 2013 Evergreen template.
@@ -37,7 +43,7 @@ body{
 }
 
 //Print URLs after links
-a::after{
+/*a::after{
 	//typography
 	font-size: .657rem;
 	line-height: 1.427619682116684;  //15/10.507
@@ -49,7 +55,7 @@ a::after{
 //Print internal URLs referencing the root with the root prefix.
 a[href^="/"]::after{
 	content: " (http://evergreen.edu" attr(href) ")";
-}
+}*/
 
 /**
  * 2. Layout Styles
