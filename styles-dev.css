@@ -668,9 +668,10 @@ table {
   border-width: 0;
   margin: 1.481481481481481em 0;
   width: 100%;
+  max-width: 100%;
 }
 
-/* line 90, sass/_base.scss */
+/* line 91, sass/_base.scss */
 caption {
   margin: 0 0 0.363976705490849em 0;
   color: #492c5d;
@@ -679,20 +680,20 @@ caption {
   line-height: 1.559900166389351;
 }
 
-/* line 101, sass/_base.scss */
+/* line 102, sass/_base.scss */
 th,
 td {
   text-align: left;
 }
 
-/* line 105, sass/_base.scss */
+/* line 106, sass/_base.scss */
 th {
   color: #000;
   padding: 0 1.111111111111111em 0 0;
   vertical-align: bottom;
 }
 
-/* line 110, sass/_base.scss */
+/* line 111, sass/_base.scss */
 td {
   border: 0 solid #ccc;
   border-top-width: 1px;
@@ -705,24 +706,24 @@ td {
   vertical-align: top;
 }
 
-/* line 121, sass/_base.scss */
+/* line 122, sass/_base.scss */
 td:last-child {
   padding-right: 0;
 }
 
-/* line 124, sass/_base.scss */
+/* line 125, sass/_base.scss */
 td strong,
 tfoot td {
   color: #000;
   font-weight: bold;
 }
 
-/* line 129, sass/_base.scss */
+/* line 130, sass/_base.scss */
 tr:first-child td {
   border-color: #000;
 }
 
-/* line 134, sass/_base.scss */
+/* line 135, sass/_base.scss */
 th > p:first-child,
 td > p:first-child,
 td > ul:first-child,
@@ -738,7 +739,7 @@ td > h6:first-child {
   margin-top: 0;
 }
 
-/* line 149, sass/_base.scss */
+/* line 150, sass/_base.scss */
 th > p:last-child,
 td > p:last-child,
 td > ul:last-child,
@@ -818,7 +819,7 @@ table a {
 /**
  * C. Forms
  */
-/* line 163, sass/_base.scss */
+/* line 164, sass/_base.scss */
 input {
   border: 1px solid #bbcfd7;
   height: 1.719rem;
@@ -827,7 +828,7 @@ input {
   font-size: 1em;
 }
 
-/* line 173, sass/_base.scss */
+/* line 174, sass/_base.scss */
 select {
   border: 1px solid #0086ee;
   margin: 0.535714285714286em 0 1.071428571428571em 0;
@@ -849,7 +850,7 @@ select {
   	@include base-type-lg;
   }*/
 }
-/* line 193, sass/_base.scss */
+/* line 194, sass/_base.scss */
 select:hover {
   border-bottom-style: dashed;
   background-color: #e5f2fd;
@@ -1042,7 +1043,7 @@ a:link,
 .big-fact{
 	hyphens: none;
 }*/
-/* line 232, sass/_base.scss */
+/* line 233, sass/_base.scss */
 .looong-word {
   word-wrap: break-word;
   overflow-wrap: break-word;
