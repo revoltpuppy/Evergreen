@@ -3,15 +3,18 @@
 @import "../../tools";
 
 .compare-box{
-	//box model
+	// box model
 	max-width: 200px;
-	//position
+	// layout
+	display: flex;
+	flex-direction: column;
+	// position
 	position: fixed;
-	right: 2%;
+	right: 1em;
 	bottom: -6em;
-	//typography
+	// typography
 	text-align: center;
-	//misc
+	// misc
 	box-shadow: 0 0 2px $shadow;
 }
 
@@ -21,8 +24,18 @@
 	        transition: bottom .25s;
 }
 
+#compare{  // Compare button inside .compare-box
+	// box model
+	@include margin-default;
+	// layout
+	float: left;
+}
+
 .course-index{
-	@include base-type;  //We want this table to always use the smaller copy size
+	// layout
+	display: block;
+	// typography
+	@include base-type;  // We want this table to always use the smaller copy size
 	
 	> thead{
 		display: none;
@@ -35,26 +48,26 @@
 	}
 	
 	> tbody > tr{
-		//box model
+		// box model
 		border: 1px solid mix(white, $blueberry-susan, 66%);
 		@include margin-default;
 		padding: 0 1em;
-		//layout
+		// layout
 		overflow: hidden;
-		//typography
+		// typography
 		text-align: center;
-		//backgrounds & borders
+		// backgrounds & borders
 		background-color: mix(white, $blueberry-susan, 90%);
 		border-radius: 2px;
-		//misc
+		// misc
 		box-shadow: 0 1px 1px $shadow;
 		
 		&.cancelled{
-			//backgrounds & borders
+			// backgrounds & borders
 			background-color: #f3f3f3;
 			border-color: mix(white, $blueberry-susan, 75%);
 			border-style: dashed;
-			//misc
+			// misc
 			box-shadow: none;
 		}
 	}
@@ -76,6 +89,8 @@
 	}
 	
 	@media screen and (min-width: 55em){
+		display: table;
+		
 		> thead{
 			display: table-header-group;
 		}
@@ -85,24 +100,24 @@
 		}
 		
 		> tbody > tr{
-			//box model
+			// box model
 			border-width: 0;
-			//layout
+			// layout
 			display: table-row;
-			//typography
+			// typography
 			text-align: left;
-			//backgrounds & borders
+			// backgrounds & borders
 			background-color: transparent;
 			border-radius: 0;
-			//misc
+			// misc
 			box-shadow: none;
 		}
 		
 		> tbody > tr > td{
-			//box model
+			// box model
 			border-top-width: 1px;
 			padding: 0.37037em 1.11111em 1.11111em 0;
-			//layout
+			// layout
 			display: table-cell;
 		
 			&.offering,
@@ -115,20 +130,24 @@
 	}
 }
 
-.compare{
-	//box model
+.compare{  // Compare checkbox
+	// box model
 	@include margin-default;
-	margin-left: 1em;
 	margin-right: 1em;
-	//layout
+	// layout
 	float: left;
 	
 	@media screen and (min-width: 55em){
-		//box model
+		// box model
 		margin: 0;
-		//layout
+		// layout
 		float: none;
 	}
+}
+
+.compare-clear{
+	float: left;
+	clear: left;
 }
 
 .title{
@@ -334,6 +353,12 @@
 			&:before{
 				content: "#";
 			}
+			
+			&:after{
+				@media print{
+					content: "";
+				}
+			}
 		}
 		
 		> a,
@@ -406,5 +431,25 @@
 	
 	@media screen and (min-width: 43em){
 		font-size: 1.594rem;  //Matches height of h3
+	}
+}
+
+@media print{
+	
+	.dataTables_wrapper > div *{  // This whole rule is necessary for printing in Firefox, for some reason; without it, the catalog entries are invisible.
+		all: initial;
+	}
+	
+	// Hide unnecessary elements.
+	.compare-box,
+	.dataTables_wrapper .showing,
+	.course-index > thead,
+	.course-index > tbody > tr > td.compare{
+		display: none;
+	}
+	
+	// Avoid page breaks inside catalog entries.
+	.course-index > tbody > tr{
+		page-break-inside: avoid;
 	}
 }
