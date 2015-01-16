@@ -77,8 +77,7 @@
 	@media (min-width: 32em){
 		//box model
 		margin: 0 1em 0 0;
-		width: -webkit-calc(50% - .5em);  // Safari 6
-		width:         calc(50% - .5em);
+		width: calc(50% - 0.5em);
 		//layout
 		float: left;
 		
