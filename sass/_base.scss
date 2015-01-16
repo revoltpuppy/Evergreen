@@ -15,41 +15,37 @@
  */
 
 html{
-	-webkit-box-sizing: border-box;  //Safari 5
-	   -moz-box-sizing: border-box;  //Firefox 28
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *{
-	-webkit-box-sizing: inherit;  //Safari 5
-	   -moz-box-sizing: inherit;  //Firefox 28
-	        box-sizing: inherit;
+	box-sizing: inherit;
 }
 
-//For the following, I am taking pity on IE8- because I'm using
-//the appropriate double-colon syntax for pseudo-elements. If I
-//condensed this style declaration with the above *, IE8- would
-//choke on the whole thing, breaking the border-box declaration
-//for the universal selector.
+/**
+ * For the following, I am taking pity on IE8- because I'm using
+ * the appropriate double-colon syntax for pseudo-elements. If I
+ * condensed this style declaration with the above *, IE8- would
+ * choke on the whole thing, breaking the border-box declaration
+ * for the universal selector.
+ */
 *::before,
 *::after{
-	-webkit-box-sizing: inherit;  //Safari 5
-	   -moz-box-sizing: inherit;  //Firefox 28
-	        box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body{
-	//box model
+	// box model
 	margin: 0;
 	min-height: 100vh;
-	//layout
+	// layout
 	-webkit-align-items: center;
 	        align-items: center;
 	display: -webkit-flex;
 	display:         flex;
 	-webkit-flex-direction: column;
 	        flex-direction: column;
-	//backgrounds & borders
+	// backgrounds & borders
 	background-color: hsl(0, 0%, 95%);
 }
 
@@ -79,24 +75,23 @@ video{
  * B. Tables
  */
 table{
-		//box model
+		// box model
     border-collapse: collapse;
     border-spacing: 0;
     border-width: 0;
-    margin: 1.481481481481481em 0;  //20/13.5
+    margin: 1.481481481481481em 0;  // 20/13.5
     width: 100%;
     max-width: 100%;
 }
 
 caption{  //styled after h4
-	//box model
-	//border-top: 1px solid;
+	// box model
 	margin: 0 0 0.363976705490849em 0;
-	//typography
+	// typography
 	color: $blueberry-susan;
-	font-size: 1.202rem;  //19.232px
+	font-size: 1.202rem;  // 19.232px
 	font-style: italic;
-	line-height: 1.559900166389351;  //30/19.232
+	line-height: 1.559900166389351;  // 30/19.232
 }
 
 th,
@@ -109,11 +104,11 @@ th{
 	vertical-align: bottom;
 }
 td{
-	//box model
+	// box model
 	border: 0 solid #ccc;
 	border-top-width: 1px;
-	padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;  //5/13.5  15/13.5
-	//typography
+	padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;  // 5/13.5  15/13.5
+	// typography
 	color: #333;
   font-feature-settings: "lnum", "tnum" "ordn";  // "lnum" is needed for lining numbers in Firefox.
 	font-variant-numeric: lining-nums ordinal tabular-nums;  // "lining-nums" is not applying in Firefox.
@@ -131,7 +126,7 @@ tr:first-child td{
 	border-color: #000;
 }
 
-//Collapse top space between cell padding and element margins.
+// Collapse top space between cell padding and element margins.
 th > p:first-child,
 td > p:first-child,
 td > ul:first-child,
@@ -146,7 +141,7 @@ td > h5:first-child,
 td > h6:first-child{
     margin-top: 0;
 }
-//Collapse bottom space between cell padding and element margins.
+// Collapse bottom space between cell padding and element margins.
 th > p:last-child,
 td > p:last-child,
 td > ul:last-child,
@@ -162,29 +157,28 @@ td > ol:last-child li:last-child > p:last-child{
  * C. Forms
  */
 input{
-	//box model
+	// box model
 	border: 1px solid #bbcfd7;
 	height: 1.719rem;
 	margin-bottom: 1.262201279030629em; //15/11.884
 	padding: 0 .5em;
-	//typography
+	// typography
 	font-size: 1em;
 }
 
 select{
-	//box model
+	// box model
 	border: 1px solid $sky-blue;
 	@include margin-default;
 	padding: 0.30357142857143em .5em;  //4.25/14 So, (4.25 * 2) + 14 = 22.5
-	//typography
+	// typography
 	@include base-type;
 	text-shadow: 0 1px 0 $highlight;
-	//backgrounds & borders
+	// backgrounds & borders
 	background-color: mix(white, $sky-blue, 80%);  //IE 9
-	//background-image: -webkit-linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //Safari 6, Chrome 25
-	//background-image:         linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //w3c
+	//background-image: linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //w3c
 	border-radius: 2px;
-	//misc
+	// misc
 	-webkit-appearance: none;
 	   -moz-appearance: none;
 	        appearance: none;
@@ -192,19 +186,18 @@ select{
 	cursor: pointer;
 	
 	&:hover{
-		//box model
+		// box model
 		border-bottom-style: dashed;
 		//color: $sky-blue;
-		//backgrounds & borders
+		// backgrounds & borders
 		background-color: mix(white, $sky-blue, 90%);  //IE 9
-		//background-image: -webkit-linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //Safari 6, Chrome 25
-		//background-image:         linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //w3c
+		//background-image: linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //w3c
 	}
 	
 	/*@media screen and (min-width: 43em){
-		//box model
+		// box model
 		padding: 0.23529411764706em .5em;  //4/17 So, (4 * 2) + 17 = 25;
-		//typography
+		// typography
 		@include base-type-lg;
 	}*/
 }
@@ -232,5 +225,5 @@ a:link,
 
 .looong-word{  // For words that are so long they may cause overflow, like dichlorodiphenyltrichloroethane. Holy crap!
     word-wrap: break-word;  // Firefox, IE
-    overflow-wrap: break-word;
+    overflow-wrap: break-word;  // W3C
 }

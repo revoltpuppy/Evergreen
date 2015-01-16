@@ -28,10 +28,10 @@
  * to apply to uls and ols.
  */
 .element-list{
-	//box model
+	// box model
 	margin-left: 0;
 	padding-left: 0;
-	//lists
+	// lists
 	list-style-type: none;
 }
 
@@ -39,10 +39,10 @@
  * B. Page-level Layout
  */
 .wrapper{
-	//box model
+	// box model
 	margin: 0 auto;
 	width: 100%;
-	//layout
+	// layout
 	display: block;
 	
 	&.grid,
@@ -55,7 +55,7 @@
 		max-width: 82em;
 	}
 }
-.wrapper:before,   //nega-clearfix! Clearfix that wraps the element around TOP margins.
+.wrapper:before,   // nega-clearfix! Clearfix that wraps the element around TOP margins.
 .wrapper:after{
 	width: 0;
 	content: "";
@@ -68,17 +68,16 @@
  */
 
 [role="banner"]{
-	//layout
+	// layout
 	overflow: hidden;
-	//backgrounds & borders
+	// backgrounds & borders
 	background-color: #f3f3f3;
-	//misc
+	// misc
 	box-shadow: 0 0 3px $shadow;
 }
 
 .page-header{
-	-webkit-transition: all .1s ease-in-out;  //Safari 6, Chrome 25
-          transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
   
   @include breakpoint($gamora){
 	  background-color: transparent;
@@ -105,13 +104,13 @@
 	}
 
 	@include breakpoint($gamora){
-		//box model
+		// box model
 		margin-left: 0;
 		width: 100%;
-		//typography
+		// typography
 		font-size: 1.063rem;
 		letter-spacing: normal;
-		line-height: 1.323529411764706;  //22.5/17
+		line-height: 1.323529411764706;  // 22.5/17
 	}
 }
 
@@ -120,14 +119,14 @@
  */
 
 .site-content{
-	//box model
-	margin-bottom: 1.875rem;  //30px
+	// box model
+	margin-bottom: 1.875rem;  // 30px
 	width: 100%;
-	//position
+	// position
 	position: relative;
 
 	@media screen and (min-height: 35em){
-		margin-bottom: 3.75rem;  //60px
+		margin-bottom: 3.75rem;  // 60px
 	}
 }
 
@@ -147,7 +146,6 @@
 	margin: 0 .25em;
 	margin-top: -5px;  // Compensate for 5px border
 	// backgrounds & borders
-	background-color: #F3F3F3;  // IE8
 	background-color: hsla(0,0%,95%,.95);
 	border-radius: 2px;
 	
@@ -171,48 +169,47 @@
 		
 	@include breakpoint($drax){
 		margin-left: 18.292682926829%;
-		width: 81.714285714285714%;  //6/7
+		width: 81.714285714285714%;  // 6/7
 	}
 }
 
 // Wraps all the content on most pages on the site.
-//.content-wrapper,
-.primary-content-wrapper{  //placeholder for future changes
+// .content-wrapper,
+.primary-content-wrapper{  // placeholder for future changes
 	border-bottom: 2px dashed $evergreen-neue;
 	
 	@include breakpoint($gamora){
-		margin-left: 20%;  //1/5
-		width: 78%; //4/5
+		margin-left: 20%;  // 1/5
+		width: 78%;  // 4/5
 	}
 	
 	@include breakpoint($drax){
 		border-bottom: 0;
-		margin-left: 16.285714285714286%;  //1/7
-		width: 53.142857142857143%;  //4/7
+		margin-left: 16.285714285714286%;  // 1/7
+		width: 53.142857142857143%;  // 4/7
 	}
 }
 
 // Wraps the secondary content area.
 .sidebar-wrapper{
-	//box model
+	// box model
 	margin: 0 .25em;
-	//layout
+	// layout
 	overflow: hidden;
-	//backgrounds & borders
-	background-color: #F3F3F3;  //IE8
+	// backgrounds & borders
 	background-color: hsla(0,0%,95%,.95);
 
 	@include breakpoint($gamora){
-		//box model
+		// box model
 		margin-left: 20%;
 		width: 78%;
-		//layout
+		// layout
 		overflow: visible;
 	}
 	
 	@include breakpoint($drax){
 		margin: 0 2%;
-		width: 26.571428571429%;  //2/7
+		width: 26.571428571429%;  // 2/7
 	}
 }
 
@@ -231,19 +228,18 @@
 .index-wrapper .main-content{
 
 	@include breakpoint($gamora){
-		margin-left: 5.675675675675676%;  //matches .content-wrapper .main-content
+		margin-left: 5.675675675675676%;  // matches .primary-content-wrapper .main-content
 	}
 	@include breakpoint($drax){
 		margin: 0 3.626279863481%;
 	}
 }
 
-//.content-wrapper .main-content,
 .primary-content-wrapper .main-content{  // specified in .content-wrapper to not affect .index-wrapper
 	max-width: 45em;
 	
 	@include breakpoint($gamora){
-		margin-right: 5.675675675675676%;  //I bumped this up for better readability on iPad and 800x600
+		margin-right: 5.675675675675676%;  // I bumped this up for better readability on iPad and 800x600
 		margin-left: 5.675675675675676%;
 	}
 }
@@ -251,14 +247,13 @@
 	margin-top: -5px;
 	
 	@include breakpoint($drax){
-		position: relative;  //Creates a context for absolutely positioning the homepage tertiary nav
+		position: relative;  // Creates a context for absolutely positioning the homepage tertiary nav
 	}
 }
 .sidebar{
-	//border-top: 2px dashed $evergreen-neue;
 	
 	@include breakpoint($gamora){
-		margin-right: 5.675675675675676%;  //These values should match .main-content
+		margin-right: 5.675675675675676%;  // These values should match .main-content
 		margin-left: 5.675675675675676%;
 	}
 
@@ -274,7 +269,7 @@
 
 		p,
 		.base{
-			margin: 0.535714285714286em 0 1.071428571428571em 0;  //22.5/3/14  15/14  So, 22.5 + 7.5 + 15 = 45
+			margin: 0.535714285714286em 0 1.071428571428571em 0;  // 22.5/3/14  15/14  So, 22.5 + 7.5 + 15 = 45
 		}
 	}
 	
@@ -283,7 +278,7 @@
 		 
 		p,
 		.base{
-			margin: 0.441176470588235em 0 0.882352941176471em 0;  //22.5/3/17  15/17  So, 22.5 + 7.5 + 15 = 45
+			margin: 0.441176470588235em 0 0.882352941176471em 0;  // 22.5/3/17  15/17  So, 22.5 + 7.5 + 15 = 45
 		}
 	}
 }
@@ -308,7 +303,7 @@
 	.gt32{
 		display: none;
 	}
-	.ins32{  //deprecated //Insert inline elements at this break point
+	.ins32{  // deprecated //Insert inline elements at this break point
 		display: none;
 	}
 }
