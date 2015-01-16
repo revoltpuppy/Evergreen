@@ -544,6 +544,8 @@
 		h2{
 			// box-model
 			@include margin-default;
+			// typography
+			text-align: left;
 			
 			@include breakpoint($lil-groot){
 				// typography
@@ -615,11 +617,6 @@
 		}
 	}
 	.bulletin-calendar{
-		@include breakpoint($lil-groot){
-			/*border-left: 1px solid mix(white, $blueberry-susan, 60%);
-			padding-left: 1em;*/
-		}
-		
 		@include breakpoint($gamora){
 				display: flex;
 		}
