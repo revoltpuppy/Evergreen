@@ -50,7 +50,7 @@ $groot:     (min: 125em);
 	@media screen and #{$query} {
 		@content;
 	}
-} 
+}
 
 /**
  * Modular Scale
