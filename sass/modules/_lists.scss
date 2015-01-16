@@ -33,6 +33,25 @@
 	}
 }
 
+	/**
+	 * A. Alternate Text List
+	 *
+	 * A different style for a text list. This one has with more
+	 * generous spacing below, to distinguish individual list
+	 * items.
+	 *
+	 * Extends .text-list or .element-list.
+	 */
+	 
+	 .text-list-alt > li{
+		 //box model
+		 margin: 0.53571428571429em 0;  // 7.5/14
+		 
+		 @include breakpoint ($gamora){
+			 margin: 0.44117647058824em 0;  // 7.5/17
+		 }
+	 }
+
 //Not sure where this is used. Probably delete whenever and see if anybody complains.
 .singleton a{  //deprecated
 	font-weight: normal;
@@ -320,7 +339,7 @@ ul.flexible{
 	}
 }
 .alpha-label + .alpha-index{
-  border-radius-top-left: 0;
+  border-top-left-radius: 0;
   margin-top: -1px;
 }
 .alpha-index > li{
