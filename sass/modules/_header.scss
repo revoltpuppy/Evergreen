@@ -208,6 +208,11 @@ input:checked + .header-dropdown{
 }
 .internal-users{
 	margin-top: 0;
+	
+	img{
+		height: 10px;
+		width: 10px;
+	}
 }
 .search-tools{
 	margin-left: 0;  // Can be removed once .element-list propogates on .search-tools
