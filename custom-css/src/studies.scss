@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "../../tools";
 /*!*
  * Fields of Study Styles
  *
@@ -12,10 +13,62 @@
  */
 
 .ui-group{
+	
 	a.media{
 		border-bottom-width: 0;
 	}
 	.media-img img{
 		border-radius: 50%;
 	}
+}
+
+.studies-list{
+	
+	li{
+		@include margin-default;
+	}
+	
+	a{
+		// box model
+		border-bottom-width: 0;
+		// typography
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+	
+	ul{
+		// box model
+		border-left: 1.5px dashed mix(white, $blueberry-susan, 60%);
+		margin-left: 0.25em;
+		padding-left: calc(.75em - 1.5px);
+		// typography
+		list-style-type: none;
+		
+		a{
+			font-weight: normal;
+		}
+	}
+}
+
+.in-depth > a::after{
+	// box model
+	height: 15px;
+	margin-bottom: -3px;
+	// layout
+	display: inline-block;
+	// misc
+	content: url("/studies/images/in-depth.svg");
+	transform: scale(.8) translateY(7px);
+	
+	@include breakpoint($gamora){
+		// box model
+		height: auto;
+		padding: 0 .5em;
+		// misc
+		transform: scale(1) translateY(4px);
+	}
+}
+
+.main-content > ul.studies-list:last-child > li:last-child::after{  // Let’s hide the endnote. It’s more of a distraction here.
+	content: "";
 }
