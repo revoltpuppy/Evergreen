@@ -17,8 +17,9 @@
  * J. Boxes
  * K. Images
  * L. Calendars
- * M. Embedded Content
- * N. CMS
+ * M. News
+ * N. Embedded Content
+ * O. CMS
  */
 
 .top-links,
@@ -334,13 +335,8 @@
 		// box model
 		margin: 0 auto;
 		
-		li{
+		.media{
 			border-bottom: 1px solid mix(white, $blueberry-susan, 66%);
-			@include margin-default;
-			
-			&:last-child{
-				border-bottom-width: 0;
-			}
 		}
 		
 		.media-body{
@@ -375,7 +371,7 @@
 		}
 	}
 	
-	.upcoming-events-homepage2{
+	/*.upcoming-events-homepage2{
 		@media screen and (min-width: 20em){
 			overflow: auto;
 			
@@ -399,6 +395,48 @@
 		@media screen and (min-width: 43em){
 			li{
 				
+			}
+		}
+	}*/
+	
+	.upcoming-events-homepage2 {
+		margin: 0 auto;
+	
+		@include breakpoint($gamora) {
+			// typography
+			@include base-type;
+		}
+		
+		@include breakpoint($drax){
+			// typography
+			@include base-type-lg;
+		}
+		
+		@include breakpoint($groot){
+			// typography
+			@include base-type-xl;
+		}
+		
+		li {
+			@include margin-default;
+			
+			@include breakpoint($drax){
+				// box model
+				@include margin-default-lg;
+			}
+		}
+	}
+	
+	.upcoming-events-list{
+		
+		.media-body{
+			// box model
+			border-bottom: 1px solid mix(white, $blueberry-susan, 60%);
+			// typography
+			text-align: center;
+			
+			@include breakpoint($lil-groot){
+				border-bottom-width: 0;
 			}
 		}
 	}
@@ -623,7 +661,41 @@
 	}
 
 /**
- * M. Embeded Content
+ * M. News
+ */
+.news{
+  // box model
+  border-top: 1px solid #d1cad6;
+  border-bottom: 1px solid #d1cad6;
+  // layout
+  overflow: hidden;
+  // backgrounds & borders
+  background-color: #E3DFE6;
+}
+
+.news-wrapper{
+  // box model
+  margin: 0 auto;
+  width: calc(100% - 2em);
+}
+
+.news-story{
+  // box model
+  border: 1px solid #ccc;
+  height: calc(100% - 1em);
+  margin-bottom: 1em;
+  padding: 1em 1em 0;
+  // typography
+  color: #333;
+  //font-family: "Minion Pro", Minion, "Times New Roman", Times, serif;
+  // backgrounds and borders
+  background-color: #f3f3f3;
+  border-radius: 2px;
+  // misc
+}
+
+/**
+ * N. Embeded Content
  */
 .lazy-load{
   // box model
@@ -680,7 +752,7 @@
 }*/
 
 /**
- * N. CMS
+ * O. CMS
  *
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
