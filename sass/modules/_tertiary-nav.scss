@@ -13,10 +13,28 @@
 /**
  * 1. Default Tertiary Nav
  */
+.tertiary-nav-wrapper{
+	width: 100%;
+	max-width: calc(100% - 0.5em);
+	
+	@include breakpoint($rocket){
+		max-width: 345px;  // the other significant number in the grid system
+	}
+	
+	@include breakpoint($gamora){
+		width: 20%;  // 1/5
+	}
+	
+	@include breakpoint($drax){
+		width: 14.285714285714%;  // 1/7
+	}
+}
 #tertiary-nav{
-	//box model
+	// box model
 	margin: 0 auto;
-	max-width: 96%;
+	max-width: calc(100% - .5em);
+	// typography
+	@include base-type;
 	
 	@media screen and (min-width: 32em){
 		margin: 0 auto 1rem;
@@ -24,38 +42,61 @@
 	}
 	
 	@media screen and (min-width: 43em){
-		//box model
+		// box model
 		margin-top: 1rem;
-		width: 22.200520833333%;  //1/5, or technically 341/1536
-		//position
-		position: absolute;  //Removes nav from the document flow
+		width: 22.200520833333%;  // 1/5, or technically 341/1536
+		// position
+		position: absolute;  // Removes nav from the document flow
 		
 		.index-wrapper &{
-			//box model
-			//margin-top: 0;
-			width: 20.01953125%;  //410/2048
-			//position
+			// box model
+			width: 20.01953125%;  // 410/2048
+			// layout
 			//position: static;
 		}
 	}
 	
 	@media screen and (min-width: 70em){
+		// box model
 		width: 17.803302225413%;
+		// typography
+		@include base-type-lg;
 		
 		.index-wrapper &{
-			//box model
+			// box model
 			margin-top: 1rem;
-			//position
+			// layout
 			position: absolute;  //Removes nav from the document flow
 		}
 	}
 }
 
-#tertiary-nav{
-	@include base-type;
-  
-	@media screen and (min-width: 70em){
-		@include base-type-lg
+.main-row-grid #tertiary-nav{
+	// box model
+	padding-right: 0;
+	width: 100%;
+	max-width: none;
+	
+	@include breakpoint($gamora){
+		// box model
+		//margin-right: -1em;
+		width: calc(100% + 2em);
+		//margin-left: 0.5em;
+		//width: calc(20% + 1em);
+		// layout
+		//left: 0;
+		position: relative;
+	}
+	
+	@include breakpoint($drax){
+		// box model
+		//margin-right: -2em;
+		//width: calc(14.285714285714% + 2em);
+		//width: calc(100% + 1em);
+	}
+	
+	> ul{
+		margin-right: 1em;
 	}
 }
 

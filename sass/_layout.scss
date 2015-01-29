@@ -161,10 +161,14 @@
 // Wraps all the content on index pages and pages without a
 // secondary content area.
 .index-wrapper{
+	// box model
+	margin: -5px 0 0 1em;
+	padding-left: 0;
+	width: calc(100% - 1.5em);
 	
 	@include breakpoint($gamora){
 		margin-left: 20%;
-		width: 78%;
+		width: calc(80% - 1em);
 	}
 		
 	@include breakpoint($drax){
@@ -201,7 +205,7 @@
 
 	@include breakpoint($gamora){
 		// box model
-		margin-left: 20%;
+		margin-left: 20%;  // 1/5; This should match .primary-content-wrapper.
 		width: 78%;
 		// layout
 		overflow: visible;
@@ -213,6 +217,69 @@
 	}
 }
 
+.main-row-grid{
+	
+	.primary-content-wrapper{  // This should be de-specified when .main-row-grid becomes simply .grid.
+		// box model
+		margin-left: 1em;
+		padding-right: 0;
+		width: calc(100% - 1.5em);  // 0.25 margin on either side
+		
+		@include breakpoint($gamora){
+			// box model
+			//margin-left: 20%;  // 1/5
+			margin-left: 0;
+			padding-left: 1em;
+			width: calc(80% - 1em);  // 4/5 - 1em; 0.5em margin on either side
+		}
+		
+		@include breakpoint($drax){
+			//margin-left: 14.285714285714286%;  // 1/7
+			width: 57.142857142857%;  // 4/7
+		}
+		
+		.main-content{
+			
+			@include breakpoint($gamora){
+				margin: 0 3em;
+			}
+		}
+	}
+	
+	.sidebar-wrapper{  // This should be de-specified when .main-row-grid becomes simply .grid.
+		// box model
+		margin-left: 1em;
+		padding: 0;
+		width: calc(100% - 1.5em);  // 0.25 margin on either side
+		
+		@include breakpoint($gamora){
+			// box model
+			margin-left: 20%;
+			padding-left: 1em;
+			width: calc(80% - 1em);  // 4/5; this should match .primary-content-wrapper.
+		}
+		
+		@include breakpoint($drax){
+			// box model
+			margin-left: 0;
+			width: 28.571428571429%;  // 2/7
+		}
+		
+		.sidebar{
+			margin: 0 .75em 3.75rem 0.75em;  // 60/16
+			
+			@include breakpoint($rocket){
+				margin-right: 1em;
+				margin-left: 1em;
+			}
+			
+			@include breakpoint($drax){
+				margin-right: 1em;
+				margin-left: 0;
+			}
+		}
+	}
+}
 
 // .main-content and .sidebar are the two primary regions of
 // content on the page.
