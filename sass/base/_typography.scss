@@ -292,6 +292,7 @@ a,
 	color: $blueberry-susan;
 	font-weight: bold;
 	text-decoration: none;
+	transition: color .2s, border-color .2s ease;
 }
 a:visited{
     border-bottom-color: mix(white, $wine, 75);
