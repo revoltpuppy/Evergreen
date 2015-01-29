@@ -319,21 +319,34 @@ a:active{
 		border-bottom-width: 0;
 	
 		&,
-		&:visited,
+		&:visited{
+	    color: #fff;
+	    text-shadow: 0 1px 3px hsl(275, 33%, 11%);
+	    
+	    @media screen and (min-width: 70em){
+	    	text-shadow:
+					-1px 1px $blueberry-susan,
+					-1px 2px $blueberry-susan,
+					-2px 3px $blueberry-susan,
+					-2px 4px $blueberry-susan,
+					-3px 5px $blueberry-susan,
+					-3px 6px $blueberry-susan,
+					-4px 7px 0.5px $blueberry-susan
+	    }
+		}
+		
 		&:hover{
-		    color: #fff;
-		    text-shadow: 0 1px 3px hsl(275, 33%, 11%);
-		    
-		    @media screen and (min-width: 70em){
-		    	text-shadow:
-						-1px 1px $shadow,
-						-1px 2px $shadow,
-						-1px 3px $shadow,
-						-1px 4px $shadow,
-						-1px 5px $shadow,
-						-1px 6px $shadow,
-						-1px 7px 0.5px $shadow
-		    }
+	    
+	    @media screen and (min-width: 70em){
+	    	text-shadow:
+					-1px 1px $sky-blue,
+					-1px 2px $sky-blue,
+					-2px 3px $sky-blue,
+					-2px 4px $sky-blue,
+					-3px 5px $sky-blue,
+					-3px 6px $sky-blue,
+					-4px 7px 0.5px $sky-blue
+	    }
 		}
 	}
 	
