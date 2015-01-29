@@ -103,35 +103,34 @@
 	}
 	
 	&:hover{
-	  //backgrounds & borders
+	  // backgrounds & borders
 	  background-color: mix(white, $blueberry-susan, 90%);
 	  border-color: mix(white, $blueberry-susan, 80%);
 	  border-top-color: mix(black, $blueberry-susan, 33%);
-	  //transition
-	  -webkit-transition: background-color .2s ease-out;
-	          transition: background-color .2s ease-out;
+	  // transition
+	  transition: background-color .2s ease-out;
 	}
 }
 .accordion dt a{
-	//box model
+	// box model
 	border-bottom-width: 0;
 	width: 100%;
-	//layout
+	// layout
 	display: block;
 }
 .accordion dt a:before{
-	//box model
+	// box model
 	margin-right: 2%;
-	//layout
+	// layout
 	display: inline-block;
 	content: "▶";
 }
 .accordion dd{
-	//box model
+	// box model
 	margin-bottom: 0;
-	//backgrounds & borders
+	// backgrounds & borders
 	background-color: hsl(0, 0%, 95%);
-	//misc
+	// misc
 	box-shadow: inset 0 2px 2px #999;
 }
 
@@ -140,9 +139,9 @@
   color: $blueberry-susan;
   
   &:hover{
-  	//typography
+  	// typography
     color: $sky-blue;
-    //misc
+    // misc
     cursor: pointer;
   }
 }
@@ -154,20 +153,16 @@
  *
  * @see http://evergreen.edu/studies
  */
-//Lists have a hard time breaking across columns, so there are some tricky fixes here.
+// Lists have a hard time breaking across columns, so there are some tricky fixes here.
 ul.flexible{
-	//overflow: hidden;
+	
 	@media screen and (min-width: 20em){
-  	//box model
+  	// box model
   	margin-left: 0;
-  	//layout
-    -webkit-column-count: 2;
-       -moz-column-count: 2;
-            column-count: 2;
-    -webkit-column-gap: 15px;
-       -moz-column-gap: 15px;
-            column-gap: 15px;
-		list-style-position: inside;  //a compromise that makes bullets visible
+  	// layout
+    column-count: 2;
+    column-gap: 15px;
+		list-style-position: inside;  // a compromise that makes bullets visible
   }
             
 	@media screen and (min-width: 32em){
@@ -178,10 +173,10 @@ ul.flexible{
 }
 .flexible > li{
 	@media screen and (min-width: 20em){
-  	//box model
-  	margin: 0 2% 0.46875rem 2%;  //7.5/16
+  	// box model
+  	margin: 0 2% 0.46875rem 2%;  // 7.5/16
   	//width: 46%;
-  	//layout
+  	// layout
   	//float: left;
   	overflow: hidden;
 	}
@@ -189,23 +184,17 @@ ul.flexible{
 
 .unit-2-7 .flexible{
 	@media screen and (min-width:32em){
-		-webkit-column-count: 2;
-		   -moz-column-count: 2;
-		        column-count: 2;
+		column-count: 2;
 	}
 }
   
 .unit-3-7 .flexible{
 	@media screen and (min-width: 70em){
-		-webkit-column-count: 2;
-		   -moz-column-count: 2;
-		        column-count: 2;
+		column-count: 2;
 	}
 	
 	@media screen and (min-width: 70em){
-		-webkit-column-count: 3;
-		   -moz-column-count: 3;
-		        column-count: 3;
+		column-count: 3;
 	}
 }
 
@@ -216,20 +205,20 @@ ul.flexible{
  */
 .link-icon::before,
 .link-icon-alt::before{
-	//box model
+	// box model
 	height: 1rem;
 	width: 1rem;
-	//layout
+	// layout
 	display: inline-block;
 	overflow: hidden;
 	vertical-align: middle;
-	//typography
+	// typography
 	text-indent: 100%;
 	white-space: nowrap;
-	//backgrounds & borders
+	// backgrounds & borders
 	background-repeat: no-repeat;
 	background-size: 1rem 1rem;
-	//misc
+	// misc
 	content: "";
 }
 .link-icon::after{
@@ -239,33 +228,39 @@ ul.flexible{
   margin-right: .5em;
 }
 .icon-blog::before{
-	//backgrounds & borders
+	// backgrounds & borders
   background-image: url("/_inc/images/icons/external/blog32x32.png");
+  // misc
   content: "Blog";
 }
 .icon-facebook::before{
-	//backgrounds & borders
+	// backgrounds & borders
   background-image: url("/_inc/images/icons/external/facebook32x32.png");
+  // misc
   content: "Facebook";
 }
 .icon-instagram::before{
-	//backgrounds & borders
+	// backgrounds & borders
   background-image: url("/_inc/images/icons/external/instagram32x32.png");
+  // misc
   content: "Instagram";
 }
 .icon-pinterest::before{
-	//backgrounds & borders
+	// backgrounds & borders
   background-image: url("/_inc/images/icons/external/pinterest32x32.png");
+  // misc
   content: "Pinterest";
 }
 .icon-twitter::before{
-	//backgrounds & borders
+	// backgrounds & borders
   background-image: url("/_inc/images/icons/external/twitter32x32.png");
+  // misc
   content: "Twitter";
 }
 .icon-youtube::before{
-	//backgrounds & borders
+	// backgrounds & borders
   background-image: url("/_inc/images/icons/external/youtube32x32.png");
+  // misc
   content: "YouTube";
 }
 
@@ -292,46 +287,44 @@ ul.flexible{
  * An index of the letters of the alphabet, for skipping around the page.
  */
 .alpha-label{
-	//box model
+	// box model
 	border: 1px solid mix(white, $blueberry-susan, 75%);
 	border-bottom-width: 0;
 	margin-bottom: -1px;
 	padding: 0 1em;
-	//layout
+	// layout
 	display: inline-block;
-	//position
+	// position
 	position: sticky;
-	//position
+	// position
 	top: .5em;
 	z-index: 1;
-	//backgrounds & borders
+	// backgrounds & borders
 	background-color: mix(white, $blueberry-susan, 85%);
 	border-radius: 2px 2px 0 0;
 }
 .alpha-index{
-	//box model
+	// box model
 	border: 1px solid mix(white, $blueberry-susan, 75%);
 	margin-left: 0;
 	padding-left: 0;
-	//layout
+	// layout
 	display: block;
-	//position
+	// position
 	position: sticky;
 	top: calc(.5em + .875rem * 1.60714);
-	//typography
+	// typography
 	word-wrap: break-word;
-	//backgrounds & borders
+	// backgrounds & borders
 	background-color: mix(white, $blueberry-susan, 85%);
 	border-radius: 2px;
-	//lists
+	// lists
 	list-style-type: none;
 	
 	@media screen and (min-width: 32em){
-		//layout
-		display: -webkit-flex; //Safari 6
-		display:         flex;
-		-webkit-justify-content: space-around;  //Safari 6
-		        justify-content: space-around;
+		// layout
+		display: flex;
+		justify-content: space-around;
 	}
 	
 	@media screen and (min-width: 43em){
@@ -343,10 +336,10 @@ ul.flexible{
   margin-top: -1px;
 }
 .alpha-index > li{
-	//box model
+	// box model
 	padding: 0 2px;
-	//layout
-	display: inline;  //Safari 6, IE 9
+	// layout
+	display: inline;  // Safari 6, IE 9
 }
 
 /**
@@ -357,22 +350,18 @@ ul.flexible{
  * @see http://evergreen.edu/admissions
  */
 .badge-list{
-  -webkit-align-items: center;
-          align-items: center;
-  display: -webkit-flex;
-  display:         flex;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-          justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   overflow: hidden;
   
   > li{
-  	//box model
+  	// box model
     margin: 0 1em;
-    //layout
+    // layout
     float: left;
-    //typography
+    // typography
     text-align: center;
   }
 }
@@ -381,7 +370,7 @@ ul.flexible{
 }
 
 .badge-alt{
-  max-width: 115px;  //For badges in landscape mode
+  max-width: 115px;  // For badges in landscape mode
 }
 
 
