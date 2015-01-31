@@ -18,25 +18,23 @@
  *
  * Togglable dropdowns for internal user links and search bar.
  */
-input[name="header-toggle"]{  //Don't show the checkboxes
+input[name="header-toggle"]{  // Don't show the checkboxes
 	//display: none; Note, this causes a bug in Mobile Safari where one checkbox label can’t be pressed immediately after another.
-	position: absolute;  //Removes from the document flow
-	visibility: hidden;  //Hides the beckbox
+	position: absolute;  // Removes from the document flow
+	visibility: hidden;  // Hides the checkbox
 }
 input + .header-dropdown{
 	max-height: 0;
 	overflow: hidden;
-	-webkit-transition: .5s all ease;
-	        transition: .5s all ease;
+	transition: .5s all ease;
 }
 input:checked + .header-dropdown{
 	max-height: 8em;
-	-webkit-transition: .5s all ease;
-	        transition: .5s all ease;
+	transition: .5s all ease;
 }
 .internal-users,
 [role="search"]{
-	//box model
+	// box model
 	width: 100%;
 }
 
@@ -45,10 +43,10 @@ input:checked + .header-dropdown{
 	background-color: mix(white, $blueberry-susan, 80%);
 }
 .internal-users > li{
-	//box model
-	padding: 0.673213669603561em;  //8/11.8833
+	// box model
+	padding: 0.673213669603561em;  // 8/11.8833
 	width: 50%;
-	//layout
+	// layout
 	float: left;
 }
 
@@ -66,12 +64,12 @@ input:checked + .header-dropdown{
 	background-color: mix(white, $evergreen-neue, 80%);
 	
 	@media screen and (min-width:43em){
-		//box model
+		// box model
 		padding: .618em .618em .618em 0;  //Use padding for height calculations in JS.
 		width: 40%;
-		//layout
+		// layout
 		float: right;
-		//backgrounds & borders
+		// backgrounds & borders
 		background-color: transparent;
 	}
 	
@@ -101,14 +99,14 @@ input:checked + .header-dropdown{
 	}
 	
 	@media screen and (min-width: 125em){
-		//box model
+		// box model
 		margin-right: auto;
 		margin-bottom: 1em;
 		margin-left: auto;
 		width: 20%;
-		//layout
+		// layout
 		float: none;
-		//typography
+		// typography
 		text-align: center;
 	}
 
@@ -141,14 +139,14 @@ input:checked + .header-dropdown{
 .off-canvas{
 	margin-right: 2%;
 }
-.search-toggle,   //button to reveal search
-.student-toggle{  //button to reveal profile
-	//box model
+.search-toggle,   // button to reveal search
+.student-toggle{  // button to reveal profile
+	// box model
 	padding: 0 .618em;
 	min-width: 22px;
-	//layout
+	// layout
 	float: right;
-	//typography
+	// typography
 	text-align: center;
 	text-decoration: none;
 	
@@ -169,25 +167,29 @@ input:checked + .header-dropdown{
 }
 .search-toggle:hover,
 .student-toggle:hover{
-	//backgrounds & borders
+	// backgrounds & borders
 	//background-color: $blueberry-susan; // Causes a weird bug on mobile that keeps active link purple
-	//misc
+	// misc
 	cursor: pointer;
 }
+
 .search-toggle > img,
 .student-toggle > img{
 	margin: 0.441176470588235em auto;
 	width: 17px;
 	display: block;
 }
+
 .student-toggle > img{
 	padding-top: 1px;  // Compensate for matching search icon height
 }
+
 #top-search-query,  // deprecated, use #q
 #q,
 .top-search button{
 	margin-bottom: 0;
 }
+
 [placeholder]:focus::-webkit-input-placeholder{  // Safari & Chrome
 	color: transparent;
 }
@@ -197,6 +199,7 @@ input:checked + .header-dropdown{
 [placeholder]:focus:-ms-placeholder{  // IE
 	color: transparent;
 }
+
 .internal-users,
 .search-tools{
 	margin-bottom: 0;
@@ -247,8 +250,8 @@ li.internal-users-alt{
 .menu-button,
 .search-toggle,
 .student-toggle{
-    font-size: 1.063rem;  // 17px
-    line-height: 1.764705882352941;  // 30/17
+	font-size: 1.063rem;  // 17px
+	line-height: 1.764705882352941;  // 30/17
 }
 
 .top-nav,
@@ -257,8 +260,8 @@ li.internal-users-alt{
 .search-toggle,
 .student-toggle,
 .top-nav-list .active{
-    color: white;
-    background-color: $evergreen-neue;
+	color: white;
+	background-color: $evergreen-neue;
 }
     
 /**
@@ -267,26 +270,22 @@ li.internal-users-alt{
  * The green nav at the top of every page.
  */
 .top-nav-list{
-	//box model
+	// box model
   margin: 0 auto;
   margin-top: 0;
   width: 100%;
 	min-height: 44px;
-  //positioning
+  // positioning
   position: relative;
-  //tyopography
+  // tyopography
   text-align: center;
-  //list
+  // list
   list-style-type: none;
   
   @media screen and (min-width: 20em){
-		//layout
-		-webkit-align-items: stretch;  // Safari
-		     -ms-flex-align: stretch;  // IE10
-		        align-items: stretch;
-		display: -webkit-flex;
-		 display: -ms-flexbox;  // IE10
-  	        display: flex;
+		// layout
+		align-items: stretch;
+		display: flex;
 	}
   
   &:before,
@@ -300,37 +299,30 @@ li.internal-users-alt{
 
 .top-nav-list > li{
 	@media screen and (min-width: 20em){
-		//box model
+		// box model
 		border-left: 1px solid #333;
 		min-height: 44px;  // IE8
-		//width: 21%;  // 100/5
-		//layout
+		// layout
 		display: inline-block;  // IE9
-		display: -webkit-flex;  // Safari
-		 display: -ms-flexbox;  // IE10
-		        display: flex;
-		-webkit-flex-grow: 1;
-		        flex-grow: 1;
+		display: flex;
+		flex-grow: 1;
 		overflow: hidden;
-    //typography
+    // typography
     
     &:first-child{
-    	//box model
+    	// box model
     	border-left-width: 0;
-			//width: 16%;
-			//layout
-			-webkit-flex-grow: 0;
-			        flex-grow: 0;
+			// layout
+			flex-grow: 0;
 		}
 	}
   
   @media screen and (min-width:32em){
-		//box model
+		// box model
 		width: 20%;
-		//layout
-		-webkit-flex-grow: 1;
-		        flex-grow: 1;
-		//typography
+		// layout
+		flex-grow: 1;
+		// typography
 		letter-spacing: normal;
 	}
 
@@ -341,22 +333,21 @@ li.internal-users-alt{
 
 .top-nav-list a,
 .top-nav-link{
-	//box model
+	// box model
 	padding: 0.46875rem 0.25rem;  // 7.5/16 2.48/16
 	border-bottom-width: 0;
 	width: 100%;
-	//layout
+	// layout
 	display: block;
 	
 	&:hover{
-		//backgrounds & borders
+		// backgrounds & borders
 		background-color: mix(white, $blueberry-susan, 33%);
-		//typography
+		// typography
 		color: white;
-		//misc
+		// misc
 		box-shadow: 0 0 2px $highlight inset;
-		-webkit-transition: all .1s ease-out;
-		        transition: all .1s ease-out;
+		transition: all .1s ease-out;
 		
 	}
 	
@@ -365,24 +356,18 @@ li.internal-users-alt{
 	}
 	
 	@media screen and (min-width: 20em){
-		//layout
-		display: -webkit-flex;  // Safari 7
-		display:     -ms-flex;  // IE10
-		display:         flex;
-		-ms-flex-pack:           center;  // IE10
-		-webkit-justify-content: center;  // Safari 7
-		justify-content:         center;
-		-ms-flex-align:      center;  // IE10
-		-webkit-align-items: center;  // Safari 7
-		align-items:         center;
-		//typography
+		// layout
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// typography
 		font-weight: normal;
-		//misc
+		// misc
 		text-shadow: 0 1px 1em hsl(275, 33%, 11%);
 	}
 	
 	@media screen and (min-width: 22em){
-		//box model
+		// box model
 		padding-right: .66em;
 		padding-left: .66em;
 	}
@@ -396,8 +381,7 @@ li.internal-users-alt{
 .top-nav-list a:visited,
 .top-nav-link,
 .top-nav-link:visited{
-	//box model
-	//typography
+	// typography
 	color: #fff;
 	
 	@media screen and (min-width:22em){
@@ -420,17 +404,17 @@ li.internal-users-alt{
  * homepage only.
  */
 .secondary-nav-list{
-	//box model
+	// box model
 	border-top: 1px solid $evergreen-old-style;
 	margin: 0;
 	padding: 0;
-	//layout
+	// layout
 	overflow: hidden;
-	//typography
+	// typography
 	text-align: center;
-	//backgrounds & borders
+	// backgrounds & borders
 	background: $evergreen-neue url(images/texture-1.png);
-	//list
+	// list
 	list-style-type: none;
 	
 	> li:first-child{
@@ -458,20 +442,17 @@ li.internal-users-alt{
 	}
 	
 	@media screen and (min-width: 22em){
-		//layout
-		display: -webkit-flex;  // Safari 7
-		display:         flex;
-		//flexbox
-		-webkit-justify-content: flex-end;  // Safari 7
-		        justify-content: flex-end;
+		// layout
+		display: flex;
+		justify-content: flex-end;
 
 		> li{
-			//box model
+			// box model
 			width: auto;
-			//layout
+			// layout
 			display: inline-block;  // IE9
 			float: none;
-			//typography
+			// typography
 			white-space: nowrap;
 		}
 	}
@@ -487,21 +468,21 @@ li.internal-users-alt{
 
 	&,
 	&:visited{
-		//box model
+		// box model
 		border-bottom: 0;
 		height: 100%;
 		width: 100%;
-		//layout
+		// layout
 		display: block;
-		//typography
+		// typography
 		color: white;
 		font-weight: normal;
 		
 		@media screen and (min-width: 22em){
-			//box model
+			// box model
 			height: auto;
 			padding: 0 1em;
-			//layout
+			// layout
 			display: inline-block;
 		}
 	
@@ -512,14 +493,13 @@ li.internal-users-alt{
 	}
 	
 	&:hover{
-		//backgrounds & borders
+		// backgrounds & borders
 		background-color: mix(white, $blueberry-susan, 33%);
-		//typography
+		// typography
 		color: white;
-		//misc
+		// misc
 		box-shadow: 0 0 2px $highlight inset;
-		-webkit-transition: all .1s ease-out;
-		        transition: all .1s ease-out;	
+		transition: all .1s ease-out;	
 	}
 	
 	&:focus{
