@@ -84,14 +84,26 @@ table{
     max-width: 100%;
 }
 
-caption{  //styled after h4
+caption{  // styled after h4
 	// box model
-	margin: 0 0 0.363976705490849em 0;
-	// typography
-	color: $blueberry-susan;
-	font-size: 1.202rem;  // 19.232px
+	margin: 0 0 0.53571428571429em 0;  // 7.5/14
+	@include base-type;
 	font-style: italic;
-	line-height: 1.559900166389351;  // 30/19.232
+	
+	@include breakpoint($gamora){
+		// box model
+		margin: 0 0 0.38997504159734em 0;  // 7.5/19.232
+		// typography
+		@include base-type-xl;
+	}
+	
+	@include breakpoint($groot){
+  	// box model
+    margin-top: 0.54537521815009em;  //15/27.504
+    // typography
+    font-size: 1.719rem;  //27.504px  Step 3
+    line-height: 1.090750436300175;  //30/27.504
+	}
 }
 
 th,
