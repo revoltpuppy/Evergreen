@@ -15,10 +15,10 @@
 }
 
 .inline-icon{
-	//box model
+	// box model
 	margin-right: .25em;
 	max-height: 1em;
-	//layout
+	// layout
 	display: inline;
 }
 
@@ -27,23 +27,22 @@
  *
  * Related links with iconographic circles.
  */
-.related-nav > li,  //deprecated name
 .transporter > li{
-	//box model
+	// box model
 	margin: 0.9375rem 0;  // 15/16
-	//layout
+	// layout
 	display: block;
 	vertical-align: top;
 	float: left;
-	//typography
+	// typography
 	text-align: center;
 }
 
-.related-nav a,  //deprecated name
 .transporter a{
 
 	&,
 	&:visited{
+		// typography
 		color: $evergreen-neue;
 	
 		.related-nav-icon{
@@ -56,19 +55,22 @@
 		
 		.related-nav-icon{
 			background: $sky-blue;
-			//misc
+			// misc
 			box-shadow: 0 0 .2em $highlight inset;
 		}		
 	}
 }
 
-.related-nav-icon,  //deprecated name
+.transporter a:hover .icon{
+	transform: scale(0.8, 0.8);
+}
+
 .transporter-icon{
 	// box model
-	padding: 15%;  //Whatever feels right.
-	padding-top: 85%;  //For responsive SVG.
+	padding: 15%;  // Whatever feels right.
+	padding-top: 85%;  // For responsive SVG.
 	// positioning
-	position: relative;  //For responsive SVG.
+	position: relative;  // For responsive SVG.
 	// typography
 	color: white;
 	text-align: center;
@@ -80,17 +82,19 @@
 
 	@media screen and (min-width: 22em){
 		margin: 0 auto;
-		padding-top: 60%;  //same as child width
+		padding-top: 50%;
 		width: 75%;
 	}
 	
-	img,  // deprecated, icons should have class .icon
 	.icon{
 		// box model
-		width: 60%;  //100 - 25 - 15 to account for container width and padding
+		//width: 60%;  // 100 - 25 - 15 to account for container width and padding
 		// positioning
-		position: absolute;  //For responsive SVG.
-		top: 20%;
-		left: 20%;
+		position: absolute;  // For responsive SVG.
+		top: 0;
+		left: 0;
+		// behavior
+		transform: scale(0.6);
+		transition: transform .1s ease;
 	}
 }
