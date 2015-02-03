@@ -2591,13 +2591,6 @@ li.internal-users-alt img {
 .site-name {
   margin-top: 3.75rem;
 }
-@media screen and (min-width: 70em) {
-  /* line 519, sass/modules/_header.scss */
-  .site-name h1 {
-    -webkit-transform: perspective(27em) rotateY(45deg);
-            transform: perspective(27em) rotateY(45deg);
-  }
-}
 @media screen and (min-height: 35em) {
   /* line 519, sass/modules/_header.scss */
   .site-name h1 {
