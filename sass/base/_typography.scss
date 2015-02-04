@@ -29,7 +29,7 @@ body{
 	// liga - Standard ligatures
 	// lnum - Lining figures ("uppercase" numbers)
 	// onum - Oldstyle figures ("lowercase" numbers)
-	// ordn - Ordinals (1st, 2nd)
+	// ordn - Ordinals (1st, 2nd) - bad support
 	// pnum - Proportional figures (Varying width numbers)
 	// salt - Stylistic alternates
 	// smcp - Small capitals (Note: don't use font-feature-settings for small-caps)
@@ -37,9 +37,9 @@ body{
 	// subs - Subscripts
 	// sups - Superscripts
 	// tnum - Tabular figures (Fixed-width numbers)
-	font-feature-settings: "liga", "onum", "ordn";  // Low-level OpenType features; these could be turned off eventually
+	font-feature-settings: "liga", "onum";  // Low-level OpenType features; these could be turned off eventually
 	font-variant-ligatures: common-ligatures discretionary-ligatures;
-	font-variant-numeric: ordinal oldstyle-nums;
+	font-variant-numeric: oldstyle-nums;
 	text-rendering: optimizeLegibility;
 }
 
@@ -373,18 +373,9 @@ small,
 .caption{
 	@include small-type;
 	
-	//Turn off ordinals for small text; Windows text rendering bug?
-	font-feature-settings: "liga", "onum";  // Low-level OpenType features; these could be turned off eventually
-	font-variant-ligatures: common-ligatures discretionary-ligatures;
-	font-variant-numeric: oldstyle-nums;
-	
 	@media screen and (min-width: 125em){
 		font-family: $text-face;
 		@include base-type;
-		
-		font-feature-settings: "liga", "onum", "ordn";  // Low-level OpenType features; these could be turned off eventually
-		font-variant-ligatures: common-ligatures discretionary-ligatures;
-		font-variant-numeric: ordinal oldstyle-nums;
 	}
 }
 
