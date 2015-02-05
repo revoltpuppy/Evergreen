@@ -279,6 +279,21 @@
 			}
 		}
 	}
+	
+	.index-wrapper{
+		
+		@include breakpoint($gamora){
+			margin-right: 0;
+			margin-left: 0;
+		}
+		
+		.main-content{
+			
+			@include breakpoint($gamora){
+				margin: 0 3em;
+			}
+		}
+	}
 }
 
 // .main-content and .sidebar are the two primary regions of

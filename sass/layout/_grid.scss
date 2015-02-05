@@ -90,6 +90,7 @@
 	float: left;
 	
 	@media (min-width: 32em){
+		// box model
 		margin-right: 0;
 		width: 50%;
 	}
@@ -117,10 +118,12 @@
 	float: left;
 	
 	@include breakpoint($gamora){
+		// box model
 		margin-right: 0;
 		width: 50%;
 	
 		&:nth-child(odd){
+			// layout
 			clear: left;
 		}
 	}
@@ -201,6 +204,7 @@
 }*/
 
 .unit-2-7{  //deprecated; use .grid .unit-2-7 instead
+	// box model
 	margin: 0;
 	
 	@include breakpoint($gamora){
@@ -225,6 +229,7 @@
 }*/
 
 .unit-1-7{
+	// box model
 	margin: 0;
 	padding-left: 1em;
 	width: 100%;
@@ -247,27 +252,29 @@
 
 .main-row-grid .unit-2-7,
 .grid .unit-2-7{
+	// box model
 	margin: 0;
 	padding-left: 1em;
 	width: 100%;
-	//layout
+	// layout
 	float: left;
 	
 	@include breakpoint($gamora){
-		//box model
+		// box model
 		width: 28.571428571429%;
 	}
 }
 
 .grid .unit-3-7{
+	// box model
 	margin: 0;
 	padding-left: 1em;
 	width: 100%;
-	//layout
+	// layout
 	float: left;
 	
 	@include breakpoint($gamora){
-		//box model
+		// box model
 		width: 42.857142857143%;
 	}
 }
@@ -281,16 +288,18 @@
 	float: left;
 	
 	@include breakpoint($gamora){
+		// box model
 		width: 80%;  // 4/5
 	}
 	
 	@include breakpoint($drax){
-		//box model
+		// box model
 		width: 57.142857142857%;  // 4/7
 	}
 }
 
 .unit-5-7{
+	// box model
 	margin: 0;
 	padding-left: 1em;
 	
@@ -345,7 +354,7 @@
 
 .right,  // deprecated
 .supplement,  // This should mirror .supplement-1-2; it’s just a more user-friendly name
-.supplement-1-2{  // deprecated
+.supplement-1-2{  // deprecated, use .supplement instead
 	
 	@include breakpoint($starlord){
     // box model
