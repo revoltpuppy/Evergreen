@@ -241,6 +241,10 @@
 		.main-content{
 			
 			@include breakpoint($gamora){
+				margin: 0 2em;
+			}
+			
+			@include breakpoint($drax){
 				margin: 0 3em;
 			}
 		}
@@ -269,8 +273,8 @@
 			margin: 0 .75em 3.75rem 0.75em;  // 60/16
 			
 			@include breakpoint($rocket){
-				margin-right: 1em;
-				margin-left: 1em;
+				margin-right: 2em;
+				margin-left: 2em;
 			}
 			
 			@include breakpoint($drax){

@@ -47,6 +47,20 @@ p.box{  //WYSIWYG
 	color: mix(black, $sky-blue, 66%);
 }
 
+.box.supplement,
+.box.supplement-alt-1-2{
+	
+	@include breakpoint($lil-groot){
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	
+	@include breakpoint($gamora){
+		border-top-right-radius: 2px;
+		border-bottom-right-radius: 2px;
+	}
+}
+
 /**
  * 2. Note
  *
@@ -57,8 +71,7 @@ p.box{  //WYSIWYG
 	border-left: 5px solid mix(white, $sky-blue, 60%);
 	
 	@media screen and (min-width: 22em){
-		padding-left: -webkit-calc(1em - 5px);  //Chrome 25, Safari 6, Mobile Safari 6, Blackberry Browser 10
-		padding-left:         calc(1em - 5px);
+		padding-left: calc(1em - 5px);
 	}
 }
 

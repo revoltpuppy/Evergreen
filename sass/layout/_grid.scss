@@ -359,7 +359,7 @@
 	@include breakpoint($starlord){
     // box model
     margin-left: 1em;
-    width: calc(66% - 1em);
+    width: calc(66.6666666667% - 1em);
     // layout
     float: right;
 	}
@@ -367,12 +367,12 @@
 	@include breakpoint($gamora){
 		// box model
 		//margin-right: -6.468797564688%;  This needs to be revisited once the main grid settles.
-		width: calc(69.500761035008% - 1em);
+		//width: calc(69.500761035008% - 1em);
 	}
 
 	@include breakpoint($drax){
 		// box model
-		width: calc(56.468797564688% - 1em);
+		width: calc(50% - 1em);
 	}
 }
 
@@ -380,28 +380,30 @@
 	
   @include breakpoint($lil-groot){
 	  // box model
-	  margin-right: -0.75em;
-	  margin-left: 1em;
-	  width: calc(50% + 0.75em);
-	  // layout
-	  float: right;
+	  //margin-right: -0.75em;
+	  //width: calc(50% + 0.75em);
 	}
 	
 	@include breakpoint($rocket){
 		// box model
 		margin-right: -1em;
+	  margin-left: 1em;
 		width: calc(50% + 1em);
+	  // layout
+	  float: right;
 	}
 	
 	@include breakpoint($starlord){
-		//width: 38.260135135135135%;  // It took weird math to get here.
+		// box model
+		margin-right: 0;
+		width: calc(66.666666667% - 1em);
 	}
 	
 	@include breakpoint($gamora){
 		// box model
-		margin-right: 1em;
-		margin-left: calc(-31.241830065359% - 1em);
-		width: 31.241830065359%;  // 239/765 (the width of .tertiary-nav/the content area of .main-content.
+		margin-right: 2em;
+		margin-left: calc(-33.3333333333% - 2em);
+		width: 33.3333333333%;  // 1/3
 		// layout
 		float: left;
 	}
