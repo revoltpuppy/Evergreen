@@ -47,8 +47,7 @@
 	
 	&.grid,
 	&.grid-alt{
-		display: -webkit-flex;
-		display:         flex;
+		display: flex;
 	}
 	
 	@include breakpoint($drax){
@@ -217,10 +216,12 @@
 	}
 }
 
-.main-row-grid{
+.main-row-grid,  // deprecated
+.grid{
 	
 	.primary-content-wrapper{  // This should be de-specified when .main-row-grid becomes simply .grid.
 		// box model
+		margin-top: -5px;
 		margin-left: 1em;
 		padding-right: 0;
 		width: calc(100% - 1.5em);  // 0.25 margin on either side

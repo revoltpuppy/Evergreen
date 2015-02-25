@@ -66,12 +66,13 @@
 			// box model
 			margin-top: 1rem;
 			// layout
-			position: absolute;  //Removes nav from the document flow
+			position: absolute;  // Removes nav from the document flow
 		}
 	}
 }
 
-.main-row-grid #tertiary-nav{
+.main-row-grid #tertiary-nav,  // deprecated
+.grid #tertiary-nav{
 	// box model
 	padding-right: 0;
 	width: 100%;
