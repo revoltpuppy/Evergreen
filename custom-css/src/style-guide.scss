@@ -39,7 +39,7 @@ $blueberry-susan: #492c5d;
 $wine: #600f21;
 $black: #000;
 
-$shadow: hsla(275, 33%, 11%, .25);
+$drop-shadow: hsla(275, 33%, 11%, .25);
 $highlight: hsla(52, 95%, 85%, .5); //$morning-light
 
 /**
@@ -112,7 +112,7 @@ ul.banned-list{
 	font-style: italic;
 	text-shadow: 0px -1px 0 $highlight;
 	background-color: rgba($evergreen-neue, .2);
-	box-shadow: 0px 1px 2px $shadow;
+	box-shadow: 0px 1px 2px $drop-shadow;
 	content: "Min";
 }
 @media screen and (min-width:20em){

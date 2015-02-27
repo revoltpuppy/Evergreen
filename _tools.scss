@@ -15,8 +15,12 @@ $blueberry-susan: #492c5d;
 $wine: #600f21;
 $black: #000;
 
-$shadow: hsla(275, 33%, 11%, .25);
 $highlight: hsla(52, 95%, 85%, .5);  // $morning-light
+
+$tint: hsl(0, 0%, 95%);
+$shade: hsl(0, 0%, 0%);
+
+$drop-shadow: hsla(275, 33%, 11%, .25);
 
 $display-face: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
 $text-face: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;

@@ -24,7 +24,7 @@ button,
     background-image:         linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //w3c
     border-radius: .2em;
     //miscelaneous
-    box-shadow: 0 .2em .2em $shadow;
+    box-shadow: 0 .2em .2em $drop-shadow;
     -webkit-transition: all .1s ease-in-out;  //Safari 6, Chrome 25
             transition: all .1s ease-in-out;  //w3c
 }
@@ -69,7 +69,7 @@ button[disabled],
 	background: mix(white, $sky-blue, 60%) none;
 	border-color: #999;
     //miscelaneous
-    box-shadow: 0 .1em .1em $shadow inset;
+    box-shadow: 0 .1em .1em $drop-shadow inset;
     cursor: not-allowed;
 }
 
