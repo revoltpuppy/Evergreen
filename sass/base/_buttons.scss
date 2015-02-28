@@ -10,34 +10,35 @@ button,
 .button,
 .button:visited, 
 input[type="submit"]{
-	//box model
-	border: 1px solid $sky-blue;
+	// box model
+	border: 1px solid mix($tint, $blueberry-susan, 40%);
 	height: auto;
 	margin-bottom: 1.262201279030629em;  // 15/11.884
 	padding: 5px .5em;
-	//layout
+	// layout
 	display: inline-block;
-	//typography
+	// typography
 	color: #333333;
 	font-family: $display-face;
 	font-size: 1em;
 	font-weight: normal;
 	//line-height:  1.32352941176471;  // 22.5/17
 	text-shadow: 0 1px 0 $highlight;
-	//backgrounds & borders
-	background-color: mix(white, $sky-blue, 60%);  // IE 9
-	background-image: linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));
+	// backgrounds & borders
+	background-color: mix($tint, $blueberry-susan, 80%);  // IE 9
+	background-image: linear-gradient(mix($highlight, $blueberry-susan, 85%), mix($tint, $blueberry-susan, 65%));
 	border-radius: .2em;
-	//miscelaneous
+	// miscelaneous
 	box-shadow: 0 .2em .2em $drop-shadow;
 }
 button:hover,
 .button:hover, 
 input[type="submit"]:hover{
-	color: mix(black, $sky-blue, 40%);
-	//backgrounds & borders
-	background-color: mix(white, $sky-blue, 80%);  // IE 9
-	background-image: linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));
+	color: mix($shade, $blueberry-susan, 40%);
+	// backgrounds & borders
+	background-color: mix($tint, $blueberry-susan, 90%);  // IE 9
+	background-image: linear-gradient(mix($highlight, $blueberry-susan, 95%), mix($tint, $blueberry-susan, 75%));
+	border-color: mix($tint, $blueberry-susan, 40%);
 }
 button:focus,
 .button:focus, 
@@ -49,8 +50,8 @@ button:active,
 .button:active, 
 input[type="submit"]:active{
 	//backgrounds & borders
-	background-color: mix(white, $sky-blue, 40%);  //IE 9
-	background-image: linear-gradient(mix(white, $sky-blue, 40%), mix($morning-light, $sky-blue, 60%));
+	background-color: mix($tint, $blueberry-susan, 40%);  //IE 9
+	background-image: linear-gradient(mix($tint, $blueberry-susan, 40%), mix($highlight, $blueberry-susan, 60%));
 	//miscelaneous
 	box-shadow: inset 0 .1em .2em hsla(0,0%,0%,.25);
 }
@@ -110,7 +111,7 @@ button[disabled]:hover{
 	color: #666;
 	text-shadow: 0 .05em 0 $highlight;
 	//backgrounds & borders
-	background: mix(white, $sky-blue, 60%) none;
+	background: mix($tint, $blueberry-susan, 60%) none;
 	border-color: #999;
     //miscelaneous
     box-shadow: 0 .1em .1em $drop-shadow inset;

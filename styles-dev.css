@@ -962,7 +962,7 @@ button,
 .button,
 .button:visited,
 input[type="submit"] {
-  border: 1px solid #0086ee;
+  border: 1px solid #8c7b98;
   height: auto;
   margin-bottom: 1.262201279030629em;
   padding: 5px .5em;
@@ -972,8 +972,8 @@ input[type="submit"] {
   font-size: 1em;
   font-weight: normal;
   text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5);
-  background-color: #99cef8;
-  background-image: linear-gradient(#cadec1, #66b6f4);
+  background-color: #d0cad4;
+  background-image: linear-gradient(rgba(190, 174, 149, 0.575), #b6acbd);
   border-radius: .2em;
   box-shadow: 0 0.2em 0.2em rgba(30, 19, 37, 0.25);
 }
@@ -982,12 +982,13 @@ input[type="submit"] {
 button:hover,
 .button:hover,
 input[type="submit"]:hover {
-  color: #00508e;
-  background-color: #cce6fb;
-  background-image: linear-gradient(#cadec1, #99cef8);
+  color: #2b1a37;
+  background-color: #e1dee3;
+  background-image: linear-gradient(rgba(228, 215, 168, 0.525), #c7c0cc);
+  border-color: #8c7b98;
 }
 
-/* line 42, sass/base/_buttons.scss */
+/* line 43, sass/base/_buttons.scss */
 button:focus,
 .button:focus,
 input[type="submit"]:focus {
@@ -995,12 +996,12 @@ input[type="submit"]:focus {
   outline-width: 0;
 }
 
-/* line 48, sass/base/_buttons.scss */
+/* line 49, sass/base/_buttons.scss */
 button:active,
 .button:active,
 input[type="submit"]:active {
-  background-color: #66b6f4;
-  background-image: linear-gradient(#66b6f4, #97c8cc);
+  background-color: #8c7b98;
+  background-image: linear-gradient(#8c7b98, rgba(133, 110, 122, 0.7));
   box-shadow: inset 0 0.1em 0.2em rgba(0, 0, 0, 0.25);
 }
 
@@ -1011,7 +1012,7 @@ input[type="submit"]:active {
  * action that a user will expect to take. E.g., Submit would be
  * the .prime button while Cancel would be the default button.
  */
-/* line 65, sass/base/_buttons.scss */
+/* line 66, sass/base/_buttons.scss */
 .prime,
 .prime:visited {
   border-color: #46502b;
@@ -1021,7 +1022,7 @@ input[type="submit"]:active {
   background-image: linear-gradient(#a1b96b, #64933a);
 }
 
-/* line 76, sass/base/_buttons.scss */
+/* line 77, sass/base/_buttons.scss */
 .prime:hover {
   border-bottom-color: #46502b;
   color: #46502b;
@@ -1030,12 +1031,12 @@ input[type="submit"]:active {
   background-image: linear-gradient(#bfcd84, #83a861);
 }
 
-/* line 86, sass/base/_buttons.scss */
+/* line 87, sass/base/_buttons.scss */
 .prime:focus {
   border-color: #999;
 }
 
-/* line 89, sass/base/_buttons.scss */
+/* line 90, sass/base/_buttons.scss */
 .prime:active {
   background-color: #a2be88;
   background-image: linear-gradient(#64933a, #82a652);
@@ -1049,7 +1050,7 @@ input[type="submit"]:active {
  * buttons should have their actions taken away from them, or have
  * the disabled attribute.
  */
-/* line 104, sass/base/_buttons.scss */
+/* line 105, sass/base/_buttons.scss */
 .is-disabled,
 .is-disabled:visited,
 .is-disabled:hover,
@@ -1057,13 +1058,13 @@ button[disabled],
 button[disabled]:hover {
   color: #666;
   text-shadow: 0 0.05em 0 rgba(253, 243, 180, 0.5);
-  background: #99cef8 none;
+  background: #aea2b6 none;
   border-color: #999;
   box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset;
   cursor: not-allowed;
 }
 
-/* line 119, sass/base/_buttons.scss */
+/* line 120, sass/base/_buttons.scss */
 .prime.is-disabled,
 .prime.is-disabled:hover,
 .prime.is-disabled:visited,
