@@ -115,6 +115,7 @@ th{
 	padding: 0 1.111111111111111em 0 0;
 	vertical-align: bottom;
 }
+tbody th,
 td{
 	// box model
 	border: 0 solid #ccc;
@@ -125,6 +126,9 @@ td{
   font-feature-settings: "lnum", "tnum" "ordn";  // "lnum" is needed for lining numbers in Firefox.
 	font-variant-numeric: lining-nums ordinal tabular-nums;  // "lining-nums" is not applying in Firefox.
 	vertical-align: top;
+}
+tbody > tr:first-child > th{
+	border-top-color: black;
 }
 td:last-child{
 	padding-right: 0;
