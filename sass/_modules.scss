@@ -296,11 +296,15 @@
 			
 			.calendar-month{
 				// box model
-				height: 2px;
+				//height: 2px;
+				padding: 0;
+				min-height: 0.875rem;  // 14/16; magic number - the smallest size that accomodates the text
 				// layout
-				overflow: hidden;
+				//overflow: hidden;
 				// typography
-				color: transparent;
+				//color: transparent;
+				font-size: 0.625rem;  // 10/16; magic number - the biggest font size it can be and still fit in the box
+				font-weight: normal;
 			}
 			
 			.calendar-day{

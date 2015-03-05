@@ -4479,22 +4479,23 @@ p.alert {
   }
   /* line 297, sass/_modules.scss */
   .calendar-dt-mini .calendar-month {
-    height: 2px;
-    overflow: hidden;
-    color: transparent;
+    padding: 0;
+    min-height: 0.875rem;
+    font-size: 0.625rem;
+    font-weight: normal;
   }
-  /* line 306, sass/_modules.scss */
+  /* line 310, sass/_modules.scss */
   .calendar-dt-mini .calendar-day {
     height: 1.42857em;
     display: block;
   }
 }
 
-/* line 315, sass/_modules.scss */
+/* line 319, sass/_modules.scss */
 .calendar-dt-null {
   background-color: #dad4de;
 }
-/* line 318, sass/_modules.scss */
+/* line 322, sass/_modules.scss */
 .calendar-dt-null .calendar-month {
   background-color: #b6aabe;
 }
@@ -4508,27 +4509,27 @@ p.alert {
  *
  * @section mod-upcoming-events-homepage
  */
-/* line 334, sass/_modules.scss */
+/* line 338, sass/_modules.scss */
 .upcoming-events-homepage {
   margin: 0 auto;
 }
-/* line 338, sass/_modules.scss */
+/* line 342, sass/_modules.scss */
 .upcoming-events-homepage .media {
   border-bottom: 1px solid #c1b7c7;
 }
-/* line 342, sass/_modules.scss */
+/* line 346, sass/_modules.scss */
 .upcoming-events-homepage .media-body {
   text-align: center;
 }
 @media screen and (min-width: 32em) {
-  /* line 334, sass/_modules.scss */
+  /* line 338, sass/_modules.scss */
   .upcoming-events-homepage {
     margin: 0 auto 1rem;
     max-width: 66.6666666666%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 334, sass/_modules.scss */
+  /* line 338, sass/_modules.scss */
   .upcoming-events-homepage {
     margin-top: 1rem;
     margin-left: -24.58203125%;
@@ -4539,14 +4540,14 @@ p.alert {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 334, sass/_modules.scss */
+  /* line 338, sass/_modules.scss */
   .upcoming-events-homepage {
     margin-left: -25.520833333333%;
     width: 23.484848484848%;
     font-size: 1.063rem;
     line-height: 1.47058823529412;
   }
-  /* line 368, sass/_modules.scss */
+  /* line 372, sass/_modules.scss */
   .upcoming-events-homepage li {
     margin: 0.441176470588235em 0 0.882352941176471em 0;
   }
