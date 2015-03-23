@@ -18,31 +18,31 @@
 /**
  * 1. Default Box
  */
-.notice,  //deprecated
+.notice,  // deprecated
 .box,
-p.box{  //WYSIWYG
-	//box model
+p.box{  // WYSIWYG
+	// box model
 	padding: 0 1em;
-	//layout
+	// layout
 	overflow: hidden;
-	//typography
+	// typography
 	color: mix(black, $sky-blue, 66%);
-	//backgrounds & borders
+	// backgrounds & borders
 	background-color: transparentize(mix(white, $sky-blue, 80%), .05);
 	background-image: url("images/texture-1.png");
 	border-radius: 2px;
 }
 
-.notice h2,  //deprecated
+.notice h2,  // deprecated
 .box h2{
 	color: mix(black, $sky-blue, 50%);
 }
 
-.notice h3,  //deprecated
+.notice h3,  // deprecated
 .box h3,
-.notice h4,  //deprecated
+.notice h4,  // deprecated
 .box h4,
-.notice h5,  //deprecated
+.notice h5,  // deprecated
 .box h5{
 	color: mix(black, $sky-blue, 66%);
 }
@@ -66,7 +66,7 @@ p.box{  //WYSIWYG
  *
  * Stands out a little bit more than a default box.
  */
-.notice,  //deprecated
+.notice,  // deprecated
 .note{
 	border-left: 5px solid mix(white, $sky-blue, 60%);
 	
@@ -82,15 +82,15 @@ p.box{  //WYSIWYG
  */
 .alert,
 p.alert{
-	//box model
-	//border: 1px solid $wine;  //Conflicts with sitewide alert JS. Might be worth changing how that works.
-	//typography
+	// box model
+	//border: 1px solid $wine;  // Conflicts with sitewide alert JS. Might be worth changing how that works.
+	// typography
 	color: $wine;
-	//backgrounds & borders
+	// backgrounds & borders
 	background-color: $highlight;
 	border-radius: 0;
 }
-#sitewide-alert{  //deprecated
+#sitewide-alert{  // deprecated
 	border-radius: 0;
 	transition: all .5s ease-in;
 }
@@ -102,9 +102,9 @@ p.alert{
  * against the content a little bit more.
  */
 .caption-box{
-	//typography
+	// typography
 	text-shadow: 0 1px 0 hsla(0, 0%, 100%, .5);
-	//backgrounds and borders
+	// backgrounds and borders
 	background-color: hsla(0, 0%, 95%, .95);
 	
 	img{
@@ -116,51 +116,44 @@ p.alert{
  * 5. Pull Quotes
  */
 .pull-box{
-	//backgrounds and borders
+	// backgrounds and borders
 	background-color: transparentize($evergreen-neue, .05);
-	//typography
+	// typography
 	color: hsl(0, 0%, 100%);
-	-moz-osx-font-smoothing: auto;  //Better rendering of reverse-out text
-	 -webkit-font-smoothing: subpixel-antialiased;  //Better rendering of reverse-out text
+	-moz-osx-font-smoothing: auto;  // Better rendering of reverse-out text
+	 -webkit-font-smoothing: subpixel-antialiased;  // Better rendering of reverse-out text
 	
 	@media screen and (min-width: 43em){
-		margin-bottom: 1.071428571428571em;  //15px
+		margin-bottom: 1.071428571428571em;  // 15px
 	}
-}
-.pull-quote{
-	//box model
-	margin: 0.44117647058824em 0 0.88235294117647em 0;  //7.5/17 15/17
-	//typography
-	@include base-type-lg;
-	
-	@media screen and (min-width: 70em){
-		//box model
-		margin: 0.36358347876672em 0 0.72716695753345em 0;  //10/27.504 20/27.504
-		//typography
-		font-size: 1.719rem;  //27.504px
-		line-height: 1.09075043630017;  //30/27.504
-	}
-	
-	@media screen and (min-width: 125em){
-		//box model
-		margin: 0.48200514138817em 0 0.96401028277635em;  //15/31.12 30/31.12
-		//typography
-		font-size: 1.945rem;  //31.12
-		line-height: 1.44601542416452;  //45/31.12
-	}
-}
-/*.pull-quote,
-.pull-quote + .figcaption,  //deprecated
-.pull-quote + figcaption,
-.pull-quite + cite{
-	color: #f3f3f3;
-}*/
-.pull-quote{
-	font-style: italic;
 }
 
 .pull-box-alt{
 	background-color: $sky-blue;
+}
+
+.pull-quote{
+	// box model
+	margin: 0.44117647058824em 0 0.88235294117647em 0;  // 7.5/17 15/17
+	// typography
+	@include base-type-lg;
+	font-style: italic;
+	
+	@media screen and (min-width: 70em){
+		// box model
+		margin: 0.36358347876672em 0 0.72716695753345em 0;  // 10/27.504 20/27.504
+		// typography
+		font-size: 1.719rem;  // 27.504px
+		line-height: 1.09075043630017;  // 30/27.504
+	}
+	
+	@media screen and (min-width: 125em){
+		// box model
+		margin: 0.48200514138817em 0 0.96401028277635em;  // 15/31.12 30/31.12
+		// typography
+		font-size: 1.945rem;  // 31.12
+		line-height: 1.44601542416452;  // 45/31.12
+	}
 }
 
 /**
@@ -194,38 +187,36 @@ p.alert{
  * @section ui-group
  */
 .ui-group{
-	//box model
+	// box model
 	border: 1px solid mix(white, $blueberry-susan, 75%);
-	margin-bottom: 0.46875rem;  //7.5px
+	margin-bottom: 0.46875rem;  // 7.5px
 	padding: 0 1em;
-	//layout
+	// layout
 	overflow: hidden;
-	//backgrounds & borders
+	// backgrounds & borders
 	background-color: mix(white, $blueberry-susan, 85%);
 	border-radius: 2px;
 		
 	&:hover{
-		//backgrounds & borders
+		// backgrounds & borders
 		background-color: mix(white, $blueberry-susan, 90%);
 		border-color: mix(white, $blueberry-susan, 80%);
-		//transitions
+		// transitions
 		-webkit-transition: all .2s ease-out;
 		        transition: all .2s ease-out;
 	}
 	
 	@media screen and (min-width: 32em){
 		&.unit-1-2{
-			margin: 0.234375rem;  //3.75px
-			width: -webkit-calc(50% - 0.46875rem);  //Safari 6
-			width:         calc(50% - 0.46875rem);  //7.5px
+			margin: 0.234375rem;  // 3.75px
+			width: calc(50% - 0.46875rem);  // 7.5px
 		}
 	}
 	
 	@media screen and (min-width: 43em){
 		&.unit-1-3{
-			margin: 0.234375rem;  //3.75px
-			width: -webkit-calc(33.3333333333% - 0.46875rem);  //Safari 6
-			width:         calc(33.3333333333% - 0.46875rem);  //7.5px
+			margin: 0.234375rem;  // 3.75px
+			width: calc(33.3333333333% - 0.46875rem);  // 7.5px
 		}
 		
 		.media{
