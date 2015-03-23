@@ -39,12 +39,9 @@ body{
 	margin: 0;
 	min-height: 100vh;
 	// layout
-	-webkit-align-items: center;
-	        align-items: center;
-	display: -webkit-flex;
-	display:         flex;
-	-webkit-flex-direction: column;
-	        flex-direction: column;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 	// backgrounds & borders
 	background-color: hsl(0, 0%, 95%);
 }
@@ -172,9 +169,29 @@ td > ol:last-child li:last-child > p:last-child{
 /**
  * C. Forms
  */
+input,
+select,
+textarea{
+	// box model
+	border: 1px solid mix($tint, $blueberry-susan, 60%);
+	//typography
+	font-family: $text-face;
+	@include base-type;
+	// backgrounds & borders
+	border-radius: 2px;
+	
+	&:focus{
+		// misc
+		box-shadow: 0 0 2px 1px $drop-shadow;
+	}
+	
+	@include breakpoint($gamora){
+		@include base-type-lg;
+	}
+}
+
 input{
 	// box model
-	border: 1px solid #bbcfd7;
 	height: 1.719rem;
 	margin-bottom: 1.262201279030629em; //15/11.884
 	padding: 0 .5em;
@@ -184,30 +201,22 @@ input{
 
 select{
 	// box model
-	border: 1px solid $sky-blue;
 	@include margin-default;
 	padding: 0.30357142857143em .5em;  //4.25/14 So, (4.25 * 2) + 14 = 22.5
 	// typography
-	@include base-type;
 	text-shadow: 0 1px 0 $highlight;
-	// backgrounds & borders
-	background-color: mix(white, $sky-blue, 80%);  //IE 9
-	//background-image: linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));  //w3c
-	border-radius: 2px;
 	// misc
-	-webkit-appearance: none;
+	/*-webkit-appearance: none;
 	   -moz-appearance: none;
-	        appearance: none;
+	        appearance: none;*/
 	box-shadow: 0 .1em .1em $drop-shadow inset;
 	cursor: pointer;
 	
 	&:hover{
 		// box model
 		border-bottom-style: dashed;
-		//color: $sky-blue;
 		// backgrounds & borders
-		background-color: mix(white, $sky-blue, 90%);  //IE 9
-		//background-image: linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));  //w3c
+		background-color: mix($tint, $blueberry-susan, 90%);
 	}
 	
 	/*@media screen and (min-width: 43em){
@@ -216,6 +225,17 @@ select{
 		// typography
 		@include base-type-lg;
 	}*/
+}
+
+textarea{
+	// box model
+	@include margin-default;
+	padding: 0.5em 0.75em;
+	
+	@include breakpoint($gamora){
+		// box model
+		@include margin-default-lg;
+	}
 }
 
 /**
