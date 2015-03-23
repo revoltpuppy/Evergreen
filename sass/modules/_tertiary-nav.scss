@@ -32,21 +32,24 @@
 #tertiary-nav{
 	// box model
 	margin: 0 auto;
-	max-width: calc(100% - .5em);
+	padding-right: 0;
+	width: 100%;
+	max-width: none;
 	// typography
 	@include base-type;
 	
-	@media screen and (min-width: 32em){
+	@include breakpoint($starlord){
 		margin: 0 auto 1rem;
 		max-width: 66.6666666666%;
 	}
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		// box model
 		margin-top: 1rem;
-		width: 22.200520833333%;  // 1/5, or technically 341/1536
+		width: calc(100% + 2em);
+		max-width: none;
 		// position
-		position: absolute;  // Removes nav from the document flow
+		position: relative;
 		
 		.index-wrapper &{
 			// box model
@@ -56,44 +59,14 @@
 		}
 	}
 	
-	@media screen and (min-width: 70em){
-		// box model
-		width: 17.803302225413%;
+	@include breakpoint($drax){
 		// typography
 		@include base-type-lg;
 		
 		.index-wrapper &{
 			// box model
 			margin-top: 1rem;
-			// layout
-			position: absolute;  // Removes nav from the document flow
 		}
-	}
-}
-
-.main-row-grid #tertiary-nav,  // deprecated
-.grid #tertiary-nav{
-	// box model
-	padding-right: 0;
-	width: 100%;
-	max-width: none;
-	
-	@include breakpoint($gamora){
-		// box model
-		//margin-right: -1em;
-		width: calc(100% + 2em);
-		//margin-left: 0.5em;
-		//width: calc(20% + 1em);
-		// layout
-		//left: 0;
-		position: relative;
-	}
-	
-	@include breakpoint($drax){
-		// box model
-		//margin-right: -2em;
-		//width: calc(14.285714285714% + 2em);
-		//width: calc(100% + 1em);
 	}
 	
 	> ul{
@@ -121,7 +94,7 @@
 	//typography
 	@include base-type;
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		//box model
 		margin: 0.779950083194676em 0 0.363976705490849em 0;
 		//typography
@@ -143,7 +116,7 @@
 	font-weight: normal;
 }
 
-@media screen and (min-width: 43em){
+@include breakpoint($gamora){
 	.tertiary-nav-h,
 	a.tertiary-nav-h{  //heading for tertiary nav in wider views
 		border-bottom: 1px solid mix(black, $sky-blue, 50%);
@@ -159,17 +132,18 @@
  */
 #tertiary-nav.tertiary-nav-homepage{
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		// box model
-		margin-left: -24.58203125%;  //442/2048 + 3%
-		width: 21.58203125%;  //442/2048
+		width: calc(19.52636282395% + 1.5em);
 		// layout
 		position: absolute;
+		left: 0;
 	}
 	
-	@media screen and (min-width: 70em){
-		margin-left: -25.520833333333%;
-		width: 23.484848484848%;
+	@include breakpoint($drax){
+		//margin-left: -25.520833333333%;
+		//width: 23.484848484848%;
+		width: calc(14.285714285714% + .5em);  // 1/7
 	}
 }
 
@@ -189,7 +163,7 @@
 	//misc
 	content: "▶\00A0";  //non-breaking space
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		content: "";
 	}
 }
@@ -222,7 +196,7 @@
 		}
 	}
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		padding: 0;
 		
 		label{
@@ -264,7 +238,7 @@
 	-webkit-transition: max-height .2s ease 0s;;
 	transition: max-height .25s ease 0s;
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint ($gamora){
 		border-bottom-width: 0;
 		max-height: 600px;
 		//backgrounds & borders
@@ -273,7 +247,7 @@
 		box-shadow: none;
 	}
 	
-	@media screen and (min-width: 70em){
+	@include breakpoint($drax){
 		max-height: none;
 	}
 }
@@ -286,14 +260,14 @@
 	//transition
 	transition-duration: .75s;
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		padding: 0;
 	}
 }
 ul.accordion-inner{
 	padding: 0 2%;  //15/11.884/2
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		padding: 0;
 	}
 }

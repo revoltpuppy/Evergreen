@@ -99,7 +99,7 @@
 	@include breakpoint($lil-groot){
 		font-size: .657rem;
 		line-height: 1.427619682116684;
-		letter-spacing: .05em;
+		letter-spacing: 0.05em;
 	}
 
 	@include breakpoint($gamora){
@@ -130,20 +130,12 @@
 }
 
 .index-wrapper,
-//.content-wrapper,
-.primary-content-wrapper{  // placeholder for future changes (see below)
-	/** 
-	 * Primary-content-wrapper needs to eventually usurp
-	 * .content-wrapper. .content wrapper will then be a wrapper
-	 * that wraps around both .primary-content-wrapper and
-	 * .sidebar-wrapper (I think). (Assuming it doesn't screw other
-	 * things up. At the very least, renaming .content-wrapper to
-	 * .primary-content-wrapper won't hurt anything.
-	 */
+.primary-content-wrapper{
 	// box model
 	border-top: 5px solid $evergreen-old-style;
-	margin: 0 .25em;
-	margin-top: -5px;  // Compensate for 5px border
+	margin: -5px 0 0 1em;  // Compensate for 5px border
+	padding: 0;
+	width: calc(100% - 1.5em);
 	// backgrounds & borders
 	background-color: hsla(0,0%,95%,.95);
 	border-radius: 2px;
@@ -151,7 +143,8 @@
 	@include breakpoint($gamora){
 		// box model
 		margin-right: 0;
-		margin-left: 16.285714285714286%;  // 1/7
+		margin-left: 0;
+		width: calc(80% - 1em);  // 4/5 - 1em; 0.5em margin on either side
 		// layout
 		overflow: visible;
 	}
@@ -160,43 +153,37 @@
 // Wraps all the content on index pages and pages without a
 // secondary content area.
 .index-wrapper{
-	// box model
-	margin: -5px 0 0 1em;
-	padding-left: 0;
-	width: calc(100% - 1.5em);
 	
-	@include breakpoint($gamora){
-		margin-left: 20%;
-		width: calc(80% - 1em);
-	}
-		
 	@include breakpoint($drax){
-		margin-left: 18.292682926829%;
-		width: 81.714285714285714%;  // 6/7
+		//margin-left: 18.292682926829%;  // magic number? Should this be something more like calc(14.285714285714% + 1em)?  // 1/7
+		//width: 81.714285714285714%;  // 6/7
+		width: 85.714285714286%;
 	}
 }
 
 // Wraps all the content on most pages on the site.
-// .content-wrapper,
-.primary-content-wrapper{  // placeholder for future changes
+.primary-content-wrapper{
+	// box model
 	border-bottom: 2px dashed $evergreen-neue;
+		
 	
 	@include breakpoint($gamora){
-		margin-left: 20%;  // 1/5
-		width: 78%;  // 4/5
+		// box model
+		padding-left: 1em;
 	}
 	
 	@include breakpoint($drax){
 		border-bottom: 0;
-		margin-left: 16.285714285714286%;  // 1/7
-		width: 53.142857142857143%;  // 4/7
+		width: 57.142857142857%;  // 4/7
 	}
 }
 
 // Wraps the secondary content area.
 .sidebar-wrapper{
 	// box model
-	margin: 0 .25em;
+	margin-left: 1em;
+	padding: 0;
+	width: calc(100% - 1.5em);  // 0.25 margin on either side
 	// layout
 	overflow: hidden;
 	// backgrounds & borders
@@ -204,100 +191,17 @@
 
 	@include breakpoint($gamora){
 		// box model
-		margin-left: 20%;  // 1/5; This should match .primary-content-wrapper.
-		width: 78%;
+		margin-left: 20%;
+		padding-left: 1em;
+		width: calc(80% - 1em);  // 4/5; this should match .primary-content-wrapper.
 		// layout
 		overflow: visible;
 	}
 	
 	@include breakpoint($drax){
-		margin: 0 2%;
-		width: 26.571428571429%;  // 2/7
-	}
-}
-
-.main-row-grid,  // deprecated
-.grid{
-	
-	.primary-content-wrapper{  // This should be de-specified when .main-row-grid becomes simply .grid.
 		// box model
-		margin-top: -5px;
-		margin-left: 1em;
-		padding-right: 0;
-		width: calc(100% - 1.5em);  // 0.25 margin on either side
-		
-		@include breakpoint($gamora){
-			// box model
-			//margin-left: 20%;  // 1/5
-			margin-left: 0;
-			padding-left: 1em;
-			width: calc(80% - 1em);  // 4/5 - 1em; 0.5em margin on either side
-		}
-		
-		@include breakpoint($drax){
-			//margin-left: 14.285714285714286%;  // 1/7
-			width: 57.142857142857%;  // 4/7
-		}
-		
-		.main-content{
-			
-			@include breakpoint($gamora){
-				margin: 0 2em;
-			}
-			
-			@include breakpoint($drax){
-				margin: 0 3em;
-			}
-		}
-	}
-	
-	.sidebar-wrapper{  // This should be de-specified when .main-row-grid becomes simply .grid.
-		// box model
-		margin-left: 1em;
-		padding: 0;
-		width: calc(100% - 1.5em);  // 0.25 margin on either side
-		
-		@include breakpoint($gamora){
-			// box model
-			margin-left: 20%;
-			padding-left: 1em;
-			width: calc(80% - 1em);  // 4/5; this should match .primary-content-wrapper.
-		}
-		
-		@include breakpoint($drax){
-			// box model
-			margin-left: 0;
-			width: 28.571428571429%;  // 2/7
-		}
-		
-		.sidebar{
-			margin: 0 .75em 3.75rem 0.75em;  // 60/16
-			
-			@include breakpoint($rocket){
-				margin-right: 2em;
-				margin-left: 2em;
-			}
-			
-			@include breakpoint($drax){
-				margin-right: 1em;
-				margin-left: 0;
-			}
-		}
-	}
-	
-	.index-wrapper{
-		
-		@include breakpoint($gamora){
-			margin-right: 0;
-			margin-left: 0;
-		}
-		
-		.main-content{
-			
-			@include breakpoint($gamora){
-				margin: 0 3em;
-			}
-		}
+		margin: 0;
+		width: 28.571428571429%;  // 2/7
 	}
 }
 
@@ -312,32 +216,45 @@
 	}
 }
 
-.index-wrapper .main-content{
+.index-wrapper .main-content{  // specified in .index-wrapper to not affect .primary-content-wrapper
 
 	@include breakpoint($gamora){
-		margin-left: 5.675675675675676%;  // matches .primary-content-wrapper .main-content
+		margin: 0 3em;
 	}
 	@include breakpoint($drax){
-		margin: 0 3.626279863481%;
+		margin: 0 3.626279863481%;  // magic number?
 	}
 }
 
-.primary-content-wrapper .main-content{  // specified in .content-wrapper to not affect .index-wrapper
+.primary-content-wrapper .main-content{  // specified in .primary-content-wrapper to not affect .index-wrapper
 	max-width: 45em;
 	
 	@include breakpoint($gamora){
-		margin-right: 5.675675675675676%;  // I bumped this up for better readability on iPad and 800x600
-		margin-left: 5.675675675675676%;
+		@include breakpoint($gamora){
+			margin: 0 2em;
+		}
+		
+		@include breakpoint($drax){
+			margin: 0 3em;
+		}
 	}
 }
+
 .main-content{
 	margin-top: -5px;
 	
 	@include breakpoint($drax){
-		position: relative;  // Creates a context for absolutely positioning the homepage tertiary nav
+		//position: relative;  // Creates a context for absolutely positioning the homepage tertiary nav
 	}
 }
+
 .sidebar{
+	margin: 0 .75em 3.75rem 0.75em;  // 60/16
+	
+	@include breakpoint($rocket){
+		margin-right: 2em;
+		margin-left: 2em;
+	}
 	
 	@include breakpoint($gamora){
 		margin-right: 5.675675675675676%;  // These values should match .main-content
@@ -348,7 +265,7 @@
 		//box model
 		border-top-width: 0;
 		border-left: 1px solid #ccc;
-		margin: 0 auto;
+		margin: 0 1em 0 0;
 		padding-left: 1em;
 		//typography
 		color: #333;
@@ -368,6 +285,10 @@
 			margin: 0.441176470588235em 0 0.882352941176471em 0;  // 22.5/3/17  15/17  So, 22.5 + 7.5 + 15 = 45
 		}
 	}
+}
+
+.spotlight{
+	text-align: center;
 }
 
 /**
