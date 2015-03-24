@@ -10,7 +10,8 @@
  * B. Page-level Layout
  * C. Header Layout
  * D. Content Layout
- * E. Hidden Elements
+ * E. Faux Wrappers
+ * F. Hidden Elements
  */
 
 /**
@@ -286,12 +287,54 @@
 	}
 }
 
+/**
+ * E. Faux Wrappers
+ *
+ * For main-content and sidebar inside an index-wrapper, e.g., used
+ * in the catalog. Use sparingly!
+ */
+#faux-content-wrapper{
+	border-bottom: 2px dashed $evergreen-neue;
+	
+	@include breakpoint($gamora){
+		width: 100%;
+	}
+	
+	@include breakpoint($drax){
+		border-bottom-width: 0;
+		width: 66.6666666667%;  // 1/3
+	}
+}
+
+#faux-sidebar-wrapper{
+	
+	@include breakpoint($gamora){
+		width: 100%;
+	}
+	
+	@include breakpoint($drax){
+		// box model
+		width: 33.3333333333%;  // 1/3
+		// typography
+		@include base-type;
+	}
+}
+
+.faux-sidebar{
+	
+	@include breakpoint($drax){
+		border-left: 1px solid #ccc;
+		padding-left: 1em;
+	}
+}
+
+
 .spotlight{
 	text-align: center;
 }
 
 /**
- * E. Hidden Elements
+ * F. Hidden Elements
  *
  * For displaying less essential elements only when screen size
  * permits. Use sparingly!
