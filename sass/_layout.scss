@@ -222,7 +222,7 @@
 		margin: 0 3em;
 	}
 	@include breakpoint($drax){
-		margin: 0 3.626279863481%;  // magic number?
+		//margin: 0 3.626279863481%;  // magic number?
 	}
 }
 
@@ -263,7 +263,6 @@
 
 	@include breakpoint($drax){
 		//box model
-		border-top-width: 0;
 		border-left: 1px solid #ccc;
 		margin: 0 1em 0 0;
 		padding-left: 1em;
