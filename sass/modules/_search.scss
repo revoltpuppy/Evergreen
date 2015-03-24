@@ -17,7 +17,7 @@
 .top-search button,  //deprecated
 .search button{
 	//box model
-	border-color: #ccc;
+	border-color: mix($tint, $blueberry-susan, 60%);
 	border-width: 1px 1px 1px 0;
 	height: 27.506px;  //IE8
 	height: 1.719rem;

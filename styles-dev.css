@@ -954,7 +954,7 @@ textarea {
 /* line 17, sass/modules/_search.scss */
 .top-search button,
 .search button {
-  border-color: #ccc;
+  border-color: #aea2b6;
   border-width: 1px 1px 1px 0;
   height: 27.506px;
   height: 1.719rem;
@@ -999,6 +999,7 @@ textarea {
 button,
 .button,
 .button:visited,
+input[type="button"],
 input[type="submit"] {
   border: 1px solid #8c7b98;
   height: auto;
@@ -1016,9 +1017,10 @@ input[type="submit"] {
   box-shadow: 0 0.2em 0.2em rgba(30, 19, 37, 0.25);
 }
 
-/* line 34, sass/base/_buttons.scss */
+/* line 35, sass/base/_buttons.scss */
 button:hover,
 .button:hover,
+input[type="button"]:hover,
 input[type="submit"]:hover {
   color: #2b1a37;
   background-color: #e1dee3;
@@ -1026,17 +1028,19 @@ input[type="submit"]:hover {
   border-color: #8c7b98;
 }
 
-/* line 43, sass/base/_buttons.scss */
+/* line 45, sass/base/_buttons.scss */
 button:focus,
 .button:focus,
+input[type="button"]:focus,
 input[type="submit"]:focus {
   border-color: #999;
   outline-width: 0;
 }
 
-/* line 49, sass/base/_buttons.scss */
+/* line 52, sass/base/_buttons.scss */
 button:active,
 .button:active,
+input[type="button"]:active,
 input[type="submit"]:active {
   background-color: #8c7b98;
   background-image: linear-gradient(#8c7b98, rgba(133, 110, 122, 0.7));
@@ -1050,9 +1054,10 @@ input[type="submit"]:active {
  * action that a user will expect to take. E.g., Submit would be
  * the .prime button while Cancel would be the default button.
  */
-/* line 66, sass/base/_buttons.scss */
+/* line 70, sass/base/_buttons.scss */
 .prime,
-.prime:visited {
+.prime:visited,
+input.prime {
   border-color: #46502b;
   color: white;
   text-shadow: 0 -1px 0 rgba(30, 19, 37, 0.25);
@@ -1060,8 +1065,9 @@ input[type="submit"]:active {
   background-image: linear-gradient(#a1b96b, #64933a);
 }
 
-/* line 77, sass/base/_buttons.scss */
-.prime:hover {
+/* line 82, sass/base/_buttons.scss */
+.prime:hover,
+input.prime:hover {
   border-bottom-color: #46502b;
   color: #46502b;
   text-shadow: 0 1px 0 rgba(253, 243, 180, 0.5);
@@ -1069,13 +1075,15 @@ input[type="submit"]:active {
   background-image: linear-gradient(#bfcd84, #83a861);
 }
 
-/* line 87, sass/base/_buttons.scss */
-.prime:focus {
+/* line 93, sass/base/_buttons.scss */
+.prime:focus,
+input.prime:focus {
   border-color: #999;
 }
 
-/* line 90, sass/base/_buttons.scss */
-.prime:active {
+/* line 97, sass/base/_buttons.scss */
+.prime:active,
+input.prime:active {
   background-color: #a2be88;
   background-image: linear-gradient(#64933a, #82a652);
 }
@@ -1088,12 +1096,14 @@ input[type="submit"]:active {
  * buttons should have their actions taken away from them, or have
  * the disabled attribute.
  */
-/* line 105, sass/base/_buttons.scss */
+/* line 113, sass/base/_buttons.scss */
 .is-disabled,
 .is-disabled:visited,
 .is-disabled:hover,
 button[disabled],
-button[disabled]:hover {
+button[disabled]:hover,
+input.is-disabled,
+input.is-disabled:hover {
   color: #666;
   text-shadow: 0 0.05em 0 rgba(253, 243, 180, 0.5);
   background: #aea2b6 none;
@@ -1102,12 +1112,14 @@ button[disabled]:hover {
   cursor: not-allowed;
 }
 
-/* line 120, sass/base/_buttons.scss */
+/* line 130, sass/base/_buttons.scss */
 .prime.is-disabled,
 .prime.is-disabled:hover,
 .prime.is-disabled:visited,
 .prime[disabled],
-.prime[disabled]:hover {
+.prime[disabled]:hover,
+input.prime.is-disabled,
+input.prime.is-disabled:hover {
   background: #83a861 none;
 }
 
@@ -1139,7 +1151,8 @@ a:link,
  * B. Page-level Layout
  * C. Header Layout
  * D. Content Layout
- * E. Hidden Elements
+ * E. Faux Wrappers
+ * F. Hidden Elements
  */
 /**
  * A. Grid
@@ -1552,7 +1565,7 @@ a:link,
  * of designed elements, i.e. not a bulleted text list. It is meant
  * to apply to uls and ols.
  */
-/* line 30, sass/_layout.scss */
+/* line 31, sass/_layout.scss */
 .element-list {
   margin-left: 0;
   padding-left: 0;
@@ -1562,26 +1575,26 @@ a:link,
 /**
  * B. Page-level Layout
  */
-/* line 41, sass/_layout.scss */
+/* line 42, sass/_layout.scss */
 .wrapper {
   margin: 0 auto;
   width: 100%;
   display: block;
 }
-/* line 48, sass/_layout.scss */
+/* line 49, sass/_layout.scss */
 .wrapper.grid, .wrapper.grid-alt {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 @media screen and (min-width: 70em) {
-  /* line 41, sass/_layout.scss */
+  /* line 42, sass/_layout.scss */
   .wrapper {
     max-width: 82em;
   }
 }
 
-/* line 57, sass/_layout.scss */
+/* line 58, sass/_layout.scss */
 .wrapper:before,
 .wrapper:after {
   width: 0;
@@ -1593,42 +1606,42 @@ a:link,
 /**
  * C. Header Layout
  */
-/* line 69, sass/_layout.scss */
+/* line 70, sass/_layout.scss */
 [role="banner"] {
   overflow: hidden;
   background-color: #f3f3f3;
   box-shadow: 0 0 3px rgba(30, 19, 37, 0.25);
 }
 
-/* line 78, sass/_layout.scss */
+/* line 79, sass/_layout.scss */
 .page-header {
   transition: all .1s ease-in-out;
 }
 @media screen and (min-width: 43em) {
-  /* line 78, sass/_layout.scss */
+  /* line 79, sass/_layout.scss */
   .page-header {
     background-color: transparent;
   }
 }
 
-/* line 86, sass/_layout.scss */
+/* line 87, sass/_layout.scss */
 [role="main"] {
   position: relative;
 }
 
-/* line 90, sass/_layout.scss */
+/* line 91, sass/_layout.scss */
 [role="navigation"],
 [role="main"] {
   width: 100%;
 }
 
-/* line 95, sass/_layout.scss */
+/* line 96, sass/_layout.scss */
 [role="navigation"] {
   clear: both;
   position: relative;
 }
 @media screen and (min-width: 20em) {
-  /* line 95, sass/_layout.scss */
+  /* line 96, sass/_layout.scss */
   [role="navigation"] {
     font-size: .657rem;
     line-height: 1.427619682116684;
@@ -1636,7 +1649,7 @@ a:link,
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 95, sass/_layout.scss */
+  /* line 96, sass/_layout.scss */
   [role="navigation"] {
     margin-left: 0;
     width: 100%;
@@ -1649,20 +1662,20 @@ a:link,
 /**
  * D. Content Layout
  */
-/* line 120, sass/_layout.scss */
+/* line 121, sass/_layout.scss */
 .site-content {
   margin-bottom: 1.875rem;
   width: 100%;
   position: relative;
 }
 @media screen and (min-height: 35em) {
-  /* line 120, sass/_layout.scss */
+  /* line 121, sass/_layout.scss */
   .site-content {
     margin-bottom: 3.75rem;
   }
 }
 
-/* line 132, sass/_layout.scss */
+/* line 133, sass/_layout.scss */
 .index-wrapper,
 .primary-content-wrapper {
   border-top: 5px solid #46502b;
@@ -1673,7 +1686,7 @@ a:link,
   border-radius: 2px;
 }
 @media screen and (min-width: 43em) {
-  /* line 132, sass/_layout.scss */
+  /* line 133, sass/_layout.scss */
   .index-wrapper,
   .primary-content-wrapper {
     margin-right: 0;
@@ -1684,31 +1697,31 @@ a:link,
 }
 
 @media screen and (min-width: 70em) {
-  /* line 155, sass/_layout.scss */
+  /* line 156, sass/_layout.scss */
   .index-wrapper {
     width: 85.714285714286%;
   }
 }
 
-/* line 165, sass/_layout.scss */
+/* line 166, sass/_layout.scss */
 .primary-content-wrapper {
   border-bottom: 2px dashed #64933a;
 }
 @media screen and (min-width: 43em) {
-  /* line 165, sass/_layout.scss */
+  /* line 166, sass/_layout.scss */
   .primary-content-wrapper {
     padding-left: 1em;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 165, sass/_layout.scss */
+  /* line 166, sass/_layout.scss */
   .primary-content-wrapper {
     border-bottom: 0;
     width: 57.142857142857%;
   }
 }
 
-/* line 182, sass/_layout.scss */
+/* line 183, sass/_layout.scss */
 .sidebar-wrapper {
   margin-left: 1em;
   padding: 0;
@@ -1717,7 +1730,7 @@ a:link,
   background-color: rgba(242, 242, 242, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 182, sass/_layout.scss */
+  /* line 183, sass/_layout.scss */
   .sidebar-wrapper {
     margin-left: 20%;
     padding-left: 1em;
@@ -1726,20 +1739,20 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 182, sass/_layout.scss */
+  /* line 183, sass/_layout.scss */
   .sidebar-wrapper {
     margin: 0;
     width: 28.571428571429%;
   }
 }
 
-/* line 210, sass/_layout.scss */
+/* line 211, sass/_layout.scss */
 .main-content,
 .sidebar {
   margin: 0 .75em;
 }
 @media screen and (min-width: 22em) {
-  /* line 210, sass/_layout.scss */
+  /* line 211, sass/_layout.scss */
   .main-content,
   .sidebar {
     margin: 0 1em;
@@ -1747,62 +1760,55 @@ a:link,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 219, sass/_layout.scss */
+  /* line 220, sass/_layout.scss */
   .index-wrapper .main-content {
     margin: 0 3em;
   }
 }
-@media screen and (min-width: 70em) {
-  /* line 219, sass/_layout.scss */
-  .index-wrapper .main-content {
-    margin: 0 3.626279863481%;
-  }
-}
 
-/* line 229, sass/_layout.scss */
+/* line 230, sass/_layout.scss */
 .primary-content-wrapper .main-content {
   max-width: 45em;
 }
 @media screen and (min-width: 43em) and (min-width: 43em) {
-  /* line 229, sass/_layout.scss */
+  /* line 230, sass/_layout.scss */
   .primary-content-wrapper .main-content {
     margin: 0 2em;
   }
 }
 @media screen and (min-width: 43em) and (min-width: 70em) {
-  /* line 229, sass/_layout.scss */
+  /* line 230, sass/_layout.scss */
   .primary-content-wrapper .main-content {
     margin: 0 3em;
   }
 }
 
-/* line 243, sass/_layout.scss */
+/* line 244, sass/_layout.scss */
 .main-content {
   margin-top: -5px;
 }
 
-/* line 251, sass/_layout.scss */
+/* line 252, sass/_layout.scss */
 .sidebar {
   margin: 0 .75em 3.75rem 0.75em;
 }
 @media screen and (min-width: 22em) {
-  /* line 251, sass/_layout.scss */
+  /* line 252, sass/_layout.scss */
   .sidebar {
     margin-right: 2em;
     margin-left: 2em;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 251, sass/_layout.scss */
+  /* line 252, sass/_layout.scss */
   .sidebar {
     margin-right: 5.675675675675676%;
     margin-left: 5.675675675675676%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 251, sass/_layout.scss */
+  /* line 252, sass/_layout.scss */
   .sidebar {
-    border-top-width: 0;
     border-left: 1px solid #ccc;
     margin: 0 1em 0 0;
     padding-left: 1em;
@@ -1817,7 +1823,7 @@ a:link,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 251, sass/_layout.scss */
+  /* line 252, sass/_layout.scss */
   .sidebar {
     font-size: 1.063rem;
     line-height: 1.47058823529412;
@@ -1829,54 +1835,101 @@ a:link,
   }
 }
 
-/* line 290, sass/_layout.scss */
+/**
+ * E. Faux Wrappers
+ *
+ * For main-content and sidebar inside an index-wrapper, e.g., used
+ * in the catalog. Use sparingly!
+ */
+/* line 296, sass/_layout.scss */
+#faux-content-wrapper {
+  border-bottom: 2px dashed #64933a;
+}
+@media screen and (min-width: 43em) {
+  /* line 296, sass/_layout.scss */
+  #faux-content-wrapper {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 296, sass/_layout.scss */
+  #faux-content-wrapper {
+    border-bottom-width: 0;
+    width: 66.6666666667%;
+  }
+}
+
+@media screen and (min-width: 43em) {
+  /* line 309, sass/_layout.scss */
+  #faux-sidebar-wrapper {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 309, sass/_layout.scss */
+  #faux-sidebar-wrapper {
+    width: 33.3333333333%;
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  /* line 323, sass/_layout.scss */
+  .faux-sidebar {
+    border-left: 1px solid #ccc;
+    padding-left: 1em;
+  }
+}
+
+/* line 332, sass/_layout.scss */
 .spotlight {
   text-align: center;
 }
 
 /**
- * E. Hidden Elements
+ * F. Hidden Elements
  *
  * For displaying less essential elements only when screen size
  * permits. Use sparingly!
  */
 @media screen and (max-width: 20em) {
-  /* line 301, sass/_layout.scss */
+  /* line 343, sass/_layout.scss */
   .gt20 {
     display: none;
   }
 }
 @media screen and (max-width: 22em) {
-  /* line 306, sass/_layout.scss */
+  /* line 348, sass/_layout.scss */
   .gt22 {
     display: none;
   }
 }
 @media screen and (max-width: 32em) {
-  /* line 311, sass/_layout.scss */
+  /* line 353, sass/_layout.scss */
   .gt32 {
     display: none;
   }
 
-  /* line 314, sass/_layout.scss */
+  /* line 356, sass/_layout.scss */
   .ins32 {
     display: none;
   }
 }
 @media screen and (max-width: 43em) {
-  /* line 319, sass/_layout.scss */
+  /* line 361, sass/_layout.scss */
   .gt43 {
     display: none;
   }
 }
 @media screen and (max-width: 70em) {
-  /* line 324, sass/_layout.scss */
+  /* line 366, sass/_layout.scss */
   .gt70 {
     display: none;
   }
 }
 @media screen and (max-width: 88em) {
-  /* line 329, sass/_layout.scss */
+  /* line 371, sass/_layout.scss */
   .gt88 {
     display: none;
   }

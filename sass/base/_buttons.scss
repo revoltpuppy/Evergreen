@@ -8,7 +8,8 @@
  */
 button,
 .button,
-.button:visited, 
+.button:visited,
+input[type="button"],
 input[type="submit"]{
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 40%);
@@ -32,7 +33,8 @@ input[type="submit"]{
 	box-shadow: 0 .2em .2em $drop-shadow;
 }
 button:hover,
-.button:hover, 
+.button:hover,
+input[type="button"]:hover, 
 input[type="submit"]:hover{
 	color: mix($shade, $blueberry-susan, 40%);
 	// backgrounds & borders
@@ -41,13 +43,15 @@ input[type="submit"]:hover{
 	border-color: mix($tint, $blueberry-susan, 40%);
 }
 button:focus,
-.button:focus, 
+.button:focus,
+input[type="button"]:focus,
 input[type="submit"]:focus{
 	border-color:#999;
 	outline-width:0;
 }
 button:active,
-.button:active, 
+.button:active,
+input[type="button"]:active,
 input[type="submit"]:active{
 	//backgrounds & borders
 	background-color: mix($tint, $blueberry-susan, 40%);  //IE 9
@@ -64,7 +68,8 @@ input[type="submit"]:active{
  * the .prime button while Cancel would be the default button.
  */
 .prime,
-.prime:visited{
+.prime:visited,
+input.prime{
 	//box model
 	border-color: $evergreen-old-style;
 	//typography
@@ -74,7 +79,8 @@ input[type="submit"]:active{
 	background-color: $evergreen-neue;  //IE 9
 	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 40%), $evergreen-neue);
 }
-.prime:hover{
+.prime:hover,
+input.prime:hover{
 	//box model
 	border-bottom-color: $evergreen-old-style;
 	//typography
@@ -84,10 +90,12 @@ input[type="submit"]:active{
 	background-color: mix(white, $evergreen-neue, 20%);  //IE 9
 	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 60%), mix(white, $evergreen-neue, 20%));
 }
-.prime:focus{
+.prime:focus,
+input.prime:focus{
 	border-color: #999;
 }
-.prime:active{
+.prime:active,
+input.prime:active{
 	//backgrounds & borders
 	background-color: mix(white, $evergreen-neue, 40%);  //IE 9
 	background-image: linear-gradient($evergreen-neue, mix($morning-light, $evergreen-neue, 20%));
@@ -106,7 +114,9 @@ input[type="submit"]:active{
 .is-disabled:visited,
 .is-disabled:hover,
 button[disabled],
-button[disabled]:hover{
+button[disabled]:hover,
+input.is-disabled,
+input.is-disabled:hover{
 	//typography
 	color: #666;
 	text-shadow: 0 .05em 0 $highlight;
@@ -121,6 +131,8 @@ button[disabled]:hover{
 .prime.is-disabled:hover,
 .prime.is-disabled:visited,
 .prime[disabled],
-.prime[disabled]:hover{
+.prime[disabled]:hover,
+input.prime.is-disabled,
+input.prime.is-disabled:hover{
 	background: mix(white, $evergreen-neue, 20%) none;
 }
