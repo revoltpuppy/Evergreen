@@ -326,25 +326,19 @@
 	
 	@include breakpoint($gamora){
 		// box model
-		//margin-right: -6.468797564688%;  This needs to be revisited once the main grid settles.
-		//width: calc(69.500761035008% - 1em);
+		margin-right: -2em;
 	}
 
 	@include breakpoint($drax){
 		// box model
-		width: calc(50% - 1em);
+		margin-right: -3em;
+		width: calc(50% + 2.5em);  //Half the view, plus the right margin, minus 1/2em for the left margin.
 	}
 }
 
 .supplement-alt-1-2{
 	
-  @include breakpoint($lil-groot){
-	  // box model
-	  //margin-right: -0.75em;
-	  //width: calc(50% + 0.75em);
-	}
-	
-	@include breakpoint($rocket){
+  @include breakpoint($rocket){
 		// box model
 		margin-right: -1em;
 	  margin-left: 1em;
