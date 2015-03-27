@@ -3,15 +3,16 @@
  *
  * Table of Contents
  *
- * 1. Text List
- * 2. Lineup
- * 3. Accordion
- * 4. Flexible Lists
- * 5. Link Icons
- * 6. Tag Clouds
- * 7. Alphabetical Order Index
- * 8. Badge List
- * 9. Zebra-Striped
+ *  1. Text List
+ *  2. Lineup
+ *  3. Accordion
+ *  4. Flexible Lists
+ *  5. Step List
+ *  6. Link Icons
+ *  7. Tag Clouds
+ *  8. Alphabetical Order Index
+ *  9. Badge List
+ * 10. Zebra-Striped
  */
 
 /**
@@ -199,7 +200,76 @@ ul.flexible{
 }
 
 /**
- * 5. Link Icons
+ * 5. Step List
+ *
+ * A list of steps to follow.
+ */
+.step-list{
+	// box model
+	margin-left: 0;
+	// list
+	counter-reset: li;
+	list-style-type: none;
+	
+	> li{
+		// box model
+		border-bottom: 1px solid mix($tint, $blueberry-susan, 75%);
+		padding-left: 2.5em;
+		// position
+		position: relative;  // Creates new positioning context
+		
+		@include breakpoint($gamora){
+			padding-left: 3em;
+		}
+		
+		&::before{
+			// box model
+			width: .75em;
+			// list
+			counter-increment: li;
+			// position
+			position: absolute;
+			left: 0;
+			// typography
+			color: mix($tint, $blueberry-susan, 40%);
+			font-size: 1.945rem;  //31.12px  Step 4
+		  line-height: 1em;
+			font-weight: bold;
+			text-align: right;
+			// misc
+			content: counter(li) ".";
+		  
+		  @include breakpoint($starlord){
+			  font-size: 2.291rem;  //36.656px
+		  }
+		  
+		  @include breakpoint($gamora){
+			  // box model
+			  width: 1em;
+			  // typography
+				font-size: 2.782rem;  //44.512px  Step 5
+			}
+			
+			@include breakpoint($groot){
+				font-size: 3.146rem;  //50.336  Step 6
+			}
+		}
+		
+		p,
+		li{
+			// typography
+			@include base-type;
+			font-weight: normal;
+			
+			@include breakpoint($gamora){
+				@include base-type-lg;
+			}
+		}
+	}
+}
+
+/**
+ * 6. Link Icons
  *
  * Links with icons attached to them, e.g. PDFs or social media chicklets.
  */
@@ -266,7 +336,7 @@ ul.flexible{
 
 
 /**
- * 6. Tag Clouds
+ * 7. Tag Clouds
  *
  * Tag cloud sizing.
  */
@@ -282,7 +352,7 @@ ul.flexible{
 }
 
 /**
- * 7. Alphabetical Order Index
+ * 8. Alphabetical Order Index
  *
  * An index of the letters of the alphabet, for skipping around the page.
  */
@@ -343,7 +413,7 @@ ul.flexible{
 }
 
 /**
- * 8. Badge List
+ * 9. Badge List
  *
  * Lists of logos, badges, or sponsors.
  *
@@ -375,7 +445,7 @@ ul.flexible{
 
 
 /**
- * 9. Zebra-Striped
+ * 10. Zebra-Striped
  *
  * A parent container, whose direct children are zebra-striped.
  * Strictly speaking, this doesn't have to be a list element.
