@@ -77,21 +77,34 @@ body,
 wrapper{
     background: transparent none;  //Don't waste ink
 }
+[role="banner"]{
+	box-shadow: none;
+}
 .wrapper{
 	min-height: none;
 	max-width: none;
 }
-.content-wrapper{
-	//backgrounds & borders
-	background: white none;
-	border-color: black;
+.main-row-grid{
+	// box model
+	margin-left: 0;
+	// layout
+	display: block;
 }
-.content-wrapper,
+.primary-content-wrapper,
 .sidebar-wrapper,
-.content-wrapper .main-content,
+.primary-content-wrapper .main-content,
 .sidebar{
+	// box model
 	margin: 0;
+	width: auto;
 	max-width: none;
+	// backgrounds and borders
+	background: transparent none;
+}
+
+.primary-content-wrapper{
+	// backgrounds and borders
+	border-color: black;
 }
 
 .page-footer{
@@ -101,7 +114,7 @@ wrapper{
 	padding-bottom: 0;
 	//typography
 	color: black;
-	//backgrounds & borders
+	//backgrounds and borders
 	background-color: transparent;
 }
 
