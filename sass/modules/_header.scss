@@ -282,7 +282,7 @@ li.internal-users-alt{
   // list
   list-style-type: none;
   
-  @media screen and (min-width: 20em){
+  @include breakpoint($lil-groot){
 		// layout
 		align-items: stretch;
 		display: flex;
@@ -298,7 +298,10 @@ li.internal-users-alt{
 }
 
 .top-nav-list > li{
-	@media screen and (min-width: 20em){
+	display: inline-block;
+	
+	
+	@include breakpoint($lil-groot){
 		// box model
 		border-left: 1px solid #333;
 		min-height: 44px;  // IE8
@@ -307,7 +310,6 @@ li.internal-users-alt{
 		display: flex;
 		flex-grow: 1;
 		overflow: hidden;
-    // typography
     
     &:first-child{
     	// box model
@@ -317,7 +319,7 @@ li.internal-users-alt{
 		}
 	}
   
-  @media screen and (min-width:32em){
+  @include breakpoint($starlord){
 		// box model
 		width: 20%;
 		// layout
@@ -326,7 +328,7 @@ li.internal-users-alt{
 		letter-spacing: normal;
 	}
 
-	@media screen and (min-width:43em){
+	@include breakpoint($gamora){
 		height: auto;
 	}
 }
@@ -334,7 +336,7 @@ li.internal-users-alt{
 .top-nav-list a,
 .top-nav-link{
 	// box model
-	padding: 0.46875rem 0.25rem;  // 7.5/16 2.48/16
+	padding: 0.46875rem 1rem;  // 7.5/16
 	border-bottom-width: 0;
 	width: 100%;
 	// layout
@@ -356,6 +358,8 @@ li.internal-users-alt{
 	}
 	
 	@media screen and (min-width: 20em){
+		// box model
+		padding: 0.46875rem 0.25rem;  // 7.5/16 2.48/16
 		// layout
 		display: flex;
 		justify-content: center;
