@@ -214,12 +214,12 @@ ul.flexible{
 	> li{
 		// box model
 		border-bottom: 1px solid mix($tint, $blueberry-susan, 75%);
-		padding-left: 2.5em;
+		padding-left: 3em;
 		// position
 		position: relative;  // Creates new positioning context
 		
 		@include breakpoint($gamora){
-			padding-left: 3em;
+			padding-left: 4em;
 		}
 		
 		&::before{
@@ -232,6 +232,7 @@ ul.flexible{
 			left: 0;
 			// typography
 			color: mix($tint, $blueberry-susan, 40%);
+			font-variant-numeric: tabular-nums;
 			font-size: 1.945rem;  //31.12px  Step 4
 		  line-height: 1em;
 			font-weight: bold;
