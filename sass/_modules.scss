@@ -742,18 +742,18 @@
   }
 }
 
-/*.blog{
-	border-top: 1px solid #000;
+.blog .entries{
+	// box model
+	margin-left: 0;
+	padding-left: 0;
+	// list
+	list-style-type: none;
 }
-.blog:before{
-	background-color: #F3F3F3;
-    content: "Blog";
-    display: table;
-    font-size: 0.657rem;
-    margin: -0.459rem auto;
-    padding: 0 0.657rem;
-    text-align: center;
-}*/
+
+.blog .entry{
+	// layout
+	overflow: hidden;
+}
 
 /**
  * O. CMS
