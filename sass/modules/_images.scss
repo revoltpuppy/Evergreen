@@ -43,7 +43,7 @@
   .image-alt{
 		// box model
 		margin: 0 0 0.631100639515315em 1em;  // 7.5/11.884
-		max-width: calc(66.6666666667% - 1em);
+		max-width: calc(66.6666666667% - .5em);
 		// layout
 		clear: right;
 		float: right;
@@ -58,7 +58,7 @@
 	.main-content .image img,  // WYSIWYG
 	.image-alt{
 		// box model
-		max-width: calc(66.6666666667% - 1em);
+		max-width: calc(66.6666666667% - .5em);
 	}
 }
 
@@ -70,7 +70,7 @@
 	.main-content .image img,  // WYSIWYG
 	.image-alt{
 		// box model
-		max-width: calc(50% - 1em);
+		max-width: calc(50% - .5em);
 	}
 	
 	.illus-alt,  //deprecated
