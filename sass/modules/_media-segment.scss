@@ -58,7 +58,7 @@
 	width: 3000px;  // Stretches box to fit the remaining width; this is not the actual value that comes out.*/
 }
 
-.media-body :first-child{
+.media-body > :first-child{
 	margin-top: 0.46875rem;  // Align the .media-body content with the .media-img content.
 }
 
