@@ -102,15 +102,18 @@
 		line-height: 1.427619682116684;
 		letter-spacing: 0.05em;
 	}
+	
+	@include breakpoint($starlord){
+		@include base-type;
+	}
 
 	@include breakpoint($gamora){
 		// box model
 		margin-left: 0;
 		width: 100%;
 		// typography
-		font-size: 1.063rem;
+		@include base-type-lg;
 		letter-spacing: normal;
-		line-height: 1.323529411764706;  // 22.5/17
 	}
 }
 
