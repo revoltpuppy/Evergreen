@@ -3935,9 +3935,10 @@ ul.accordion-inner {
 
 /* line 17, sass/modules/_icons.scss */
 .inline-icon {
-  margin-right: .25em;
-  max-height: 1em;
+  max-height: 1.25em;
   display: inline;
+  position: relative;
+  top: 0.25em;
 }
 
 /**
@@ -3945,7 +3946,7 @@ ul.accordion-inner {
  *
  * Related links with iconographic circles.
  */
-/* line 30, sass/modules/_icons.scss */
+/* line 32, sass/modules/_icons.scss */
 .transporter > li {
   margin: 0.9375rem 0;
   display: block;
@@ -3954,32 +3955,32 @@ ul.accordion-inner {
   text-align: center;
 }
 
-/* line 43, sass/modules/_icons.scss */
+/* line 45, sass/modules/_icons.scss */
 .transporter a, .transporter a:visited {
   color: #64933a;
 }
-/* line 48, sass/modules/_icons.scss */
+/* line 50, sass/modules/_icons.scss */
 .transporter a .transporter-icon, .transporter a:visited .transporter-icon {
   background: #64933a;
 }
-/* line 53, sass/modules/_icons.scss */
+/* line 55, sass/modules/_icons.scss */
 .transporter a:hover {
   color: #0086ee;
 }
-/* line 56, sass/modules/_icons.scss */
+/* line 58, sass/modules/_icons.scss */
 .transporter a:hover .transporter-icon {
   background: #0086ee;
   box-shadow: 0 0 0.2em rgba(253, 243, 180, 0.5) inset;
 }
 
-/* line 64, sass/modules/_icons.scss */
+/* line 66, sass/modules/_icons.scss */
 .transporter a:hover .icon {
   -webkit-transform: scale(0.8, 0.8);
       -ms-transform: scale(0.8, 0.8);
           transform: scale(0.8, 0.8);
 }
 
-/* line 68, sass/modules/_icons.scss */
+/* line 70, sass/modules/_icons.scss */
 .transporter-icon {
   padding: 15%;
   padding-top: 85%;
@@ -3991,14 +3992,14 @@ ul.accordion-inner {
   transition: all 0.2s;
 }
 @media screen and (min-width: 22em) {
-  /* line 68, sass/modules/_icons.scss */
+  /* line 70, sass/modules/_icons.scss */
   .transporter-icon {
     margin: 0 auto;
     padding-top: 50%;
     width: 75%;
   }
 }
-/* line 89, sass/modules/_icons.scss */
+/* line 91, sass/modules/_icons.scss */
 .transporter-icon .icon {
   position: absolute;
   top: 0;

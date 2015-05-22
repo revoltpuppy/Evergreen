@@ -16,10 +16,12 @@
 
 .inline-icon{
 	// box model
-	margin-right: .25em;
-	max-height: 1em;
+	//margin-right: 0.25em;
+	max-height: 1.25em;
 	// layout
 	display: inline;
+	position: relative;
+	top: 0.25em;
 }
 
 /**
