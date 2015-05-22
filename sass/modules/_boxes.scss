@@ -126,6 +126,27 @@ p.alert{
 	@media screen and (min-width: 43em){
 		margin-bottom: 1.071428571428571em;  // 15px
 	}
+	
+	a{
+		// box model
+		border-bottom: 2px solid mix($tint, $blueberry-susan, 66%);
+		// typography
+		color: mix($tint, $blueberry-susan, 75%);
+	}
+	
+	a:visited{
+		// box model
+		border-bottom-color: mix($tint, $wine, 66%);
+		// typography
+		color: mix($tint, $wine, 75%);
+	}
+	
+	a:hover{
+		// box model
+		border-bottom-color: mix($tint, $sky-blue, 66%);
+		// typography
+		color: mix($tint, $sky-blue, 66%);
+	}
 }
 
 .pull-box-alt{
