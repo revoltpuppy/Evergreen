@@ -58,10 +58,8 @@
 	
 	@media screen and (min-width: 20em){
 		//layout
-		display: -webkit-flex;  //Safari, Android Browser
-		display:         flex;  //W3C
-		-webkit-flex-direction: column;  //Safari
-		        flex-direction: column;
+		display: flex;  //W3C
+		flex-direction: column;
 		//positioning
 		position: absolute;
 		bottom: 0;
@@ -73,14 +71,33 @@
 	}
 	
 	@media screen and (min-width: 25em){
-		-webkit-justify-content: center;  //Safari
-		        justify-content: center;
+		justify-content: center;
 	}
 	
 	@media screen and (min-width: 43em){
 		height: 100%;
 	}
 }
+
+.homepage-hero-content-grad{
+	justify-content: flex-end;
+	
+	.caption-box{
+		display: none;
+	}
+	
+	.homepage-hero-copy{
+		// box model
+		margin: 0 0 2em 0;
+		padding: 0 1em;
+		width: 100%;
+		// typography
+		text-align: center;
+		// backgrounds & borders
+		background-color: transparentize($blueberry-susan, 0.5);
+	}
+}
+
 .homepage-hero-copy{
 	//box model
 	margin: 0 2%;

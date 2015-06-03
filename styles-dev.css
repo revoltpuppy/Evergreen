@@ -2714,12 +2714,12 @@ li.internal-users-alt img {
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-        flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: absolute;
     bottom: 0;
   }
-  /* line 69, sass/modules/_homepage-hero.scss */
+  /* line 67, sass/modules/_homepage-hero.scss */
   .homepage-hero-content .box {
     position: absolute;
     bottom: 0;
@@ -2729,8 +2729,8 @@ li.internal-users-alt img {
   /* line 55, sass/modules/_homepage-hero.scss */
   .homepage-hero-content {
     -webkit-justify-content: center;
-    -ms-flex-pack: center;
-        justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media screen and (min-width: 43em) {
@@ -2740,36 +2740,55 @@ li.internal-users-alt img {
   }
 }
 
-/* line 84, sass/modules/_homepage-hero.scss */
+/* line 82, sass/modules/_homepage-hero.scss */
+.homepage-hero-content-grad {
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+/* line 85, sass/modules/_homepage-hero.scss */
+.homepage-hero-content-grad .caption-box {
+  display: none;
+}
+/* line 89, sass/modules/_homepage-hero.scss */
+.homepage-hero-content-grad .homepage-hero-copy {
+  margin: 0 0 2em 0;
+  padding: 0 1em;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(73, 44, 93, 0.5);
+}
+
+/* line 101, sass/modules/_homepage-hero.scss */
 .homepage-hero-copy {
   margin: 0 2%;
   float: left;
 }
-/* line 90, sass/modules/_homepage-hero.scss */
+/* line 107, sass/modules/_homepage-hero.scss */
 .homepage-hero-copy h1 {
   font-size: 1.202rem;
   line-height: 1.169925124792013;
 }
-/* line 94, sass/modules/_homepage-hero.scss */
+/* line 111, sass/modules/_homepage-hero.scss */
 .homepage-hero-copy h1:first-line {
   font-size: 1.416rem;
   line-height: 0.993114406779661;
 }
-/* line 100, sass/modules/_homepage-hero.scss */
+/* line 117, sass/modules/_homepage-hero.scss */
 .homepage-hero-copy em {
   font-style: normal;
   font-weight: bold;
   letter-spacing: .075em;
   text-transform: uppercase;
 }
-/* line 109, sass/modules/_homepage-hero.scss */
+/* line 126, sass/modules/_homepage-hero.scss */
 .homepage-hero-copy-alt .homepage-hero-copy {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end;
   float: right;
 }
-/* line 116, sass/modules/_homepage-hero.scss */
+/* line 133, sass/modules/_homepage-hero.scss */
 .homepage-hero-img-detailed .homepage-hero-copy {
   margin-right: 0;
   padding: 0 .5em;
@@ -2777,49 +2796,49 @@ li.internal-users-alt img {
   border-radius: 2px;
 }
 @media screen and (min-width: 22em) {
-  /* line 116, sass/modules/_homepage-hero.scss */
+  /* line 133, sass/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     padding: 0 1em;
   }
 }
-/* line 129, sass/modules/_homepage-hero.scss */
+/* line 146, sass/modules/_homepage-hero.scss */
 .homepage-hero-special .homepage-hero-copy {
   background-color: rgba(73, 44, 93, 0.67);
 }
 
 @media screen and (min-width: 20em) {
-  /* line 134, sass/modules/_homepage-hero.scss */
+  /* line 151, sass/modules/_homepage-hero.scss */
   .homepage-hero {
     width: 100%;
     overflow: hidden;
     position: relative;
   }
 
-  /* line 142, sass/modules/_homepage-hero.scss */
+  /* line 159, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy {
     width: 66.6666666667%;
   }
-  /* line 145, sass/modules/_homepage-hero.scss */
+  /* line 162, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     color: white;
     text-shadow: 0 2px 1px #0e0812;
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 158, sass/modules/_homepage-hero.scss */
+  /* line 175, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy h1:first-line {
     font-size: 1.945rem;
     line-height: 0.723007712082262;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 164, sass/modules/_homepage-hero.scss */
+  /* line 181, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy {
     width: 64.6666666667%;
     color: white;
     text-shadow: 0 1px 2px #0e0812;
   }
-  /* line 174, sass/modules/_homepage-hero.scss */
+  /* line 191, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     float: right;
     -webkit-align-self: flex-end;
@@ -2827,62 +2846,62 @@ li.internal-users-alt img {
             align-self: flex-end;
   }
 
-  /* line 181, sass/modules/_homepage-hero.scss */
+  /* line 198, sass/modules/_homepage-hero.scss */
   .homepage-hero-img {
     margin-left: -25%;
     width: 150%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 188, sass/modules/_homepage-hero.scss */
+  /* line 205, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy {
     width: 48%;
   }
-  /* line 192, sass/modules/_homepage-hero.scss */
+  /* line 209, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     font-size: 1.416rem;
     line-height: 1.324152542372881;
   }
-  /* line 199, sass/modules/_homepage-hero.scss */
+  /* line 216, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy h1:first-line {
     font-size: 2.291rem;
     line-height: 0.818419903972065;
   }
 
-  /* line 205, sass/modules/_homepage-hero.scss */
+  /* line 222, sass/modules/_homepage-hero.scss */
   .homepage-hero-img {
     margin-left: -10%;
     width: 120%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 211, sass/modules/_homepage-hero.scss */
+  /* line 228, sass/modules/_homepage-hero.scss */
   .homepage-hero {
     display: table;
   }
 
-  /* line 214, sass/modules/_homepage-hero.scss */
+  /* line 231, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy {
     width: 28.571428571428571%;
   }
-  /* line 217, sass/modules/_homepage-hero.scss */
+  /* line 234, sass/modules/_homepage-hero.scss */
   .homepage-hero-special .homepage-hero-copy {
     width: 42.857142857143%;
   }
 
-  /* line 221, sass/modules/_homepage-hero.scss */
+  /* line 238, sass/modules/_homepage-hero.scss */
   .homepage-hero-img {
     margin-left: 0;
     width: 100%;
   }
 }
 @media screen and (min-width: 86em) {
-  /* line 227, sass/modules/_homepage-hero.scss */
+  /* line 244, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
-  /* line 232, sass/modules/_homepage-hero.scss */
+  /* line 249, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy h1:first-line {
     font-size: 3.146rem;
     line-height: 0.893992371265099;
