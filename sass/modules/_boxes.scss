@@ -90,8 +90,11 @@ p.alert{
 	background-color: $highlight;
 	border-radius: 0;
 }
-#sitewide-alert{  // deprecated
+#sitewide-alert{
+	// box model
 	border-radius: 0;
+	width: 100%;
+	// animations and transitions
 	transition: all .5s ease-in;
 }
 
