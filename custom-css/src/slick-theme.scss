@@ -9,8 +9,10 @@ $slick-loader-path: "./" !default;
 $slick-arrow-color: white !default;
 $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
-$slick-prev-character: "←" !default;
-$slick-next-character: "→" !default;
+//$slick-prev-character: "←" !default;
+//$slick-next-character: "→" !default;
+$slick-prev-character: "<" !default;
+$slick-next-character: ">" !default;
 $slick-dot-character: "•" !default;
 //$slick-dot-size: 6px !default;
 $slick-dot-size: 30px !default;
@@ -70,7 +72,7 @@ $slick-opacity-not-active: 0.25 !default;
     color: transparent;
     top: 50%;
     //margin-top: -10px;
-    margin-top: -7.5px;
+    margin-top: -45px;
     padding: 0;
     border: none;
     outline: none;
@@ -88,10 +90,11 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev:before, .slick-next:before {
-    font-family: $slick-font-family;
-    font-size: 15px;
+    //font-family: $slick-font-family;
     //font-size: 20px;
-    line-height: 1;
+    font-size: 17px;
+    //line-height: 1;
+    line-height: 0.88235294117647; // 15/17
     color: $slick-arrow-color;
     opacity: $slick-opacity-default;
     -webkit-font-smoothing: antialiased;
@@ -187,7 +190,7 @@ $slick-opacity-not-active: 0.25 !default;
 				content: $slick-dot-character;
 				width: 20px;
 				height: 20px;
-				font-family: $slick-font-family;
+				//font-family: $slick-font-family;
 				font-size: $slick-dot-size;
 				line-height: 20px;
 				text-align: center;
@@ -226,6 +229,9 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-prev::before, .slick-next::before{
 	// box model
 	padding: 30px 2px;
+	width: 20px;
+	// layout
+	display: block;
 	// backgrounds and borders
 	background-color: $blueberry-susan;
 }
