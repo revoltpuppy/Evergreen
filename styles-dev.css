@@ -4671,6 +4671,7 @@ p.alert {
 /* line 409, sass/_modules.scss */
 .upcoming-events-list-wrapper {
   overflow-x: auto;
+  overflow-y: hidden;
 }
 @media screen and (min-width: 43em) {
   /* line 409, sass/_modules.scss */
@@ -4679,7 +4680,7 @@ p.alert {
   }
 }
 
-/* line 417, sass/_modules.scss */
+/* line 418, sass/_modules.scss */
 .grid.upcoming-events-list {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
@@ -4689,7 +4690,7 @@ p.alert {
           justify-content: flex-start;
 }
 @media screen and (min-width: 43em) {
-  /* line 417, sass/_modules.scss */
+  /* line 418, sass/_modules.scss */
   .grid.upcoming-events-list {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -4699,7 +4700,7 @@ p.alert {
             justify-content: center;
   }
 }
-/* line 426, sass/_modules.scss */
+/* line 427, sass/_modules.scss */
 .grid.upcoming-events-list > .unit-1-7 {
   width: 66.666666%;
   -webkit-flex-shrink: 0;
@@ -4707,19 +4708,19 @@ p.alert {
           flex-shrink: 0;
 }
 @media screen and (min-width: 20em) {
-  /* line 426, sass/_modules.scss */
+  /* line 427, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 40%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 426, sass/_modules.scss */
+  /* line 427, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 29%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 426, sass/_modules.scss */
+  /* line 427, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 14.285714285714%;
     -webkit-flex-shrink: 1;
@@ -4727,13 +4728,13 @@ p.alert {
             flex-shrink: 1;
   }
 }
-/* line 448, sass/_modules.scss */
+/* line 449, sass/_modules.scss */
 .grid.upcoming-events-list .media-body {
   border-bottom: 1px solid #b6aabe;
   text-align: center;
 }
 @media screen and (min-width: 20em) {
-  /* line 448, sass/_modules.scss */
+  /* line 449, sass/_modules.scss */
   .grid.upcoming-events-list .media-body {
     border-bottom-width: 0;
   }
@@ -4744,11 +4745,11 @@ p.alert {
  *
  * @section mod-event-calendar
  */
-/* line 465, sass/_modules.scss */
+/* line 466, sass/_modules.scss */
 .schedule {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
 }
-/* line 468, sass/_modules.scss */
+/* line 469, sass/_modules.scss */
 .schedule .h-event {
   padding: 1em;
   display: -webkit-flex;
@@ -4760,47 +4761,47 @@ p.alert {
   overflow: hidden;
   border-radius: 2px;
 }
-/* line 478, sass/_modules.scss */
+/* line 479, sass/_modules.scss */
 .schedule .h-event:nth-child(even) {
   background-color: #e3dfe6;
 }
-/* line 483, sass/_modules.scss */
+/* line 484, sass/_modules.scss */
 .schedule .schedule-event-required {
   border: 2px solid #64933a;
 }
-/* line 486, sass/_modules.scss */
+/* line 487, sass/_modules.scss */
 .schedule .schedule-event-required + .schedule-event-required {
   margin-top: 2px;
 }
-/* line 490, sass/_modules.scss */
+/* line 491, sass/_modules.scss */
 .schedule .schedule-event-required:nth-of-type(odd) {
   background-color: #eff4eb;
 }
-/* line 494, sass/_modules.scss */
+/* line 495, sass/_modules.scss */
 .schedule .schedule-event-required:nth-of-type(even) {
   background-color: #e0e9d7;
 }
-/* line 498, sass/_modules.scss */
+/* line 499, sass/_modules.scss */
 .schedule .schedule-event-required .p-name {
   color: #46502b;
 }
-/* line 503, sass/_modules.scss */
+/* line 504, sass/_modules.scss */
 .schedule .schedule-event-morning {
   background-color: #fdf4b6;
 }
-/* line 509, sass/_modules.scss */
+/* line 510, sass/_modules.scss */
 .schedule .schedule-event-evening:nth-of-type(odd) {
   background-color: #e5f2fd;
 }
-/* line 513, sass/_modules.scss */
+/* line 514, sass/_modules.scss */
 .schedule .schedule-event-evening:nth-of-type(even) {
   background-color: #cce6fb;
 }
-/* line 517, sass/_modules.scss */
+/* line 518, sass/_modules.scss */
 .schedule .schedule-event-evening .p-name {
   color: #00355f;
 }
-/* line 522, sass/_modules.scss */
+/* line 523, sass/_modules.scss */
 .schedule .schedule-event-evening-start::before {
   border-bottom: 1px solid #0086ee;
   width: 100%;
@@ -4808,7 +4809,7 @@ p.alert {
   text-align: center;
   content: "Evening Events";
 }
-/* line 536, sass/_modules.scss */
+/* line 537, sass/_modules.scss */
 .schedule .schedule-event-time {
   padding-right: 1em;
   color: #46502b;
@@ -4822,7 +4823,7 @@ p.alert {
  *
  * @section mod-event-calendar
  */
-/* line 555, sass/_modules.scss */
+/* line 556, sass/_modules.scss */
 .bulletin {
   border-bottom: 1px solid #b6aabe;
   background-color: #ece9ee;
@@ -4830,25 +4831,25 @@ p.alert {
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 70em) {
-  /* line 555, sass/_modules.scss */
+  /* line 556, sass/_modules.scss */
   .bulletin {
     font-size: 1.063rem;
     line-height: 1.47058823529412;
   }
 }
-/* line 567, sass/_modules.scss */
+/* line 568, sass/_modules.scss */
 .bulletin > .wrapper {
   width: calc(100% - 2em);
 }
 
-/* line 572, sass/_modules.scss */
+/* line 573, sass/_modules.scss */
 .bulletin .grid {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-/* line 576, sass/_modules.scss */
+/* line 577, sass/_modules.scss */
 .bulletin-header,
 .bulletin-body {
   width: 100%;
@@ -4856,30 +4857,30 @@ p.alert {
 }
 
 @media screen and (min-width: 20em) {
-  /* line 582, sass/_modules.scss */
+  /* line 583, sass/_modules.scss */
   .bulletin-header {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 582, sass/_modules.scss */
+  /* line 583, sass/_modules.scss */
   .bulletin-header {
     width: 14.285714285714%;
   }
 }
-/* line 591, sass/_modules.scss */
+/* line 592, sass/_modules.scss */
 .bulletin-header h2 {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
   text-align: left;
 }
 @media screen and (min-width: 20em) {
-  /* line 591, sass/_modules.scss */
+  /* line 592, sass/_modules.scss */
   .bulletin-header h2 {
     text-align: right;
   }
 }
 
-/* line 603, sass/_modules.scss */
+/* line 604, sass/_modules.scss */
 .chrono-meter {
   width: 100%;
   display: -webkit-flex;
@@ -4890,7 +4891,7 @@ p.alert {
           justify-content: space-between;
 }
 @media screen and (min-width: 20em) {
-  /* line 603, sass/_modules.scss */
+  /* line 604, sass/_modules.scss */
   .chrono-meter {
     margin-right: 1em;
     width: auto;
@@ -4902,7 +4903,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 603, sass/_modules.scss */
+  /* line 604, sass/_modules.scss */
   .chrono-meter {
     margin-right: 0;
     width: 100%;
@@ -4915,7 +4916,7 @@ p.alert {
   }
 }
 
-/* line 630, sass/_modules.scss */
+/* line 631, sass/_modules.scss */
 .chrono-meter > li {
   border: 1px solid #b6aabe;
   height: 7.5px;
@@ -4923,7 +4924,7 @@ p.alert {
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 630, sass/_modules.scss */
+  /* line 631, sass/_modules.scss */
   .chrono-meter > li {
     margin-bottom: 2px;
     clear: left;
@@ -4932,31 +4933,31 @@ p.alert {
   }
 }
 
-/* line 648, sass/_modules.scss */
+/* line 649, sass/_modules.scss */
 .chrono-stop-current {
   background-color: #dad4de;
 }
 
-/* line 652, sass/_modules.scss */
+/* line 653, sass/_modules.scss */
 .chrono-stop-complete {
   background-color: #b6aabe;
 }
 
 @media screen and (min-width: 20em) {
-  /* line 657, sass/_modules.scss */
+  /* line 658, sass/_modules.scss */
   .bulletin-body {
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 657, sass/_modules.scss */
+  /* line 658, sass/_modules.scss */
   .bulletin-body {
     width: 85.714285714286%;
   }
 }
 
 @media screen and (min-width: 43em) {
-  /* line 666, sass/_modules.scss */
+  /* line 667, sass/_modules.scss */
   .bulletin-calendar {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -4965,7 +4966,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 671, sass/_modules.scss */
+  /* line 672, sass/_modules.scss */
   .bulletin-calendar > li {
     float: left;
     padding-left: 1em;
@@ -4976,7 +4977,7 @@ p.alert {
 /**
  * M. News
  */
-/* line 682, sass/_modules.scss */
+/* line 683, sass/_modules.scss */
 .news {
   border-top: 1px solid #d1cad6;
   border-bottom: 1px solid #d1cad6;
@@ -4984,13 +4985,13 @@ p.alert {
   background-color: #E3DFE6;
 }
 
-/* line 692, sass/_modules.scss */
+/* line 693, sass/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
   width: calc(100% - 2em);
 }
 
-/* line 698, sass/_modules.scss */
+/* line 699, sass/_modules.scss */
 .news-story {
   border: 1px solid #ccc;
   height: calc(100% - 1em);
@@ -5004,7 +5005,7 @@ p.alert {
 /**
  * N. Embeded Content
  */
-/* line 716, sass/_modules.scss */
+/* line 717, sass/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -5012,7 +5013,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 726, sass/_modules.scss */
+/* line 727, sass/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -5031,24 +5032,24 @@ p.alert {
   background-image: url(http://evergreen.edu/_inc/images/texture-1.png);
   content: url(http://evergreen.edu/_inc/images/icons/green/play.png);
 }
-/* line 745, sass/_modules.scss */
+/* line 746, sass/_modules.scss */
 .lazy-load:hover::after {
   opacity: .85;
 }
-/* line 749, sass/_modules.scss */
+/* line 750, sass/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 757, sass/_modules.scss */
+/* line 758, sass/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 765, sass/_modules.scss */
+/* line 766, sass/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -5059,7 +5060,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 777, sass/_modules.scss */
+/* line 778, sass/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;

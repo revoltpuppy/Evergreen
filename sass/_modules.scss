@@ -408,6 +408,7 @@
 	
 	.upcoming-events-list-wrapper{
 		overflow-x: auto;
+		overflow-y: hidden;
 		
 		@include breakpoint($gamora){
 			overflow-x: visible;
