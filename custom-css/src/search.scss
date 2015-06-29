@@ -13,11 +13,11 @@
  * @license    Copyrighted
  */
 #___gcse_0 .cse .gsc-control-cse,
-#___gcse_0 .gsc-control-cse{  /*search tool wrapper*/
-	//box model
-    border-width: 0;
-    padding: 0;
-    //backgrounds & borders
+#___gcse_0 .gsc-control-cse{  // search tool wrapper
+	// box model
+	border-width: 0;
+	padding: 0;
+	// backgrounds & borders
 	background-color: transparent;
 }
 .gsc-control-cse table{
@@ -40,27 +40,27 @@
 	height: auto;
 }
 
-//Input row
+// Input row
 .gsc-control-cse .gsib_a{
     padding: 4px 8px;
 }
-.gsst_b .gsst_a{  //clear search input (the little x)
+.gsst_b .gsst_a{  // clear search input (the little x)
 	border-bottom: none;
 }
-//Search button
+// Search button
 .gsc-search-box input.gsc-search-button,
 .cse .gsc-search-box .gsc-search-button input.gsc-search-button-v2,
 .gsc-search-box input.gsc-search-button-v2{
-	//box model
+	// box model
 	height: auto;
-    margin: 0;
-    padding: 7px 27px;
-    width: auto;
-    //layout
-    display: block;
+  margin: 0;
+  padding: 7px 27px;
+  width: auto;
+  // layout
+  display: block;
 }
 
-//Sort by
+// Sort by
 div.gsc-selected-option-container{
 	padding: 0 1em;
 	width: auto !important;
@@ -68,8 +68,8 @@ div.gsc-selected-option-container{
 	min-width: 0;
 }
 
-//Spelling
-//e.g. Showing results for catalog. Search instead for cataglog.
+// Spelling
+// e.g. Showing results for catalog. Search instead for cataglog.
 .gs-result .gs-spelling{
 	padding: 0;
 	display: inline;
@@ -78,61 +78,59 @@ div.gsc-selected-option-container{
 	content: ". "
 }
 
-//Area between the search box and the results
+// Area between the search box and the results
 .gsc-control-wrapper-cse .gsc-above-wrapper-area{
 	padding: 0;
 }
 
-//Google search results page
+// Google search results page
 .gsc-results{
     width: 100%;
 }
 .gsc-results .gsc-webResult.gsc-result,
 .gsc-results .gsc-webResult.gsc-result:hover,
 .gsc-results .gsc-webResult.gsc-result.gsc-promotion:hover{
-	//box model
-    border-width: 0;
-    //backgrounds & borders
-    background-color: transparent;
+	// box model
+  border-width: 0;
+  // backgrounds & borders
+  background-color: transparent;
 }
 
-//Promoted results
+// Promoted results
 .gsc-webResult.gsc-result.gsc-promotion{
-    border-width: 0;
-    padding: 0.37037037037037em 2% 1.111111111111111em 2%;  /*5/13.5*//*15/13.5*/
-    background-color: #c8e7fd;
+  border-width: 0;
+  padding: 0.37037037037037em 2% 1.111111111111111em 2%;  // 5/13.5 // 15/13.5
+  background-color: #c8e7fd;
 }
-//Normal results
+// Normal results
 .gsc-result .gs-result .gs-title{
-    height: auto;
+  height: auto;
 }
 #___gcse_0 .gsc-control-cse,
 #___gcse_0 .gsc-control-cse .gsc-table-result,
 #___gcse_0 .gs-result .gsc-control-cse,
 #___gcse_0 .gs-result .gsc-control-cse .gsc-table-result{
-    font-size: 14px;  //IE8
-    font-size: 0.875rem;
-    line-height: 1.607142857142857;  //22.5/14
+  font-size: 0.875rem;
+  line-height: 1.607142857142857;  // 22.5/14
 }
 .gs-result .gsc-thumbnail-inside,
 .gs-result .gsc-url-top{
-    padding: 0;
+  padding: 0;
 }
 #___gcse_0 .gsc-control-cse .gs-spelling,
 #___gcse_0 .gsc-control-cse .gs-result .gs-title{
-    font-size: 17px; //IE8
-    font-size: 1.063rem;
-    line-height: 1.323529411764706;
+  font-size: 1.063rem;
+  line-height: 1.323529411764706;
 }
-//Autocomplete box
+// Autocomplete box
 .gssb_c{
-    margin: 0;
+	margin: 0;
 }
 .gssb_e .gsc-completion-container,
 .gssb_a,
 .gsc-completion-container tr > td{
-    border-width: 0;
+	border-width: 0;
 }
 .gsc-completion-container .gssb_l{
-    margin: 0;
+	margin: 0;
 }
