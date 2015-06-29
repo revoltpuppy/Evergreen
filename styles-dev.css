@@ -62,18 +62,6 @@
 /**
  * Colors
  */
-/*$mixers: (
-	tint: hsl(0, 0%, 95%),
-	shade: hsl(0, 0%, 0%)
-);*/
-/*@function stir() {
-	
-}
-
-.test{
-	color: color(blueberry-susan);
-	background-color: stir(blueberry-susan, tint, )
-}*/
 /**
  * Breakpoints
  *
@@ -2652,6 +2640,7 @@ li.internal-users-alt img {
 }
 /* line 72, sass/_modules.scss */
 .main-background2 > .main-background-img {
+  max-height: 100vh;
   position: absolute;
 }
 
