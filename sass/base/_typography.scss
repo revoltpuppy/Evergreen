@@ -37,7 +37,8 @@ body{
 	// subs - Subscripts
 	// sups - Superscripts
 	// tnum - Tabular figures (Fixed-width numbers)
-	font-feature-settings: "liga", "onum";  // Low-level OpenType features; these could be turned off eventually
+	font-feature-settings: "kern", "liga", "onum";  // Low-level OpenType features; these could be turned off eventually
+	font-kerning: normal;
 	font-variant-ligatures: common-ligatures discretionary-ligatures;
 	font-variant-numeric: oldstyle-nums;
 	text-rendering: optimizeLegibility;
@@ -404,6 +405,22 @@ blockquote{
 	padding-left: 1em;
 	//typography
 	font-style: italic;
+}
+
+@supports (font-variant-position: super){
+	sup{
+		font-size: inherit;
+		font-variant-position: super;
+		vertical-align: inherit;
+	}
+}
+
+@supports (font-variant-position: sub){
+	sub{
+		font-size: inherit;
+		font-variant-position: sub;
+		vertical-align: inherit;
+	}
 }
 
 hr{

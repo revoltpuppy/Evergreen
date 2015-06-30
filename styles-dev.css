@@ -273,9 +273,12 @@ html {
 /* line 24, sass/base/_typography.scss */
 body {
   font-family: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
-  -webkit-font-feature-settings: "liga", "onum";
-     -moz-font-feature-settings: "liga", "onum";
-          font-feature-settings: "liga", "onum";
+  -webkit-font-feature-settings: "kern", "liga", "onum";
+     -moz-font-feature-settings: "kern", "liga", "onum";
+          font-feature-settings: "kern", "liga", "onum";
+  -webkit-font-kerning: normal;
+     -moz-font-kerning: normal;
+          font-kerning: normal;
   -webkit-font-variant-ligatures: common-ligatures discretionary-ligatures;
      -moz-font-variant-ligatures: common-ligatures discretionary-ligatures;
           font-variant-ligatures: common-ligatures discretionary-ligatures;
@@ -283,7 +286,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* line 46, sass/base/_typography.scss */
+/* line 47, sass/base/_typography.scss */
 body,
 input,
 button {
@@ -291,14 +294,14 @@ button {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 53, sass/base/_typography.scss */
+/* line 54, sass/base/_typography.scss */
 body,
 .base {
   font-size: 0.875rem;
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 43em) {
-  /* line 53, sass/base/_typography.scss */
+  /* line 54, sass/base/_typography.scss */
   body,
   .base {
     font-size: 1.063rem;
@@ -306,7 +309,7 @@ body,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 53, sass/base/_typography.scss */
+  /* line 54, sass/base/_typography.scss */
   body,
   .base {
     font-size: 1.202rem;
@@ -314,7 +317,7 @@ body,
   }
 }
 
-/* line 66, sass/base/_typography.scss */
+/* line 67, sass/base/_typography.scss */
 p,
 ul,
 ol,
@@ -325,7 +328,7 @@ figure,
   margin: 0.535714285714286em 0 1.071428571428571em 0;
 }
 @media screen and (min-width: 43em) {
-  /* line 66, sass/base/_typography.scss */
+  /* line 67, sass/base/_typography.scss */
   p,
   ul,
   ol,
@@ -337,7 +340,7 @@ figure,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 66, sass/base/_typography.scss */
+  /* line 67, sass/base/_typography.scss */
   p,
   ul,
   ol,
@@ -354,7 +357,7 @@ figure,
  *
  * @section h
  */
-/* line 104, sass/base/_typography.scss */
+/* line 105, sass/base/_typography.scss */
 h1 {
   margin: 0.96401028277635em 0 0 0;
   font-size: 1.945rem;
@@ -362,7 +365,7 @@ h1 {
   line-height: 1.44601542416452;
 }
 @media screen and (min-width: 32em) {
-  /* line 104, sass/base/_typography.scss */
+  /* line 105, sass/base/_typography.scss */
   h1 {
     margin-top: 0.818419903972065em;
     font-size: 2.291rem;
@@ -370,7 +373,7 @@ h1 {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 104, sass/base/_typography.scss */
+  /* line 105, sass/base/_typography.scss */
   h1 {
     margin-top: 0.673975557153127em;
     font-size: 2.782rem;
@@ -378,7 +381,7 @@ h1 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 104, sass/base/_typography.scss */
+  /* line 105, sass/base/_typography.scss */
   h1 {
     margin-top: 1.19198982835346em;
     font-size: 3.146rem;
@@ -386,7 +389,7 @@ h1 {
   }
 }
 
-/* line 136, sass/base/_typography.scss */
+/* line 137, sass/base/_typography.scss */
 h2 {
   margin-top: 1.55990016638935em;
   color: #666;
@@ -395,7 +398,7 @@ h2 {
   line-height: 1.55990016638935;
 }
 @media screen and (min-width: 43em) {
-  /* line 136, sass/base/_typography.scss */
+  /* line 137, sass/base/_typography.scss */
   h2 {
     margin-top: 1.090750436300175em;
     font-size: 1.719rem;
@@ -403,7 +406,7 @@ h2 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 136, sass/base/_typography.scss */
+  /* line 137, sass/base/_typography.scss */
   h2 {
     margin-top: 0.96401028277635em;
     font-size: 1.945rem;
@@ -411,7 +414,7 @@ h2 {
   }
 }
 
-/* line 161, sass/base/_typography.scss */
+/* line 162, sass/base/_typography.scss */
 h3 {
   margin-top: 1.32352941176471em;
   color: #333;
@@ -420,7 +423,7 @@ h3 {
   line-height: 1.32352941176471;
 }
 @media screen and (min-width: 43em) {
-  /* line 161, sass/base/_typography.scss */
+  /* line 162, sass/base/_typography.scss */
   h3 {
     margin-top: 1.176286072772898em;
     font-size: 1.594rem;
@@ -428,7 +431,7 @@ h3 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 161, sass/base/_typography.scss */
+  /* line 162, sass/base/_typography.scss */
   h3 {
     margin-top: 1.07142857142857em;
     font-size: 1.75rem;
@@ -436,7 +439,7 @@ h3 {
   }
 }
 
-/* line 186, sass/base/_typography.scss */
+/* line 187, sass/base/_typography.scss */
 h4,
 h5,
 h6 {
@@ -445,7 +448,7 @@ h6 {
   line-height: 1.60714285714286;
 }
 @media screen and (min-width: 43em) {
-  /* line 186, sass/base/_typography.scss */
+  /* line 187, sass/base/_typography.scss */
   h4,
   h5,
   h6 {
@@ -455,7 +458,7 @@ h6 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 186, sass/base/_typography.scss */
+  /* line 187, sass/base/_typography.scss */
   h4,
   h5,
   h6 {
@@ -465,20 +468,20 @@ h6 {
   }
 }
 
-/* line 211, sass/base/_typography.scss */
+/* line 212, sass/base/_typography.scss */
 h5 {
   color: #666;
   font-weight: bold;
 }
 
-/* line 215, sass/base/_typography.scss */
+/* line 216, sass/base/_typography.scss */
 h6 {
   color: #666;
   font-style: italic;
   font-weight: normal;
 }
 
-/* line 220, sass/base/_typography.scss */
+/* line 221, sass/base/_typography.scss */
 h1,
 h2,
 h3,
@@ -488,7 +491,7 @@ h6 {
   margin-bottom: 0.46875rem;
 }
 @media screen and (min-width: 125em) {
-  /* line 220, sass/base/_typography.scss */
+  /* line 221, sass/base/_typography.scss */
   h1,
   h2,
   h3,
@@ -504,49 +507,49 @@ h6 {
  *
  * @section l
  */
-/* line 239, sass/base/_typography.scss */
+/* line 240, sass/base/_typography.scss */
 ul,
 ol {
   margin-left: 1.76470588235294em;
   padding-left: 0;
 }
 
-/* line 245, sass/base/_typography.scss */
+/* line 246, sass/base/_typography.scss */
 ul,
 dl {
   padding: 0;
 }
 
-/* line 250, sass/base/_typography.scss */
+/* line 251, sass/base/_typography.scss */
 ol ol {
   list-style-type: lower-alpha;
 }
 
-/* line 254, sass/base/_typography.scss */
+/* line 255, sass/base/_typography.scss */
 dt {
   margin-top: 0.535714285714286em;
   font-weight: bold;
 }
 @media screen and (min-width: 125em) {
-  /* line 254, sass/base/_typography.scss */
+  /* line 255, sass/base/_typography.scss */
   dt {
     margin-top: 0.51996672212978em;
   }
 }
 
-/* line 264, sass/base/_typography.scss */
+/* line 265, sass/base/_typography.scss */
 dd {
   margin-bottom: 1.071428571428571em;
   margin-left: 0;
 }
 @media screen and (min-width: 125em) {
-  /* line 264, sass/base/_typography.scss */
+  /* line 265, sass/base/_typography.scss */
   dd {
     margin-bottom: 1.03993344425957em;
   }
 }
 
-/* line 272, sass/base/_typography.scss */
+/* line 273, sass/base/_typography.scss */
 dd > p:first-child,
 dd > ul:first-child,
 dd > ol:first-child,
@@ -560,7 +563,7 @@ dd > blockquote:first-child > p:first-child {
  *
  * @section a
  */
-/* line 285, sass/base/_typography.scss */
+/* line 286, sass/base/_typography.scss */
 a,
 .internal-users a:visited,
 .search-tools a:visited,
@@ -572,13 +575,13 @@ a,
   transition: color .2s, border-color .2s ease;
 }
 
-/* line 297, sass/base/_typography.scss */
+/* line 298, sass/base/_typography.scss */
 a:visited {
   border-bottom-color: #d7c3c7;
   color: #600f21;
 }
 
-/* line 301, sass/base/_typography.scss */
+/* line 302, sass/base/_typography.scss */
 a:hover,
 .internal-users a:hover,
 .search-tools a:hover,
@@ -587,7 +590,7 @@ a:hover,
   color: #0086ee;
 }
 
-/* line 308, sass/base/_typography.scss */
+/* line 309, sass/base/_typography.scss */
 a:focus,
 a:active {
   outline-width: 0;
@@ -599,23 +602,23 @@ a:active {
  *
  * @section a-site-name
  */
-/* line 319, sass/base/_typography.scss */
+/* line 320, sass/base/_typography.scss */
 .site-name a {
   border-bottom-width: 0;
 }
-/* line 322, sass/base/_typography.scss */
+/* line 323, sass/base/_typography.scss */
 .site-name a, .site-name a:visited {
   color: #fff;
   text-shadow: 0 1px 3px #1e1325;
 }
 @media screen and (min-width: 70em) {
-  /* line 322, sass/base/_typography.scss */
+  /* line 323, sass/base/_typography.scss */
   .site-name a, .site-name a:visited {
     text-shadow: -1px 1px #492c5d, -1px 2px #492c5d, -2px 3px #492c5d, -2px 4px #492c5d, -3px 5px #492c5d, -3px 6px #492c5d, -4px 7px 0.5px #492c5d;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 339, sass/base/_typography.scss */
+  /* line 340, sass/base/_typography.scss */
   .site-name a:hover {
     text-shadow: -1px 1px #0086ee, -1px 2px #0086ee, -2px 3px #0086ee, -2px 4px #0086ee, -3px 5px #0086ee, -3px 6px #0086ee, -4px 7px 0.5px #0086ee;
   }
@@ -626,17 +629,17 @@ a:active {
  *
  * @section other-type
  */
-/* line 361, sass/base/_typography.scss */
+/* line 362, sass/base/_typography.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 365, sass/base/_typography.scss */
+/* line 366, sass/base/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 369, sass/base/_typography.scss */
+/* line 370, sass/base/_typography.scss */
 figcaption,
 small,
 .details,
@@ -646,7 +649,7 @@ small,
   line-height: 1.427619682116684;
 }
 @media screen and (min-width: 125em) {
-  /* line 369, sass/base/_typography.scss */
+  /* line 370, sass/base/_typography.scss */
   figcaption,
   small,
   .details,
@@ -657,30 +660,46 @@ small,
   }
 }
 
-/* line 385, sass/base/_typography.scss */
+/* line 386, sass/base/_typography.scss */
 [role="contentinfo"] small {
   color: #ccc;
 }
 
-/* line 390, sass/base/_typography.scss */
+/* line 391, sass/base/_typography.scss */
 abbr {
   border-bottom: 1px dashed #b5b5b5;
   cursor: help;
 }
 
-/* line 397, sass/base/_typography.scss */
+/* line 398, sass/base/_typography.scss */
 code,
 pre {
   font-family: monospace, serif;
 }
 
-/* line 402, sass/base/_typography.scss */
+/* line 403, sass/base/_typography.scss */
 blockquote {
   padding-left: 1em;
   font-style: italic;
 }
 
-/* line 409, sass/base/_typography.scss */
+@supports (font-variant-position: super) {
+  /* line 411, sass/base/_typography.scss */
+  sup {
+    font-size: inherit;
+    font-variant-position: super;
+    vertical-align: inherit;
+  }
+}
+@supports (font-variant-position: sub) {
+  /* line 419, sass/base/_typography.scss */
+  sub {
+    font-size: inherit;
+    font-variant-position: sub;
+    vertical-align: inherit;
+  }
+}
+/* line 426, sass/base/_typography.scss */
 hr {
   border: 0;
   height: 5px;
