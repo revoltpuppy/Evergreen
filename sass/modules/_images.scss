@@ -3,34 +3,34 @@
  *
  * Image modules, typically for laying them out within an article.
  */
-.left,  //deprecated
-.illus,  //deprecated
-.illus-alt,  //deprecated
-.illus-full,  //deprecated
+.left,  // deprecated
+.illus,  // deprecated
+.illus-alt,  // deprecated
+.illus-full,  // deprecated
 .image,
-.image img,  //WYSIWYG
+.image img,  // WYSIWYG
 .image-alt,
 .image-full,
-.image-full img{  //WYSIWYG
-	//box model
+.image-full img{  // WYSIWYG
+	// box model
 	border: 1px solid mix(black, $sky-blue, 60%);
 	height: auto;
 	margin: 0 auto;
 	max-width: 100%;
-	//layout
+	// layout
 	display: block;
 	border-radius: 2px;
-	//typography
-	color: white;  //for readability in the WYSIWYG
-	//backgrounds & borders
+	// typography
+	color: white;  // for readability in the WYSIWYG
+	// backgrounds & borders
 	background-color: mix(black, $sky-blue, 60%);
-	//miscelaneous
+	// miscelaneous
 	box-shadow: 0 2px 2px $drop-shadow;
 }
 
-.illus-full,  //deprecated
+.illus-full,  // deprecated
 .image-full,
-.image-full img{  //WYSIWYG
+.image-full img{  // WYSIWYG
 	margin: .631100639515315em auto 1.262201279030629em auto; // 15/11.884/2 15/11.884  // This should have the same vertical metrics as a p
 }
 
@@ -73,12 +73,12 @@
 		max-width: calc(50% - .5em);
 	}
 	
-	.illus-alt,  //deprecated
+	.illus-alt,  // deprecated
 	.image-alt{
-		//box model
-		margin: 0 0 0.631100639515315em -40.943683409437%;  //7.5/11.884  Weird math for the left margin.
-		width: 38.260135135135135%;  //It took weird math to get here.
-		//layout
+		// box model
+		margin: 0 0 0.631100639515315em -40.943683409437%;  // 7.5/11.884  Weird math for the left margin.
+		width: 38.260135135135135%;  // It took weird math to get here.
+		// layout
 		clear: left;
 		float: left;
 	}
