@@ -34,13 +34,14 @@
 	margin: .631100639515315em auto 1.262201279030629em auto; // 15/11.884/2 15/11.884  // This should have the same vertical metrics as a p
 }
 
-@include breakpoint($starlord){
-	.left,  // deprecated
-  .illus,  // deprecated
-  .illus-alt,  // deprecated
-  .image,
-  .image img,  // WYSIWYG
-  .image-alt{
+.left,  // deprecated
+.illus,  // deprecated
+.illus-alt,  // deprecated
+.image,
+.image img,  // WYSIWYG
+.image-alt{
+	
+	@include breakpoint($starlord){
 		// box model
 		margin: 0 0 0.631100639515315em 1em;  // 7.5/11.884
 		max-width: calc(66.6666666667% - .5em);
@@ -48,9 +49,13 @@
 		clear: right;
 		float: right;
   }
+  
+  @include breakpoint($gamora){
+		margin-right: -2em;
+	}
 }
 
-@include breakpoint($gamora){
+/*@include breakpoint($gamora){
 	.left,  // deprecated
 	.illus,  // deprecated
 	.illus-alt,  // deprecated
@@ -60,7 +65,7 @@
 		// box model
 		max-width: calc(66.6666666667% - .5em);
 	}
-}
+}*/
 
 @include breakpoint($drax){
 	.left,  // deprecated
@@ -70,7 +75,8 @@
 	.main-content .image img,  // WYSIWYG
 	.image-alt{
 		// box model
-		max-width: calc(50% - .5em);
+		margin-right: -3em;
+		max-width: calc(50% + 2.5em);
 	}
 	
 	.illus-alt,  // deprecated

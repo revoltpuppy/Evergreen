@@ -4465,7 +4465,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 38, sass/modules/_images.scss */
+  /* line 37, sass/modules/_images.scss */
   .left,
   .illus,
   .illus-alt,
@@ -4479,28 +4479,41 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 54, sass/modules/_images.scss */
+  /* line 37, sass/modules/_images.scss */
   .left,
   .illus,
   .illus-alt,
-  .main-content .image,
-  .main-content .image img,
+  .image,
+  .image img,
   .image-alt {
-    max-width: calc(66.6666666667% - .5em);
+    margin-right: -2em;
   }
 }
+
+/*@include breakpoint($gamora){
+	.left,  // deprecated
+	.illus,  // deprecated
+	.illus-alt,  // deprecated
+	.main-content .image,
+	.main-content .image img,  // WYSIWYG
+	.image-alt{
+		// box model
+		max-width: calc(66.6666666667% - .5em);
+	}
+}*/
 @media screen and (min-width: 70em) {
-  /* line 66, sass/modules/_images.scss */
+  /* line 71, sass/modules/_images.scss */
   .left,
   .illus,
   .illus-alt,
   .main-content .image,
   .main-content .image img,
   .image-alt {
-    max-width: calc(50% - .5em);
+    margin-right: -3em;
+    max-width: calc(50% + 2.5em);
   }
 
-  /* line 76, sass/modules/_images.scss */
+  /* line 82, sass/modules/_images.scss */
   .illus-alt,
   .image-alt {
     margin: 0 0 0.631100639515315em -40.943683409437%;
