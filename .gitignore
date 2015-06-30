@@ -20,3 +20,11 @@ libs
 
 custom-css/jquery.css
 custom-css/build/jquery.css
+
+// Ignore third-party libraries
+js/files
+
+// Ignore image and sprite stuff for now
+images/src/
+images/build/
+campus-life.html
