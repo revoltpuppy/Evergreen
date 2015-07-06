@@ -55,18 +55,6 @@
 	}
 }
 
-/*@include breakpoint($gamora){
-	.left,  // deprecated
-	.illus,  // deprecated
-	.illus-alt,  // deprecated
-	.main-content .image,
-	.main-content .image img,  // WYSIWYG
-	.image-alt{
-		// box model
-		max-width: calc(66.6666666667% - .5em);
-	}
-}*/
-
 @include breakpoint($drax){
 	.left,  // deprecated
 	.illus,  // deprecated

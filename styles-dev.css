@@ -4490,19 +4490,8 @@ p.alert {
   }
 }
 
-/*@include breakpoint($gamora){
-	.left,  // deprecated
-	.illus,  // deprecated
-	.illus-alt,  // deprecated
-	.main-content .image,
-	.main-content .image img,  // WYSIWYG
-	.image-alt{
-		// box model
-		max-width: calc(66.6666666667% - .5em);
-	}
-}*/
 @media screen and (min-width: 70em) {
-  /* line 71, sass/modules/_images.scss */
+  /* line 59, sass/modules/_images.scss */
   .left,
   .illus,
   .illus-alt,
@@ -4513,7 +4502,7 @@ p.alert {
     max-width: calc(50% + 2.5em);
   }
 
-  /* line 82, sass/modules/_images.scss */
+  /* line 70, sass/modules/_images.scss */
   .illus-alt,
   .image-alt {
     margin: 0 0 0.631100639515315em -40.943683409437%;
