@@ -16,9 +16,9 @@
  * A. Primary Nav States
  */
 .is-current-section{
-	//typography
+	// typography
 	color: white;
-	//backgrounds and borders
+	// backgrounds and borders
 	background-color: $evergreen-old-style;
 }
 .is-current-section a,
@@ -37,10 +37,10 @@
 .is-expanded:before{
     //content:"▼ " !important;
     //transforms & transitions
-    -webkit-transform: rotate(90deg);  //Chrome, Safari
-        -ms-transform: rotate(90deg);  //IE9
+    -webkit-transform: rotate(90deg);  // Chrome, Safari
+        -ms-transform: rotate(90deg);  // IE9
             transform: rotate(90deg);
-    -webkit-transition: all .2s linear;  //Safari 6
+    -webkit-transition: all .2s linear;  // Safari 6
             transition: all .2s linear;
 }
 
@@ -49,12 +49,12 @@
  */
 
 .is-selected-ui{
-	//box model
+	// box model
 	padding: 0 0.33em;
-	//typography
+	// typography
 	color: white;
 	font-weight: bold;
-	//backgrounds and borders
+	// backgrounds and borders
 	background-color: $blueberry-susan;
 }
 

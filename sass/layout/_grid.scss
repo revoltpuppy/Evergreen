@@ -176,18 +176,6 @@
 	}
 }
 
-/*.unit-1-7{  //deprecated; use .grid .unit-1-7 instead
-	margin: 0 1em 0 0;
-	
-	@media screen and (min-width: 43em){
-		//box model
-		width: 10.285714285714286%;  //deprecated
-		width: calc(14.285714285714% - 1em);
-		//layout
-		float: left;
-	}
-}*/
-
 .unit-1-7{
 	// box model
 	width: 100%;
@@ -205,29 +193,6 @@
 		width: 14.285714285714%;
 	}
 }
-
-/*.unit-2-7{  //deprecated; use .grid .unit-2-7 instead
-	// box model
-	margin: 0;
-	
-	@include breakpoint($gamora){
-		//box model
-		margin: 0 2em 0 0;
-		width: calc(28.571428571429% - 1.3333333333em);
-	}
-}*/
-
-/*.unit-3-7{  //deprecated; use .grid .unit-3-7 instead
-	margin: 0;
-	
-	@media screen and (min-width: 43em){
-		//box model
-		margin: 0 2em 0 0;
-		width: calc(42.857142857143% - 1.3333333333em);
-		//layout
-		float: left;
-	}
-}*/
 
 .unit-2-7{
 	// box model
