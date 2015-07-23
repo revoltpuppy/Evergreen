@@ -69,11 +69,17 @@
 
 [role="banner"]{
 	// layout
+	display: flex;
+	flex-wrap: wrap;
 	overflow: hidden;
 	// backgrounds & borders
 	background-color: #f3f3f3;
 	// misc
 	box-shadow: 0 0 3px $drop-shadow;
+	
+	@include breakpoint($gamora){
+		flex-direction: row-reverse;
+	}
 }
 
 .page-header{
