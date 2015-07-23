@@ -15,7 +15,8 @@ $blueberry-susan: #492c5d;
 $wine: #600f21;
 $black: #000;
 
-$highlight: hsla(52, 95%, 85%, .5);  // $morning-light
+//$highlight: hsla(52, 95%, 85%, .5);  // $morning-light
+$highlight: transparentize($morning-light, 0.5);
 
 $tint: hsl(0, 0%, 95%);
 $shade: hsl(0, 0%, 0%);
