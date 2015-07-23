@@ -40,4 +40,61 @@
 @import "sass/modules";
 @import "sass/states";
 
+/**
+ * Appendix A
+ *
+ * List of Deprecated Styles
+ *
+ * Here is a list of all styles marked deprecated, as of July 10, 2015. Do
+ * not use these classes in HTML. Instead, find the best alternative, or
+ * remove them altogether.
+ * 
+ * base/_typography
+ * ----------------
+ * .details  Use small element, figcaption element, or .caption
+ *
+ * layout
+ * ------
+ * .ins32           Do not use
+ *
+ * layout/_grid
+ * ------------
+ * .grid-list       Use .grid-alt
+ * .right           Use .supplement or .image
+ * .supplement-1-2  Use .supplement
+ * 
+ * modules
+ * -------
+ * .main-background  Use .main-background2
+ * 
+ * modules/_boxes
+ * --------------
+ * .notice           Use .box, .box.note, or .box.alert
+ * .notice h2, etc.  Use .box h2, etc.
+ * 
+ * modules/_header
+ * ---------------
+ * #top-search-query  Use #q
+ * 
+ * modules/_images
+ * ---------------
+ * .left        Use .image or .image-alt sparingly
+ * .illus       Use .image
+ * .illus-alt   Use .image-alt
+ * .illus-full  Use .image-full
+ * 
+ * modules/_lists
+ * --------------
+ * .singleton a  Do not use
+ * 
+ * modules/_media-segment
+ * ----------------------
+ * .media-img-alt  Use .media-child-alt
+ *
+ * modules/_search
+ * ---------------
+ * .top-search button  Use .search button(?)
+ * .top-search-button  Use .search-button(?)
+ */
+
 /*This file was written by Justin McDowell. ((O)O)*/
