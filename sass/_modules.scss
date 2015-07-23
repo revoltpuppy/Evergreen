@@ -413,24 +413,6 @@
 		@include breakpoint($gamora){
 			overflow-x: visible;
 		}
-		
-		&::after{
-			// box model
-			height: 100%;
-			width: 100%;
-			// layout
-			display: block;
-			position: absolute;
-			top: 0;
-			right: -100%;
-			// miscellaneous
-			box-shadow: -0.25em 0 1em $drop-shadow;
-			content: "";
-			
-			@include breakpoint($gamora){
-				display: none;
-			}
-		}
 	}
 	
 	.grid.upcoming-events-list{
@@ -494,6 +476,24 @@
 				@include breakpoint($starlord){
 					scroll-snap-coordinate: none;
 				}
+			}
+		}
+		
+		&::after{  // pseudo-element that adds a drop shadow
+			// box model
+			height: 100%;
+			width: 100%;
+			// layout
+			display: block;
+			position: absolute;
+			top: 0;
+			right: -100%;
+			// miscellaneous
+			box-shadow: -0.25em 0 1em $drop-shadow;
+			content: "";
+			
+			@include breakpoint($gamora){
+				display: none;
 			}
 		}
 		

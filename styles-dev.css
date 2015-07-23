@@ -4694,25 +4694,8 @@ p.alert {
     overflow-x: visible;
   }
 }
-/* line 417, sass/_modules.scss */
-.upcoming-events-list-wrapper::after {
-  height: 100%;
-  width: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  right: -100%;
-  box-shadow: -0.25em 0 1em rgba(30, 19, 37, 0.25);
-  content: "";
-}
-@media screen and (min-width: 43em) {
-  /* line 417, sass/_modules.scss */
-  .upcoming-events-list-wrapper::after {
-    display: none;
-  }
-}
 
-/* line 436, sass/_modules.scss */
+/* line 418, sass/_modules.scss */
 .grid.upcoming-events-list {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
@@ -4728,7 +4711,7 @@ p.alert {
   scroll-snap-type: mandatory;
 }
 @media screen and (min-width: 43em) {
-  /* line 436, sass/_modules.scss */
+  /* line 418, sass/_modules.scss */
   .grid.upcoming-events-list {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -4739,7 +4722,7 @@ p.alert {
     scroll-snap-type: none;
   }
 }
-/* line 464, sass/_modules.scss */
+/* line 446, sass/_modules.scss */
 .grid.upcoming-events-list > .unit-1-7 {
   width: 66.666666%;
   -webkit-flex-shrink: 0;
@@ -4748,19 +4731,19 @@ p.alert {
   scroll-snap-coordinate: 0 0;
 }
 @media screen and (min-width: 20em) {
-  /* line 464, sass/_modules.scss */
+  /* line 446, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 40%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 464, sass/_modules.scss */
+  /* line 446, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 29%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 464, sass/_modules.scss */
+  /* line 446, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 14.285714285714%;
     -webkit-flex-shrink: 1;
@@ -4768,20 +4751,37 @@ p.alert {
             flex-shrink: 1;
   }
 }
-/* line 487, sass/_modules.scss */
+/* line 469, sass/_modules.scss */
 .grid.upcoming-events-list > .unit-1-7:last-child {
   scroll-snap-coordinate: -50% 0;
 }
 @media screen and (min-width: 20em) {
-  /* line 487, sass/_modules.scss */
+  /* line 469, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7:last-child {
     scroll-snap-coordinate: -150% 0;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 487, sass/_modules.scss */
+  /* line 469, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7:last-child {
     scroll-snap-coordinate: none;
+  }
+}
+/* line 482, sass/_modules.scss */
+.grid.upcoming-events-list::after {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  box-shadow: -0.25em 0 1em rgba(30, 19, 37, 0.25);
+  content: "";
+}
+@media screen and (min-width: 43em) {
+  /* line 482, sass/_modules.scss */
+  .grid.upcoming-events-list::after {
+    display: none;
   }
 }
 /* line 500, sass/_modules.scss */
