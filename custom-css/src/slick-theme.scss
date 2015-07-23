@@ -72,7 +72,6 @@ $slick-opacity-not-active: 0.25 !default;
     color: transparent;
     top: 50%;
     //margin-top: -10px;
-    margin-top: -45px;
     padding: 0;
     border: none;
     outline: none;
@@ -140,13 +139,13 @@ $slick-opacity-not-active: 0.25 !default;
 /* Dots */
 
 .slick-slider {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .slick-dots {
 	margin-left: 0;
-	position: absolute;
-	bottom: -45px;
+	//position: absolute;
+	//bottom: -45px;
 	list-style: none;
 	display: block;
 	text-align: center;
@@ -212,9 +211,11 @@ $slick-opacity-not-active: 0.25 !default;
  * Evergreen Overrides
  */
 .upcoming-events-list.slick-initialized{
-	//width: 100%;
+	// box model
 	margin-left: 0;
 	padding: 0;
+	// layout
+	overflow: hidden;
 	
 	.unit-1-7{
 		margin: 0;
@@ -226,12 +227,21 @@ $slick-opacity-not-active: 0.25 !default;
 	}
 }
 
+.slick-prev,
+.slick-next{
+	// box model
+	margin-top: 0;
+	// miscellaneous
+	transform: translateY(calc(-50% - 10px));
+}
+
 .slick-prev::before, .slick-next::before{
 	// box model
 	padding: 30px 2px;
 	width: 20px;
 	// layout
 	display: block;
+	top: 50%;
 	// backgrounds and borders
 	background-color: $blueberry-susan;
 }
@@ -241,4 +251,8 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-next::before{
 	border-radius: 0 2px 2px 0;
+}
+
+.slick-dots{
+	margin: 0;
 }
