@@ -407,21 +407,58 @@
 	}
 	
 	.upcoming-events-list-wrapper{
-		overflow-x: auto;
-		overflow-y: hidden;
+		overflow: hidden;
+		position: relative;
 		
 		@include breakpoint($gamora){
 			overflow-x: visible;
 		}
+		
+		&::after{
+			// box model
+			height: 100%;
+			width: 100%;
+			// layout
+			display: block;
+			position: absolute;
+			top: 0;
+			right: -100%;
+			// miscellaneous
+			box-shadow: -0.25em 0 1em $drop-shadow;
+			content: "";
+			
+			@include breakpoint($gamora){
+				display: none;
+			}
+		}
 	}
 	
 	.grid.upcoming-events-list{
+		// layout
 		flex-wrap: nowrap;
 		justify-content: flex-start;
+		overflow-x: visible;
+		overflow-y: auto;
+		// scrolling
+		scroll-behavior: smooth;
+		scroll-snap-destination: 0 0;
+		scroll-snap-points-x: repeat(0%);
+		scroll-snap-type: mandatory;
+		
+		@include breakpoint($lil-groot){
+			//scroll-snap-points-x: repeat(60%);
+		}
+		
+		@include breakpoint($starlord){
+			//scroll-snap-points-x: repeat(71%);
+		}
 		
 		@include breakpoint($gamora){
+			// layout
 			flex-wrap: wrap;
 			justify-content: center;
+			// scrolling
+			scroll-snap-type: none;
 		}
 		
 		> .unit-1-7{
@@ -429,9 +466,11 @@
 			width: 66.666666%;  // magic number: allows next event to peek out, indicating horizontal scrolling
 			// layout
 			flex-shrink: 0;
+			// scrolling
+			scroll-snap-coordinate: 0 0;
 			
 			@include breakpoint($lil-groot){
-				width: 40%;
+				width: 40%;  // magic number: allows next event to peek out, indicating horizontal scrolling
 			}
 			
 			@include breakpoint($starlord){
@@ -444,17 +483,22 @@
 				// layout
 				flex-shrink: 1;
 			}
+			
+			&:last-child{
+				scroll-snap-coordinate: -50% 0;
+			
+				@include breakpoint($lil-groot){
+					scroll-snap-coordinate: -150% 0;
+				}
+				
+				@include breakpoint($starlord){
+					scroll-snap-coordinate: none;
+				}
+			}
 		}
 		
 		.media-body{
-			// box model
-			border-bottom: 1px solid mix(white, $blueberry-susan, 60%);
-			// typography
 			text-align: center;
-			
-			@include breakpoint($lil-groot){
-				border-bottom-width: 0;
-			}
 		}
 	}
 	
