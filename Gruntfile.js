@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 						dest: 'custom-css/build',  // destination folder
 						ext: '.css'
 					},
-					{'../wwwevergreen-drupal-theme/screen.css': 'styles.scss'}
+					{'../wwwevergreen-drupal-theme/css/build/screen.css': 'styles.scss'}
 				]
 			},
 			dev: {  // process specific files
