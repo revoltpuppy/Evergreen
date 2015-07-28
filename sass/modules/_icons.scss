@@ -44,6 +44,8 @@
 
 	&,
 	&:visited{
+		// box model
+		border-bottom-width: 0;
 		// typography
 		color: $evergreen-neue;
 	
@@ -64,37 +66,47 @@
 }
 
 .transporter a:hover .icon{
-	transform: scale(0.8, 0.8);
+	transform: scale(0.8);
 }
 
 .transporter-icon{
 	// box model
-	padding: 15%;  // Whatever feels right.
-	padding-top: 85%;  // For responsive SVG.
+	//padding: 15%;  // Whatever feels right.
+	//padding-top: 85%;  // For responsive SVG.
+	max-width: 100%;
+	// layout
+	display: inline-block;
 	// positioning
 	position: relative;  // For responsive SVG.
 	// typography
 	color: white;
 	text-align: center;
-	//backgrounds & borders
+	// backgrounds & borders
 	background-color: $evergreen-neue;
 	border-radius: 50%;
 	// misc
 	transition: all 0.2s;
 
-	@media screen and (min-width: 22em){
+	@include breakpoint($rocket){
 		margin: 0 auto;
-		padding-top: 50%;
-		width: 75%;
+		max-width: 80%;
+	}
+	
+	@include breakpoint($starlord){
+		max-width: 100%;
+	}
+	
+	@include breakpoint($drax){
+		max-width: 90%;
 	}
 	
 	.icon{
-		// box model
-		//width: 60%;  // 100 - 25 - 15 to account for container width and padding
+		// layout
+		display: block;
 		// positioning
-		position: absolute;  // For responsive SVG.
-		top: 0;
-		left: 0;
+		//position: absolute;  // For responsive SVG.
+		//top: 0;
+		//left: 0;
 		// behavior
 		transform: scale(0.6);
 		transition: transform .1s ease;

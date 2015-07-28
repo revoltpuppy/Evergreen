@@ -4002,33 +4002,34 @@ ul.accordion-inner {
 
 /* line 45, sass/modules/_icons.scss */
 .transporter a, .transporter a:visited {
+  border-bottom-width: 0;
   color: #64933a;
 }
-/* line 50, sass/modules/_icons.scss */
+/* line 52, sass/modules/_icons.scss */
 .transporter a .transporter-icon, .transporter a:visited .transporter-icon {
   background: #64933a;
 }
-/* line 55, sass/modules/_icons.scss */
+/* line 57, sass/modules/_icons.scss */
 .transporter a:hover {
   color: #0086ee;
 }
-/* line 58, sass/modules/_icons.scss */
+/* line 60, sass/modules/_icons.scss */
 .transporter a:hover .transporter-icon {
   background: #0086ee;
   box-shadow: 0 0 0.2em rgba(253, 244, 182, 0.5) inset;
 }
 
-/* line 66, sass/modules/_icons.scss */
+/* line 68, sass/modules/_icons.scss */
 .transporter a:hover .icon {
-  -webkit-transform: scale(0.8, 0.8);
-      -ms-transform: scale(0.8, 0.8);
-          transform: scale(0.8, 0.8);
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
-/* line 70, sass/modules/_icons.scss */
+/* line 72, sass/modules/_icons.scss */
 .transporter-icon {
-  padding: 15%;
-  padding-top: 85%;
+  max-width: 100%;
+  display: inline-block;
   position: relative;
   color: white;
   text-align: center;
@@ -4037,18 +4038,27 @@ ul.accordion-inner {
   transition: all 0.2s;
 }
 @media screen and (min-width: 22em) {
-  /* line 70, sass/modules/_icons.scss */
+  /* line 72, sass/modules/_icons.scss */
   .transporter-icon {
     margin: 0 auto;
-    padding-top: 50%;
-    width: 75%;
+    max-width: 80%;
   }
 }
-/* line 91, sass/modules/_icons.scss */
+@media screen and (min-width: 32em) {
+  /* line 72, sass/modules/_icons.scss */
+  .transporter-icon {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 72, sass/modules/_icons.scss */
+  .transporter-icon {
+    max-width: 90%;
+  }
+}
+/* line 103, sass/modules/_icons.scss */
 .transporter-icon .icon {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
   -webkit-transform: scale(0.6);
       -ms-transform: scale(0.6);
           transform: scale(0.6);
