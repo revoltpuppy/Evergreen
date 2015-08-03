@@ -388,7 +388,8 @@ li.internal-users-alt{
 		// typography
 		color: white;
 		// misc
-		box-shadow: 0 0 2px $highlight inset;
+		box-shadow: 0 0 1px $highlight inset,
+		            0 0 1em transparentize($highlight, 0.75) inset;
 		transition: all .1s ease-out;
 		
 	}
@@ -401,9 +402,9 @@ li.internal-users-alt{
 		// box model
 		padding: 0.46875rem 0.25rem;  // 7.5/16 2.48/16
 		// layout
+		align-items: center;
 		display: flex;
 		justify-content: center;
-		align-items: center;
 		// typography
 		font-weight: normal;
 		// misc
