@@ -55,11 +55,11 @@ body,
 .base{
 	@include base-type;  // Step 0.5
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		@include base-type-lg;  // Step 1
 	}
 	
-	@media screen and (min-width: 125em){
+	@include breakpoint($groot){
 		@include base-type-xl;  // Step 2
 	}
 }
@@ -73,29 +73,25 @@ figure,
 .base{
 	margin: 0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		margin: 0.441176470588235em 0 0.882352941176471em 0;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
 	}
 	
-	@media screen and (min-width: 125em){
-		margin: 0.51996672212978em 0 1.03993344425957em 0;  //10/19.232 20/19.232  So 30 + 10 + 20 = 60
+	@include breakpoint($groot){
+		margin: 0.51996672212978em 0 1.03993344425957em 0;  //10/19.232 20/19.232  So, 30 + 10 + 20 = 60
 	}
 }
 
-// Removing hyphen rules for now.
-// English doesn't have long enough words to warrant this,
-// and we’re not justifying text,
-// but consider it for narrow columns.
-//p{
-//    -webkit-hyphens: auto;
-//       -moz-hyphens: auto;
-//        -ms-hyphens: auto;
-//            hyphens: auto;
-//    -webkit-hyphenate-limit-lines: 2;
-//       -moz-hyphenate-limit-lines: 2;
-//        -ms-hyphenate-limit-lines: 2;
-//            hyphenate-limit-lines: 2;
-//}
+/**
+ * Removing hyphen rules for now.
+ * English doesn't have long enough words to warrant this,
+ * and we’re not justifying text,
+ * but consider it for narrow columns.
+ */
+/*p{
+	hyphens: auto;
+	hyphenate-limit-lines: 2;
+}*/
 
 /**
  * 2. Headings
@@ -104,109 +100,109 @@ figure,
  */
 h1{
 	//box model
-	margin: 0.96401028277635em 0 0 0;  //30/31.12
+	margin: 0.96401028277635em 0 0 0;  // 30/31.12
 	//typography
-	font-size: 1.945rem;  //31.12px  Step 4
+	font-size: 1.945rem;  // 31.12px  Step 4
 	font-weight: normal;
-	line-height: 1.44601542416452;  //45/31.12
+	line-height: 1.44601542416452;  // 45/31.12
 
-	@media screen and (min-width: 32em){
+	@include breakpoint($starlord){
 		//box model
 		margin-top: 0.818419903972065em;
 		//typography
-		font-size: 2.291rem;  //36.656px
-		line-height: 1.227629855958097;  //45/35.656
+		font-size: 2.291rem;  // 36.656px
+		line-height: 1.227629855958097;  // 45/35.656
 	}
     
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		//box model
-		margin-top: 0.673975557153127em;   //30/44.5167
+		margin-top: 0.673975557153127em;   // 30/44.5167
 		//typography
-		font-size: 2.782rem;  //44.512px  Step 5
-		line-height: 1.010963335729691;  //45/44.5167
+		font-size: 2.782rem;  // 44.512px  Step 5
+		line-height: 1.010963335729691;  // 45/44.5167
 	}
 	
-	@media screen and (min-width: 125em){
+	@include breakpoint($groot){
 		//box model
-		margin-top: 1.19198982835346em;  //60/50.366
+		margin-top: 1.19198982835346em;  // 60/50.366
 		//typography
-		font-size: 3.146rem;  //50.336  Step 6
-		line-height: 1.19198982835346;  //60/50.336
+		font-size: 3.146rem;  // 50.336  Step 6
+		line-height: 1.19198982835346;  // 60/50.336
 	}
 }
 h2{
 	//box model
-  margin-top: 1.55990016638935em;  //30/19.232
+  margin-top: 1.55990016638935em;  // 30/19.232
   //typography
   color:#666;
-  font-size: 1.202rem;  //19.232px  Step 2
+  font-size: 1.202rem;  // 19.232px  Step 2
   font-weight:bold;
-  line-height: 1.55990016638935;  //30/19.232
+  line-height: 1.55990016638935;  // 30/19.232
   
-  @media screen and (min-width: 43em){
+  @include breakpoint($gamora){
   	//box model
-  	margin-top: 1.090750436300175em;  //30/27.504
+  	margin-top: 1.090750436300175em;  // 30/27.504
   	//typography
-    font-size: 1.719rem;  //27.504px  Step 3
-    line-height: 1.090750436300175; //30/27.504
+    font-size: 1.719rem;  // 27.504px  Step 3
+    line-height: 1.090750436300175; // 30/27.504
   }
   
-  @media screen and (min-width: 125em){
+  @include breakpoint($groot){
   	//box model
-  	margin-top: 0.96401028277635em;  //30/31.12
+  	margin-top: 0.96401028277635em;  // 30/31.12
   	//typography
-    font-size: 1.945rem;  //31.12px  Step 4
-    line-height: 0.96401028277635;  //30/31.12
+    font-size: 1.945rem;  // 31.12px  Step 4
+    line-height: 0.96401028277635;  // 30/31.12
   }
 }
 h3{
 	//box model
-	margin-top: 1.32352941176471em;  //22.5/17
+	margin-top: 1.32352941176471em;  // 22.5/17
 	//typography
 	color:#333;
-	font-size: 1.063rem;  //17px  Step 1
+	font-size: 1.063rem;  // 17px  Step 1
 	font-weight: normal;
-	line-height: 1.32352941176471;  //22.5/17
+	line-height: 1.32352941176471;  // 22.5/17
     
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		//box model
-		margin-top: 1.176286072772898em;  //30/25.504
+		margin-top: 1.1761938367443em;  // 30/25.506
 		//typography
-		font-size: 1.594rem;  //25.504px - otherwise appears optically taller than h2  Step 3(ish)
-		line-height: 1.176286072772898;  //30/25.504
+		font-size: 1.594125rem;  // 25.506px - otherwise appears optically taller than h2; Step 3 - 2px
+		line-height: 1.176286072772898;  // 30/25.504
 	}
     
-	@media screen and (min-width: 125em){
+	@include breakpoint($groot){
 		//box model
-		margin-top: 1.07142857142857em;  //30/28
+		margin-top: 1.06715993170176em;  // 30/28.112
 		//typography
-		font-size: 1.75rem;  //28px - otherwise appears optically taller than h2  Step 4(ish)
-		line-height: 1.07142857142857;  //30/28
+		font-size: 1.757rem;  // 28.112px - otherwise appears optically taller than h2; Step 4 - 3px
+		line-height: 1.06715993170176;  // 30/28.112
 	}
 }
 h4,
 h5,
 h6{
 	//box model
-  margin-top: 1.07142857142857em;  //15/14
+  margin-top: 1.07142857142857em;  // 15/14
   //typography
-  font-size: 0.875rem;  //19.232px  Step .5
-  line-height: 1.60714285714286;  //22.5/14
+  font-size: 0.875rem;  // 19.232px  Step 0.5
+  line-height: 1.60714285714286;  // 22.5/14
   
-  @media screen and (min-width: 43em){
+  @include breakpoint($gamora){
   	//box model
-  	margin-top: 1.46814133307233em;  //30/20.434
+  	margin-top: 1.46814133307233em;  // 30/20.434
   	//typography
-    font-size: 1.202rem;  //20.434px  Step 2
-    line-height: 1.46814133307233; //30/20.434
+    font-size: 1.202rem;  // 20.434px  Step 2
+    line-height: 1.46814133307233; // 30/20.434
   }
   
-  @media screen and (min-width: 125em){
+  @include breakpoint($groot){
   	//box model
-    margin-top: 1.090750436300175em;  //30/27.504
+    margin-top: 1.090750436300175em;  // 30/27.504
     //typography
-    font-size: 1.719rem;  //27.504px  Step 3
-    line-height: 1.090750436300175;  //30/27.504
+    font-size: 1.719rem;  // 27.504px  Step 3
+    line-height: 1.090750436300175;  // 30/27.504
   }
 }
 h5{
