@@ -224,11 +224,11 @@ h3,
 h4,
 h5,
 h6{
-	//Bottom margin should match the p's top margin exactly, for consistency. If they don't match, change this rule.
-	margin-bottom: 0.46875rem; //7.5px
+	// Bottom margin should match the p's top margin exactly, for consistency. If they don't match, change this rule.
+	margin-bottom: 0.46875rem; // 7.5px
 
-	@media screen and (min-width: 125em){
-		margin-bottom: .625rem;  //10px
+	@include breakpoint($groot){
+		margin-bottom: .625rem;  // 10px
 	}  
 }
 
@@ -254,20 +254,20 @@ ol ol{
 
 dt{
 	//box model
-	margin-top: 0.535714285714286em;  //22.5/14/3 - Same as p margin-top
+	margin-top: 0.535714285714286em;  // 22.5/14/3 - Same as p margin-top
 	//typography
 	font-weight: bold;
 	
-	@media screen and (min-width: 125em){
-		margin-top: 0.51996672212978em;  //10/19.232 - Same as p margin-top
+	@include breakpoint($groot){
+		margin-top: 0.51996672212978em;  // 10/19.232 - Same as p margin-top
 	}
 }
 dd{
-	margin-bottom: 1.071428571428571em;  //15/14 - Same as p margin-bottom
+	margin-bottom: 1.071428571428571em;  // 15/14 - Same as p margin-bottom
 	margin-left: 0;
 	
-	@media screen and (min-width: 125em){
-		margin-bottom: 1.03993344425957em;  //20/19.232 - Same as p margin-bottom
+	@include breakpoint($groot){
+		margin-bottom: 1.03993344425957em;  // 20/19.232 - Same as p margin-bottom
 	}
 }
 dd > p:first-child,
@@ -325,7 +325,7 @@ a:active{
 	    color: #fff;
 	    text-shadow: 0 1px 3px hsl(275, 33%, 11%);
 	    
-	    @media screen and (min-width: 70em){
+	    @include breakpoint($drax){
 	    	text-shadow:
 					-1px 1px $blueberry-susan,
 					-1px 2px $blueberry-susan,
@@ -339,7 +339,7 @@ a:active{
 		
 		&:hover{
 	    
-	    @media screen and (min-width: 70em){
+	    @include breakpoint($drax){
 	    	text-shadow:
 					-1px 1px $sky-blue,
 					-1px 2px $sky-blue,
@@ -369,12 +369,12 @@ em{
 
 figcaption,
 small,
-//caption,  //table caption
-.details,  //deprecated
+//caption,  // table caption
+.details,  // deprecated
 .caption{
 	@include small-type;
 	
-	@media screen and (min-width: 125em){
+	@include breakpoint($groot){
 		font-family: $text-face;
 		@include base-type;
 	}
@@ -389,7 +389,7 @@ small{
 }
 
 abbr{
-	//box model
+	// box model
 	border-bottom: 1px dashed mix($tint, $black, 75%);
 	// misc
 	cursor: help;
@@ -401,9 +401,9 @@ pre{
 }
 
 blockquote{
-	//box model
+	// box model
 	padding-left: 1em;
-	//typography
+	// typography
 	font-style: italic;
 }
 
@@ -424,10 +424,10 @@ blockquote{
 }
 
 hr{
-	//box model
+	// box model
 	border: 0;
 	height: 5px;
-	margin: 2.8125rem 0;  //45/16
-	//backgrounds & borders
+	margin: 2.8125rem 0;  // 45/16
+	// backgrounds & borders
 	background-color: $evergreen-neue;
 }
