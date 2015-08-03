@@ -51,25 +51,28 @@
 	@media screen and (min-width: 43em){
 		width: 100%;
 	}
-}
-.main-background-img{
-	width: 100%;
-	display: block;
-  
-  @include breakpoint($gamora){
-	  width: auto;
-	  max-width: 60%;  // 3/5
-  }
-	@include breakpoint($drax){
-		max-width: 57.142857142857143%;  // 4/7
-		//max-width: 799px;
+
+	.main-background-img,
+	> img{
+		width: 100%;
+		display: block;
+	  
+	  @include breakpoint($gamora){
+		  width: auto;
+		  max-width: 60%;  // 3/5
+	  }
+		@include breakpoint($drax){
+			max-width: 57.142857142857143%;  // 4/7
+			//max-width: 799px;
+		}
 	}
 }
 
 .main-background2{
 	position: sticky;
 	
-	> .main-background-img{
+	> .main-background-img,
+	> img{
 		// box model
 		max-height: 100vh;
 		// position
