@@ -41,6 +41,7 @@
 }
 
 .transporter a{
+	display: block;
 
 	&,
 	&:visited{
@@ -100,7 +101,7 @@
 		max-width: 90%;
 	}
 	
-	.icon{
+	img{
 		// layout
 		display: block;
 		// positioning
