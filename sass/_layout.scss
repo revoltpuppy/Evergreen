@@ -104,7 +104,7 @@
 	position: relative;
 
 	@include breakpoint($lil-groot){
-		font-size: .657rem;
+		font-size: .657rem;  // Step -2
 		line-height: 1.427619682116684;
 		letter-spacing: 0.05em;
 	}
@@ -120,6 +120,16 @@
 		// typography
 		@include base-type-lg;
 		letter-spacing: normal;
+	}
+	
+	@include breakpoint($drax){
+		font-size: 1.202rem;  // 19.232px  Step 2
+	  line-height: 1.55990016638935;  // 30/19.232
+	}
+	
+	@include breakpoint($groot){
+		font-size: 1.719rem;  // 27.504px  Step 3
+    line-height: 1.090750436300175; // 30/27.504
 	}
 }
 

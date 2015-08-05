@@ -1018,6 +1018,11 @@ textarea {
   width: 18px;
   vertical-align: top;
 }
+/* line 53, sass/modules/_search.scss */
+.top-search-button > img,
+.search-button > img {
+  max-height: 100%;
+}
 
 /**
  * E. Buttons
@@ -1691,24 +1696,38 @@ a:link,
     letter-spacing: normal;
   }
 }
+@media screen and (min-width: 70em) {
+  /* line 102, sass/_layout.scss */
+  [role="navigation"] {
+    font-size: 1.202rem;
+    line-height: 1.55990016638935;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 102, sass/_layout.scss */
+  [role="navigation"] {
+    font-size: 1.719rem;
+    line-height: 1.090750436300175;
+  }
+}
 
 /**
  * D. Content Layout
  */
-/* line 130, sass/_layout.scss */
+/* line 140, sass/_layout.scss */
 .site-content {
   margin-bottom: 1.875rem;
   width: 100%;
   position: relative;
 }
 @media screen and (min-height: 35em) {
-  /* line 130, sass/_layout.scss */
+  /* line 140, sass/_layout.scss */
   .site-content {
     margin-bottom: 3.75rem;
   }
 }
 
-/* line 142, sass/_layout.scss */
+/* line 152, sass/_layout.scss */
 .index-wrapper,
 .primary-content-wrapper {
   border-top: 5px solid #46502b;
@@ -1719,7 +1738,7 @@ a:link,
   border-radius: 2px;
 }
 @media screen and (min-width: 43em) {
-  /* line 142, sass/_layout.scss */
+  /* line 152, sass/_layout.scss */
   .index-wrapper,
   .primary-content-wrapper {
     margin-right: 0;
@@ -1730,31 +1749,31 @@ a:link,
 }
 
 @media screen and (min-width: 70em) {
-  /* line 165, sass/_layout.scss */
+  /* line 175, sass/_layout.scss */
   .index-wrapper {
     width: 85.714285714286%;
   }
 }
 
-/* line 175, sass/_layout.scss */
+/* line 185, sass/_layout.scss */
 .primary-content-wrapper {
   border-bottom: 2px dashed #64933a;
 }
 @media screen and (min-width: 43em) {
-  /* line 175, sass/_layout.scss */
+  /* line 185, sass/_layout.scss */
   .primary-content-wrapper {
     padding-left: 1em;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 175, sass/_layout.scss */
+  /* line 185, sass/_layout.scss */
   .primary-content-wrapper {
     border-bottom: 0;
     width: 57.142857142857%;
   }
 }
 
-/* line 192, sass/_layout.scss */
+/* line 202, sass/_layout.scss */
 .sidebar-wrapper {
   margin-left: 1em;
   padding: 0;
@@ -1763,7 +1782,7 @@ a:link,
   background-color: rgba(242, 242, 242, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 192, sass/_layout.scss */
+  /* line 202, sass/_layout.scss */
   .sidebar-wrapper {
     margin-left: 20%;
     padding-left: 1em;
@@ -1772,20 +1791,20 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 192, sass/_layout.scss */
+  /* line 202, sass/_layout.scss */
   .sidebar-wrapper {
     margin: 0;
     width: 28.571428571429%;
   }
 }
 
-/* line 220, sass/_layout.scss */
+/* line 230, sass/_layout.scss */
 .main-content,
 .sidebar {
   margin: 0 .75em;
 }
 @media screen and (min-width: 22em) {
-  /* line 220, sass/_layout.scss */
+  /* line 230, sass/_layout.scss */
   .main-content,
   .sidebar {
     margin: 0 1em;
@@ -1793,54 +1812,54 @@ a:link,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 229, sass/_layout.scss */
+  /* line 239, sass/_layout.scss */
   .index-wrapper .main-content {
     margin: 0 3em;
   }
 }
 
-/* line 239, sass/_layout.scss */
+/* line 249, sass/_layout.scss */
 .primary-content-wrapper .main-content {
   max-width: 45em;
 }
 @media screen and (min-width: 43em) and (min-width: 43em) {
-  /* line 239, sass/_layout.scss */
+  /* line 249, sass/_layout.scss */
   .primary-content-wrapper .main-content {
     margin: 0 2em;
   }
 }
 @media screen and (min-width: 43em) and (min-width: 70em) {
-  /* line 239, sass/_layout.scss */
+  /* line 249, sass/_layout.scss */
   .primary-content-wrapper .main-content {
     margin: 0 3em;
   }
 }
 
-/* line 253, sass/_layout.scss */
+/* line 263, sass/_layout.scss */
 .main-content {
   margin-top: -5px;
 }
 
-/* line 261, sass/_layout.scss */
+/* line 271, sass/_layout.scss */
 .sidebar {
   margin: 0 .75em 3.75rem 0.75em;
 }
 @media screen and (min-width: 22em) {
-  /* line 261, sass/_layout.scss */
+  /* line 271, sass/_layout.scss */
   .sidebar {
     margin-right: 2em;
     margin-left: 2em;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 261, sass/_layout.scss */
+  /* line 271, sass/_layout.scss */
   .sidebar {
     margin-right: 5.675675675675676%;
     margin-left: 5.675675675675676%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 261, sass/_layout.scss */
+  /* line 271, sass/_layout.scss */
   .sidebar {
     border-left: 1px solid #ccc;
     margin: 0 1em 0 0;
@@ -1849,19 +1868,19 @@ a:link,
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
-  /* line 283, sass/_layout.scss */
+  /* line 293, sass/_layout.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.535714285714286em 0 1.071428571428571em 0;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 261, sass/_layout.scss */
+  /* line 271, sass/_layout.scss */
   .sidebar {
     font-size: 1.063rem;
     line-height: 1.47058823529412;
   }
-  /* line 292, sass/_layout.scss */
+  /* line 302, sass/_layout.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.441176470588235em 0 0.882352941176471em 0;
@@ -1874,18 +1893,18 @@ a:link,
  * For main-content and sidebar inside an index-wrapper, e.g., used
  * in the catalog. Use sparingly!
  */
-/* line 305, sass/_layout.scss */
+/* line 315, sass/_layout.scss */
 #faux-content-wrapper {
   border-bottom: 2px dashed #64933a;
 }
 @media screen and (min-width: 43em) {
-  /* line 305, sass/_layout.scss */
+  /* line 315, sass/_layout.scss */
   #faux-content-wrapper {
     width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 305, sass/_layout.scss */
+  /* line 315, sass/_layout.scss */
   #faux-content-wrapper {
     border-bottom-width: 0;
     width: 66.6666666667%;
@@ -1893,13 +1912,13 @@ a:link,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 318, sass/_layout.scss */
+  /* line 328, sass/_layout.scss */
   #faux-sidebar-wrapper {
     width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 318, sass/_layout.scss */
+  /* line 328, sass/_layout.scss */
   #faux-sidebar-wrapper {
     width: 33.3333333333%;
     font-size: 0.875rem;
@@ -1908,14 +1927,14 @@ a:link,
 }
 
 @media screen and (min-width: 70em) {
-  /* line 332, sass/_layout.scss */
+  /* line 342, sass/_layout.scss */
   .faux-sidebar {
     border-left: 1px solid #ccc;
     padding-left: 1em;
   }
 }
 
-/* line 341, sass/_layout.scss */
+/* line 351, sass/_layout.scss */
 .spotlight {
   text-align: center;
 }
@@ -1927,42 +1946,42 @@ a:link,
  * permits. Use sparingly!
  */
 @media screen and (max-width: 20em) {
-  /* line 352, sass/_layout.scss */
+  /* line 362, sass/_layout.scss */
   .gt20 {
     display: none;
   }
 }
 @media screen and (max-width: 22em) {
-  /* line 357, sass/_layout.scss */
+  /* line 367, sass/_layout.scss */
   .gt22 {
     display: none;
   }
 }
 @media screen and (max-width: 32em) {
-  /* line 362, sass/_layout.scss */
+  /* line 372, sass/_layout.scss */
   .gt32 {
     display: none;
   }
 
-  /* line 365, sass/_layout.scss */
+  /* line 375, sass/_layout.scss */
   .ins32 {
     display: none;
   }
 }
 @media screen and (max-width: 43em) {
-  /* line 370, sass/_layout.scss */
+  /* line 380, sass/_layout.scss */
   .gt43 {
     display: none;
   }
 }
 @media screen and (max-width: 70em) {
-  /* line 375, sass/_layout.scss */
+  /* line 385, sass/_layout.scss */
   .gt70 {
     display: none;
   }
 }
 @media screen and (max-width: 88em) {
-  /* line 380, sass/_layout.scss */
+  /* line 390, sass/_layout.scss */
   .gt88 {
     display: none;
   }
