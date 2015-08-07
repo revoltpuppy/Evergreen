@@ -104,8 +104,8 @@
 	position: relative;
 
 	@include breakpoint($lil-groot){
-		font-size: .657rem;  // Step -2
-		line-height: 1.427619682116684;
+		font-size: 0.743rem;  // Step -1
+		line-height: 1.26220127903063;  // 15/11.884
 		letter-spacing: 0.05em;
 	}
 	

@@ -335,41 +335,41 @@ li.internal-users-alt{
     clear: both;
     content: "";
   }
-}
 
-.top-nav-list > li{
-	display: inline-block;
-	
-	
-	@include breakpoint($lil-groot){
-		// box model
-		border-left: 1px solid #333;
-		min-height: 44px;  // IE8
-		// layout
-		display: inline-block;  // IE9
-		display: flex;
-		flex-grow: 1;
-		overflow: hidden;
-    
-    &:first-child{
-    	// box model
-    	border-left-width: 0;
+	> li{
+		display: inline-block;
+		
+		
+		@include breakpoint($lil-groot){
+			// box model
+			border-left: 1px solid #333;
 			// layout
-			flex-grow: 0;
+			display: inline-block;  // IE9
+			display: flex;
+			flex-grow: 1;
+			overflow: hidden;
+			// typography
+			font-family: "Proxima Nova Condensed", "Avenir Next Condensed", Helvetica, Arial, sans-serif;
+	    
+	    &:first-child{
+	    	// box model
+	    	border-left-width: 0;
+			}
 		}
-	}
-  
-  @include breakpoint($starlord){
-		// box model
-		width: 20%;
-		// layout
-		flex-grow: 1;
-		// typography
-		letter-spacing: normal;
-	}
-
-	@include breakpoint($gamora){
-		height: auto;
+	  
+	  @include breakpoint($starlord){
+			// box model
+			width: 20%;
+			// layout
+			flex-grow: 1;
+			// typography
+			font-family: inherit;
+			letter-spacing: normal;
+		}
+	
+		@include breakpoint($gamora){
+			height: auto;
+		}
 	}
 }
 
@@ -398,26 +398,24 @@ li.internal-users-alt{
 		background-color: $blueberry-susan;
 	}
 	
-	@media screen and (min-width: 20em){
+	@include breakpoint($lil-groot){
 		// box model
 		padding: 0.46875rem 0.25rem;  // 7.5/16 2.48/16
 		// layout
 		align-items: center;
 		display: flex;
 		justify-content: center;
-		// typography
-		font-weight: normal;
 		// misc
-		text-shadow: 0 1px 1em hsl(275, 33%, 11%);
+		text-shadow: 0 2px 0 $drop-shadow;
 	}
 	
-	@media screen and (min-width: 22em){
+	@include breakpoint($rocket){
 		// box model
-		padding-right: .66em;
-		padding-left: .66em;
+		padding-right: .6666666667em;
+		padding-left: .6666666667em;
 	}
 	
-	@media screen and (min-width:70em){
+	@include breakpoint($drax){
 		font-size: inherit;
 		line-height: inherit;
 	}
@@ -428,16 +426,13 @@ li.internal-users-alt{
 .top-nav-link:visited{
 	// typography
 	color: #fff;
+	font-weight: 600;
 	
-	@media screen and (min-width:22em){
-		font-weight: bold;
-	}
-	
-	@media screen and (min-width:32em){
+	@include breakpoint($starlord){
 		text-shadow: none;
 	}
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		font-weight: bold;
 	}
 }

@@ -1674,8 +1674,8 @@ a:link,
 @media screen and (min-width: 20em) {
   /* line 102, sass/_layout.scss */
   [role="navigation"] {
-    font-size: .657rem;
-    line-height: 1.427619682116684;
+    font-size: 0.743rem;
+    line-height: 1.26220127903063;
     letter-spacing: 0.05em;
   }
 }
@@ -2393,16 +2393,14 @@ li.internal-users-alt img {
   clear: both;
   content: "";
 }
-
-/* line 340, sass/modules/_header.scss */
+/* line 339, sass/modules/_header.scss */
 .top-nav-list > li {
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 340, sass/modules/_header.scss */
+  /* line 339, sass/modules/_header.scss */
   .top-nav-list > li {
     border-left: 1px solid #333;
-    min-height: 44px;
     display: inline-block;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2411,27 +2409,26 @@ li.internal-users-alt img {
         -ms-flex-positive: 1;
             flex-grow: 1;
     overflow: hidden;
+    font-family: "Proxima Nova Condensed", "Avenir Next Condensed", Helvetica, Arial, sans-serif;
   }
   /* line 354, sass/modules/_header.scss */
   .top-nav-list > li:first-child {
     border-left-width: 0;
-    -webkit-flex-grow: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 340, sass/modules/_header.scss */
+  /* line 339, sass/modules/_header.scss */
   .top-nav-list > li {
     width: 20%;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+    font-family: inherit;
     letter-spacing: normal;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 340, sass/modules/_header.scss */
+  /* line 339, sass/modules/_header.scss */
   .top-nav-list > li {
     height: auto;
   }
@@ -2472,16 +2469,15 @@ li.internal-users-alt img {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font-weight: normal;
-    text-shadow: 0 1px 1em #1e1325;
+    text-shadow: 0 2px 0 rgba(30, 19, 37, 0.25);
   }
 }
 @media screen and (min-width: 22em) {
   /* line 376, sass/modules/_header.scss */
   .top-nav-list a,
   .top-nav-link {
-    padding-right: .66em;
-    padding-left: .66em;
+    padding-right: .6666666667em;
+    padding-left: .6666666667em;
   }
 }
 @media screen and (min-width: 70em) {
@@ -2493,24 +2489,16 @@ li.internal-users-alt img {
   }
 }
 
-/* line 425, sass/modules/_header.scss */
+/* line 423, sass/modules/_header.scss */
 .top-nav-list a,
 .top-nav-list a:visited,
 .top-nav-link,
 .top-nav-link:visited {
   color: #fff;
-}
-@media screen and (min-width: 22em) {
-  /* line 425, sass/modules/_header.scss */
-  .top-nav-list a,
-  .top-nav-list a:visited,
-  .top-nav-link,
-  .top-nav-link:visited {
-    font-weight: bold;
-  }
+  font-weight: 600;
 }
 @media screen and (min-width: 32em) {
-  /* line 425, sass/modules/_header.scss */
+  /* line 423, sass/modules/_header.scss */
   .top-nav-list a,
   .top-nav-list a:visited,
   .top-nav-link,
@@ -2519,7 +2507,7 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 425, sass/modules/_header.scss */
+  /* line 423, sass/modules/_header.scss */
   .top-nav-list a,
   .top-nav-list a:visited,
   .top-nav-link,
@@ -2534,7 +2522,7 @@ li.internal-users-alt img {
  * The textured nav immediately below the primary nav on the
  * homepage only.
  */
-/* line 451, sass/modules/_header.scss */
+/* line 446, sass/modules/_header.scss */
 .secondary-nav-list {
   border-top: 1px solid #46502b;
   margin: 0;
@@ -2544,21 +2532,21 @@ li.internal-users-alt img {
   background: #64933a url(images/texture-1.png);
   list-style-type: none;
 }
-/* line 465, sass/modules/_header.scss */
+/* line 460, sass/modules/_header.scss */
 .secondary-nav-list > li:first-child {
   margin-top: 0.71315146386224em;
 }
-/* line 469, sass/modules/_header.scss */
+/* line 464, sass/modules/_header.scss */
 .secondary-nav-list > li:last-child {
   margin-bottom: 1.42630292772448em;
 }
 @media screen and (min-width: 20em) {
-  /* line 474, sass/modules/_header.scss */
+  /* line 469, sass/modules/_header.scss */
   .secondary-nav-list > li:first-child,
   .secondary-nav-list > li:last-child {
     margin: 0;
   }
-  /* line 479, sass/modules/_header.scss */
+  /* line 474, sass/modules/_header.scss */
   .secondary-nav-list > li {
     margin: 0;
     width: 25%;
@@ -2567,7 +2555,7 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 451, sass/modules/_header.scss */
+  /* line 446, sass/modules/_header.scss */
   .secondary-nav-list {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2576,7 +2564,7 @@ li.internal-users-alt img {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  /* line 494, sass/modules/_header.scss */
+  /* line 489, sass/modules/_header.scss */
   .secondary-nav-list > li {
     width: auto;
     display: inline-block;
@@ -2585,7 +2573,7 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 506, sass/modules/_header.scss */
+  /* line 501, sass/modules/_header.scss */
   .secondary-nav-list > li {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -2593,7 +2581,7 @@ li.internal-users-alt img {
   }
 }
 
-/* line 514, sass/modules/_header.scss */
+/* line 509, sass/modules/_header.scss */
 .secondary-nav-link, .secondary-nav-link:visited {
   border-bottom: 0;
   height: 100%;
@@ -2603,7 +2591,7 @@ li.internal-users-alt img {
   font-weight: normal;
 }
 @media screen and (min-width: 22em) {
-  /* line 514, sass/modules/_header.scss */
+  /* line 509, sass/modules/_header.scss */
   .secondary-nav-link, .secondary-nav-link:visited {
     height: auto;
     padding: 0 1em;
@@ -2611,20 +2599,20 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 514, sass/modules/_header.scss */
+  /* line 509, sass/modules/_header.scss */
   .secondary-nav-link, .secondary-nav-link:visited {
     font-size: inherit;
     line-height: inherit;
   }
 }
-/* line 540, sass/modules/_header.scss */
+/* line 535, sass/modules/_header.scss */
 .secondary-nav-link:hover {
   background-color: #857192;
   color: white;
   box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
   transition: all .1s ease-out;
 }
-/* line 550, sass/modules/_header.scss */
+/* line 545, sass/modules/_header.scss */
 .secondary-nav-link:focus {
   background-color: #492c5d;
 }
@@ -2635,12 +2623,12 @@ li.internal-users-alt img {
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration
  */
-/* line 561, sass/modules/_header.scss */
+/* line 556, sass/modules/_header.scss */
 .site-name {
   margin-top: 3.75rem;
 }
 @media screen and (min-height: 35em) {
-  /* line 564, sass/modules/_header.scss */
+  /* line 559, sass/modules/_header.scss */
   .site-name h1 {
     margin-bottom: 0.673904em;
   }
