@@ -4536,19 +4536,19 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 37, sass/modules/_images.scss */
-  .left,
-  .illus,
-  .illus-alt,
-  .image,
-  .image img,
+  /* line 55, sass/modules/_images.scss */
+  .main-content .left, .main-content
+  .illus, .main-content
+  .illus-alt, .main-content
+  .image, .main-content
+  .image img, .main-content
   .image-alt {
     margin-right: -2em;
   }
 }
 
 @media screen and (min-width: 70em) {
-  /* line 59, sass/modules/_images.scss */
+  /* line 62, sass/modules/_images.scss */
   .left,
   .illus,
   .illus-alt,
@@ -4559,7 +4559,7 @@ p.alert {
     max-width: calc(50% + 2.5em);
   }
 
-  /* line 70, sass/modules/_images.scss */
+  /* line 73, sass/modules/_images.scss */
   .illus-alt,
   .image-alt {
     margin: 0 0 0.631100639515315em -40.943683409437%;
