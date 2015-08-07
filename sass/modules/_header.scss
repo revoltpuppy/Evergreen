@@ -156,7 +156,7 @@ input:checked + .header-dropdown{
 	img{
 		max-height: 4em;
 		
-		@media screen and (min-width: 125em){
+		@include breakpoint($groot){
 			max-height: 6em;
 		}
 	}
@@ -187,7 +187,7 @@ input:checked + .header-dropdown{
 	text-align: center;
 	text-decoration: none;
 	
-	@media screen and (min-width:43em){
+	@include breakpoint($gamora){
 		display: none;
 	}
 }
@@ -242,7 +242,7 @@ input:checked + .header-dropdown{
 	margin-bottom: 0;
 	@include base-type;
 	
-	@media screen and (min-width: 32em){
+	@include breakpoint($starlord){
 		@include base-type-lg;
 	}
 }
@@ -282,7 +282,7 @@ li.internal-users-alt{
 		width: 10px;
 	}
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		display: inline;
 	}
 }
@@ -470,7 +470,7 @@ li.internal-users-alt{
 		margin-bottom: 1.42630292772448em;  // 15/10.5167
 	}
 	
-	@media screen and (min-width: 20em){
+	@include breakpoint($lil-groot){
 		> li:first-child,
 		> li:last-child{
 			margin: 0;
@@ -486,7 +486,7 @@ li.internal-users-alt{
 		}
 	}
 	
-	@media screen and (min-width: 22em){
+	@include breakpoint($rocket){
 		// layout
 		display: flex;
 		justify-content: flex-end;
@@ -502,7 +502,7 @@ li.internal-users-alt{
 		}
 	}
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		> li{
 			@include base-type;
 			line-height: 3.21428571428571;  // 45/14
@@ -523,7 +523,7 @@ li.internal-users-alt{
 		color: white;
 		font-weight: normal;
 		
-		@media screen and (min-width: 22em){
+		@include breakpoint($rocket){
 			// box model
 			height: auto;
 			padding: 0 1em;
@@ -531,7 +531,7 @@ li.internal-users-alt{
 			display: inline-block;
 		}
 	
-		@media screen and (min-width:70em){
+		@include breakpoint($drax){
 			font-size: inherit;
 			line-height: inherit;
 		}
