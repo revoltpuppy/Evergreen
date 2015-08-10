@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 			build: {  // process specific files
 				options: {
 					style: 'compressed', 
-					sourcemap: 'none'
+					//sourcemap: 'none'
 				},
 				files: [
 					{'styles.css': 'styles.scss'},  // 'destination': 'source'
