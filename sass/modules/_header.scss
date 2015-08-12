@@ -497,6 +497,10 @@ li.internal-users-alt{
 		}
 	}
 	
+	@include breakpoint($starlord){
+		font-family: $text-face;
+	}
+	
 	@include breakpoint($gamora){
 		> li{
 			@include base-type;

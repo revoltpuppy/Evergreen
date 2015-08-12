@@ -2568,8 +2568,14 @@ li.internal-users-alt img {
     white-space: nowrap;
   }
 }
+@media screen and (min-width: 32em) {
+  /* line 446, sass/modules/_header.scss */
+  .secondary-nav-list {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
+}
 @media screen and (min-width: 43em) {
-  /* line 501, sass/modules/_header.scss */
+  /* line 505, sass/modules/_header.scss */
   .secondary-nav-list > li {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -2577,7 +2583,7 @@ li.internal-users-alt img {
   }
 }
 
-/* line 509, sass/modules/_header.scss */
+/* line 513, sass/modules/_header.scss */
 .secondary-nav-link, .secondary-nav-link:visited {
   border-bottom: 0;
   height: 100%;
@@ -2587,7 +2593,7 @@ li.internal-users-alt img {
   font-weight: normal;
 }
 @media screen and (min-width: 22em) {
-  /* line 509, sass/modules/_header.scss */
+  /* line 513, sass/modules/_header.scss */
   .secondary-nav-link, .secondary-nav-link:visited {
     height: auto;
     padding: 0 1em;
@@ -2595,20 +2601,20 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 509, sass/modules/_header.scss */
+  /* line 513, sass/modules/_header.scss */
   .secondary-nav-link, .secondary-nav-link:visited {
     font-size: inherit;
     line-height: inherit;
   }
 }
-/* line 535, sass/modules/_header.scss */
+/* line 539, sass/modules/_header.scss */
 .secondary-nav-link:hover {
   background-color: #857192;
   color: white;
   box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
   transition: all .1s ease-out;
 }
-/* line 545, sass/modules/_header.scss */
+/* line 549, sass/modules/_header.scss */
 .secondary-nav-link:focus {
   background-color: #492c5d;
 }
@@ -2619,12 +2625,12 @@ li.internal-users-alt img {
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration
  */
-/* line 556, sass/modules/_header.scss */
+/* line 560, sass/modules/_header.scss */
 .site-name {
   margin-top: 3.75rem;
 }
 @media screen and (min-height: 35em) {
-  /* line 559, sass/modules/_header.scss */
+  /* line 563, sass/modules/_header.scss */
   .site-name h1 {
     margin-bottom: 0.673904em;
   }
