@@ -272,13 +272,13 @@ html {
 
 /* line 24, sass/base/_typography.scss */
 body {
-  font-family: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   -webkit-font-feature-settings: "kern", "liga", "onum";
           font-feature-settings: "kern", "liga", "onum";
   -webkit-font-kerning: normal;
           font-kerning: normal;
-  -webkit-font-variant-ligatures: common-ligatures discretionary-ligatures;
-          font-variant-ligatures: common-ligatures discretionary-ligatures;
+  -webkit-font-variant-ligatures: common-ligatures;
+          font-variant-ligatures: common-ligatures;
   font-variant-numeric: oldstyle-nums;
   text-rendering: optimizeLegibility;
 }
@@ -651,7 +651,7 @@ figcaption,
 small,
 .details,
 .caption {
-  font-family: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.657rem;
   line-height: 1.427619682116684;
 }
@@ -661,7 +661,7 @@ small,
   small,
   .details,
   .caption {
-    font-family: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
@@ -900,7 +900,7 @@ input,
 select,
 textarea {
   border: 1px solid #aea2b6;
-  font-family: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.42857142857143;
   border-radius: 2px;
@@ -1043,7 +1043,7 @@ input[type="submit"] {
   padding: 5px .5em;
   display: inline-block;
   color: #333333;
-  font-family: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 1em;
   font-weight: normal;
   text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
@@ -1996,16 +1996,17 @@ a:link,
  * E. Page Footer
  * F. Special Typography
  * G. Lists
- * H. Icons
- * I. Media Segment
- * J. Boxes
- * K. Images
- * L. Calendars
- * M. News
- * N. Embedded Content
- * O. CMS
+ * H. Tables
+ * I. Icons
+ * J. Media Segment
+ * K. Boxes
+ * L. Images
+ * M. Calendars
+ * N. News
+ * O. Embedded Content
+ * P. CMS
  */
-/* line 25, sass/_modules.scss */
+/* line 26, sass/_modules.scss */
 .top-links,
 .search-list,
 .primary-nav-unit h2,
@@ -2405,7 +2406,6 @@ li.internal-users-alt img {
         -ms-flex-positive: 1;
             flex-grow: 1;
     overflow: hidden;
-    font-family: "Proxima Nova Condensed", "Avenir Next Condensed", Helvetica, Arial, sans-serif;
   }
   /* line 354, sass/modules/_header.scss */
   .top-nav-list > li:first-child {
@@ -2419,7 +2419,7 @@ li.internal-users-alt img {
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    font-family: inherit;
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
     letter-spacing: normal;
   }
 }
@@ -2633,7 +2633,7 @@ li.internal-users-alt img {
 /**
  * B. Background Image
  */
-/* line 40, sass/_modules.scss */
+/* line 41, sass/_modules.scss */
 .main-background,
 .main-background2 {
   width: 100%;
@@ -2644,13 +2644,13 @@ li.internal-users-alt img {
   z-index: -1;
 }
 @media screen and (min-width: 43em) {
-  /* line 40, sass/_modules.scss */
+  /* line 41, sass/_modules.scss */
   .main-background,
   .main-background2 {
     width: 100%;
   }
 }
-/* line 55, sass/_modules.scss */
+/* line 56, sass/_modules.scss */
 .main-background .main-background-img,
 .main-background > img,
 .main-background2 .main-background-img,
@@ -2659,7 +2659,7 @@ li.internal-users-alt img {
   display: block;
 }
 @media screen and (min-width: 43em) {
-  /* line 55, sass/_modules.scss */
+  /* line 56, sass/_modules.scss */
   .main-background .main-background-img,
   .main-background > img,
   .main-background2 .main-background-img,
@@ -2669,7 +2669,7 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 55, sass/_modules.scss */
+  /* line 56, sass/_modules.scss */
   .main-background .main-background-img,
   .main-background > img,
   .main-background2 .main-background-img,
@@ -2678,12 +2678,12 @@ li.internal-users-alt img {
   }
 }
 
-/* line 71, sass/_modules.scss */
+/* line 72, sass/_modules.scss */
 .main-background2 {
   position: -webkit-sticky;
   position: sticky;
 }
-/* line 74, sass/_modules.scss */
+/* line 75, sass/_modules.scss */
 .main-background2 > .main-background-img,
 .main-background2 > img {
   max-height: 100vh;
@@ -2955,13 +2955,13 @@ li.internal-users-alt img {
     line-height: 0.893992371265099;
   }
 }
-/* line 88, sass/_modules.scss */
+/* line 89, sass/_modules.scss */
 .profile-list > li {
   overflow: hidden;
   position: relative;
 }
 
-/* line 100, sass/_modules.scss */
+/* line 101, sass/_modules.scss */
 .profile-img {
   margin-left: -50%;
   width: 200%;
@@ -2969,35 +2969,35 @@ li.internal-users-alt img {
   display: block;
 }
 @media screen and (min-width: 20em) {
-  /* line 100, sass/_modules.scss */
+  /* line 101, sass/_modules.scss */
   .profile-img {
     margin-left: -25%;
     width: 150%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 100, sass/_modules.scss */
+  /* line 101, sass/_modules.scss */
   .profile-img {
     margin-left: 0%;
     width: 100%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 100, sass/_modules.scss */
+  /* line 101, sass/_modules.scss */
   .profile-img {
     width: 120%;
     margin-left: -10%;
   }
 }
 @media screen and (min-width: 60em) {
-  /* line 100, sass/_modules.scss */
+  /* line 101, sass/_modules.scss */
   .profile-img {
     width: 100%;
     margin-left: 0%;
   }
 }
 
-/* line 128, sass/_modules.scss */
+/* line 129, sass/_modules.scss */
 .profile-list .box {
   margin-top: -1.40625rem;
   position: absolute;
@@ -3397,17 +3397,17 @@ ul.accordion-inner {
  *
  * Special, non-base element typography.
  */
-/* line 150, sass/_modules.scss */
+/* line 151, sass/_modules.scss */
 .lead {
   margin-bottom: 0;
 }
 
-/* line 153, sass/_modules.scss */
+/* line 154, sass/_modules.scss */
 .follow {
   margin-top: 0;
 }
 
-/* line 157, sass/_modules.scss */
+/* line 158, sass/_modules.scss */
 .intro {
   margin: 1.169925124792013em 0;
   color: #64933a;
@@ -3415,7 +3415,7 @@ ul.accordion-inner {
   line-height: 1.559900166389351;
 }
 @media screen and (min-width: 43em) {
-  /* line 157, sass/_modules.scss */
+  /* line 158, sass/_modules.scss */
   .intro {
     margin: 1.09075043630017em 0;
     font-size: 1.719rem;
@@ -3423,7 +3423,7 @@ ul.accordion-inner {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 157, sass/_modules.scss */
+  /* line 158, sass/_modules.scss */
   .intro {
     margin: 1.44601542416452em 0;
     font-size: 1.945rem;
@@ -3431,38 +3431,38 @@ ul.accordion-inner {
   }
 }
 
-/* line 182, sass/_modules.scss */
+/* line 183, sass/_modules.scss */
 .intro-alt {
   color: #333;
   font-weight: bold;
 }
 
-/* line 187, sass/_modules.scss */
+/* line 188, sass/_modules.scss */
 .details {
   font-size: .657rem;
   line-height: 1.427619682116684;
 }
 
-/* line 192, sass/_modules.scss */
+/* line 193, sass/_modules.scss */
 .big-fact {
   font-size: 1.063rem;
   line-height: 1.47058823529412;
 }
 @media screen and (min-width: 43em) {
-  /* line 192, sass/_modules.scss */
+  /* line 193, sass/_modules.scss */
   .big-fact {
     margin: .2727272727em 0 .8181818182em 0;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 192, sass/_modules.scss */
+  /* line 193, sass/_modules.scss */
   .big-fact {
     font-size: 1.719rem;
     line-height: 1.090710779858208;
   }
 }
 
-/* line 205, sass/_modules.scss */
+/* line 206, sass/_modules.scss */
 .key-number {
   margin: 0.818419903972065em 0 0 0;
   display: block;
@@ -3472,12 +3472,12 @@ ul.accordion-inner {
   line-height: 1.227629855958097;
 }
 
-/* line 217, sass/_modules.scss */
+/* line 218, sass/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 221, sass/_modules.scss */
+/* line 222, sass/_modules.scss */
 .main-content > p:last-child::after,
 .main-content > ul:last-child > li:last-child::after,
 .main-content > ol:last-child > li:last-child::after,
@@ -3486,7 +3486,7 @@ ul.accordion-inner {
   content: "\00A0" url("/_inc/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 221, sass/_modules.scss */
+  /* line 222, sass/_modules.scss */
   .main-content > p:last-child::after,
   .main-content > ul:last-child > li:last-child::after,
   .main-content > ol:last-child > li:last-child::after,
@@ -3983,7 +3983,17 @@ ul.accordion-inner {
 }
 
 /**
- * H. Icons
+ * H. Tables
+ */
+/* line 242, sass/_modules.scss */
+.dataTable {
+  /*@include breakpoint($starlord){
+  	font-family: $text-face;
+  }*/
+}
+
+/**
+ * I. Icons
  */
 /**
  * Icons
@@ -4093,7 +4103,7 @@ ul.accordion-inner {
 }
 
 /**
- * I. Media Segment
+ * J. Media Segment
  */
 /**
  * H. Media Block
@@ -4220,7 +4230,7 @@ ul.accordion-inner {
 	}
 }*/
 /**
- * J. Boxes
+ * K. Boxes
  */
 /**
  * G. Boxes
@@ -4470,7 +4480,7 @@ p.alert {
 }
 
 /**
- * K. Images
+ * L. Images
  */
 /**
  * J. Images
@@ -4567,7 +4577,7 @@ p.alert {
 	}
 }*/
 /**
- * L. Calendars
+ * M. Calendars
  *
  * @section mod-event-calendar
  */
@@ -4576,7 +4586,7 @@ p.alert {
  *
  * @section mod-event-calendar
  */
-/* line 269, sass/_modules.scss */
+/* line 281, sass/_modules.scss */
 .calendar-dt {
   border: 1px solid #c1b7c7;
   margin: 0 auto;
@@ -4587,13 +4597,13 @@ p.alert {
   border-radius: 2px;
 }
 
-/* line 283, sass/_modules.scss */
+/* line 295, sass/_modules.scss */
 .calendar-month {
   padding: 0 .5em;
   width: 100%;
   display: block;
   color: white;
-  font-family: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.657rem;
   line-height: 1.427619682116684;
   font-weight: bold;
@@ -4603,29 +4613,29 @@ p.alert {
 }
 
 @media screen {
-  /* line 299, sass/_modules.scss */
+  /* line 311, sass/_modules.scss */
   .calendar-dt-mini {
     width: 2em;
   }
-  /* line 303, sass/_modules.scss */
+  /* line 315, sass/_modules.scss */
   .calendar-dt-mini .calendar-month {
     padding: 0;
     min-height: 0.875rem;
     font-size: 0.625rem;
     font-weight: normal;
   }
-  /* line 316, sass/_modules.scss */
+  /* line 328, sass/_modules.scss */
   .calendar-dt-mini .calendar-day {
     height: 1.42857em;
     display: block;
   }
 }
 
-/* line 325, sass/_modules.scss */
+/* line 337, sass/_modules.scss */
 .calendar-dt-null {
   background-color: #dad4de;
 }
-/* line 328, sass/_modules.scss */
+/* line 340, sass/_modules.scss */
 .calendar-dt-null .calendar-month {
   background-color: #b6aabe;
 }
@@ -4639,27 +4649,27 @@ p.alert {
  *
  * @section mod-upcoming-events-homepage
  */
-/* line 344, sass/_modules.scss */
+/* line 356, sass/_modules.scss */
 .upcoming-events-homepage {
   margin: 0 auto;
 }
-/* line 348, sass/_modules.scss */
+/* line 360, sass/_modules.scss */
 .upcoming-events-homepage .media {
   border-bottom: 1px solid #c1b7c7;
 }
-/* line 352, sass/_modules.scss */
+/* line 364, sass/_modules.scss */
 .upcoming-events-homepage .media-body {
   text-align: center;
 }
 @media screen and (min-width: 32em) {
-  /* line 344, sass/_modules.scss */
+  /* line 356, sass/_modules.scss */
   .upcoming-events-homepage {
     margin: 0 auto 1rem;
     max-width: 66.6666666666%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 344, sass/_modules.scss */
+  /* line 356, sass/_modules.scss */
   .upcoming-events-homepage {
     margin-top: 1rem;
     margin-left: -24.58203125%;
@@ -4670,68 +4680,68 @@ p.alert {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 344, sass/_modules.scss */
+  /* line 356, sass/_modules.scss */
   .upcoming-events-homepage {
     margin-left: -25.520833333333%;
     width: 23.484848484848%;
     font-size: 1.063rem;
     line-height: 1.47058823529412;
   }
-  /* line 378, sass/_modules.scss */
+  /* line 390, sass/_modules.scss */
   .upcoming-events-homepage li {
     margin: 0.441176470588235em 0 0.882352941176471em 0;
   }
 }
 
-/* line 384, sass/_modules.scss */
+/* line 396, sass/_modules.scss */
 .upcoming-events-homepage2 {
   margin: 0 auto;
 }
 @media screen and (min-width: 43em) {
-  /* line 384, sass/_modules.scss */
+  /* line 396, sass/_modules.scss */
   .upcoming-events-homepage2 {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 384, sass/_modules.scss */
+  /* line 396, sass/_modules.scss */
   .upcoming-events-homepage2 {
     font-size: 1.063rem;
     line-height: 1.47058823529412;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 384, sass/_modules.scss */
+  /* line 396, sass/_modules.scss */
   .upcoming-events-homepage2 {
     font-size: 1.202rem;
     line-height: 1.29991680532446;
   }
 }
-/* line 402, sass/_modules.scss */
+/* line 414, sass/_modules.scss */
 .upcoming-events-homepage2 li {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
 }
 @media screen and (min-width: 70em) {
-  /* line 402, sass/_modules.scss */
+  /* line 414, sass/_modules.scss */
   .upcoming-events-homepage2 li {
     margin: 0.441176470588235em 0 0.882352941176471em 0;
   }
 }
 
-/* line 412, sass/_modules.scss */
+/* line 424, sass/_modules.scss */
 .upcoming-events-list-wrapper {
   overflow: hidden;
   position: relative;
 }
 @media screen and (min-width: 43em) {
-  /* line 412, sass/_modules.scss */
+  /* line 424, sass/_modules.scss */
   .upcoming-events-list-wrapper {
     overflow-x: visible;
   }
 }
 
-/* line 421, sass/_modules.scss */
+/* line 433, sass/_modules.scss */
 .grid.upcoming-events-list {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
@@ -4747,7 +4757,7 @@ p.alert {
   scroll-snap-type: mandatory;
 }
 @media screen and (min-width: 43em) {
-  /* line 421, sass/_modules.scss */
+  /* line 433, sass/_modules.scss */
   .grid.upcoming-events-list {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -4758,7 +4768,7 @@ p.alert {
     scroll-snap-type: none;
   }
 }
-/* line 449, sass/_modules.scss */
+/* line 461, sass/_modules.scss */
 .grid.upcoming-events-list > .unit-1-7 {
   width: 66.666666%;
   -webkit-flex-shrink: 0;
@@ -4767,19 +4777,19 @@ p.alert {
   scroll-snap-coordinate: 0 0;
 }
 @media screen and (min-width: 20em) {
-  /* line 449, sass/_modules.scss */
+  /* line 461, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 40%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 449, sass/_modules.scss */
+  /* line 461, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 29%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 449, sass/_modules.scss */
+  /* line 461, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 14.285714285714%;
     -webkit-flex-shrink: 1;
@@ -4787,23 +4797,23 @@ p.alert {
             flex-shrink: 1;
   }
 }
-/* line 472, sass/_modules.scss */
+/* line 484, sass/_modules.scss */
 .grid.upcoming-events-list > .unit-1-7:last-child {
   scroll-snap-coordinate: -50% 0;
 }
 @media screen and (min-width: 20em) {
-  /* line 472, sass/_modules.scss */
+  /* line 484, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7:last-child {
     scroll-snap-coordinate: -150% 0;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 472, sass/_modules.scss */
+  /* line 484, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7:last-child {
     scroll-snap-coordinate: none;
   }
 }
-/* line 485, sass/_modules.scss */
+/* line 497, sass/_modules.scss */
 .grid.upcoming-events-list::after {
   height: 100%;
   width: 100%;
@@ -4815,12 +4825,12 @@ p.alert {
   content: "";
 }
 @media screen and (min-width: 43em) {
-  /* line 485, sass/_modules.scss */
+  /* line 497, sass/_modules.scss */
   .grid.upcoming-events-list::after {
     display: none;
   }
 }
-/* line 503, sass/_modules.scss */
+/* line 515, sass/_modules.scss */
 .grid.upcoming-events-list .media-body {
   text-align: center;
 }
@@ -4830,11 +4840,11 @@ p.alert {
  *
  * @section mod-event-calendar
  */
-/* line 513, sass/_modules.scss */
+/* line 525, sass/_modules.scss */
 .schedule {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
 }
-/* line 516, sass/_modules.scss */
+/* line 528, sass/_modules.scss */
 .schedule .h-event {
   padding: 1em;
   display: -webkit-flex;
@@ -4846,47 +4856,47 @@ p.alert {
   overflow: hidden;
   border-radius: 2px;
 }
-/* line 526, sass/_modules.scss */
+/* line 538, sass/_modules.scss */
 .schedule .h-event:nth-child(even) {
   background-color: #e3dfe6;
 }
-/* line 531, sass/_modules.scss */
+/* line 543, sass/_modules.scss */
 .schedule .schedule-event-required {
   border: 2px solid #64933a;
 }
-/* line 534, sass/_modules.scss */
+/* line 546, sass/_modules.scss */
 .schedule .schedule-event-required + .schedule-event-required {
   margin-top: 2px;
 }
-/* line 538, sass/_modules.scss */
+/* line 550, sass/_modules.scss */
 .schedule .schedule-event-required:nth-of-type(odd) {
   background-color: #eff4eb;
 }
-/* line 542, sass/_modules.scss */
+/* line 554, sass/_modules.scss */
 .schedule .schedule-event-required:nth-of-type(even) {
   background-color: #e0e9d7;
 }
-/* line 546, sass/_modules.scss */
+/* line 558, sass/_modules.scss */
 .schedule .schedule-event-required .p-name {
   color: #46502b;
 }
-/* line 551, sass/_modules.scss */
+/* line 563, sass/_modules.scss */
 .schedule .schedule-event-morning {
   background-color: #fdf4b6;
 }
-/* line 557, sass/_modules.scss */
+/* line 569, sass/_modules.scss */
 .schedule .schedule-event-evening:nth-of-type(odd) {
   background-color: #e5f2fd;
 }
-/* line 561, sass/_modules.scss */
+/* line 573, sass/_modules.scss */
 .schedule .schedule-event-evening:nth-of-type(even) {
   background-color: #cce6fb;
 }
-/* line 565, sass/_modules.scss */
+/* line 577, sass/_modules.scss */
 .schedule .schedule-event-evening .p-name {
   color: #00355f;
 }
-/* line 570, sass/_modules.scss */
+/* line 582, sass/_modules.scss */
 .schedule .schedule-event-evening-start::before {
   border-bottom: 1px solid #0086ee;
   width: 100%;
@@ -4894,7 +4904,7 @@ p.alert {
   text-align: center;
   content: "Evening Events";
 }
-/* line 584, sass/_modules.scss */
+/* line 596, sass/_modules.scss */
 .schedule .schedule-event-time {
   padding-right: 1em;
   color: #46502b;
@@ -4908,7 +4918,7 @@ p.alert {
  *
  * @section mod-event-calendar
  */
-/* line 603, sass/_modules.scss */
+/* line 615, sass/_modules.scss */
 .bulletin {
   border-bottom: 1px solid #b6aabe;
   background-color: #ece9ee;
@@ -4916,25 +4926,25 @@ p.alert {
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 70em) {
-  /* line 603, sass/_modules.scss */
+  /* line 615, sass/_modules.scss */
   .bulletin {
     font-size: 1.063rem;
     line-height: 1.47058823529412;
   }
 }
-/* line 615, sass/_modules.scss */
+/* line 627, sass/_modules.scss */
 .bulletin > .wrapper {
   width: calc(100% - 2em);
 }
 
-/* line 620, sass/_modules.scss */
+/* line 632, sass/_modules.scss */
 .bulletin .grid {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-/* line 624, sass/_modules.scss */
+/* line 636, sass/_modules.scss */
 .bulletin-header,
 .bulletin-body {
   width: 100%;
@@ -4942,30 +4952,30 @@ p.alert {
 }
 
 @media screen and (min-width: 20em) {
-  /* line 630, sass/_modules.scss */
+  /* line 642, sass/_modules.scss */
   .bulletin-header {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 630, sass/_modules.scss */
+  /* line 642, sass/_modules.scss */
   .bulletin-header {
     width: 14.285714285714%;
   }
 }
-/* line 639, sass/_modules.scss */
+/* line 651, sass/_modules.scss */
 .bulletin-header h2 {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
   text-align: left;
 }
 @media screen and (min-width: 20em) {
-  /* line 639, sass/_modules.scss */
+  /* line 651, sass/_modules.scss */
   .bulletin-header h2 {
     text-align: right;
   }
 }
 
-/* line 651, sass/_modules.scss */
+/* line 663, sass/_modules.scss */
 .chrono-meter {
   width: 100%;
   display: -webkit-flex;
@@ -4976,7 +4986,7 @@ p.alert {
           justify-content: space-between;
 }
 @media screen and (min-width: 20em) {
-  /* line 651, sass/_modules.scss */
+  /* line 663, sass/_modules.scss */
   .chrono-meter {
     margin-right: 1em;
     width: auto;
@@ -4988,7 +4998,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 651, sass/_modules.scss */
+  /* line 663, sass/_modules.scss */
   .chrono-meter {
     margin-right: 0;
     width: 100%;
@@ -5001,7 +5011,7 @@ p.alert {
   }
 }
 
-/* line 678, sass/_modules.scss */
+/* line 690, sass/_modules.scss */
 .chrono-meter > li {
   border: 1px solid #b6aabe;
   height: 7.5px;
@@ -5009,7 +5019,7 @@ p.alert {
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 678, sass/_modules.scss */
+  /* line 690, sass/_modules.scss */
   .chrono-meter > li {
     margin-bottom: 2px;
     clear: left;
@@ -5018,31 +5028,31 @@ p.alert {
   }
 }
 
-/* line 696, sass/_modules.scss */
+/* line 708, sass/_modules.scss */
 .chrono-stop-current {
   background-color: #dad4de;
 }
 
-/* line 700, sass/_modules.scss */
+/* line 712, sass/_modules.scss */
 .chrono-stop-complete {
   background-color: #b6aabe;
 }
 
 @media screen and (min-width: 20em) {
-  /* line 705, sass/_modules.scss */
+  /* line 717, sass/_modules.scss */
   .bulletin-body {
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 705, sass/_modules.scss */
+  /* line 717, sass/_modules.scss */
   .bulletin-body {
     width: 85.714285714286%;
   }
 }
 
 @media screen and (min-width: 43em) {
-  /* line 714, sass/_modules.scss */
+  /* line 726, sass/_modules.scss */
   .bulletin-calendar {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5051,7 +5061,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 719, sass/_modules.scss */
+  /* line 731, sass/_modules.scss */
   .bulletin-calendar > li {
     float: left;
     padding-left: 1em;
@@ -5060,9 +5070,9 @@ p.alert {
 }
 
 /**
- * M. News
+ * N. News
  */
-/* line 730, sass/_modules.scss */
+/* line 742, sass/_modules.scss */
 .news {
   border-top: 1px solid #d1cad6;
   border-bottom: 1px solid #d1cad6;
@@ -5070,13 +5080,13 @@ p.alert {
   background-color: #E3DFE6;
 }
 
-/* line 740, sass/_modules.scss */
+/* line 752, sass/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
   width: calc(100% - 2em);
 }
 
-/* line 746, sass/_modules.scss */
+/* line 758, sass/_modules.scss */
 .news-story {
   border: 1px solid #ccc;
   height: calc(100% - 1em);
@@ -5088,9 +5098,9 @@ p.alert {
 }
 
 /**
- * N. Embeded Content
+ * O. Embeded Content
  */
-/* line 764, sass/_modules.scss */
+/* line 776, sass/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -5098,7 +5108,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 774, sass/_modules.scss */
+/* line 786, sass/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -5117,40 +5127,45 @@ p.alert {
   background-image: url(http://evergreen.edu/_inc/images/texture-1.png);
   content: url(http://evergreen.edu/_inc/images/icons/green/play.png);
 }
-/* line 793, sass/_modules.scss */
+/* line 805, sass/_modules.scss */
 .lazy-load:hover::after {
   opacity: .85;
 }
-/* line 797, sass/_modules.scss */
+/* line 809, sass/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 805, sass/_modules.scss */
+/* line 817, sass/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 813, sass/_modules.scss */
+/* line 825, sass/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
 
 /**
- * O. CMS
+ * P. CMS
  *
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 825, sass/_modules.scss */
+/* line 837, sass/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
   max-width: 48em;
   display: block;
+}
+
+/* line 846, sass/_modules.scss */
+#toolbar {
+  box-shadow: 0 1px 0.25em rgba(30, 19, 37, 0.25);
 }
 
 /**

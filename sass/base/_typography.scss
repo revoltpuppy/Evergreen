@@ -39,7 +39,7 @@ body{
 	// tnum - Tabular figures (Fixed-width numbers)
 	font-feature-settings: "kern", "liga", "onum";  // Low-level OpenType features; these could be turned off eventually
 	font-kerning: normal;
-	font-variant-ligatures: common-ligatures discretionary-ligatures;
+	font-variant-ligatures: common-ligatures;
 	font-variant-numeric: oldstyle-nums;
 	text-rendering: optimizeLegibility;
 }
