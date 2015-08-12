@@ -349,7 +349,7 @@ li.internal-users-alt{
 			flex-grow: 1;
 			overflow: hidden;
 			// typography
-			font-family: "Proxima Nova Condensed", "Avenir Next Condensed", Helvetica, Arial, sans-serif;
+			//font-family: "Proxima Nova Condensed", "Avenir Next Condensed", Helvetica, Arial, sans-serif;
 	    
 	    &:first-child{
 	    	// box model
@@ -363,7 +363,7 @@ li.internal-users-alt{
 			// layout
 			flex-grow: 1;
 			// typography
-			font-family: inherit;
+			font-family: $text-face;
 			letter-spacing: normal;
 		}
 	

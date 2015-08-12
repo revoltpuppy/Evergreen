@@ -23,9 +23,9 @@ $shade: hsl(0, 0%, 0%);
 
 $drop-shadow: hsla(275, 33%, 11%, .25);
 
-$display-face: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
-$text-face: Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
-$small-face: Verdana, Avenir, "Avenir Next", "Proxima Nova", Helvetica, Arial, sans-serif;
+$display-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+$text-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+$small-face: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 
 /**
  * Breakpoints
