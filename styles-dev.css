@@ -2398,6 +2398,9 @@ li.internal-users-alt img {
   /* line 339, sass/modules/_header.scss */
   .top-nav-list > li {
     border-left: 1px solid #333;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     display: inline-block;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2407,7 +2410,7 @@ li.internal-users-alt img {
             flex-grow: 1;
     overflow: hidden;
   }
-  /* line 354, sass/modules/_header.scss */
+  /* line 355, sass/modules/_header.scss */
   .top-nav-list > li:first-child {
     border-left-width: 0;
   }
@@ -2430,31 +2433,31 @@ li.internal-users-alt img {
   }
 }
 
-/* line 376, sass/modules/_header.scss */
-.top-nav-list a,
-.top-nav-link {
+/* line 378, sass/modules/_header.scss */
+.top-nav-link,
+.secondary-nav-link {
   padding: 0.46875rem 1rem;
   border-bottom-width: 0;
   width: 100%;
   display: block;
 }
-/* line 385, sass/modules/_header.scss */
-.top-nav-list a:hover,
-.top-nav-link:hover {
+/* line 387, sass/modules/_header.scss */
+.top-nav-link:hover,
+.secondary-nav-link:hover {
   background-color: #857192;
   color: white;
   box-shadow: 0 0 1px rgba(253, 244, 182, 0.5) inset, 0 0 1em rgba(253, 244, 182, 0) inset;
   transition: all .1s ease-out;
 }
-/* line 397, sass/modules/_header.scss */
-.top-nav-list a:focus,
-.top-nav-link:focus {
+/* line 399, sass/modules/_header.scss */
+.top-nav-link:focus,
+.secondary-nav-link:focus {
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 376, sass/modules/_header.scss */
-  .top-nav-list a,
-  .top-nav-link {
+  /* line 378, sass/modules/_header.scss */
+  .top-nav-link,
+  .secondary-nav-link {
     padding: 0.46875rem 0.25rem;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -2469,23 +2472,23 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 376, sass/modules/_header.scss */
-  .top-nav-list a,
-  .top-nav-link {
-    padding-right: .6666666667em;
-    padding-left: .6666666667em;
+  /* line 378, sass/modules/_header.scss */
+  .top-nav-link,
+  .secondary-nav-link {
+    padding-right: 0.6666666667em;
+    padding-left: 0.6666666667em;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 376, sass/modules/_header.scss */
-  .top-nav-list a,
-  .top-nav-link {
+  /* line 378, sass/modules/_header.scss */
+  .top-nav-link,
+  .secondary-nav-link {
     font-size: inherit;
     line-height: inherit;
   }
 }
 
-/* line 423, sass/modules/_header.scss */
+/* line 425, sass/modules/_header.scss */
 .top-nav-list a,
 .top-nav-list a:visited,
 .top-nav-link,
@@ -2494,7 +2497,7 @@ li.internal-users-alt img {
   font-weight: 600;
 }
 @media screen and (min-width: 32em) {
-  /* line 423, sass/modules/_header.scss */
+  /* line 425, sass/modules/_header.scss */
   .top-nav-list a,
   .top-nav-list a:visited,
   .top-nav-link,
@@ -2503,7 +2506,7 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 423, sass/modules/_header.scss */
+  /* line 425, sass/modules/_header.scss */
   .top-nav-list a,
   .top-nav-list a:visited,
   .top-nav-link,
@@ -2518,7 +2521,7 @@ li.internal-users-alt img {
  * The textured nav immediately below the primary nav on the
  * homepage only.
  */
-/* line 446, sass/modules/_header.scss */
+/* line 448, sass/modules/_header.scss */
 .secondary-nav-list {
   border-top: 1px solid #46502b;
   margin: 0;
@@ -2528,21 +2531,21 @@ li.internal-users-alt img {
   background: #64933a url(images/texture-1.png);
   list-style-type: none;
 }
-/* line 460, sass/modules/_header.scss */
+/* line 462, sass/modules/_header.scss */
 .secondary-nav-list > li:first-child {
   margin-top: 0.71315146386224em;
 }
-/* line 464, sass/modules/_header.scss */
+/* line 466, sass/modules/_header.scss */
 .secondary-nav-list > li:last-child {
   margin-bottom: 1.42630292772448em;
 }
 @media screen and (min-width: 20em) {
-  /* line 469, sass/modules/_header.scss */
+  /* line 471, sass/modules/_header.scss */
   .secondary-nav-list > li:first-child,
   .secondary-nav-list > li:last-child {
     margin: 0;
   }
-  /* line 474, sass/modules/_header.scss */
+  /* line 476, sass/modules/_header.scss */
   .secondary-nav-list > li {
     margin: 0;
     width: 25%;
@@ -2551,7 +2554,7 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 446, sass/modules/_header.scss */
+  /* line 448, sass/modules/_header.scss */
   .secondary-nav-list {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2560,7 +2563,7 @@ li.internal-users-alt img {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  /* line 489, sass/modules/_header.scss */
+  /* line 491, sass/modules/_header.scss */
   .secondary-nav-list > li {
     width: auto;
     display: inline-block;
@@ -2569,13 +2572,13 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 446, sass/modules/_header.scss */
+  /* line 448, sass/modules/_header.scss */
   .secondary-nav-list {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 505, sass/modules/_header.scss */
+  /* line 507, sass/modules/_header.scss */
   .secondary-nav-list > li {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -2583,7 +2586,7 @@ li.internal-users-alt img {
   }
 }
 
-/* line 513, sass/modules/_header.scss */
+/* line 515, sass/modules/_header.scss */
 .secondary-nav-link, .secondary-nav-link:visited {
   border-bottom: 0;
   height: 100%;
@@ -2593,7 +2596,7 @@ li.internal-users-alt img {
   font-weight: normal;
 }
 @media screen and (min-width: 22em) {
-  /* line 513, sass/modules/_header.scss */
+  /* line 515, sass/modules/_header.scss */
   .secondary-nav-link, .secondary-nav-link:visited {
     height: auto;
     padding: 0 1em;
@@ -2601,20 +2604,20 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 513, sass/modules/_header.scss */
+  /* line 515, sass/modules/_header.scss */
   .secondary-nav-link, .secondary-nav-link:visited {
     font-size: inherit;
     line-height: inherit;
   }
 }
-/* line 539, sass/modules/_header.scss */
+/* line 541, sass/modules/_header.scss */
 .secondary-nav-link:hover {
   background-color: #857192;
   color: white;
   box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
   transition: all .1s ease-out;
 }
-/* line 549, sass/modules/_header.scss */
+/* line 551, sass/modules/_header.scss */
 .secondary-nav-link:focus {
   background-color: #492c5d;
 }
@@ -2625,12 +2628,12 @@ li.internal-users-alt img {
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration
  */
-/* line 560, sass/modules/_header.scss */
+/* line 562, sass/modules/_header.scss */
 .site-name {
   margin-top: 3.75rem;
 }
 @media screen and (min-height: 35em) {
-  /* line 563, sass/modules/_header.scss */
+  /* line 565, sass/modules/_header.scss */
   .site-name h1 {
     margin-bottom: 0.673904em;
   }

@@ -344,6 +344,7 @@ li.internal-users-alt{
 			// box model
 			border-left: 1px solid #333;
 			// layout
+			align-items: stretch;
 			display: inline-block;  // IE9
 			display: flex;
 			flex-grow: 1;
@@ -373,8 +374,9 @@ li.internal-users-alt{
 	}
 }
 
-.top-nav-list a,
-.top-nav-link{
+//.top-nav-list a,
+.top-nav-link,
+.secondary-nav-link{
 	// box model
 	padding: 0.46875rem 1rem;  // 7.5/16
 	border-bottom-width: 0;
@@ -411,8 +413,8 @@ li.internal-users-alt{
 	
 	@include breakpoint($rocket){
 		// box model
-		padding-right: .6666666667em;
-		padding-left: .6666666667em;
+		padding-right: 0.6666666667em;
+		padding-left: 0.6666666667em;
 	}
 	
 	@include breakpoint($drax){
