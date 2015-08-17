@@ -451,7 +451,8 @@ li.internal-users-alt{
 	margin: 0;
 	padding: 0;
 	// layout
-	overflow: hidden;
+	display: flex;
+	overflow: hidden;  // IE9
 	// typography
 	text-align: center;
 	// backgrounds & borders
@@ -459,12 +460,16 @@ li.internal-users-alt{
 	// list
 	list-style-type: none;
 	
-	> li:first-child{
-		margin-top: 0.71315146386224em;  // 7.5/10.5167
-	}
+	> li{
+		flex-grow: 1;
 	
-	> li:last-child{
-		margin-bottom: 1.42630292772448em;  // 15/10.5167
+		&:first-child{
+			margin-top: 0.71315146386224em;  // 7.5/10.5167
+		}
+		
+		&:last-child{
+			margin-bottom: 1.42630292772448em;  // 15/10.5167
+		}
 	}
 	
 	@include breakpoint($lil-groot){
@@ -475,17 +480,17 @@ li.internal-users-alt{
 		
 		> li{
 			margin: 0;
-			width: 25%;
+			width: 25%;  // IE 9
 			//layout
-			float: left;
+			float: left;  // IE9
 			//typography
-			line-height: 2.85260585544895;
+			//line-height: 2.85260585544895;
 		}
 	}
 	
 	@include breakpoint($rocket){
 		// layout
-		display: flex;
+		//display: flex;
 		justify-content: flex-end;
 
 		> li{
@@ -493,7 +498,8 @@ li.internal-users-alt{
 			width: auto;
 			// layout
 			display: inline-block;  // IE9
-			float: none;
+			flex-grow: 0;
+			float: none;  // IE 9
 			// typography
 			white-space: nowrap;
 		}
@@ -510,6 +516,7 @@ li.internal-users-alt{
 		}
 	}
 }
+
 .secondary-nav-link{
 
 	&,
@@ -519,7 +526,7 @@ li.internal-users-alt{
 		height: 100%;
 		width: 100%;
 		// layout
-		display: block;
+		//display: block;
 		// typography
 		color: white;
 		font-weight: normal;
