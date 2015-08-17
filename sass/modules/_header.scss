@@ -484,7 +484,6 @@ li.internal-users-alt{
 			//layout
 			float: left;  // IE9
 			//typography
-			//line-height: 2.85260585544895;
 		}
 	}
 	
@@ -501,12 +500,14 @@ li.internal-users-alt{
 			flex-grow: 0;
 			float: none;  // IE 9
 			// typography
+			line-height: 2.52440255806126;  // 30/11.884
 			white-space: nowrap;
 		}
 	}
 	
 	@include breakpoint($starlord){
 		font-family: $text-face;
+		line-height: 2.14285714285714;  // 30/14
 	}
 	
 	@include breakpoint($gamora){

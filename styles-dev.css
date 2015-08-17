@@ -2568,7 +2568,7 @@ li.internal-users-alt img {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  /* line 496, sass/modules/_header.scss */
+  /* line 495, sass/modules/_header.scss */
   .secondary-nav-list > li {
     width: auto;
     display: inline-block;
@@ -2576,6 +2576,7 @@ li.internal-users-alt img {
         -ms-flex-positive: 0;
             flex-grow: 0;
     float: none;
+    line-height: 2.52440255806126;
     white-space: nowrap;
   }
 }
@@ -2583,10 +2584,11 @@ li.internal-users-alt img {
   /* line 448, sass/modules/_header.scss */
   .secondary-nav-list {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+    line-height: 2.14285714285714;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 513, sass/modules/_header.scss */
+  /* line 514, sass/modules/_header.scss */
   .secondary-nav-list > li {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -2594,7 +2596,7 @@ li.internal-users-alt img {
   }
 }
 
-/* line 522, sass/modules/_header.scss */
+/* line 523, sass/modules/_header.scss */
 .secondary-nav-link, .secondary-nav-link:visited {
   border-bottom: 0;
   height: 100%;
@@ -2603,7 +2605,7 @@ li.internal-users-alt img {
   font-weight: normal;
 }
 @media screen and (min-width: 22em) {
-  /* line 522, sass/modules/_header.scss */
+  /* line 523, sass/modules/_header.scss */
   .secondary-nav-link, .secondary-nav-link:visited {
     height: auto;
     padding: 0 1em;
@@ -2611,20 +2613,20 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 522, sass/modules/_header.scss */
+  /* line 523, sass/modules/_header.scss */
   .secondary-nav-link, .secondary-nav-link:visited {
     font-size: inherit;
     line-height: inherit;
   }
 }
-/* line 548, sass/modules/_header.scss */
+/* line 549, sass/modules/_header.scss */
 .secondary-nav-link:hover {
   background-color: #857192;
   color: white;
   box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
   transition: all .1s ease-out;
 }
-/* line 558, sass/modules/_header.scss */
+/* line 559, sass/modules/_header.scss */
 .secondary-nav-link:focus {
   background-color: #492c5d;
 }
@@ -2635,12 +2637,12 @@ li.internal-users-alt img {
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration
  */
-/* line 569, sass/modules/_header.scss */
+/* line 570, sass/modules/_header.scss */
 .site-name {
   margin-top: 3.75rem;
 }
 @media screen and (min-height: 35em) {
-  /* line 572, sass/modules/_header.scss */
+  /* line 573, sass/modules/_header.scss */
   .site-name h1 {
     margin-bottom: 0.673904em;
   }
