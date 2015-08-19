@@ -1,4 +1,121 @@
-@charset "UTF-8";/*!*
+@charset "UTF-8";
+/**
+ * Sass Constants
+ *
+ * @section sass-constants
+ */
+/**
+ * Colors
+ */
+/**
+ * Breakpoints
+ *
+ * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
+ */
+/**
+ * Modular Scale
+ *
+ * The typographic scale we are using for measurements.
+ * Ideal text size is 17px
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * @see http://modularscale.com/scale/?px1=17&px2=345&ra1=1.618&ra2=0
+ */
+/* Step #    Pixels     Ems    Rems
+ *     18   903.184  53.128  56.449
+ *     17   798.512  46.971  49.907
+ *     16   558.210  32.836  34.888
+ *     15   493.518  29.030  30.845
+ *     14   345.000  20.294  21.563
+ *     13   305.017  17.942  19.064
+ *     12   213.226  12.543  13.327
+ *     11   188.515  11.089  11.782
+ *     10   131.784   7.752   8.237
+ *      9   116.511   6.854   7.282
+ *      8    81.449   4.791   5.091
+ *      7    72.009   4.236   4.501
+ *      6    50.339   2.961   3.146
+ *      5    44.505   2.618   2.782
+ *      4    31.112   1.830   1.945
+ *      3    27.506   1.618   1.719
+ *      2    19.229   1.131   1.202
+ *      1    17.000   1       1.063*
+ *      0.5  14.000   0.824   0.875  Fudged for better readability, especially on mobile.
+ *     -1    11.884   0.699   0.743
+ *     -2    10.507   0.618   0.657
+ *     -3     7.345   0.432   0.459
+ *     -4     6.494   0.382   0.406
+ *     -5     4.540   0.267   0.284
+ *     -6     4.014   0.236   0.251
+ *     -7     2.806   0.165   0.175
+ *     -8     2.481   0.146   0.155
+ *     -9     1.734   0.102   0.108
+ *    -10     1.533   0.090   0.096
+ *    -11     1.072   0.063   0.067
+ */
+/**
+ * Sass Mixins
+ *
+ * @section sass-mixins
+ */
+/**
+ * Margins
+ */
+/**
+ * Font Sizes
+ */
+/**
+ * Backgrounds
+ */
+/**
+ * Replaces PNG background-image with multiple repeating
+ * gradients instead. Unfortunately, Chrome totally craps out
+ * in the rendering department, so this will have to wait for
+ * another day.
+ */
+/*@mixin background-default{
+	background-image:  Safari 6
+		 diagonal lines
+		-webkit-repeating-linear-gradient(
+			-45deg,
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 2px,
+			hsla(0, 0%, 0%, 0) 3px
+		),
+		 1px dots
+		-webkit-radial-gradient(
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 1px,
+			hsla(0, 0%, 0%, 0) 2px
+		);
+	background-image:
+		 diagonal lines
+		repeating-linear-gradient(
+			-45deg,
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 2px,
+			hsla(0, 0%, 0%, 0) 3px
+		),
+		 1px dots
+		radial-gradient(
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 1px,
+			hsla(0, 0%, 0%, 0) 2px
+		);
+	
+	background-size:
+		 diagonal lines
+		100% 100%,
+		 1px dots
+		10px 10px;
+}*/
+/*!*
  * Search Styles
  *
  * Style overrides for the Google search engine results page integrated
@@ -11,5 +128,183 @@
  * @copyright  2013 by the author
  * @cssdoc     0.2.22
  * @license    Copyrighted
- */#___gcse_0 .cse .gsc-control-cse,#___gcse_0 .gsc-control-cse{border-width:0;padding:0;background-color:transparent}.gsc-control-cse{font-family:proxima-nova,"Proxima Nova",Avenir,"Avenir Next",Helvetica,Arial,sans-serif !important;font-family:"proxima-nova" !important}.gsc-control-cse table{margin:0}.gsc-control-cse td{border-width:0;padding:0}.gsc-control-wrapper-cse form.gsc-search-box,.gsc-control-wrapper-cse table.gsc-search-box{margin:0}.gsc-input,.gsc-search-button,.gsc-clear-button{padding:0;box-shadow:none}.gsc-input .gsc-input-box{height:auto}.gsc-control-cse .gsib_a{padding:4px 8px}.gsst_b .gsst_a{border-bottom:none}.gsc-search-box input.gsc-search-button,.cse .gsc-search-box .gsc-search-button input.gsc-search-button-v2,.gsc-search-box input.gsc-search-button-v2{height:auto;margin:0;padding:7px 27px;width:auto;display:block}div.gsc-selected-option-container{padding:0 1em;width:auto !important;max-width:none;min-width:0}.gs-result .gs-spelling{padding:0;display:inline}.gs-spelling::after{content:". "}.gsc-control-wrapper-cse .gsc-above-wrapper-area{padding:0}.gsc-results{width:100%}.gsc-results .gsc-webResult.gsc-result,.gsc-results .gsc-webResult.gsc-result:hover,.gsc-results .gsc-webResult.gsc-result.gsc-promotion:hover{border-width:0;background-color:transparent}.gsc-webResult.gsc-result.gsc-promotion{border-width:0;padding:0.37037037037037em 2% 1.111111111111111em 2%;background-color:#c8e7fd}.gsc-result .gs-result .gs-title{height:auto;text-decoration:none}.gsc-result .gs-result .gs-title .gs-title *{font-size:inherit;font-style:italic;text-decoration:none}#___gcse_0 .gsc-control-cse,#___gcse_0 .gsc-control-cse .gsc-table-result,#___gcse_0 .gs-result .gsc-control-cse,#___gcse_0 .gs-result .gsc-control-cse .gsc-table-result{font-size:0.875rem;line-height:1.607142857142857}.gs-result .gsc-thumbnail-inside,.gs-result .gsc-url-top{padding:0}#___gcse_0 .gsc-control-cse .gs-spelling,#___gcse_0 .gsc-control-cse .gs-result .gs-title{font-size:1.063rem;line-height:1.323529411764706}.gs-image-box.gs-web-image-box{padding:0}.gs-result .gs-image-box img.gs-image,.gs-result .gs-image-box img.gs-promotion-image{border-color:#00355f}.gssb_c{margin:0}.gssb_e .gsc-completion-container,.gssb_a,.gsc-completion-container tr>td{border-width:0}.gsc-completion-container .gssb_l{margin:0}.gsc-results .gsc-expansionArea .gsc-cursor-box{margin:0.535714285714286em 0 1.071428571428571em 0}@media screen and (min-width: 32em){.gsc-results .gsc-expansionArea .gsc-cursor-box{margin:0.441176470588235em 0 0.882352941176471em 0}}
-@media screen and (min-width: 20em){.gsc-results .gsc-cursor-box .gsc-cursor{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}}.gsc-results .gsc-cursor-box .gsc-cursor .gsc-cursor-page{margin-right:0;padding:0 .3333333333em;border-radius:2px;font-weight:bold}@media screen and (min-width: 32em){.gsc-results .gsc-cursor-box .gsc-cursor .gsc-cursor-page{padding:0 1em}}.gsc-results .gsc-cursor-box .gsc-cursor .gsc-cursor-page.gsc-cursor-current-page{font-size:1.063rem;line-height:1.47058823529412}
+ */
+#___gcse_0 .cse .gsc-control-cse,
+#___gcse_0 .gsc-control-cse {
+  border-width: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.gsc-control-cse {
+  font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif !important;
+  font-family: "proxima-nova" !important;
+}
+
+.gsc-control-cse table {
+  margin: 0;
+}
+
+.gsc-control-cse td {
+  border-width: 0;
+  padding: 0;
+}
+
+.gsc-control-wrapper-cse form.gsc-search-box,
+.gsc-control-wrapper-cse table.gsc-search-box {
+  margin: 0;
+}
+
+.gsc-input,
+.gsc-search-button,
+.gsc-clear-button {
+  padding: 0;
+  box-shadow: none;
+}
+
+.gsc-input .gsc-input-box {
+  height: auto;
+}
+
+.gsc-control-cse .gsib_a {
+  padding: 4px 8px;
+}
+
+.gsst_b .gsst_a {
+  border-bottom: none;
+}
+
+.gsc-search-box input.gsc-search-button,
+.cse .gsc-search-box .gsc-search-button input.gsc-search-button-v2,
+.gsc-search-box input.gsc-search-button-v2 {
+  height: auto;
+  margin: 0;
+  padding: 7px 27px;
+  width: auto;
+  display: block;
+}
+
+div.gsc-selected-option-container {
+  padding: 0 1em;
+  width: auto !important;
+  max-width: none;
+  min-width: 0;
+}
+
+.gs-result .gs-spelling {
+  padding: 0;
+  display: inline;
+}
+
+.gs-spelling::after {
+  content: ". ";
+}
+
+.gsc-control-wrapper-cse .gsc-above-wrapper-area {
+  padding: 0;
+}
+
+.gsc-results {
+  width: 100%;
+}
+
+.gsc-results .gsc-webResult.gsc-result,
+.gsc-results .gsc-webResult.gsc-result:hover,
+.gsc-results .gsc-webResult.gsc-result.gsc-promotion:hover {
+  border-width: 0;
+  background-color: transparent;
+}
+
+.gsc-webResult.gsc-result.gsc-promotion {
+  border-width: 0;
+  padding: 0.37037037037037em 2% 1.111111111111111em 2%;
+  background-color: #c8e7fd;
+}
+
+.gsc-result .gs-result .gs-title {
+  height: auto;
+  text-decoration: none;
+}
+
+.gsc-result .gs-result .gs-title .gs-title * {
+  font-size: inherit;
+  font-style: italic;
+  text-decoration: none;
+}
+
+#___gcse_0 .gsc-control-cse,
+#___gcse_0 .gsc-control-cse .gsc-table-result,
+#___gcse_0 .gs-result .gsc-control-cse,
+#___gcse_0 .gs-result .gsc-control-cse .gsc-table-result {
+  font-size: 0.875rem;
+  line-height: 1.607142857142857;
+}
+
+.gs-result .gsc-thumbnail-inside,
+.gs-result .gsc-url-top {
+  padding: 0;
+}
+
+#___gcse_0 .gsc-control-cse .gs-spelling,
+#___gcse_0 .gsc-control-cse .gs-result .gs-title {
+  font-size: 1.063rem;
+  line-height: 1.323529411764706;
+}
+
+.gs-image-box.gs-web-image-box {
+  padding: 0;
+}
+
+.gs-result .gs-image-box img.gs-image,
+.gs-result .gs-image-box img.gs-promotion-image {
+  border-color: #00365f;
+}
+
+.gssb_c {
+  margin: 0;
+}
+
+.gssb_e .gsc-completion-container,
+.gssb_a,
+.gsc-completion-container tr > td {
+  border-width: 0;
+}
+
+.gsc-completion-container .gssb_l {
+  margin: 0;
+}
+
+.gsc-results .gsc-expansionArea .gsc-cursor-box {
+  margin: 0.535714285714286em 0 1.071428571428571em 0;
+}
+@media screen and (min-width: 32em) {
+  .gsc-results .gsc-expansionArea .gsc-cursor-box {
+    margin: 0.441176470588235em 0 0.882352941176471em 0;
+  }
+}
+
+@media screen and (min-width: 20em) {
+  .gsc-results .gsc-cursor-box .gsc-cursor {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.gsc-results .gsc-cursor-box .gsc-cursor .gsc-cursor-page {
+  margin-right: 0;
+  padding: 0 .3333333333em;
+  border-radius: 2px;
+  font-weight: bold;
+}
+@media screen and (min-width: 32em) {
+  .gsc-results .gsc-cursor-box .gsc-cursor .gsc-cursor-page {
+    padding: 0 1em;
+  }
+}
+.gsc-results .gsc-cursor-box .gsc-cursor .gsc-cursor-page.gsc-cursor-current-page {
+  font-size: 1.063rem;
+  line-height: 1.47058823529412;
+}

@@ -1,4 +1,5 @@
-@charset "UTF-8";/*!*
+@charset "UTF-8";
+/*!*
  * e2Campus
  *
  * Custom styles for the e2Campus signup form, because they
@@ -7,4 +8,13 @@
  *
  * @section mod-e2campus
  * @see http://www.evergreen.edu/news/weatherdelays
- */.e2campus .right{margin-left:0;width:auto;text-align:right}.e2campus td{border-width:0}
+ */
+.e2campus .right {
+  margin-left: 0;
+  width: auto;
+  text-align: right;
+}
+
+.e2campus td {
+  border-width: 0;
+}

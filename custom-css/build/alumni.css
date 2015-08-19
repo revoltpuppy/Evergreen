@@ -1,1 +1,124 @@
-@media print{a::after,a[href^="/"]::after{content:""}}
+/**
+ * Sass Constants
+ *
+ * @section sass-constants
+ */
+/**
+ * Colors
+ */
+/**
+ * Breakpoints
+ *
+ * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
+ */
+/**
+ * Modular Scale
+ *
+ * The typographic scale we are using for measurements.
+ * Ideal text size is 17px
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * @see http://modularscale.com/scale/?px1=17&px2=345&ra1=1.618&ra2=0
+ */
+/* Step #    Pixels     Ems    Rems
+ *     18   903.184  53.128  56.449
+ *     17   798.512  46.971  49.907
+ *     16   558.210  32.836  34.888
+ *     15   493.518  29.030  30.845
+ *     14   345.000  20.294  21.563
+ *     13   305.017  17.942  19.064
+ *     12   213.226  12.543  13.327
+ *     11   188.515  11.089  11.782
+ *     10   131.784   7.752   8.237
+ *      9   116.511   6.854   7.282
+ *      8    81.449   4.791   5.091
+ *      7    72.009   4.236   4.501
+ *      6    50.339   2.961   3.146
+ *      5    44.505   2.618   2.782
+ *      4    31.112   1.830   1.945
+ *      3    27.506   1.618   1.719
+ *      2    19.229   1.131   1.202
+ *      1    17.000   1       1.063*
+ *      0.5  14.000   0.824   0.875  Fudged for better readability, especially on mobile.
+ *     -1    11.884   0.699   0.743
+ *     -2    10.507   0.618   0.657
+ *     -3     7.345   0.432   0.459
+ *     -4     6.494   0.382   0.406
+ *     -5     4.540   0.267   0.284
+ *     -6     4.014   0.236   0.251
+ *     -7     2.806   0.165   0.175
+ *     -8     2.481   0.146   0.155
+ *     -9     1.734   0.102   0.108
+ *    -10     1.533   0.090   0.096
+ *    -11     1.072   0.063   0.067
+ */
+/**
+ * Sass Mixins
+ *
+ * @section sass-mixins
+ */
+/**
+ * Margins
+ */
+/**
+ * Font Sizes
+ */
+/**
+ * Backgrounds
+ */
+/**
+ * Replaces PNG background-image with multiple repeating
+ * gradients instead. Unfortunately, Chrome totally craps out
+ * in the rendering department, so this will have to wait for
+ * another day.
+ */
+/*@mixin background-default{
+	background-image:  Safari 6
+		 diagonal lines
+		-webkit-repeating-linear-gradient(
+			-45deg,
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 2px,
+			hsla(0, 0%, 0%, 0) 3px
+		),
+		 1px dots
+		-webkit-radial-gradient(
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 1px,
+			hsla(0, 0%, 0%, 0) 2px
+		);
+	background-image:
+		 diagonal lines
+		repeating-linear-gradient(
+			-45deg,
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 2px,
+			hsla(0, 0%, 0%, 0) 3px
+		),
+		 1px dots
+		radial-gradient(
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 1px,
+			hsla(0, 0%, 0%, 0) 2px
+		);
+	
+	background-size:
+		 diagonal lines
+		100% 100%,
+		 1px dots
+		10px 10px;
+}*/
+@media print {
+  /* Note, this should be temporary. Links should be appended to
+     print pieces. */
+  a::after,
+  a[href^="/"]::after {
+    content: "";
+  }
+}

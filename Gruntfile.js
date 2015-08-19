@@ -61,8 +61,8 @@ module.exports = function(grunt) {
 		sass: {
 			build: {  // process specific files
 				options: {
-					style: 'compressed', 
-					//sourcemap: 'none'
+					style: 'expanded', 
+					sourcemap: 'none'
 				},
 				files: [
 					{'styles.css': 'styles.scss'},  // 'destination': 'source'
@@ -81,6 +81,7 @@ module.exports = function(grunt) {
 				options: {
 					lineNumbers: true,
 					style: 'expanded',
+					sourcemap: 'none'
 				},
 				files: [
 					{'styles-dev.css': 'styles.scss'},  // 'destination': 'source'
