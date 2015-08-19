@@ -158,7 +158,7 @@
 [name="accordion-group"]{
 	display: none;  //Hide all actual checkboxes; they are activated by their labels
 }
-.accordion-h::before{
+.accordion-h label::before{
 	//layout
 	display: inline-block;
 	//misc
@@ -168,11 +168,11 @@
 		content: "";
 	}
 }
-[name="accordion-group"] + .accordion-h::before{
+[name="accordion-group"] + .accordion-h label::before{
   -webkit-transition: -webkit-transform .1s linear;  /*Safari 6*/
           transition:         transform .1s linear;
 }
-[name="accordion-group"]:checked + .accordion-h::before{
+[name="accordion-group"]:checked + .accordion-h label::before{
   /*animations, transforms, and transitions*/
   -webkit-transform: rotate(90deg);  /*Chrome, Safari*/
       -ms-transform: rotate(90deg);  /*IE9*/
