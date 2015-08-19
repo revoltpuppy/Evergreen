@@ -163,6 +163,7 @@
 	display: inline-block;
 	//misc
 	content: "▶\00A0";  //non-breaking space
+	color: black;
 	
 	@include breakpoint($gamora){
 		content: "";
