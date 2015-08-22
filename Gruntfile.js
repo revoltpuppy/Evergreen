@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 		 * Add support for older browsers by adding vendor prefixes to
 		 * Sass properties, based on data from caniuse.com.
 		 */
-		autoprefixer: {
+		/*autoprefixer: {
 			options: {
 				browsers: ['last 3 Chrome versions', 'last 3 Firefox versions', 'last 3 Safari versions', 'last 3 Explorer versions']
 			},
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 				src: 'styles-dev.css',
 				dest: 'styles-dev.css'
 			},
-		},
+		},*/
 		
 		imagemin: {                          // Task
 			dynamic: {                         // Another target
@@ -53,6 +53,51 @@ module.exports = function(grunt) {
 		jshint: {
 			Gruntfile: ['Gruntfile.js'],
 			scripts: ['scripts.js']
+		},
+		
+		/**
+		 * CSS post-processors
+		 *
+		 * autoprefixer-core adds support for older browsers by adding vendor
+		 * prefixes to Sass properties, based on data from caniuse.com.
+		 */
+		postcss: {
+	    options: {
+		    processors: [
+					require('autoprefixer-core')(  // add vendor prefixes
+						{
+							browsers: [
+								'last 3 Chrome versions',
+								'last 3 Safari versions',
+								'last 3 Firefox versions',
+								'last 3 iOS versions',
+								'last 3 Explorer versions',
+								'last 3 ChromeAndroid versions',
+								'last 6 Edge versions',  // we can cut this back when we know better how users are updating
+							]
+						}
+					),
+					//require('cssnano')() // minify the result
+				]
+			},
+			default_styles: {
+				src: 'styles.css',
+				dest: 'styles.css'
+			},
+			print_styles: {
+				src: 'print.css',
+				dest: 'print.css'
+			},
+			custom_css: {  // process a whole folder
+				expand: true,
+				flatten: true,
+				src: 'custom-css/build/*.css', // -> src/css/file1.css, src/css/file2.css
+				dest: 'custom-css/build/' // -> dest/css/file1.css, dest/css/file2.css
+			},
+			dev_styles: {
+				src: 'styles-dev.css',
+				dest: 'styles-dev.css'
+			},
 		},
 
 		/**
@@ -155,7 +200,7 @@ module.exports = function(grunt) {
 			},
 			css: {  // Autoprefix, then process Sass into CSS.
 				files: ['styles.scss', 'print.scss', 'sass/**/*.scss', 'custom-css/src/*.scss'],
-				tasks: ['sass', 'autoprefixer']
+				tasks: ['sass', 'postcss']
 			},
 			js: {  // Uglify JavaScript.
 				files: ['scripts.js'],
@@ -166,17 +211,18 @@ module.exports = function(grunt) {
 	});
 
 	// Load the plugins (alphabetical order).
-	grunt.loadNpmTasks('grunt-autoprefixer');
+	//grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-svgstore');
 	/*grunt.loadNpmTasks('grunt-svg-sprite');*/
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s) (in the order you want to run them).
-	grunt.registerTask('default', ['sass', 'autoprefixer', 'newer:uglify']);
+	grunt.registerTask('default', ['sass', 'postcss', 'newer:uglify']);
 
 };
