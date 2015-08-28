@@ -32,7 +32,6 @@
 .grid.element-list{
 	// box model
 	margin-left: -1em;  // Compensates for the extra gutter on the last grid unit
-	//width: 100%;  // IE 10
 	// layout
 	display: flex;
 	flex-wrap: wrap;
@@ -86,21 +85,6 @@
 		}
 	}
 }
-
-/*.grid .unit-1-2{
-	// box model
-	margin: 0;
-	padding-left: 1em;
-	width: 100%;
-	// layout
-	float: left;
-	
-	@media (min-width: 32em){
-		// box model
-		margin-right: 0;
-		width: 50%;
-	}
-}*/
 
 .unit-1-3{  // Switches from a one- to a three-column layout.
 	// box model
@@ -253,23 +237,6 @@
 .standalone-unit{
 	padding: 0 1em;
 }
-
-/**
- * 2. Float-based Grid Layout
- *
- * These grid units still need to be converted to the flexbox-based
- * grid system.
- */
-
-/*@include breakpoint($gamora){
-	.unit-4-7{
-		margin: 0 2%;
-		float: left;
-	}
-	.unit-4-7{
-		width: 53.142857142857143%;
-	}
-}*/
 
 /**
  * 3. Supplemental Content
