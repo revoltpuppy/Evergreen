@@ -132,7 +132,7 @@
 	}
 }
 
-.unit-1-6{
+.unit-1-6{  // Switches from 2 to 3 to 6 columns.
 	// box model
 	width: 100%;
 	
@@ -145,18 +145,21 @@
 	}
 	
 	@include breakpoint($gamora){
-		width: 16.666666666667%;
+		width: 16.666666666667%;  // 1/6
 	}
 }
 
-.unit-1-6-alt{  // Switches from 3 to 6 columns at an earlier breakpoint.
+.unit-1-6-alt{  // Switches from 3 to 4 to 6 columns.
 	// box model
 	width: 33.3333333333%;
 	
+	@include breakpoint($gamora){
+		width: 25%;
+	}
 	
-	@include breakpoint($starlord){
+	@include breakpoint($drax){
 		// box model
-		width: 16.666666666667%;
+		width: 16.666666666667%;  // 1/6
 	}
 }
 
