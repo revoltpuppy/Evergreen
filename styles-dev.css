@@ -3404,7 +3404,8 @@ ul.accordion-inner {
 }
 
 /* line 158, sass/_modules.scss */
-.intro {
+.intro,
+.field-intro {
   margin: 1.169925124792013em 0;
   color: #64933a;
   font-size: 1.202rem;
@@ -3412,7 +3413,8 @@ ul.accordion-inner {
 }
 @media screen and (min-width: 43em) {
   /* line 158, sass/_modules.scss */
-  .intro {
+  .intro,
+  .field-intro {
     margin: 1.09075043630017em 0;
     font-size: 1.719rem;
     line-height: 1.363438045375218;
@@ -3420,45 +3422,46 @@ ul.accordion-inner {
 }
 @media screen and (min-width: 125em) {
   /* line 158, sass/_modules.scss */
-  .intro {
+  .intro,
+  .field-intro {
     margin: 1.44601542416452em 0;
     font-size: 1.945rem;
     line-height: 1.44601542416452;
   }
 }
 
-/* line 183, sass/_modules.scss */
+/* line 184, sass/_modules.scss */
 .intro-alt {
   color: #333;
   font-weight: bold;
 }
 
-/* line 188, sass/_modules.scss */
+/* line 189, sass/_modules.scss */
 .details {
   font-size: .657rem;
   line-height: 1.427619682116684;
 }
 
-/* line 193, sass/_modules.scss */
+/* line 194, sass/_modules.scss */
 .big-fact {
   font-size: 1.063rem;
   line-height: 1.47058823529412;
 }
 @media screen and (min-width: 43em) {
-  /* line 193, sass/_modules.scss */
+  /* line 194, sass/_modules.scss */
   .big-fact {
     margin: .2727272727em 0 .8181818182em 0;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 193, sass/_modules.scss */
+  /* line 194, sass/_modules.scss */
   .big-fact {
     font-size: 1.719rem;
     line-height: 1.090710779858208;
   }
 }
 
-/* line 206, sass/_modules.scss */
+/* line 207, sass/_modules.scss */
 .key-number {
   margin: 0.818419903972065em 0 0 0;
   display: block;
@@ -3468,12 +3471,12 @@ ul.accordion-inner {
   line-height: 1.227629855958097;
 }
 
-/* line 218, sass/_modules.scss */
+/* line 219, sass/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 222, sass/_modules.scss */
+/* line 223, sass/_modules.scss */
 .main-content > p:last-child::after,
 .main-content > ul:last-child > li:last-child::after,
 .main-content > ol:last-child > li:last-child::after,
@@ -3482,7 +3485,7 @@ ul.accordion-inner {
   content: " " url("/_inc/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 222, sass/_modules.scss */
+  /* line 223, sass/_modules.scss */
   .main-content > p:last-child::after,
   .main-content > ul:last-child > li:last-child::after,
   .main-content > ol:last-child > li:last-child::after,
@@ -3981,7 +3984,7 @@ ul.accordion-inner {
 /**
  * H. Tables
  */
-/* line 242, sass/_modules.scss */
+/* line 243, sass/_modules.scss */
 .dataTable {
   /*@include breakpoint($starlord){
   	font-family: $text-face;
@@ -4582,7 +4585,7 @@ p.alert {
  *
  * @section mod-event-calendar
  */
-/* line 281, sass/_modules.scss */
+/* line 282, sass/_modules.scss */
 .calendar-dt {
   border: 1px solid #c1b7c8;
   margin: 0 auto;
@@ -4593,7 +4596,7 @@ p.alert {
   border-radius: 2px;
 }
 
-/* line 295, sass/_modules.scss */
+/* line 296, sass/_modules.scss */
 .calendar-month {
   padding: 0 .5em;
   width: 100%;
@@ -4609,29 +4612,29 @@ p.alert {
 }
 
 @media screen {
-  /* line 311, sass/_modules.scss */
+  /* line 312, sass/_modules.scss */
   .calendar-dt-mini {
     width: 2em;
   }
-  /* line 315, sass/_modules.scss */
+  /* line 316, sass/_modules.scss */
   .calendar-dt-mini .calendar-month {
     padding: 0;
     min-height: 0.875rem;
     font-size: 0.625rem;
     font-weight: normal;
   }
-  /* line 328, sass/_modules.scss */
+  /* line 329, sass/_modules.scss */
   .calendar-dt-mini .calendar-day {
     height: 1.42857em;
     display: block;
   }
 }
 
-/* line 337, sass/_modules.scss */
+/* line 338, sass/_modules.scss */
 .calendar-dt-null {
   background-color: #dbd5df;
 }
-/* line 340, sass/_modules.scss */
+/* line 341, sass/_modules.scss */
 .calendar-dt-null .calendar-month {
   background-color: #b6abbe;
 }
@@ -4645,27 +4648,27 @@ p.alert {
  *
  * @section mod-upcoming-events-homepage
  */
-/* line 356, sass/_modules.scss */
+/* line 357, sass/_modules.scss */
 .upcoming-events-homepage {
   margin: 0 auto;
 }
-/* line 360, sass/_modules.scss */
+/* line 361, sass/_modules.scss */
 .upcoming-events-homepage .media {
   border-bottom: 1px solid #c1b7c8;
 }
-/* line 364, sass/_modules.scss */
+/* line 365, sass/_modules.scss */
 .upcoming-events-homepage .media-body {
   text-align: center;
 }
 @media screen and (min-width: 32em) {
-  /* line 356, sass/_modules.scss */
+  /* line 357, sass/_modules.scss */
   .upcoming-events-homepage {
     margin: 0 auto 1rem;
     max-width: 66.6666666666%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 356, sass/_modules.scss */
+  /* line 357, sass/_modules.scss */
   .upcoming-events-homepage {
     margin-top: 1rem;
     margin-left: -24.58203125%;
@@ -4676,68 +4679,68 @@ p.alert {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 356, sass/_modules.scss */
+  /* line 357, sass/_modules.scss */
   .upcoming-events-homepage {
     margin-left: -25.520833333333%;
     width: 23.484848484848%;
     font-size: 1.063rem;
     line-height: 1.47058823529412;
   }
-  /* line 390, sass/_modules.scss */
+  /* line 391, sass/_modules.scss */
   .upcoming-events-homepage li {
     margin: 0.441176470588235em 0 0.882352941176471em 0;
   }
 }
 
-/* line 396, sass/_modules.scss */
+/* line 397, sass/_modules.scss */
 .upcoming-events-homepage2 {
   margin: 0 auto;
 }
 @media screen and (min-width: 43em) {
-  /* line 396, sass/_modules.scss */
+  /* line 397, sass/_modules.scss */
   .upcoming-events-homepage2 {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 396, sass/_modules.scss */
+  /* line 397, sass/_modules.scss */
   .upcoming-events-homepage2 {
     font-size: 1.063rem;
     line-height: 1.47058823529412;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 396, sass/_modules.scss */
+  /* line 397, sass/_modules.scss */
   .upcoming-events-homepage2 {
     font-size: 1.202rem;
     line-height: 1.29991680532446;
   }
 }
-/* line 414, sass/_modules.scss */
+/* line 415, sass/_modules.scss */
 .upcoming-events-homepage2 li {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
 }
 @media screen and (min-width: 70em) {
-  /* line 414, sass/_modules.scss */
+  /* line 415, sass/_modules.scss */
   .upcoming-events-homepage2 li {
     margin: 0.441176470588235em 0 0.882352941176471em 0;
   }
 }
 
-/* line 424, sass/_modules.scss */
+/* line 425, sass/_modules.scss */
 .upcoming-events-list-wrapper {
   overflow: hidden;
   position: relative;
 }
 @media screen and (min-width: 43em) {
-  /* line 424, sass/_modules.scss */
+  /* line 425, sass/_modules.scss */
   .upcoming-events-list-wrapper {
     overflow-x: visible;
   }
 }
 
-/* line 433, sass/_modules.scss */
+/* line 434, sass/_modules.scss */
 .grid.upcoming-events-list {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
@@ -4753,7 +4756,7 @@ p.alert {
   scroll-snap-type: mandatory;
 }
 @media screen and (min-width: 43em) {
-  /* line 433, sass/_modules.scss */
+  /* line 434, sass/_modules.scss */
   .grid.upcoming-events-list {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -4764,7 +4767,7 @@ p.alert {
     scroll-snap-type: none;
   }
 }
-/* line 461, sass/_modules.scss */
+/* line 462, sass/_modules.scss */
 .grid.upcoming-events-list > .unit-1-7 {
   width: 66.666666%;
   -webkit-flex-shrink: 0;
@@ -4773,19 +4776,19 @@ p.alert {
   scroll-snap-coordinate: 0 0;
 }
 @media screen and (min-width: 20em) {
-  /* line 461, sass/_modules.scss */
+  /* line 462, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 40%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 461, sass/_modules.scss */
+  /* line 462, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 29%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 461, sass/_modules.scss */
+  /* line 462, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 14.285714285714%;
     -webkit-flex-shrink: 1;
@@ -4793,23 +4796,23 @@ p.alert {
             flex-shrink: 1;
   }
 }
-/* line 484, sass/_modules.scss */
+/* line 485, sass/_modules.scss */
 .grid.upcoming-events-list > .unit-1-7:last-child {
   scroll-snap-coordinate: -50% 0;
 }
 @media screen and (min-width: 20em) {
-  /* line 484, sass/_modules.scss */
+  /* line 485, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7:last-child {
     scroll-snap-coordinate: -150% 0;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 484, sass/_modules.scss */
+  /* line 485, sass/_modules.scss */
   .grid.upcoming-events-list > .unit-1-7:last-child {
     scroll-snap-coordinate: none;
   }
 }
-/* line 497, sass/_modules.scss */
+/* line 498, sass/_modules.scss */
 .grid.upcoming-events-list::after {
   height: 100%;
   width: 100%;
@@ -4821,12 +4824,12 @@ p.alert {
   content: "";
 }
 @media screen and (min-width: 43em) {
-  /* line 497, sass/_modules.scss */
+  /* line 498, sass/_modules.scss */
   .grid.upcoming-events-list::after {
     display: none;
   }
 }
-/* line 515, sass/_modules.scss */
+/* line 516, sass/_modules.scss */
 .grid.upcoming-events-list .media-body {
   text-align: center;
 }
@@ -4836,11 +4839,11 @@ p.alert {
  *
  * @section mod-event-calendar
  */
-/* line 525, sass/_modules.scss */
+/* line 526, sass/_modules.scss */
 .schedule {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
 }
-/* line 528, sass/_modules.scss */
+/* line 529, sass/_modules.scss */
 .schedule .h-event {
   padding: 1em;
   display: -webkit-flex;
@@ -4852,47 +4855,47 @@ p.alert {
   overflow: hidden;
   border-radius: 2px;
 }
-/* line 538, sass/_modules.scss */
+/* line 539, sass/_modules.scss */
 .schedule .h-event:nth-child(even) {
   background-color: #e4dfe7;
 }
-/* line 543, sass/_modules.scss */
+/* line 544, sass/_modules.scss */
 .schedule .schedule-event-required {
   border: 2px solid #64933a;
 }
-/* line 546, sass/_modules.scss */
+/* line 547, sass/_modules.scss */
 .schedule .schedule-event-required + .schedule-event-required {
   margin-top: 2px;
 }
-/* line 550, sass/_modules.scss */
+/* line 551, sass/_modules.scss */
 .schedule .schedule-event-required:nth-of-type(odd) {
   background-color: #f0f4eb;
 }
-/* line 554, sass/_modules.scss */
+/* line 555, sass/_modules.scss */
 .schedule .schedule-event-required:nth-of-type(even) {
   background-color: #e0e9d8;
 }
-/* line 558, sass/_modules.scss */
+/* line 559, sass/_modules.scss */
 .schedule .schedule-event-required .p-name {
   color: #46502b;
 }
-/* line 563, sass/_modules.scss */
+/* line 564, sass/_modules.scss */
 .schedule .schedule-event-morning {
   background-color: #fdf4b6;
 }
-/* line 569, sass/_modules.scss */
+/* line 570, sass/_modules.scss */
 .schedule .schedule-event-evening:nth-of-type(odd) {
   background-color: #e6f3fd;
 }
-/* line 573, sass/_modules.scss */
+/* line 574, sass/_modules.scss */
 .schedule .schedule-event-evening:nth-of-type(even) {
   background-color: #cce7fc;
 }
-/* line 577, sass/_modules.scss */
+/* line 578, sass/_modules.scss */
 .schedule .schedule-event-evening .p-name {
   color: #00365f;
 }
-/* line 582, sass/_modules.scss */
+/* line 583, sass/_modules.scss */
 .schedule .schedule-event-evening-start::before {
   border-bottom: 1px solid #0086ee;
   width: 100%;
@@ -4900,7 +4903,7 @@ p.alert {
   text-align: center;
   content: "Evening Events";
 }
-/* line 596, sass/_modules.scss */
+/* line 597, sass/_modules.scss */
 .schedule .schedule-event-time {
   padding-right: 1em;
   color: #46502b;
@@ -4914,7 +4917,7 @@ p.alert {
  *
  * @section mod-event-calendar
  */
-/* line 615, sass/_modules.scss */
+/* line 616, sass/_modules.scss */
 .bulletin {
   border-bottom: 1px solid #b6abbe;
   background-color: #edeaef;
@@ -4922,25 +4925,25 @@ p.alert {
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 70em) {
-  /* line 615, sass/_modules.scss */
+  /* line 616, sass/_modules.scss */
   .bulletin {
     font-size: 1.063rem;
     line-height: 1.47058823529412;
   }
 }
-/* line 627, sass/_modules.scss */
+/* line 628, sass/_modules.scss */
 .bulletin > .wrapper {
   width: calc(100% - 2em);
 }
 
-/* line 632, sass/_modules.scss */
+/* line 633, sass/_modules.scss */
 .bulletin .grid {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-/* line 636, sass/_modules.scss */
+/* line 637, sass/_modules.scss */
 .bulletin-header,
 .bulletin-body {
   width: 100%;
@@ -4948,30 +4951,30 @@ p.alert {
 }
 
 @media screen and (min-width: 20em) {
-  /* line 642, sass/_modules.scss */
+  /* line 643, sass/_modules.scss */
   .bulletin-header {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 642, sass/_modules.scss */
+  /* line 643, sass/_modules.scss */
   .bulletin-header {
     width: 14.285714285714%;
   }
 }
-/* line 651, sass/_modules.scss */
+/* line 652, sass/_modules.scss */
 .bulletin-header h2 {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
   text-align: left;
 }
 @media screen and (min-width: 20em) {
-  /* line 651, sass/_modules.scss */
+  /* line 652, sass/_modules.scss */
   .bulletin-header h2 {
     text-align: right;
   }
 }
 
-/* line 663, sass/_modules.scss */
+/* line 664, sass/_modules.scss */
 .chrono-meter {
   width: 100%;
   display: -webkit-flex;
@@ -4982,7 +4985,7 @@ p.alert {
           justify-content: space-between;
 }
 @media screen and (min-width: 20em) {
-  /* line 663, sass/_modules.scss */
+  /* line 664, sass/_modules.scss */
   .chrono-meter {
     margin-right: 1em;
     width: auto;
@@ -4994,7 +4997,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 663, sass/_modules.scss */
+  /* line 664, sass/_modules.scss */
   .chrono-meter {
     margin-right: 0;
     width: 100%;
@@ -5007,7 +5010,7 @@ p.alert {
   }
 }
 
-/* line 690, sass/_modules.scss */
+/* line 691, sass/_modules.scss */
 .chrono-meter > li {
   border: 1px solid #b6abbe;
   height: 7.5px;
@@ -5015,7 +5018,7 @@ p.alert {
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 690, sass/_modules.scss */
+  /* line 691, sass/_modules.scss */
   .chrono-meter > li {
     margin-bottom: 2px;
     clear: left;
@@ -5024,31 +5027,31 @@ p.alert {
   }
 }
 
-/* line 708, sass/_modules.scss */
+/* line 709, sass/_modules.scss */
 .chrono-stop-current {
   background-color: #dbd5df;
 }
 
-/* line 712, sass/_modules.scss */
+/* line 713, sass/_modules.scss */
 .chrono-stop-complete {
   background-color: #b6abbe;
 }
 
 @media screen and (min-width: 20em) {
-  /* line 717, sass/_modules.scss */
+  /* line 718, sass/_modules.scss */
   .bulletin-body {
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 717, sass/_modules.scss */
+  /* line 718, sass/_modules.scss */
   .bulletin-body {
     width: 85.714285714286%;
   }
 }
 
 @media screen and (min-width: 43em) {
-  /* line 726, sass/_modules.scss */
+  /* line 727, sass/_modules.scss */
   .bulletin-calendar {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5057,7 +5060,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 731, sass/_modules.scss */
+  /* line 732, sass/_modules.scss */
   .bulletin-calendar > li {
     float: left;
     padding-left: 1em;
@@ -5068,7 +5071,7 @@ p.alert {
 /**
  * N. News
  */
-/* line 742, sass/_modules.scss */
+/* line 743, sass/_modules.scss */
 .news {
   border-top: 1px solid #d1cad6;
   border-bottom: 1px solid #d1cad6;
@@ -5076,13 +5079,13 @@ p.alert {
   background-color: #E3DFE6;
 }
 
-/* line 752, sass/_modules.scss */
+/* line 753, sass/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
   width: calc(100% - 2em);
 }
 
-/* line 758, sass/_modules.scss */
+/* line 759, sass/_modules.scss */
 .news-story {
   border: 1px solid #ccc;
   height: calc(100% - 1em);
@@ -5096,7 +5099,7 @@ p.alert {
 /**
  * O. Embeded Content
  */
-/* line 776, sass/_modules.scss */
+/* line 777, sass/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -5104,7 +5107,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 786, sass/_modules.scss */
+/* line 787, sass/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -5123,24 +5126,24 @@ p.alert {
   background-image: url(http://evergreen.edu/_inc/images/texture-1.png);
   content: url(http://evergreen.edu/_inc/images/icons/green/play.png);
 }
-/* line 805, sass/_modules.scss */
+/* line 806, sass/_modules.scss */
 .lazy-load:hover::after {
   opacity: .85;
 }
-/* line 809, sass/_modules.scss */
+/* line 810, sass/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 817, sass/_modules.scss */
+/* line 818, sass/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 825, sass/_modules.scss */
+/* line 826, sass/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -5151,7 +5154,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 837, sass/_modules.scss */
+/* line 838, sass/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -5159,7 +5162,7 @@ p.alert {
   display: block;
 }
 
-/* line 846, sass/_modules.scss */
+/* line 847, sass/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(30, 19, 37, 0.25);
 }
@@ -5249,6 +5252,7 @@ p.alert {
  * modules
  * -------
  * .main-background  Use .main-background2
+ * .intro            Use .field-intro
  * 
  * modules/_boxes
  * --------------

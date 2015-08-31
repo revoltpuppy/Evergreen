@@ -155,7 +155,8 @@
     margin-top:0;
 }
 
-.intro{
+.intro,  // deprecated, use .field-intro instead.
+.field-intro{  // Drupal
 	// box model
 	margin: 1.169925124792013em 0;  // 22.5/19.232
 	// typography
