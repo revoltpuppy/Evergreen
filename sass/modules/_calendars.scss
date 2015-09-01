@@ -1,0 +1,483 @@
+/**
+ * M. Calendars
+ *
+ * 1. Event Calendar
+ * 2. Homepage Upcoming Events
+ * 3. Schedule of Events
+ * 4. Bulletin
+ * 5. Campus Events Calendar
+ */
+
+/**
+ * 1. Event Calendar
+ */	
+.calendar-dt{
+	// box model
+	border: 1px solid mix(white, $blueberry-susan, 66%);
+	margin: 0 auto;
+	width: 3em;
+	// layout
+	overflow: hidden;
+	// typography
+	text-align: center;
+	// backgrounds and borders
+	background-color: hsl(0, 0%, 95%);
+	border-radius: 2px;
+}
+
+.calendar-month{
+	// box model
+	padding: 0 .5em;
+	width: 100%;
+	// layout
+	display: block;
+	// typography
+	color: hsl(0, 0%, 100%);
+	@include small-type;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	// backgrounds and borders
+	background-color: $wine;
+}
+
+.calendar-dt-mini{  // A calendar that starts small and then expands to normal size.
+	@media screen{
+		width: 2em;
+		
+		.calendar-month{
+			// box model
+			//height: 2px;
+			padding: 0;
+			min-height: 0.875rem;  // 14/16; magic number - the smallest size that accomodates the text
+			// layout
+			//overflow: hidden;
+			// typography
+			//color: transparent;
+			font-size: 0.625rem;  // 10/16; magic number - the biggest font size it can be and still fit in the box
+			font-weight: normal;
+		}
+		
+		.calendar-day{
+			// box model
+			height: 1.42857em;  // matches line-height of type
+			// layout
+			display: block;
+		}
+	}
+}
+
+.calendar-dt-null{
+	background-color: mix(white, $blueberry-susan, 80%);
+	
+	.calendar-month{
+		background-color: mix(white, $blueberry-susan, 60%);
+	}
+}
+
+
+
+/**
+ * 2. Homepage Upcoming Events
+ *
+ * The box on the homepage featuring upcoming events from the
+ * calendar. This should track pretty closely to the tertiary
+ * nav higher up on the page.
+ */
+.upcoming-events-homepage{
+	// box model
+	margin: 0 auto;
+	
+	.media{
+		border-bottom: 1px solid mix(white, $blueberry-susan, 66%);
+	}
+	
+	.media-body{
+		text-align: center;
+	}
+	
+	@media screen and (min-width: 32em){
+		margin: 0 auto 1rem;
+		max-width: 66.6666666666%;
+	}
+	
+	@media screen and (min-width: 43em){
+		// box model
+		margin-top: 1rem;
+		margin-left: -24.58203125%;  // 442/2048 + 3%
+		width: 21.58203125%;  // 442/2048
+		// typography
+		@include base-type;
+		// position
+		position: absolute;  // Removes nav from the document flow
+	}
+	
+	@media screen and (min-width: 70em){
+		// box model
+		margin-left: -25.520833333333%;
+		width: 23.484848484848%;
+		@include base-type-lg;
+		
+		li{
+			@include margin-default-lg;
+		}
+	}
+}
+
+.upcoming-events-homepage2 {
+	margin: 0 auto;
+
+	@include breakpoint($gamora) {
+		// typography
+		@include base-type;
+	}
+	
+	@include breakpoint($drax){
+		// typography
+		@include base-type-lg;
+	}
+	
+	@include breakpoint($groot){
+		// typography
+		@include base-type-xl;
+	}
+	
+	li {
+		@include margin-default;
+		
+		@include breakpoint($drax){
+			// box model
+			@include margin-default-lg;
+		}
+	}
+}
+
+.upcoming-events-list-wrapper{
+	overflow: hidden;
+	position: relative;
+	
+	@include breakpoint($gamora){
+		overflow-x: visible;
+	}
+}
+
+.grid.upcoming-events-list{
+	// layout
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	overflow-x: visible;
+	overflow-y: auto;
+	// scrolling
+	scroll-behavior: smooth;
+	scroll-snap-destination: 0 0;
+	scroll-snap-points-x: repeat(0%);
+	scroll-snap-type: mandatory;
+	
+	@include breakpoint($lil-groot){
+		//scroll-snap-points-x: repeat(60%);
+	}
+	
+	@include breakpoint($starlord){
+		//scroll-snap-points-x: repeat(71%);
+	}
+	
+	@include breakpoint($gamora){
+		// layout
+		flex-wrap: wrap;
+		justify-content: center;
+		// scrolling
+		scroll-snap-type: none;
+	}
+	
+	> .unit-1-7{
+		// box model
+		width: 66.666666%;  // magic number: allows next event to peek out, indicating horizontal scrolling
+		// layout
+		flex-shrink: 0;
+		// scrolling
+		scroll-snap-coordinate: 0 0;
+		
+		@include breakpoint($lil-groot){
+			width: 40%;  // magic number: allows next event to peek out, indicating horizontal scrolling
+		}
+		
+		@include breakpoint($starlord){
+			width: 29%;  // magic number: allows next event to peek out, indicating horizontal scrolling
+		}
+		
+		@include breakpoint($gamora){
+			// box model
+			width: 14.285714285714%;
+			// layout
+			flex-shrink: 1;
+		}
+		
+		&:last-child{
+			scroll-snap-coordinate: -50% 0;
+		
+			@include breakpoint($lil-groot){
+				scroll-snap-coordinate: -150% 0;
+			}
+			
+			@include breakpoint($starlord){
+				scroll-snap-coordinate: none;
+			}
+		}
+	}
+	
+	&::after{  // pseudo-element that adds a drop shadow
+		// box model
+		height: 100%;
+		width: 100%;
+		// layout
+		display: block;
+		position: absolute;
+		top: 0;
+		right: -100%;
+		// miscellaneous
+		box-shadow: -0.25em 0 1em $drop-shadow;
+		content: "";
+		
+		@include breakpoint($gamora){
+			display: none;
+		}
+	}
+	
+	.media-body{
+		text-align: center;
+	}
+}
+
+/**
+ * 3. Schedule of Events
+ */
+.schedule{
+	@include margin-default;
+	
+	.h-event{
+		// box model
+		padding: 1em;
+		// layout
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		// backgrounds & borders
+		border-radius: 2px;
+		
+		&:nth-child(even){
+			background-color: mix(white, $blueberry-susan, 85%);
+		}
+	}
+	
+	.schedule-event-required{
+		border: 2px solid $evergreen-neue;
+		
+		+ .schedule-event-required{
+			margin-top: 2px;
+		}
+		
+		&:nth-of-type(odd){
+			background-color: mix(white, $evergreen-neue, 90%);
+		}
+		
+		&:nth-of-type(even){
+			background-color: mix(white, $evergreen-neue, 80%);
+		}
+		
+		.p-name{
+			color: $evergreen-old-style;
+		}
+	}
+	
+	.schedule-event-morning{
+		background-color: $morning-light;
+	}
+	
+	.schedule-event-evening{
+	
+		&:nth-of-type(odd){
+			background-color: mix(white, $sky-blue, 90%);
+		}
+		
+		&:nth-of-type(even){
+			background-color: mix(white, $sky-blue, 80%);
+		}
+		
+		.p-name{
+			color: mix(black, $sky-blue, 60%);
+		}
+	}
+	
+	.schedule-event-evening-start::before{
+		// box model
+		border-bottom: 1px solid $sky-blue;
+		width: 100%;
+		// layout
+		display: block;
+		// typography
+		text-align: center;
+		// misc
+		content: "Evening Events";
+	}
+	
+	
+	
+	.schedule-event-time{
+		// box model
+		padding-right: 1em;
+		// typography
+		color: $evergreen-old-style;
+		font-weight: bold;
+	}
+	
+	.schedule-event-details{
+	}
+}
+
+/**
+ * 4. Bulletin
+ *
+ * The section that says, “This is Week X”.
+ */
+.bulletin{
+	// box model
+	border-bottom: 1px solid mix(white, $blueberry-susan, 60%);
+	// backgrounds & borders
+	background-color: mix(white, $blueberry-susan, 90%);
+	// typography
+	@include base-type;
+	
+	@include breakpoint($drax){
+		@include base-type-lg;
+	}
+	
+	> .wrapper{
+		width: calc(100% - 2em);  // min-margins
+	}
+}
+
+.bulletin .grid{
+	align-items: center;
+}
+
+.bulletin-header,
+.bulletin-body{
+	width: 100%;
+	padding-left: 1em;  // grid system
+}
+
+.bulletin-header{		
+	@include breakpoint($lil-groot){
+		width: 33.3333333333%;
+	}
+	
+	@include breakpoint($gamora){
+		width: 14.285714285714%;
+	}
+	
+	h2{
+		// box-model
+		@include margin-default;
+		// typography
+		text-align: left;
+		
+		@include breakpoint($lil-groot){
+			// typography
+			text-align: right;
+		}
+	}
+}
+.chrono-meter{
+	// box model
+	width: 100%;
+	// layout
+	display: flex;
+	justify-content: space-between;
+	
+	@include breakpoint($lil-groot){
+		// box model
+		margin-right: 1em;
+		width: auto;
+		// layout
+		flex-direction: column;
+		float: left;
+		overflow: hidden;
+	}
+	
+	@include breakpoint($gamora){
+		// box model
+		margin-right: 0;
+		width: 100%;
+		// layout
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+	
+.chrono-meter	> li{
+	// box model
+	border: 1px solid mix(white, $blueberry-susan, 60%);
+	height: 7.5px;
+	width: 7.5px;
+	// layout
+	display: inline-block;
+	
+	@include breakpoint($lil-groot){
+		// box model
+		margin-bottom: 2px;
+		// layout
+		clear: left;
+		float: left;
+		// backgrounds & borders
+		border-radius: 2px;
+	}
+}
+.chrono-stop-current{
+	// backgrounds & borders
+	background-color: mix(white, $blueberry-susan, 80%);
+}
+.chrono-stop-complete{
+	// backgrounds & borders
+	background-color: mix(white, $blueberry-susan, 60%);
+}
+
+.bulletin-body{
+	@include breakpoint($lil-groot){
+		width: 66.6666666667%;
+	}
+	
+	@include breakpoint($gamora){
+		width: 85.714285714286%;
+	}
+}
+.bulletin-calendar{
+	@include breakpoint($gamora){
+			display: flex;
+	}
+}
+.bulletin-calendar > li{
+	@include breakpoint($gamora){
+		float: left;
+		padding-left: 1em;
+		width: 33.333333333%;
+	}
+}
+
+/**
+ * 5. Campus Event Calendar
+ *
+ * The list of upcoming events around campus on the Drupal site. Replaces
+ * the Google Calendar listing.
+ */
+.calendar-item{
+	
+	padding: 0.535714285714286em 1em 1.071428571428571em;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
+	
+	@include breakpoint($gamora){
+		padding: 0.441176470588235em 1em 0.882352941176471em;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
+	}
+	
+	@include breakpoint($groot){
+		padding: 0.51996672212978em 1em 1.03993344425957em;  //10/19.232 20/19.232  So, 30 + 10 + 20 = 60
+	}
+}
