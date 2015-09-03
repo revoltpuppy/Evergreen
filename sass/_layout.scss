@@ -142,7 +142,7 @@
 	margin-bottom: 1.875rem;  // 30px
 	width: 100%;
 	// position
-	position: relative;
+	//position: relative;  // This causes the background-image to judder in IE/Edge
 
 	@media screen and (min-height: 35em){
 		margin-bottom: 3.75rem;  // 60px

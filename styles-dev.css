@@ -1691,7 +1691,6 @@ a:link,
 .site-content {
   margin-bottom: 1.875rem;
   width: 100%;
-  position: relative;
 }
 @media screen and (min-height: 35em) {
   /* line 140, sass/_layout.scss */
