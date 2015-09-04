@@ -89,9 +89,9 @@
 	margin-left: 0;
 	list-style-type: none;
 }
-.tertiary-nav-h{  //heading for tertiary nav in wider views
+.tertiary-nav-h{  // heading for tertiary nav in wider views
 	//box model
-	margin-top: -1px;  //compensate for border
+	margin-top: -1px;  // compensate for border
 	//typography
 	@include base-type;
 	
@@ -99,29 +99,29 @@
 		//box model
 		margin: 0.779950083194676em 0 0.363976705490849em 0;
 		//typography
-		font-size: 1.202rem;  //19.232px
-		line-height: 1.559900166389351;  //30/19.232
+		font-size: 1.202rem;  // 19.232px
+		line-height: 1.559900166389351;  // 30/19.232
 	}
 }
 .tertiary-nav-list li,
 .tertiary-related-links > li > ul > li,
 #tertiary-nav dd > ul li{  //WYSIWYG
-    margin:0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
+	margin:0.535714285714286em 0 1.071428571428571em 0;  // 22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
 }
 .tertiary-nav-list a,
-#tertiary-nav dd > ul a,  //WYSIWYG
+#tertiary-nav dd > ul a,  // Cascade WYSIWYG
 .tertiary-related-links a{
-	//box model
+	// box model
 	border-bottom-width: 0;
-	//typography
+	// typography
 	font-weight: normal;
 }
 
 @include breakpoint($gamora){
 	.tertiary-nav-h,
-	a.tertiary-nav-h{  //heading for tertiary nav in wider views
+	a.tertiary-nav-h{  // heading for tertiary nav in wider views
 		border-bottom: 1px solid mix(black, $sky-blue, 50%);
-		margin-top: -1px;  //compensate for border
+		margin-top: -1px;  // compensate for border
 		display: block;
 		//color: mix(black, $sky-blue, 50%);
 		font-weight: bold;
@@ -142,8 +142,6 @@
 	}
 	
 	@include breakpoint($drax){
-		//margin-left: -25.520833333333%;
-		//width: 23.484848484848%;
 		width: calc(14.285714285714% + .5em);  // 1/7
 	}
 }
@@ -156,13 +154,13 @@
  * @see http://cssconf.com/talk-seddon.html
  */
 [name="accordion-group"]{
-	display: none;  //Hide all actual checkboxes; they are activated by their labels
+	display: none;  // Hide all actual checkboxes; they are activated by their labels
 }
 .accordion-h label::before{
-	//layout
+	// layout
 	display: inline-block;
-	//misc
-	content: "▶\00A0";  //non-breaking space
+	// misc
+	content: "▶\00A0";  // non-breaking space
 	color: black;
 	
 	@include breakpoint($gamora){
@@ -170,27 +168,23 @@
 	}
 }
 [name="accordion-group"] + .accordion-h label::before{
-  -webkit-transition: -webkit-transform .1s linear;  /*Safari 6*/
-          transition:         transform .1s linear;
+	transition: transform .1s linear;
 }
 [name="accordion-group"]:checked + .accordion-h label::before{
-  /*animations, transforms, and transitions*/
-  -webkit-transform: rotate(90deg);  /*Chrome, Safari*/
-      -ms-transform: rotate(90deg);  /*IE9*/
-          transform: rotate(90deg);
-  -webkit-transition: -webkit-transform .1s linear;
-          transition:         transform .1s linear;
+	// animations, transforms, and transitions
+	transform: rotate(90deg);
+	transition: transform .1s linear;
 }
 
 .tertiary-nav-h{
-	//box model
+	// box model
 	margin-bottom: 0;
-	padding: 0.631100639515315em 0;  //15/11.884/2
+	padding: 0.631100639515315em 0;  // 15/11.884/2
 	
 	label{
-		//typography
+		// typography
 		color: $wine;
-		//misc
+		// misc
 		cursor: pointer;
 		
 		&:hover{
@@ -202,9 +196,9 @@
 		padding: 0;
 		
 		label{
-			//typography
+			// typography
 			color: mix(black, $sky-blue, 50%);
-			//misc
+			// misc
 			cursor: default;
 			
 			&:hover{
@@ -226,26 +220,25 @@
 	display: inline;
 }
 .accordion-body{
-	//box model
+	// box model
 	border-bottom: 1px solid black;
 	height: auto;
 	max-height: 0;
-	//layout
+	// layout
 	overflow: hidden;
-	//backgrounds & borders
+	// backgrounds & borders
 	background-color: hsla(0, 0%, 100%, .25);
-	//misc
+	// misc
 	box-shadow: 0 2px 2px $drop-shadow inset;
-	//transition
-	-webkit-transition: max-height .2s ease 0s;;
+	// transition
 	transition: max-height .25s ease 0s;
 	
 	@include breakpoint ($gamora){
 		border-bottom-width: 0;
 		max-height: 600px;
-		//backgrounds & borders
+		// backgrounds & borders
 		background-color: transparent;
-		//misc
+		// misc
 		box-shadow: none;
 	}
 	
@@ -257,9 +250,9 @@
 	border-bottom-width: 0;
 }
 [name="accordion-group"]:checked ~ .accordion-body{
-	//box model
+	// box model
 	max-height: 500px;
-	//transition
+	// transition
 	transition-duration: .75s;
 	
 	@include breakpoint($gamora){
@@ -267,7 +260,7 @@
 	}
 }
 ul.accordion-inner{
-	padding: 0 2%;  //15/11.884/2
+	padding: 0 2%;  // 15/11.884/2
 	
 	@include breakpoint($gamora){
 		padding: 0;

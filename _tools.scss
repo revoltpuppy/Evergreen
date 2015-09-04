@@ -148,22 +148,6 @@ $groot:     (min: 125em);
  * another day.
  */
 /*@mixin background-default{
-	background-image:  Safari 6
-		 diagonal lines
-		-webkit-repeating-linear-gradient(
-			-45deg,
-			hsla(0, 0%, 0%, .1),
-			hsla(0, 0%, 0%, .1) 1px,
-			hsla(0, 0%, 0%, 0) 2px,
-			hsla(0, 0%, 0%, 0) 3px
-		),
-		 1px dots
-		-webkit-radial-gradient(
-			hsla(0, 0%, 0%, .1),
-			hsla(0, 0%, 0%, .1) 1px,
-			hsla(0, 0%, 0%, 0) 1px,
-			hsla(0, 0%, 0%, 0) 2px
-		);
 	background-image:
 		 diagonal lines
 		repeating-linear-gradient(
