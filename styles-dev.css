@@ -131,22 +131,6 @@
  * another day.
  */
 /*@mixin background-default{
-	background-image:  Safari 6
-		 diagonal lines
-		-webkit-repeating-linear-gradient(
-			-45deg,
-			hsla(0, 0%, 0%, .1),
-			hsla(0, 0%, 0%, .1) 1px,
-			hsla(0, 0%, 0%, 0) 2px,
-			hsla(0, 0%, 0%, 0) 3px
-		),
-		 1px dots
-		-webkit-radial-gradient(
-			hsla(0, 0%, 0%, .1),
-			hsla(0, 0%, 0%, .1) 1px,
-			hsla(0, 0%, 0%, 0) 1px,
-			hsla(0, 0%, 0%, 0) 2px
-		);
 	background-image:
 		 diagonal lines
 		repeating-linear-gradient(
@@ -2646,18 +2630,18 @@ li.internal-users-alt img {
 }
 /* line 56, sass/_modules.scss */
 .main-background .main-background-img,
-.main-background > img,
+.main-background > :first-child,
 .main-background2 .main-background-img,
-.main-background2 > img {
+.main-background2 > :first-child {
   width: 100%;
   display: block;
 }
 @media screen and (min-width: 43em) {
   /* line 56, sass/_modules.scss */
   .main-background .main-background-img,
-  .main-background > img,
+  .main-background > :first-child,
   .main-background2 .main-background-img,
-  .main-background2 > img {
+  .main-background2 > :first-child {
     width: auto;
     max-width: 60%;
   }
@@ -2665,9 +2649,9 @@ li.internal-users-alt img {
 @media screen and (min-width: 70em) {
   /* line 56, sass/_modules.scss */
   .main-background .main-background-img,
-  .main-background > img,
+  .main-background > :first-child,
   .main-background2 .main-background-img,
-  .main-background2 > img {
+  .main-background2 > :first-child {
     max-width: 57.142857142857143%;
   }
 }
@@ -3168,94 +3152,90 @@ li.internal-users-alt img {
  *
  * @see http://cssconf.com/talk-seddon.html
  */
-/* line 158, sass/modules/_tertiary-nav.scss */
+/* line 156, sass/modules/_tertiary-nav.scss */
 [name="accordion-group"] {
   display: none;
 }
 
-/* line 161, sass/modules/_tertiary-nav.scss */
+/* line 159, sass/modules/_tertiary-nav.scss */
 .accordion-h label::before {
   display: inline-block;
   content: "▶\00A0";
   color: black;
 }
 @media screen and (min-width: 43em) {
-  /* line 161, sass/modules/_tertiary-nav.scss */
+  /* line 159, sass/modules/_tertiary-nav.scss */
   .accordion-h label::before {
     content: "";
   }
 }
 
-/* line 172, sass/modules/_tertiary-nav.scss */
+/* line 170, sass/modules/_tertiary-nav.scss */
 [name="accordion-group"] + .accordion-h label::before {
-  /*Safari 6*/
   transition: -webkit-transform .1s linear;
   transition: transform .1s linear;
 }
 
-/* line 176, sass/modules/_tertiary-nav.scss */
+/* line 173, sass/modules/_tertiary-nav.scss */
 [name="accordion-group"]:checked + .accordion-h label::before {
-  /*animations, transforms, and transitions*/
   -webkit-transform: rotate(90deg);
-  /*Chrome, Safari*/
-  -ms-transform: rotate(90deg);
-  /*IE9*/
-  transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
   transition: -webkit-transform .1s linear;
   transition: transform .1s linear;
 }
 
-/* line 185, sass/modules/_tertiary-nav.scss */
+/* line 179, sass/modules/_tertiary-nav.scss */
 .tertiary-nav-h {
   margin-bottom: 0;
   padding: 0.631100639515315em 0;
 }
-/* line 190, sass/modules/_tertiary-nav.scss */
+/* line 184, sass/modules/_tertiary-nav.scss */
 .tertiary-nav-h label {
   color: #600f21;
   cursor: pointer;
 }
-/* line 196, sass/modules/_tertiary-nav.scss */
+/* line 190, sass/modules/_tertiary-nav.scss */
 .tertiary-nav-h label:hover {
   color: #0086ee;
 }
 @media screen and (min-width: 43em) {
-  /* line 185, sass/modules/_tertiary-nav.scss */
+  /* line 179, sass/modules/_tertiary-nav.scss */
   .tertiary-nav-h {
     padding: 0;
   }
-  /* line 204, sass/modules/_tertiary-nav.scss */
+  /* line 198, sass/modules/_tertiary-nav.scss */
   .tertiary-nav-h label {
     color: #004377;
     cursor: default;
   }
-  /* line 210, sass/modules/_tertiary-nav.scss */
+  /* line 204, sass/modules/_tertiary-nav.scss */
   .tertiary-nav-h label:hover {
     color: #004377;
   }
 }
 
-/* line 216, sass/modules/_tertiary-nav.scss */
+/* line 210, sass/modules/_tertiary-nav.scss */
 [name="accordion-group"] ~ .tertiary-nav-h .accordion-toggle {
   display: inline;
 }
 
-/* line 219, sass/modules/_tertiary-nav.scss */
+/* line 213, sass/modules/_tertiary-nav.scss */
 [name="accordion-group"]:checked ~ .tertiary-nav-h .accordion-toggle {
   display: none;
 }
 
-/* line 222, sass/modules/_tertiary-nav.scss */
+/* line 216, sass/modules/_tertiary-nav.scss */
 [name="accordion-group"] ~ h4 .accordion-dismiss {
   display: none;
 }
 
-/* line 225, sass/modules/_tertiary-nav.scss */
+/* line 219, sass/modules/_tertiary-nav.scss */
 [name="accordion-group"]:checked ~ h4 .accordion-dismiss {
   display: inline;
 }
 
-/* line 228, sass/modules/_tertiary-nav.scss */
+/* line 222, sass/modules/_tertiary-nav.scss */
 .accordion-body {
   border-bottom: 1px solid black;
   height: auto;
@@ -3266,7 +3246,7 @@ li.internal-users-alt img {
   transition: max-height .25s ease 0s;
 }
 @media screen and (min-width: 43em) {
-  /* line 228, sass/modules/_tertiary-nav.scss */
+  /* line 222, sass/modules/_tertiary-nav.scss */
   .accordion-body {
     border-bottom-width: 0;
     max-height: 600px;
@@ -3275,35 +3255,35 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 228, sass/modules/_tertiary-nav.scss */
+  /* line 222, sass/modules/_tertiary-nav.scss */
   .accordion-body {
     max-height: none;
   }
 }
 
-/* line 256, sass/modules/_tertiary-nav.scss */
+/* line 249, sass/modules/_tertiary-nav.scss */
 #tertiary-nav li:last-child .accordion-body {
   border-bottom-width: 0;
 }
 
-/* line 259, sass/modules/_tertiary-nav.scss */
+/* line 252, sass/modules/_tertiary-nav.scss */
 [name="accordion-group"]:checked ~ .accordion-body {
   max-height: 500px;
   transition-duration: .75s;
 }
 @media screen and (min-width: 43em) {
-  /* line 259, sass/modules/_tertiary-nav.scss */
+  /* line 252, sass/modules/_tertiary-nav.scss */
   [name="accordion-group"]:checked ~ .accordion-body {
     padding: 0;
   }
 }
 
-/* line 269, sass/modules/_tertiary-nav.scss */
+/* line 262, sass/modules/_tertiary-nav.scss */
 ul.accordion-inner {
   padding: 0 2%;
 }
 @media screen and (min-width: 43em) {
-  /* line 269, sass/modules/_tertiary-nav.scss */
+  /* line 262, sass/modules/_tertiary-nav.scss */
   ul.accordion-inner {
     padding: 0;
   }
