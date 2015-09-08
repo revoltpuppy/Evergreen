@@ -73,7 +73,7 @@
 	position: sticky;
 	
 	> .main-background-img,
-	> img{
+	> :first-child{
 		// box model
 		max-height: 100vh;
 		// position

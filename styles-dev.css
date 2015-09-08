@@ -2663,7 +2663,7 @@ li.internal-users-alt img {
 }
 /* line 75, sass/_modules.scss */
 .main-background2 > .main-background-img,
-.main-background2 > img {
+.main-background2 > :first-child {
   max-height: 100vh;
   position: absolute;
 }
