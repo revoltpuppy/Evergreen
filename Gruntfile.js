@@ -4,34 +4,6 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		
-		/**
-		 * Add support for older browsers by adding vendor prefixes to
-		 * Sass properties, based on data from caniuse.com.
-		 */
-		/*autoprefixer: {
-			options: {
-				browsers: ['last 3 Chrome versions', 'last 3 Firefox versions', 'last 3 Safari versions', 'last 3 Explorer versions']
-			},
-			default_styles: {
-				src: 'styles.css',
-				dest: 'styles.css'
-			},
-			print_styles: {
-				src: 'print.css',
-				dest: 'print.css'
-			},
-			custom_css: {  // process a whole folder
-				expand: true,
-				flatten: true,
-				src: 'custom-css/build/*.css', // -> src/css/file1.css, src/css/file2.css
-				dest: 'custom-css/build/' // -> dest/css/file1.css, dest/css/file2.css
-			},
-			dev_styles: {
-				src: 'styles-dev.css',
-				dest: 'styles-dev.css'
-			},
-		},*/
-		
 		imagemin: {                          // Task
 			dynamic: {                         // Another target
 				options: {
@@ -64,7 +36,7 @@ module.exports = function(grunt) {
 		postcss: {
 	    options: {
 		    processors: [
-					require('autoprefixer-core')(  // add vendor prefixes
+					require('autoprefixer')(  // add vendor prefixes
 						{
 							browsers: [
 								'last 3 Chrome versions',
@@ -211,7 +183,6 @@ module.exports = function(grunt) {
 	});
 
 	// Load the plugins (alphabetical order).
-	//grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-newer');

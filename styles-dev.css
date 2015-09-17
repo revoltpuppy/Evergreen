@@ -4733,9 +4733,15 @@ p.alert {
   overflow-x: visible;
   overflow-y: auto;
   scroll-behavior: smooth;
-  scroll-snap-destination: 0 0;
-  scroll-snap-points-x: repeat(0%);
-  scroll-snap-type: mandatory;
+  -webkit-scroll-snap-destination: 0 0;
+      -ms-scroll-snap-destination: 0 0;
+          scroll-snap-destination: 0 0;
+  -webkit-scroll-snap-points-x: repeat(0%);
+      -ms-scroll-snap-points-x: repeat(0%);
+          scroll-snap-points-x: repeat(0%);
+  -webkit-scroll-snap-type: mandatory;
+      -ms-scroll-snap-type: mandatory;
+          scroll-snap-type: mandatory;
 }
 @media screen and (min-width: 43em) {
   /* line 164, sass/modules/_calendars.scss */
@@ -4746,7 +4752,9 @@ p.alert {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    scroll-snap-type: none;
+    -webkit-scroll-snap-type: none;
+        -ms-scroll-snap-type: none;
+            scroll-snap-type: none;
   }
 }
 /* line 192, sass/modules/_calendars.scss */
@@ -4755,7 +4763,9 @@ p.alert {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
-  scroll-snap-coordinate: 0 0;
+  -webkit-scroll-snap-coordinate: 0 0;
+      -ms-scroll-snap-coordinate: 0 0;
+          scroll-snap-coordinate: 0 0;
 }
 @media screen and (min-width: 20em) {
   /* line 192, sass/modules/_calendars.scss */
@@ -4780,18 +4790,24 @@ p.alert {
 }
 /* line 215, sass/modules/_calendars.scss */
 .grid.upcoming-events-list > .unit-1-7:last-child {
-  scroll-snap-coordinate: -50% 0;
+  -webkit-scroll-snap-coordinate: -50% 0;
+      -ms-scroll-snap-coordinate: -50% 0;
+          scroll-snap-coordinate: -50% 0;
 }
 @media screen and (min-width: 20em) {
   /* line 215, sass/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-7:last-child {
-    scroll-snap-coordinate: -150% 0;
+    -webkit-scroll-snap-coordinate: -150% 0;
+        -ms-scroll-snap-coordinate: -150% 0;
+            scroll-snap-coordinate: -150% 0;
   }
 }
 @media screen and (min-width: 32em) {
   /* line 215, sass/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-7:last-child {
-    scroll-snap-coordinate: none;
+    -webkit-scroll-snap-coordinate: none;
+        -ms-scroll-snap-coordinate: none;
+            scroll-snap-coordinate: none;
   }
 }
 /* line 228, sass/modules/_calendars.scss */
