@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@-ms-viewport{
+  width: device-width;
+}
+@viewport{
+	width: device-width;
+}
+/*!*
+ * View the source and fork these styles on Github:
+ *
+ * @see https://github.com/revoltpuppy/Evergreen
+ */
+/**
+ * CKEditor Styles
+ *
+ * These styles are selectively compiled from the base CSS to work better
+ * with CKEditor in Drupal. Include specific updates in an imported
+ * "fixes" file.
+ *
+ * @project    The Evergreen State College
+ * @author     The Evergreen State College
+ * @copyright  2014 by the author
+ * @cssdoc     0.2.22
+ * @license    Copyrighted
+ */
+
+@import "../../tools";  //constants, mixins, functions, etc.
+
+@import "../../sass/base";
+@import "../../sass/modules";
+
+/**
+ * Fixes
+ *
+ * Overrides and other fixes for errors that occur.
+ */
+
+body{
+	// box model
+	margin: 1em;
+	max-width: 46.428411765em;
+	// layout
+	display: block;  // Remove flexbox layout
+}
+
+/*This file was written by Justin McDowell. ((O)O)*/

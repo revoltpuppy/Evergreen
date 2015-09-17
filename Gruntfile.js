@@ -67,6 +67,10 @@ module.exports = function(grunt) {
 				dest: 'custom-css/build/' // -> dest/css/file1.css, dest/css/file2.css
 			},
 			dev_styles: {
+				src: 'ckeditor.css',
+				dest: 'ckedior.css'
+			},
+			dev_styles: {
 				src: 'styles-dev.css',
 				dest: 'styles-dev.css'
 			},
@@ -91,7 +95,8 @@ module.exports = function(grunt) {
 						dest: 'custom-css/build',  // destination folder
 						ext: '.css'
 					},
-					{'../wwwevergreen-drupal-theme/css/build/screen.css': 'styles.scss'}
+					{'../wwwevergreen-drupal-theme/css/build/screen.css': 'styles.scss'},
+					{'../wwwevergreen-drupal-theme/css/build/ckeditor.css': 'custom-css/src/ckeditor.scss'},
 				]
 			},
 			dev: {  // process specific files
