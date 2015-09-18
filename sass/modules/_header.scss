@@ -113,11 +113,15 @@ input:checked + .header-dropdown{
  * 2. Logo
  */
 .logo{
-	// box model
-	width: 58%;
 	margin: .618em 2% 0 2%;
-	// layout
-	float: left;
+	width: 96%;
+	
+	@include breakpoint($lil-groot){
+		// box model
+		width: 58%;
+		// layout
+		float: left;
+	}
 	
 	@include breakpoint($starlord){
 		//width: 58%;
@@ -374,7 +378,6 @@ li.internal-users-alt{
 	}
 }
 
-//.top-nav-list a,
 .top-nav-link,
 .secondary-nav-link{
 	// box model
@@ -451,8 +454,8 @@ li.internal-users-alt{
 	margin: 0;
 	padding: 0;
 	// layout
-	display: flex;
-	overflow: hidden;  // IE9
+	//display: flex;
+	//overflow: hidden;  // IE9
 	// typography
 	text-align: center;
 	// backgrounds & borders
@@ -461,18 +464,22 @@ li.internal-users-alt{
 	list-style-type: none;
 	
 	> li{
-		flex-grow: 1;
+		display: inline-block;
+		//flex-grow: 1;
 	
-		&:first-child{
+		/*&:first-child{
 			margin-top: 0.71315146386224em;  // 7.5/10.5167
 		}
 		
 		&:last-child{
 			margin-bottom: 1.42630292772448em;  // 15/10.5167
-		}
+		}*/
 	}
 	
 	@include breakpoint($lil-groot){
+		display: flex;
+		overflow: hidden;  // IE 9
+		
 		> li:first-child,
 		> li:last-child{
 			margin: 0;
@@ -482,8 +489,8 @@ li.internal-users-alt{
 			margin: 0;
 			width: 25%;  // IE 9
 			//layout
+			flex-grow: 1;
 			float: left;  // IE9
-			//typography
 		}
 	}
 	

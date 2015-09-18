@@ -104,14 +104,18 @@
 	position: relative;
 
 	@include breakpoint($lil-groot){
-		font-size: 0.743rem;  // Step -1
-		line-height: 1.26220127903063;  // 15/11.884
+		font-size: 0.657rem;  // Step -2
+		line-height: 1.427619682; // 15/10.507
 		letter-spacing: 0.05em;
 	}
 	
 	@include breakpoint($starlord){
 		@include base-type;
 	}
+}
+
+[role="navigation"],
+.wf-actuve [role="navigation"]{  // Typekit loaded
 
 	@include breakpoint($gamora){
 		// box model
@@ -132,6 +136,25 @@
     line-height: 1.090750436300175; // 30/27.504
 	}
 }
+
+	/**
+	 * Typekit overrides
+	 */
+	.wf-active [role="navigation"]{
+		
+		@include breakpoint($lil-groot){
+			font-size: 0.743rem;  // Step -1
+			line-height: 1.26220127903063;  // 15/11.884
+		}
+		
+		@include breakpoint($rocket){
+			@include base-type;
+		}
+		
+		@include breakpoint($gamora){
+			@include base-type-lg;
+		}
+	}
 
 /**
  * D. Content Layout

@@ -99,10 +99,15 @@
 }
 
 .homepage-hero-copy{
-	//box model
-	margin: 0 2%;
-	//layout
-	float: left;
+	margin: 0 1em;
+	
+	
+	@include breakpoint($lil-groot){
+		//box model
+		margin: 0 2%;
+		//layout
+		float: left;
+	}
 	
 	h1{
     font-size: 1.202rem;

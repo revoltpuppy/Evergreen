@@ -132,7 +132,7 @@
 	}
 }
 
-.unit-1-6{  // Switches from 2 to 3 to 6 columns.
+.unit-1-6{  // Switches from 1 to 2 to 3 to 6 columns.
 	// box model
 	width: 100%;
 	
@@ -149,9 +149,13 @@
 	}
 }
 
-.unit-1-6-alt{  // Switches from 3 to 4 to 6 columns.
-	// box model
-	width: 33.3333333333%;
+.unit-1-6-alt{  // Switches from 2 to 3 to 4 to 6 columns.
+	width: 50%;
+	
+	@include breakpoint($lil-groot){
+		// box model
+		width: 33.3333333333%;
+	}
 	
 	@include breakpoint($gamora){
 		width: 25%;
