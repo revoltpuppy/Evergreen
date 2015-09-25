@@ -39,9 +39,9 @@ module.exports = function(grunt) {
 					require('autoprefixer')(  // add vendor prefixes
 						{
 							browsers: [
-								'last 3 Chrome versions',
-								'last 3 Safari versions',
-								'last 3 Firefox versions',
+								'last 10 Chrome versions',
+								'last 4 Safari versions',
+								'last 5 Firefox versions',
 								'last 3 iOS versions',
 								'last 3 Explorer versions',
 								'last 3 ChromeAndroid versions',
@@ -49,7 +49,6 @@ module.exports = function(grunt) {
 							]
 						}
 					),
-					//require('cssnano')() // minify the result
 				]
 			},
 			default_styles: {
@@ -181,7 +180,7 @@ module.exports = function(grunt) {
 			},
 			js: {  // Uglify JavaScript.
 				files: ['scripts.js'],
-				tasks: ['uglify']
+				tasks: ['jshint', 'uglify']
 			},
 		},
     
