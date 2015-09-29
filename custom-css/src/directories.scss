@@ -2,20 +2,24 @@
 
 @import "../../tools";
 
-.dir-people-index{
+.dir-people-index,
+.dir-facilities-index{
+	// layout
 	display: block;
+	// typography
+	@include base-type;
 	
 	> thead{
 		display: none;
 	}
 	
 	> tbody,
-	> tbody > tr,
-	> tbody > tr > td{
+	> tbody tr,
+	> tbody td{
 		display: block;
 	}
 	
-	> tbody > tr{
+	> tbody tr{
 		//box model
 		border: 1px solid mix(white, $blueberry-susan, 66%);
 		@include margin-default;
@@ -26,13 +30,23 @@
 		box-shadow: 0 1px 1px $drop-shadow;
 	}
 	
-	> tbody > tr > td{
+	> tbody td{
 		border-top-width: 0;
 		padding: 0;
 		margin: 0 1em;
+		
+		&:first-child{
+			margin-top: 1.07142857142857em;  // 15/14
+		}
+		
+		&:last-child{
+			margin-bottom: 0.53571428571429em;  // 7.5/14
+		}
 	}
 	
-	@media screen and (min-width: 32em){
+	@include breakpoint($drax){
+		@include base-type-lg;
+		
 		> thead{
 			display: table-header-group;
 		}
@@ -41,7 +55,7 @@
 			display: table-row-group;
 		}
 		
-		> tbody > tr{
+		> tbody tr{
 			//box model
 			border-width: 0;
 			//layout
@@ -55,13 +69,18 @@
 			box-shadow: none;
 		}
 		
-		> tbody > tr > td{
+		> tbody td{
 			//box model
 			border-top-width: 1px;
 			margin: 0;
 			padding: 0.37037em 1.11111em 1.11111em 0;
 			//layout
 			display: table-cell;
+			
+			&:first-child,
+			&:last-child{
+				margin: 0;
+			}
 		}
 	}
 }
@@ -95,7 +114,7 @@
 	content: "Phone: ";
 }
 
-@media screen and (min-width: 32em){
+@include breakpoint($drax){
 	.dir-email::before,
 	.dir-location::before,
 	.dir-mailstop::before,
