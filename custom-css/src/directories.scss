@@ -97,6 +97,15 @@
 	}
 }
 
+.dir-phone,
+.dir-mailstop{
+	letter-spacing: .05em;
+	
+	&::before{
+		letter-spacing: 0;
+	}
+}
+
 /*.dir-icon{
 	max-height: 1em;
 }*/
