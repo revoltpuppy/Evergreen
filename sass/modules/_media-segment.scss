@@ -15,32 +15,31 @@
 	clear: left;  // IE 9
 	display: block;  // IE 9
 	display: flex;  // W3C
-	//layout
 }
 .media-img,
 .media-img:link{
-	//box model
+	// box model
 	border-bottom-width: 0;
-	margin-bottom: 1.071428571428571em;  //15px
-	padding-right: 1.071428571428571em;  //15px
+	margin-bottom: 1.071428571428571em;  // 15px
+	padding-right: 1.071428571428571em;  // 15px
 	max-width: 31.3333333333%;
-	//layout
-	float: left;  //IE9
-	flex-shrink: 0;  //Do not allow the image to shrink. Note: this does respect the max-width property.
+	// layout
+	float: left;  // IE9
+	flex-shrink: 0;  // Do not allow the image to shrink. Note: this does respect the max-width property.
 	
-	@media screen and (min-width: 43em){
-		padding-right: 0.882352941176471em;  //15px
+	@include breakpoint($gamora){
+		padding-right: 0.882352941176471em;  // 15px
 	}
 }
 
-//Vertically center .media-img. Extends .media-img or .media-body.
-.media-img-alt,  //deprecated, use .media-child-alt instead
+// Vertically center .media-img. Extends .media-img or .media-body.
+.media-img-alt,  // deprecated, use .media-child-alt instead
 .media-child-alt{
 	align-self: center;  // W3C
 }
 
 .media-img img{
-	margin-top: 0.46875rem;  //Align the .media-body content with the .media-img content.
+	margin-top: 0.46875rem;  // Align the .media-body content with the .media-img content.
 	display: block;
 }
 
@@ -50,12 +49,14 @@
 }
 
 .media-body{
-	//layout
+	// layout
 	flex: 1 1 auto;
-	overflow: auto;  //IE 9  // Gives block formatting context
-	/*Alternate way to give block formatting context
-	display: table-cell;  // Gives block formatting context (pretty nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
-	width: 3000px;  // Stretches box to fit the remaining width; this is not the actual value that comes out.*/
+	overflow: auto;  // IE 9  // Gives block formatting context
+	/**
+	 * Alternate way to give block formatting context
+	 * display: table-cell;  // Gives block formatting context (pretty nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
+	 * width: 3000px;  // Stretches box to fit the remaining width; this is not the actual value that comes out.
+	 */
 }
 
 .media-body > :first-child{
