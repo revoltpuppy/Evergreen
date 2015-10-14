@@ -97,6 +97,12 @@
   @include breakpoint($gamora){
     //@include margin-default-lg;
   }
+  
+  .profile-img-link{
+	  // layout
+	  display: block;
+	  overflow: hidden;
+  }
 }
 .profile-img{
 	// box model
