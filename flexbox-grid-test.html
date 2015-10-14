@@ -1,0 +1,122 @@
+<style>
+	*,
+	*::after,
+	*::before{
+		box-sizing: border-box;
+	}
+	
+	body{
+		margin: 0;
+	}
+	
+	.wrapper{
+		margin: 0 auto;
+		max-width: 1600px;
+	}
+	
+	.grid{
+		display: block;
+		display: -webkit-flex;
+		-webkit-flex-wrap: wrap;
+		-webkit-justify-content: space-between;
+	}
+	
+	.grid-orphan{
+		/*-webkit-flex-grow: 1;
+		margin-right: auto;
+		margin-left: auto;*/
+	}
+	
+	.unit-1-1,
+	.unit-1-2,
+	.unit-1-3,
+	.unit-2-3{
+		margin-right: 1em;
+		margin-left: -1em;
+		padding-left: 1em;
+		float: left;
+	}
+	
+	.unit-1-1{
+		-webkit-flex-basis: 100%;
+	}
+	
+	.unit-1-2{
+		width: calc(50% - 0.5em);
+		-webkit-flex-basis: calc(50% - 0.5em);
+	}
+	
+	.unit-1-3{
+		width: calc(33.3333333333% - 0.3333333333em);
+		-webkit-flex-basis: calc(33.3333333333% - 0.3333333333em);
+	}
+	
+	.unit-2-3{
+		width: calc(66.6666666667% - 0.6666666667em);
+		-webkit-flex-basis: calc(66.6666666667% - 0.6666666667em);
+	}
+	
+	[class^="background-color"]{
+		margin-left: 0;
+		margin-right: -1em;
+		padding-right: 1em;
+	}
+	
+	.background-color{
+		background-color: wheat;
+	}
+	.background-color-2{
+		background-color: yellow;
+	}
+</style>
+<div class="wrapper">
+	<div class="grid">
+		<div class="grid unit-1-1">
+			<div class="background-color grid unit-1-2">
+				<div class="unit-1-3">
+					<h2>Vel Probo Ex Enim</h2>
+					<p>Pagus et venio luptatum si. Dolore augue vulputate. Fere sudo sudo esse immitto sit gravis ad et lucidus. Volutpat te eros te ludus jugis bis feugiat lobortis sino.</p>
+				</div>
+				<div class="unit-2-3">
+					<h2>Consequat Scisco Duis Facilisi</h2>
+					<p>Ne te turpis ibidem praesent paratus tristique vicis vel vereor demoveo quadrum. Cui camur capio opto ibidem utinam aliquip iaceo vicis ille sagaciter. Letatio jus opto ea ullamcorper ludus delenit ex ea neque turpis exputo.</p>
+					<p>Consequat neque similis et pneum sed consequat quidem tincidunt uxor caecus. Tristique feugiat luctus at et duis. Jugis enim autem nunc suscipit dolus aliquip vindico.</p>
+				</div>
+			</div>
+			<div class="background-color grid unit-1-2">
+				<h2>Tristique Opto Et Huic</h2>
+				<p>Lenis ulciscor nobis qui aliquip scisco vel nisl torqueo sagaciter. Aliquip indoles quae et ne nobis. Valde bene ulciscor metuo nisl distineo plaga eros iusto ut abico.</p>
+				<div class="unit-1-3">
+					<p>
+						<strong>In jugis:</strong> In persto feugait. Ideo vel feugait in. Opto wisi aliquip paratus sed quadrum qui.
+					</p>
+				</div>
+				<div class="unit-1-3">
+					<p>
+						<strong>Ut letalis:</strong> Eligo refoveo antehabeo nisl diam. Cui ille utrum nunc eu iusto utrum dolus quis utinam.
+					</p>
+				</div>
+				<div class="background-color-2 unit-1-3">
+					<p>
+						<strong>Macto ex feugait:</strong> Minim et nulla blandit interdico iustum aliquip appellatio fatua exputo.
+					</p>
+				</div>
+				<div class="grid-orphan unit-1-3">
+					<p>
+						<strong>Melior patria:</strong> Dolus natu bene iusto at vel luptatum aliquip. Elit quidne dignissim olim nisl nostrud sed commoveo wisi iustum neque commoveo. Ut nostrud ulciscor.
+					</p>
+				</div>
+				<div class="background-color-2 grid-orphan unit-1-3">
+					<p>
+						<strong>Facilisi jus abbas:</strong> Odio odio utrum mara accumsan letatio sed enim dignissim qui quis.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="grid-orphan unit-2-3">
+			<h3>Dolore Facilisi</h3>
+			<p>Praesent aliquip duis defui sed usitas acsi vel suscipit meus wisi. Incassum vel pneum wisi in accumsan dolus molior abico odio nunc. Tum nonummy inhibeo lenis. Nonummy sed nunc in aptent. Paratus nisl venio. Vero rusticus capio amet quidne. Zelus velit enim te indoles nibh volutpat.</p>
+			<p>Opto paratus eum tation exerci blandit probo duis. Luptatum luptatum indoles autem nulla esse iriure aliquam blandit.</p>
+		</div>
+	</div><!-- /.grid -->
+</div><!-- /.wrapper -->
