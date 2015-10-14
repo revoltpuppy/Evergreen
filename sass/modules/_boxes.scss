@@ -163,7 +163,13 @@ p.alert{
 	@include base-type-lg;
 	font-style: italic;
 	
-	@media screen and (min-width: 70em){
+	@include breakpoint($gamora){
+		.supplement-alt-1-2 &{
+			hyphens: auto;
+		}
+	}
+	
+	@include breakpoint($drax){
 		// box model
 		margin: 0.36358347876672em 0 0.72716695753345em 0;  // 10/27.504 20/27.504
 		// typography
