@@ -221,14 +221,14 @@ p.alert{
 	background-color: mix(white, $blueberry-susan, 85%);
 	border-radius: 2px;
 		
-	&:hover{
+	/*&:hover{
 		// backgrounds & borders
 		background-color: mix(white, $blueberry-susan, 90%);
 		border-color: mix(white, $blueberry-susan, 80%);
 		// transitions
 		-webkit-transition: all .2s ease-out;
 		        transition: all .2s ease-out;
-	}
+	}*/
 	
 	@include breakpoint($starlord){
 		&.unit-1-2{
@@ -247,5 +247,9 @@ p.alert{
 			//padding: 0 0.9375rem;  //17px
 			width: 100%;
 		}
+	}
+	
+	> :last-child{
+		margin-bottom: 0.9375rem;  // 15px
 	}
 }
