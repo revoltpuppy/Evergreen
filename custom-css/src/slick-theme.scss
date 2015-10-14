@@ -210,6 +210,75 @@ $slick-opacity-not-active: 0.25 !default;
 /**
  * Evergreen Overrides
  */
+.slick-slide img{
+	margin-left: auto;
+	margin-right: auto;
+}
+.slick-no-js-wrapper{
+	// layout
+	overflow: hidden;
+	position: relative;
+	
+	@include breakpoint($gamora){
+		overflow-x: visible;
+	}
+	
+	.unit-1-5,
+	.unit-1-7{
+		// box mode
+		width: 66.6666666667%;  // magic number: allows next event to peek out, indicating horizontal scrolling
+		flex-shrink: 0;
+		scroll-snap-coordinate: 0 0;
+	}
+	
+	@include breakpoint($lil-groot){
+		.unit-1-7{
+			width: 40%;  // magic number: allows next event to peek out, indicating horizontal scrolling
+		}
+	}
+
+	@include breakpoint($starlord){
+		.unit-1-5{
+			width: 40%;  // magic number: allows next event to peek out, indicating horizontal scrolling	
+		}
+		.unit-1-7{
+			width: 29%;  // magic number: allows next event to peek out, indicating horizontal scrolling
+		}
+	}
+}
+
+.slick-no-js-list{
+	// layout
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	overflow-x: visible;
+	overflow-y: auto;
+	// scrolling
+	scroll-behavior: smooth;
+	scroll-snap-destination: 0 0;
+	scroll-snap-points-x: repeat(0%);
+	scroll-snap-type: mandatory;
+	
+	&::after{  // pseudo-element that adds a drop shadow
+		// box model
+		height: 100%;
+		width: 100%;
+		// layout
+		display: block;
+		position: absolute;
+		top: 0;
+		right: -100%;
+		// miscellaneous
+		box-shadow: -0.25em 0 1em $drop-shadow;
+		content: "";
+		
+		@include breakpoint($gamora){
+			display: none;
+		}
+	}
+}
+
+.slick-no-js-list.slick-initialized,
 .upcoming-events-list.slick-initialized{
 	// box model
 	margin-left: 0;
@@ -217,6 +286,7 @@ $slick-opacity-not-active: 0.25 !default;
 	// layout
 	overflow: hidden;
 	
+	.unit-1-5,
 	.unit-1-7{
 		margin: 0;
 		padding: 0 3em;
