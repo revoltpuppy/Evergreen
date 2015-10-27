@@ -3,33 +3,71 @@
  *
  * @section mod-hero-homepage
  */
-//Zoom in on the center of images on small screens
+// Zoom in on the center of images on small screens
 .homepage-hero,
 .homepage-hero-content{
 	height: 100%;
 	overflow: hidden;
 }
-//.homepage-hero-picture is the picturefill image
-.homepage-hero-picture img{
+
+.homepage-hero{
+	
+	@include breakpoint($lil-groot){
+		// box model
+  	width: 100%;
+    // layout
+  	overflow: hidden;
+  	// positioning
+    position: relative;  // Creates a stage for absolute positioning of child elements
+	}
+	
+	@include breakpoint($drax){
+		display: table;  // Gives it a block formatting context
+	}
+}
+
+.homepage-hero-picture img{  // .homepage-hero-picture is the picturefill image
 	display: block;
 	
-	@media screen and (min-width: 70em){
+	@include breakpoint($drax){
 		width: 100%;
 	}
 }
 
-//.homepage-hero-img is the fallback image
-.homepage-hero-img{
+.homepage-hero-img{  // fallback image
 	margin-left: -50%;
 	width: 200%;
 	max-width: none;
-	//layout
+	// layout
 	display: block;
+	
+	@include breakpoint($starlord){
+		.homepage-hero-img{
+			// box model
+			margin-left: -25%;
+			width: 150%;
+		}
+	}
+	
+	@include breakpoint($gamora){
+		.homepage-hero-img{
+			margin-left: -10%;
+	    width: 120%;
+		}
+	}
+	
+	@include breakpoint($drax){
+		.homepage-hero-img{
+			margin-left: 0;
+			width: 100%;
+		}
+	}
 	
 	.homepage-hero-img-alt &{
 		margin-left: 0;
 	}
 }
+
 .homepage-hero a,
 .homepage-hero a:link,
 .homepage-hero a:visited,
@@ -39,30 +77,36 @@
 	font-weight: inherit;
 }
 .homepage-hero .call-to-action{
-	//box model
+	// box model
 	padding: 0 2%;
-	//layout
+	// layout
 	display: inline-block;
-	//typography
+	// typography
 	color: white;
-	//backgrounds and borders
+	// backgrounds and borders
 	background-color: $evergreen-neue;
 	
 	&:hover{
 		background-color: $sky-blue;
 	}
 }
+
 .homepage-hero-content{
+	// box model
 	width: 100%;
 	max-width: 82em;
+	// backgrounds & borders
+	background-color: $blueberry-susan;
 	
-	@media screen and (min-width: 20em){
-		//layout
-		display: flex;  //W3C
+	@include breakpoint($lil-groot){
+		// layout
+		display: flex;  // W3C
 		flex-direction: column;
-		//positioning
+		// positioning
 		position: absolute;
 		bottom: 0;
+		// backgrounds & borders
+		background-color: transparent;
 		
 		.box{
 			position: absolute;
@@ -74,7 +118,7 @@
 		justify-content: center;
 	}
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		height: 100%;
 	}
 }
@@ -99,161 +143,96 @@
 }
 
 .homepage-hero-copy{
-	margin: 0 1em;
+	margin: 0 calc(15 / 14 * 1em);
 	
 	
 	@include breakpoint($lil-groot){
-		//box model
-		margin: 0 2%;
-		//layout
+		// box model
+		width: calc(66.6666666667% - 1em);
+		// layout
 		float: left;
 	}
 	
-	h1{
-    font-size: 1.202rem;
-		line-height: 1.169925124792013;  //22.5/19.232
-		
-		&:first-line{
-			font-size: 1.416rem;
-			line-height: 0.993114406779661;  //22.5/22.656
-		}
+	@include breakpoint($starlord){
+		// box model
+		margin: 0 1em;
+		width: calc(50% - 1em);
+		color: white;
+		// typography
+		text-shadow: 0 1px 2px mix(black, $blueberry-susan, 80%);
 	}
 	
-	em{
-		font:{
-			style: normal;
-			weight: bold;
-		}
-		letter-spacing: .075em;
-    	text-transform: uppercase;
+	@include breakpoint($drax){
+		width: calc((3 / 7 * 100%) - 1em);  //3/7
 	}
 	
 	.homepage-hero-copy-alt &{
-		//layout
-		-webkit-align-self: flex-end;
-		        align-self: flex-end;
-		float: right;
+		
+		@include breakpoint($lil-groot){
+			//layout
+			align-self: flex-end;
+			float: right;
+		}
+		
+		@include breakpoint($starlord){
+			//layout
+			float: right;  //IE9
+			align-self: flex-end;  //W3C
+		}
 	}
 	
 	.homepage-hero-img-detailed &{
 		//box model
-		margin-right: 0;
-		padding: 0 .5em;
+		height: 100%;
+		margin: 0;
+		padding: 0 calc(7.5 / 15 * 1em);
+		width: 66.6666666667%;
 		//backgrounds & borders
 		background-color: transparentize($blueberry-susan, .5);
 		border-radius: 2px;
 		
-		@media screen and (min-width: 22em){
-			padding: 0 1em;
+		@include breakpoint($rocket){
+			padding: 0 calc(15 / 14 * 1em);
 		}
+		
+		@include breakpoint($starlord){
+			height: auto;
+			width: 50%;
+		}
+		
+		@include breakpoint($gamora){
+			padding: 0 calc(15 / 17 * 1em);
+		}
+		
+		@include breakpoint($drax){
+			width: calc(3 / 7 * 100%);
+		}
+		
+		@include breakpoint($groot){
+			padding: 0 calc(30 / 19.23333333333 * 1em);
+		}
+	}
+}
+
+.homepage-hero-copy h1{
+  font-size: 1.202rem;
+	line-height: 1.169925124792013;  //22.5/19.232
+	
+	@include breakpoint($lil-groot){
+		//typography
+		color: white;
+		text-shadow: 0 2px 1px mix(black, $blueberry-susan, 80%);
 	}
 	
-	.homepage-hero-special &{
-		background-color: transparentize($blueberry-susan, .33);
+	@include breakpoint($gamora){
+		//typography
+  	font-size: 1.416rem;
+  	line-height: 1.324152542372881;  //30/22.656
 	}
-}
-@media screen and (min-width: 20em){
-	.homepage-hero{
-		//box model
-    	width: 100%;
-	    //layout
-    	overflow: hidden;
-    	//positioning
-	    position: relative;  //Creates a stage for absolute positioning of child elements
-	}
-	.homepage-hero-copy{
-		width: 66.6666666667%;
-    	
-    	h1{
-    		//box model
-    		//margin: 0.779950083194676em 0;  //15/19.232
-    		//typography
-    		color: white;
-    		text-shadow: 0 2px 1px mix(black, $blueberry-susan, 80%);
-    	}
-	}
-}
-@media screen and (min-width: 22em){
-	.homepage-hero-copy h1{
-    	//margin: 1.559900166389351em 0;  //30/19.232
-	}
-    .homepage-hero-copy h1:first-line{
-		font-size: 1.945rem;
-		line-height: 0.723007712082262;  //22.5/31.12
-	}
-}
-@media screen and (min-width: 32em){
-	.homepage-hero-copy{
-		//box model
-		width: 64.6666666667%;
-		color: white;
-		text-shadow: 0 1px 2px mix(black, $blueberry-susan, 80%);
-			
-		//h1{
-    		//margin: 2.339850249584027em 0;  //45/19.232
-		//}
-		
-		.homepage-hero-copy-alt &{
-			//layout
-			float: right;  //IE9
-			-webkit-align-self: flex-end;  //Safari
-			        align-self: flex-end;  //W3C
-		}
-	}
-	.homepage-hero-img{
-		//box model
-		margin-left: -25%;
-		width: 150%;
-	}
-}
-@media screen and (min-width: 43em){
-	.homepage-hero-copy{
-		//margin: 0 6%;
-		width: 48%;
-		
-    	h1{
-    		//box model
-	    	//margin: 3.972457627118644em 0;  //90/22.656
-	    	//typography
-	    	font-size: 1.416rem;
-	    	line-height: 1.324152542372881;  //30/22.656
-	    	
-	    	&:first-line{
-		    	font-size: 2.291rem;
-					line-height: 0.818419903972065;  //30/36.656
-	    	}
-    	}
-	}
-	.homepage-hero-img{
-		margin-left: -10%;
-    	width: 120%;
-	}
-}
-@media screen and (min-width: 70em){
-	.homepage-hero{
-    	display: table;  //Gives it a block formatting context
-	}
-	.homepage-hero-copy{
-		width: 28.571428571428571%;  //2/7
-		
-		.homepage-hero-special &{
-			width: 42.857142857143%;
-		}
-	}
-	.homepage-hero-img{
-		margin-left: 0;
-		width: 100%;
-	}
-}
-@media screen and (min-width: 86em){
-	.homepage-hero-copy h1{
-  	//typography
+	
+	@media screen and (min-width: 86em){
+		//typography
   	font-size: 2.291rem;  //36.656
   	line-height: 1.227629855958097;  //45/36.656
-  	
-  	&:first-line{
-  		font-size: 3.146rem;  //50.336
-  		line-height: 0.893992371265099;  //45/50.336
-  	}
 	}
 }

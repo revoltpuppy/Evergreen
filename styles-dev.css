@@ -2739,30 +2739,66 @@ li.internal-users-alt img {
   overflow: hidden;
 }
 
-/* line 13, sass/modules/_homepage-hero.scss */
+@media screen and (min-width: 20em) {
+  /* line 13, sass/modules/_homepage-hero.scss */
+  .homepage-hero {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 13, sass/modules/_homepage-hero.scss */
+  .homepage-hero {
+    display: table;
+  }
+}
+
+/* line 29, sass/modules/_homepage-hero.scss */
 .homepage-hero-picture img {
   display: block;
 }
 @media screen and (min-width: 70em) {
-  /* line 13, sass/modules/_homepage-hero.scss */
+  /* line 29, sass/modules/_homepage-hero.scss */
   .homepage-hero-picture img {
     width: 100%;
   }
 }
 
-/* line 22, sass/modules/_homepage-hero.scss */
+/* line 37, sass/modules/_homepage-hero.scss */
 .homepage-hero-img {
   margin-left: -50%;
   width: 200%;
   max-width: none;
   display: block;
 }
-/* line 29, sass/modules/_homepage-hero.scss */
+@media screen and (min-width: 32em) {
+  /* line 45, sass/modules/_homepage-hero.scss */
+  .homepage-hero-img .homepage-hero-img {
+    margin-left: -25%;
+    width: 150%;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 53, sass/modules/_homepage-hero.scss */
+  .homepage-hero-img .homepage-hero-img {
+    margin-left: -10%;
+    width: 120%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 60, sass/modules/_homepage-hero.scss */
+  .homepage-hero-img .homepage-hero-img {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+/* line 66, sass/modules/_homepage-hero.scss */
 .homepage-hero-img-alt .homepage-hero-img {
   margin-left: 0;
 }
 
-/* line 33, sass/modules/_homepage-hero.scss */
+/* line 71, sass/modules/_homepage-hero.scss */
 .homepage-hero a,
 .homepage-hero a:link,
 .homepage-hero a:visited,
@@ -2772,25 +2808,26 @@ li.internal-users-alt img {
   font-weight: inherit;
 }
 
-/* line 41, sass/modules/_homepage-hero.scss */
+/* line 79, sass/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action {
   padding: 0 2%;
   display: inline-block;
   color: white;
   background-color: #64933a;
 }
-/* line 51, sass/modules/_homepage-hero.scss */
+/* line 89, sass/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action:hover {
   background-color: #0086ee;
 }
 
-/* line 55, sass/modules/_homepage-hero.scss */
+/* line 94, sass/modules/_homepage-hero.scss */
 .homepage-hero-content {
   width: 100%;
   max-width: 82em;
+  background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 55, sass/modules/_homepage-hero.scss */
+  /* line 94, sass/modules/_homepage-hero.scss */
   .homepage-hero-content {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2800,15 +2837,16 @@ li.internal-users-alt img {
             flex-direction: column;
     position: absolute;
     bottom: 0;
+    background-color: transparent;
   }
-  /* line 67, sass/modules/_homepage-hero.scss */
+  /* line 111, sass/modules/_homepage-hero.scss */
   .homepage-hero-content .box {
     position: absolute;
     bottom: 0;
   }
 }
 @media screen and (min-width: 25em) {
-  /* line 55, sass/modules/_homepage-hero.scss */
+  /* line 94, sass/modules/_homepage-hero.scss */
   .homepage-hero-content {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -2816,23 +2854,23 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 55, sass/modules/_homepage-hero.scss */
+  /* line 94, sass/modules/_homepage-hero.scss */
   .homepage-hero-content {
     height: 100%;
   }
 }
 
-/* line 82, sass/modules/_homepage-hero.scss */
+/* line 126, sass/modules/_homepage-hero.scss */
 .homepage-hero-content-grad {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-/* line 85, sass/modules/_homepage-hero.scss */
+/* line 129, sass/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .caption-box {
   display: none;
 }
-/* line 89, sass/modules/_homepage-hero.scss */
+/* line 133, sass/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy {
   margin: 0 0 2em 0;
   padding: 0 1em;
@@ -2841,160 +2879,118 @@ li.internal-users-alt img {
   background-color: rgba(73, 44, 93, 0.5);
 }
 
-/* line 101, sass/modules/_homepage-hero.scss */
+/* line 145, sass/modules/_homepage-hero.scss */
 .homepage-hero-copy {
-  margin: 0 1em;
+  margin: 0 calc(15 / 14 * 1em);
 }
 @media screen and (min-width: 20em) {
-  /* line 101, sass/modules/_homepage-hero.scss */
+  /* line 145, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    margin: 0 2%;
+    width: calc(66.6666666667% - 1em);
     float: left;
   }
 }
-/* line 112, sass/modules/_homepage-hero.scss */
-.homepage-hero-copy h1 {
-  font-size: 1.202rem;
-  line-height: 1.169925124792013;
-}
-/* line 116, sass/modules/_homepage-hero.scss */
-.homepage-hero-copy h1:first-line {
-  font-size: 1.416rem;
-  line-height: 0.993114406779661;
-}
-/* line 122, sass/modules/_homepage-hero.scss */
-.homepage-hero-copy em {
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: .075em;
-  text-transform: uppercase;
-}
-/* line 131, sass/modules/_homepage-hero.scss */
-.homepage-hero-copy-alt .homepage-hero-copy {
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
-  float: right;
-}
-/* line 138, sass/modules/_homepage-hero.scss */
-.homepage-hero-img-detailed .homepage-hero-copy {
-  margin-right: 0;
-  padding: 0 .5em;
-  background-color: rgba(73, 44, 93, 0.5);
-  border-radius: 2px;
-}
-@media screen and (min-width: 22em) {
-  /* line 138, sass/modules/_homepage-hero.scss */
-  .homepage-hero-img-detailed .homepage-hero-copy {
-    padding: 0 1em;
-  }
-}
-/* line 151, sass/modules/_homepage-hero.scss */
-.homepage-hero-special .homepage-hero-copy {
-  background-color: rgba(73, 44, 93, 0.67);
-}
-
-@media screen and (min-width: 20em) {
-  /* line 156, sass/modules/_homepage-hero.scss */
-  .homepage-hero {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-
-  /* line 164, sass/modules/_homepage-hero.scss */
-  .homepage-hero-copy {
-    width: 66.6666666667%;
-  }
-  /* line 167, sass/modules/_homepage-hero.scss */
-  .homepage-hero-copy h1 {
-    color: white;
-    text-shadow: 0 2px 1px #0f0913;
-  }
-}
-@media screen and (min-width: 22em) {
-  /* line 180, sass/modules/_homepage-hero.scss */
-  .homepage-hero-copy h1:first-line {
-    font-size: 1.945rem;
-    line-height: 0.723007712082262;
-  }
-}
 @media screen and (min-width: 32em) {
-  /* line 186, sass/modules/_homepage-hero.scss */
+  /* line 145, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    width: 64.6666666667%;
+    margin: 0 1em;
+    width: calc(50% - 1em);
     color: white;
     text-shadow: 0 1px 2px #0f0913;
   }
-  /* line 196, sass/modules/_homepage-hero.scss */
+}
+@media screen and (min-width: 70em) {
+  /* line 145, sass/modules/_homepage-hero.scss */
+  .homepage-hero-copy {
+    width: calc((3 / 7 * 100%) - 1em);
+  }
+}
+@media screen and (min-width: 20em) {
+  /* line 169, sass/modules/_homepage-hero.scss */
+  .homepage-hero-copy-alt .homepage-hero-copy {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    float: right;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 169, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     float: right;
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
             align-self: flex-end;
   }
-
-  /* line 203, sass/modules/_homepage-hero.scss */
-  .homepage-hero-img {
-    margin-left: -25%;
-    width: 150%;
+}
+/* line 184, sass/modules/_homepage-hero.scss */
+.homepage-hero-img-detailed .homepage-hero-copy {
+  height: 100%;
+  margin: 0;
+  padding: 0 calc(7.5 / 15 * 1em);
+  width: 66.6666666667%;
+  background-color: rgba(73, 44, 93, 0.5);
+  border-radius: 2px;
+}
+@media screen and (min-width: 22em) {
+  /* line 184, sass/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    padding: 0 calc(15 / 14 * 1em);
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 184, sass/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    height: auto;
+    width: 50%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 210, sass/modules/_homepage-hero.scss */
-  .homepage-hero-copy {
-    width: 48%;
+  /* line 184, sass/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    padding: 0 calc(15 / 17 * 1em);
   }
-  /* line 214, sass/modules/_homepage-hero.scss */
+}
+@media screen and (min-width: 70em) {
+  /* line 184, sass/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    width: calc(3 / 7 * 100%);
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 184, sass/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    padding: 0 calc(30 / 19.23333333333 * 1em);
+  }
+}
+
+/* line 217, sass/modules/_homepage-hero.scss */
+.homepage-hero-copy h1 {
+  font-size: 1.202rem;
+  line-height: 1.169925124792013;
+}
+@media screen and (min-width: 20em) {
+  /* line 217, sass/modules/_homepage-hero.scss */
+  .homepage-hero-copy h1 {
+    color: white;
+    text-shadow: 0 2px 1px #0f0913;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 217, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     font-size: 1.416rem;
     line-height: 1.324152542372881;
   }
-  /* line 221, sass/modules/_homepage-hero.scss */
-  .homepage-hero-copy h1:first-line {
-    font-size: 2.291rem;
-    line-height: 0.818419903972065;
-  }
-
-  /* line 227, sass/modules/_homepage-hero.scss */
-  .homepage-hero-img {
-    margin-left: -10%;
-    width: 120%;
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 233, sass/modules/_homepage-hero.scss */
-  .homepage-hero {
-    display: table;
-  }
-
-  /* line 236, sass/modules/_homepage-hero.scss */
-  .homepage-hero-copy {
-    width: 28.571428571428571%;
-  }
-  /* line 239, sass/modules/_homepage-hero.scss */
-  .homepage-hero-special .homepage-hero-copy {
-    width: 42.857142857143%;
-  }
-
-  /* line 243, sass/modules/_homepage-hero.scss */
-  .homepage-hero-img {
-    margin-left: 0;
-    width: 100%;
-  }
 }
 @media screen and (min-width: 86em) {
-  /* line 249, sass/modules/_homepage-hero.scss */
+  /* line 217, sass/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
-  /* line 254, sass/modules/_homepage-hero.scss */
-  .homepage-hero-copy h1:first-line {
-    font-size: 3.146rem;
-    line-height: 0.893992371265099;
-  }
 }
+
 /* line 89, sass/_modules.scss */
 .profile-list > li {
   overflow: hidden;
@@ -4159,8 +4155,8 @@ ul.accordion-inner {
  * .media
  * +---------+------------------+
  * |         |                  |
- * | .media- | .media-          |
- * |  img    |  body            |
+ * | .media- | .media-body      |
+ * |  img    |                  |
  * |         |                  |
  * +---------+------------------+
  */
@@ -4239,8 +4235,8 @@ ul.accordion-inner {
 
 /* line 70, sass/modules/_media-segment.scss */
 .media-alt .media-img {
-  margin-right: 0;
-  margin-left: 2%;
+  padding-right: 0;
+  padding-left: 1.071428571428571em;
   float: right;
 }
 
@@ -4476,15 +4472,6 @@ p.alert {
   line-height: 1.47058823529412;
   font-style: italic;
 }
-@media screen and (min-width: 43em) {
-  /* line 167, sass/modules/_boxes.scss */
-  .supplement-alt-1-2 .pull-quote {
-    -webkit-hyphens: auto;
-       -moz-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
-  }
-}
 @media screen and (min-width: 70em) {
   /* line 159, sass/modules/_boxes.scss */
   .pull-quote {
@@ -4502,6 +4489,14 @@ p.alert {
   }
 }
 
+@media screen and (min-width: 43em) {
+  /* line 183, sass/modules/_boxes.scss */
+  .supplement-alt-1-2 .pull-quote {
+    font-size: 1.202rem;
+    line-height: 1.29991680532446;
+  }
+}
+
 /**
  * 6. Full Box
  *
@@ -4509,20 +4504,20 @@ p.alert {
  *
  * @section box-full
  */
-/* line 197, sass/modules/_boxes.scss */
+/* line 198, sass/modules/_boxes.scss */
 .full-box {
   border: 1px solid #0086ee;
   padding: 0;
-  background: #0086ee url(images/texture-1.png);
+  background: #0086ee url("images/texture-1.png");
 }
 
-/* line 202, sass/modules/_boxes.scss */
+/* line 203, sass/modules/_boxes.scss */
 .full-box h2,
 .full-box h3 {
   color: #fff;
 }
 
-/* line 206, sass/modules/_boxes.scss */
+/* line 207, sass/modules/_boxes.scss */
 .full-box > .box {
   background-color: #f5f5f5;
 }
@@ -4536,7 +4531,7 @@ p.alert {
  
  * @section ui-group
  */
-/* line 219, sass/modules/_boxes.scss */
+/* line 220, sass/modules/_boxes.scss */
 .ui-group {
   border: 1px solid #d2cad7;
   margin-bottom: 0.46875rem;
@@ -4554,24 +4549,24 @@ p.alert {
   }*/
 }
 @media screen and (min-width: 32em) {
-  /* line 240, sass/modules/_boxes.scss */
+  /* line 241, sass/modules/_boxes.scss */
   .ui-group.unit-1-2 {
     margin: 0.234375rem;
     width: calc(50% - 0.46875rem);
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 247, sass/modules/_boxes.scss */
+  /* line 248, sass/modules/_boxes.scss */
   .ui-group.unit-1-3 {
     margin: 0.234375rem;
     width: calc(33.3333333333% - 0.46875rem);
   }
-  /* line 252, sass/modules/_boxes.scss */
+  /* line 253, sass/modules/_boxes.scss */
   .ui-group .media {
     width: 100%;
   }
 }
-/* line 258, sass/modules/_boxes.scss */
+/* line 259, sass/modules/_boxes.scss */
 .ui-group > :last-child {
   margin-bottom: 0.9375rem;
 }
