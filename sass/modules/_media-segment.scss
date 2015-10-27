@@ -6,8 +6,8 @@
  * .media
  * +---------+------------------+
  * |         |                  |
- * | .media- | .media-          |
- * |  img    |  body            |
+ * | .media- | .media-body      |
+ * |  img    |                  |
  * |         |                  |
  * +---------+------------------+
  */
@@ -68,8 +68,8 @@
 	flex-direction: row-reverse;
 }
 .media-alt .media-img{
-	margin-right: 0;
-	margin-left: 2%;
+	padding-right: 0;
+	padding-left: 1.071428571428571em;
 	float: right;  // IE 9
 }
 
