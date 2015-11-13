@@ -189,6 +189,7 @@
 		scroll-snap-type: none;
 	}
 	
+	> .unit-1-4,
 	> .unit-1-7{
 		// box model
 		width: 66.666666%;  // magic number: allows next event to peek out, indicating horizontal scrolling
@@ -205,13 +206,6 @@
 			width: 29%;  // magic number: allows next event to peek out, indicating horizontal scrolling
 		}
 		
-		@include breakpoint($gamora){
-			// box model
-			width: 14.285714285714%;
-			// layout
-			flex-shrink: 1;
-		}
-		
 		&:last-child{
 			scroll-snap-coordinate: -50% 0;
 		
@@ -222,6 +216,26 @@
 			@include breakpoint($starlord){
 				scroll-snap-coordinate: none;
 			}
+		}
+	}
+	
+	> .unit-1-4{
+		
+		@include breakpoint($gamora){
+			// box model
+			width: 25%;
+			// layout
+			flex-shrink: 1;
+		}
+	}
+	
+	> .unit-1-7{
+		
+		@include breakpoint($gamora){
+			// box model
+			width: 14.285714285714%;
+			// layout
+			flex-shrink: 1;
 		}
 	}
 	
