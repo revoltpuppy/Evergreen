@@ -1,0 +1,60 @@
+/**
+ * H. Facet Segment
+ *
+ * A common pattern wherein copy is tightly coupled to a graphic.
+ *
+ * .media
+ * +--------------+--------------+
+ * |              |              |
+ * | .facet-img   | .facet-body  |
+ * |              |              |
+ * |              |              |
+ * +--------------+--------------+
+ */
+
+.facet{
+	// box model
+	margin: 4.28571428571429em auto;  // 60/14 Should this be increased?
+	// layout
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	
+	@include breakpoint($gamora){
+		margin: 7.05882352941176em auto; // 120/17
+	}
+	
+	@include breakpoint($drax){
+		flex-direction: row;
+	}
+}
+
+.facet-img,
+.facet-body{
+	max-width: 100%;
+	
+	@include breakpoint($drax){
+		float: left;  // IE 9
+	}
+}
+
+.facet-img{
+	
+	@include breakpoint($drax){
+		// box model
+		max-width: 50%;
+	}
+}
+
+.facet-body{
+	
+	@include breakpoint($drax){
+		background-color: transparentize($tint, .05);
+		// box model
+		margin-left: -3em;
+		padding-left: 2em;
+		max-width: calc(50% + 3em);
+		// layout
+		z-index: 1;
+	}
+}

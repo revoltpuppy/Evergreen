@@ -15,12 +15,13 @@
  * H. Tables
  * I. Icons
  * J. Media Segment
- * K. Boxes
- * L. Images
- * M. Calendars
- * N. News
- * O. Embedded Content
- * P. CMS
+ * K. Facet Segment
+ * L. Boxes
+ * M. Images
+ * N. Calendars
+ * O. News
+ * P. Embedded Content
+ * Q. CMS
  */
 
 .top-links,
@@ -265,23 +266,28 @@
 @import "modules/media-segment";
 
 /**
- * K. Boxes
+ * K. Facet Segment
+ */
+@import "modules/facet-segment";
+
+/**
+ * L. Boxes
  */
 @import "modules/boxes";
 
 /**
- * L. Images
+ * M. Images
  */
 @import "modules/images";
 
 
 /**
- * M. Calendars
+ * N. Calendars
  */
 @import "modules/calendars";
 
 /**
- * N. News
+ * O. News
  */
 .news{
   // box model
@@ -315,7 +321,7 @@
 }
 
 /**
- * O. Embeded Content
+ * P. Embeded Content
  */
 .lazy-load{
   // box model
@@ -372,7 +378,7 @@
 }
 
 /**
- * P. CMS
+ * Q. CMS
  *
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
