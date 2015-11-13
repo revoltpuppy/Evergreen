@@ -1,7 +1,7 @@
 /**
- * H. Media Block
+ * H. Media Segment
  *
- * A common pattern wherein copy is tightly coupled to a graphic.
+ * A common pattern wherein copy is tightly coupled to an icon.
  *
  * .media
  * +---------+------------------+
@@ -78,7 +78,7 @@
 	flex-direction: column;
 	align-items: stretch;
 	        
-	.media-img{
+	> .media-img{
 	  padding-right: 0;
 	  max-width: 100%;
 	  float: none;  // IE 9
@@ -91,6 +91,7 @@
 }
 
 .media-squishy{
+	
 	@include breakpoint($starlord){
 		flex-direction: row;
 		align-items: stretch;
@@ -98,7 +99,8 @@
 }
 
 
-.media-squishy .media-img{
+.media-squishy > .media-img{
+	
 	@include breakpoint($starlord){
 		margin-bottom: 1.071428571428571em;  // 15px
 		padding-right: 1.071428571428571em;  // 15px
@@ -106,10 +108,10 @@
 		// layout
 		float: left;  // IE9
 		flex-shrink: 0;  // Do not allow the image to shrink. Note: this does respect the max-width property.
+	}
 		
-		@include breakpoint($gamora){
-			padding-right: 0.882352941176471em;  // 15px
-		}
+	@include breakpoint($gamora){
+		padding-right: 0.882352941176471em;  // 15px
 	}
 }
 
