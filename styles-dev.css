@@ -4357,14 +4357,18 @@ ul.accordion-inner {
             flex-direction: row;
   }
 }
+/* line 31, sass/modules/_facet-segment.scss */
+.facet:first-of-type {
+  margin-top: 0;
+}
 
-/* line 32, sass/modules/_facet-segment.scss */
+/* line 36, sass/modules/_facet-segment.scss */
 .facet-img,
 .facet-body {
   max-width: 100%;
 }
 @media screen and (min-width: 70em) {
-  /* line 32, sass/modules/_facet-segment.scss */
+  /* line 36, sass/modules/_facet-segment.scss */
   .facet-img,
   .facet-body {
     float: left;
@@ -4372,14 +4376,14 @@ ul.accordion-inner {
 }
 
 @media screen and (min-width: 70em) {
-  /* line 41, sass/modules/_facet-segment.scss */
+  /* line 45, sass/modules/_facet-segment.scss */
   .facet-img {
     max-width: 50%;
   }
 }
 
 @media screen and (min-width: 70em) {
-  /* line 49, sass/modules/_facet-segment.scss */
+  /* line 53, sass/modules/_facet-segment.scss */
   .facet-body {
     background-color: rgba(242, 242, 242, 0.95);
     margin-left: -3em;

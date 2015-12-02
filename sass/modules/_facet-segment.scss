@@ -27,6 +27,10 @@
 	@include breakpoint($drax){
 		flex-direction: row;
 	}
+	
+	&:first-of-type{
+		margin-top: 0;
+	}
 }
 
 .facet-img,
