@@ -81,6 +81,11 @@
 	}
 }
 
+//This overrides the margin-right: -em for images in boxes so that they don't get cut off. 
+.box .image{
+	margin-right: 0;
+}
+
 /**
  * Badges
  *
