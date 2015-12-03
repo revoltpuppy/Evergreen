@@ -1636,11 +1636,9 @@ a:link,
   }
 }
 
-/* line 93, sass/_layout.scss */
-[role="main"] {
-  position: relative;
-}
-
+/*[role="main"]{
+	position: relative;  // I don't think this is necessary.
+}*/
 /* line 97, sass/_layout.scss */
 [role="navigation"],
 [role="main"] {
@@ -4740,6 +4738,11 @@ p.alert {
     float: left;
   }
 }
+/* line 85, sass/modules/_images.scss */
+.box .image {
+  margin-right: 0;
+}
+
 /**
  * Badges
  *
