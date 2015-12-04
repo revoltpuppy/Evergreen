@@ -4738,9 +4738,11 @@ p.alert {
     float: left;
   }
 }
-/* line 85, sass/modules/_images.scss */
-.box .image {
-  margin-right: 0;
+@media screen and (min-width: 43em) {
+  /* line 85, sass/modules/_images.scss */
+  .box .image {
+    margin-right: 0;
+  }
 }
 
 /**
