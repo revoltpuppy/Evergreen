@@ -2010,7 +2010,7 @@ a:link,
  * H. Tables
  * I. Icons
  * J. Media Segment
- * K. Facet Segment
+ * K. Spread Segment
  * L. Boxes
  * M. Images
  * N. Calendars
@@ -2713,16 +2713,16 @@ li.internal-users-alt img {
   .main-background > :first-child,
   .main-background2 .main-background-img,
   .main-background2 > :first-child {
-    max-width: 57.142857142857143%;
+    max-width: calc(82em * 0.57142857142857143);
   }
 }
 
-/* line 73, sass/_modules.scss */
+/* line 74, sass/_modules.scss */
 .main-background2 {
   position: -webkit-sticky;
   position: sticky;
 }
-/* line 76, sass/_modules.scss */
+/* line 77, sass/_modules.scss */
 .main-background2 > .main-background-img,
 .main-background2 > :first-child {
   max-height: 100vh;
@@ -2996,18 +2996,18 @@ li.internal-users-alt img {
   }
 }
 
-/* line 90, sass/_modules.scss */
+/* line 91, sass/_modules.scss */
 .profile-list > li {
   overflow: hidden;
   position: relative;
 }
-/* line 102, sass/_modules.scss */
+/* line 103, sass/_modules.scss */
 .profile-list > li .profile-img-link {
   display: block;
   overflow: hidden;
 }
 
-/* line 108, sass/_modules.scss */
+/* line 109, sass/_modules.scss */
 .profile-img {
   margin-left: -50%;
   width: 200%;
@@ -3015,35 +3015,35 @@ li.internal-users-alt img {
   display: block;
 }
 @media screen and (min-width: 20em) {
-  /* line 108, sass/_modules.scss */
+  /* line 109, sass/_modules.scss */
   .profile-img {
     margin-left: -25%;
     width: 150%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 108, sass/_modules.scss */
+  /* line 109, sass/_modules.scss */
   .profile-img {
     margin-left: 0%;
     width: 100%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 108, sass/_modules.scss */
+  /* line 109, sass/_modules.scss */
   .profile-img {
     width: 120%;
     margin-left: -10%;
   }
 }
 @media screen and (min-width: 60em) {
-  /* line 108, sass/_modules.scss */
+  /* line 109, sass/_modules.scss */
   .profile-img {
     width: 100%;
     margin-left: 0%;
   }
 }
 
-/* line 136, sass/_modules.scss */
+/* line 137, sass/_modules.scss */
 .profile-list .box {
   margin-top: -1.40625rem;
   position: absolute;
@@ -3440,17 +3440,17 @@ ul.accordion-inner {
  *
  * Special, non-base element typography.
  */
-/* line 158, sass/_modules.scss */
+/* line 159, sass/_modules.scss */
 .lead {
   margin-bottom: 0;
 }
 
-/* line 161, sass/_modules.scss */
+/* line 162, sass/_modules.scss */
 .follow {
   margin-top: 0;
 }
 
-/* line 165, sass/_modules.scss */
+/* line 166, sass/_modules.scss */
 .intro,
 .field-intro {
   margin: 1.169925124792013em 0;
@@ -3459,7 +3459,7 @@ ul.accordion-inner {
   line-height: 1.559900166389351;
 }
 @media screen and (min-width: 43em) {
-  /* line 165, sass/_modules.scss */
+  /* line 166, sass/_modules.scss */
   .intro,
   .field-intro {
     margin: 1.09075043630017em 0;
@@ -3468,7 +3468,7 @@ ul.accordion-inner {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 165, sass/_modules.scss */
+  /* line 166, sass/_modules.scss */
   .intro,
   .field-intro {
     margin: 1.44601542416452em 0;
@@ -3477,38 +3477,38 @@ ul.accordion-inner {
   }
 }
 
-/* line 191, sass/_modules.scss */
+/* line 192, sass/_modules.scss */
 .intro-alt {
   color: #333;
   font-weight: bold;
 }
 
-/* line 196, sass/_modules.scss */
+/* line 197, sass/_modules.scss */
 .details {
   font-size: .657rem;
   line-height: 1.427619682116684;
 }
 
-/* line 201, sass/_modules.scss */
+/* line 202, sass/_modules.scss */
 .big-fact {
   font-size: 1.063rem;
   line-height: 1.47058823529412;
 }
 @media screen and (min-width: 43em) {
-  /* line 201, sass/_modules.scss */
+  /* line 202, sass/_modules.scss */
   .big-fact {
     margin: .2727272727em 0 .8181818182em 0;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 201, sass/_modules.scss */
+  /* line 202, sass/_modules.scss */
   .big-fact {
     font-size: 1.719rem;
     line-height: 1.090710779858208;
   }
 }
 
-/* line 214, sass/_modules.scss */
+/* line 215, sass/_modules.scss */
 .key-number {
   margin: 0.818419903972065em 0 0 0;
   display: block;
@@ -3518,12 +3518,12 @@ ul.accordion-inner {
   line-height: 1.227629855958097;
 }
 
-/* line 226, sass/_modules.scss */
+/* line 227, sass/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 230, sass/_modules.scss */
+/* line 231, sass/_modules.scss */
 .main-content > p:last-child::after,
 .main-content > ul:last-child > li:last-child::after,
 .main-content > ol:last-child > li:last-child::after,
@@ -3532,7 +3532,7 @@ ul.accordion-inner {
   content: " " url("/_inc/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 230, sass/_modules.scss */
+  /* line 231, sass/_modules.scss */
   .main-content > p:last-child::after,
   .main-content > ul:last-child > li:last-child::after,
   .main-content > ol:last-child > li:last-child::after,
@@ -4032,7 +4032,7 @@ ul.accordion-inner {
 /**
  * H. Tables
  */
-/* line 250, sass/_modules.scss */
+/* line 251, sass/_modules.scss */
 .dataTable {
   /*@include breakpoint($starlord){
   	font-family: $text-face;
@@ -4313,23 +4313,23 @@ ul.accordion-inner {
 	}
 }*/
 /**
- * K. Facet Segment
+ * K. Spread Segment
  */
 /**
- * H. Facet Segment
+ * H. spread Segment
  *
  * A common pattern wherein copy is tightly coupled to a graphic.
  *
  * .media
  * +--------------+--------------+
  * |              |              |
- * | .facet-img   | .facet-body  |
+ * | .spread-img  | .spread-body |
  * |              |              |
  * |              |              |
  * +--------------+--------------+
  */
-/* line 15, sass/modules/_facet-segment.scss */
-.facet {
+/* line 15, sass/modules/_spread-segment.scss */
+.spread {
   margin: 4.28571428571429em auto;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -4342,47 +4342,47 @@ ul.accordion-inner {
           flex-direction: column;
 }
 @media screen and (min-width: 43em) {
-  /* line 15, sass/modules/_facet-segment.scss */
-  .facet {
+  /* line 15, sass/modules/_spread-segment.scss */
+  .spread {
     margin: 7.05882352941176em auto;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 15, sass/modules/_facet-segment.scss */
-  .facet {
+  /* line 15, sass/modules/_spread-segment.scss */
+  .spread {
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
   }
 }
-/* line 31, sass/modules/_facet-segment.scss */
-.facet:first-of-type {
+/* line 31, sass/modules/_spread-segment.scss */
+.spread:first-of-type {
   margin-top: 0;
 }
 
-/* line 36, sass/modules/_facet-segment.scss */
-.facet-img,
-.facet-body {
+/* line 36, sass/modules/_spread-segment.scss */
+.spread-img,
+.spread-body {
   max-width: 100%;
 }
 @media screen and (min-width: 70em) {
-  /* line 36, sass/modules/_facet-segment.scss */
-  .facet-img,
-  .facet-body {
+  /* line 36, sass/modules/_spread-segment.scss */
+  .spread-img,
+  .spread-body {
     float: left;
   }
 }
 
 @media screen and (min-width: 70em) {
-  /* line 45, sass/modules/_facet-segment.scss */
-  .facet-img {
+  /* line 45, sass/modules/_spread-segment.scss */
+  .spread-img {
     max-width: 50%;
   }
 }
 
 @media screen and (min-width: 70em) {
-  /* line 53, sass/modules/_facet-segment.scss */
-  .facet-body {
+  /* line 53, sass/modules/_spread-segment.scss */
+  .spread-body {
     background-color: rgba(242, 242, 242, 0.95);
     margin-left: -3em;
     padding-left: 2em;
@@ -5308,7 +5308,7 @@ p.alert {
 /**
  * O. News
  */
-/* line 292, sass/_modules.scss */
+/* line 293, sass/_modules.scss */
 .news {
   border-top: 1px solid #d1cad6;
   border-bottom: 1px solid #d1cad6;
@@ -5316,13 +5316,13 @@ p.alert {
   background-color: #E3DFE6;
 }
 
-/* line 302, sass/_modules.scss */
+/* line 303, sass/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
   width: calc(100% - 2em);
 }
 
-/* line 308, sass/_modules.scss */
+/* line 309, sass/_modules.scss */
 .news-story {
   border: 1px solid #ccc;
   height: calc(100% - 1em);
@@ -5336,7 +5336,7 @@ p.alert {
 /**
  * P. Embeded Content
  */
-/* line 326, sass/_modules.scss */
+/* line 327, sass/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -5344,7 +5344,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 336, sass/_modules.scss */
+/* line 337, sass/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -5363,24 +5363,24 @@ p.alert {
   background-image: url(http://evergreen.edu/_inc/images/texture-1.png);
   content: url(http://evergreen.edu/_inc/images/icons/green/play.png);
 }
-/* line 355, sass/_modules.scss */
+/* line 356, sass/_modules.scss */
 .lazy-load:hover::after {
   opacity: .85;
 }
-/* line 359, sass/_modules.scss */
+/* line 360, sass/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 367, sass/_modules.scss */
+/* line 368, sass/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 375, sass/_modules.scss */
+/* line 376, sass/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -5391,7 +5391,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 387, sass/_modules.scss */
+/* line 388, sass/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -5399,7 +5399,7 @@ p.alert {
   display: block;
 }
 
-/* line 396, sass/_modules.scss */
+/* line 397, sass/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(30, 19, 37, 0.25);
 }
