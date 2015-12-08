@@ -66,7 +66,7 @@
 		
 		@include breakpoint($drax){
 			//max-width: 57.142857142857143%;  // 4/7
-			max-width: calc(82em * 0.57142857142857143);  // 4/7, in the context of the main content area
+			max-width: calc(82em * 0.57142857142857143);  // 4/7, based on the context of the main content area
 		}
 	}
 }
