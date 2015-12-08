@@ -1,18 +1,18 @@
 /**
- * H. Facet Segment
+ * H. spread Segment
  *
  * A common pattern wherein copy is tightly coupled to a graphic.
  *
  * .media
  * +--------------+--------------+
  * |              |              |
- * | .facet-img   | .facet-body  |
+ * | .spread-img  | .spread-body |
  * |              |              |
  * |              |              |
  * +--------------+--------------+
  */
 
-.facet{
+.spread{
 	// box model
 	margin: 4.28571428571429em auto;  // 60/14 Should this be increased?
 	// layout
@@ -33,8 +33,8 @@
 	}
 }
 
-.facet-img,
-.facet-body{
+.spread-img,
+.spread-body{
 	max-width: 100%;
 	
 	@include breakpoint($drax){
@@ -42,7 +42,7 @@
 	}
 }
 
-.facet-img{
+.spread-img{
 	
 	@include breakpoint($drax){
 		// box model
@@ -50,7 +50,7 @@
 	}
 }
 
-.facet-body{
+.spread-body{
 	
 	@include breakpoint($drax){
 		background-color: transparentize($tint, .05);
