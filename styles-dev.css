@@ -1636,9 +1636,11 @@ a:link,
   }
 }
 
-/*[role="main"]{
-	position: relative;  // I don't think this is necessary.
-}*/
+/* line 93, sass/_layout.scss */
+[role="main"] {
+  position: relative;
+}
+
 /* line 97, sass/_layout.scss */
 [role="navigation"],
 [role="main"] {

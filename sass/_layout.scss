@@ -90,9 +90,9 @@
   }
 }
 
-/*[role="main"]{
-	position: relative;  // I don't think this is necessary.
-}*/
+[role="main"]{
+	position: relative;  // Necessary to keep the left-nav contained on the homepage.
+}
 
 [role="navigation"],
 [role="main"]{
