@@ -50,36 +50,42 @@
 	left: 0;
 	z-index: -1;
 	
-	@media screen and (min-width: 43em){
+	@include breakpoint($gamora){
 		width: 100%;
 	}
+}
 
-	.main-background-img,
-	> :first-child{
-		width: 100%;
-		display: block;
-	  
-	  @include breakpoint($gamora){
-		  width: auto;
-		  max-width: 60%;  // 3/5
-	  }
-		
-		@include breakpoint($drax){
-			//max-width: 57.142857142857143%;  // 4/7
-			max-width: calc(82em * 0.57142857142857143);  // 4/7, based on the context of the main content area
-		}
+.main-background .main-background-img,  // deprecated, use main-background2
+.main-background > :first-child,
+.main-background2 .main-background-img,  // deprecated, use main-background2
+.main-background2 > :first-child{
+	width: 100%;
+	display: block;
+  
+  @include breakpoint($gamora){
+	  width: auto;
+	  max-width: 80%;  // 4/5
+  }
+	
+	@include breakpoint($drax){
+		//max-width: 57.142857142857143%;  // 4/7
+		max-width: calc(82em * 0.57142857142857143);  // 4/7, based on the context of the main content area
 	}
 }
 
 .main-background2{
-	position: sticky;
+	position: sticky;	
+}
+
+.main-background2 > .main-background-img,
+.main-background2 > :first-child{
+	// position
+	position: absolute;
 	
-	> .main-background-img,
-	> :first-child{
+	@include breakpoint($gamora){
 		// box model
+		width: 100%;
 		max-height: 100vh;
-		// position
-		position: absolute;
 	}
 }
 
