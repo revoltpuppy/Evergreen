@@ -90,6 +90,19 @@
 }
 
 /**
+ * We are going to use this later.
+#main-background-img{
+	filter: blur(1em);
+	transition: all 0.085s cubic-bezier(0.19, 1, 0.22, 1) 0s;  // exponential
+	//will-change: filter;
+}
+*/
+
+.main-background2-enhanced #main-background-img{
+	filter: none;
+}
+
+/**
  * C. Homepage Hero Image
  */
 @import "modules/homepage-hero";
