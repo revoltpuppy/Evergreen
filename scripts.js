@@ -69,7 +69,7 @@ $(".lazy-load").click(function(e){
 });
 
 /**
- * Document is fully loaded
+ * DOM is fully loaded; images and other pieces may not yet be
  */
 $(document).ready(function(){
 	/**
@@ -110,3 +110,60 @@ $(document).ready(function(){
 		fluidMediaResize($allVideos);
 	});
 });
+
+/**
+ * All content, including images, are fully loaded.
+ */
+// jQuery-free!
+window.onload = function loadAfter() {
+	
+	/**
+	 * Blur-up Backgrounds
+	 * 
+	 * Start with a tiny background, blurred, then load up full background and transition to it.
+	 * Adapted from Emil Björklund's script.
+	 * See: https://css-tricks.com/the-blur-up-technique-for-loading-background-images/
+	 */
+	var win, doc, bgTiny, bg, enhancedClass;
+	
+	// Quit early if older browser (e.g. IE 8).
+	if (!('addEventListener' in window)) {
+		return;
+	}
+	
+	win = window;
+	doc = win.document;
+	bgTiny = document.getElementById('main-background-img');
+	bg = doc.querySelector('.main-background2');
+	enhancedClass = 'main-background2-enhanced';
+	
+	// Strip the "tiny" (-t) suffix from the filename
+	var bgLarge = (function(){
+		if(bgTiny.src.match(/-t\./)){
+			return bgTiny.src.replace(/-t./, '.');
+		} else {
+			return;
+		}
+	}());
+	
+	// After the image transitions from blurry to sharp, turn off will-change to save processing power
+	function blurOff(){
+		bgTiny.style.willChange = 'auto';
+	}
+	
+	// Assign an onLoad handler to the dummy image *before* assigning the src
+	bgTiny.onload = function () {
+		bgTiny.style.willChange = 'filter';
+		bgTiny.addEventListener('transitioned', blurOff());
+		if (bg.classList)  // Add the "enhanced" class to the element
+			bg.classList.add(enhancedClass);
+		else  // IE 9
+			bg.className += ' ' + enhancedClass;
+	};
+  
+	// Finally, trigger the whole preloading chain by giving the dummy
+	// image its source.
+	if (bgLarge) {
+		bgTiny.src = bgLarge;
+	}
+};
