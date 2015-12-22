@@ -73,12 +73,14 @@ video{
  */
 table{
 		// box model
-    border-collapse: collapse;
-    border-spacing: 0;
-    border-width: 0;
-    margin: 1.481481481481481em 0;  // 20/13.5
-    width: 100%;
-    max-width: 100%;
+		border-collapse: collapse;
+		border-spacing: 0;
+		border-width: 0;
+		margin: 1.481481481481481em 0;  // 20/13.5
+		width: 100%;
+		max-width: 100%;
+		// typography
+		@include base-type;
 }
 
 caption{  // styled after h4

@@ -71,14 +71,14 @@ dl,
 blockquote,
 figure,
 .base{
-	margin: 0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
+	@include margin-default;
 	
 	@include breakpoint($gamora){
-		margin: 0.441176470588235em 0 0.882352941176471em 0;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
+		@include margin-default-lg;
 	}
 	
 	@include breakpoint($groot){
-		margin: 0.51996672212978em 0 1.03993344425957em 0;  //10/19.232 20/19.232  So, 30 + 10 + 20 = 60
+		@include margin-default-xl;
 	}
 }
 
@@ -99,121 +99,144 @@ figure,
  * @section h
  */
 h1{
-	//box model
+	// box model
 	margin: 0.96401028277635em 0 0 0;  // 30/31.12
-	//typography
+	// typography
 	font-size: 1.945rem;  // 31.12px  Step 4
 	font-weight: normal;
 	line-height: 1.44601542416452;  // 45/31.12
 
 	@include breakpoint($starlord){
-		//box model
+		// box model
 		margin-top: 0.818419903972065em;
-		//typography
-		font-size: 2.291rem;  // 36.656px
+		// typography
+		font-size: 2.291rem;  // 36.656px  // Where does this come from? I don't remember.
 		line-height: 1.227629855958097;  // 45/35.656
 	}
     
 	@include breakpoint($gamora){
-		//box model
-		margin-top: 0.673975557153127em;   // 30/44.5167
-		//typography
-		font-size: 2.782rem;  // 44.512px  Step 5
-		line-height: 1.010963335729691;  // 45/44.5167
+		// box model
+		margin-top: 0.63663179339176em;   // 30/47.123
+		// typography
+		font-size: 2.945rem;  // 47.1232px  Step 5
+		line-height: 0.95494769008764;  // 45/47.123
 	}
 	
 	@include breakpoint($groot){
-		//box model
-		margin-top: 1.19198982835346em;  // 60/50.366
-		//typography
-		font-size: 3.146rem;  // 50.336  Step 6
-		line-height: 1.19198982835346;  // 60/50.336
+		// box model
+		margin-top: 1.19191879059973em;  // 60/50.339
+		// typography
+		font-size: 3.146rem;  // 50.339  Step 6
+		line-height: 1.19191879059973;  // 60/50.339
 	}
 }
+
 h2{
-	//box model
-  margin-top: 1.55990016638935em;  // 30/19.232
-  //typography
-  color:#666;
-  font-size: 1.202rem;  // 19.232px  Step 2
-  font-weight:bold;
-  line-height: 1.55990016638935;  // 30/19.232
+	// box model
+  margin-top: 1.56014353320505em;  // 30/19.229
+  // typography
+  color: mix($tint, $black, 40%);
+  font-size: 1.202rem;  // 19.229px  Step 2
+  font-weight: bold;
+  line-height: 1.56014353320505;  // 30/19.229
   
   @include breakpoint($gamora){
-  	//box model
-  	margin-top: 1.090750436300175em;  // 30/27.504
-  	//typography
-    font-size: 1.719rem;  // 27.504px  Step 3
-    line-height: 1.090750436300175; // 30/27.504
+  	// box model
+  	margin-top: 1.03007828594973em;  // 30/29.124
+  	// typography
+    font-size: 1.82rem;  // 29.124px  Step 3
+    line-height: 1.03007828594973; // 30/29.124
   }
   
   @include breakpoint($groot){
-  	//box model
-  	margin-top: 0.96401028277635em;  // 30/31.12
-  	//typography
-    font-size: 1.945rem;  // 31.12px  Step 4
-    line-height: 0.96401028277635;  // 30/31.12
+  	// box model
+  	margin-top: 1.44638724607868em;  // 45/31.112
+  	// typography
+    font-size: 1.945rem;  // 31.112px  Step 4
+    line-height: 0.96425816405246;  // 30/31.112
   }
 }
+
 h3{
-	//box model
-	margin-top: 1.32352941176471em;  // 22.5/17
-	//typography
-	color:#333;
-	font-size: 1.063rem;  // 17px  Step 1
+	// box model
+	margin-top: 1.66666666666667em;  // 30/18
+	// typography
+	color: mix($tint, $black, 20%);
+	@include base-type-lg;
 	font-weight: normal;
-	line-height: 1.32352941176471;  // 22.5/17
     
 	@include breakpoint($gamora){
-		//box model
-		margin-top: 1.1761938367443em;  // 30/25.506
-		//typography
-		font-size: 1.594125rem;  // 25.506px - otherwise appears optically taller than h2; Step 3 - 2px
-		line-height: 1.176286072772898;  // 30/25.504
+		// box model
+		margin-top: 1.10603155876714em;  // 30/27.124
+		// typography
+		font-size: 1.69525rem;  // 27.124px - otherwise appears optically taller than h2; Step 3 - 2px
+		line-height: 1.10603155876714;  // 30/27.124
 	}
     
 	@include breakpoint($groot){
-		//box model
-		margin-top: 1.06715993170176em;  // 30/28.112
-		//typography
-		font-size: 1.757rem;  // 28.112px - otherwise appears optically taller than h2; Step 4 - 3px
-		line-height: 1.06715993170176;  // 30/28.112
+		// box model
+		margin-top: 1.54575432811212em;  // 45/29.112
+		// typography
+		font-size: 1.8195rem;  // 29.112px - otherwise appears optically taller than h2; Step 4 - 3px
+		line-height: 1.03050288540808;  // 30/29.112
 	}
 }
+
 h4,
-h5,
-h6{
-	//box model
-  margin-top: 1.07142857142857em;  // 15/14
-  //typography
-  font-size: 0.875rem;  // 19.232px  Step 0.5
+h5{
+	// box model
+  margin-top: 2.14285714285714em;  // 30/14
+  // typography
+  font-size: 0.875rem;  // 14px  Step 0.5
+  font-weight: bold;
   line-height: 1.60714285714286;  // 22.5/14
   
   @include breakpoint($gamora){
-  	//box model
-  	margin-top: 1.46814133307233em;  // 30/20.434
-  	//typography
-    font-size: 1.202rem;  // 20.434px  Step 2
-    line-height: 1.46814133307233; // 30/20.434
+  	// box model
+  	margin-top: 1.56014353320505em;  // 30/19.229
+  	// typography
+		font-size: 1.202rem;  // 19.229px  Step 2
+		line-height: 1.56014353320505;  // 30/19.229
   }
   
   @include breakpoint($groot){
-  	//box model
-    margin-top: 1.090750436300175em;  // 30/27.504
-    //typography
-    font-size: 1.719rem;  // 27.504px  Step 3
-    line-height: 1.090750436300175;  // 30/27.504
+  	// box model
+    margin-top: 1.5451174289246em;  // 45/29.124
+    // typography
+    font-size: 1.82rem;  // 29.124px  Step 3
+    line-height: 1.03007828594973; // 30/29.124
   }
 }
+
 h5{
-  color: #666;
-  font-weight: bold;
+  color: mix($tint, $black, 40%);
 }
+
 h6{
-	color: #666;
-  font-style: italic;
+	// box model
+	margin-top: 2.69662921348315em;  // 15/11.125
+	// typography
+	color: mix($tint, $black, 40%);
+	@include small-type;
   font-weight: normal;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	
+	@include breakpoint($gamora){
+		// box model
+		margin-top: 2.14285714285714em;  // 30/14
+		// typography
+		@include base-type;
+	}
+		
+	@include breakpoint($groot){
+		// box model
+		margin-top: 2.5em;  // 45/18
+		// typography
+		@include base-type-lg;
+	}
 }
+
 h1,
 h2,
 h3,
@@ -235,8 +258,16 @@ h6{
  */
 ul,
 ol{
-	margin-left: 1.76470588235294em;
+	margin-left: 1.07142857142857em;  // 15/14
 	padding-left: 0;
+	
+	@include breakpoint($gamora){
+		margin-left: 1.66666666666667em;  // 30/18
+	}
+	
+	@include breakpoint($groot){
+		margin-left: 1.56014353320505em; // 30/19.229
+	}
 }
 
 ul,
@@ -255,7 +286,7 @@ dt{
 	font-weight: bold;
 	
 	@include breakpoint($groot){
-		margin-top: 0.51996672212978em;  // 10/19.232 - Same as p margin-top
+		margin-top: 0.52004784440168em;  // 10/19.229 - Same as p margin-top
 	}
 }
 dd{
@@ -263,7 +294,7 @@ dd{
 	margin-left: 0;
 	
 	@include breakpoint($groot){
-		margin-bottom: 1.03993344425957em;  // 20/19.232 - Same as p margin-bottom
+		margin-bottom: 1.04009568880337em;  // 20/19.229 - Same as p margin-bottom
 	}
 }
 dd > p:first-child,
@@ -365,7 +396,6 @@ em{
 
 figcaption,
 small,
-//caption,  // table caption
 .details,  // deprecated
 .caption{
 	@include small-type;
@@ -377,7 +407,6 @@ small,
 }
 
 small{
-	//color: #333;
 	
 	[role="contentinfo"] &{
 		color: #ccc;
@@ -423,7 +452,7 @@ hr{
 	// box model
 	border: 0;
 	height: 5px;
-	margin: 2.8125rem 0;  // 45/16
+	margin: 2.65625rem 0;  // 42.5/16 - So, 42.5 * 2 + 5 = 90
 	// backgrounds & borders
 	background-color: $evergreen-neue;
 }

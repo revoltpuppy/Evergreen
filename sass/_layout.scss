@@ -52,7 +52,7 @@
 	}
 	
 	@include breakpoint($drax){
-		max-width: 82em;
+		max-width: 77em;
 	}
 }
 .wrapper:before,   // nega-clearfix! Clearfix that wraps the element around TOP margins.

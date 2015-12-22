@@ -56,7 +56,7 @@ $groot:     (min: 125em);
 }
 
 /**
- * Modular Scale
+ * Deprecated Modular Scale - Do not use!
  *
  * The typographic scale we are using for measurements.
  * Ideal text size is 17px
@@ -64,7 +64,7 @@ $groot:     (min: 125em);
  * the previous Admissions template, which guided image sizes in
  * the new template.
  *
- * @see http://modularscale.com/scale/?px1=17&px2=345&ra1=1.618&ra2=0
+ * @see http://www.modularscale.com/?17,345&px&1.618&web&text
  */
 
 /* Step #    Pixels     Ems    Rems
@@ -99,7 +99,43 @@ $groot:     (min: 125em);
  *    -10     1.533   0.090   0.096
  *    -11     1.072   0.063   0.067
  */
- 
+
+/**
+ * New Modular Scale
+ *
+ * Ideal text size is 18px.
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * See: http://www.modularscale.com/?18,345&px&1.618&web&text
+ */
+/**
+ * Step #    Pixels     Ems    Rems
+ *     17   845.475  46.971  52.842
+ *     16   558.21   31.012  34.888
+ *     15   522.543  29.03   32.659
+ *     14   345      19.167  21.563
+ *     13   322.956  17.942  20.185
+ *     12   213.226  11.846  13.327
+ *     11   199.602  11.089  12.475
+ *     10   131.784   7.321   8.237
+ *      9   123.363   6.854   7.71
+ *      8    81.449   4.525   5.091
+ *      7    76.244   4.236   4.765
+ *      6    50.339   2.797   3.146
+ *      5    47.123   2.618   2.945
+ *      4    31.112   1.728   1.945
+ *      3    29.124   1.618   1.82
+ *      2    19.229   1.068   1.202
+ *      1    18       1       1.125
+ *      0.5  14.000   0.778   0.875  Fudged for better readability, especially on mobile.
+ *     -1    11.125   0.618   0.695
+ *     -2     6.876   0.382   0.43
+ *     -3     4.249   0.236   0.266
+ *     -4     2.626   0.146   0.164
+ *     -5     1.623   0.09    0.101
+ */
 
 /**
  * Sass Mixins
@@ -114,7 +150,10 @@ $groot:     (min: 125em);
 	margin: 0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
 }
 @mixin margin-default-lg{
-	margin: 0.441176470588235em 0 0.882352941176471em 0;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
+	margin: 0.41666666666667em 0 0.83333333333333em 0;  //22.5/18/3  15/18  So, 22.5 + 7.5 + 15 = 45
+}
+@mixin margin-default-xl{
+	margin: 0.52004784440168em 0 1.04009568880337em 0;  // 10/19.229 20/19.229  So, 30 + 10 + 20 = 60
 }
 
 /**
@@ -125,17 +164,17 @@ $groot:     (min: 125em);
 	line-height: 1.42857142857143;  //20/14
 }
 @mixin base-type-lg{
-	font-size: 1.063rem;  // 17px  Step 1
-	line-height: 1.47058823529412;  // 25/17
+	font-size: 1.125rem;  // 18px  Step 1
+	line-height: 1.38888888888889;  // 25/18
 }
 @mixin base-type-xl{
-	font-size: 1.202rem;  // 19.232px  Step 2
-	line-height: 1.29991680532446;  // 25/19.232
+	font-size: 1.202rem;  // 19.229px  Step 2
+	line-height: 1.30011961100421;  // 25/19.229
 }
 @mixin small-type{
 	font-family: $small-face;
-	font-size: 0.657rem;  // 10.507px  Step -2
-	line-height: 1.427619682116684;  // 15/10.507
+	font-size: 0.695rem;  // 11.125px  Step -1
+	line-height: 1.34831460674157;  // 15/11.125
 }
 
 /**
