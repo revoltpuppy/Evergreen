@@ -65,7 +65,7 @@ module.exports = function(grunt) {
 				src: 'custom-css/build/*.css', // -> src/css/file1.css, src/css/file2.css
 				dest: 'custom-css/build/' // -> dest/css/file1.css, dest/css/file2.css
 			},
-			dev_styles: {
+			cms_styles: {
 				src: 'ckeditor.css',
 				dest: 'ckedior.css'
 			},
