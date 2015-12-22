@@ -42,7 +42,7 @@
 .main-background,  // deprecated, use main-background2
 .main-background2{
 	// box model
-	width:100%;
+	width: 100%;
 	max-height: 100vh;
 	// positioning
 	position: fixed;
@@ -51,7 +51,7 @@
 	z-index: -1;
 	
 	@include breakpoint($gamora){
-		width: 100%;
+		width: auto;
 	}
 }
 
@@ -176,10 +176,10 @@
  * Special, non-base element typography.
  */
 .lead{
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 .follow{
-    margin-top:0;
+    margin-top: 0;
 }
 
 .intro,  // deprecated, use .field-intro instead.

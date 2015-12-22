@@ -142,25 +142,15 @@ tr:first-child td{
 }
 
 // Collapse top space between cell padding and element margins.
-th > p:first-child,
-td > p:first-child,
-td > ul:first-child,
-td > ol:first-child,
+th > :first-child,
+td > :first-child,
 td > ul:first-child li:first-child > p:first-child,
-td > ol:first-child li:first-child > p:first-child,
-td > h1:first-child,
-td > h2:first-child,
-td > h3:first-child,
-td > h4:first-child,
-td > h5:first-child,
-td > h6:first-child{
+td > ol:first-child li:first-child > p:first-child{
     margin-top: 0;
 }
 // Collapse bottom space between cell padding and element margins.
-th > p:last-child,
-td > p:last-child,
-td > ul:last-child,
-td > ol:last-child,
+th > :last-child,
+td > :last-child,
 td > ul:last-child li:last-child > p:last-child,
 td > ol:last-child li:last-child > p:last-child{
     margin-bottom: 0;
