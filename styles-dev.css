@@ -774,15 +774,15 @@ table {
 
 /* line 86, sass/_base.scss */
 caption {
-  margin: 0 0 0.53571428571429em 0;
-  font-size: 0.875rem;
-  line-height: 1.42857142857143;
+  margin: 0 0 0.41666666666667em 0;
+  font-size: 1.125rem;
+  line-height: 1.38888888888889;
   font-style: italic;
 }
 @media screen and (min-width: 43em) {
   /* line 86, sass/_base.scss */
   caption {
-    margin: 0 0 0.38997504159734em 0;
+    margin: 0 0 0.39003588330126em 0;
     font-size: 1.202rem;
     line-height: 1.30011961100421;
   }
@@ -790,9 +790,9 @@ caption {
 @media screen and (min-width: 125em) {
   /* line 86, sass/_base.scss */
   caption {
-    margin-top: 0.54537521815009em;
-    font-size: 1.719rem;
-    line-height: 1.090750436300175;
+    margin-top: 0.51503914297487em;
+    font-size: 1.82rem;
+    line-height: 1.03007828594973;
   }
 }
 
