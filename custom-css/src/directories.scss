@@ -6,8 +6,6 @@
 .dir-facilities-index{
 	// layout
 	display: block;
-	// typography
-	@include base-type;
 	
 	> thead{
 		display: none;
@@ -20,13 +18,13 @@
 	}
 	
 	> tbody tr{
-		//box model
+		// box model
 		border: 1px solid mix(white, $blueberry-susan, 66%);
 		@include margin-default;
-		//backgrounds & borders
+		// backgrounds & borders
 		background-color: mix(white, $blueberry-susan, 90%);
 		border-radius: 2px;
-		//misc
+		// misc
 		box-shadow: 0 1px 1px $drop-shadow;
 	}
 	
@@ -45,7 +43,6 @@
 	}
 	
 	@include breakpoint($drax){
-		@include base-type-lg;
 		
 		> thead{
 			display: table-header-group;
@@ -56,25 +53,25 @@
 		}
 		
 		> tbody tr{
-			//box model
+			// box model
 			border-width: 0;
-			//layout
+			// layout
 			display: table-row;
-			//typography
+			// typography
 			text-align: left;
-			//backgrounds & borders
+			// backgrounds & borders
 			background-color: transparent;
 			border-radius: 0;
-			//misc
+			// misc
 			box-shadow: none;
 		}
 		
 		> tbody td{
-			//box model
+			// box model
 			border-top-width: 1px;
 			margin: 0;
 			padding: 0.37037em 1.11111em 1.11111em 0;
-			//layout
+			// layout
 			display: table-cell;
 			
 			&:first-child,
@@ -99,7 +96,7 @@
 
 .dir-phone,
 .dir-mailstop{
-	letter-spacing: .05em;
+	letter-spacing: .066em;
 	
 	&::before{
 		letter-spacing: 0;
