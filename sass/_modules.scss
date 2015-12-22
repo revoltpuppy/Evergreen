@@ -63,7 +63,7 @@
 	display: block;
   
   @include breakpoint($gamora){
-	  width: auto;
+	  width: 100%;
 	  max-width: 80%;  // 4/5
   }
 	
@@ -84,7 +84,7 @@
 	
 	@include breakpoint($gamora){
 		// box model
-		width: 100%;
+		width: auto;
 		max-height: 100vh;
 	}
 }
