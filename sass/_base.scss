@@ -198,9 +198,6 @@ select{
 	// typography
 	text-shadow: 0 1px 0 $highlight;
 	// misc
-	/*-webkit-appearance: none;
-	   -moz-appearance: none;
-	        appearance: none;*/
 	box-shadow: 0 .1em .1em $drop-shadow inset;
 	cursor: pointer;
 	
@@ -210,13 +207,6 @@ select{
 		// backgrounds & borders
 		background-color: mix($tint, $blueberry-susan, 90%);
 	}
-	
-	/*@media screen and (min-width: 43em){
-		// box model
-		padding: 0.23529411764706em .5em;  //4/17 So, (4 * 2) + 17 = 25;
-		// typography
-		@include base-type-lg;
-	}*/
 }
 
 textarea{

@@ -35,13 +35,9 @@
  */
 
 .is-expanded:before{
-    //content:"▼ " !important;
-    //transforms & transitions
-    -webkit-transform: rotate(90deg);  // Chrome, Safari
-        -ms-transform: rotate(90deg);  // IE9
-            transform: rotate(90deg);
-    -webkit-transition: all .2s linear;  // Safari 6
-            transition: all .2s linear;
+	//transforms & transitions
+	transform: rotate(90deg);
+	transition: all .2s linear;
 }
 
 /**
