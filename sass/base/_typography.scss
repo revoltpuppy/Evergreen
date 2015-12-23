@@ -415,7 +415,9 @@ small{
 
 abbr{
 	// box model
-	border-bottom: 1px dashed mix($tint, $black, 75%);
+	border-bottom: 1px dotted mix($tint, $black, 75%);
+	// typography
+	text-decoration: none;
 	// misc
 	cursor: help;
 }

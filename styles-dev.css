@@ -717,24 +717,25 @@ small,
 
 /* line 416, sass/base/_typography.scss */
 abbr {
-  border-bottom: 1px dashed #b6b6b6;
+  border-bottom: 1px dotted #b6b6b6;
+  text-decoration: none;
   cursor: help;
 }
 
-/* line 423, sass/base/_typography.scss */
+/* line 425, sass/base/_typography.scss */
 code,
 pre {
   font-family: monospace, serif;
 }
 
-/* line 428, sass/base/_typography.scss */
+/* line 430, sass/base/_typography.scss */
 blockquote {
   padding-left: 1em;
   font-style: italic;
 }
 
 @supports (font-variant-position: super) {
-  /* line 436, sass/base/_typography.scss */
+  /* line 438, sass/base/_typography.scss */
   sup {
     font-size: inherit;
     font-variant-position: super;
@@ -742,14 +743,14 @@ blockquote {
   }
 }
 @supports (font-variant-position: sub) {
-  /* line 444, sass/base/_typography.scss */
+  /* line 446, sass/base/_typography.scss */
   sub {
     font-size: inherit;
     font-variant-position: sub;
     vertical-align: inherit;
   }
 }
-/* line 451, sass/base/_typography.scss */
+/* line 453, sass/base/_typography.scss */
 hr {
   border: 0;
   height: 5px;
