@@ -39,13 +39,7 @@ module.exports = function(grunt) {
 					require('autoprefixer')(  // add vendor prefixes
 						{
 							browsers: [
-								'last 10 Chrome versions',
-								'last 4 Safari versions',
-								'last 5 Firefox versions',
-								'last 3 iOS versions',
-								'last 3 Explorer versions',
-								'last 3 ChromeAndroid versions',
-								'last 6 Edge versions',  // we can cut this back when we know better how users are updating
+								'> 0.2% in US',
 							]
 						}
 					),
