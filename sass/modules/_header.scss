@@ -453,9 +453,6 @@ li.internal-users-alt{
 	border-top: 1px solid $evergreen-old-style;
 	margin: 0;
 	padding: 0;
-	// layout
-	//display: flex;
-	//overflow: hidden;  // IE9
 	// typography
 	text-align: center;
 	// backgrounds & borders
@@ -488,7 +485,7 @@ li.internal-users-alt{
 		> li{
 			margin: 0;
 			width: 25%;  // IE 9
-			//layout
+			// layout
 			flex-grow: 1;
 			float: left;  // IE9
 		}
@@ -496,7 +493,6 @@ li.internal-users-alt{
 	
 	@include breakpoint($rocket){
 		// layout
-		//display: flex;
 		justify-content: flex-end;
 
 		> li{
