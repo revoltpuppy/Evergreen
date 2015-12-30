@@ -48,20 +48,19 @@
 	// box model
 	margin-left: 1em;
 	width: 35%;
-    display: block;
-    float: right;
-    
-    @media screen and (min-width: 22em){
-    	width: 50%;
-    	max-width: 280px;
-    }
-    
-    a{
-		border-width: 0;
 	// layout
+	display: block;
+	float: right;
+	
+	@include breakpoint($rocket){
+		width: 50%;
+		max-width: 280px;
 	}
 }
 
+.footer-map a{
+	border-width: 0;
+}
 
 .footer-map img{
 
