@@ -245,10 +245,13 @@ input:checked + .header-dropdown{
 .internal-users,
 .search-tools{
 	margin-bottom: 0;
-	@include base-type;
 	
 	@include breakpoint($starlord){
 		@include base-type-lg;
+	}
+	
+	@include breakpoint($groot){
+		@include base-type-xl;
 	}
 }
 .internal-users{
@@ -295,8 +298,8 @@ li.internal-users-alt{
 .menu-button,
 .search-toggle,
 .student-toggle{
-	font-size: 1.063rem;  // 17px
-	line-height: 1.764705882352941;  // 30/17
+	font-size: 1.125rem;  // 18px
+	line-height: 1.66666666666667;  // 30/18
 }
 
 .top-nav,
@@ -519,6 +522,11 @@ li.internal-users-alt{
 			@include base-type;
 			line-height: 3.21428571428571;  // 45/14
 		}
+	}
+	
+	@include breakpoint($groot){
+		@include base-type-lg;
+		line-height: 2.5;  // 45/18
 	}
 }
 

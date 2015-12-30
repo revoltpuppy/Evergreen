@@ -19,6 +19,10 @@
 	@include breakpoint($drax){
 		@include base-type-lg;
 	}
+	
+	@include breakpoint($groot){
+		@include base-type-xl;
+	}
 }
 
 [role="contentinfo"]:after,
