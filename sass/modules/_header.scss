@@ -258,8 +258,11 @@ input:checked + .header-dropdown{
 	margin-top: 0;
 	
 	img{
-		height: 10px;
-		width: 10px;
+		// box model
+		margin-right: 5px;  // magic-number
+		width: 10px;  // magic-number; visually fits with text height
+		// layout
+		display: inline-block;
 	}
 }
 .search-tools{
@@ -268,16 +271,28 @@ input:checked + .header-dropdown{
 	padding-left: 0;  // Can be removed once .element-list propogates on .search-tools
 	// typography
 	white-space: nowrap;  // Prevents Directories from sitting down on the next line; not super-important.
+}
+
+.search-tools li{
+	display: inline;
 	
-	li{
-		display: inline;
+	&::after{
+		content: " | ";
+	}
+	
+	&:last-child::after{
+		content: "";
+	}
+	
+	@include breakpoint($groot){
+		display: block;
 		
-		&::after{
-			content: " | ";
+		&:after{
+			content: "";
 		}
 		
-		&:last-child::after{
-			content: "";
+		&:not(:first-child){
+			margin-left: 19px;  // magic-number; should fit with .internal-users img
 		}
 	}
 }
@@ -285,14 +300,21 @@ input:checked + .header-dropdown{
 li.internal-users-alt{
 	display: none;
 	
-	img{
-		height: 10px;
-		width: 10px;
-	}
-	
 	@include breakpoint($gamora){
 		display: inline;
 	}
+	
+	@include breakpoint($groot){
+		display: block;
+	}
+}
+
+li.internal-users-alt img{
+	// box model
+	margin-right: 5px;  // magic-number
+	width: 14px;  // magic-number; visually fits with text height
+	// layout
+	display: inline-block;
 }
     
 .menu-button,
@@ -464,24 +486,15 @@ li.internal-users-alt{
 	// list
 	list-style-type: none;
 	
-	> li{
+	/*> li{
 		display: inline-block;
-		//flex-grow: 1;
-	
-		/*&:first-child{
-			margin-top: 0.71315146386224em;  // 7.5/10.5167
-		}
-		
-		&:last-child{
-			margin-bottom: 1.42630292772448em;  // 15/10.5167
-		}*/
-	}
+	}*/
 	
 	@include breakpoint($lil-groot){
 		display: flex;
 		overflow: hidden;  // IE 9
 		
-		> li:first-child,
+		/*> li:first-child,
 		> li:last-child{
 			margin: 0;
 		}
@@ -492,14 +505,14 @@ li.internal-users-alt{
 			// layout
 			flex-grow: 1;
 			float: left;  // IE9
-		}
+		}*/
 	}
 	
 	@include breakpoint($rocket){
 		// layout
 		justify-content: flex-end;
 
-		> li{
+		/*> li{
 			// box model
 			width: auto;
 			// layout
@@ -509,19 +522,46 @@ li.internal-users-alt{
 			// typography
 			line-height: 2.52440255806126;  // 30/11.884
 			white-space: nowrap;
-		}
+		}*/
 	}
 	
 	@include breakpoint($starlord){
 		font-family: $text-face;
 		line-height: 2.14285714285714;  // 30/14
 	}
+}
+
+.secondary-nav-list > li{
+	display: inline-block;
+	
+	@include breakpoint($lil-groot){
+		margin: 0;
+		width: 25%;  // IE 9
+		// layout
+		flex-grow: 1;
+		float: left;  // IE 9
+		
+		&:first-child,
+		&:last-child{
+			margin: 0;
+		}
+	}
+	
+	@include breakpoint($rocket){
+		// box model
+		width: auto;
+		// layout
+		display: inline-block;  // IE 9
+		flex-grow: 0;
+		float: none;  // IE 9
+		// typography
+		line-height: 2.52440255806126;  // 30/11.884
+		white-space: nowrap;
+	}
 	
 	@include breakpoint($gamora){
-		> li{
-			@include base-type;
-			line-height: 3.21428571428571;  // 45/14
-		}
+		@include base-type;
+		line-height: 3.21428571428571;  // 45/14
 	}
 	
 	@include breakpoint($groot){
