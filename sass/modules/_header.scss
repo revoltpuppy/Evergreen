@@ -161,7 +161,8 @@ input:checked + .header-dropdown{
 		max-height: 4em;
 		
 		@include breakpoint($groot){
-			max-height: 6em;
+			max-height: none;  // max-height doesn't center correctly in Blink.
+			max-width: 20em;
 		}
 	}
 }
