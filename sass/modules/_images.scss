@@ -31,7 +31,15 @@
 .illus-full,  // deprecated
 .image-full,
 .image-full img{  // WYSIWYG
-	margin: .631100639515315em auto 1.262201279030629em auto; // 15/11.884/2 15/11.884  // This should have the same vertical metrics as a p
+	@include margin-default;
+	
+	@include breakpoint($gamora){
+		@include margin-default-lg;
+	}
+	
+	@include breakpoint($groot){
+		@include margin-default-xl;
+	}
 }
 
 .left,  // deprecated
@@ -43,7 +51,7 @@
 	
 	@include breakpoint($starlord){
 		// box model
-		margin: 0 0 0.631100639515315em 1em;  // 7.5/11.884
+		margin: 0 0 0.53571428571429em 1em;  // 7.5/14
 		max-width: calc(66.6666666667% - .5em);
 		// layout
 		clear: right;
@@ -51,10 +59,15 @@
   }
   
 	@include breakpoint($gamora){
-
+		margin-bottom: 0.83333333333333em;  // 15/18
+		
 		.main-content &{
 			margin-right: -2em;
 		}
+	}
+	
+	@include breakpoint($groot){
+		margin-bottom: 1.56014353320505em;  // 30/19.229
 	}
 }
 
@@ -73,7 +86,8 @@
 	.illus-alt,  // deprecated
 	.image-alt{
 		// box model
-		margin: 0 0 0.631100639515315em -40.943683409437%;  // 7.5/11.884  Weird math for the left margin.
+		margin-right: 0;
+		margin-left: -40.943683409437%;  // Weird math for the left margin.
 		width: 38.260135135135135%;  // It took weird math to get here.
 		// layout
 		clear: left;
