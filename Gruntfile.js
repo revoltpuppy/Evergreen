@@ -63,6 +63,14 @@ module.exports = function(grunt) {
 				src: 'ckeditor.css',
 				dest: 'ckedior.css'
 			},
+			drupal_styles: {
+				src: '../wwwevergreen-drupal-theme/css/build/screen.css',
+				dest: '../wwwevergreen-drupal-theme/css/build/screen.css'
+			},
+			drupal_ckeditor_styles: {
+				src: '../wwwevergreen-drupal-theme/css/build/ckeditor.css',
+				dest: '../wwwevergreen-drupal-theme/css/build/ckeditor.css'
+			},
 			dev_styles: {
 				src: 'styles-dev.css',
 				dest: 'styles-dev.css'
