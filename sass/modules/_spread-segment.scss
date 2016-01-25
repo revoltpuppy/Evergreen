@@ -20,17 +20,29 @@
 	display: flex;
 	flex-direction: column;
 	
-	@include breakpoint($gamora){
-		margin: 7.05882352941176em auto; // 120/17
-	}
-	
 	@include breakpoint($drax){
 		flex-direction: row;
 	}
+}
+
+.index-wrapper .spread{
 	
-	&:first-of-type{
-		margin-top: 0;
+	@include breakpoint($gamora){
+		margin: 7.05882352941176em auto; // 120/17
 	}
+}
+
+.spread:first-of-type,
+.index-wrapper .spread:first-of-type{
+	margin-top: calc(30 / 14 * 1em);
+	
+	@include breakpoint($gamora){
+  	margin-top: calc(30 / 18 * 1em);
+  }
+  
+  @include breakpoint($groot){
+  	margin-top: calc(45 / 19.229 * 1em);
+  }
 }
 
 .spread-img,
