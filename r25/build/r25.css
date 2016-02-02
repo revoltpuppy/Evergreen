@@ -1,0 +1,1865 @@
+
+
+/*--------------------------------------------------------------------------
+   r25.css
+   This Style Sheet is used in WebViewer Version 3.0.
+   It conforms to the W3C standard CSS 2.0 specification.
+--------------------------------------------------------------------------*/
+
+
+
+/* ------- Styles for Lesser Browsers ------- */
+
+.ahem {
+	display: none;
+	}
+   	
+   	
+
+/* ------- Styles for the Main Boxes ------- */
+
+#NavBox {
+   position: relative;
+   margin: 0px 0px 0px 0px;
+   border-bottom: 10px solid #46502B;
+   background: #000000;
+   color: white;
+   font-size: 12px;
+	height: 100px; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	}
+   
+#ContentBox {
+	position: relative;
+	left: 0px;
+	margin: 0px 190px 20px 0px;
+	padding: 5px 0px 10px 5px;
+	/*border: 5px solid #ccc;*/
+	background: transparent;
+	color: black;
+	/* setting z-index negative sends the contentbox behind the selectionbox
+	    BUT ONLY IN IE 
+	z-index: -1; */
+	}
+   
+#ContentBoxWide { /*use this style when there's no selection box*/
+	position: relative;
+	margin: 0px 40px 20px 15px;
+	padding: 5px 0px 10px 10px;
+	color: black;
+	background: transparent;
+	}
+
+#LogoutBox { 
+	position: relative;
+	margin: 60px 40px 20px 60px;
+	color: black;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 16px;
+	}
+
+#SelectionBox {
+	position: absolute;
+	/*top: 120px;*/
+	right: 0px; /* Opera5.02 will show a space at right when there is no scroll bar */
+	margin: 5px;
+	padding: 0px 10px 5px 10px;
+	border: 5px solid #ccc;
+	background: #7C839E; /*#A5AABD;*/
+	color: black;
+	width: 155px; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 150px;
+	}
+html>body #SelectionBox {
+	width: 150px; /* ie5win fudge ends */
+	}
+	
+
+
+/* ------- Quick Search Styles ------- */
+
+.QSearchInputDropdown {
+	font-family: verdana, arial, helvetica, sans-serif;
+   font-size: 9px;
+   width: 105px;
+}
+
+.QSearchInputText {
+	font-family: verdana, arial, helvetica, sans-serif;
+   font-size: 9px;
+   width: 81px;
+}
+
+.QSearchInputLarge {
+	font-family: verdana, arial, helvetica, sans-serif;
+   font-size: 12px;
+}
+   
+#GoButton {
+   position: relative;
+   top: 1px;
+   left: 2px;
+   width: 22px;
+   height: 18px;
+   font-size: 8px;
+}  
+
+.LookupGoButton {
+   width: 22px;
+   height: 18px;
+   font-size: 8px;
+}
+   
+.QSRightLabel {
+	color: black;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	/*font-size: 12px;*/
+	text-align: right;
+	margin: 10px 10px 0px 0px;
+}
+
+/* ------- Tab Styles ------- */
+
+#Tabs {
+   position: relative;
+   top: -7px;
+   margin: 0px;
+   padding: 0px;
+}
+
+#SuperTabs {
+   float: right;
+   position: relative;
+   top: 0px;
+   margin: 10px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   height: 20px;
+   font-size: 11px;
+   font-color: inherit;
+   color: #000000;
+   /*border: 1px solid red;*/
+}
+/*
+A.Supertab:link, A.Supertab:visited {
+   margin: 13px 7px 3px 3px;
+   color: #DDD;
+   background: transparent;
+}
+
+A.Supertab:hover {
+	color: black;
+   margin: 13px 7px 3px 3px;
+	background: #EFC74B;
+	text-decoration: none;
+}
+*/
+A.Tab:link, A.Tab:visited, A.Subtab:link, A.Subtab:visited {
+   margin: 13px 7px 3px 3px;
+   color: #DDD;
+   background: transparent;
+   font-weight: bold;
+}
+
+A.TabCurrent:link, A.TabCurrent:visited, A.SubtabCurrent:link, A.SubtabCurrent:visited { 
+   margin: 13px 7px 3px 3px;
+   color: #EFC74B;
+   background: transparent;
+   font-weight: bold;
+}
+
+A.Tab:active, A.TabCurrent:active, A.Subtab:active, A.SubtabCurrent:active {
+   margin: 13px 7px 3px 3px;
+   color: #DDD;
+   background: transparent;
+   font-weight: bold;
+}
+
+A.Tab:hover, A.TabCurrent:hover, A.Subtab:hover, A.SubtabCurrent:hover {
+	color: black;
+   margin: 13px 7px 3px 3px;
+	font-weight: bold;
+	background: #EFC74B;
+	text-decoration: none;
+}
+
+#Subtab {
+   position: absolute;
+   top: 20px;
+   font-size: 12px;
+}
+
+.NonTab, A.NonTab:link, A.NonTab:visited, A.NonTab:active {
+   background: transparent;
+   color: #F7DF9C;
+}
+
+A.NonTab:hover {
+	color: black;
+	background: #EFC74B;
+	text-decoration: none;
+}
+
+#Logout {
+   position: absolute;
+   top: 10px;
+   /*top: 27px; On top of HR */
+   float: right;
+   right: 450px;
+   color: #F7DF9C;
+   background: transparent;
+   white-space: nowrap;
+   text-align: right;
+	font-size: 11px;
+}
+
+#ContactName {
+   position: absolute;
+   /*top: 51px; Lined up with subtabs */
+   /*top: 31px; On top of HR */
+   top: 73px;
+	font-size: 10px;
+   float: right;
+   right: 285px;
+   color: #F7DF9C;
+   background: transparent;
+   white-space: nowrap;
+   text-align: right;
+}
+
+#Logo {
+   position:relative;
+   float:left;
+   margin: 10px;
+   padding: 0px 0px 0px 0px;
+   border: 0px solid #ccc;
+   z-index: 100;
+}
+
+#GrayLine {
+   margin-top: 3px;
+	font-size: 1px; 
+	height: 1px; 
+	top: 5px; 
+	background-color: #ccc;
+	width: 90%; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 700px;
+	}
+html>body #GrayLine {
+	width: 700px; /* ie5win fudge ends */
+	}
+
+
+/* ------- Workflow Styles ------- */
+
+#Outer {
+   position:relative;
+	width: 100%;
+	overflow: auto;
+}
+
+
+
+/* ------- Event Request Styles ------- */
+
+.Indent {
+   margin: 0px 0px 0px 100px;
+	font-size: 13px;
+	line-height: 18px;
+
+}
+
+.RequestFormLabel {
+	color: #666;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold; 
+	text-align: right;
+	padding: 5px 10px 0px 0px;
+}
+
+.RequestFormSubLabel {
+	color: #666;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.RequestRequiredFormLabel {
+	color: red;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold; 
+	text-align: right;
+	padding: 5px 10px 0px 0px;
+}
+	
+.ListText {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: black;
+	background: transparent;
+	padding: 0px 18px 0px 0px;
+	vertical-align: top;
+}
+
+
+
+/*---------- WORKFLOW STYLES ---------------*/
+
+A.UnreadText:link, A.UnreadText:visited {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: red;
+	background: transparent;
+	padding: 0px 18px 0px 0px;
+}	
+
+A.UnreadText:hover {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: black;
+	background: #EFC74B;
+	padding: 0px 18px 0px 0px;
+}
+
+.UnreadText {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: red;
+	background: transparent;
+	padding: 0px 18px 0px 0px;
+}
+
+.CancelledListText {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: line-through;
+	color: black;
+	background: transparent;
+	padding: 0px 18px 0px 0px;
+}
+
+.CancelledUnreadText {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: line-through;
+	color: red;
+	background: transparent;
+	padding: 0px 18px 0px 0px;
+}
+
+A.CancelledUnreadText:link, A.CancelledUnreadText:visited {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: line-through;
+	color: red;
+	background: transparent;
+	padding: 0px 18px 0px 0px;
+}	
+
+A.CancelledUnreadText:hover {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: line-through;
+	color: black;
+	background: #EFC74B;
+	padding: 0px 18px 0px 0px;
+}
+
+TD.ListColHead {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	background: transparent;
+	padding: 0px 18px 0px 0px;
+}
+
+HR.ListDivider {
+   color:#CCC;
+}
+
+
+
+
+
+/* ------- Filter List Styles ------- */
+
+#Filters {
+	padding: 10px 0px 10px 0px; 
+	font-size: 10px;
+	line-height: 14px;
+	margin-left: 5px;
+	text-indent: -8px;
+}
+
+.SelectionHead {
+	color: white;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 18px;
+	text-align: center;
+}
+#FilterList {
+	color: white;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	margin-left: 10px;
+}
+A.CurrentFilterItem:link, A.CurrentFilterItem:visited {
+   text-decoration: none;
+   color: #EFC74B;
+   background: transparent;
+}
+
+A.FilterItem:link, A.FilterItem:visited {
+   text-decoration: none;
+   color: white;
+   background: transparent;
+}	
+
+A.FilterItem:active, A.CurrentFilterItem:active {
+   text-decoration: none;
+   color: white;
+   background: #CCC;
+}	
+   
+
+
+/* ------- Mini Cal Styles ------- */
+   
+
+#MiniCal {
+	position: relative;
+	color: inherit;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 9px;
+	line-height: 14px;
+	margin-top: 10px;
+	margin-bottom: 0px;   
+	margin-left:0px;
+	margin-right:0px;
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+}
+
+.MiniCalDate {
+	color: white;
+   background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+   font-size: 9px;
+	line-height: 14px;
+	vertical-align: top;
+}
+
+A.Today:link, A.Today:visited, A.Today:active {
+	color: white;
+   background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+   font-size: 9px;
+	line-height: 14px;
+	border: 0px solid #CCC;
+}
+
+A.MiniCalNav:link, A.MiniCalNav:visited, A.MiniCalNav:active {
+	color: white;
+   background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+   font-size: 9px;
+	line-height: 14px;
+	font-weight: bold;
+}
+
+.CalSelectorOuter {
+   white-space: nowrap;
+   border:0px;
+   padding:0px;
+   margin:0px;
+}
+
+A.CalSelector:link, A.CalSelector:visited {
+   color: #DDD;
+   background: transparent;
+   font-size: 8px;
+	line-height: 26px;
+   border: 2px outset white;
+   padding: 2px 2px 2px 3px;
+   margin: 2px 2px 2px 2px;
+}
+
+A.CalSelectorCurrent:link, A.CalSelectorCurrent:visited {
+   color: #EFC74B;
+   background: transparent;
+   font-size: 8px;
+	line-height: 26px;
+   border: 2px inset white;
+   padding: 2px 2px 2px 3px;
+   margin: 2px 2px 2px 2px; 
+}
+
+A.CalSelectorCurrent:hover, A.CalSelector:hover, A.Today:hover, A.MiniCalNav:hover {
+	color: black;
+	font-weight: bold;
+	background: #EFC74B;
+	text-decoration: none;
+}
+
+#WeekLabels {
+   position: relative;
+   height: 14px;
+}
+
+.WeekDayLabel {
+	position: absolute;
+   color: white;
+	background: transparent;
+   text-align: right;
+   width: 14%;
+   padding-bottom:8px;
+}
+
+.WeekEndLabel {
+   position: absolute;
+   color: white;
+	background: transparent;
+   text-align: right;
+   width: 14%;
+   padding-bottom:8px;
+}
+
+.MonthList {
+	position: relative;
+}
+
+.QtrLabels {
+	position: relative;
+	width: 100%;
+	height: 14px;
+}
+
+.MonthListLabel {
+	position: relative;
+	float: left;
+	text-align: left;
+	padding-left: 11px;
+	width: 33%; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 25%;
+	}
+html>body #MonthListLabel {
+	width: 25%; /* ie5win fudge ends */
+	}
+
+
+.MiniCalRow {
+   position:relative;
+   height: 14px;
+}
+
+.MiniCalRowCurrent {
+   position:relative;
+   height: 14px;
+   border: 1px solid #EFC74B;
+}
+
+.CalendarDayOuter {
+   position: absolute;
+   text-align: right;
+   width: 14%;
+}
+
+A.CalendarDay:link, A.CalendarDay:visited, A.CalendarToday:link, A.CalendarToday:visited {
+   text-decoration: none;
+   color: white;
+	background: transparent;
+}
+
+A.CalendarExtraDay:link, A.CalendarExtraDay:visited {
+   text-decoration: none;
+   color: #DDD;
+	background: transparent;
+}
+
+A.CalendarViewDay:link, A.CalendarViewDay:visited {
+   text-decoration: none;
+   color: #EFC74B;
+   background: transparent;
+}	
+
+/*A.CalendarDay:active, A.CalendarExtraDay:active, A.CalendarViewDay:active {
+   text-decoration: none;
+   color: black;
+   background: #CCC;
+}	*/
+
+A.CalendarDay:hover, A.CalendarViewDay:hover, A.CalendarExtraDay:hover {
+	color: black;
+	font-weight: bold;
+	background: #EFC74B;
+	text-decoration: none;
+}
+
+
+
+/* ------- Event List Styles ------- */
+
+.TableCenter {
+text-align: center;
+}
+
+.EventListHeader {
+	position: relative;
+	color: #666;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+	margin: 0px 0px 0px 5px;
+	text-align: center;
+	vertical-align: top;
+	padding: 0px 0px 0px 0px;
+}
+
+A.EventListNav:hover {
+	color: black;
+	font-weight: bold;
+	background: #EFC74B;
+	text-decoration: none;
+}
+
+.ListDayNumber {
+	position: relative;
+	float: left;
+	font-family: verdana, arial, helvetica, sans-serif;
+	text-align: center;
+	width: 15px;
+	font-size: 9px;
+	line-height: 10px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+	background: #EEE;
+	color: black;
+}
+
+.DifMonth {
+	position: relative;
+	float: left;
+	font-family: verdana, arial, helvetica, sans-serif;
+	text-align: center;
+	width: 15px;
+	font-size: 9px;
+	line-height: 10px;
+	border: 0px solid white;
+	margin: 0px;
+	background: #EEE;
+	color: #A5AABD;
+	}
+
+#ListDayHeader {
+	position: relative;
+	height: 20px;
+	padding: 0px 0px 0px 0px;
+}
+
+.DayCalText{
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	color: black;
+	background: transparent;
+	text-align: left;
+}
+
+.listcancelled {
+	font-size: 12px;
+	color: red;
+}
+
+.WeekCalDay {
+	position: relative;
+	float: left;
+	height: 100%;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 9px;
+	line-height: 11px;
+	border: 1px solid white;
+	border-top: 2px solid black;
+	color: inherit;
+	background: transparent;
+	width: 13.5%;
+	/* changed from 14% for v3.3 build */
+	}
+	
+.WeekCalWeek {
+	position: relative;
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+	top: 0px;
+	}
+
+
+.MonthCalDay {
+	position: relative;
+	float: left;
+	width: 14%; 
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+	background-color: inherit;
+	font-size: 9px;
+	line-height: 11px;
+	height: 100%;
+	}
+
+.WeekListDayLabels {
+	position: relative;
+	float: left;
+	margin: 0px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 12px;
+	text-align: left;
+	width: 14%;
+	}
+.ListDayLabels {
+	position: relative;
+	float: left;
+	width: 14%;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 12px;
+	text-align: left;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+	}
+
+.MonthCalMonth {
+	position: relative;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 10px 0px 0px;
+	margin: 0px;
+	width: 100%; 
+	height: 100%;
+	}
+
+.MonthCalWeek {
+	position: relative;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 9px;
+	line-height: 10px;
+	border-top: 2px solid #333;
+	top: 0px;
+	left: 0px;
+	height: 20px;
+	margin: 0px 0px 0px 5px;
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	}
+
+.MonthCalRsrv {
+	margin: 0px 2px 0px 2px;
+}
+
+.MonthCalInfo {
+	margin: 0px 2px 0px 2px;
+}
+
+TD.ListHeading {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #666;
+	font-weight: bold;
+	background: transparent;
+	padding: 0px 18px 0px 0px;
+}
+.eighth {
+	position: relative;
+	float: left;
+	width: 1%; 
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+	border: 1px solid black;
+	background-color: inherit;
+}
+
+.SpacerDiv {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	height: 10px;
+}
+table.center {
+	margin-left:auto; 
+	margin-right:auto;
+}
+/* ------- Hot and Cold Event List Styles ------- */
+
+
+#ColdEventList {
+   background: transparent;
+   color: red;   
+	font-family: verdana, arial, helvetica, sans-serif;
+   font-size: 14px;
+   padding: 10px;
+}
+
+#HotKiosk {
+	position: relative;
+	left: 0px;
+	margin: 0px 240px 20px 15px;
+	padding: 5px 0px 10px 10px;
+	color: black;
+	background: #CCC;
+	text-align: center;
+}
+
+
+.HotEvent {
+   margin-bottom: 20px;
+}
+
+.HotName {
+	color: inherit;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.HotTitle{
+	color: inherit;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 32px;
+	padding-bottom: 10px;   
+}
+
+.HotSubName {
+	color: inherit;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 14px;
+	padding-top: 20px;
+}
+
+.HotSubHead {
+	color: inherit;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: bold; 
+	text-align: left;
+	padding: 5px 0px 5px 0px;
+}
+
+.HotBody {
+	color: inherit;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	padding-left: 25px;
+}
+
+
+
+
+
+/* ------- Detail Styles ------- */
+
+.DetailName {
+	position: relative;
+	color: white;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: bold;
+	background-color: #7C839E;
+	margin: 10px -15px 10px -15px;
+	padding: 2px 2px 2px 2px;
+	border: 2px solid #ccc;
+
+}
+#DetailLine {
+	font-size: 1px; 
+	height: 1px; 
+	top: 5px;
+	background-color: #EFC74B;
+	width: 100%;
+	}
+
+.DetailHead {
+	color: #666;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	margin-top: 12px;
+}
+
+.DetailSubHead {
+	background: transparent;
+	color: #666;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 16px;
+	text-align: left;
+	margin: 10px 0px 5px 0px;
+}
+
+.DetailTitle {
+	position: relative;
+	color: black;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+.DetailBody {
+	color: black;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: normal; 
+}
+
+.DetailAlText {
+	position: relative;
+	float: left;
+	color: black;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.DetailTail {
+	color: #666;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 42px;
+	margin: 20px 0px 5px 20px;
+}
+
+#DetailOuter {
+	position: relative;
+	background: transparent;
+	color: inherit;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 16px;
+	margin: 0px 20px 0px 20px;
+	padding: 0px 0px 0px 0px;
+}
+#DetailOtherOuter {
+	position: relative;
+	background: transparent;
+	color: inherit;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 16px;
+	margin: 20px 0px 0px 40px;
+	padding: 0px 0px 0px 0px;
+}
+.DetailText1 {
+	color: black;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+.DetailText2 {
+	color: #EFC74B;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+#DetailImage {
+	position: relative;
+	float: right;
+	background: transparent;
+	color: inherit;
+	border: 0px;
+}
+.DetailTableImage {
+	background: transparent;
+	text-align: right;
+	color: inherit;
+	border: 0px;
+}
+.DetailIndent {
+   margin: 5px 0px 2px 20px;
+   font-size: 12px;
+}
+
+.cancelled {
+	text-align: center;
+	font-size: 36px;
+	color: red;
+}
+
+/* ------- Catalog Styles ------- */
+.CatalogTitle {
+	color: #666;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+#CatalogTOCOuter {
+	position: relative;
+	background: transparent;
+	color: inherit;
+	font-family: verdana, arial, helvetica, sans-serif;
+	margin-left: 10px;
+	padding: 0px 0px 0px 0px;
+}
+
+#CatalogLeafOuter {
+	position: relative;
+	float: left;
+	background: transparent;
+	color: inherit;
+	font-family: verdana, arial, helvetica, sans-serif;
+	margin: 10px 0px 0px 10px;
+	padding: 0px 0px 0px 0px;
+	width: 99%;
+}
+
+#CatalogNodeOuter {
+	position: relative;
+	background: transparent;
+	color: inherit;
+	font-family: verdana, arial, helvetica, sans-serif;
+	padding: 0px 0px 0px 0px;
+	margin: 10px 0px 0px 10px;
+	width: 100%;
+}
+
+.CatalogEventTitle {
+	color: black;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 16px;
+}
+
+.CatalogTOCMember {
+	position: relative;
+	float: left;
+	font-family: verdana, arial, helvetica, sans-serif;
+	padding: 0px 0px 0px 0px;
+
+}
+
+.CatalogTOCCurrentMember {
+	position: relative;
+	float: left;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.CatalogNodeLabel {
+	position: relative;
+	float: right;
+	border-bottom: 1px solid black;
+	font-size: 16px;
+	line-height: 24px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	margin: 40px 5px 20px 0px;
+	width: 100%; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 100%;
+	}
+html>body #CatalogNodeLabel {
+	width: 100%; /* ie5win fudge ends */
+	}
+
+.CatalogNodeContent {
+	position: relative;
+	float: left;
+	width: 40%;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0px 2px 0px 20px;
+	border: 1px solid white;
+}
+
+.CatalogLeafLabel {
+	position: relative;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	margin: 40px 5px 0px 0px;
+	width: 95%; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 100%;
+	}
+html>body #CatalogLeafLabel {
+	width: 100%; /* ie5win fudge ends */
+	}
+
+.CatalogLeafContent {
+	position: relative;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0px 2px 0px 20px;
+	border: 1px solid white;
+	width: 100%;
+}
+
+
+/* ------- Space Detail Styles ------- */
+
+.SpaceName {
+	color: white;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: bold;
+	background-color: #7C839E;
+	margin: 10px -15px 10px -15px;
+	padding: 2px 2px 2px 2px;
+	border: 2px solid #ccc;
+}
+
+.SpaceHead {
+	color: #666;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 28px;
+	font-weight: bold;
+	padding-top: 20px;
+	width: 100%;
+}
+
+.SpaceSubHead {
+	color: black;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: bold; 
+	text-align: left;
+	padding: 5px 0px 5px 0px;
+}
+
+.SpaceTitle {
+	color: black;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 32px;
+	padding-bottom: 10px;
+}
+
+.SpaceTail {
+	color: #666;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 42px;
+	padding: 20px 0px 5px 20px;
+}
+
+
+#SpaceOuter {
+	position: relative;
+	background: transparent;
+	color: inherit;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 16px;
+	margin-left: 10px;
+	padding: 0px 0px 0px 0px;
+}
+
+.SpaceText {
+	color: black;
+	background: transparent;
+	color: inherit;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+.SpaceMap {
+	color: black;
+	background: transparent;
+	color: inherit;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+/* ------- Locations By Day Styles ------- */
+
+/* Locations/Events By Date View Mode Selector (List or Grid) */
+.ViewModeSelector {
+   font-size: 12px;
+   color: blue;
+   background: transparent;
+   text-align: center;
+}
+
+.AMHourLabel {
+	position:absolute;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:10px;
+	padding: 0px 0px 0px 0px;
+	color:inherit;
+	text-align:left;
+	width:60px;
+	top: 0px;
+	background-color: #EFEFEF;
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 59px;
+	}
+html>body #HourLabels {
+	width: 59px;
+	}
+
+.PMHourLabel {
+	position:absolute;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:10px;
+	padding: 0px 0px 0px 0px;
+	font-weight:bold;
+	color:inherit;
+	text-align:left;
+	top: 0px;
+	width:60px;
+	top: 0px;
+	background-color: #EFEFEF;
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 59px;
+	}
+html>body #HourLabels {
+	width: 59px;
+	}
+
+.GridCell {
+	position:absolute;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:11px;
+	color: inherit;
+	border-right:1px solid #CCCCCC;
+	border-bottom: 1px solid black;
+	width:60px;
+	height:30px;
+	cursor: pointer;
+}
+
+
+#DayHeader {
+	position:relative;
+	color: inherit;
+	padding: 0px 0px 0px 0px;
+	width: 95%;
+	background-color: white;
+	z-index: 101;
+}
+#HourLabels {
+	position:absolute;
+	color: inherit;
+	padding: 0px 0px 0px 0px;
+	top: 1px;
+	left: 102px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	left: 101px;
+	}
+html>body #HourLabels {
+	left: 101px;
+	}
+	
+#Cells {
+	position:absolute;
+	font-family: verdana, arial, helvetica, sans-serif;
+	padding: 0px 0px 0px 0px;
+	font-size:11px;
+	left: 100px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	left: 99px;
+	}
+html>body #Cells {
+	left: 99px;
+	}
+
+.SpaceLabel {
+	position:absolute;
+	font-family: verdana, arial, helvetica, sans-serif;
+	border-bottom:1px solid black;
+	border-left:1px solid black;
+	border-right:1px solid black;
+	margin: 0px 0px 0px 0px;
+	font-size:10px;
+	font-weight:bold;
+	color:inherit;
+	background-color:white;
+	width:100px;
+	height: 30px;
+	z-index: 100;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 98px;
+	top: 1px;
+	height: 29px;
+	}
+html>body #SpaceLabel {
+	width: 98px;
+	top: 1px;
+	height: 29px;
+	}
+
+.SpaceClip {
+	position: absolute;
+	margin-right: 30px;
+	width: 90px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 65px;
+	}
+html>body #SpaceClip {
+	width: 65px;
+	}
+
+.SpaceLink {
+	position: absolute;
+	clip: rect(auto, 80px, 29px, auto);
+	text-decoration: none;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	clip: rect(0px, 65px, 29px, 0px);
+	}
+html>body #SpaceLink {
+	clip: rect(0px, 65px, 29px, 0px);
+	}
+
+.TopLeft {
+	position:relative;
+	left: 2px;
+	top: 1px;
+	width:100px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:11px;
+	color:inherit;
+	background-color: white;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	z-index:103;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 99px;
+	}
+html>body #TopLeft {
+	width: 99px;
+	}
+
+.SpEvOuter {
+	position:relative;
+	left:1px;
+	z-index:3;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	height:30px;
+}
+
+#Spaces {
+	position:relative;
+	font-family: verdana, arial, helvetica, sans-serif;
+	left: 1px;
+}
+
+#Events {
+	position:absolute;
+	font-family: verdana, arial, helvetica, sans-serif;
+	padding: 0px 0px 0px 0px;
+	font-size:11px;
+	left: 100px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	left: 80px;
+	}
+html>body #Events {
+	left: 80px;
+}
+
+.Event {
+	position: absolute;
+	background-color:#C6D7CE;
+	font-family:Arial;
+	font-size:4px;
+	border: 1px solid black;
+	cursor: pointer;
+	z-index: 5;
+}
+
+#SpaceBig {
+	position:relative;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:11px;
+	display: none;
+	width: 100%;
+	overflow: scroll;
+}
+
+#RoomListNoEvents {
+   text-align: center;
+   font-size: 14px;
+   color: red;
+   background-color: transparent;
+}
+
+#SpacerRight {
+	position: relative; 
+	width: 20px;
+}
+#SpacerBottom {
+	position: relative; 
+	height: 40px;
+}
+
+.SpuseGraphic {
+   position:relative;
+   float:right;
+   margin: 1px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   border: 0px solid #ccc;
+	vertical-align: text-top;
+	z-index: 100;
+}
+
+/* ------- Login Styles ------- */
+
+#InvalidLogin {
+   background: inherit;
+   color: red;
+   padding: 3px;
+   text-align: center;
+}
+
+.Form {
+   text-align: center;
+}
+
+.FormLabel {
+	color: #666;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	/*padding: 0px 10px 0px 0px;*/
+	line-height: 18px;
+	font-weight: bold; 
+	text-align: right;
+}
+
+.FormSubLabel {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.FormRequiredLabel {
+	color: red;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold; 
+	text-align: right;
+}
+
+.FormLabelShort {
+	color: #666;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold; 
+}
+
+.FormRequiredLabelShort {
+   color: red;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold; 
+}
+
+.FormData {
+	color: black;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	text-align: left;
+	margin: 10px 0px 5px 0px;
+	padding-left: 10px;
+}
+
+/*TD.FormDataRight {
+	color: black;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	text-align: right;
+	margin: 10px 0px 5px 0px;
+}*/
+
+.FormInstr {
+	margin: 0px 30px 0px 15px;
+	padding: 5px 0px 0px 10px;
+	color: black;
+	background: transparent; 
+	font-size: 12px;
+	text-align: center;
+}
+
+.FormTitle {
+	color: #666;
+	background: transparent;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 1px solid #666;
+}
+
+#WorkflowDetail {
+   margin: 20px 0px 20px 0px;
+}
+
+#CommentButton {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	text-align: center;
+}
+	
+/* ------- Locations by Name ------- */
+
+#NoData {
+   font-size: 13px;
+}
+
+#SpaceNameDetailOuter {
+	position:relative;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:11px;
+	display: none;
+	width: 100%;
+	height: 400px;
+	overflow: scroll;
+}
+
+#SpaceBigName {
+	position:relative;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:11px;
+	top: 23px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	top: 22px;
+	}
+html>body #SpaceBigName {
+	top: 22px;
+	}
+
+.AMHourLabelName {
+	position:absolute;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:10px;
+	color:inherit;
+	text-align:center;
+	height:24px;
+	border-bottom:1px solid #CCCCCC;
+	border-right:1px solid black;
+	padding: 0px 0px 0px 0px;
+	width:60px;
+	background-color: white;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 59px;
+	height:23px;
+	}
+html>body #AMHourLabelName {
+	width: 55px;
+	height:23px;
+	}
+
+.PMHourLabelName {
+	position:absolute;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	color:inherit;
+	text-align:center;
+	height:24px;
+	border-bottom:1px solid #CCCCCC;
+	border-right:1px solid black;
+	padding: 0px 0px 0px 0px;
+	width:60px;
+	background-color: white;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 59px;
+	height: 23px;
+	}
+html>body #PMHourLabelName {
+	width: 59px;
+	height: 23px;
+	}
+
+#LinesOuter {
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	left: 60px;
+	}
+html>body #LinesOuter {
+	left: 60px;
+	}
+
+#NameDayHeader {
+	position:absolute;
+	color: inherit;
+	padding: 0px 0px 0px 0px;
+	border-left: 1px solid black;
+	height: 34px;
+	left: 59px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	left: 59px;
+	height: 32px;
+	}
+html>body #NameDayHeader {
+	left: 59px;
+	height: 32px;
+	}
+	
+#HourLabelsName {
+	position:absolute;
+	font-family: verdana, arial, helvetica, sans-serif;
+	padding: 0px 0px 0px 0px;
+	font-size:4px;
+	top: 10px;
+	left: 0px;
+	background-color: white;
+	z-index:100;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	top: 11px;
+	width: 74px;
+	left: 5px;
+	}
+html>body #HourLabelsName {
+	top: 11px;
+	width: 74px;
+	left: 5px;
+	}
+
+#NameEvents {
+	position:absolute;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:11px;
+	left: 60px;
+	top: 10px;
+	}
+
+#NameTopLeft {
+	position:absolute;
+	left: 0px;
+	color:inherit;
+	background-color: white;
+	text-align: center;
+	padding: 0px 0px 0px 4px;
+	border-bottom: 1px solid black;
+	z-index:101;
+	height: 34px;
+	width:59px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	height:32px;
+	width:55px;
+	}
+html>body #NameTopLeft {
+	height:32px;
+	width:55px;
+	}
+
+#NameHeader {
+	position:relative;
+	width:100%;
+	top:5px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:11px;
+	color:inherit;
+	left: 0px;
+	}
+
+#WeekMarks {
+	position:absolute;
+	top: 0px;
+	border-left: 1px solid black;
+	background-color: white;
+	cursor: pointer;
+	left: 59px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	left: 59px;
+	}
+html>body #WeekMarks {
+	left: 59px;
+	}
+
+#HourRow {
+	position: relative;
+}
+.Bottom {
+	position:absolute;
+	font-family:Arial;
+	font-size:11px;
+	color:black;
+	text-align:center;
+	top:0px;
+	width:35px;
+	left:0px;
+}
+
+
+/* ------- General Styles ------- */
+
+.ImageLink {
+	text-align: right;
+}
+
+BODY {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	color: black;
+	background: white;
+	}
+	
+A, A:link, A:visited {
+	text-decoration: none;
+	font-weight: bold;
+	color:  #000000;
+	background: transparent;
+	}
+	
+A:hover {
+	color: black;
+	font-weight: bold;
+	background: #EFC74B;
+	text-decoration: none;
+	}
+
+img {
+	border: 0px;
+	/*display: block;*/
+	}
+	
+/*------------------- Tail Styles ---------------------*/
+
+.Tail {
+   position: absolute center bottom;
+   clear: both;
+   font-size: 7pt;
+   text-align: center;
+   margin-top: 20px;
+	/* 2/10/06 added position and clear for v3.3 build */
+}	
+
+
+.Error {
+   font-size: 12pt;
+   text-align: center;
+   color: red;
+   font-weight: bold;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}	
+
+
+/*------------------- Access Key Styles ---------------------*/
+
+SPAN.AccessKey {
+   text-decoration: underline;
+}
+
+
+/*------------------- Fieldset Styles ---------------------*/
+
+FIELDSET.Qsearch {
+   margin: 0px;
+   text-align: center;
+   border: 1px solid white;
+}
+
+LEGEND.Qsearch {
+   font-size: 9px;
+   color: white;
+   background: transparent;
+}
+
+FIELDSET.Filters {
+   margin: 0px;
+   font-size: 10px;
+   padding: 3px;
+   border-top: 1px solid white;
+   border-left: 0px;
+   border-right: 0px;
+   border-bottom: 0px;
+}
+
+LEGEND.Filters {
+   font-size: 9px;
+   color: white;
+   background: transparent;
+   border-color: white;
+   text-align: right;
+}

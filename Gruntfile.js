@@ -75,6 +75,10 @@ module.exports = function(grunt) {
 				src: 'styles-dev.css',
 				dest: 'styles-dev.css'
 			},
+			r25_styles: {
+				src: 'r25/r25.css',
+				dest: 'r25/build/r25.css'
+			}
 		},
 
 		/**
