@@ -366,9 +366,9 @@
 		// typography
 		text-align: center;
 		// backgrounds & borders
-		background-image: url(http://evergreen.edu/_inc/images/texture-1.png);
+		background-image: url("/_inc/images/texture-1.png");
 		// misc
-		content: url(http://evergreen.edu/_inc/images/icons/green/play.png);
+		content: url("/_inc/images/icons/green/play.png");
   }
   
   &:hover::after{
