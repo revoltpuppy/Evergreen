@@ -32,13 +32,19 @@
 .image-full,
 .image-full img{  // WYSIWYG
 	@include margin-default;
+	margin-left: auto;
+	margin-right: auto;
 	
 	@include breakpoint($gamora){
 		@include margin-default-lg;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	
 	@include breakpoint($groot){
 		@include margin-default-xl;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
