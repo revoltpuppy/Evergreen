@@ -1,6 +1,8 @@
 var rem = 16;  //value of 1 root em
 var bWidth = document.documentElement.clientWidth; //browser width
-var illusRotationRange = 2;  //how far in either direction an illustration can rotate, in degrees
+//var illusRotationRange = 2;  //how far in either direction an illustration can rotate, in degrees
+var imageRotationMax = 2;
+var imageRotationMin = 0.5;
 
 /**
  * Simple Accordion
@@ -78,7 +80,9 @@ $(document).ready(function(){
 	 * Randomly rotate illustrations within a range.
 	 */
 	$("img[class|='image'], img[class|='illus']").each(function(index){
-	  var degN = Math.random() * (illusRotationRange * 2) - illusRotationRange;
+	  //var degN = Math.random() * (illusRotationRange * 2) - illusRotationRange;
+	  var degN = Math.random() * (imageRotationMax - imageRotationMin) + imageRotationMin;  // Rotate within a range
+	  if(Math.random() < 0.5) degN = degN * -1;  // Randomly rotate in the opposite direction
 	  //console.log(index + ": " + degN + " degrees");
 	  $(this).css("transform", "rotate(" + degN + "deg)");
 	});
@@ -116,6 +120,22 @@ $(document).ready(function(){
  */
 // jQuery-free!
 window.onload = function loadAfter() {
+	/**
+	 * New, jQuery-free image rotation (in progress)
+	 */
+	
+	//console.log(document.getElementsByClassName(/^image.*/));
+	/*function rotateImages(){
+		var allImages = document.getElementsByClassName("image").getElementsByClassName("image-full");
+		
+		for(var i = 1; i < allImages.length; i++){
+			console.log(i);
+		}
+		
+	  return;
+	}
+	
+	rotateImages();*/
 	
 	/**
 	 * Blur-up Backgrounds
