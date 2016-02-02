@@ -14,28 +14,56 @@
 	display: none;
 	}
    	
-   	
+
+/* ------- General Styles ------- */
+
+.ImageLink {
+	text-align: right;
+}
+
+BODY {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-family: helvetica, verdana, arial sans-serif;
+	color: black;
+	background: white;
+	}
+	
+A, A:link, A:visited {
+	text-decoration: none;
+	/* font-weight: bold; */
+	color:  #000000;
+	background: transparent;
+	}
+	
+A:hover {
+	font-weight: bold;
+	background: #cce6fb;
+	text-decoration: none;
+	}
+
+img {
+	border: 0px;
+	/*display: block;*/
+	}
 
 /* ------- Styles for the Main Boxes ------- */
 
+
 #NavBox {
-   position: relative;
-   margin: 0px 0px 0px 0px;
-   border-bottom: 10px solid #46502B;
-   background: #000000;
-   color: white;
-   font-size: 12px;
-	height: 100px; /* ie5win fudge begins */
-	voice-family: "\"}\"";
-	voice-family:inherit;
-	}
+	padding-top: 10px;
+	border-bottom: 10px solid #64933a;
+	background: #f3f3f3;
+	display:flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
    
 #ContentBox {
 	position: relative;
 	left: 0px;
 	margin: 0px 190px 20px 0px;
 	padding: 5px 0px 10px 5px;
-	/*border: 5px solid #ccc;*/
 	background: transparent;
 	color: black;
 	/* setting z-index negative sends the contentbox behind the selectionbox
@@ -63,21 +91,140 @@
 #SelectionBox {
 	position: absolute;
 	/*top: 120px;*/
-	right: 0px; /* Opera5.02 will show a space at right when there is no scroll bar */
+	right: 0px;/* Opera5.02 will show a space at right when there is no scroll bar */
 	margin: 5px;
 	padding: 0px 10px 5px 10px;
-	border: 5px solid #ccc;
-	background: #7C839E; /*#A5AABD;*/
+	border: 5px solid #b6aabe;
+	background: #6d567d;/*#A5AABD;*/
 	color: black;
-	width: 155px; /* ie5win fudge begins */
-	voice-family: "\"}\"";
-	voice-family:inherit;
-	width: 150px;
+	width: 155px;/* ie5win fudge begins */
+	/* 	voice-family: "\"}\"";
+	voice-family:inherit; */
+	/* 	width: 150px;
 	}
 html>body #SelectionBox {
 	width: 150px; /* ie5win fudge ends */
-	}
+	} 
 	
+
+/* ------- Tab Styles ------- */
+
+#Logo {
+	order:0;
+	margin-top: 5px;
+}
+
+#Tabs {
+	order:1;
+	margin:20px; 
+}
+
+#SuperTabs {
+	order:3;
+}
+
+#Subtab {
+
+}
+
+/*are these only accessible by people who are logged in?*/
+#ContactName {
+/*   position: absolute;*/
+   /*top: 51px; Lined up with subtabs */
+   /*top: 31px; On top of HR */
+   top: 73px;
+	font-size: 10px;
+   float: right;
+   right: 285px;
+   color: #F7DF9C;
+   background: transparent;
+   white-space: nowrap;
+   text-align: right;
+}
+
+/*what is this?*/
+#Logout {
+   position: absolute;
+   top: 10px;
+   /*top: 27px; On top of HR */
+   float: right;
+   right: 450px;
+   color: #F7DF9C;
+   background: transparent;
+   white-space: nowrap;
+   text-align: right;
+	font-size: 11px;
+}
+
+
+#GrayLine {
+   margin-top: 3px;
+	font-size: 1px; 
+	height: 1px; 
+	top: 5px; 
+	background-color: #ccc;
+	width: 90%; /* ie5win fudge begins */
+/* 	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 700px;
+	}
+html>body #GrayLine {
+	width: 700px; /* ie5win fudge ends */
+	} 
+
+
+	/* A.Supertab:link, A.Supertab:visited {
+   margin: 13px 7px 3px 3px;
+   color: #DDD;
+   background: transparent;
+}
+
+A.Supertab:hover {
+	color: black;
+   margin: 13px 7px 3px 3px;
+	background: #fdf4b6;
+	text-decoration: none;
+} */
+
+A.Tab:link, A.Tab:visited, A.Subtab:link, A.Subtab:visited {
+   margin: 13px 7px 3px 3px;
+   color: #492c5d;
+   background: transparent;
+   font-weight: bold;
+}
+
+A.TabCurrent:link, A.TabCurrent:visited, A.SubtabCurrent:link, A.SubtabCurrent:visited {
+   margin: 13px 7px 3px 3px;
+   color: #0086ee;
+   background: transparent;
+   font-weight: bold;
+}
+
+/*A.Tab:active, A.TabCurrent:active, A.Subtab:active, A.SubtabCurrent:active {
+   margin: 13px 7px 3px 3px;
+   color: #DDD;
+   background: transparent;
+   font-weight: bold;
+}*/
+
+A.Tab:hover, A.TabCurrent:hover, A.Subtab:hover, A.SubtabCurrent:hover {
+	color: #0086ee;
+	margin: 13px 7px 3px 3px;
+	font-weight: bold;
+	/* background: #e0e9d7; */
+	text-decoration: none;
+}
+
+.NonTab, A.NonTab:link, A.NonTab:visited, A.NonTab:active {
+   background: transparent;
+   color: #F7DF9C;
+}
+
+A.NonTab:hover {
+	color: black;
+	background: #fdf4b6;
+	text-decoration: none;
+}
 
 
 /* ------- Quick Search Styles ------- */
@@ -122,138 +269,6 @@ html>body #SelectionBox {
 	text-align: right;
 	margin: 10px 10px 0px 0px;
 }
-
-/* ------- Tab Styles ------- */
-
-#Tabs {
-   position: relative;
-   top: -7px;
-   margin: 0px;
-   padding: 0px;
-}
-
-#SuperTabs {
-   float: right;
-   position: relative;
-   top: 0px;
-   margin: 10px 0px 0px 0px;
-   padding: 0px 0px 0px 0px;
-   height: 20px;
-   font-size: 11px;
-   font-color: inherit;
-   color: #000000;
-   /*border: 1px solid red;*/
-}
-/*
-A.Supertab:link, A.Supertab:visited {
-   margin: 13px 7px 3px 3px;
-   color: #DDD;
-   background: transparent;
-}
-
-A.Supertab:hover {
-	color: black;
-   margin: 13px 7px 3px 3px;
-	background: #EFC74B;
-	text-decoration: none;
-}
-*/
-A.Tab:link, A.Tab:visited, A.Subtab:link, A.Subtab:visited {
-   margin: 13px 7px 3px 3px;
-   color: #DDD;
-   background: transparent;
-   font-weight: bold;
-}
-
-A.TabCurrent:link, A.TabCurrent:visited, A.SubtabCurrent:link, A.SubtabCurrent:visited { 
-   margin: 13px 7px 3px 3px;
-   color: #EFC74B;
-   background: transparent;
-   font-weight: bold;
-}
-
-A.Tab:active, A.TabCurrent:active, A.Subtab:active, A.SubtabCurrent:active {
-   margin: 13px 7px 3px 3px;
-   color: #DDD;
-   background: transparent;
-   font-weight: bold;
-}
-
-A.Tab:hover, A.TabCurrent:hover, A.Subtab:hover, A.SubtabCurrent:hover {
-	color: black;
-   margin: 13px 7px 3px 3px;
-	font-weight: bold;
-	background: #EFC74B;
-	text-decoration: none;
-}
-
-#Subtab {
-   position: absolute;
-   top: 20px;
-   font-size: 12px;
-}
-
-.NonTab, A.NonTab:link, A.NonTab:visited, A.NonTab:active {
-   background: transparent;
-   color: #F7DF9C;
-}
-
-A.NonTab:hover {
-	color: black;
-	background: #EFC74B;
-	text-decoration: none;
-}
-
-#Logout {
-   position: absolute;
-   top: 10px;
-   /*top: 27px; On top of HR */
-   float: right;
-   right: 450px;
-   color: #F7DF9C;
-   background: transparent;
-   white-space: nowrap;
-   text-align: right;
-	font-size: 11px;
-}
-
-#ContactName {
-   position: absolute;
-   /*top: 51px; Lined up with subtabs */
-   /*top: 31px; On top of HR */
-   top: 73px;
-	font-size: 10px;
-   float: right;
-   right: 285px;
-   color: #F7DF9C;
-   background: transparent;
-   white-space: nowrap;
-   text-align: right;
-}
-
-#Logo {
-   position:relative;
-   float:left;
-   margin: 10px;
-   padding: 0px 0px 0px 0px;
-   border: 0px solid #ccc;
-   z-index: 100;
-}
-
-#GrayLine {
-   margin-top: 3px;
-	font-size: 1px; 
-	height: 1px; 
-	top: 5px; 
-	background-color: #ccc;
-	width: 90%; /* ie5win fudge begins */
-	voice-family: "\"}\"";
-	voice-family:inherit;
-	width: 700px;
-	}
-html>body #GrayLine {
-	width: 700px; /* ie5win fudge ends */
-	}
 
 
 /* ------- Workflow Styles ------- */
@@ -329,7 +344,7 @@ A.UnreadText:hover {
 	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 11px;
 	color: black;
-	background: #EFC74B;
+	background: #fdf4b6;
 	padding: 0px 18px 0px 0px;
 }
 
@@ -373,7 +388,7 @@ A.CancelledUnreadText:hover {
 	font-size: 11px;
 	text-decoration: line-through;
 	color: black;
-	background: #EFC74B;
+	background: #fdf4b6;
 	padding: 0px 18px 0px 0px;
 }
 
@@ -420,7 +435,7 @@ HR.ListDivider {
 }
 A.CurrentFilterItem:link, A.CurrentFilterItem:visited {
    text-decoration: none;
-   color: #EFC74B;
+   color: #fdf4b6;
    background: transparent;
 }
 
@@ -449,7 +464,7 @@ A.FilterItem:active, A.CurrentFilterItem:active {
 	font-size: 9px;
 	line-height: 14px;
 	margin-top: 10px;
-	margin-bottom: 0px;   
+	margin-bottom: 0px;
 	margin-left:0px;
 	margin-right:0px;
 	text-align: center;
@@ -501,19 +516,19 @@ A.CalSelector:link, A.CalSelector:visited {
 }
 
 A.CalSelectorCurrent:link, A.CalSelectorCurrent:visited {
-   color: #EFC74B;
+   color: #fdf4b6;
    background: transparent;
    font-size: 8px;
-	line-height: 26px;
+   line-height: 26px;
    border: 2px inset white;
    padding: 2px 2px 2px 3px;
-   margin: 2px 2px 2px 2px; 
+   margin: 2px 2px 2px 2px;
 }
 
 A.CalSelectorCurrent:hover, A.CalSelector:hover, A.Today:hover, A.MiniCalNav:hover {
 	color: black;
 	font-weight: bold;
-	background: #EFC74B;
+	background: #fdf4b6;
 	text-decoration: none;
 }
 
@@ -556,12 +571,12 @@ A.CalSelectorCurrent:hover, A.CalSelector:hover, A.Today:hover, A.MiniCalNav:hov
 	text-align: left;
 	padding-left: 11px;
 	width: 33%; /* ie5win fudge begins */
-	voice-family: "\"}\"";
+/*	voice-family: "\"}\"";
 	voice-family:inherit;
 	width: 25%;
 	}
 html>body #MonthListLabel {
-	width: 25%; /* ie5win fudge ends */
+	width: 25%; *//* ie5win fudge ends */
 	}
 
 
@@ -573,7 +588,7 @@ html>body #MonthListLabel {
 .MiniCalRowCurrent {
    position:relative;
    height: 14px;
-   border: 1px solid #EFC74B;
+   border: 1px solid #fdf4b6
 }
 
 .CalendarDayOuter {
@@ -596,7 +611,7 @@ A.CalendarExtraDay:link, A.CalendarExtraDay:visited {
 
 A.CalendarViewDay:link, A.CalendarViewDay:visited {
    text-decoration: none;
-   color: #EFC74B;
+   color: #fdf4b6;
    background: transparent;
 }	
 
@@ -609,7 +624,7 @@ A.CalendarViewDay:link, A.CalendarViewDay:visited {
 A.CalendarDay:hover, A.CalendarViewDay:hover, A.CalendarExtraDay:hover {
 	color: black;
 	font-weight: bold;
-	background: #EFC74B;
+	background: #fdf4b6;
 	text-decoration: none;
 }
 
@@ -623,7 +638,7 @@ text-align: center;
 
 .EventListHeader {
 	position: relative;
-	color: #666;
+	/* color: #666; */
 	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 18px;
 	font-weight: bold;
@@ -635,10 +650,10 @@ text-align: center;
 }
 
 A.EventListNav:hover {
-	color: black;
-	font-weight: bold;
-	background: #EFC74B;
-	text-decoration: none;
+	/* color: black; */
+	/* font-weight: bold; */
+	/* background: #fdf4b6; */
+	/* text-decoration: none; */
 }
 
 .ListDayNumber {
@@ -695,13 +710,13 @@ A.EventListNav:hover {
 	height: 100%;
 	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 9px;
+	/* font-weight: bold; */
 	line-height: 11px;
 	border: 1px solid white;
 	border-top: 2px solid black;
 	color: inherit;
 	background: transparent;
-	width: 13.5%;
-	/* changed from 14% for v3.3 build */
+	width: 13.5%;/* changed from 14% for v3.3 build */
 	}
 	
 .WeekCalWeek {
@@ -772,6 +787,7 @@ A.EventListNav:hover {
 	}
 
 .MonthCalRsrv {
+	font-weight: bold;
 	margin: 0px 2px 0px 2px;
 }
 
@@ -900,7 +916,7 @@ table.center {
 	font-size: 1px; 
 	height: 1px; 
 	top: 5px;
-	background-color: #EFC74B;
+	background-color: #fdf4b6;
 	width: 100%;
 	}
 
@@ -990,7 +1006,7 @@ table.center {
 	line-height: 18px;
 }
 .DetailText2 {
-	color: #EFC74B;
+	color: #fdf4b6;
 	background: transparent;
 	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
@@ -1095,12 +1111,12 @@ table.center {
 	font-family: verdana, arial, helvetica, sans-serif;
 	margin: 40px 5px 20px 0px;
 	width: 100%; /* ie5win fudge begins */
-	voice-family: "\"}\"";
+/*	voice-family: "\"}\"";
 	voice-family:inherit;
 	width: 100%;
 	}
 html>body #CatalogNodeLabel {
-	width: 100%; /* ie5win fudge ends */
+	width: 100%;  ie5win fudge ends */
 	}
 
 .CatalogNodeContent {
@@ -1121,7 +1137,7 @@ html>body #CatalogNodeLabel {
 	font-family: verdana, arial, helvetica, sans-serif;
 	margin: 40px 5px 0px 0px;
 	width: 95%; /* ie5win fudge begins */
-	voice-family: "\"}\"";
+/*	voice-family: "\"}\"";
 	voice-family:inherit;
 	width: 100%;
 	}
@@ -1597,12 +1613,12 @@ html>body #Events {
 	font-family: verdana, arial, helvetica, sans-serif;
 	font-size:11px;
 	top: 23px;
-	voice-family: "\"}\"";
+/*	voice-family: "\"}\"";
 	voice-family:inherit;
 	top: 22px;
 	}
 html>body #SpaceBigName {
-	top: 22px;
+	top: 22px;*/
 	}
 
 .AMHourLabelName {
@@ -1617,10 +1633,10 @@ html>body #SpaceBigName {
 	padding: 0px 0px 0px 0px;
 	width:60px;
 	background-color: white;
-	voice-family: "\"}\"";
+/*	voice-family: "\"}\"";
 	voice-family:inherit;
 	width: 59px;
-	height:23px;
+	height:23px;*/
 	}
 html>body #AMHourLabelName {
 	width: 55px;
@@ -1640,10 +1656,10 @@ html>body #AMHourLabelName {
 	padding: 0px 0px 0px 0px;
 	width:60px;
 	background-color: white;
-	voice-family: "\"}\"";
+/*	voice-family: "\"}\"";
 	voice-family:inherit;
 	width: 59px;
-	height: 23px;
+	height: 23px;*/
 	}
 html>body #PMHourLabelName {
 	width: 59px;
@@ -1655,12 +1671,12 @@ html>body #PMHourLabelName {
 	z-index: 2;
 	top: 0px;
 	left: 0px;
-	voice-family: "\"}\"";
+/*	voice-family: "\"}\"";
 	voice-family:inherit;
 	left: 60px;
 	}
 html>body #LinesOuter {
-	left: 60px;
+	left: 60px;*/
 	}
 
 #NameDayHeader {
@@ -1670,14 +1686,14 @@ html>body #LinesOuter {
 	border-left: 1px solid black;
 	height: 34px;
 	left: 59px;
-	voice-family: "\"}\"";
+/*	voice-family: "\"}\"";
 	voice-family:inherit;
 	left: 59px;
 	height: 32px;
 	}
 html>body #NameDayHeader {
 	left: 59px;
-	height: 32px;
+	height: 32px;*/
 	}
 	
 #HourLabelsName {
@@ -1689,16 +1705,16 @@ html>body #NameDayHeader {
 	left: 0px;
 	background-color: white;
 	z-index:100;
-	voice-family: "\"}\"";
-	voice-family:inherit;
+/*	voice-family: "\"}\"";
+	voice-family:inherit;*/
 	top: 11px;
 	width: 74px;
 	left: 5px;
-	}
+/*	}
 html>body #HourLabelsName {
 	top: 11px;
 	width: 74px;
-	left: 5px;
+	left: 5px;*/
 	}
 
 #NameEvents {
@@ -1720,14 +1736,14 @@ html>body #HourLabelsName {
 	z-index:101;
 	height: 34px;
 	width:59px;
-	voice-family: "\"}\"";
+/*	voice-family: "\"}\"";
 	voice-family:inherit;
 	height:32px;
 	width:55px;
 	}
 html>body #NameTopLeft {
 	height:32px;
-	width:55px;
+	width:55px;*/
 	}
 
 #NameHeader {
@@ -1747,12 +1763,12 @@ html>body #NameTopLeft {
 	background-color: white;
 	cursor: pointer;
 	left: 59px;
-	voice-family: "\"}\"";
+/*	voice-family: "\"}\"";
 	voice-family:inherit;
 	left: 59px;
 	}
 html>body #WeekMarks {
-	left: 59px;
+	left: 59px;*/
 	}
 
 #HourRow {
@@ -1768,40 +1784,6 @@ html>body #WeekMarks {
 	width:35px;
 	left:0px;
 }
-
-
-/* ------- General Styles ------- */
-
-.ImageLink {
-	text-align: right;
-}
-
-BODY {
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
-	font-family: verdana, arial, helvetica, sans-serif;
-	color: black;
-	background: white;
-	}
-	
-A, A:link, A:visited {
-	text-decoration: none;
-	font-weight: bold;
-	color:  #000000;
-	background: transparent;
-	}
-	
-A:hover {
-	color: black;
-	font-weight: bold;
-	background: #EFC74B;
-	text-decoration: none;
-	}
-
-img {
-	border: 0px;
-	/*display: block;*/
-	}
 	
 /*------------------- Tail Styles ---------------------*/
 
@@ -1827,8 +1809,9 @@ img {
 
 /*------------------- Access Key Styles ---------------------*/
 
+/*This underlines parts of words--commented out for now, not sure if there's a reason for it*/
 SPAN.AccessKey {
-   text-decoration: underline;
+   /* text-decoration: underline; */
 }
 
 
