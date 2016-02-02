@@ -30,6 +30,7 @@
 		width: 14.285714285714%;  // 1/7
 	}
 }
+
 #tertiary-nav{
 	// box model
 	margin: 0 auto;
@@ -46,7 +47,7 @@
 	
 	@include breakpoint($gamora){
 		// box model
-		margin-top: 1rem;
+		margin-top: calc(30 / 16 * 1rem);
 		width: calc(100% + 2em);
 		max-width: none;
 		// position
@@ -89,24 +90,33 @@
 	margin-left: 0;
 	list-style-type: none;
 }
+
 .tertiary-nav-h{  // heading for tertiary nav in wider views
 	//box model
-	margin-top: -1px;  // compensate for border
+	margin-top: 0;  // compensate for border
 	//typography
 	@include base-type;
 	
 	@include breakpoint($gamora){
 		//box model
-		margin: 0.779950083194676em 0 0.363976705490849em 0;
+		border-bottom: 1px solid mix(black, $sky-blue, 50%);
+		margin-bottom: -1px;
+		//layout
+		display: block;
 		//typography
 		font-size: 1.202rem;  // 19.232px
 		line-height: 1.559900166389351;  // 30/19.232
 	}
 }
+
 .tertiary-nav-list li,
 .tertiary-related-links > li > ul > li,
 #tertiary-nav dd > ul li{  //WYSIWYG
-	margin:0.535714285714286em 0 1.071428571428571em 0;  // 22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
+	margin: 0.535714285714286em 0 1.071428571428571em;  // 22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
+	
+	@include breakpoint($gamora){
+		margin: 0.41666666666667em 0 0.83333333333333em; // 22.5/18/3 15/18
+	}
 }
 .tertiary-nav-list a,
 #tertiary-nav dd > ul a,  // Cascade WYSIWYG
@@ -117,7 +127,7 @@
 	font-weight: normal;
 }
 
-@include breakpoint($gamora){
+/*@include breakpoint($gamora){
 	.tertiary-nav-h,
 	a.tertiary-nav-h{  // heading for tertiary nav in wider views
 		border-bottom: 1px solid mix(black, $sky-blue, 50%);
@@ -126,7 +136,7 @@
 		//color: mix(black, $sky-blue, 50%);
 		font-weight: bold;
 	}
-}
+}*/
 
 /**
  * 2. Homepage Tertiary Nav

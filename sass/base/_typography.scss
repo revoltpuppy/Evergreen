@@ -23,21 +23,23 @@ html{
 
 body{
 	font-family: $text-face;
-	// OpenType features available in Proxima Nova
-	// c2sc - Small capitals from capitals (Note: don't use font-feature-settings for small-caps)
-	// frac - Fractions
-	// liga - Standard ligatures
-	// lnum - Lining figures ("uppercase" numbers)
-	// onum - Oldstyle figures ("lowercase" numbers)
-	// ordn - Ordinals (1st, 2nd) - bad support
-	// pnum - Proportional figures (Varying width numbers)
-	// salt - Stylistic alternates
-	// smcp - Small capitals (Note: don't use font-feature-settings for small-caps)
-	// ss## - Stylistic sets (## is 01-20; I don't know how many sets this font has)
-	// subs - Subscripts
-	// sups - Superscripts
-	// tnum - Tabular figures (Fixed-width numbers)
-	font-feature-settings: "kern", "liga", "onum";  // Low-level OpenType features; these could be turned off eventually
+	/**
+	 * OpenType features available in Proxima Nova
+	 * c2sc - Small capitals from capitals (Note: don't use font-feature-settings for small-caps)
+	 * frac - Fractions
+	 * liga - Standard ligatures
+	 * lnum - Lining figures ("uppercase" numbers)
+	 * onum - Oldstyle figures ("lowercase" numbers); at least one Win10/Chrome combination chokes on this
+	 * ordn - Ordinals (1st, 2nd) - bad support
+	 * pnum - Proportional figures (Varying width numbers)
+	 * salt - Stylistic alternates
+	 * smcp - Small capitals (Note: don't use font-feature-settings for small-caps)
+	 * ss## - Stylistic sets (## is 01-20; I don't know how many sets this font has)
+	 * subs - Subscripts
+	 * sups - Superscripts
+	 * tnum - Tabular figures (Fixed-width numbers)
+	 */
+	font-feature-settings: "kern", "liga";  // Low-level OpenType features; these could be turned off eventually
 	font-kerning: normal;
 	font-variant-ligatures: common-ligatures;
 	font-variant-numeric: oldstyle-nums;
@@ -47,8 +49,8 @@ body{
 body,
 input,
 button{
-	-webkit-font-smoothing: antialiased;  //Reduce text chubbiness in Safari, Chrome
-	-moz-osx-font-smoothing: grayscale;  //Reduce text chubbiness in Firefox
+	-webkit-font-smoothing: antialiased;  // Reduce text chubbiness in Safari, Chrome
+	-moz-osx-font-smoothing: grayscale;  // Reduce text chubbiness in Firefox
 }
 
 body,
@@ -118,7 +120,7 @@ h1{
 		// box model
 		margin-top: 0.63663179339176em;   // 30/47.123
 		// typography
-		font-size: 2.945rem;  // 47.1232px  Step 5
+		font-size: 2.945rem;  // 47.123px  Step 5
 		line-height: 0.95494769008764;  // 45/47.123
 	}
 	
