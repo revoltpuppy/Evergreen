@@ -114,6 +114,12 @@ html>body #SelectionBox {
 	margin-top: 5px;
 }
 
+#Logo img{
+	/*this overrides the width and height set in html*/
+	width: 85%;
+	height: auto;
+}
+
 #Tabs {
 	order:1;
 	margin:20px; 
