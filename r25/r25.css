@@ -52,7 +52,8 @@ img {
 
 #NavBox {
 	padding-top: 10px;
-	border-bottom: 10px solid #64933a;
+	padding-bottom: 5px;
+	border-bottom: 7px solid #64933a;
 	background: #f3f3f3;
 	display:flex;
 	justify-content: space-around;
@@ -111,7 +112,6 @@ html>body #SelectionBox {
 
 #Logo {
 	order:0;
-	margin-top: 5px;
 }
 
 #Logo img{
@@ -122,7 +122,7 @@ html>body #SelectionBox {
 
 #Tabs {
 	order:1;
-	margin:20px; 
+	line-height: 32px; 
 }
 
 #SuperTabs {
@@ -135,13 +135,14 @@ html>body #SelectionBox {
 
 /*are these only accessible by people who are logged in?*/
 #ContactName {
+	order: 2;
 /*   position: absolute;*/
    /*top: 51px; Lined up with subtabs */
    /*top: 31px; On top of HR */
-   top: 73px;
+/*   top: 73px;*/
 	font-size: 10px;
-   float: right;
-   right: 285px;
+/*   float: right;*/
+/*   right: 285px;*/
    color: #F7DF9C;
    background: transparent;
    white-space: nowrap;
@@ -164,19 +165,8 @@ html>body #SelectionBox {
 
 
 #GrayLine {
-   margin-top: 3px;
-	font-size: 1px; 
-	height: 1px; 
-	top: 5px; 
-	background-color: #ccc;
-	width: 90%; /* ie5win fudge begins */
-/* 	voice-family: "\"}\"";
-	voice-family:inherit;
-	width: 700px;
-	}
-html>body #GrayLine {
-	width: 700px; /* ie5win fudge ends */
-	} 
+	display:none;
+} 
 
 
 	/* A.Supertab:link, A.Supertab:visited {
