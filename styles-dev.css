@@ -314,10 +314,13 @@ body {
    * tnum - Tabular figures (Fixed-width numbers)
    */
   -webkit-font-feature-settings: "kern", "liga";
+     -moz-font-feature-settings: "kern", "liga";
           font-feature-settings: "kern", "liga";
   -webkit-font-kerning: normal;
+     -moz-font-kerning: normal;
           font-kerning: normal;
   -webkit-font-variant-ligatures: common-ligatures;
+     -moz-font-variant-ligatures: common-ligatures;
           font-variant-ligatures: common-ligatures;
   font-variant-numeric: oldstyle-nums;
   text-rendering: optimizeLegibility;
@@ -848,6 +851,7 @@ td {
   padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;
   color: #333;
   -webkit-font-feature-settings: "lnum", "tnum";
+     -moz-font-feature-settings: "lnum", "tnum";
           font-feature-settings: "lnum", "tnum";
   font-variant-numeric: lining-nums tabular-nums;
   vertical-align: top;
@@ -4500,6 +4504,7 @@ ul.accordion-inner {
   -webkit-box-align: stretch;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
+              -ms-grid-row-align: stretch;
           align-items: stretch;
 }
 /* line 81, sass/modules/_media-segment.scss */
@@ -4527,6 +4532,7 @@ ul.accordion-inner {
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
+                -ms-grid-row-align: stretch;
             align-items: stretch;
   }
 }
@@ -5477,6 +5483,7 @@ p.alert {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
+              -ms-grid-row-align: center;
           align-items: center;
 }
 
