@@ -4,6 +4,45 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		
+		
+		/**
+		 * Copy files from one directory to another.
+		 */
+		copy: {
+		  to_drupal: {
+		    files: [
+		      {
+			      expand: true,
+			      src: 'styles.css',
+			      dest: '../www-drupal/themes/wwwevergreen/css/build/',
+			      /*rename: function(dest){
+				      return dest + 'screen.css';
+			      },*/
+			      filter: 'isFile',  // Make sure it's a file, not a directory or something else (I think)
+		      },
+		      {
+			      expand: true,
+			      cwd: 'custom-css/build/',
+			      src: 'ckeditor.css',
+			      dest: '../www-drupal/themes/wwwevergreen/css/build/',
+			      filter: 'isFile',
+		      },
+		      
+		      /*// includes files within path
+		      {expand: true, src: ['path/*'], dest: 'dest/', filter: 'isFile'},
+		
+		      // includes files within path and its sub-directories
+		      {expand: true, src: ['path/**'], dest: 'dest/'},
+		
+		      // makes all src relative to cwd
+		      {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
+		
+		      // flattens results to a single level
+		      {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'},*/
+		    ],
+		  },
+		},
+		
 		imagemin: {                          // Task
 			dynamic: {                         // Another target
 				options: {
@@ -59,18 +98,6 @@ module.exports = function(grunt) {
 				src: 'custom-css/build/*.css', // -> src/css/file1.css, src/css/file2.css
 				dest: 'custom-css/build/' // -> dest/css/file1.css, dest/css/file2.css
 			},
-			cms_styles: {
-				src: 'ckeditor.css',
-				dest: 'ckedior.css'
-			},
-			drupal_styles: {
-				src: '../wwwevergreen-drupal-theme/css/build/screen.css',
-				dest: '../wwwevergreen-drupal-theme/css/build/screen.css'
-			},
-			drupal_ckeditor_styles: {
-				src: '../wwwevergreen-drupal-theme/css/build/ckeditor.css',
-				dest: '../wwwevergreen-drupal-theme/css/build/ckeditor.css'
-			},
 			dev_styles: {
 				src: 'styles-dev.css',
 				dest: 'styles-dev.css'
@@ -100,8 +127,6 @@ module.exports = function(grunt) {
 						dest: 'custom-css/build',  // destination folder
 						ext: '.css'
 					},
-					{'../wwwevergreen-drupal-theme/css/build/screen.css': 'styles.scss'},
-					{'../wwwevergreen-drupal-theme/css/build/ckeditor.css': 'custom-css/src/ckeditor.scss'},
 				]
 			},
 			dev: {  // process specific files
@@ -193,6 +218,7 @@ module.exports = function(grunt) {
 	});
 
 	// Load the plugins (alphabetical order).
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-newer');
@@ -204,6 +230,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s) (in the order you want to run them).
-	grunt.registerTask('default', ['sass', 'postcss', 'newer:uglify']);
+	grunt.registerTask('default', ['newer:sass', 'newer:postcss', 'newer:uglify', 'copy']);
 
 };
