@@ -213,15 +213,16 @@
 }
 
 .big-fact{
-	@include base-type-lg;
+	@include base-type-xl;
 	
 	@include breakpoint($drax){
-		@include base-type-xl;
+		font-size: 1.82rem;  // 29.124px  Step 3
+    line-height: 1.03007828594973; // 45/29.124
 	}
 	
 	@include breakpoint($groot){
-    font-size: 1.82rem;  // 29.124px  Step 3
-    line-height: 1.03007828594973; // 30/29.124
+    font-size: 1.945rem;  // 31.112px  Step 4
+    line-height: 1.44638724607868; // 45/31.112
 	}
 }
 

@@ -3720,25 +3720,25 @@ ul.accordion-inner {
 
 /* line 215, sass/_modules.scss */
 .big-fact {
-  font-size: 1.125rem;
-  line-height: 1.38888888888889;
+  font-size: 1.202rem;
+  line-height: 1.30011961100421;
 }
 @media screen and (min-width: 70em) {
-  /* line 215, sass/_modules.scss */
-  .big-fact {
-    font-size: 1.202rem;
-    line-height: 1.30011961100421;
-  }
-}
-@media screen and (min-width: 125em) {
   /* line 215, sass/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
+@media screen and (min-width: 125em) {
+  /* line 215, sass/_modules.scss */
+  .big-fact {
+    font-size: 1.945rem;
+    line-height: 1.44638724607868;
+  }
+}
 
-/* line 228, sass/_modules.scss */
+/* line 229, sass/_modules.scss */
 .key-number {
   margin: 0.818419903972065em 0 0 0;
   display: block;
@@ -3748,19 +3748,19 @@ ul.accordion-inner {
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 228, sass/_modules.scss */
+  /* line 229, sass/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 245, sass/_modules.scss */
+/* line 246, sass/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 249, sass/_modules.scss */
+/* line 250, sass/_modules.scss */
 .main-content > p:last-child::after,
 .main-content > ul:last-child > li:last-child::after,
 .main-content > ol:last-child > li:last-child::after,
@@ -3769,7 +3769,7 @@ ul.accordion-inner {
   content: " " url("/_inc/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 249, sass/_modules.scss */
+  /* line 250, sass/_modules.scss */
   .main-content > p:last-child::after,
   .main-content > ul:last-child > li:last-child::after,
   .main-content > ol:last-child > li:last-child::after,
@@ -4273,7 +4273,7 @@ ul.accordion-inner {
 /**
  * H. Tables
  */
-/* line 269, sass/_modules.scss */
+/* line 270, sass/_modules.scss */
 .dataTable {
   /*@include breakpoint($starlord){
   	font-family: $text-face;
@@ -5646,19 +5646,19 @@ p.alert {
 /**
  * O. News
  */
-/* line 311, sass/_modules.scss */
+/* line 312, sass/_modules.scss */
 .news {
   border-top: 1px solid #d0cad4;
   overflow: hidden;
 }
 
-/* line 321, sass/_modules.scss */
+/* line 322, sass/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
   width: calc(100% - 2em);
 }
 
-/* line 327, sass/_modules.scss */
+/* line 328, sass/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -5672,7 +5672,7 @@ p.alert {
 /**
  * P. Embeded Content
  */
-/* line 345, sass/_modules.scss */
+/* line 346, sass/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -5680,7 +5680,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 355, sass/_modules.scss */
+/* line 356, sass/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -5702,24 +5702,24 @@ p.alert {
   background-image: url("/_inc/images/texture-1.png");
   content: url("/_inc/images/icons/green/play.png");
 }
-/* line 374, sass/_modules.scss */
+/* line 375, sass/_modules.scss */
 .lazy-load:hover::after {
   opacity: .85;
 }
-/* line 378, sass/_modules.scss */
+/* line 379, sass/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 386, sass/_modules.scss */
+/* line 387, sass/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 394, sass/_modules.scss */
+/* line 395, sass/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -5730,7 +5730,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 406, sass/_modules.scss */
+/* line 407, sass/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -5738,7 +5738,7 @@ p.alert {
   display: block;
 }
 
-/* line 415, sass/_modules.scss */
+/* line 416, sass/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(30, 19, 37, 0.25);
 }
