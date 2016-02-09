@@ -24,7 +24,7 @@
 BODY {
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
-	font-family: helvetica, verdana, arial sans-serif;
+	font-family: "Helvetica","Arial",sans-serif;
 	color: black;
 	background: white;
 	}
@@ -92,7 +92,6 @@ img {
 	margin: 60px 40px 20px 60px;
 	color: black;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 16px;
 	}
 
@@ -104,6 +103,7 @@ img {
 	padding: 0px 10px 5px 10px;
 	border: 5px solid #b6aabe;
 	background: #6d567d;/*#A5AABD;*/
+	font-family: 'Verdana', 'Helvetica', 'Arial', sans-serif;
 	color: black;
 	width: 155px;/* ie5win fudge begins */
 	/* 	voice-family: "\"}\"";
@@ -245,19 +245,16 @@ A.NonTab:hover {
 /* ------- Quick Search Styles ------- */
 
 .QSearchInputDropdown {
-	font-family: verdana, arial, helvetica, sans-serif;
    font-size: 9px;
    width: 105px;
 }
 
 .QSearchInputText {
-	font-family: verdana, arial, helvetica, sans-serif;
    font-size: 9px;
    width: 81px;
 }
 
 .QSearchInputLarge {
-	font-family: verdana, arial, helvetica, sans-serif;
    font-size: 12px;
 }
    
@@ -279,7 +276,6 @@ A.NonTab:hover {
 .QSRightLabel {
 	color: black;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	/*font-size: 12px;*/
 	text-align: right;
 	margin: 10px 10px 0px 0px;
@@ -308,7 +304,6 @@ A.NonTab:hover {
 .RequestFormLabel {
 	color: #666;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 13px;
 	font-weight: bold; 
 	text-align: right;
@@ -318,7 +313,6 @@ A.NonTab:hover {
 .RequestFormSubLabel {
 	color: #666;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 13px;
 	font-weight: bold;
 	text-align: left;
@@ -327,7 +321,6 @@ A.NonTab:hover {
 .RequestRequiredFormLabel {
 	color: red;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 13px;
 	font-weight: bold; 
 	text-align: right;
@@ -335,7 +328,6 @@ A.NonTab:hover {
 }
 	
 .ListText {
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 11px;
 	color: black;
 	background: transparent;
@@ -348,7 +340,6 @@ A.NonTab:hover {
 /*---------- WORKFLOW STYLES ---------------*/
 
 A.UnreadText:link, A.UnreadText:visited {
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 11px;
 	color: red;
 	background: transparent;
@@ -356,7 +347,6 @@ A.UnreadText:link, A.UnreadText:visited {
 }	
 
 A.UnreadText:hover {
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 11px;
 	color: black;
 	background: #fdf4b6;
@@ -364,7 +354,6 @@ A.UnreadText:hover {
 }
 
 .UnreadText {
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 11px;
 	color: red;
 	background: transparent;
@@ -372,7 +361,6 @@ A.UnreadText:hover {
 }
 
 .CancelledListText {
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 11px;
 	text-decoration: line-through;
 	color: black;
@@ -381,7 +369,6 @@ A.UnreadText:hover {
 }
 
 .CancelledUnreadText {
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 11px;
 	text-decoration: line-through;
 	color: red;
@@ -390,7 +377,6 @@ A.UnreadText:hover {
 }
 
 A.CancelledUnreadText:link, A.CancelledUnreadText:visited {
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 11px;
 	text-decoration: line-through;
 	color: red;
@@ -399,7 +385,6 @@ A.CancelledUnreadText:link, A.CancelledUnreadText:visited {
 }	
 
 A.CancelledUnreadText:hover {
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 11px;
 	text-decoration: line-through;
 	color: black;
@@ -408,7 +393,6 @@ A.CancelledUnreadText:hover {
 }
 
 TD.ListColHead {
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 14px;
 	font-weight: bold;
 	color: #666;
@@ -437,7 +421,6 @@ HR.ListDivider {
 .SelectionHead {
 	color: white;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 11px;
 	line-height: 18px;
 	text-align: center;
@@ -445,7 +428,6 @@ HR.ListDivider {
 #FilterList {
 	color: white;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	margin-left: 10px;
 }
 A.CurrentFilterItem:link, A.CurrentFilterItem:visited {
@@ -475,7 +457,6 @@ A.FilterItem:active, A.CurrentFilterItem:active {
 	position: relative;
 	color: inherit;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 9px;
 	line-height: 14px;
 	margin-top: 10px;
@@ -489,7 +470,6 @@ A.FilterItem:active, A.CurrentFilterItem:active {
 .MiniCalDate {
 	color: white;
    background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
    font-size: 9px;
 	line-height: 14px;
 	vertical-align: top;
@@ -498,7 +478,6 @@ A.FilterItem:active, A.CurrentFilterItem:active {
 A.Today:link, A.Today:visited, A.Today:active {
 	color: white;
    background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
    font-size: 9px;
 	line-height: 14px;
 	border: 0px solid #CCC;
@@ -507,7 +486,6 @@ A.Today:link, A.Today:visited, A.Today:active {
 A.MiniCalNav:link, A.MiniCalNav:visited, A.MiniCalNav:active {
 	color: white;
    background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
    font-size: 9px;
 	line-height: 14px;
 	font-weight: bold;
@@ -654,7 +632,6 @@ text-align: center;
 .EventListHeader {
 	position: relative;
 	/* color: #666; */
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	line-height: 24px;
@@ -674,7 +651,6 @@ A.EventListNav:hover {
 .ListDayNumber {
 	position: relative;
 	float: left;
-	font-family: verdana, arial, helvetica, sans-serif;
 	text-align: center;
 	width: 15px;
 	font-size: 9px;
@@ -688,7 +664,6 @@ A.EventListNav:hover {
 .DifMonth {
 	position: relative;
 	float: left;
-	font-family: verdana, arial, helvetica, sans-serif;
 	text-align: center;
 	width: 15px;
 	font-size: 9px;
@@ -706,7 +681,6 @@ A.EventListNav:hover {
 }
 
 .DayCalText{
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 11px;
 	line-height: 14px;
 	color: black;
@@ -723,7 +697,7 @@ A.EventListNav:hover {
 	position: relative;
 	float: left;
 	height: 100%;
-	font-family: verdana, arial, helvetica, sans-serif;
+	font-family: 'Verdana', 'Helvetica', 'Arial', sans-serif;
 	font-size: 9px;
 	/* font-weight: bold; */
 	line-height: 11px;
@@ -758,7 +732,7 @@ A.EventListNav:hover {
 	position: relative;
 	float: left;
 	margin: 0px;
-	font-family: verdana, arial, helvetica, sans-serif;
+	font-family: 'Verdana', 'Helvetica', 'Arial', sans-serif;
 	font-size: 10px;
 	line-height: 12px;
 	text-align: left;
@@ -768,7 +742,6 @@ A.EventListNav:hover {
 	position: relative;
 	float: left;
 	width: 14%;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 10px;
 	line-height: 12px;
 	text-align: left;
@@ -787,7 +760,6 @@ A.EventListNav:hover {
 
 .MonthCalWeek {
 	position: relative;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 9px;
 	line-height: 10px;
 	border-top: 2px solid #333;
@@ -811,7 +783,6 @@ A.EventListNav:hover {
 }
 
 TD.ListHeading {
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	color: #666;
 	font-weight: bold;
@@ -829,7 +800,6 @@ TD.ListHeading {
 }
 
 .SpacerDiv {
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	height: 10px;
 }
@@ -842,8 +812,7 @@ table.center {
 
 #ColdEventList {
    background: transparent;
-   color: red;   
-	font-family: verdana, arial, helvetica, sans-serif;
+   /*color: red;*/   
    font-size: 14px;
    padding: 10px;
 }
@@ -866,7 +835,6 @@ table.center {
 .HotName {
 	color: inherit;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 16px;
 	font-weight: bold;
 }
@@ -874,7 +842,6 @@ table.center {
 .HotTitle{
 	color: inherit;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 32px;
 	padding-bottom: 10px;   
@@ -883,7 +850,6 @@ table.center {
 .HotSubName {
 	color: inherit;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 14px;
 	padding-top: 20px;
 }
@@ -891,7 +857,6 @@ table.center {
 .HotSubHead {
 	color: inherit;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	font-weight: bold; 
@@ -902,7 +867,6 @@ table.center {
 .HotBody {
 	color: inherit;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 	padding-left: 25px;
@@ -917,7 +881,6 @@ table.center {
 .DetailName {
 	position: relative;
 	color: white;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 18px;
 	line-height: 26px;
 	font-weight: bold;
@@ -938,7 +901,6 @@ table.center {
 .DetailHead {
 	color: #666;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	margin-top: 12px;
@@ -947,7 +909,6 @@ table.center {
 .DetailSubHead {
 	background: transparent;
 	color: #666;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
 	line-height: 16px;
@@ -959,7 +920,6 @@ table.center {
 	position: relative;
 	color: black;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 20px;
 	margin-bottom: 10px;
@@ -968,7 +928,6 @@ table.center {
 .DetailBody {
 	color: black;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 	font-weight: normal; 
@@ -979,7 +938,6 @@ table.center {
 	float: left;
 	color: black;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 }
@@ -987,7 +945,6 @@ table.center {
 .DetailTail {
 	color: #666;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 42px;
 	margin: 20px 0px 5px 20px;
@@ -997,7 +954,6 @@ table.center {
 	position: relative;
 	background: transparent;
 	color: inherit;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 10px;
 	line-height: 16px;
 	margin: 0px 20px 0px 20px;
@@ -1007,7 +963,6 @@ table.center {
 	position: relative;
 	background: transparent;
 	color: inherit;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 10px;
 	line-height: 16px;
 	margin: 20px 0px 0px 40px;
@@ -1016,14 +971,12 @@ table.center {
 .DetailText1 {
 	color: black;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 }
 .DetailText2 {
 	color: #fdf4b6;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 }
@@ -1056,7 +1009,6 @@ table.center {
 .CatalogTitle {
 	color: #666;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: bold;
@@ -1068,7 +1020,6 @@ table.center {
 	position: relative;
 	background: transparent;
 	color: inherit;
-	font-family: verdana, arial, helvetica, sans-serif;
 	margin-left: 10px;
 	padding: 0px 0px 0px 0px;
 }
@@ -1078,7 +1029,6 @@ table.center {
 	float: left;
 	background: transparent;
 	color: inherit;
-	font-family: verdana, arial, helvetica, sans-serif;
 	margin: 10px 0px 0px 10px;
 	padding: 0px 0px 0px 0px;
 	width: 99%;
@@ -1088,7 +1038,6 @@ table.center {
 	position: relative;
 	background: transparent;
 	color: inherit;
-	font-family: verdana, arial, helvetica, sans-serif;
 	padding: 0px 0px 0px 0px;
 	margin: 10px 0px 0px 10px;
 	width: 100%;
@@ -1097,7 +1046,6 @@ table.center {
 .CatalogEventTitle {
 	color: black;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 11px;
 	line-height: 16px;
 }
@@ -1105,7 +1053,6 @@ table.center {
 .CatalogTOCMember {
 	position: relative;
 	float: left;
-	font-family: verdana, arial, helvetica, sans-serif;
 	padding: 0px 0px 0px 0px;
 
 }
@@ -1114,7 +1061,6 @@ table.center {
 	position: relative;
 	float: left;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 }
 
 .CatalogNodeLabel {
@@ -1123,7 +1069,6 @@ table.center {
 	border-bottom: 1px solid black;
 	font-size: 16px;
 	line-height: 24px;
-	font-family: verdana, arial, helvetica, sans-serif;
 	margin: 40px 5px 20px 0px;
 	width: 100%; /* ie5win fudge begins */
 /*	voice-family: "\"}\"";
@@ -1138,7 +1083,6 @@ html>body #CatalogNodeLabel {
 	position: relative;
 	float: left;
 	width: 40%;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 	margin: 0px 2px 0px 20px;
@@ -1149,7 +1093,6 @@ html>body #CatalogNodeLabel {
 	position: relative;
 	font-size: 14px;
 	line-height: 24px;
-	font-family: verdana, arial, helvetica, sans-serif;
 	margin: 40px 5px 0px 0px;
 	width: 95%; /* ie5win fudge begins */
 /*	voice-family: "\"}\"";
@@ -1162,7 +1105,6 @@ html>body #CatalogLeafLabel {
 
 .CatalogLeafContent {
 	position: relative;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 	margin: 0px 2px 0px 20px;
@@ -1175,7 +1117,6 @@ html>body #CatalogLeafLabel {
 
 .SpaceName {
 	color: white;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 18px;
 	line-height: 26px;
 	font-weight: bold;
@@ -1188,7 +1129,6 @@ html>body #CatalogLeafLabel {
 .SpaceHead {
 	color: #666;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 16px;
 	line-height: 28px;
 	font-weight: bold;
@@ -1199,7 +1139,6 @@ html>body #CatalogLeafLabel {
 .SpaceSubHead {
 	color: black;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	font-weight: bold; 
@@ -1210,7 +1149,6 @@ html>body #CatalogLeafLabel {
 .SpaceTitle {
 	color: black;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 32px;
 	padding-bottom: 10px;
@@ -1219,7 +1157,6 @@ html>body #CatalogLeafLabel {
 .SpaceTail {
 	color: #666;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 42px;
 	padding: 20px 0px 5px 20px;
@@ -1230,7 +1167,6 @@ html>body #CatalogLeafLabel {
 	position: relative;
 	background: transparent;
 	color: inherit;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 10px;
 	line-height: 16px;
 	margin-left: 10px;
@@ -1241,7 +1177,6 @@ html>body #CatalogLeafLabel {
 	color: black;
 	background: transparent;
 	color: inherit;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 }
@@ -1249,7 +1184,6 @@ html>body #CatalogLeafLabel {
 	color: black;
 	background: transparent;
 	color: inherit;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 }
@@ -1266,7 +1200,6 @@ html>body #CatalogLeafLabel {
 
 .AMHourLabel {
 	position:absolute;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size:10px;
 	padding: 0px 0px 0px 0px;
 	color:inherit;
@@ -1287,7 +1220,6 @@ html>body #HourLabels {
 
 .PMHourLabel {
 	position:absolute;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size:10px;
 	padding: 0px 0px 0px 0px;
 	font-weight:bold;
@@ -1310,7 +1242,6 @@ html>body #HourLabels {
 
 .GridCell {
 	position:absolute;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size:11px;
 	color: inherit;
 	border-right:1px solid #CCCCCC;
@@ -1345,7 +1276,6 @@ html>body #HourLabels {
 	
 #Cells {
 	position:absolute;
-	font-family: verdana, arial, helvetica, sans-serif;
 	padding: 0px 0px 0px 0px;
 	font-size:11px;
 	left: 100px;
@@ -1359,7 +1289,6 @@ html>body #Cells {
 
 .SpaceLabel {
 	position:absolute;
-	font-family: verdana, arial, helvetica, sans-serif;
 	border-bottom:1px solid black;
 	border-left:1px solid black;
 	border-right:1px solid black;
@@ -1412,7 +1341,6 @@ html>body #SpaceLink {
 	left: 2px;
 	top: 1px;
 	width:100px;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size:11px;
 	color:inherit;
 	background-color: white;
@@ -1431,7 +1359,6 @@ html>body #TopLeft {
 	position:relative;
 	left:1px;
 	z-index:3;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size:11px;
 	font-weight:bold;
 	height:30px;
@@ -1439,13 +1366,11 @@ html>body #TopLeft {
 
 #Spaces {
 	position:relative;
-	font-family: verdana, arial, helvetica, sans-serif;
 	left: 1px;
 }
 
 #Events {
 	position:absolute;
-	font-family: verdana, arial, helvetica, sans-serif;
 	padding: 0px 0px 0px 0px;
 	font-size:11px;
 	left: 100px;
@@ -1469,7 +1394,6 @@ html>body #Events {
 
 #SpaceBig {
 	position:relative;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size:11px;
 	display: none;
 	width: 100%;
@@ -1518,7 +1442,6 @@ html>body #Events {
 .FormLabel {
 	color: #666;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 13px;
 	/*padding: 0px 10px 0px 0px;*/
 	line-height: 18px;
@@ -1527,7 +1450,6 @@ html>body #Events {
 }
 
 .FormSubLabel {
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 }
@@ -1535,7 +1457,6 @@ html>body #Events {
 .FormRequiredLabel {
 	color: red;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 13px;
 	font-weight: bold; 
 	text-align: right;
@@ -1544,7 +1465,6 @@ html>body #Events {
 .FormLabelShort {
 	color: #666;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 13px;
 	font-weight: bold; 
 }
@@ -1552,7 +1472,6 @@ html>body #Events {
 .FormRequiredLabelShort {
    color: red;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 13px;
 	font-weight: bold; 
 }
@@ -1560,7 +1479,6 @@ html>body #Events {
 .FormData {
 	color: black;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	text-align: left;
@@ -1571,7 +1489,6 @@ html>body #Events {
 /*TD.FormDataRight {
 	color: black;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 13px;
 	text-align: right;
 	margin: 10px 0px 5px 0px;
@@ -1589,7 +1506,6 @@ html>body #Events {
 .FormTitle {
 	color: #666;
 	background: transparent;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: bold;
@@ -1597,12 +1513,16 @@ html>body #Events {
 	border-bottom: 1px solid #666;
 }
 
+/*This prevents overflow for images*/
+.FormTitle img{
+	width: 100%;
+}
+
 #WorkflowDetail {
    margin: 20px 0px 20px 0px;
 }
 
 #CommentButton {
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 12px;
 	text-align: center;
 }
@@ -1615,7 +1535,6 @@ html>body #Events {
 
 #SpaceNameDetailOuter {
 	position:relative;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size:11px;
 	display: none;
 	width: 100%;
@@ -1625,7 +1544,6 @@ html>body #Events {
 
 #SpaceBigName {
 	position:relative;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size:11px;
 	top: 23px;
 /*	voice-family: "\"}\"";
@@ -1638,7 +1556,6 @@ html>body #SpaceBigName {
 
 .AMHourLabelName {
 	position:absolute;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size:10px;
 	color:inherit;
 	text-align:center;
@@ -1660,7 +1577,6 @@ html>body #AMHourLabelName {
 
 .PMHourLabelName {
 	position:absolute;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size:10px;
 	font-weight:bold;
 	color:inherit;
@@ -1713,7 +1629,6 @@ html>body #NameDayHeader {
 	
 #HourLabelsName {
 	position:absolute;
-	font-family: verdana, arial, helvetica, sans-serif;
 	padding: 0px 0px 0px 0px;
 	font-size:4px;
 	top: 10px;
@@ -1734,7 +1649,6 @@ html>body #HourLabelsName {
 
 #NameEvents {
 	position:absolute;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size:11px;
 	left: 60px;
 	top: 10px;
@@ -1765,7 +1679,6 @@ html>body #NameTopLeft {
 	position:relative;
 	width:100%;
 	top:5px;
-	font-family: verdana, arial, helvetica, sans-serif;
 	font-size:11px;
 	color:inherit;
 	left: 0px;

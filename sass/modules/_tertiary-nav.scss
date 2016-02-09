@@ -145,15 +145,22 @@
 	
 	@include breakpoint($gamora){
 		// box model
-		width: calc(19.52636282395% + 1.5em);
+		margin-left: calc(-25% + 1em);
+		width: calc(25% + 1.5em);
 		// layout
 		position: absolute;
 		left: 0;
 	}
 	
 	@include breakpoint($drax){
-		width: calc(14.285714285714% + .5em);  // 1/7
+		// box model
+		margin-left: calc(-16.6666666667% + 1em);
+		width: calc(16.6666666667% + 1em);
 	}
+	
+/*	@include breakpoint($drax){
+		width: calc(14.285714285714% + .5em);  // 1/7
+	}*/
 }
 
 /**
