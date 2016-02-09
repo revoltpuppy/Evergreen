@@ -52,7 +52,7 @@ input:checked + .header-dropdown{
 	transition: .5s all ease;
 }
 .internal-users,
-[role="search"]{
+.header-dropdown .search{
 	// box model
 	width: 100%;
 }
@@ -76,7 +76,7 @@ input:checked + .header-dropdown{
 	}
 }
 
-[role="search"]{
+.header-dropdown .search{
 	margin: 0;
 	padding: .618em;
 	overflow: hidden;

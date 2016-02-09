@@ -67,7 +67,8 @@
  * C. Header Layout
  */
 
-[role="banner"]{
+[role="banner"],
+body > div + header{  // This is hacky. Fix it.
 	// layout
 	display: flex;
 	flex-wrap: wrap;
@@ -94,12 +95,12 @@
 	position: relative;  // Necessary to keep the left-nav contained on the homepage.
 }
 
-[role="navigation"],
-[role="main"]{
+.top-nav,
+.main-row{
 	width: 100%;
 }
 
-[role="navigation"]{
+.top-nav{
 	clear: both;
 	position: relative;
 
@@ -114,8 +115,8 @@
 	}
 }
 
-[role="navigation"],
-.wf-actuve [role="navigation"]{  // Typekit loaded
+.top-nav,
+.wf-actuve .top-nav{  // Typekit loaded
 
 	@include breakpoint($gamora){
 		// box model
@@ -140,7 +141,7 @@
 	/**
 	 * Typekit overrides
 	 */
-	.wf-active [role="navigation"]{
+	.wf-active .top-nav{
 		
 		@include breakpoint($lil-groot){
 			font-size: 0.743rem;  // Step -1

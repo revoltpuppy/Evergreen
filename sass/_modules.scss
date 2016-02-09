@@ -50,9 +50,9 @@
 	left: 0;
 	z-index: -1;
 	
-	@include breakpoint($gamora){
-		width: auto;
-	}
+	/*@include breakpoint($gamora){
+		width: 100%;
+	}*/
 }
 
 .main-background .main-background-img,  // deprecated, use main-background2

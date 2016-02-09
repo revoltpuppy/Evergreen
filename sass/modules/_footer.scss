@@ -4,7 +4,7 @@
  * The footer at the bottom of every page.
  */
 
-[role="contentinfo"]{
+.page-footer{
 	// box-model
 	margin-top: auto;
 	padding: 1em 1em 0;
@@ -25,8 +25,8 @@
 	}
 }
 
-[role="contentinfo"]:after,
-[role="contentinfo"]:before{
+.page-footer:after,
+.page-footer:before{
 	display: table;
 	clear: both;
 	content: "";
