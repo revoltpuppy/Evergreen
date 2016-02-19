@@ -230,6 +230,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s) (in the order you want to run them).
-	grunt.registerTask('default', ['newer:sass', 'newer:postcss', 'newer:uglify', 'copy']);
+	grunt.registerTask('default', ['sass', 'postcss', 'newer:uglify', 'copy']);
 
 };
