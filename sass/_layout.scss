@@ -68,7 +68,8 @@
  */
 
 [role="banner"],
-body > div + header{  // This is hacky. Fix it.
+body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete after next whole-site publish.
+.header-nav-wrapper{
 	// layout
 	display: flex;
 	flex-wrap: wrap;
@@ -165,8 +166,6 @@ body > div + header{  // This is hacky. Fix it.
 	// box model
 	margin-bottom: 1.875rem;  // 30px
 	width: 100%;
-	// position
-	//position: relative;  // This causes the background-image to judder in IE/Edge
 
 	@media screen and (min-height: 35em){
 		margin-bottom: 3.75rem;  // 60px
