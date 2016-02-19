@@ -215,10 +215,10 @@ body > div + header{  // This is hacky. Fix it.
 	border-bottom: 2px dashed $evergreen-neue;
 		
 	
-	@include breakpoint($gamora){
+	/*@include breakpoint($gamora){
 		// box model
 		padding-left: 1em;
-	}
+	}*/
 	
 	@include breakpoint($drax){
 		border-bottom: 0;

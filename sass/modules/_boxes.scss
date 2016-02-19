@@ -70,7 +70,7 @@ p.box{  // WYSIWYG
 .note{
 	border-left: 5px solid mix(white, $sky-blue, 60%);
 	
-	@media screen and (min-width: 22em){
+	@include breakpoint($rocket){
 		padding-left: calc(1em - 5px);
 	}
 }
