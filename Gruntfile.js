@@ -207,7 +207,7 @@ module.exports = function(grunt) {
 			},
 			css: {  // Autoprefix, then process Sass into CSS.
 				files: ['styles.scss', 'print.scss', 'sass/**/*.scss', 'custom-css/src/*.scss'],
-				tasks: ['sass', 'postcss']
+				tasks: ['sass', 'postcss', 'copy:to_drupal']
 			},
 			js: {  // Uglify JavaScript.
 				files: ['scripts.js'],
