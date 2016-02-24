@@ -63,7 +63,7 @@ input:checked + .header-dropdown{
 }
 .internal-users > li{
 	// box model
-	padding: 0.673213669603561em;  // 8/11.8833
+	padding: 0.9375rem 1em;  // 15px
 	width: 50%;
 	// layout
 	float: left;
@@ -76,24 +76,20 @@ input:checked + .header-dropdown{
 	}
 }
 
-.header-dropdown .search{
+.header-dropdown .search,
+#search-block-form{  // Drupal service center site top search form
 	margin: 0;
-	padding: .618em;
+	padding: 0.9375rem 1em;  // 15px
 	overflow: hidden;
 	background-color: mix(white, $evergreen-neue, 80%);
 	
 	@include breakpoint($gamora){
 		// box model
-		padding: .618em .618em .618em 0;  //Use padding for height calculations in JS.
-		//width: 40%;
+		padding: 0.9375rem 1em 0.9375rem 0;  //Use padding for height calculations in JS.
 		// layout
 		float: right;
 		// backgrounds & borders
 		background-color: transparent;
-	}
-	
-	@include breakpoint($groot){
-		//width: 20%;
 	}
 }
 
@@ -113,8 +109,8 @@ input:checked + .header-dropdown{
  * 2. Logo
  */
 .logo{
-	margin: .618em 2% 0 2%;
-	width: 96%;
+	margin: 0.46875rem 0.5em 0 0.5em;  // 7.5px 7px 7px
+	width: calc(100% - 1em);
 	
 	@include breakpoint($lil-groot){
 		// box model
@@ -184,7 +180,7 @@ input:checked + .header-dropdown{
 .search-toggle,   // button to reveal search
 .student-toggle{  // button to reveal profile
 	// box model
-	padding: 0 .618em;
+	padding: 0 0.618em;
 	min-width: 22px;
 	// layout
 	float: right;
@@ -217,7 +213,7 @@ input:checked + .header-dropdown{
 
 .search-toggle > img,
 .student-toggle > img{
-	margin: 0.441176470588235em auto;
+	margin: 0.46875rem auto;  // 7.5px
 	width: 17px;
 	display: block;
 }
