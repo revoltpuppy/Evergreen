@@ -5,7 +5,7 @@
  */
 
 [type="search"],
-.edit-search-block-form--2{  // Drupal service center site top search form
+#search-block-form{  // Drupal service center site top search form
 	margin: 0 -1.875rem 0 0;
 	position: relative;
 	width: 100%;
@@ -14,7 +14,7 @@
 
 //.top-search button,  //deprecated
 .search-button,
-.edit-submit{  // Drupal service center site top search form
+#edit-submit{  // Drupal service center site top search form
 	// box model
 	border-color: mix($tint, $blueberry-susan, 60%);
 	border-width: 1px 1px 1px 0;
