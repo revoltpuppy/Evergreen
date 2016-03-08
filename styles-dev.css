@@ -1035,7 +1035,7 @@ textarea {
  */
 /* line 7, sass/modules/_search.scss */
 [type="search"],
-.edit-search-block-form--2 {
+#search-block-form {
   margin: 0 -1.875rem 0 0;
   position: relative;
   width: 100%;
@@ -1046,7 +1046,7 @@ textarea {
 
 /* line 16, sass/modules/_search.scss */
 .search-button,
-.edit-submit {
+#edit-submit {
   border-color: #aea3b6;
   border-width: 1px 1px 1px 0;
   height: 1.875rem;
@@ -1066,7 +1066,7 @@ textarea {
 }
 /* line 38, sass/modules/_search.scss */
 .search-button:hover,
-.edit-submit:hover {
+#edit-submit:hover {
   background: none #ccc;
 }
 
@@ -1753,9 +1753,9 @@ body > div + header,
 @media screen and (min-width: 20em) {
   /* line 104, sass/_layout.scss */
   .top-nav {
-    font-size: 0.657rem;
-    line-height: 1.427619682;
-    letter-spacing: 0.05em;
+    font-size: 0.695rem;
+    line-height: 1.34831460674157;
+    letter-spacing: -0.01em;
   }
 }
 @media screen and (min-width: 32em) {
@@ -1765,32 +1765,11 @@ body > div + header,
     line-height: 1.42857142857143;
   }
 }
-
 @media screen and (min-width: 43em) {
-  /* line 119, sass/_layout.scss */
-  .top-nav,
-  .wf-actuve .top-nav {
+  /* line 104, sass/_layout.scss */
+  .top-nav {
     margin-left: 0;
     width: 100%;
-    font-size: 1.125rem;
-    line-height: 1.38888888888889;
-    letter-spacing: normal;
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 119, sass/_layout.scss */
-  .top-nav,
-  .wf-actuve .top-nav {
-    font-size: 1.202rem;
-    line-height: 1.55990016638935;
-  }
-}
-@media screen and (min-width: 125em) {
-  /* line 119, sass/_layout.scss */
-  .top-nav,
-  .wf-actuve .top-nav {
-    font-size: 1.719rem;
-    line-height: 1.090750436300175;
   }
 }
 
@@ -1798,43 +1777,61 @@ body > div + header,
  * Typekit overrides
  */
 @media screen and (min-width: 20em) {
-  /* line 145, sass/_layout.scss */
-  .wf-active .top-nav {
-    font-size: 0.743rem;
-    line-height: 1.26220127903063;
-  }
-}
-@media screen and (min-width: 22em) {
-  /* line 145, sass/_layout.scss */
+  /* line 127, sass/_layout.scss */
   .wf-active .top-nav {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
+@media screen and (min-width: 22em) {
+  /* line 127, sass/_layout.scss */
+  .wf-active .top-nav {
+    letter-spacing: 0.05em;
+  }
+}
+
 @media screen and (min-width: 43em) {
-  /* line 145, sass/_layout.scss */
+  /* line 138, sass/_layout.scss */
+  .top-nav,
   .wf-active .top-nav {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
+    letter-spacing: normal;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 138, sass/_layout.scss */
+  .top-nav,
+  .wf-active .top-nav {
+    font-size: 1.202rem;
+    line-height: 1.30011961100421;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 138, sass/_layout.scss */
+  .top-nav,
+  .wf-active .top-nav {
+    font-size: 1.719rem;
+    line-height: 1.090750436300175;
   }
 }
 
 /**
  * D. Content Layout
  */
-/* line 165, sass/_layout.scss */
+/* line 160, sass/_layout.scss */
 .site-content {
   margin-bottom: 1.875rem;
   width: 100%;
 }
 @media screen and (min-height: 35em) {
-  /* line 165, sass/_layout.scss */
+  /* line 160, sass/_layout.scss */
   .site-content {
     margin-bottom: 3.75rem;
   }
 }
 
-/* line 175, sass/_layout.scss */
+/* line 170, sass/_layout.scss */
 .index-wrapper,
 .primary-content-wrapper {
   border-top: 5px solid #46502b;
@@ -1845,7 +1842,7 @@ body > div + header,
   border-radius: 2px;
 }
 @media screen and (min-width: 43em) {
-  /* line 175, sass/_layout.scss */
+  /* line 170, sass/_layout.scss */
   .index-wrapper,
   .primary-content-wrapper {
     margin-right: 0;
@@ -1856,19 +1853,19 @@ body > div + header,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 198, sass/_layout.scss */
+  /* line 193, sass/_layout.scss */
   .index-wrapper {
     position: relative;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 198, sass/_layout.scss */
+  /* line 193, sass/_layout.scss */
   .index-wrapper {
     width: 85.714285714286%;
   }
 }
 
-/* line 212, sass/_layout.scss */
+/* line 207, sass/_layout.scss */
 .primary-content-wrapper {
   border-bottom: 2px dashed #64933a;
   /*@include breakpoint($gamora){
@@ -1877,14 +1874,14 @@ body > div + header,
   }*/
 }
 @media screen and (min-width: 70em) {
-  /* line 212, sass/_layout.scss */
+  /* line 207, sass/_layout.scss */
   .primary-content-wrapper {
     border-bottom: 0;
     width: 57.142857142857%;
   }
 }
 
-/* line 229, sass/_layout.scss */
+/* line 224, sass/_layout.scss */
 .sidebar-wrapper {
   margin-left: 1em;
   padding: 0;
@@ -1893,7 +1890,7 @@ body > div + header,
   background-color: rgba(242, 242, 242, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 229, sass/_layout.scss */
+  /* line 224, sass/_layout.scss */
   .sidebar-wrapper {
     margin-left: 20%;
     padding-left: 1em;
@@ -1902,20 +1899,20 @@ body > div + header,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 229, sass/_layout.scss */
+  /* line 224, sass/_layout.scss */
   .sidebar-wrapper {
     margin: 0;
     width: 28.571428571429%;
   }
 }
 
-/* line 257, sass/_layout.scss */
+/* line 252, sass/_layout.scss */
 .main-content,
 .sidebar {
   margin: 0 .75em;
 }
 @media screen and (min-width: 22em) {
-  /* line 257, sass/_layout.scss */
+  /* line 252, sass/_layout.scss */
   .main-content,
   .sidebar {
     margin: 0 1em;
@@ -1923,54 +1920,54 @@ body > div + header,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 266, sass/_layout.scss */
+  /* line 261, sass/_layout.scss */
   .index-wrapper .main-content {
     margin: 0 3em;
   }
 }
 
-/* line 276, sass/_layout.scss */
+/* line 271, sass/_layout.scss */
 .primary-content-wrapper .main-content {
   max-width: 45em;
 }
 @media screen and (min-width: 43em) and (min-width: 43em) {
-  /* line 276, sass/_layout.scss */
+  /* line 271, sass/_layout.scss */
   .primary-content-wrapper .main-content {
     margin: 0 2em;
   }
 }
 @media screen and (min-width: 43em) and (min-width: 70em) {
-  /* line 276, sass/_layout.scss */
+  /* line 271, sass/_layout.scss */
   .primary-content-wrapper .main-content {
     margin: 0 3em;
   }
 }
 
-/* line 290, sass/_layout.scss */
+/* line 285, sass/_layout.scss */
 .main-content {
   margin-top: -5px;
 }
 
-/* line 298, sass/_layout.scss */
+/* line 293, sass/_layout.scss */
 .sidebar {
   margin: 0 .75em 3.75rem 0.75em;
 }
 @media screen and (min-width: 22em) {
-  /* line 298, sass/_layout.scss */
+  /* line 293, sass/_layout.scss */
   .sidebar {
     margin-right: 2em;
     margin-left: 2em;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 298, sass/_layout.scss */
+  /* line 293, sass/_layout.scss */
   .sidebar {
     margin-right: 5.675675675675676%;
     margin-left: 5.675675675675676%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 298, sass/_layout.scss */
+  /* line 293, sass/_layout.scss */
   .sidebar {
     border-left: 1px solid #ccc;
     margin: 0 1em 0 0;
@@ -1979,19 +1976,19 @@ body > div + header,
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
-  /* line 320, sass/_layout.scss */
+  /* line 315, sass/_layout.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.535714285714286em 0 1.071428571428571em 0;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 298, sass/_layout.scss */
+  /* line 293, sass/_layout.scss */
   .sidebar {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
-  /* line 329, sass/_layout.scss */
+  /* line 324, sass/_layout.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.441176470588235em 0 0.882352941176471em 0;
@@ -2004,18 +2001,18 @@ body > div + header,
  * For main-content and sidebar inside an index-wrapper, e.g., used
  * in the catalog. Use sparingly!
  */
-/* line 342, sass/_layout.scss */
+/* line 337, sass/_layout.scss */
 #faux-content-wrapper {
   border-bottom: 2px dashed #64933a;
 }
 @media screen and (min-width: 43em) {
-  /* line 342, sass/_layout.scss */
+  /* line 337, sass/_layout.scss */
   #faux-content-wrapper {
     width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 342, sass/_layout.scss */
+  /* line 337, sass/_layout.scss */
   #faux-content-wrapper {
     border-bottom-width: 0;
     width: 66.6666666667%;
@@ -2023,13 +2020,13 @@ body > div + header,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 355, sass/_layout.scss */
+  /* line 350, sass/_layout.scss */
   #faux-sidebar-wrapper {
     width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 355, sass/_layout.scss */
+  /* line 350, sass/_layout.scss */
   #faux-sidebar-wrapper {
     width: 33.3333333333%;
     font-size: 0.875rem;
@@ -2038,14 +2035,14 @@ body > div + header,
 }
 
 @media screen and (min-width: 70em) {
-  /* line 369, sass/_layout.scss */
+  /* line 364, sass/_layout.scss */
   .faux-sidebar {
     border-left: 1px solid #ccc;
     padding-left: 1em;
   }
 }
 
-/* line 378, sass/_layout.scss */
+/* line 373, sass/_layout.scss */
 .spotlight {
   text-align: center;
 }
@@ -2057,42 +2054,42 @@ body > div + header,
  * permits. Use sparingly!
  */
 @media screen and (max-width: 20em) {
-  /* line 389, sass/_layout.scss */
+  /* line 384, sass/_layout.scss */
   .gt20 {
     display: none;
   }
 }
 @media screen and (max-width: 22em) {
-  /* line 394, sass/_layout.scss */
+  /* line 389, sass/_layout.scss */
   .gt22 {
     display: none;
   }
 }
 @media screen and (max-width: 32em) {
-  /* line 399, sass/_layout.scss */
+  /* line 394, sass/_layout.scss */
   .gt32 {
     display: none;
   }
 
-  /* line 402, sass/_layout.scss */
+  /* line 397, sass/_layout.scss */
   .ins32 {
     display: none;
   }
 }
 @media screen and (max-width: 43em) {
-  /* line 407, sass/_layout.scss */
+  /* line 402, sass/_layout.scss */
   .gt43 {
     display: none;
   }
 }
 @media screen and (max-width: 70em) {
-  /* line 412, sass/_layout.scss */
+  /* line 407, sass/_layout.scss */
   .gt70 {
     display: none;
   }
 }
 @media screen and (max-width: 88em) {
-  /* line 417, sass/_layout.scss */
+  /* line 412, sass/_layout.scss */
   .gt88 {
     display: none;
   }
@@ -2122,13 +2119,13 @@ body > div + header,
  * P. Embedded Content
  * Q. CMS
  */
-/* line 27, sass/_modules.scss */
+/* line 30, sass/_modules.scss */
 .top-links,
 .search-list,
 .primary-nav-unit h2,
 .nav li {
-  font-size: .743rem;
-  line-height: 1.262201279030629;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
 }
 
 /**
@@ -2857,7 +2854,7 @@ li.internal-users-alt img {
 /**
  * B. Background Image
  */
-/* line 42, sass/_modules.scss */
+/* line 46, sass/_modules.scss */
 .main-background,
 .main-background2 {
   width: 100%;
@@ -2871,7 +2868,7 @@ li.internal-users-alt img {
   }*/
 }
 
-/* line 58, sass/_modules.scss */
+/* line 62, sass/_modules.scss */
 .main-background .main-background-img,
 .main-background > :first-child,
 .main-background2 .main-background-img,
@@ -2880,7 +2877,7 @@ li.internal-users-alt img {
   display: block;
 }
 @media screen and (min-width: 43em) {
-  /* line 58, sass/_modules.scss */
+  /* line 62, sass/_modules.scss */
   .main-background .main-background-img,
   .main-background > :first-child,
   .main-background2 .main-background-img,
@@ -2890,7 +2887,7 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 58, sass/_modules.scss */
+  /* line 62, sass/_modules.scss */
   .main-background .main-background-img,
   .main-background > :first-child,
   .main-background2 .main-background-img,
@@ -2899,19 +2896,19 @@ li.internal-users-alt img {
   }
 }
 
-/* line 76, sass/_modules.scss */
+/* line 80, sass/_modules.scss */
 .main-background2 {
   position: -webkit-sticky;
   position: sticky;
 }
 
-/* line 80, sass/_modules.scss */
+/* line 84, sass/_modules.scss */
 .main-background2 > .main-background-img,
 .main-background2 > :first-child {
   position: absolute;
 }
 @media screen and (min-width: 43em) {
-  /* line 80, sass/_modules.scss */
+  /* line 84, sass/_modules.scss */
   .main-background2 > .main-background-img,
   .main-background2 > :first-child {
     width: auto;
@@ -2927,7 +2924,7 @@ li.internal-users-alt img {
 	//will-change: filter;
 }
 */
-/* line 101, sass/_modules.scss */
+/* line 105, sass/_modules.scss */
 .main-background2-enhanced #main-background-img {
   -webkit-filter: none;
           filter: none;
@@ -3205,18 +3202,18 @@ li.internal-users-alt img {
   }
 }
 
-/* line 110, sass/_modules.scss */
+/* line 114, sass/_modules.scss */
 .profile-list > li {
   overflow: hidden;
   position: relative;
 }
-/* line 122, sass/_modules.scss */
+/* line 126, sass/_modules.scss */
 .profile-list > li .profile-img-link {
   display: block;
   overflow: hidden;
 }
 
-/* line 128, sass/_modules.scss */
+/* line 132, sass/_modules.scss */
 .profile-img {
   margin-left: -50%;
   width: 200%;
@@ -3224,35 +3221,35 @@ li.internal-users-alt img {
   display: block;
 }
 @media screen and (min-width: 20em) {
-  /* line 128, sass/_modules.scss */
+  /* line 132, sass/_modules.scss */
   .profile-img {
     margin-left: -25%;
     width: 150%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 128, sass/_modules.scss */
+  /* line 132, sass/_modules.scss */
   .profile-img {
     margin-left: 0%;
     width: 100%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 128, sass/_modules.scss */
+  /* line 132, sass/_modules.scss */
   .profile-img {
     width: 120%;
     margin-left: -10%;
   }
 }
 @media screen and (min-width: 60em) {
-  /* line 128, sass/_modules.scss */
+  /* line 132, sass/_modules.scss */
   .profile-img {
     width: 100%;
     margin-left: 0%;
   }
 }
 
-/* line 156, sass/_modules.scss */
+/* line 160, sass/_modules.scss */
 .profile-list .box {
   margin-top: -1.40625rem;
   position: absolute;
@@ -3683,17 +3680,17 @@ ul.accordion-inner {
  *
  * Special, non-base element typography.
  */
-/* line 178, sass/_modules.scss */
+/* line 182, sass/_modules.scss */
 .lead {
   margin-bottom: 0;
 }
 
-/* line 181, sass/_modules.scss */
+/* line 185, sass/_modules.scss */
 .follow {
   margin-top: 0;
 }
 
-/* line 185, sass/_modules.scss */
+/* line 189, sass/_modules.scss */
 .intro,
 .field-intro {
   margin: 1.17010764990379em 0;
@@ -3702,7 +3699,7 @@ ul.accordion-inner {
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 43em) {
-  /* line 185, sass/_modules.scss */
+  /* line 189, sass/_modules.scss */
   .intro,
   .field-intro {
     margin: 1.03007828594973em 0;
@@ -3711,7 +3708,7 @@ ul.accordion-inner {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 185, sass/_modules.scss */
+  /* line 189, sass/_modules.scss */
   .intro,
   .field-intro {
     margin: 0.96425816405246em 0;
@@ -3720,33 +3717,33 @@ ul.accordion-inner {
   }
 }
 
-/* line 210, sass/_modules.scss */
+/* line 214, sass/_modules.scss */
 .intro-alt {
   color: #333;
   font-weight: bold;
 }
 
-/* line 215, sass/_modules.scss */
+/* line 219, sass/_modules.scss */
 .big-fact {
   font-size: 1.202rem;
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 70em) {
-  /* line 215, sass/_modules.scss */
+  /* line 219, sass/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 215, sass/_modules.scss */
+  /* line 219, sass/_modules.scss */
   .big-fact {
     font-size: 1.945rem;
     line-height: 1.44638724607868;
   }
 }
 
-/* line 229, sass/_modules.scss */
+/* line 233, sass/_modules.scss */
 .key-number {
   margin: 0.818419903972065em 0 0 0;
   display: block;
@@ -3756,19 +3753,19 @@ ul.accordion-inner {
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 229, sass/_modules.scss */
+  /* line 233, sass/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 246, sass/_modules.scss */
+/* line 250, sass/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 250, sass/_modules.scss */
+/* line 254, sass/_modules.scss */
 .main-content > p:last-child::after,
 .main-content > ul:last-child > li:last-child::after,
 .main-content > ol:last-child > li:last-child::after,
@@ -3777,7 +3774,7 @@ ul.accordion-inner {
   content: " " url("/_inc/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 250, sass/_modules.scss */
+  /* line 254, sass/_modules.scss */
   .main-content > p:last-child::after,
   .main-content > ul:last-child > li:last-child::after,
   .main-content > ol:last-child > li:last-child::after,
@@ -3872,9 +3869,9 @@ ul.accordion-inner {
 /* line 84, sass/modules/_lists.scss */
 .accordion,
 .accordion-table {
-  border: 1px solid #d2cad7;
+  border: 1px solid #c8c1cd;
   overflow: hidden;
-  background-color: #e4dfe7;
+  background-color: #d9d4dc;
   border-radius: 2px;
 }
 
@@ -3895,8 +3892,8 @@ ul.accordion-inner {
 }
 /* line 106, sass/modules/_lists.scss */
 .accordion dt:hover {
-  background-color: #edeaef;
-  border-color: #dbd5df;
+  background-color: #e1dee3;
+  border-color: #d0cad4;
   border-top-color: #311d3e;
   -webkit-transition: background-color .2s ease-out;
   transition: background-color .2s ease-out;
@@ -4142,17 +4139,25 @@ ul.accordion-inner {
  */
 /* line 344, sass/modules/_lists.scss */
 .few {
-  font-size: 0.743rem;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
 }
-/* line 347, sass/modules/_lists.scss */
+/* line 348, sass/modules/_lists.scss */
 .few a {
   font-weight: normal;
 }
 
-/* line 351, sass/modules/_lists.scss */
+/* line 352, sass/modules/_lists.scss */
 .many {
   font-size: 1.125rem;
   line-height: 1.38888888888889;
+}
+@media screen and (min-width: 125em) {
+  /* line 352, sass/modules/_lists.scss */
+  .many {
+    font-size: 1.202rem;
+    line-height: 1.30011961100421;
+  }
 }
 
 /**
@@ -4160,7 +4165,7 @@ ul.accordion-inner {
  *
  * An index of the letters of the alphabet, for skipping around the page.
  */
-/* line 360, sass/modules/_lists.scss */
+/* line 365, sass/modules/_lists.scss */
 .alpha-label {
   border: 1px solid #d2cad7;
   border-bottom-width: 0;
@@ -4175,7 +4180,7 @@ ul.accordion-inner {
   border-radius: 2px 2px 0 0;
 }
 
-/* line 377, sass/modules/_lists.scss */
+/* line 382, sass/modules/_lists.scss */
 .alpha-index {
   border: 1px solid #d2cad7;
   margin-left: 0;
@@ -4190,7 +4195,7 @@ ul.accordion-inner {
   list-style-type: none;
 }
 @media screen and (min-width: 32em) {
-  /* line 377, sass/modules/_lists.scss */
+  /* line 382, sass/modules/_lists.scss */
   .alpha-index {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4202,19 +4207,19 @@ ul.accordion-inner {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 377, sass/modules/_lists.scss */
+  /* line 382, sass/modules/_lists.scss */
   .alpha-index {
     top: calc(.5em + 1.202rem * 1.46814);
   }
 }
 
-/* line 405, sass/modules/_lists.scss */
+/* line 410, sass/modules/_lists.scss */
 .alpha-label + .alpha-index {
   border-top-left-radius: 0;
   margin-top: -1px;
 }
 
-/* line 409, sass/modules/_lists.scss */
+/* line 414, sass/modules/_lists.scss */
 .alpha-index > li {
   padding: 0 2px;
   display: inline;
@@ -4227,7 +4232,7 @@ ul.accordion-inner {
  *
  * @see http://evergreen.edu/admissions
  */
-/* line 423, sass/modules/_lists.scss */
+/* line 428, sass/modules/_lists.scss */
 .badge-list {
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -4245,19 +4250,19 @@ ul.accordion-inner {
           justify-content: space-around;
   overflow: hidden;
 }
-/* line 430, sass/modules/_lists.scss */
+/* line 435, sass/modules/_lists.scss */
 .badge-list > li {
   margin: 0 1em;
   float: left;
   text-align: center;
 }
 
-/* line 439, sass/modules/_lists.scss */
+/* line 444, sass/modules/_lists.scss */
 .badge {
   max-height: 90px;
 }
 
-/* line 443, sass/modules/_lists.scss */
+/* line 448, sass/modules/_lists.scss */
 .badge-alt {
   max-width: 115px;
 }
@@ -4268,12 +4273,12 @@ ul.accordion-inner {
  * A parent container, whose direct children are zebra-striped.
  * Strictly speaking, this doesn't have to be a list element.
  */
-/* line 456, sass/modules/_lists.scss */
+/* line 461, sass/modules/_lists.scss */
 .zebra-striped > * {
   padding-right: 1em;
   padding-left: 1em;
 }
-/* line 460, sass/modules/_lists.scss */
+/* line 465, sass/modules/_lists.scss */
 .zebra-striped > *:nth-child(odd) {
   background-color: #e4dfe7;
 }
@@ -4281,7 +4286,7 @@ ul.accordion-inner {
 /**
  * H. Tables
  */
-/* line 270, sass/_modules.scss */
+/* line 274, sass/_modules.scss */
 .dataTable {
   /*@include breakpoint($starlord){
   	font-family: $text-face;
@@ -5390,9 +5395,11 @@ p.alert {
  */
 /* line 268, sass/modules/_calendars.scss */
 .schedule {
+  border: 1px solid #c8c1cd;
   margin: 0.535714285714286em 0 1.071428571428571em 0;
+  border-radius: 2px;
 }
-/* line 271, sass/modules/_calendars.scss */
+/* line 275, sass/modules/_calendars.scss */
 .schedule .h-event {
   padding: 1em;
   display: -webkit-box;
@@ -5407,56 +5414,62 @@ p.alert {
   overflow: hidden;
   border-radius: 2px;
 }
-/* line 281, sass/modules/_calendars.scss */
+/* line 285, sass/modules/_calendars.scss */
 .schedule .h-event:nth-child(even) {
   background-color: #e4dfe7;
 }
-/* line 286, sass/modules/_calendars.scss */
-.schedule .schedule-event-required {
+
+/* line 291, sass/modules/_calendars.scss */
+.schedule-event-required {
   border: 2px solid #64933a;
 }
-/* line 289, sass/modules/_calendars.scss */
-.schedule .schedule-event-required + .schedule-event-required {
+/* line 294, sass/modules/_calendars.scss */
+.schedule-event-required + .schedule-event-required {
   margin-top: 2px;
 }
-/* line 293, sass/modules/_calendars.scss */
-.schedule .schedule-event-required:nth-of-type(odd) {
+/* line 298, sass/modules/_calendars.scss */
+.schedule-event-required:nth-of-type(odd) {
   background-color: #f0f4eb;
 }
-/* line 297, sass/modules/_calendars.scss */
-.schedule .schedule-event-required:nth-of-type(even) {
+/* line 302, sass/modules/_calendars.scss */
+.schedule-event-required:nth-of-type(even) {
   background-color: #e0e9d8;
 }
-/* line 301, sass/modules/_calendars.scss */
-.schedule .schedule-event-required .p-name {
+/* line 306, sass/modules/_calendars.scss */
+.schedule-event-required .p-name {
   color: #46502b;
 }
-/* line 306, sass/modules/_calendars.scss */
-.schedule .schedule-event-morning {
+
+/* line 311, sass/modules/_calendars.scss */
+.schedule-event-morning {
   background-color: #fdf4b6;
 }
-/* line 312, sass/modules/_calendars.scss */
-.schedule .schedule-event-evening:nth-of-type(odd) {
+
+/* line 317, sass/modules/_calendars.scss */
+.schedule-event-evening:nth-of-type(odd) {
   background-color: #e6f3fd;
 }
-/* line 316, sass/modules/_calendars.scss */
-.schedule .schedule-event-evening:nth-of-type(even) {
+/* line 321, sass/modules/_calendars.scss */
+.schedule-event-evening:nth-of-type(even) {
   background-color: #cce7fc;
 }
-/* line 320, sass/modules/_calendars.scss */
-.schedule .schedule-event-evening .p-name {
+/* line 325, sass/modules/_calendars.scss */
+.schedule-event-evening .p-name {
   color: #00365f;
 }
-/* line 325, sass/modules/_calendars.scss */
-.schedule .schedule-event-evening-start::before {
+
+/* line 330, sass/modules/_calendars.scss */
+.schedule-event-evening-start::before {
   border-bottom: 1px solid #0086ee;
   width: 100%;
   display: block;
   text-align: center;
   content: "Evening Events";
 }
-/* line 339, sass/modules/_calendars.scss */
-.schedule .schedule-event-time {
+
+/* line 342, sass/modules/_calendars.scss */
+.schedule-event-time {
+  border-bottom: 1px solid #9ca18f;
   padding-right: 1em;
   color: #46502b;
   font-weight: bold;
@@ -5467,7 +5480,7 @@ p.alert {
  *
  * The section that says, “This is Week X”.
  */
-/* line 356, sass/modules/_calendars.scss */
+/* line 359, sass/modules/_calendars.scss */
 .bulletin {
   border-bottom: 1px solid #b6abbe;
   background-color: #edeaef;
@@ -5475,18 +5488,18 @@ p.alert {
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 70em) {
-  /* line 356, sass/modules/_calendars.scss */
+  /* line 359, sass/modules/_calendars.scss */
   .bulletin {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
 }
-/* line 368, sass/modules/_calendars.scss */
+/* line 371, sass/modules/_calendars.scss */
 .bulletin > .wrapper {
   width: calc(100% - 2em);
 }
 
-/* line 373, sass/modules/_calendars.scss */
+/* line 376, sass/modules/_calendars.scss */
 .bulletin .grid {
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -5495,7 +5508,7 @@ p.alert {
           align-items: center;
 }
 
-/* line 377, sass/modules/_calendars.scss */
+/* line 380, sass/modules/_calendars.scss */
 .bulletin-header,
 .bulletin-body {
   width: 100%;
@@ -5503,30 +5516,30 @@ p.alert {
 }
 
 @media screen and (min-width: 20em) {
-  /* line 383, sass/modules/_calendars.scss */
+  /* line 386, sass/modules/_calendars.scss */
   .bulletin-header {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 383, sass/modules/_calendars.scss */
+  /* line 386, sass/modules/_calendars.scss */
   .bulletin-header {
     width: 14.285714285714%;
   }
 }
-/* line 392, sass/modules/_calendars.scss */
+/* line 395, sass/modules/_calendars.scss */
 .bulletin-header h2 {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
   text-align: left;
 }
 @media screen and (min-width: 20em) {
-  /* line 392, sass/modules/_calendars.scss */
+  /* line 395, sass/modules/_calendars.scss */
   .bulletin-header h2 {
     text-align: right;
   }
 }
 
-/* line 404, sass/modules/_calendars.scss */
+/* line 407, sass/modules/_calendars.scss */
 .chrono-meter {
   width: 100%;
   display: -webkit-box;
@@ -5539,7 +5552,7 @@ p.alert {
           justify-content: space-between;
 }
 @media screen and (min-width: 20em) {
-  /* line 404, sass/modules/_calendars.scss */
+  /* line 407, sass/modules/_calendars.scss */
   .chrono-meter {
     margin-right: 1em;
     width: auto;
@@ -5553,7 +5566,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 404, sass/modules/_calendars.scss */
+  /* line 407, sass/modules/_calendars.scss */
   .chrono-meter {
     margin-right: 0;
     width: 100%;
@@ -5569,7 +5582,7 @@ p.alert {
   }
 }
 
-/* line 431, sass/modules/_calendars.scss */
+/* line 434, sass/modules/_calendars.scss */
 .chrono-meter > li {
   border: 1px solid #b6abbe;
   height: 7.5px;
@@ -5577,7 +5590,7 @@ p.alert {
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 431, sass/modules/_calendars.scss */
+  /* line 434, sass/modules/_calendars.scss */
   .chrono-meter > li {
     margin-bottom: 2px;
     clear: left;
@@ -5586,31 +5599,31 @@ p.alert {
   }
 }
 
-/* line 449, sass/modules/_calendars.scss */
+/* line 452, sass/modules/_calendars.scss */
 .chrono-stop-current {
   background-color: #dbd5df;
 }
 
-/* line 453, sass/modules/_calendars.scss */
+/* line 456, sass/modules/_calendars.scss */
 .chrono-stop-complete {
   background-color: #b6abbe;
 }
 
 @media screen and (min-width: 20em) {
-  /* line 458, sass/modules/_calendars.scss */
+  /* line 461, sass/modules/_calendars.scss */
   .bulletin-body {
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 458, sass/modules/_calendars.scss */
+  /* line 461, sass/modules/_calendars.scss */
   .bulletin-body {
     width: 85.714285714286%;
   }
 }
 
 @media screen and (min-width: 43em) {
-  /* line 467, sass/modules/_calendars.scss */
+  /* line 470, sass/modules/_calendars.scss */
   .bulletin-calendar {
     display: -webkit-box;
     display: -webkit-flex;
@@ -5620,7 +5633,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 472, sass/modules/_calendars.scss */
+  /* line 475, sass/modules/_calendars.scss */
   .bulletin-calendar > li {
     float: left;
     padding-left: 1em;
@@ -5634,18 +5647,18 @@ p.alert {
  * The list of upcoming events around campus on the Drupal site. Replaces
  * the Google Calendar listing.
  */
-/* line 486, sass/modules/_calendars.scss */
+/* line 489, sass/modules/_calendars.scss */
 .calendar-item {
   padding: 0.535714285714286em 1em 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 486, sass/modules/_calendars.scss */
+  /* line 489, sass/modules/_calendars.scss */
   .calendar-item {
     padding: 0.441176470588235em 1em 0.882352941176471em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 486, sass/modules/_calendars.scss */
+  /* line 489, sass/modules/_calendars.scss */
   .calendar-item {
     padding: 0.51996672212978em 1em 1.03993344425957em;
   }
@@ -5654,19 +5667,19 @@ p.alert {
 /**
  * O. News
  */
-/* line 312, sass/_modules.scss */
+/* line 316, sass/_modules.scss */
 .news {
   border-top: 1px solid #d0cad4;
   overflow: hidden;
 }
 
-/* line 322, sass/_modules.scss */
+/* line 326, sass/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
   width: calc(100% - 2em);
 }
 
-/* line 328, sass/_modules.scss */
+/* line 332, sass/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -5680,7 +5693,7 @@ p.alert {
 /**
  * P. Embeded Content
  */
-/* line 346, sass/_modules.scss */
+/* line 350, sass/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -5688,7 +5701,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 356, sass/_modules.scss */
+/* line 360, sass/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -5710,24 +5723,24 @@ p.alert {
   background-image: url("/_inc/images/texture-1.png");
   content: url("/_inc/images/icons/green/play.png");
 }
-/* line 375, sass/_modules.scss */
+/* line 379, sass/_modules.scss */
 .lazy-load:hover::after {
   opacity: .85;
 }
-/* line 379, sass/_modules.scss */
+/* line 383, sass/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 387, sass/_modules.scss */
+/* line 391, sass/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 395, sass/_modules.scss */
+/* line 399, sass/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -5738,7 +5751,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 407, sass/_modules.scss */
+/* line 411, sass/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -5746,7 +5759,7 @@ p.alert {
   display: block;
 }
 
-/* line 416, sass/_modules.scss */
+/* line 420, sass/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(30, 19, 37, 0.25);
 }

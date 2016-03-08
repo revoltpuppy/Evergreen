@@ -84,11 +84,11 @@
 .accordion,
 .accordion-table{
 	//box model
-	border: 1px solid  mix(white, $blueberry-susan, 75%);
+	border: 1px solid  mix($tint, $blueberry-susan, 75%);
 	//layout
 	overflow: hidden;
 	//backgrounds & borders
-	background-color:  mix(white, $blueberry-susan, 85%);
+	background-color:  mix($tint, $blueberry-susan, 85%);
 	border-radius: 2px;
 }
 .accordion dt a,
@@ -96,7 +96,7 @@
 	padding: 0.631100639515315em 2%;  //15/11.884/2
 }
 .accordion dt{
-	border-top: 1px solid mix(black, $blueberry-susan, 50%);  //Use border-top, cuz dts aren't last-childs
+	border-top: 1px solid mix($shade, $blueberry-susan, 50%);  //Use border-top, cuz dts aren't last-childs
 	margin-top: 0;
 	
 	&:first-child{  //Use first-child cuz dts aren't last-childs
@@ -105,9 +105,9 @@
 	
 	&:hover{
 	  // backgrounds & borders
-	  background-color: mix(white, $blueberry-susan, 90%);
-	  border-color: mix(white, $blueberry-susan, 80%);
-	  border-top-color: mix(black, $blueberry-susan, 33%);
+	  background-color: mix($tint, $blueberry-susan, 90%);
+	  border-color: mix($tint, $blueberry-susan, 80%);
+	  border-top-color: mix($shade, $blueberry-susan, 33%);
 	  // transition
 	  transition: background-color .2s ease-out;
 	}
@@ -342,7 +342,8 @@ ul.flexible{
  * Tag cloud sizing.
  */
 .few{
-  font-size: 0.743rem;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;  // 15/11.125
   
   a{
     font-weight: normal;
@@ -350,6 +351,10 @@ ul.flexible{
 }
 .many{
 	@include base-type-lg;
+	
+	@include breakpoint($groot){
+		@include base-type-xl;
+	}
 }
 
 /**

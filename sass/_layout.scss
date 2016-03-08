@@ -106,31 +106,45 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	position: relative;
 
 	@include breakpoint($lil-groot){
-		font-size: 0.657rem;  // Step -2
-		line-height: 1.427619682; // 15/10.507
-		letter-spacing: 0.05em;
+		font-size: 0.695rem;  // Step -1
+		line-height: 1.34831460674157; // 15/11.125
+		letter-spacing: -0.01em;  // Gives margins a touch more breathing room
 	}
 	
 	@include breakpoint($starlord){
 		@include base-type;
 	}
+	
+	@include breakpoint($gamora){
+		margin-left: 0;
+		width: 100%;
+	}
+}
+
+/**
+ * Typekit overrides
+ */
+.wf-active .top-nav{
+	
+	@include breakpoint($lil-groot){
+		@include base-type;
+	}
+	
+	@include breakpoint($rocket){
+		letter-spacing: 0.05em; // Gives letters a touch more breathing room
+	}
 }
 
 .top-nav,
-.wf-actuve .top-nav{  // Typekit loaded
+.wf-active .top-nav{  // Typekit loaded
 
 	@include breakpoint($gamora){
-		// box model
-		margin-left: 0;
-		width: 100%;
-		// typography
 		@include base-type-lg;
 		letter-spacing: normal;
 	}
 	
 	@include breakpoint($drax){
-		font-size: 1.202rem;  // 19.232px  Step 2
-	  line-height: 1.55990016638935;  // 30/19.232
+		@include base-type-xl;
 	}
 	
 	@include breakpoint($groot){
@@ -138,25 +152,6 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
     line-height: 1.090750436300175; // 30/27.504
 	}
 }
-
-	/**
-	 * Typekit overrides
-	 */
-	.wf-active .top-nav{
-		
-		@include breakpoint($lil-groot){
-			font-size: 0.743rem;  // Step -1
-			line-height: 1.26220127903063;  // 15/11.884
-		}
-		
-		@include breakpoint($rocket){
-			@include base-type;
-		}
-		
-		@include breakpoint($gamora){
-			@include base-type-lg;
-		}
-	}
 
 /**
  * D. Content Layout

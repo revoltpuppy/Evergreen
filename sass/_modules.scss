@@ -24,13 +24,17 @@
  * Q. CMS
  */
 
+
+// I am not sure if these serve a purpose anymore. I have no memory of this place.
+// Try to delete them in the future and see if anything complains.
 .top-links,
 .search-list,
 .primary-nav-unit h2,
 .nav li{
-	font-size: .743rem;
-	line-height: 1.262201279030629; // 15/11.884
+	font-size: 0.695rem;
+	line-height: 1.34831460674157; // 15/11.125
 }
+
 /**
  * A. Header
  */
