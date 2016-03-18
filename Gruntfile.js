@@ -69,7 +69,7 @@ module.exports = function(grunt) {
 		/**
 		 * CSS post-processors
 		 *
-		 * autoprefixer-core adds support for older browsers by adding vendor
+		 * autoprefixer adds support for older browsers by adding vendor
 		 * prefixes to Sass properties, based on data from caniuse.com.
 		 */
 		postcss: {
