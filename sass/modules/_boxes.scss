@@ -22,6 +22,8 @@
 .box,
 p.box{  // WYSIWYG
 	// box model
+	margin-top: 2.14285714285714em;  // 30/14
+	margin-bottom: 3.21428571428571em;  // 45/14
 	padding: 0 1em;
 	// layout
 	overflow: hidden;
@@ -31,6 +33,11 @@ p.box{  // WYSIWYG
 	background-color: transparentize(mix(white, $sky-blue, 80%), .05);
 	background-image: url("images/texture-1.png");
 	border-radius: 2px;
+	
+	@include breakpoint($gamora){
+		margin-top: 2.5em;  // 45/18
+		margin-bottom: 3.33333333333333em;  // 60/18
+	}
 }
 
 .notice h2,  // deprecated
@@ -56,8 +63,17 @@ p.box{  // WYSIWYG
 	}
 	
 	@include breakpoint($gamora){
+		// box model
+		margin-top: 0.41666666666667em;  // Margins should match margin-default-lg
+		margin-bottom: 0.83333333333333em;
+		// backgrounds & borders
 		border-top-right-radius: 2px;
 		border-bottom-right-radius: 2px;
+	}
+	
+	@include breakpoint($groot){
+		margin-top: 0.52004784440168em;  // Margins should match margin-default-xl
+		margin-bottom: 1.04009568880337em;
 	}
 }
 
@@ -92,8 +108,10 @@ p.alert{
 }
 #sitewide-alert{
 	// box model
-	border-radius: 0;
+	margin: 0;
 	width: 100%;
+	// backgrounds and borders
+	border-radius: 0;
 	// animations and transitions
 	transition: all .5s ease-in;
 }

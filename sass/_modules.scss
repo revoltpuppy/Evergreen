@@ -112,23 +112,24 @@
 @import "modules/homepage-hero";
     
 .profile-list > li{
-	// box model
-	//@include margin-default;
 	// layout
 	overflow: hidden;
 	// position
   position: relative;
-  
-  @include breakpoint($gamora){
-    //@include margin-default-lg;
-  }
-  
-  .profile-img-link{
-	  // layout
-	  display: block;
-	  overflow: hidden;
-  }
 }
+
+.profile-list .profile-img-link{
+  // layout
+  display: block;
+  overflow: hidden;
+}
+
+.profile-list .box{
+	// box model
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .profile-img{
 	// box model
 	margin-left: -50%;
