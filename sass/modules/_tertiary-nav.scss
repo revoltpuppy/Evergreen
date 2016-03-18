@@ -50,7 +50,7 @@
 	@include breakpoint($gamora){
 		// box model
 		margin-top: calc(30 / 16 * 1rem);
-		width: calc(100% + 2em);
+		width: calc(100% + 1em);
 		max-width: none;
 		// position
 		position: relative;
