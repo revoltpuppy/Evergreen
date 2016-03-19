@@ -105,11 +105,20 @@ caption{  // styled after h4
 	}
 }
 
+tr.even,  // Drupal theme overrides
+tr.odd{
+	// box model
+	border-bottom-width: 0;
+	padding: 0;
+	background-color: transparent;
+}
+
 th,
 td{
 	text-align: left;
 }
 th{
+	border-bottom-width: 0;  // Drupal theme override
 	color: #000;
 	padding: 0 1.111111111111111em 0 0;
 	vertical-align: bottom;
