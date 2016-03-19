@@ -1046,7 +1046,7 @@ textarea {
 
 /* line 16, sass/modules/_search.scss */
 .search-button,
-#edit-submit {
+#search-block-form #edit-submit {
   border-color: #aea3b6;
   border-width: 1px 1px 1px 0;
   height: 1.875rem;
@@ -1066,7 +1066,7 @@ textarea {
 }
 /* line 38, sass/modules/_search.scss */
 .search-button:hover,
-#edit-submit:hover {
+#search-block-form #edit-submit:hover {
   background: none #ccc;
 }
 
