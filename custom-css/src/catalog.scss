@@ -412,7 +412,7 @@
  * Styles for the detail pages for each of the individual programs.
  */
 
-.program-faculty{
+.program-faculty{  // Deprecated; use .mini-bio-photo instead.
 	//box model
 	border: 1px solid mix(black, $sky-blue, 60%);
 	height: 3rem;

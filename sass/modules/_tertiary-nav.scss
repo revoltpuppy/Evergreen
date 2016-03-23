@@ -37,6 +37,8 @@
 	padding-right: 0;
 	width: 100%;
 	max-width: none;
+	// layout
+	z-index: 1;  // Fixes an issue where the nav goes under the content in #index-wrapper.
 	// typography
 	@include base-type;
 	
@@ -48,7 +50,7 @@
 	@include breakpoint($gamora){
 		// box model
 		margin-top: calc(30 / 16 * 1rem);
-		width: calc(100% + 2em);
+		width: calc(100% + 1em);
 		max-width: none;
 		// position
 		position: relative;

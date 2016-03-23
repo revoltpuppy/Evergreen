@@ -69,7 +69,7 @@ module.exports = function(grunt) {
 		/**
 		 * CSS post-processors
 		 *
-		 * autoprefixer-core adds support for older browsers by adding vendor
+		 * autoprefixer adds support for older browsers by adding vendor
 		 * prefixes to Sass properties, based on data from caniuse.com.
 		 */
 		postcss: {
@@ -207,7 +207,7 @@ module.exports = function(grunt) {
 			},
 			css: {  // Autoprefix, then process Sass into CSS.
 				files: ['styles.scss', 'print.scss', 'sass/**/*.scss', 'custom-css/src/*.scss'],
-				tasks: ['sass', 'postcss']
+				tasks: ['sass', 'postcss', 'copy:to_drupal']
 			},
 			js: {  // Uglify JavaScript.
 				files: ['scripts.js'],
@@ -230,6 +230,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s) (in the order you want to run them).
-	grunt.registerTask('default', ['newer:sass', 'newer:postcss', 'newer:uglify', 'copy']);
+	grunt.registerTask('default', ['sass', 'postcss', 'newer:uglify', 'copy']);
 
 };

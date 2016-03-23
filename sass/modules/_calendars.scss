@@ -266,7 +266,11 @@
  * 3. Schedule of Events
  */
 .schedule{
+	// box model
+	border: 1px solid mix($tint, $blueberry-susan, 75%);
 	@include margin-default;
+	// backgrounds and borders
+	border-radius: 2px;
 	
 	.h-event{
 		// box model
@@ -282,70 +286,69 @@
 			background-color: mix(white, $blueberry-susan, 85%);
 		}
 	}
+}
 	
-	.schedule-event-required{
-		border: 2px solid $evergreen-neue;
-		
-		+ .schedule-event-required{
-			margin-top: 2px;
-		}
-		
-		&:nth-of-type(odd){
-			background-color: mix(white, $evergreen-neue, 90%);
-		}
-		
-		&:nth-of-type(even){
-			background-color: mix(white, $evergreen-neue, 80%);
-		}
-		
-		.p-name{
-			color: $evergreen-old-style;
-		}
+.schedule-event-required{
+	border: 2px solid $evergreen-neue;
+	
+	+ .schedule-event-required{
+		margin-top: 2px;
 	}
 	
-	.schedule-event-morning{
-		background-color: $morning-light;
+	&:nth-of-type(odd){
+		background-color: mix(white, $evergreen-neue, 90%);
 	}
 	
-	.schedule-event-evening{
-	
-		&:nth-of-type(odd){
-			background-color: mix(white, $sky-blue, 90%);
-		}
-		
-		&:nth-of-type(even){
-			background-color: mix(white, $sky-blue, 80%);
-		}
-		
-		.p-name{
-			color: mix(black, $sky-blue, 60%);
-		}
+	&:nth-of-type(even){
+		background-color: mix(white, $evergreen-neue, 80%);
 	}
 	
-	.schedule-event-evening-start::before{
-		// box model
-		border-bottom: 1px solid $sky-blue;
-		width: 100%;
-		// layout
-		display: block;
-		// typography
-		text-align: center;
-		// misc
-		content: "Evening Events";
-	}
-	
-	
-	
-	.schedule-event-time{
-		// box model
-		padding-right: 1em;
-		// typography
+	.p-name{
 		color: $evergreen-old-style;
-		font-weight: bold;
+	}
+}
+	
+.schedule-event-morning{
+	background-color: $morning-light;
+}
+
+.schedule-event-evening{
+
+	&:nth-of-type(odd){
+		background-color: mix(white, $sky-blue, 90%);
 	}
 	
-	.schedule-event-details{
+	&:nth-of-type(even){
+		background-color: mix(white, $sky-blue, 80%);
 	}
+	
+	.p-name{
+		color: mix(black, $sky-blue, 60%);
+	}
+}
+	
+.schedule-event-evening-start::before{
+	// box model
+	border-bottom: 1px solid $sky-blue;
+	width: 100%;
+	// layout
+	display: block;
+	// typography
+	text-align: center;
+	// misc
+	content: "Evening Events";
+}
+	
+.schedule-event-time{
+	// box model
+	border-bottom: 1px solid mix($tint, $evergreen-old-style, 50%);
+	padding-right: 1em;
+	// typography
+	color: $evergreen-old-style;
+	font-weight: bold;
+}
+	
+.schedule-event-details{
 }
 
 /**

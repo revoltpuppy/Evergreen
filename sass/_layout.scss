@@ -68,7 +68,8 @@
  */
 
 [role="banner"],
-body > div + header{  // This is hacky. Fix it.
+body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete after next whole-site publish.
+.header-nav-wrapper{
 	// layout
 	display: flex;
 	flex-wrap: wrap;
@@ -105,31 +106,45 @@ body > div + header{  // This is hacky. Fix it.
 	position: relative;
 
 	@include breakpoint($lil-groot){
-		font-size: 0.657rem;  // Step -2
-		line-height: 1.427619682; // 15/10.507
-		letter-spacing: 0.05em;
+		font-size: 0.695rem;  // Step -1
+		line-height: 1.34831460674157; // 15/11.125
+		letter-spacing: -0.01em;  // Gives margins a touch more breathing room
 	}
 	
 	@include breakpoint($starlord){
 		@include base-type;
 	}
+	
+	@include breakpoint($gamora){
+		margin-left: 0;
+		width: 100%;
+	}
+}
+
+/**
+ * Typekit overrides
+ */
+.wf-active .top-nav{
+	
+	@include breakpoint($lil-groot){
+		@include base-type;
+	}
+	
+	@include breakpoint($rocket){
+		letter-spacing: 0.05em; // Gives letters a touch more breathing room
+	}
 }
 
 .top-nav,
-.wf-actuve .top-nav{  // Typekit loaded
+.wf-active .top-nav{  // Typekit loaded
 
 	@include breakpoint($gamora){
-		// box model
-		margin-left: 0;
-		width: 100%;
-		// typography
 		@include base-type-lg;
 		letter-spacing: normal;
 	}
 	
 	@include breakpoint($drax){
-		font-size: 1.202rem;  // 19.232px  Step 2
-	  line-height: 1.55990016638935;  // 30/19.232
+		@include base-type-xl;
 	}
 	
 	@include breakpoint($groot){
@@ -137,25 +152,6 @@ body > div + header{  // This is hacky. Fix it.
     line-height: 1.090750436300175; // 30/27.504
 	}
 }
-
-	/**
-	 * Typekit overrides
-	 */
-	.wf-active .top-nav{
-		
-		@include breakpoint($lil-groot){
-			font-size: 0.743rem;  // Step -1
-			line-height: 1.26220127903063;  // 15/11.884
-		}
-		
-		@include breakpoint($rocket){
-			@include base-type;
-		}
-		
-		@include breakpoint($gamora){
-			@include base-type-lg;
-		}
-	}
 
 /**
  * D. Content Layout
@@ -165,8 +161,6 @@ body > div + header{  // This is hacky. Fix it.
 	// box model
 	margin-bottom: 1.875rem;  // 30px
 	width: 100%;
-	// position
-	//position: relative;  // This causes the background-image to judder in IE/Edge
 
 	@media screen and (min-height: 35em){
 		margin-bottom: 3.75rem;  // 60px
@@ -215,10 +209,10 @@ body > div + header{  // This is hacky. Fix it.
 	border-bottom: 2px dashed $evergreen-neue;
 		
 	
-	@include breakpoint($gamora){
+	/*@include breakpoint($gamora){
 		// box model
 		padding-left: 1em;
-	}
+	}*/
 	
 	@include breakpoint($drax){
 		border-bottom: 0;

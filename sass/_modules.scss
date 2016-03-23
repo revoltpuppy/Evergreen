@@ -20,17 +20,22 @@
  * M. Images
  * N. Calendars
  * O. News
- * P. Embedded Content
- * Q. CMS
+ * P. Profiles
+ * Q. Embedded Content
+ * R. CMS
  */
 
+
+// I am not sure if these serve a purpose anymore. I have no memory of this place.
+// Try to delete them in the future and see if anything complains.
 .top-links,
 .search-list,
 .primary-nav-unit h2,
 .nav li{
-	font-size: .743rem;
-	line-height: 1.262201279030629; // 15/11.884
+	font-size: 0.695rem;
+	line-height: 1.34831460674157; // 15/11.125
 }
+
 /**
  * A. Header
  */
@@ -108,23 +113,24 @@
 @import "modules/homepage-hero";
     
 .profile-list > li{
-	// box model
-	//@include margin-default;
 	// layout
 	overflow: hidden;
 	// position
   position: relative;
-  
-  @include breakpoint($gamora){
-    //@include margin-default-lg;
-  }
-  
-  .profile-img-link{
-	  // layout
-	  display: block;
-	  overflow: hidden;
-  }
 }
+
+.profile-list .profile-img-link{
+  // layout
+  display: block;
+  overflow: hidden;
+}
+
+.profile-list .box{
+	// box model
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .profile-img{
 	// box model
 	margin-left: -50%;
@@ -341,7 +347,36 @@
 }
 
 /**
- * P. Embeded Content
+ * P. Profiles
+ */
+.profile .portrait-1-1{  // portrait with 1:1 ratio.
+	border-radius: 50%;
+	// shape
+	shape-margin: 1em;
+	shape-outside: circle() border-box;
+}
+.profession{
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	
+	@include breakpoint($starlord){
+		@include base-type;
+		font-weight: bold;
+	}
+}
+ 
+.mini-bio-photo,  // deprecated, use .mini-profile-photo instead.
+.mini-profile-photo{  // Deprecates .program-faculty in catalog.css; use this instead.
+	// box model
+	border: 1px solid mix(black, $sky-blue, 60%);
+	height: 3rem;
+	// backgrounds & borders;
+	border-radius: 50%;
+}
+
+
+/**
+ * Q. Embeded Content
  */
 .lazy-load{
   // box model
@@ -398,7 +433,7 @@
 }
 
 /**
- * Q. CMS
+ * R. CMS
  *
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.

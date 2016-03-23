@@ -107,11 +107,6 @@
 		bottom: 0;
 		// backgrounds & borders
 		background-color: transparent;
-		
-		.box{
-			position: absolute;
-			bottom: 0;
-		}
 	}
 	
 	@media screen and (min-width: 25em){
@@ -120,6 +115,15 @@
 	
 	@include breakpoint($gamora){
 		height: 100%;
+	}
+}
+
+.homepage-hero-content .box{
+	margin: 0;
+
+	@include breakpoint($lil-groot){
+		position: absolute;
+		bottom: 0;
 	}
 }
 
