@@ -486,7 +486,7 @@
  * The list of upcoming events around campus on the Drupal site. Replaces
  * the Google Calendar listing.
  */
-.calendar-item{
+.calendar-item{  // This might be deprecated now. I'm not sure if this class appears on the page now.
 	
 	padding: 0.535714285714286em 1em 1.071428571428571em;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
 	
@@ -498,3 +498,299 @@
 		padding: 0.51996672212978em 1em 1.03993344425957em;  //10/19.232 20/19.232  So, 30 + 10 + 20 = 60
 	}
 }
+
+.calendar-calendar td a:hover{
+	text-decoration: none;
+}
+
+.calendar-calendar td.empty{
+	color: inherit;
+}
+
+.calendar-calendar .month-view .full td.single-day .calendar-empty,
+.calendar-calendar .month-view .full td.single-day.empty,
+.calendar-calendar .month-view .full td.date-box.empty{
+	background: transparent none;
+}
+
+.calendar-calendar .month-view .full .inner .monthview,
+.calendar-calendar .week-view .full .inner .weekview,
+.calendar-calendar .day-view .full .inner .dayview{
+	border-radius: 2px;
+}
+
+.calendar-calendar .month-view .full td.single-day div.monthview,
+.calendar-calendar .week-view .full td.single-day div.weekview,
+.calendar-calendar .day-view .full td.single-day div.dayview{
+	padding: 0;
+}
+
+.calendar-calendar .month-view .full .inner,
+.calendar-calendar .week-view .full .multi-day .inner{
+	//margin-right: 0.5em;
+}
+
+	/**
+	 * Calendar Heading
+	 */
+	.view .date-nav-wrapper .date-nav{
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	
+	.item-list ul{
+		margin: inherit;
+	}
+	
+	.item-list ul li{
+		// box model
+		margin-left: 0;
+	}
+	
+	.view .date-nav-wrapper .date-heading h3,
+	.date-nav div.date-heading h3,
+	.date-nav-wrapper .date-heading h3{	
+		// box model
+		margin-top: 1.66666666666667em;  // 30/18
+		margin-bottom: 0.46875rem; // 7.5px  // Bottom margin should match the p's top margin exactly, for consistency. If they don't match, change this rule.
+		// typography
+		@include base-type-lg;
+		  
+		@include breakpoint($gamora){
+			// box model
+			margin-top: 1.10603155876714em;  // 30/27.124
+			// typography
+			font-size: 1.69525rem;  // 27.124px - otherwise appears optically taller than h2; Step 3 - 2px
+			line-height: 1.10603155876714;  // 30/27.124
+		}
+	    
+		@include breakpoint($groot){
+			// box model
+			margin-top: 1.54575432811212em;  // 45/29.112
+			margin-bottom: 0.625rem;  // 10px  // Bottom margin should match the p's top margin exactly, for consistency. If they don't match, change this rule.
+			// typography
+			font-size: 1.8195rem;  // 29.112px - otherwise appears optically taller than h2; Step 4 - 3px
+			line-height: 1.03050288540808;  // 30/29.112
+		}
+	}
+	
+	.view .date-nav-wrapper .date-prev{
+		// position
+		right: auto;
+		left: 0;
+	}
+	
+	.view .date-nav-wrapper .date-prev,
+	.view .date-nav-wrapper .date-next{
+		// position
+		position: static;
+		// typography
+		font-size: inherit;
+		
+		@include breakpoint($starlord){
+			position: absolute;
+		}
+	}
+	
+	.view .date-nav-wrapper .date-prev{
+		float: left;
+	}
+	
+	.view .date-nav-wrapper .date-next{
+		float: right;
+	}
+	
+	.view .date-nav-wrapper .date-prev a,
+	.view .date-nav-wrapper .date-next a{
+		margin: 0 0.25em;
+	}
+	
+	/**
+	 * Calendar List View
+	 */
+	.calendar-calendar{
+		background-clip: transparent;
+	}
+	
+	.calendar-calendar th{
+		text-align: inherit;
+	}
+	
+	.calendar-calendar tr{
+		background-color: transparent;
+	}
+	
+	.calendar-calendar td{
+		color: inherit;
+	}
+	
+	.calendar-calendar td .inner div,
+	.calendar-calendar td .inner div a{
+		background-color: transparent;
+	}
+	
+	.calendar-calendar div.calendar{
+		// box model
+		border-right-width: 0;
+		//typography
+		font-size: inherit;
+		// backgrounds and borders
+		background-color: transparent;
+	}
+	
+	.calendar-calendar td.calendar-agenda-hour,
+	.calendar-calendar .week-view .full td,
+	.calendar-calendar .day-view td,
+	.calendar-calendar .week-view .full .calendar-agenda-hour,
+	.calendar-calendar .day-view .full .calendar-agenda-hour,
+	.calendar-calendar td.calendar-agenda-items div.calendar{
+		border-bottom-width: 1px;
+		border-right-width: 0;
+		border-left-width: 0;
+		padding: 0;
+	}
+	
+	.calendar-calendar .month-view .full td{
+		padding: 0;
+	}
+	
+	.calendar-calendar .day-view .calendar-agenda-items{
+		padding-left: 1em;
+	}
+	
+	.calendar-calendar .month-view .full .inner .monthview,
+	.calendar-calendar .week-view .full .inner .weekview,
+	.calendar-calendar .day-view .full .inner .dayview{
+		margin: 0;
+	}
+	
+	.calendar-calendar .month-view .full td.multi-day div.monthview,
+	.calendar-calendar .week-view .full td.multi-day div.weekview,
+	.calendar-calendar .day-view .full td.multi-day div.dayview,
+	.calendar-calendar .month-view .full td.single-day div.monthview,
+	.calendar-calendar .week-view .full td.single-day div.weekview,
+	.calendar-calendar .day-view .full td.single-day div.dayview,
+	.calendar-calendar .day-view .full td.single-day{
+		// box model
+		height: inherit;
+		margin-bottom: inherit;
+		//padding: 0;
+		// typography
+		color: inherit;
+		// backgrounds and borders
+		background: transparent none;
+		background-color: transparent;
+	}
+	
+		/**
+		 * Time Column
+		 */
+		
+		.calendar-calendar .day-view .full .calendar-agenda-hour{
+			padding-top: 0.535714285714286em;  // Should match margin-default
+			padding-bottom: 1.071428571428571em;  // Should match margin-default
+		}
+		
+		.calendar-calendar td.calendar-agenda-hour .calendar-hour,
+		.calendar-calendar td.calendar-agenda-hour .calendar-ampm{
+			// box model
+			//@include margin-default;
+			display: inline-block;
+			// typography
+			font-size: inherit;
+			font-weight: inherit;
+		}
+		
+		.calendar-hour{
+			
+			&::after{
+				content: "\a0";  // Non-breaking space
+			}
+		}
+	
+		/**
+		 * Items Column
+		 */
+		
+		.calendar-calendar .day-view .full td .inner div.calendar div,
+		.calendar-calendar .day-view .full td .inner div.calendar div a{
+			margin: 0;
+		}
+		
+		.calendar-calendar .day-view .full td .inner div.calendar div a{
+			padding: 0;
+		}
+		
+		.calendar-calendar .inner .item{
+			@include margin-default;
+			/*margin-right: 1em;
+			margin-left: 1em;*/
+		}
+	
+	/**
+	 * Calendar Month View
+	 */
+	.calendar-calendar .month-view .full td .inner div.day,
+	.calendar-calendar .month-view .full td .inner div.day a{
+		width: auto;
+	}
+	
+	.calendar-calendar .month-view .full tr td.today,
+	.calendar-calendar .month-view .full tr.odd td.today,
+	.calendar-calendar .month-view .full tr.even td.today,
+	.calendar-calendar .month-view .full td.date-box.today{
+		border-color: $evergreen-old-style;
+	}
+	
+	.calendar-calendar .month-view .full tr.date-box,
+	.calendar-calendar .month-view .full tr.date-box td,
+	.calendar-calendar .month-view .full tr.multi-day,
+	.calendar-calendar .month-view .full tr.multi-day td{
+		height: inherit;
+		max-height: none;
+	}
+	
+	.calendar-calendar .month-view .full td.multi-day .inner .item{
+		// box model
+		//margin-right: 0.25em;
+		padding: 0 0.25em;
+		// backgrounds & borders
+		background-color: $morning-light;
+	}
+	
+	/**
+	 * Single-day
+	 */
+	
+	.calendar-calendar .month-view .full td.single-day div.monthview,
+	.calendar-calendar .week-view .full td.single-day div.weekview{
+		padding: 0 0.25em;
+	}
+	
+	/**
+	 * Multi-day
+	 */
+	.calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
+	.calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents{
+		width: auto;
+		position: static;
+	}
+	
+	.calendar-calendar .month-view .full td.multi-day .inner .monthview .continuation,
+	.calendar-calendar .week-view .full td.multi-day .inner .weekview .continuation{
+		height: auto;
+		margin: 0 0.25em;
+	}
+	
+	.calendar-calendar .month-view .full td.multi-day .inner .monthview .continues,
+	.calendar-calendar .week-view .full td.multi-day .inner .weekview .continues{
+		// box model
+		height: inherit;
+		padding: 0 0.25em;
+		// position
+		right: 0;
+		bottom: 0;
+		//z-index: 0;
+		// backgrounds & borders
+		background: inherit;
+	}

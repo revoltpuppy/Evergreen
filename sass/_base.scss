@@ -146,9 +146,10 @@ tfoot td{
 	color: #000;
 	font-weight: bold;
 }
-tr:first-child td{
+
+/*tr:first-child td{
 	border-color: #000;
-}
+}*/
 
 // Collapse top space between cell padding and element margins.
 th > :first-child,

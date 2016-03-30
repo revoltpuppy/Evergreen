@@ -883,12 +883,10 @@ tfoot td {
   font-weight: bold;
 }
 
-/* line 149, sass/_base.scss */
-tr:first-child td {
-  border-color: #000;
-}
-
-/* line 154, sass/_base.scss */
+/*tr:first-child td{
+	border-color: #000;
+}*/
+/* line 155, sass/_base.scss */
 th > :first-child,
 td > :first-child,
 td > ul:first-child li:first-child > p:first-child,
@@ -896,7 +894,7 @@ td > ol:first-child li:first-child > p:first-child {
   margin-top: 0;
 }
 
-/* line 161, sass/_base.scss */
+/* line 162, sass/_base.scss */
 th > :last-child,
 td > :last-child,
 td > ul:last-child li:last-child > p:last-child,
@@ -974,7 +972,7 @@ table a {
 /**
  * C. Forms
  */
-/* line 173, sass/_base.scss */
+/* line 174, sass/_base.scss */
 input,
 select,
 textarea {
@@ -984,14 +982,14 @@ textarea {
   line-height: 1.42857142857143;
   border-radius: 2px;
 }
-/* line 184, sass/_base.scss */
+/* line 185, sass/_base.scss */
 input:focus,
 select:focus,
 textarea:focus {
   box-shadow: 0 0 2px 1px rgba(30, 19, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
-  /* line 173, sass/_base.scss */
+  /* line 174, sass/_base.scss */
   input,
   select,
   textarea {
@@ -1000,7 +998,7 @@ textarea:focus {
   }
 }
 
-/* line 194, sass/_base.scss */
+/* line 195, sass/_base.scss */
 input {
   height: 1.875rem;
   margin-bottom: 1.262201279030629em;
@@ -1008,7 +1006,7 @@ input {
   font-size: 1em;
 }
 
-/* line 203, sass/_base.scss */
+/* line 204, sass/_base.scss */
 select {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
   padding: 0.30357142857143em .5em;
@@ -1016,19 +1014,19 @@ select {
   box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset;
   cursor: pointer;
 }
-/* line 213, sass/_base.scss */
+/* line 214, sass/_base.scss */
 select:hover {
   border-bottom-style: dashed;
   background-color: #e1dee3;
 }
 
-/* line 221, sass/_base.scss */
+/* line 222, sass/_base.scss */
 textarea {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
   padding: 0.5em 0.75em;
 }
 @media screen and (min-width: 43em) {
-  /* line 221, sass/_base.scss */
+  /* line 222, sass/_base.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em 0;
   }
@@ -1044,8 +1042,9 @@ textarea {
  */
 /* line 7, sass/modules/_search.scss */
 [type="search"],
-#search-block-form {
-  margin: 0 -1.875rem 0 0;
+#search-block-form,
+#edit-search-block-form--2 {
+  margin: 0 -100% 0 0;
   position: relative;
   width: 100%;
   -webkit-appearance: none;
@@ -1053,15 +1052,26 @@ textarea {
           appearance: none;
 }
 
-/* line 16, sass/modules/_search.scss */
+/* line 17, sass/modules/_search.scss */
+#edit-search-block-form--2 {
+  width: 100%;
+}
+
+/* line 22, sass/modules/_search.scss */
+#search-block-form,
+#edit-submit {
+  width: auto;
+}
+
+/* line 28, sass/modules/_search.scss */
 .search-button,
 #search-block-form #edit-submit {
   border-color: #aea3b6;
   border-width: 1px 1px 1px 0;
   height: 1.875rem;
   margin-bottom: 0;
+  margin-right: 0;
   padding: 2px;
-  width: 1.875rem;
   float: right;
   vertical-align: top;
   position: relative;
@@ -1073,13 +1083,13 @@ textarea {
           appearance: none;
   box-shadow: none;
 }
-/* line 38, sass/modules/_search.scss */
+/* line 51, sass/modules/_search.scss */
 .search-button:hover,
 #search-block-form #edit-submit:hover {
   background: none #ccc;
 }
 
-/* line 43, sass/modules/_search.scss */
+/* line 56, sass/modules/_search.scss */
 .search-button > img {
   max-height: 100%;
 }
@@ -1249,7 +1259,7 @@ a:link,
 .big-fact{
 	hyphens: none;
 }*/
-/* line 253, sass/_base.scss */
+/* line 254, sass/_base.scss */
 .looong-word {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -2234,7 +2244,7 @@ input:checked + .header-dropdown {
 
 /* line 79, sass/modules/_header.scss */
 .header-dropdown .search,
-#search-block-form {
+.header-dropdown #search-block-form {
   margin: 0;
   padding: 0.9375rem 1em;
   overflow: hidden;
@@ -2243,7 +2253,7 @@ input:checked + .header-dropdown {
 @media screen and (min-width: 43em) {
   /* line 79, sass/modules/_header.scss */
   .header-dropdown .search,
-  #search-block-form {
+  .header-dropdown #search-block-form {
     padding: 0.9375rem 1em 0.9375rem 0;
     float: right;
     background-color: transparent;
@@ -5708,6 +5718,315 @@ p.alert {
   .calendar-item {
     padding: 0.51996672212978em 1em 1.03993344425957em;
   }
+}
+
+/* line 502, sass/modules/_calendars.scss */
+.calendar-calendar td a:hover {
+  text-decoration: none;
+}
+
+/* line 506, sass/modules/_calendars.scss */
+.calendar-calendar td.empty {
+  color: inherit;
+}
+
+/* line 510, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full td.single-day .calendar-empty,
+.calendar-calendar .month-view .full td.single-day.empty,
+.calendar-calendar .month-view .full td.date-box.empty {
+  background: transparent none;
+}
+
+/* line 516, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full .inner .monthview,
+.calendar-calendar .week-view .full .inner .weekview,
+.calendar-calendar .day-view .full .inner .dayview {
+  border-radius: 2px;
+}
+
+/* line 522, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full td.single-day div.monthview,
+.calendar-calendar .week-view .full td.single-day div.weekview,
+.calendar-calendar .day-view .full td.single-day div.dayview {
+  padding: 0;
+}
+
+/**
+ * Calendar Heading
+ */
+/* line 536, sass/modules/_calendars.scss */
+.view .date-nav-wrapper .date-nav {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* line 541, sass/modules/_calendars.scss */
+.item-list ul {
+  margin: inherit;
+}
+
+/* line 545, sass/modules/_calendars.scss */
+.item-list ul li {
+  margin-left: 0;
+}
+
+/* line 550, sass/modules/_calendars.scss */
+.view .date-nav-wrapper .date-heading h3,
+.date-nav div.date-heading h3,
+.date-nav-wrapper .date-heading h3 {
+  margin-top: 1.66666666666667em;
+  margin-bottom: 0.46875rem;
+  font-size: 1.125rem;
+  line-height: 1.38888888888889;
+}
+@media screen and (min-width: 43em) {
+  /* line 550, sass/modules/_calendars.scss */
+  .view .date-nav-wrapper .date-heading h3,
+  .date-nav div.date-heading h3,
+  .date-nav-wrapper .date-heading h3 {
+    margin-top: 1.10603155876714em;
+    font-size: 1.69525rem;
+    line-height: 1.10603155876714;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 550, sass/modules/_calendars.scss */
+  .view .date-nav-wrapper .date-heading h3,
+  .date-nav div.date-heading h3,
+  .date-nav-wrapper .date-heading h3 {
+    margin-top: 1.54575432811212em;
+    margin-bottom: 0.625rem;
+    font-size: 1.8195rem;
+    line-height: 1.03050288540808;
+  }
+}
+
+/* line 577, sass/modules/_calendars.scss */
+.view .date-nav-wrapper .date-prev {
+  right: auto;
+  left: 0;
+}
+
+/* line 583, sass/modules/_calendars.scss */
+.view .date-nav-wrapper .date-prev,
+.view .date-nav-wrapper .date-next {
+  position: static;
+  font-size: inherit;
+}
+@media screen and (min-width: 32em) {
+  /* line 583, sass/modules/_calendars.scss */
+  .view .date-nav-wrapper .date-prev,
+  .view .date-nav-wrapper .date-next {
+    position: absolute;
+  }
+}
+
+/* line 595, sass/modules/_calendars.scss */
+.view .date-nav-wrapper .date-prev {
+  float: left;
+}
+
+/* line 599, sass/modules/_calendars.scss */
+.view .date-nav-wrapper .date-next {
+  float: right;
+}
+
+/* line 603, sass/modules/_calendars.scss */
+.view .date-nav-wrapper .date-prev a,
+.view .date-nav-wrapper .date-next a {
+  margin: 0 0.25em;
+}
+
+/**
+ * Calendar List View
+ */
+/* line 611, sass/modules/_calendars.scss */
+.calendar-calendar {
+  background-clip: transparent;
+}
+
+/* line 615, sass/modules/_calendars.scss */
+.calendar-calendar th {
+  text-align: inherit;
+}
+
+/* line 619, sass/modules/_calendars.scss */
+.calendar-calendar tr {
+  background-color: transparent;
+}
+
+/* line 623, sass/modules/_calendars.scss */
+.calendar-calendar td {
+  color: inherit;
+}
+
+/* line 627, sass/modules/_calendars.scss */
+.calendar-calendar td .inner div,
+.calendar-calendar td .inner div a {
+  background-color: transparent;
+}
+
+/* line 632, sass/modules/_calendars.scss */
+.calendar-calendar div.calendar {
+  border-right-width: 0;
+  font-size: inherit;
+  background-color: transparent;
+}
+
+/* line 641, sass/modules/_calendars.scss */
+.calendar-calendar td.calendar-agenda-hour,
+.calendar-calendar .week-view .full td,
+.calendar-calendar .day-view td,
+.calendar-calendar .week-view .full .calendar-agenda-hour,
+.calendar-calendar .day-view .full .calendar-agenda-hour,
+.calendar-calendar td.calendar-agenda-items div.calendar {
+  border-bottom-width: 1px;
+  border-right-width: 0;
+  border-left-width: 0;
+  padding: 0;
+}
+
+/* line 653, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full td {
+  padding: 0;
+}
+
+/* line 657, sass/modules/_calendars.scss */
+.calendar-calendar .day-view .calendar-agenda-items {
+  padding-left: 1em;
+}
+
+/* line 661, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full .inner .monthview,
+.calendar-calendar .week-view .full .inner .weekview,
+.calendar-calendar .day-view .full .inner .dayview {
+  margin: 0;
+}
+
+/* line 667, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full td.multi-day div.monthview,
+.calendar-calendar .week-view .full td.multi-day div.weekview,
+.calendar-calendar .day-view .full td.multi-day div.dayview,
+.calendar-calendar .month-view .full td.single-day div.monthview,
+.calendar-calendar .week-view .full td.single-day div.weekview,
+.calendar-calendar .day-view .full td.single-day div.dayview,
+.calendar-calendar .day-view .full td.single-day {
+  height: inherit;
+  margin-bottom: inherit;
+  color: inherit;
+  background: transparent none;
+  background-color: transparent;
+}
+
+/**
+ * Time Column
+ */
+/* line 689, sass/modules/_calendars.scss */
+.calendar-calendar .day-view .full .calendar-agenda-hour {
+  padding-top: 0.535714285714286em;
+  padding-bottom: 1.071428571428571em;
+}
+
+/* line 694, sass/modules/_calendars.scss */
+.calendar-calendar td.calendar-agenda-hour .calendar-hour,
+.calendar-calendar td.calendar-agenda-hour .calendar-ampm {
+  display: inline-block;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* line 706, sass/modules/_calendars.scss */
+.calendar-hour::after {
+  content: "\a0";
+}
+
+/**
+ * Items Column
+ */
+/* line 715, sass/modules/_calendars.scss */
+.calendar-calendar .day-view .full td .inner div.calendar div,
+.calendar-calendar .day-view .full td .inner div.calendar div a {
+  margin: 0;
+}
+
+/* line 720, sass/modules/_calendars.scss */
+.calendar-calendar .day-view .full td .inner div.calendar div a {
+  padding: 0;
+}
+
+/* line 724, sass/modules/_calendars.scss */
+.calendar-calendar .inner .item {
+  margin: 0.535714285714286em 0 1.071428571428571em 0;
+  /*margin-right: 1em;
+  margin-left: 1em;*/
+}
+
+/**
+ * Calendar Month View
+ */
+/* line 733, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full td .inner div.day,
+.calendar-calendar .month-view .full td .inner div.day a {
+  width: auto;
+}
+
+/* line 738, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full tr td.today,
+.calendar-calendar .month-view .full tr.odd td.today,
+.calendar-calendar .month-view .full tr.even td.today,
+.calendar-calendar .month-view .full td.date-box.today {
+  border-color: #46502b;
+}
+
+/* line 745, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full tr.date-box,
+.calendar-calendar .month-view .full tr.date-box td,
+.calendar-calendar .month-view .full tr.multi-day,
+.calendar-calendar .month-view .full tr.multi-day td {
+  height: inherit;
+  max-height: none;
+}
+
+/* line 753, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full td.multi-day .inner .item {
+  padding: 0 0.25em;
+  background-color: #fdf4b6;
+}
+
+/**
+ * Single-day
+ */
+/* line 765, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full td.single-day div.monthview,
+.calendar-calendar .week-view .full td.single-day div.weekview {
+  padding: 0 0.25em;
+}
+
+/**
+ * Multi-day
+ */
+/* line 773, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
+.calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents {
+  width: auto;
+  position: static;
+}
+
+/* line 779, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .continuation,
+.calendar-calendar .week-view .full td.multi-day .inner .weekview .continuation {
+  height: auto;
+  margin: 0 0.25em;
+}
+
+/* line 785, sass/modules/_calendars.scss */
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .continues,
+.calendar-calendar .week-view .full td.multi-day .inner .weekview .continues {
+  height: inherit;
+  padding: 0 0.25em;
+  right: 0;
+  bottom: 0;
+  background: inherit;
 }
 
 /**
