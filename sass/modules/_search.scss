@@ -5,11 +5,23 @@
  */
 
 [type="search"],
-#search-block-form{  // Drupal service center site top search form
-	margin: 0 -1.875rem 0 0;
+#search-block-form,  // Drupal service center site top search form
+#edit-search-block-form--2{  // Drupal service center site top search form input
+	//margin: 0 -1.875rem 0 0;
+	margin: 0 -100% 0 0;
 	position: relative;
 	width: 100%;
 	appearance: none;
+}
+
+#edit-search-block-form--2{
+	//margin-right: -100%;
+	width: 100%;
+}
+
+#search-block-form,
+#edit-submit{
+	width: auto;
 }
 
 //.top-search button,  //deprecated
@@ -20,8 +32,9 @@
 	border-width: 1px 1px 1px 0;
 	height: 1.875rem;
 	margin-bottom: 0;
+	margin-right: 0;
 	padding: 2px;
-	width: 1.875rem;
+	//width: 1.875rem;
 	// layout
 	float: right;
 	vertical-align: top;
