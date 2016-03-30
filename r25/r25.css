@@ -44,8 +44,57 @@ A:hover {
 
 img {
 	border: 0px;
-	/*display: block;*/
 	}
+
+
+/* Hack Styles to hide unnecessary links.
+These should be deleted from the HTML as soon as possible. */
+[title="Make a request for an event"]{
+	display:none;
+}
+
+[title="View your workflow"]{
+	display:none;
+}
+
+[title="View the current hot events"]{
+	display:none;
+}
+
+[title="View events that you have bookmarked"]{
+	display:none;
+}
+
+[title="Show latest news"]{
+	display:none;
+}
+
+/* This changes the title of "Catalog" back to "Index". 
+Once we can change this in the HTML, we can take this out. */ 
+[title="View the catalog of events"]{
+	/* visibility:hidden; */
+	/* requires !important to overwrite default style
+	because the title attribute selector has less specificity than the class 
+	selector targeting the .Subtab class. */
+	color: hsla(206, 100%, 47%, 0) !important;
+
+}
+
+[title="View the catalog of events"]:after{
+	content: "Index";
+	/* visibility: visible; */
+	color: hsla(276, 36%, 27%, 1);
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 24px;
+}
+
+[title="View the catalog of events"]:hover:after{
+	color: hsla(206, 100%, 47%, 1);
+}
+
+
 
 /* ------- Styles for the Main Boxes ------- */
 
@@ -133,27 +182,18 @@ html>body #SelectionBox {
 
 }
 
-/*are these only accessible by people who are logged in?*/
 #ContactName {
 	order: 2;
-/*   position: absolute;*/
-   /*top: 51px; Lined up with subtabs */
-   /*top: 31px; On top of HR */
-/*   top: 73px;*/
 	font-size: 10px;
-/*   float: right;*/
-/*   right: 285px;*/
    color: #F7DF9C;
    background: transparent;
    white-space: nowrap;
    text-align: right;
 }
 
-/*what is this?*/
 #Logout {
    position: absolute;
    top: 10px;
-   /*top: 27px; On top of HR */
    float: right;
    right: 450px;
    color: #F7DF9C;
@@ -169,19 +209,6 @@ html>body #SelectionBox {
 } 
 
 
-	/* A.Supertab:link, A.Supertab:visited {
-   margin: 13px 7px 3px 3px;
-   color: #DDD;
-   background: transparent;
-}
-
-A.Supertab:hover {
-	color: black;
-   margin: 13px 7px 3px 3px;
-	background: #fdf4b6;
-	text-decoration: none;
-} */
-
 A.Tab:link, A.Tab:visited, A.Subtab:link, A.Subtab:visited {
    margin: 13px 7px 3px 3px;
    color: #492c5d;
@@ -196,18 +223,10 @@ A.TabCurrent:link, A.TabCurrent:visited, A.SubtabCurrent:link, A.SubtabCurrent:v
    font-weight: bold;
 }
 
-/*A.Tab:active, A.TabCurrent:active, A.Subtab:active, A.SubtabCurrent:active {
-   margin: 13px 7px 3px 3px;
-   color: #DDD;
-   background: transparent;
-   font-weight: bold;
-}*/
-
 A.Tab:hover, A.TabCurrent:hover, A.Subtab:hover, A.SubtabCurrent:hover {
 	color: #0086ee;
 	margin: 13px 7px 3px 3px;
 	font-weight: bold;
-	/* background: #e0e9d7; */
 	text-decoration: none;
 }
 
@@ -588,12 +607,6 @@ A.CalendarViewDay:link, A.CalendarViewDay:visited {
    color: #fdf4b6;
    background: transparent;
 }	
-
-/*A.CalendarDay:active, A.CalendarExtraDay:active, A.CalendarViewDay:active {
-   text-decoration: none;
-   color: black;
-   background: #CCC;
-}	*/
 
 A.CalendarDay:hover, A.CalendarViewDay:hover, A.CalendarExtraDay:hover {
 	color: black;
