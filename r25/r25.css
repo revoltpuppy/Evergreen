@@ -72,17 +72,25 @@ These should be deleted from the HTML as soon as possible. */
 /* This changes the title of "Catalog" back to "Index". 
 Once we can change this in the HTML, we can take this out. */ 
 [title="View the catalog of events"]{
-	visibility:hidden;
+	/* visibility:hidden; */
+	color: hsla(206, 100%, 47%, 0) !important;
+
 }
+
 [title="View the catalog of events"]:after{
 	content: "Index";
-	visibility: visible;
+	/* visibility: visible; */
+	color: hsla(276, 36%, 27%, 1);
 	display: block;
 	position: absolute;
 	top: 0px;
 	right: 24px;
-	
 }
+
+[title="View the catalog of events"]:hover:after{
+	color: hsla(206, 100%, 47%, 1);
+}
+
 
 
 /* ------- Styles for the Main Boxes ------- */
