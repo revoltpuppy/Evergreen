@@ -73,6 +73,9 @@ These should be deleted from the HTML as soon as possible. */
 Once we can change this in the HTML, we can take this out. */ 
 [title="View the catalog of events"]{
 	/* visibility:hidden; */
+	/* requires !important to overwrite default style
+	because the title attribute selector has less specificity than the class 
+	selector targeting the .Subtab class. */
 	color: hsla(206, 100%, 47%, 0) !important;
 
 }
