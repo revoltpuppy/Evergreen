@@ -21,8 +21,9 @@
  * N. Calendars
  * O. News
  * P. Profiles
- * Q. Embedded Content
- * R. CMS
+ * Q. Directories
+ * R. Embedded Content
+ * S. CMS
  */
 
 
@@ -374,9 +375,13 @@
 	border-radius: 50%;
 }
 
+/**
+ * Q. Directories
+ */
+@import "modules/directories";
 
 /**
- * Q. Embeded Content
+ * R. Embeded Content
  */
 .lazy-load{
   // box model
@@ -433,7 +438,7 @@
 }
 
 /**
- * R. CMS
+ * S. CMS
  *
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.

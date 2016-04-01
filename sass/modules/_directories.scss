@@ -1,14 +1,16 @@
 @charset "UTF-8";
 
-/*!*
- * THIS FILE HAS BEEN DEPRECATED
- * 
- * All styles should be duplicated in the main styles with the table style .directory
+/**
+ * Q. Directories
+ *
+ * Directories of people and their contact information.
  */
 
-@import "../../tools";
+/**
+ * Photo Directory
+ */
 
-.faculty-directory > thead{
+.directory > thead{
 	display: none;
 	
 	@include breakpoint($gamora){
@@ -16,7 +18,7 @@
 	}
 }
 
-.faculty-directory > tbody > tr{
+.directory > tbody > tr{
 	// box model
 	border: 1px solid mix(white, $blueberry-susan, 66%);
 	@include margin-default;
@@ -44,7 +46,7 @@
 	}
 }
 
-.faculty-directory > tbody td{
+.directory > tbody td{
 	// box model
 	border-width: 0;
 	padding: 0;
@@ -60,30 +62,30 @@
 	}
 }
 
-.faculty-directory .p-tel::before{
+.directory .p-tel::before{
 	font-weight: bold;
 	content: "Phone: ";
 }
 
-.faculty-directory .u-email::before{
+.directory .u-email::before{
 	font-weight: bold;
 	content: "Email: ";
 }
 
-.faculty-directory .p-extended-address::before{
+.directory .p-extended-address::before{
 	font-weight: bold;
 	content: "Location: ";
 }
 
-.faculty-directory .p-tel::before,
-.faculty-directory .u-email::before,
-.faculty-directory .p-extended-address::before{
+.directory .p-tel::before,
+.directory .u-email::before,
+.directory .p-extended-address::before{
 	@include breakpoint($gamora){
 		content: "";
 	}
 }
 
-.faculty-directory .u-photo{
+.directory .u-photo{
 	// box model
 	@include margin-default;
 	margin-left: 1em;
