@@ -230,6 +230,26 @@ textarea{
 	}
 }
 
+input[type="checkbox"]{
+	height: calc(14 / 16 * 1rem);
+	
+	@include breakpoint($gamora){
+		height: calc(18 / 16 * 1rem);
+	}
+	
+	@include breakpoint($groot){
+		height: calc(19.229 / 16 * 1rem);
+	}
+}
+
+.sidebar input[type="checkbox"]{
+	height: calc(14 / 16 * 1rem);
+	
+	@include breakpoint($groot){
+		height: calc(18 / 16 * 1rem);
+	}
+}
+
 /**
  * D. Search
  */
