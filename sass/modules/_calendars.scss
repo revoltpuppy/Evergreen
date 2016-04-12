@@ -794,3 +794,34 @@
 		// backgrounds & borders
 		background: inherit;
 	}
+	
+	/**
+	 * Events by Category
+	 */
+	.view-calendar .views-field-title{
+		margin-top: 0.535714285714286em;  // Should match default top margins exactly.
+		
+		@include breakpoint($gamora){
+			margin-top: 0.41666666666667em;  // Should match default top margins exactly.
+		}
+		
+		@include breakpoint($groot){
+			margin-top: 0.52004784440168em;  // Should match default top margins exactly.
+		}
+	}
+	
+	.view-calendar .date-display-range{
+		margin-bottom: 1.071428571428571em;  // Should match default top margins exactly.
+		
+		@include breakpoint($gamora){
+			margin-bottom: 0.83333333333333em;  // Should match default top margins exactly.
+		}
+		
+		@include breakpoint($groot){
+			margin-bottom: 1.04009568880337em;  // Should match default top margins exactly.
+		}
+	}
+	
+	.views-exposed-form label{
+		font-weight: inherit;
+	}
