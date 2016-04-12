@@ -83,11 +83,17 @@
 	display: inline-block;
 	// typography
 	color: white;
+	text-shadow: none;
 	// backgrounds and borders
 	background-color: $evergreen-neue;
 	
 	&:hover{
 		background-color: $sky-blue;
+	}
+	
+	@include breakpoint($drax){
+		font-size: 1.82rem;  // Step 3
+		line-height: 1.5451174289246; // 45 / 29.124
 	}
 }
 
