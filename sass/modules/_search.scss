@@ -19,14 +19,22 @@
 	width: 100%;
 }
 
-#search-block-form,
+#edit-actions--2{
+	// layout
+	float: right;
+	// position
+	position: relative;
+}
+
+/*#search-block-form,
 .form-submit{
 	width: auto;
-}
+}*/
 
 //.top-search button,  //deprecated
 .search-button,
-#search-block-form #edit-submit{  // Drupal service center site top search form
+#search-block-form #edit-submit,  // Drupal service center site top search form
+#search-block-form #edit-submit--2{  // Drupal service center secondary content search, when logged out(?)
 	// box model
 	border-color: mix($tint, $blueberry-susan, 60%);
 	border-width: 1px 1px 1px 0;
