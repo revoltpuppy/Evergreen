@@ -810,8 +810,13 @@
 		}
 	}
 	
-	.view-calendar .date-display-range{
+	.date-display-range,
+	.view-calendar .date-display-range,  // Needed to override specificity in .view-calendar.
+	.date-display-single{
+		// box model
 		margin-bottom: 1.071428571428571em;  // Should match default top margins exactly.
+		// display
+		display: inline;  // This keeps the year from being awkwardly bumped to the next line.
 		
 		@include breakpoint($gamora){
 			margin-bottom: 0.83333333333333em;  // Should match default top margins exactly.
