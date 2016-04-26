@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+@import "../../tools";  //constants, mixins, functions, etc.
+
+.e2ma_signup_form{
+	width: auto !important;
+
+	.e2ma_signup_message{
+		// box model
+		@include margin-default;
+		// typography
+		font-family: inherit;
+		font-size: inherit;
+		color: inherit;
+	}
+	
+	.e2ma_signup_form_row{
+		border-width: 0;
+	}
+	
+	.e2ma_signup_form_label{
+		font-family: inherit;
+		font-size: inherit;
+		color: inherit;
+	}
+	
+	.e2ma_signup_form_required_asterix{  // sic
+		color: inherit;
+	}
+	
+	.e2ma_signup_form_required_footnote{
+		display: none;
+	}
+	
+	.e2ma_signup_form_button{
+		width: auto !important;
+	}
+	
+	.e2ma_signup_form_button_row #e2ma_signup_reset_button{
+		display: none;
+	}
+}
