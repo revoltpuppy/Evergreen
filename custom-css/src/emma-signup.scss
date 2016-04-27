@@ -5,27 +5,26 @@
 .e2ma_signup_form{
 	width: auto !important;
 
-	.e2ma_signup_message{
-		// box model
-		@include margin-default;
+	.e2ma_signup_message,
+	.e2ma_signup_form_label,
+	.e2ma_signup_form_required_asterix,  // [sic]
+	.e2ma_signup_form_element,
+	.e2ma_signup_form_element input[type="text"],
+	.e2ma_signup_form_element textarea,
+	.e2ma_signup_form_element select{
 		// typography
 		font-family: inherit;
 		font-size: inherit;
 		color: inherit;
 	}
+
+	.e2ma_signup_message{
+		// box model
+		@include margin-default;
+	}
 	
 	.e2ma_signup_form_row{
 		border-width: 0;
-	}
-	
-	.e2ma_signup_form_label{
-		font-family: inherit;
-		font-size: inherit;
-		color: inherit;
-	}
-	
-	.e2ma_signup_form_required_asterix{  // sic
-		color: inherit;
 	}
 	
 	.e2ma_signup_form_required_footnote{
