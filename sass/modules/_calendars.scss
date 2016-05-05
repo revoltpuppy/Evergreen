@@ -602,7 +602,17 @@
 	
 	.view .date-nav-wrapper .date-prev a,
 	.view .date-nav-wrapper .date-next a{
+		// box model
 		margin: 0 0.25em;
+		// typography
+		color: $blueberry-susan;
+		
+		&:visited{
+			color: $wine;
+		}
+		&:hover{
+			color: $sky-blue;
+		}
 	}
 	
 	/**
@@ -730,6 +740,11 @@
 	/**
 	 * Calendar Month View
 	 */
+	.calendar-calendar div.calendar{
+		@include small-type;
+		letter-spacing: -0.03em;
+	}
+	
 	.calendar-calendar .month-view .full td .inner div.day,
 	.calendar-calendar .month-view .full td .inner div.day a{
 		width: auto;
@@ -752,10 +767,11 @@
 	
 	.calendar-calendar .month-view .full td.multi-day .inner .item{
 		// box model
+		border: 1px dashed mix($tint, $blueberry-susan, 40%);
 		//margin-right: 0.25em;
 		padding: 0 0.25em;
 		// backgrounds & borders
-		background-color: $morning-light;
+		//background-color: $morning-light;
 	}
 	
 	/**

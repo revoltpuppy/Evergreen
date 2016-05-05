@@ -5899,45 +5899,56 @@ p.alert {
 .view .date-nav-wrapper .date-prev a,
 .view .date-nav-wrapper .date-next a {
   margin: 0 0.25em;
+  color: #492c5d;
+}
+/* line 610, sass/modules/_calendars.scss */
+.view .date-nav-wrapper .date-prev a:visited,
+.view .date-nav-wrapper .date-next a:visited {
+  color: #600f21;
+}
+/* line 613, sass/modules/_calendars.scss */
+.view .date-nav-wrapper .date-prev a:hover,
+.view .date-nav-wrapper .date-next a:hover {
+  color: #0086ee;
 }
 
 /**
  * Calendar List View
  */
-/* line 611, sass/modules/_calendars.scss */
+/* line 621, sass/modules/_calendars.scss */
 .calendar-calendar {
   background-clip: transparent;
 }
 
-/* line 615, sass/modules/_calendars.scss */
+/* line 625, sass/modules/_calendars.scss */
 .calendar-calendar th {
   text-align: inherit;
 }
 
-/* line 619, sass/modules/_calendars.scss */
+/* line 629, sass/modules/_calendars.scss */
 .calendar-calendar tr {
   background-color: transparent;
 }
 
-/* line 623, sass/modules/_calendars.scss */
+/* line 633, sass/modules/_calendars.scss */
 .calendar-calendar td {
   color: inherit;
 }
 
-/* line 627, sass/modules/_calendars.scss */
+/* line 637, sass/modules/_calendars.scss */
 .calendar-calendar td .inner div,
 .calendar-calendar td .inner div a {
   background-color: transparent;
 }
 
-/* line 632, sass/modules/_calendars.scss */
+/* line 642, sass/modules/_calendars.scss */
 .calendar-calendar div.calendar {
   border-right-width: 0;
   font-size: inherit;
   background-color: transparent;
 }
 
-/* line 641, sass/modules/_calendars.scss */
+/* line 651, sass/modules/_calendars.scss */
 .calendar-calendar td.calendar-agenda-hour,
 .calendar-calendar .week-view .full td,
 .calendar-calendar .day-view td,
@@ -5950,24 +5961,24 @@ p.alert {
   padding: 0;
 }
 
-/* line 653, sass/modules/_calendars.scss */
+/* line 663, sass/modules/_calendars.scss */
 .calendar-calendar .month-view .full td {
   padding: 0;
 }
 
-/* line 657, sass/modules/_calendars.scss */
+/* line 667, sass/modules/_calendars.scss */
 .calendar-calendar .day-view .calendar-agenda-items {
   padding-left: 1em;
 }
 
-/* line 661, sass/modules/_calendars.scss */
+/* line 671, sass/modules/_calendars.scss */
 .calendar-calendar .month-view .full .inner .monthview,
 .calendar-calendar .week-view .full .inner .weekview,
 .calendar-calendar .day-view .full .inner .dayview {
   margin: 0;
 }
 
-/* line 667, sass/modules/_calendars.scss */
+/* line 677, sass/modules/_calendars.scss */
 .calendar-calendar .month-view .full td.multi-day div.monthview,
 .calendar-calendar .week-view .full td.multi-day div.weekview,
 .calendar-calendar .day-view .full td.multi-day div.dayview,
@@ -5985,13 +5996,13 @@ p.alert {
 /**
  * Time Column
  */
-/* line 689, sass/modules/_calendars.scss */
+/* line 699, sass/modules/_calendars.scss */
 .calendar-calendar .day-view .full .calendar-agenda-hour {
   padding-top: 0.535714285714286em;
   padding-bottom: 1.071428571428571em;
 }
 
-/* line 694, sass/modules/_calendars.scss */
+/* line 704, sass/modules/_calendars.scss */
 .calendar-calendar td.calendar-agenda-hour .calendar-hour,
 .calendar-calendar td.calendar-agenda-hour .calendar-ampm {
   display: inline-block;
@@ -5999,7 +6010,7 @@ p.alert {
   font-weight: inherit;
 }
 
-/* line 706, sass/modules/_calendars.scss */
+/* line 716, sass/modules/_calendars.scss */
 .calendar-hour::after {
   content: "\a0";
 }
@@ -6007,18 +6018,18 @@ p.alert {
 /**
  * Items Column
  */
-/* line 715, sass/modules/_calendars.scss */
+/* line 725, sass/modules/_calendars.scss */
 .calendar-calendar .day-view .full td .inner div.calendar div,
 .calendar-calendar .day-view .full td .inner div.calendar div a {
   margin: 0;
 }
 
-/* line 720, sass/modules/_calendars.scss */
+/* line 730, sass/modules/_calendars.scss */
 .calendar-calendar .day-view .full td .inner div.calendar div a {
   padding: 0;
 }
 
-/* line 724, sass/modules/_calendars.scss */
+/* line 734, sass/modules/_calendars.scss */
 .calendar-calendar .inner .item {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
   /*margin-right: 1em;
@@ -6028,13 +6039,21 @@ p.alert {
 /**
  * Calendar Month View
  */
-/* line 733, sass/modules/_calendars.scss */
+/* line 743, sass/modules/_calendars.scss */
+.calendar-calendar div.calendar {
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
+  letter-spacing: -0.03em;
+}
+
+/* line 748, sass/modules/_calendars.scss */
 .calendar-calendar .month-view .full td .inner div.day,
 .calendar-calendar .month-view .full td .inner div.day a {
   width: auto;
 }
 
-/* line 738, sass/modules/_calendars.scss */
+/* line 753, sass/modules/_calendars.scss */
 .calendar-calendar .month-view .full tr td.today,
 .calendar-calendar .month-view .full tr.odd td.today,
 .calendar-calendar .month-view .full tr.even td.today,
@@ -6042,7 +6061,7 @@ p.alert {
   border-color: #46502b;
 }
 
-/* line 745, sass/modules/_calendars.scss */
+/* line 760, sass/modules/_calendars.scss */
 .calendar-calendar .month-view .full tr.date-box,
 .calendar-calendar .month-view .full tr.date-box td,
 .calendar-calendar .month-view .full tr.multi-day,
@@ -6051,16 +6070,16 @@ p.alert {
   max-height: none;
 }
 
-/* line 753, sass/modules/_calendars.scss */
+/* line 768, sass/modules/_calendars.scss */
 .calendar-calendar .month-view .full td.multi-day .inner .item {
+  border: 1px dashed #8d7b99;
   padding: 0 0.25em;
-  background-color: #fdf4b6;
 }
 
 /**
  * Single-day
  */
-/* line 765, sass/modules/_calendars.scss */
+/* line 781, sass/modules/_calendars.scss */
 .calendar-calendar .month-view .full td.single-day div.monthview,
 .calendar-calendar .week-view .full td.single-day div.weekview {
   padding: 0 0.25em;
@@ -6069,21 +6088,21 @@ p.alert {
 /**
  * Multi-day
  */
-/* line 773, sass/modules/_calendars.scss */
+/* line 789, sass/modules/_calendars.scss */
 .calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
 .calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents {
   width: auto;
   position: static;
 }
 
-/* line 779, sass/modules/_calendars.scss */
+/* line 795, sass/modules/_calendars.scss */
 .calendar-calendar .month-view .full td.multi-day .inner .monthview .continuation,
 .calendar-calendar .week-view .full td.multi-day .inner .weekview .continuation {
   height: auto;
   margin: 0 0.25em;
 }
 
-/* line 785, sass/modules/_calendars.scss */
+/* line 801, sass/modules/_calendars.scss */
 .calendar-calendar .month-view .full td.multi-day .inner .monthview .continues,
 .calendar-calendar .week-view .full td.multi-day .inner .weekview .continues {
   height: inherit;
@@ -6096,24 +6115,24 @@ p.alert {
 /**
  * Events by Category
  */
-/* line 801, sass/modules/_calendars.scss */
+/* line 817, sass/modules/_calendars.scss */
 .view-calendar .views-field-title {
   margin-top: 0.535714285714286em;
 }
 @media screen and (min-width: 43em) {
-  /* line 801, sass/modules/_calendars.scss */
+  /* line 817, sass/modules/_calendars.scss */
   .view-calendar .views-field-title {
     margin-top: 0.41666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 801, sass/modules/_calendars.scss */
+  /* line 817, sass/modules/_calendars.scss */
   .view-calendar .views-field-title {
     margin-top: 0.52004784440168em;
   }
 }
 
-/* line 813, sass/modules/_calendars.scss */
+/* line 829, sass/modules/_calendars.scss */
 .date-display-range,
 .view-calendar .date-display-range,
 .date-display-single {
@@ -6121,7 +6140,7 @@ p.alert {
   display: inline;
 }
 @media screen and (min-width: 43em) {
-  /* line 813, sass/modules/_calendars.scss */
+  /* line 829, sass/modules/_calendars.scss */
   .date-display-range,
   .view-calendar .date-display-range,
   .date-display-single {
@@ -6129,7 +6148,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 813, sass/modules/_calendars.scss */
+  /* line 829, sass/modules/_calendars.scss */
   .date-display-range,
   .view-calendar .date-display-range,
   .date-display-single {
@@ -6137,7 +6156,7 @@ p.alert {
   }
 }
 
-/* line 830, sass/modules/_calendars.scss */
+/* line 846, sass/modules/_calendars.scss */
 .views-exposed-form label {
   font-weight: inherit;
 }
