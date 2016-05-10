@@ -112,6 +112,8 @@ p.alert{
 	width: 100%;
 	// backgrounds and borders
 	border-radius: 0;
+	// typography
+	font-family: $monospace-face;
 	// animations and transitions
 	transition: all .5s ease-in;
 }
