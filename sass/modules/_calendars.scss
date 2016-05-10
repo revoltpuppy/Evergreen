@@ -499,18 +499,51 @@
 	}
 }
 
-.calendar-calendar td a:hover{
-	text-decoration: none;
+.calendar-calendar{
+	background-clip: transparent;
+}
+
+.calendar-calendar table,
+.calendar-calendar .month-view table{
+	@include margin-default;
+}
+
+.calendar-calendar th{
+	text-align: inherit;
+}
+
+.calendar-calendar tr{
+	background-color: transparent;
+}
+
+.calendar-calendar td{
+	width: auto;
 }
 
 .calendar-calendar td.empty{
 	color: inherit;
 }
 
-.calendar-calendar .month-view .full td.single-day .calendar-empty,
-.calendar-calendar .month-view .full td.single-day.empty,
-.calendar-calendar .month-view .full td.date-box.empty{
-	background: transparent none;
+.calendar-calendar td a:hover{
+	text-decoration: none;
+}
+
+.calendar-calendar div.calendar{
+	//typography
+	font-size: inherit;
+}
+
+.calendar-calendar td.calendar-agenda-items div.calendar{
+	// box model
+	border-right-width: 0;
+	padding: 0;
+	width: 100%;
+	// backgrounds and borders
+	background-color: transparent;
+}
+
+.calendar-calendar td .inner div.calendar .contents{
+	padding: 0.25rem 0.25em 0.625rem;  // 4/16    10/16
 }
 
 .calendar-calendar .month-view .full .inner .monthview,
@@ -618,19 +651,12 @@
 	/**
 	 * Calendar List View
 	 */
-	.calendar-calendar{
-		background-clip: transparent;
-	}
 	
-	.calendar-calendar th{
-		text-align: inherit;
-	}
-	
-	.calendar-calendar tr{
-		background-color: transparent;
-	}
-	
-	.calendar-calendar td{
+	.calendar-calendar .day-view td,
+	.calendar-calendar .day-view td.calendar-agenda-items{
+		// box model
+		border-width: 0;
+		// typography
 		color: inherit;
 	}
 	
@@ -639,28 +665,27 @@
 		background-color: transparent;
 	}
 	
-	.calendar-calendar div.calendar{
-		// box model
-		border-right-width: 0;
-		//typography
-		font-size: inherit;
-		// backgrounds and borders
-		background-color: transparent;
+	.calendar-calendar .day-view div.calendar,
+	.calendar-calendar .day-view .calendar-agenda-hour span.calendar-hour,
+	.calendar-calendar .day-view .calendar-agenda-hour span.calendar-ampm{  // Since these entries are “full width”, they can be the default font-size.
+		text-align: left;
+		
+		@include breakpoint($gamora){
+			@include base-type-lg;
+		}
+		
+		@include breakpoint($groot){
+			@include base-type-xl;
+		}
 	}
 	
 	.calendar-calendar td.calendar-agenda-hour,
-	.calendar-calendar .week-view .full td,
-	.calendar-calendar .day-view td,
-	.calendar-calendar .week-view .full .calendar-agenda-hour,
 	.calendar-calendar .day-view .full .calendar-agenda-hour,
-	.calendar-calendar td.calendar-agenda-items div.calendar{
-		border-bottom-width: 1px;
+	.calendar-calendar td.calendar-agenda-items .calendar.dayview{
+		// box model
+		border-bottom: 1px solid mix($tint, $blueberry-susan, 80%);
 		border-right-width: 0;
 		border-left-width: 0;
-		padding: 0;
-	}
-	
-	.calendar-calendar .month-view .full td{
 		padding: 0;
 	}
 	
@@ -685,16 +710,26 @@
 		height: inherit;
 		margin-bottom: inherit;
 		//padding: 0;
+		// layout
+		align-items: stretch;
+		display: flex;
+		justify-content: stretch;
 		// typography
 		color: inherit;
 		// backgrounds and borders
 		background: transparent none;
-		background-color: transparent;
 	}
 	
 		/**
 		 * Time Column
 		 */
+		.calendar-agenda-hour{
+			white-space: nowrap;  // Make sure the space doesn't break between, e.g. 12 and pm.
+		}
+		
+		.all-day .calendar-agenda-hour{
+			white-space: normal;  // When the time is “All day”, the space can break.
+		}
 		
 		.calendar-calendar .day-view .full .calendar-agenda-hour{
 			padding-top: 0.535714285714286em;  // Should match margin-default
@@ -730,19 +765,48 @@
 		.calendar-calendar .day-view .full td .inner div.calendar div a{
 			padding: 0;
 		}
-		
-		.calendar-calendar .inner .item{
-			@include margin-default;
-			/*margin-right: 1em;
-			margin-left: 1em;*/
-		}
 	
 	/**
-	 * Calendar Month View
+	 * Calendar Week and Month View
 	 */
-	.calendar-calendar div.calendar{
+	.week-view .full,
+	.month-view .full{
+		background-color: $tint;
+	}
+	
+	.calendar-calendar .week-view .calendar,
+	.calendar-calendar .week-view .calendar-agenda-hour,
+	.calendar-calendar .month-view .calendar,
+	.calendar-calendar .month-view .calendar-agenda-hour{
 		@include small-type;
 		letter-spacing: -0.03em;
+		text-align: left;
+	}
+	
+	.calendar-calendar .week-view .full .calendar-agenda-hour{
+		padding: 0 0.25em;
+		width: auto;
+	}
+	
+	.calendar-calendar .week-view td,
+	.calendar-calendar .week-view .full td.multi-day,
+	.calendar-calendar .week-view td.calendar-agenda-items{
+		// box model
+		border-right-width: 0;
+		border-left-width: 0;
+		padding: 0;
+		// typography
+		color: inherit;
+	}
+	
+	.calendar-calendar .month-view .full td.single-day .calendar-empty,
+	.calendar-calendar .month-view .full td.single-day.empty,
+	.calendar-calendar .month-view .full td.date-box.empty{
+		background: transparent none;
+	}
+	
+	.calendar-calendar .month-view .full td{
+		padding: 0;
 	}
 	
 	.calendar-calendar .month-view .full td .inner div.day,
@@ -751,9 +815,19 @@
 	}
 	
 	.calendar-calendar .month-view .full tr td.today,
+	.calendar-calendar .month-view .full tr td.single-day.today,
 	.calendar-calendar .month-view .full tr.odd td.today,
 	.calendar-calendar .month-view .full tr.even td.today,
-	.calendar-calendar .month-view .full td.date-box.today{
+	.calendar-calendar .month-view .full td.date-box.today,
+	.calendar-calendar .month-view .full tr td.multi-day.starts-today{
+		// box model\
+		border-color: $evergreen-old-style;
+		// background and borders
+		background-color: $morning-light;
+	}
+	
+	.calendar-calendar .month-view .full tr td.multi-day.ends-today{
+		// box model\
 		border-color: $evergreen-old-style;
 	}
 	
@@ -765,13 +839,18 @@
 		max-height: none;
 	}
 	
-	.calendar-calendar .month-view .full td.multi-day .inner .item{
+	.calendar-calendar .month-view .full td.single-day .calendar.monthview .contents,
+	.calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
+	.calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents{
 		// box model
-		border: 1px dashed mix($tint, $blueberry-susan, 40%);
-		//margin-right: 0.25em;
-		padding: 0 0.25em;
-		// backgrounds & borders
-		//background-color: $morning-light;
+		border-top: 1px solid mix($tint, $blueberry-susan, 80%);
+		width: auto;
+		// layout
+		align-items: center;
+		display: flex;
+		flex-grow: 1;
+		// position
+		position: static;
 	}
 	
 	/**
@@ -780,7 +859,7 @@
 	
 	.calendar-calendar .month-view .full td.single-day div.monthview,
 	.calendar-calendar .week-view .full td.single-day div.weekview{
-		padding: 0 0.25em;
+		//padding: 0 0.25em;
 	}
 	
 	/**
@@ -788,27 +867,46 @@
 	 */
 	.calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
 	.calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents{
-		width: auto;
-		position: static;
+		// backgrounds and borders
+		background-color: mix($tint, $blueberry-susan, 90%);
 	}
 	
 	.calendar-calendar .month-view .full td.multi-day .inner .monthview .continuation,
 	.calendar-calendar .week-view .full td.multi-day .inner .weekview .continuation{
-		height: auto;
-		margin: 0 0.25em;
+		height: inherit;
+		margin: 0 0.25em 0 0;
+		padding: 0;
 	}
 	
 	.calendar-calendar .month-view .full td.multi-day .inner .monthview .continues,
 	.calendar-calendar .week-view .full td.multi-day .inner .weekview .continues{
 		// box model
+		border-top: 1px solid mix($tint, $blueberry-susan, 80%);
 		height: inherit;
-		padding: 0 0.25em;
+		padding: 0 0.25em 0 0;
+		width: auto;
+		// layout
+		display: flex;
+		align-items: center;
 		// position
-		right: 0;
-		bottom: 0;
+		position: static;
 		//z-index: 0;
 		// backgrounds & borders
-		background: inherit;
+		background-color: mix($tint, $blueberry-susan, 90%);
+	}
+	
+	.calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff,
+	.calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff{
+		// box model
+		border-top: 1px solid mix($tint, $blueberry-susan, 80%);
+		height: inherit;
+		padding-left: 0;
+		width: 0.5em;
+		// position
+		position: static;
+		// backgrounds and borders
+		background-color: mix($tint, $blueberry-susan, 80%);
+		border-radius: 0 2px 2px 0;
 	}
 	
 	/**
