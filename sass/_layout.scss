@@ -251,20 +251,27 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 // content on the page.
 .main-content,
 .sidebar{
-	margin: 0 .75em;
+	margin: 0 0.75em 2.14285714285714em;  // 30/14
 	
 	@include breakpoint($rocket){
-		margin: 0 1em;
+		margin-right: 1em;
+		margin-left: 1em;
+	}
+	
+	@include breakpoint($starlord){
+		margin-bottom: 4.28571428571429em;  // 60/14
+	}
+	
+	@include breakpoint($gamora){
+		margin-bottom: 3.3333333333em;  // 60/18
 	}
 }
 
 .index-wrapper .main-content{  // specified in .index-wrapper to not affect .primary-content-wrapper
 
 	@include breakpoint($gamora){
-		margin: 0 3em;
-	}
-	@include breakpoint($drax){
-		//margin: 0 3.626279863481%;  // magic number?
+		margin-right: 3em;
+		margin-left: 3em;
 	}
 }
 
@@ -273,11 +280,13 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	
 	@include breakpoint($gamora){
 		@include breakpoint($gamora){
-			margin: 0 2em;
+			margin-right: 2em;
+			margin-left: 2em;
 		}
 		
 		@include breakpoint($drax){
-			margin: 0 3em;
+			margin-right: 3em;
+			margin-left: 3em;
 		}
 	}
 }
