@@ -184,8 +184,7 @@ h3{
 	}
 }
 
-h4,
-h5{
+h4{
 	// box model
   margin-top: 2.14285714285714em;  // 30/14
   // typography
@@ -201,22 +200,38 @@ h5{
 		line-height: 1.56014353320505;  // 30/19.229
   }
   
-  @include breakpoint($groot){
-  	// box model
-    margin-top: 1.5451174289246em;  // 45/29.124
-    // typography
-    font-size: 1.82rem;  // 29.124px  Step 3
-    line-height: 1.03007828594973; // 30/29.124
-  }
+	/*@include breakpoint($groot){
+		// box model
+		margin-top: 1.5451174289246em;  // 45/29.124
+		// typography
+		font-size: 1.82rem;  // 29.124px  Step 3
+		line-height: 1.03007828594973; // 30/29.124
+	}*/
 }
 
 h5{
-  color: mix($tint, $black, 40%);
+	// box model
+  margin-top: 2.14285714285714em;  // 30/14
+  // typography
+	color: mix($tint, $black, 40%);
+  font-size: 0.875rem;  // 14px  Step 0.5
+  font-weight: bold;
+	letter-spacing: 0.1em;
+  line-height: 1.60714285714286;  // 22.5/14
+	text-transform: uppercase;
+	
+	@include breakpoint($gamora){
+  	// box model
+  	margin-top: 1.66666666666667em;  // 30/18
+  	// typography
+		@include base-type-lg;
+  }
 }
 
 h6{
 	// box model
-	margin-top: 2.69662921348315em;  // 15/11.125
+	margin-top: 2.69784172661871em;  // 30/11.12
+	margin-bottom: 1.34892086330935em;  // 15/11.12
 	// typography
 	color: mix($tint, $black, 40%);
 	@include small-type;
@@ -227,13 +242,16 @@ h6{
 	@include breakpoint($gamora){
 		// box model
 		margin-top: 2.14285714285714em;  // 30/14
+		margin-bottom: 2.14285714285714em;  // 30/14
 		// typography
+		font-family: $display-face;
 		@include base-type;
 	}
 		
 	@include breakpoint($groot){
 		// box model
 		margin-top: 2.5em;  // 45/18
+		margin-bottom: 1.66666666666667em;  // 30/18
 		// typography
 		@include base-type-lg;
 	}
@@ -243,13 +261,12 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6{
+h5{
 	// Bottom margin should match the p's top margin exactly, for consistency. If they don't match, change this rule.
 	margin-bottom: 0.46875rem; // 7.5px
 
 	@include breakpoint($groot){
-		margin-bottom: .625rem;  // 10px
+		margin-bottom: 0.625rem;  // 10px
 	}
 }
 

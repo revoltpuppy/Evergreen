@@ -28,7 +28,7 @@ p.box{  // WYSIWYG
 	// layout
 	overflow: hidden;
 	// typography
-	color: mix(black, $sky-blue, 66%);
+	color: mix(black, $sky-blue, 66.667%);
 	// backgrounds & borders
 	background-color: transparentize(mix(white, $sky-blue, 80%), .05);
 	background-image: url("images/texture-1.png");
@@ -41,18 +41,25 @@ p.box{  // WYSIWYG
 }
 
 .notice h2,  // deprecated
-.box h2{
+.box h2,
+.notice h4,  // deprecated
+.box h4{
 	color: mix(black, $sky-blue, 50%);
 }
 
 .notice h3,  // deprecated
-.box h3,
-.notice h4,  // deprecated
-.box h4,
-.notice h5,  // deprecated
-.box h5{
-	color: mix(black, $sky-blue, 66%);
+.box h3{
+	color: mix($shade, $sky-blue, 50%);
 }
+
+.notice h5,  // deprecated
+.box h5,
+.notice h6,  // deprecated
+.box h6{
+	color: mix($shade, $sky-blue, 33.333%);
+}
+
+
 
 .box.supplement,
 .box.supplement-alt-1-2{

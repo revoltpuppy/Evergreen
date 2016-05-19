@@ -131,7 +131,7 @@ $groot:     (min: 125em);
  *      2    19.229   1.068   1.202
  *      1    18       1       1.125
  *      0.5  14.000   0.778   0.875  Fudged for better readability, especially on mobile.
- *     -1    11.125   0.618   0.695
+ *     -1    11.120   0.618   0.695
  *     -2     6.876   0.382   0.43
  *     -3     4.249   0.236   0.266
  *     -4     2.626   0.146   0.164
@@ -174,7 +174,7 @@ $groot:     (min: 125em);
 }
 @mixin small-type{
 	font-family: $small-face;
-	font-size: 0.695rem;  // 11.125px  Step -1
+	font-size: 0.695rem;  // 11.12px  Step -1
 	line-height: 1.34831460674157;  // 15/11.125
 }
 
