@@ -136,10 +136,11 @@ p.alert{
 	text-shadow: 0 1px 0 hsla(0, 0%, 100%, .5);
 	// backgrounds and borders
 	background-color: hsla(0, 0%, 95%, .95);
-	
-	img{
-		margin-bottom: 0.625rem;  // 10px
-	}
+}
+
+.caption-box img{
+	margin-top: 0.9375rem;  // 15/16
+	margin-bottom: 0.9375rem;  // 15/16
 }
 
 /**
