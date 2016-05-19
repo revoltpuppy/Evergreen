@@ -293,10 +293,6 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 
 .main-content{
 	margin-top: -5px;
-	
-	@include breakpoint($drax){
-		//position: relative;  // Creates a context for absolutely positioning the homepage tertiary nav
-	}
 }
 
 .sidebar{
@@ -404,7 +400,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 		display: none;
 	}
 	.ins32{  // deprecated //Insert inline elements at this break point
-		display: none;
+		//display: none;
 	}
 }
 @media screen and (max-width: 43em){
