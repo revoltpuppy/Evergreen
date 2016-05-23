@@ -616,7 +616,20 @@ li.internal-users-alt img{
  * Resources, or Registration
  */
 .site-name{
+	// box model
+	//border-bottom: 4px solid $evergreen-old-style;
 	margin-top: 3.75rem;  // 60/16
+	//margin-bottom: -4px;  // Compensates for 4px border and maintains 15px vertical cadence.
+	
+	@include breakpoint($drax){
+		// box model
+		margin-right: 1em;
+		margin-left: 1em;
+		width: 100%;
+		// backgrounds and borders
+		background-color: transparentize($tint, 0.5);
+		border-radius: 2px 2px 0 0;
+	}
 	
 	h1{
 		

@@ -43,23 +43,24 @@
 	@include base-type;
 	
 	@include breakpoint($starlord){
-		margin: 0 auto 1rem;
+		margin: 0 auto calc(15 / 16 * 1rem);
 		max-width: 66.6666666666%;
 	}
 	
 	@include breakpoint($gamora){
 		// box model
-		margin-top: calc(30 / 16 * 1rem);
+		//margin-top: calc(30 / 16 * 1rem);
+		padding-top: calc(45 / 16 * 1rem);
 		width: calc(100% + 1em);
 		max-width: none;
 		// position
 		position: relative;
+		// backgrounds and borders
+		border-radius-top-left: 0;
 		
 		.index-wrapper &{
 			// box model
 			width: 20.01953125%;  // 410/2048
-			// layout
-			//position: static;
 		}
 	}
 	
@@ -72,9 +73,14 @@
 			margin-top: 1rem;
 		}
 	}
+}
 	
-	> ul{
-		margin-right: 1em;
+#tertiary-nav > ul{
+	margin-right: 1em;
+	
+	@include breakpoint($gamora){
+		//margin-top: calc(30 / 16 * 1rem);
+		margin-top: 0;
 	}
 }
 
