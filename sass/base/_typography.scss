@@ -124,6 +124,11 @@ h1{
 		line-height: 0.95494769008764;  // 45/47.123
 	}
 	
+	@include breakpoint($drax){
+		color: mix($tint, $shade, 33.33333%);
+		font-weight: bold;
+	}
+	
 	@include breakpoint($groot){
 		// box model
 		margin-top: 1.19191879059973em;  // 60/50.339
@@ -371,7 +376,7 @@ a:active{
 	    color: #fff;
 	    text-shadow: 0 1px 3px hsl(275, 33%, 11%);
 	    
-	    @include breakpoint($drax){
+	    /*@include breakpoint($drax){
 	    	text-shadow:
 					-1px 1px $blueberry-susan,
 					-1px 2px $blueberry-susan,
@@ -380,12 +385,18 @@ a:active{
 					-3px 5px $blueberry-susan,
 					-3px 6px $blueberry-susan,
 					-4px 7px 0.5px $blueberry-susan
+	    }*/
+	    
+	    @include breakpoint($drax){
+		    color: $evergreen-old-style;
+		    font-weight: normal;
+		    text-shadow: 0 1px 2px $tint;
 	    }
 		}
 		
 		&:hover{
 	    
-	    @include breakpoint($drax){
+	    /*@include breakpoint($drax){
 	    	text-shadow:
 					-1px 1px $sky-blue,
 					-1px 2px $sky-blue,
@@ -394,7 +405,7 @@ a:active{
 					-3px 5px $sky-blue,
 					-3px 6px $sky-blue,
 					-4px 7px 0.5px $sky-blue
-	    }
+	    }*/
 		}
 	}
 	
