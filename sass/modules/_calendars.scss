@@ -6,6 +6,7 @@
  * 3. Schedule of Events
  * 4. Bulletin
  * 5. Campus Events Calendar
+ * 6. Event Listing
  */
 
 /**
@@ -944,3 +945,24 @@
 	.views-exposed-form label{
 		font-weight: inherit;
 	}
+	
+/**
+ * 6. Event Page
+ *
+ * A single event’s individual page with all event details and a summary.
+ */
+.event-details{
+	font-weight: bold;
+}
+.event-summary{
+	margin-top: calc(2.14285714285714em);  // 30/14
+	margin-bottom: calc(2.14285714285714em);  // 30/14
+	
+	@include breakpoint($gamora){
+		margin-top: calc(2.8125);  // 45/16
+		margin-bottom: calc(2.8125);  // 45/16
+	}
+}
+.event-sponsor{
+	font-style: italic;
+}
