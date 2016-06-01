@@ -4,14 +4,15 @@
  * Image modules, typically for laying them out within an article.
  */
 .left,  // deprecated
-.illus,  // deprecated
-.illus-alt,  // deprecated
-.illus-full,  // deprecated
+//.illus,  // deprecated
+//.illus-alt,  // deprecated
+//.illus-full,  // deprecated
 .image,
 .image img,  // WYSIWYG
 .image-alt,
 .image-full,
-.image-full img{  // WYSIWYG
+.image-full img,  // WYSIWYG
+.field-image img{  // Drupal event calendar
 	// box model
 	border: 1px solid mix(black, $sky-blue, 60%);
 	height: auto;
@@ -28,9 +29,10 @@
 	box-shadow: 0 2px 2px $drop-shadow;
 }
 
-.illus-full,  // deprecated
+//.illus-full,  // deprecated
 .image-full,
-.image-full img{  // WYSIWYG
+.image-full img,  // WYSIWYG
+.field-image img{  // Drupal event calendar
 	@include margin-default;
 	margin-left: auto;
 	margin-right: auto;
@@ -49,8 +51,8 @@
 }
 
 .left,  // deprecated
-.illus,  // deprecated
-.illus-alt,  // deprecated
+//.illus,  // deprecated
+//.illus-alt,  // deprecated
 .image,
 .image img,  // WYSIWYG
 .image-alt{
@@ -79,8 +81,8 @@
 
 @include breakpoint($drax){
 	.left,  // deprecated
-	.illus,  // deprecated
-	.illus-alt,  // deprecated
+	//.illus,  // deprecated
+	//.illus-alt,  // deprecated
 	.main-content .image,
 	.main-content .image img,  // WYSIWYG
 	.image-alt{
@@ -89,7 +91,7 @@
 		max-width: calc(50% + 2.5em);
 	}
 	
-	.illus-alt,  // deprecated
+	//.illus-alt,  // deprecated
 	.image-alt{
 		// box model
 		margin-right: 0;

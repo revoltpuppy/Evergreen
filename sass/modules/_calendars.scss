@@ -954,7 +954,7 @@
 .event-details{
 	font-weight: bold;
 }
-.event-summary{
+.event-description{
 	margin-top: calc(2.14285714285714em);  // 30/14
 	margin-bottom: calc(2.14285714285714em);  // 30/14
 	
@@ -965,4 +965,12 @@
 }
 .event-sponsor{
 	font-style: italic;
+}
+
+.field-flyer{
+	// box model
+	border: 1px solid mix($tint, $shade, 66.6666666667%);
+	padding: calc(7.5 / 16 * 1rem) 1em calc(15 / 16 * 1rem);
+	// backgrounds and borders
+	border-radius: 2px;
 }
