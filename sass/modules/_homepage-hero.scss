@@ -135,20 +135,51 @@
 
 .homepage-hero-content-grad{
 	justify-content: flex-end;
+}
+
+.homepage-hero-content-grad .call-to-action{
+	//margin-bottom: 0;
+}
+
+.homepage-hero-content-grad .caption-box{
+	display: none;
+}
+
+.homepage-hero-content-grad .homepage-hero-copy{
+	// box model
+	//margin: 0 0 2em 0;
+	//padding: 0 1em;
+	width: calc(66.6666666667% - 1em);
 	
-	.caption-box{
-		display: none;
+	@include breakpoint($starlord){
+		width: calc(50% - 1em);
 	}
 	
-	.homepage-hero-copy{
+	@include breakpoint($gamora){
 		// box model
-		margin: 0 0 2em 0;
-		padding: 0 1em;
-		width: 100%;
+		width: calc(100% - 2em);
 		// typography
 		text-align: center;
-		// backgrounds & borders
-		background-color: transparentize($blueberry-susan, 0.5);
+	}
+	// backgrounds & borders
+	//background-color: transparentize($blueberry-susan, 0.5);
+}
+
+.homepage-hero-content-grad h1{
+	margin: 0;
+}
+
+.homepage-hero-content-grad .homepage-hero-copy img{
+	//max-width: 66.6666666667%;
+	max-height: calc(250 / 16 * 1rem);
+	
+	@include breakpoint($gamora){
+		margin-bottom: -2.2em;
+		width: 66.6666666667%
+	}
+	
+	@include breakpoint($drax){
+		margin-bottom: -2.5em;
 	}
 }
 
