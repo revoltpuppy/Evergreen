@@ -217,6 +217,10 @@ legend{
 	font-style: italic;
 }
 
+label{
+	display: inline;
+}
+
 input,
 select,
 textarea{
@@ -248,7 +252,9 @@ input{
 	font-size: 1em;
 }
 
-input[type="text"]{
+input[type="text"],
+input[type="password"],
+input[type="email"]{
 	width: 100%;
 	max-width: calc(45ch - 1em);
 }
@@ -287,7 +293,14 @@ textarea{
 
 input[type="checkbox"],
 input[type="radio"]{
+	// margin
 	height: calc(14 / 16 * 1rem);
+	margin: calc(2.5 / 16 * 1rem) 0.25em calc(20 / 16 * 1rem) 0;
+	width: 1em;
+	// layout
+	clear: left;
+	float: left;
+	vertical-align: top;
 	
 	@include breakpoint($gamora){
 		height: calc(18 / 16 * 1rem);
@@ -305,6 +318,15 @@ input[type="radio"]{
 	@include breakpoint($groot){
 		height: calc(18 / 16 * 1rem);
 	}
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label{
+	// box model
+	margin-bottom: (15 / 16 * 1rem);
+	width: calc(100% - 1.25em);
+	// layout
+	float: left;
 }
 
 /**
