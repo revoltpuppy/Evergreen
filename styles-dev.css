@@ -1039,24 +1039,42 @@ table a {
 /**
  * C. Forms
  */
-/* line 203, sass/_base.scss */
+/**
+ * For more on reseting fieldsets and legends, see https://thatemil.com/blog/2015/01/03/reset-your-fieldset/.
+ */
+/* line 207, sass/_base.scss */
+fieldset {
+  border-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 213, sass/_base.scss */
+legend {
+  display: table;
+  font-style: italic;
+}
+
+/* line 220, sass/_base.scss */
 input,
 select,
 textarea {
   border: 1px solid #aea3b6;
+  margin-bottom: 1.262201279030629em;
+  max-width: 100%;
   font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.42857142857143;
   border-radius: 2px;
 }
-/* line 214, sass/_base.scss */
+/* line 233, sass/_base.scss */
 input:focus,
 select:focus,
 textarea:focus {
   box-shadow: 0 0 2px 1px rgba(30, 19, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
-  /* line 203, sass/_base.scss */
+  /* line 220, sass/_base.scss */
   input,
   select,
   textarea {
@@ -1065,64 +1083,76 @@ textarea:focus {
   }
 }
 
-/* line 224, sass/_base.scss */
+/* line 243, sass/_base.scss */
 input {
   height: 1.875rem;
-  margin-bottom: 1.262201279030629em;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   font-size: 1em;
 }
 
-/* line 233, sass/_base.scss */
+/* line 251, sass/_base.scss */
+input[type="text"] {
+  width: 100%;
+  max-width: calc(45ch - 1em);
+}
+
+/* line 256, sass/_base.scss */
 select {
-  margin: 0.535714285714286em 0 1.071428571428571em 0;
-  padding: 0.30357142857143em .5em;
+  padding: 0 0.5em;
+  height: calc(30 / 16 * 1rem);
   text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
   box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset;
   cursor: pointer;
 }
-/* line 243, sass/_base.scss */
+/* line 266, sass/_base.scss */
 select:hover {
   border-bottom-style: dashed;
   background-color: #e1dee3;
 }
 
-/* line 251, sass/_base.scss */
+/* line 274, sass/_base.scss */
 textarea {
-  margin: 0.535714285714286em 0 1.071428571428571em 0;
   padding: 0.5em 0.75em;
+  width: 100%;
+  min-width: 50%;
+  max-width: calc(45ch + 1.5em);
 }
 @media screen and (min-width: 43em) {
-  /* line 251, sass/_base.scss */
+  /* line 274, sass/_base.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em 0;
   }
 }
 
-/* line 262, sass/_base.scss */
-input[type="checkbox"] {
+/* line 288, sass/_base.scss */
+input[type="checkbox"],
+input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 43em) {
-  /* line 262, sass/_base.scss */
-  input[type="checkbox"] {
+  /* line 288, sass/_base.scss */
+  input[type="checkbox"],
+  input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 262, sass/_base.scss */
-  input[type="checkbox"] {
+  /* line 288, sass/_base.scss */
+  input[type="checkbox"],
+  input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
   }
 }
 
-/* line 274, sass/_base.scss */
-.sidebar input[type="checkbox"] {
+/* line 301, sass/_base.scss */
+.sidebar input[type="checkbox"],
+.sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 274, sass/_base.scss */
-  .sidebar input[type="checkbox"] {
+  /* line 301, sass/_base.scss */
+  .sidebar input[type="checkbox"],
+  .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
@@ -1360,7 +1390,7 @@ a:link,
 .big-fact{
 	hyphens: none;
 }*/
-/* line 303, sass/_base.scss */
+/* line 331, sass/_base.scss */
 .looong-word {
   word-wrap: break-word;
   overflow-wrap: break-word;
