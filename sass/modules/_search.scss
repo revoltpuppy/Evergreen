@@ -7,7 +7,6 @@
 [type="search"],
 #search-block-form,  // Drupal service center site top search form
 #edit-search-block-form--2{  // Drupal service center site top search form input
-	//margin: 0 -1.875rem 0 0;
 	margin: 0 -100% 0 0;
 	position: relative;
 	width: 100%;
@@ -15,8 +14,8 @@
 }
 
 #edit-search-block-form--2{
-	//margin-right: -100%;
 	width: 100%;
+	max-width: none;
 }
 
 #edit-actions--2{
@@ -26,12 +25,6 @@
 	position: relative;
 }
 
-/*#search-block-form,
-.form-submit{
-	width: auto;
-}*/
-
-//.top-search button,  //deprecated
 .search-button,
 #search-block-form #edit-submit,  // Drupal service center site top search form
 #search-block-form #edit-submit--2{  // Drupal service center secondary content search, when logged out(?)
@@ -42,13 +35,12 @@
 	margin-bottom: 0;
 	margin-right: 0;
 	padding: 2px;
-	//width: 1.875rem;
 	// layout
 	float: right;
 	vertical-align: top;
 	// position
 	position: relative;
-	// backgrounds & borders
+	// backgrounds and borders
 	background: none #fff;
 	border-radius: 0 0 0 0;
 	// miscellaneous

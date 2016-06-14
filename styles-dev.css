@@ -1197,22 +1197,19 @@ input[type="radio"] + label {
           appearance: none;
 }
 
-/* line 17, sass/modules/_search.scss */
+/* line 16, sass/modules/_search.scss */
 #edit-search-block-form--2 {
   width: 100%;
+  max-width: none;
 }
 
-/* line 22, sass/modules/_search.scss */
+/* line 21, sass/modules/_search.scss */
 #edit-actions--2 {
   float: right;
   position: relative;
 }
 
-/*#search-block-form,
-.form-submit{
-	width: auto;
-}*/
-/* line 35, sass/modules/_search.scss */
+/* line 28, sass/modules/_search.scss */
 .search-button,
 #search-block-form #edit-submit,
 #search-block-form #edit-submit--2 {
@@ -1233,14 +1230,14 @@ input[type="radio"] + label {
           appearance: none;
   box-shadow: none;
 }
-/* line 59, sass/modules/_search.scss */
+/* line 51, sass/modules/_search.scss */
 .search-button:hover,
 #search-block-form #edit-submit:hover,
 #search-block-form #edit-submit--2:hover {
   background: none #ccc;
 }
 
-/* line 64, sass/modules/_search.scss */
+/* line 56, sass/modules/_search.scss */
 .search-button > img {
   max-height: 100%;
 }
