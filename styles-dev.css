@@ -2324,9 +2324,10 @@ body > div + header,
  * P. Profiles
  * Q. Directories
  * R. Embedded Content
- * S. CMS
+ * S. Drupal Login
+ * T. CMS
  */
-/* line 32, sass/_modules.scss */
+/* line 33, sass/_modules.scss */
 .top-links,
 .search-list,
 .primary-nav-unit h2,
@@ -3071,7 +3072,7 @@ li.internal-users-alt img {
 /**
  * B. Background Image
  */
-/* line 48, sass/_modules.scss */
+/* line 49, sass/_modules.scss */
 .main-background,
 .main-background2 {
   width: 100%;
@@ -3085,7 +3086,7 @@ li.internal-users-alt img {
   }*/
 }
 
-/* line 64, sass/_modules.scss */
+/* line 65, sass/_modules.scss */
 .main-background .main-background-img,
 .main-background > :first-child,
 .main-background2 .main-background-img,
@@ -3094,7 +3095,7 @@ li.internal-users-alt img {
   display: block;
 }
 @media screen and (min-width: 43em) {
-  /* line 64, sass/_modules.scss */
+  /* line 65, sass/_modules.scss */
   .main-background .main-background-img,
   .main-background > :first-child,
   .main-background2 .main-background-img,
@@ -3104,7 +3105,7 @@ li.internal-users-alt img {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 64, sass/_modules.scss */
+  /* line 65, sass/_modules.scss */
   .main-background .main-background-img,
   .main-background > :first-child,
   .main-background2 .main-background-img,
@@ -3113,19 +3114,19 @@ li.internal-users-alt img {
   }
 }
 
-/* line 82, sass/_modules.scss */
+/* line 83, sass/_modules.scss */
 .main-background2 {
   position: -webkit-sticky;
   position: sticky;
 }
 
-/* line 86, sass/_modules.scss */
+/* line 87, sass/_modules.scss */
 .main-background2 > .main-background-img,
 .main-background2 > :first-child {
   position: absolute;
 }
 @media screen and (min-width: 43em) {
-  /* line 86, sass/_modules.scss */
+  /* line 87, sass/_modules.scss */
   .main-background2 > .main-background-img,
   .main-background2 > :first-child {
     width: auto;
@@ -3141,7 +3142,7 @@ li.internal-users-alt img {
 	//will-change: filter;
 }
 */
-/* line 107, sass/_modules.scss */
+/* line 108, sass/_modules.scss */
 .main-background2-enhanced #main-background-img {
   -webkit-filter: none;
           filter: none;
@@ -3468,25 +3469,25 @@ li.internal-users-alt img {
   }
 }
 
-/* line 116, sass/_modules.scss */
+/* line 117, sass/_modules.scss */
 .profile-list > li {
   overflow: hidden;
   position: relative;
 }
 
-/* line 123, sass/_modules.scss */
+/* line 124, sass/_modules.scss */
 .profile-list .profile-img-link {
   display: block;
   overflow: hidden;
 }
 
-/* line 129, sass/_modules.scss */
+/* line 130, sass/_modules.scss */
 .profile-list .box {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 135, sass/_modules.scss */
+/* line 136, sass/_modules.scss */
 .profile-img {
   margin-left: -50%;
   width: 200%;
@@ -3494,35 +3495,35 @@ li.internal-users-alt img {
   display: block;
 }
 @media screen and (min-width: 20em) {
-  /* line 135, sass/_modules.scss */
+  /* line 136, sass/_modules.scss */
   .profile-img {
     margin-left: -25%;
     width: 150%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 135, sass/_modules.scss */
+  /* line 136, sass/_modules.scss */
   .profile-img {
     margin-left: 0%;
     width: 100%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 135, sass/_modules.scss */
+  /* line 136, sass/_modules.scss */
   .profile-img {
     width: 120%;
     margin-left: -10%;
   }
 }
 @media screen and (min-width: 60em) {
-  /* line 135, sass/_modules.scss */
+  /* line 136, sass/_modules.scss */
   .profile-img {
     width: 100%;
     margin-left: 0%;
   }
 }
 
-/* line 163, sass/_modules.scss */
+/* line 164, sass/_modules.scss */
 .profile-list .box {
   margin-top: -1.40625rem;
   position: absolute;
@@ -3961,17 +3962,17 @@ ul.accordion-inner {
  *
  * Special, non-base element typography.
  */
-/* line 185, sass/_modules.scss */
+/* line 186, sass/_modules.scss */
 .lead {
   margin-bottom: 0;
 }
 
-/* line 188, sass/_modules.scss */
+/* line 189, sass/_modules.scss */
 .follow {
   margin-top: 0;
 }
 
-/* line 192, sass/_modules.scss */
+/* line 193, sass/_modules.scss */
 .intro,
 .field-intro {
   margin: 1.17010764990379em 0;
@@ -3980,7 +3981,7 @@ ul.accordion-inner {
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 43em) {
-  /* line 192, sass/_modules.scss */
+  /* line 193, sass/_modules.scss */
   .intro,
   .field-intro {
     margin: 1.03007828594973em 0;
@@ -3989,7 +3990,7 @@ ul.accordion-inner {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 192, sass/_modules.scss */
+  /* line 193, sass/_modules.scss */
   .intro,
   .field-intro {
     margin: 0.96425816405246em 0;
@@ -3998,33 +3999,33 @@ ul.accordion-inner {
   }
 }
 
-/* line 217, sass/_modules.scss */
+/* line 218, sass/_modules.scss */
 .intro-alt {
   color: #333;
   font-weight: bold;
 }
 
-/* line 222, sass/_modules.scss */
+/* line 223, sass/_modules.scss */
 .big-fact {
   font-size: 1.202rem;
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 70em) {
-  /* line 222, sass/_modules.scss */
+  /* line 223, sass/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 222, sass/_modules.scss */
+  /* line 223, sass/_modules.scss */
   .big-fact {
     font-size: 1.945rem;
     line-height: 1.44638724607868;
   }
 }
 
-/* line 236, sass/_modules.scss */
+/* line 237, sass/_modules.scss */
 .key-number {
   margin: 0.818419903972065em 0 0 0;
   display: block;
@@ -4034,19 +4035,19 @@ ul.accordion-inner {
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 236, sass/_modules.scss */
+  /* line 237, sass/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 253, sass/_modules.scss */
+/* line 254, sass/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 257, sass/_modules.scss */
+/* line 258, sass/_modules.scss */
 .main-content > p:last-child::after,
 .main-content > ul:last-child > li:last-child::after,
 .main-content > ol:last-child > li:last-child::after,
@@ -4055,7 +4056,7 @@ ul.accordion-inner {
   content: " " url("/_inc/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 257, sass/_modules.scss */
+  /* line 258, sass/_modules.scss */
   .main-content > p:last-child::after,
   .main-content > ul:last-child > li:last-child::after,
   .main-content > ol:last-child > li:last-child::after,
@@ -4567,7 +4568,7 @@ ul.accordion-inner {
 /**
  * H. Tables
  */
-/* line 277, sass/_modules.scss */
+/* line 278, sass/_modules.scss */
 .dataTable {
   /*@include breakpoint($starlord){
   	font-family: $text-face;
@@ -6503,18 +6504,18 @@ p.alert {
 /**
  * O. News
  */
-/* line 319, sass/_modules.scss */
+/* line 320, sass/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 329, sass/_modules.scss */
+/* line 330, sass/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
   width: calc(100% - 2em);
 }
 
-/* line 335, sass/_modules.scss */
+/* line 336, sass/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -6528,7 +6529,7 @@ p.alert {
 /**
  * P. Profiles
  */
-/* line 353, sass/_modules.scss */
+/* line 354, sass/_modules.scss */
 .profile .portrait-1-1 {
   border-radius: 50%;
   -webkit-shape-margin: 1em;
@@ -6537,13 +6538,13 @@ p.alert {
           shape-outside: circle() border-box;
 }
 
-/* line 359, sass/_modules.scss */
+/* line 360, sass/_modules.scss */
 .profession {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 32em) {
-  /* line 359, sass/_modules.scss */
+  /* line 360, sass/_modules.scss */
   .profession {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -6551,7 +6552,7 @@ p.alert {
   }
 }
 
-/* line 369, sass/_modules.scss */
+/* line 370, sass/_modules.scss */
 .mini-bio-photo,
 .mini-profile-photo {
   border: 1px solid #00365f;
@@ -6664,7 +6665,7 @@ p.alert {
 /**
  * R. Embeded Content
  */
-/* line 386, sass/_modules.scss */
+/* line 387, sass/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -6672,7 +6673,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 396, sass/_modules.scss */
+/* line 397, sass/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -6694,35 +6695,57 @@ p.alert {
   background-image: url("/_inc/images/texture-1.png");
   content: url("/_inc/images/icons/green/play.png");
 }
-/* line 415, sass/_modules.scss */
+/* line 416, sass/_modules.scss */
 .lazy-load:hover::after {
   opacity: .85;
 }
-/* line 419, sass/_modules.scss */
+/* line 420, sass/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 427, sass/_modules.scss */
+/* line 428, sass/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 435, sass/_modules.scss */
+/* line 436, sass/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
 
 /**
- * S. CMS
+ * S. Drupal Login
+ *
+ * Styles the Drupal login widget. This might be moved or consolidated
+ * with a general Drupal section later.
+ */
+/* line 447, sass/_modules.scss */
+.form-required {
+  color: inherit;
+}
+
+/* line 451, sass/_modules.scss */
+.item-list ul {
+  margin: 0.535714285714286em 0 1.071428571428571em 0;
+}
+
+/* line 455, sass/_modules.scss */
+#edit-actions--2 {
+  float: none;
+  position: static;
+}
+
+/**
+ * T. CMS
  *
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 447, sass/_modules.scss */
+/* line 467, sass/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -6730,7 +6753,7 @@ p.alert {
   display: block;
 }
 
-/* line 456, sass/_modules.scss */
+/* line 476, sass/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(30, 19, 37, 0.25);
 }

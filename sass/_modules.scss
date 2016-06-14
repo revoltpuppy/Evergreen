@@ -23,7 +23,8 @@
  * P. Profiles
  * Q. Directories
  * R. Embedded Content
- * S. CMS
+ * S. Drupal Login
+ * T. CMS
  */
 
 
@@ -438,7 +439,26 @@
 }
 
 /**
- * S. CMS
+ * S. Drupal Login
+ *
+ * Styles the Drupal login widget. This might be moved or consolidated
+ * with a general Drupal section later.
+ */
+.form-required{  // The asterisk indicating a required form field.
+	color: inherit;  // There’s no reason this needs to be bright red.
+}
+
+.item-list ul{
+	@include margin-default;
+}
+
+#edit-actions--2{  // Drupal login button
+	float: none;
+	position: static;
+}
+
+/**
+ * T. CMS
  *
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
