@@ -9,9 +9,8 @@
  * A. Typography
  * B. Tables
  * C. Forms
- * D. Search
- * E. Buttons
- * F. Hyphenation
+ * D. Buttons
+ * E. Hyphenation
  */
 
 html{
@@ -200,147 +199,15 @@ td > ol:last-child li:last-child > p:last-child{
 /**
  * C. Forms
  */
+@import "base/forms";
 
 /**
- * For more on reseting fieldsets and legends, see https://thatemil.com/blog/2015/01/03/reset-your-fieldset/.
- */
-fieldset{
-	border-width: 0;
-	margin: 0;
-	padding: 0;
-}
-
-legend{
-	// layout
-	display: table;  // Allows line-wrapping in IE.
-	// typography
-	font-style: italic;
-}
-
-label{
-	display: inline;
-}
-
-input,
-select,
-textarea{
-	// box model
-	border: 1px solid mix($tint, $blueberry-susan, 60%);
-	margin-bottom: 1.262201279030629em; // 15/11.884
-	max-width: 100%;
-	//typography
-	font-family: $text-face;
-	@include base-type;
-	// backgrounds & borders
-	border-radius: 2px;
-	
-	&:focus{
-		// misc
-		box-shadow: 0 0 2px 1px $drop-shadow;
-	}
-	
-	@include breakpoint($gamora){
-		@include base-type-lg;
-	}
-}
-
-input{
-	// box model
-	height: 1.875rem;  // Step 3
-	padding: 0 0.5em;
-	// typography
-	font-size: 1em;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"]{
-	width: 100%;
-	max-width: calc(45ch - 1em);
-}
-
-select{
-	// box model
-	padding: 0 0.5em;
-	height: calc(30 / 16 * 1rem);
-	// typography
-	text-shadow: 0 1px 0 $highlight;
-	// misc
-	box-shadow: 0 0.1em 0.1em $drop-shadow inset;
-	cursor: pointer;
-	
-	&:hover{
-		// box model
-		border-bottom-style: dashed;
-		// backgrounds & borders
-		background-color: mix($tint, $blueberry-susan, 90%);
-	}
-}
-
-textarea{
-	// box model
-	//@include margin-default;
-	padding: 0.5em 0.75em;
-	width: 100%;
-	min-width: 50%;
-	max-width: calc(45ch + 1.5em);
-	
-	@include breakpoint($gamora){
-		// box model
-		@include margin-default-lg;
-	}
-}
-
-input[type="checkbox"],
-input[type="radio"]{
-	// margin
-	height: calc(14 / 16 * 1rem);
-	margin: calc(2.5 / 16 * 1rem) 0.25em calc(20 / 16 * 1rem) 0;
-	width: 1em;
-	// layout
-	clear: left;
-	float: left;
-	vertical-align: top;
-	
-	@include breakpoint($gamora){
-		height: calc(18 / 16 * 1rem);
-	}
-	
-	@include breakpoint($groot){
-		height: calc(19.229 / 16 * 1rem);
-	}
-}
-
-.sidebar input[type="checkbox"],
-.sidebar input[type="radio"]{
-	height: calc(14 / 16 * 1rem);
-	
-	@include breakpoint($groot){
-		height: calc(18 / 16 * 1rem);
-	}
-}
-
-input[type="checkbox"] + label,
-input[type="radio"] + label{
-	// box model
-	margin-bottom: (15 / 16 * 1rem);
-	width: calc(100% - 1.25em);
-	// layout
-	float: left;
-}
-
-/**
- * D. Search
- */
-@import "modules/search";
-
-/**
- * E. Buttons
+ * D. Buttons
  */
 @import "base/buttons";
 
 /**
- * F. Hyphenation
+ * E. Hyphenation
  */
 /*a,  //keep linked words whole
 a:link,

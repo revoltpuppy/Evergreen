@@ -201,16 +201,15 @@
  * A. Typography
  * B. Tables
  * C. Forms
- * D. Search
- * E. Buttons
- * F. Hyphenation
+ * D. Buttons
+ * E. Hyphenation
  */
-/* line 17, sass/_base.scss */
+/* line 16, sass/_base.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 21, sass/_base.scss */
+/* line 20, sass/_base.scss */
 * {
   box-sizing: inherit;
 }
@@ -222,13 +221,13 @@ html {
  * choke on the whole thing, breaking the border-box declaration
  * for the universal selector.
  */
-/* line 32, sass/_base.scss */
+/* line 31, sass/_base.scss */
 *::before,
 *::after {
   box-sizing: inherit;
 }
 
-/* line 37, sass/_base.scss */
+/* line 36, sass/_base.scss */
 body {
   margin: 0;
   min-height: 100vh;
@@ -248,7 +247,7 @@ body {
   background-color: #f2f2f2;
 }
 
-/* line 49, sass/_base.scss */
+/* line 48, sass/_base.scss */
 img,
 svg {
   border-width: 0;
@@ -257,30 +256,30 @@ svg {
   max-width: 100%;
 }
 
-/* line 57, sass/_base.scss */
+/* line 56, sass/_base.scss */
 audio {
   max-width: 100%;
 }
 
-/* line 61, sass/_base.scss */
+/* line 60, sass/_base.scss */
 video {
   height: auto;
   width: 100%;
 }
 
-/* line 66, sass/_base.scss */
+/* line 65, sass/_base.scss */
 iframe {
   width: 100%;
 }
 
-/* line 70, sass/_base.scss */
+/* line 69, sass/_base.scss */
 .iframe-ratio-16-9 {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
 }
 
-/* line 79, sass/_base.scss */
+/* line 78, sass/_base.scss */
 .iframe-ratio-16-9 > iframe {
   height: 100%;
   width: 100%;
@@ -860,7 +859,7 @@ hr {
 /**
  * B. Tables
  */
-/* line 97, sass/_base.scss */
+/* line 96, sass/_base.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -872,7 +871,7 @@ table {
   line-height: 1.42857142857143;
 }
 
-/* line 109, sass/_base.scss */
+/* line 108, sass/_base.scss */
 caption {
   margin: 0 0 0.41666666666667em 0;
   font-size: 1.125rem;
@@ -880,7 +879,7 @@ caption {
   font-style: italic;
 }
 @media screen and (min-width: 43em) {
-  /* line 109, sass/_base.scss */
+  /* line 108, sass/_base.scss */
   caption {
     margin: 0 0 0.39003588330126em 0;
     font-size: 1.202rem;
@@ -888,7 +887,7 @@ caption {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 109, sass/_base.scss */
+  /* line 108, sass/_base.scss */
   caption {
     margin-top: 0.51503914297487em;
     font-size: 1.82rem;
@@ -896,7 +895,7 @@ caption {
   }
 }
 
-/* line 131, sass/_base.scss */
+/* line 130, sass/_base.scss */
 tr.even,
 tr.odd {
   border-bottom-width: 0;
@@ -904,13 +903,13 @@ tr.odd {
   background-color: transparent;
 }
 
-/* line 139, sass/_base.scss */
+/* line 138, sass/_base.scss */
 th,
 td {
   text-align: left;
 }
 
-/* line 144, sass/_base.scss */
+/* line 143, sass/_base.scss */
 th {
   border-bottom-width: 0;
   color: black;
@@ -918,7 +917,7 @@ th {
   vertical-align: bottom;
 }
 
-/* line 151, sass/_base.scss */
+/* line 150, sass/_base.scss */
 tbody th,
 td {
   border: 0 solid #ccc;
@@ -932,18 +931,18 @@ td {
   vertical-align: top;
 }
 
-/* line 164, sass/_base.scss */
+/* line 163, sass/_base.scss */
 tbody > tr:first-child > th,
 tbody > tr:first-child > td {
   border-top-color: black;
 }
 
-/* line 169, sass/_base.scss */
+/* line 168, sass/_base.scss */
 td:last-child {
   padding-right: 0;
 }
 
-/* line 173, sass/_base.scss */
+/* line 172, sass/_base.scss */
 td strong,
 tfoot td {
   color: black;
@@ -953,7 +952,7 @@ tfoot td {
 /*tr:first-child td{
 	border-color: #000;
 }*/
-/* line 184, sass/_base.scss */
+/* line 183, sass/_base.scss */
 th > :first-child,
 td > :first-child,
 td > ul:first-child li:first-child > p:first-child,
@@ -961,7 +960,7 @@ td > ol:first-child li:first-child > p:first-child {
   margin-top: 0;
 }
 
-/* line 191, sass/_base.scss */
+/* line 190, sass/_base.scss */
 th > :last-child,
 td > :last-child,
 td > ul:last-child li:last-child > p:last-child,
@@ -1040,27 +1039,37 @@ table a {
  * C. Forms
  */
 /**
+ * Form Styles
+ *
+ * Base styles that make the forms a pleasure to fill out.
+ * 
+ * Table of Contents
+ *
+ * 1. Sidebar Overrides
+ * 2. Search
+ */
+/**
  * For more on reseting fieldsets and legends, see https://thatemil.com/blog/2015/01/03/reset-your-fieldset/.
  */
-/* line 207, sass/_base.scss */
+/* line 15, sass/base/_forms.scss */
 fieldset {
   border-width: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 213, sass/_base.scss */
+/* line 21, sass/base/_forms.scss */
 legend {
   display: table;
   font-style: italic;
 }
 
-/* line 220, sass/_base.scss */
+/* line 28, sass/base/_forms.scss */
 label {
   display: inline;
 }
 
-/* line 224, sass/_base.scss */
+/* line 32, sass/base/_forms.scss */
 input,
 select,
 textarea {
@@ -1072,14 +1081,14 @@ textarea {
   line-height: 1.42857142857143;
   border-radius: 2px;
 }
-/* line 237, sass/_base.scss */
+/* line 45, sass/base/_forms.scss */
 input:focus,
 select:focus,
 textarea:focus {
   box-shadow: 0 0 2px 1px rgba(30, 19, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
-  /* line 224, sass/_base.scss */
+  /* line 32, sass/base/_forms.scss */
   input,
   select,
   textarea {
@@ -1088,14 +1097,14 @@ textarea:focus {
   }
 }
 
-/* line 247, sass/_base.scss */
+/* line 55, sass/base/_forms.scss */
 input {
   height: 1.875rem;
   padding: 0 0.5em;
   font-size: 1em;
 }
 
-/* line 255, sass/_base.scss */
+/* line 63, sass/base/_forms.scss */
 input[type="text"],
 input[type="password"],
 input[type="email"] {
@@ -1103,7 +1112,7 @@ input[type="email"] {
   max-width: calc(45ch - 1em);
 }
 
-/* line 262, sass/_base.scss */
+/* line 70, sass/base/_forms.scss */
 select {
   padding: 0 0.5em;
   height: calc(30 / 16 * 1rem);
@@ -1111,13 +1120,13 @@ select {
   box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset;
   cursor: pointer;
 }
-/* line 272, sass/_base.scss */
+/* line 80, sass/base/_forms.scss */
 select:hover {
   border-bottom-style: dashed;
   background-color: #e1dee3;
 }
 
-/* line 280, sass/_base.scss */
+/* line 88, sass/base/_forms.scss */
 textarea {
   padding: 0.5em 0.75em;
   width: 100%;
@@ -1125,13 +1134,13 @@ textarea {
   max-width: calc(45ch + 1.5em);
 }
 @media screen and (min-width: 43em) {
-  /* line 280, sass/_base.scss */
+  /* line 88, sass/base/_forms.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em 0;
   }
 }
 
-/* line 294, sass/_base.scss */
+/* line 102, sass/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: calc(14 / 16 * 1rem);
@@ -1142,34 +1151,43 @@ input[type="radio"] {
   vertical-align: top;
 }
 @media screen and (min-width: 43em) {
-  /* line 294, sass/_base.scss */
+  /* line 102, sass/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 294, sass/_base.scss */
+  /* line 102, sass/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
   }
 }
 
-/* line 314, sass/_base.scss */
+/* line 122, sass/base/_forms.scss */
+.form-item,
+.form-actions {
+  clear: left;
+}
+
+/**
+ * 1. Sidebar Overrides
+ */
+/* line 131, sass/base/_forms.scss */
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 314, sass/_base.scss */
+  /* line 131, sass/base/_forms.scss */
   .sidebar input[type="checkbox"],
   .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 
-/* line 323, sass/_base.scss */
+/* line 140, sass/base/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
@@ -1178,7 +1196,7 @@ input[type="radio"] + label {
 }
 
 /**
- * D. Search
+ * 2. Search
  */
 /**
  * D. Search
@@ -1243,7 +1261,7 @@ input[type="radio"] + label {
 }
 
 /**
- * E. Buttons
+ * D. Buttons
  */
 /**
  * Buttons
@@ -1398,7 +1416,7 @@ input.prime.is-disabled:hover {
 }
 
 /**
- * F. Hyphenation
+ * E. Hyphenation
  */
 /*a,  //keep linked words whole
 a:link,
@@ -1407,7 +1425,7 @@ a:link,
 .big-fact{
 	hyphens: none;
 }*/
-/* line 353, sass/_base.scss */
+/* line 220, sass/_base.scss */
 .looong-word {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -6731,9 +6749,22 @@ p.alert {
 /* line 451, sass/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
+  margin-left: 1.07142857142857em;
+}
+@media screen and (min-width: 43em) {
+  /* line 451, sass/_modules.scss */
+  .item-list ul {
+    margin-left: 1.66666666666667em;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 451, sass/_modules.scss */
+  .item-list ul {
+    margin-left: 1.56014353320505em;
+  }
 }
 
-/* line 455, sass/_modules.scss */
+/* line 464, sass/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -6745,7 +6776,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 467, sass/_modules.scss */
+/* line 476, sass/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -6753,7 +6784,7 @@ p.alert {
   display: block;
 }
 
-/* line 476, sass/_modules.scss */
+/* line 485, sass/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(30, 19, 37, 0.25);
 }

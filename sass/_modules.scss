@@ -448,8 +448,17 @@
 	color: inherit;  // There’s no reason this needs to be bright red.
 }
 
-.item-list ul{
+.item-list ul{  // This should match the default unordered list styles. If it doesn’t, update this.
 	@include margin-default;
+	margin-left: 1.07142857142857em;  // 15/14
+	
+	@include breakpoint($gamora){
+		margin-left: 1.66666666666667em;  // 30/18
+	}
+	
+	@include breakpoint($groot){
+		margin-left: 1.56014353320505em; // 30/19.229
+	}
 }
 
 #edit-actions--2{  // Drupal login button
