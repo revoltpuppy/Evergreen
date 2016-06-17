@@ -6,7 +6,9 @@
  * Table of Contents
  *
  * 1. Sidebar Overrides
- * 2. Search
+ * 2. Views Module Forms
+ * 3. Webform Module
+ * 4. Search
  */
 
 /**
@@ -103,7 +105,7 @@ input[type="checkbox"],
 input[type="radio"]{
 	// margin
 	height: calc(14 / 16 * 1rem);
-	margin: calc(2.5 / 16 * 1rem) 0.25em calc(20 / 16 * 1rem) 0;
+	margin: 0 0.5ch calc(20 / 16 * 1rem) 0;
 	width: 1em;
 	// layout
 	clear: left;
@@ -112,16 +114,12 @@ input[type="radio"]{
 	
 	@include breakpoint($gamora){
 		height: calc(18 / 16 * 1rem);
+		margin: calc(2.5 / 16 * 1rem) 0.25em calc(20 / 16 * 1rem) 0;
 	}
 	
 	@include breakpoint($groot){
 		height: calc(19.229 / 16 * 1rem);
 	}
-}
-
-.form-item,
-.form-actions{
-	clear:left;
 }
 
 /**
@@ -141,12 +139,46 @@ input[type="checkbox"] + label,
 input[type="radio"] + label{
 	// box model
 	margin-bottom: (15 / 16 * 1rem);
-	width: calc(100% - 1.25em);
+	width: calc(100% - 1em - 0.5ch);
 	// layout
 	float: left;
+	
+	@include breakpoint($gamora){
+		width: calc(100% - 1.25em);
+	}
 }
 
 /**
- * 2. Search
+ * 2. Views Module Forms
+ */
+.views-submit-button,
+.views-reset-button{
+	display: inline-block;
+}
+#tertiary-nav-wrapper .views-exposed-form{
+	@include margin-default;
+	
+	@include breakpoint($gamora){
+		@include base-type; 
+	}
+}
+
+#tertiary-nav-wrapper .views-exposed-widget{
+	padding: 0;
+}
+
+/**
+ * 3. Webform Module
+ */
+.webform-client-form label{
+	font-weight: normal;
+}
+.form-item,
+.form-actions{
+	clear:left;
+}
+
+/**
+ * 4. Search
  */
 @import "../modules/search";
