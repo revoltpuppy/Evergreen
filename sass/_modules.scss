@@ -252,7 +252,7 @@
 }
 
 .machine-text{
-	font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
+	font-family: $monospace-face;
 }
 
 .main-content > p:last-child::after,
