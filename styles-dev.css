@@ -1203,25 +1203,25 @@ input[type="radio"] + label {
  * 2. Views Module Forms
  */
 /* line 154, sass/base/_forms.scss */
-.views-submit-button,
-.views-reset-button {
+.views-exposed-form .views-submit-button,
+.views-exposed-form .views-reset-button {
   display: inline-block;
 }
 
 /* line 158, sass/base/_forms.scss */
-#tertiary-nav-wrapper .views-exposed-form {
+.tertiary-nav-wrapper .views-exposed-form {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
 }
 @media screen and (min-width: 43em) {
   /* line 158, sass/base/_forms.scss */
-  #tertiary-nav-wrapper .views-exposed-form {
+  .tertiary-nav-wrapper .views-exposed-form {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 
 /* line 166, sass/base/_forms.scss */
-#tertiary-nav-wrapper .views-exposed-widget {
+.tertiary-nav-wrapper .views-exposed-widget {
   padding: 0;
 }
 

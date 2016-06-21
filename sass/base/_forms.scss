@@ -151,19 +151,19 @@ input[type="radio"] + label{
 /**
  * 2. Views Module Forms
  */
-.views-submit-button,
-.views-reset-button{
+.views-exposed-form .views-submit-button,
+.views-exposed-form .views-reset-button{
 	display: inline-block;
 }
-#tertiary-nav-wrapper .views-exposed-form{
+.tertiary-nav-wrapper .views-exposed-form{
 	@include margin-default;
 	
 	@include breakpoint($gamora){
-		@include base-type; 
+		@include base-type;
 	}
 }
 
-#tertiary-nav-wrapper .views-exposed-widget{
+.tertiary-nav-wrapper .views-exposed-widget{
 	padding: 0;
 }
 
