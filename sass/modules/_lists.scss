@@ -65,13 +65,18 @@
  *
  * See the social media icons in the footer, for example.
  */
-.lineup > li{
-	display: inline-block;
+.lineup{
+	display: flex;
 }
+
+/*.lineup > li{
+	display: inline-block;
+}*/
 
 .lineup > li img{
 	//box model
-	max-height: 1rem;
+	max-height: calc(2em + 1ch);
+	max-width: calc(100% - 1ch);
 	//layout
 	display: block;
 }
