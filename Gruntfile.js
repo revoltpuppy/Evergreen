@@ -67,6 +67,38 @@ module.exports = function(grunt) {
 		},
 		
 		/**
+		 * Perfbudget
+		 *
+		 * Performance budgeting thanks to the magic of WebPageTest
+		 * See: https://github.com/tkadlec/grunt-perfbudget
+		 *
+		 * grunt-perfbudget is a Grunt.js task for enforcing a performance budget
+		 * (more on performance budgets:
+		 * http://timkadlec.com/2013/01/setting-a-performance-budget/). It uses
+		 * the wonderful webpagetest.org and the WebPagetest API Wrapper for
+		 * NodeJS created by Marcel Duran.
+		 *
+		 * grunt-perfbudget uses either a public or private instance of
+		 * WebPagetest to perform tests on a specified URL. It compares test
+		 * results to budgets you specify. If the budget is met, the tasks
+		 * successfully completes. If it the page exceeds your performance
+		 * budgets, the task fails and informs you why.
+		 */
+		perfbudget: {
+			default: {
+				options: {
+					url: 'http://evergreen.edu',
+					key: 'A.71de0f32f82a2c13f3ed1f862acb6548',
+					location: 'ec2-us-west-2:Firefox',  // Oregon - EC2
+					budget: {
+						visualComplete: '4000',
+						SpeedIndex: '1500',
+					}
+				}
+			}
+		},
+		
+		/**
 		 * CSS post-processors
 		 *
 		 * autoprefixer adds support for older browsers by adding vendor
@@ -224,6 +256,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-postcss');
+	grunt.loadNpmTasks('grunt-perfbudget');
 	grunt.loadNpmTasks('grunt-svgstore');
 	/*grunt.loadNpmTasks('grunt-svg-sprite');*/
 	grunt.loadNpmTasks('grunt-contrib-uglify');
