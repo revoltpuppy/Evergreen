@@ -1,35 +1,162 @@
+/**
+ * Table Styles
+ *
+ * Styles that make tables look nice and readable.
+ * 
+ * Table of Contents
+ *
+ * 1. Base Typography
+ * 2. Horizontal Tables
+ * 3. Padded Tables
+ * 4. DataTables
+ */
+
+/**
+ * 1. Base Table Styles
+ */
+
+table{
+		// box model
+		border-collapse: collapse;
+		border-spacing: 0;
+		border-width: 0;
+		margin: 2.14285714285714em 0 3.21428571428571em;  // 30/14  45/14
+		width: 100%;
+		max-width: 100%;
+		// typography
+		@include base-type;
+}
+
+caption{  // styled after h4
+	// box model
+	margin: 0 0 0.41666666666667em 0;  // 7.5/18
+	@include base-type-lg;
+	font-style: italic;
+	
+	@include breakpoint($gamora){
+		// box model
+		margin: 0 0 0.39003588330126em 0;  // 7.5/19.229
+		// typography
+		@include base-type-xl;
+	}
+	
+	@include breakpoint($groot){
+  	// box model
+    margin-top: 0.51503914297487em;  // 15/29.124
+    // typography
+    font-size: 1.82rem;  // 29.124px  Step 3
+    line-height: 1.03007828594973;  // 30/29.124
+	}
+}
+
+tr.even,  // Drupal theme overrides
+tr.odd{
+	// box model
+	border-bottom-width: 0;
+	padding: 0;
+	background-color: transparent;
+}
+
+th,
+td{
+	text-align: left;
+}
+
+th{
+	border-bottom-width: 0;  // Drupal theme override
+	color: $shade;
+	padding: 0 1.111111111111111em 0 0;
+	vertical-align: bottom;
+}
+
+tbody th,
+td{
+	// box model
+	border: 0 solid #ccc;
+	border-top-width: 1px;
+	padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;  // 5/13.5  15/13.5
+	// typography
+	color: #333;
+  font-feature-settings: "lnum", "tnum";  // "lnum" is needed for lining numbers in Firefox.
+	font-variant-numeric: lining-nums tabular-nums;  // "lining-nums" is not applying in Firefox.
+	vertical-align: top;
+}
+
+tbody > tr:first-child > th,
+tbody > tr:first-child > td{
+	border-top-color: $shade;
+}
+
+th:last-child,
+td:last-child{
+	padding-right: 0;
+}
+
+td strong,
+tfoot td{
+	color: $shade;
+	font-weight: bold;
+}
+
+// Collapse top space between cell padding and element margins.
+th > :first-child,
+td > :first-child,
+td > ul:first-child li:first-child > p:first-child,
+td > ol:first-child li:first-child > p:first-child{
+    margin-top: 0;
+}
+// Collapse bottom space between cell padding and element margins.
+th > :last-child,
+td > :last-child,
+td > ul:last-child li:last-child > p:last-child,
+td > ol:last-child li:last-child > p:last-child{
+    margin-bottom: 0;
+}
+
 table a{
 	border-bottom-width: 0;  // Link borders clash with table borders and bring in extra complexity.
 }
 
-// For tables with the th left of the tds.
+.tnum{  // Tabular numbers in table data cells
+	text-align: right;
+}
+
+/**
+ * 2. Horizontal Tables
+ *
+ * For tables with the th left of the tds.
+ */
 .horizontal-table th{
-	//box model
+	// box model
 	border-top: 1px solid #ccc;
 	padding: 0.37037em 1.1111111111em 1.1111111111em 0;  //15/13.5 Should match the padding on td
-	//layout
+	// layout
 	vertical-align: top;
 }
 .horizontal-table tr:first-child th{
-	//box model
+	// box model
 	border-top: 1px solid black;
 }
 .horizontal-table:last-child{
-	//box model
+	// box model
 	border-bottom-width: 0;
 }
 
-// For normal tables that need the left-padding for whatever reason
-// (e.g. background-colors that make the text look funny).
+/**
+ * 3. Padded Tables
+ *
+ * For normal tables that need the left-padding for whatever reason
+ * (e.g. background-colors that make the text look funny).
+ */
 .padded-table th,
 .padded-table td,
 .accordion-table th,
 .accordion-table td,
 .striped-table td{
-	padding-left: 1.1111111111em;  //15/13.5 Should match the padding on td
+	padding-left: 1.1111111111em;  // 15/13.5 Should match the padding on td
 	
 	&:last-child{
-		padding-right: 1.1111111111em;  //15/13.5 Should match the padding on td
+		padding-right: 1.1111111111em;  // 15/13.5 Should match the padding on td
 	}
 }
 
@@ -38,7 +165,9 @@ table a{
 }
 
 /**
- * DataTables
+ * 4. DataTables
+ *
+ * JavaScript DataTables plugin.
  */
 .dataTable{
 	th:hover{
@@ -47,7 +176,6 @@ table a{
 }
 
 .sorting_asc::before{
-	//content: "▶\00A0";  //non-breaking space
 	content: "↓\00A0";  //non-breaking space
 }
 .sorting_desc::before{
