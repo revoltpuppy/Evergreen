@@ -67,6 +67,8 @@
  */
 .lineup{
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 /*.lineup > li{
@@ -75,10 +77,17 @@
 
 .lineup > li img{
 	//box model
-	max-height: calc(2em + 1ch);
-	max-width: calc(100% - 1ch);
+	height: 3em;
+	margin: 0 0.5ch 1em;
+	width: 3em;
+	//max-width: calc(100% - 1ch);
 	//layout
 	display: block;
+	
+	@include breakpoint($gamora){
+		height: 2em;
+		width: 2em;
+	}
 }
 
 /**
