@@ -152,58 +152,12 @@ input[type="radio"] + label{
 /**
  * 2. Views Module Forms
  */
-.views-exposed-form .views-submit-button,
-.views-exposed-form .views-reset-button{
-	display: inline-block;
-}
-.tertiary-nav-wrapper .views-exposed-form{
-	@include margin-default;
-	
-	@include breakpoint($gamora){
-		@include base-type;
-	}
-}
-
-.tertiary-nav-wrapper .views-exposed-widget{
-	padding: 0;
-}
+@import "forms/drupal-views";
 
 /**
  * 3. Webform Module
  */
-.webform-client-form label{
-	font-weight: normal;
-}
-
-.webform-client-form .form-item,
-.webform-client-form .form-actions{
-	clear:left;
-}
-
-.webform-client-form input.year{  // input is specified because sometimes select boxes can be years, and their width should be auto
-	width: calc(4.1ch + 1em);  // 4ch for four numbers, 1em to account for padding
-}
-
-.webform-container-inline input[type="radio"],
-.webform-container-inline input[type="checkbox"]{
-	// box model
-	margin-right: 0;
-	// layout
-	float: none;
-}
-
-.webform-container-inline input + label{
-	// box model
-	margin-right: 1ch;
-	// layout
-	float: none;
-}
-
-.resizable-textarea .grippie{  // This should match the dimensions of the textarea; if it doesn't, update these styles
-	width: 100%;
-	min-width: 50%;
-	max-width: calc(45ch + 1em);
-}
+@import "forms/drupal-webform";
 
 /**
  * 4. Search

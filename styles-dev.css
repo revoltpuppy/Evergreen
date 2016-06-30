@@ -1230,25 +1230,25 @@ input[type="radio"] + label {
 /**
  * 2. Views Module Forms
  */
-/* line 155, sass/base/_forms.scss */
+/* line 1, sass/base/forms/_drupal-views.scss */
 .views-exposed-form .views-submit-button,
 .views-exposed-form .views-reset-button {
   display: inline-block;
 }
 
-/* line 159, sass/base/_forms.scss */
+/* line 5, sass/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-form {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
 }
 @media screen and (min-width: 43em) {
-  /* line 159, sass/base/_forms.scss */
+  /* line 5, sass/base/forms/_drupal-views.scss */
   .tertiary-nav-wrapper .views-exposed-form {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 
-/* line 167, sass/base/_forms.scss */
+/* line 13, sass/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-widget {
   padding: 0;
 }
@@ -1256,36 +1256,53 @@ input[type="radio"] + label {
 /**
  * 3. Webform Module
  */
-/* line 174, sass/base/_forms.scss */
+/* line 2, sass/base/forms/_drupal-webform.scss */
 .webform-client-form label {
   font-weight: normal;
 }
 
-/* line 178, sass/base/_forms.scss */
+/* line 6, sass/base/forms/_drupal-webform.scss */
+.webform-client-form .description {
+  margin: calc(7.5 / 11.12 * 1em) 0 calc(15 / 11.12 * 1em);
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
+}
+@media screen and (min-width: 43em) {
+  /* line 6, sass/base/forms/_drupal-webform.scss */
+  .webform-client-form .description {
+    margin: 0.535714285714286em 0 1.071428571428571em 0;
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+  }
+}
+
+/* line 21, sass/base/forms/_drupal-webform.scss */
 .webform-client-form .form-item,
 .webform-client-form .form-actions {
   clear: left;
 }
 
-/* line 183, sass/base/_forms.scss */
+/* line 26, sass/base/forms/_drupal-webform.scss */
 .webform-client-form input.year {
   width: calc(4.1ch + 1em);
 }
 
-/* line 187, sass/base/_forms.scss */
+/* line 30, sass/base/forms/_drupal-webform.scss */
 .webform-container-inline input[type="radio"],
 .webform-container-inline input[type="checkbox"] {
   margin-right: 0;
   float: none;
 }
 
-/* line 195, sass/base/_forms.scss */
+/* line 38, sass/base/forms/_drupal-webform.scss */
 .webform-container-inline input + label {
   margin-right: 1ch;
   float: none;
 }
 
-/* line 202, sass/base/_forms.scss */
+/* line 45, sass/base/forms/_drupal-webform.scss */
 .resizable-textarea .grippie {
   width: 100%;
   min-width: 50%;
@@ -1443,7 +1460,8 @@ input[type="submit"]:active {
 /* line 73, sass/base/_buttons.scss */
 .prime,
 .prime:visited,
-input.prime {
+input.prime,
+.webform-client-form .button-primary {
   border-color: #46502b;
   color: white;
   text-shadow: 0 -1px 0 rgba(30, 19, 37, 0.25);
@@ -1454,7 +1472,8 @@ input.prime {
 
 /* line 85, sass/base/_buttons.scss */
 .prime:hover,
-input.prime:hover {
+input.prime:hover,
+.webform-client-form .button-primary:hover {
   border-bottom-color: #46502b;
   color: #46502b;
   text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
@@ -1465,13 +1484,15 @@ input.prime:hover {
 
 /* line 96, sass/base/_buttons.scss */
 .prime:focus,
-input.prime:focus {
+input.prime:focus,
+.webform-client-form .button-primary:focus {
   border-color: #999;
 }
 
 /* line 100, sass/base/_buttons.scss */
 .prime:active,
-input.prime:active {
+input.prime:active,
+.webform-client-form .button-primary:active {
   background-color: #a2be89;
   background-image: -webkit-linear-gradient(#64933a, #83a653);
   background-image: linear-gradient(#64933a, #83a653);
@@ -1506,9 +1527,13 @@ input.is-disabled:hover {
 .prime.is-disabled:hover,
 .prime.is-disabled:visited,
 .prime[disabled],
+.webform-client-form .button-primary[disabled],
 .prime[disabled]:hover,
+.webform-client-form .button-primary[disabled]:hover,
 input.prime.is-disabled,
-input.prime.is-disabled:hover {
+.webform-client-form .is-disabled.button-primary,
+input.prime.is-disabled:hover,
+.webform-client-form .is-disabled.button-primary:hover {
   background: #83a961 none;
 }
 

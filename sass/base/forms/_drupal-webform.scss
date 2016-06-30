@@ -1,0 +1,57 @@
+
+.webform-client-form label{
+	font-weight: normal;
+}
+
+.webform-client-form .description{
+	// box model
+	margin: calc(7.5 / 11.12 * 1em) 0 calc(15 / 11.12 * 1em);
+	// typography
+	@include small-type;
+	
+	@include breakpoint($gamora){
+		// box model
+		@include margin-default;
+		// typography
+		font-family: $text-face;
+		@include base-type;
+	}
+}
+
+.webform-client-form .form-item,
+.webform-client-form .form-actions{
+	clear:left;
+}
+
+.webform-client-form input.year{  // input is specified because sometimes select boxes can be years, and their width should be auto
+	width: calc(4.1ch + 1em);  // 4ch for four numbers, 1em to account for padding
+}
+
+.webform-container-inline input[type="radio"],
+.webform-container-inline input[type="checkbox"]{
+	// box model
+	margin-right: 0;
+	// layout
+	float: none;
+}
+
+.webform-container-inline input + label{
+	// box model
+	margin-right: 1ch;
+	// layout
+	float: none;
+}
+
+.resizable-textarea .grippie{  // This should match the dimensions of the textarea; if it doesn't, update these styles
+	width: 100%;
+	min-width: 50%;
+	max-width: calc(45ch + 1em);
+}
+
+.webform-client-form .button-primary{
+	@extend input.prime;
+}
+
+.webform-client-form .button-primary[disabled]{
+	@extend .prime[disabled];
+}
