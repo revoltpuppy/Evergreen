@@ -1,6 +1,6 @@
-var rem = 16;  //value of 1 root em
-var bWidth = document.documentElement.clientWidth; //browser width
-//var illusRotationRange = 2;  //how far in either direction an illustration can rotate, in degrees
+//var rem = 16;  // value of 1 root em
+//var bWidth = document.documentElement.clientWidth; // Browser width
+//var illusRotationRange = 2;  // How far in either direction an illustration can rotate, in degrees
 var imageRotationMax = 2;
 var imageRotationMin = 0.5;
 
@@ -154,6 +154,7 @@ window.onload = function loadAfter() {
 	win = window;
 	doc = win.document;
 	bgTiny = document.getElementById('main-background-img');
+	//bgTiny.src = "";
 	bg = doc.querySelector('.main-background2');
 	enhancedClass = 'main-background2-enhanced';
 	
