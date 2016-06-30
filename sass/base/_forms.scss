@@ -64,11 +64,20 @@ input{
 	font-size: 1em;
 }
 
-input[type="text"],
-input[type="password"],
+input[type="text"]{
+	width: 100%;
+	max-width: calc(45ch + 1em);
+}
+
 input[type="email"]{
 	width: 100%;
-	max-width: calc(45ch - 1em);
+	max-width: calc(30ch + 1em);  // Long enough to fully display about 95% of all email addresses
+}
+
+input[type="password"],
+input[type="tel"]{
+	width: 100%;
+	max-width: calc(15ch + 1em);  // Long enough to fully display a standard 11-digit phone number (with punctuation) or 20-digit concealed password
 }
 
 select{

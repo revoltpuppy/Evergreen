@@ -1135,14 +1135,25 @@ input {
 }
 
 /* line 67, sass/base/_forms.scss */
-input[type="text"],
-input[type="password"],
-input[type="email"] {
+input[type="text"] {
   width: 100%;
-  max-width: calc(45ch - 1em);
+  max-width: calc(45ch + 1em);
 }
 
-/* line 74, sass/base/_forms.scss */
+/* line 72, sass/base/_forms.scss */
+input[type="email"] {
+  width: 100%;
+  max-width: calc(30ch + 1em);
+}
+
+/* line 77, sass/base/_forms.scss */
+input[type="password"],
+input[type="tel"] {
+  width: 100%;
+  max-width: calc(15ch + 1em);
+}
+
+/* line 83, sass/base/_forms.scss */
 select {
   padding: 0 0.5em;
   height: calc(30 / 16 * 1rem);
@@ -1150,13 +1161,13 @@ select {
   box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset;
   cursor: pointer;
 }
-/* line 84, sass/base/_forms.scss */
+/* line 93, sass/base/_forms.scss */
 select:hover {
   border-bottom-style: dashed;
   background-color: #e1dee3;
 }
 
-/* line 92, sass/base/_forms.scss */
+/* line 101, sass/base/_forms.scss */
 textarea {
   padding: calc(7.5 / 16 * 1rem) 0.75em;
   width: 100%;
@@ -1164,13 +1175,13 @@ textarea {
   max-width: calc(45ch + 1em);
 }
 @media screen and (min-width: 43em) {
-  /* line 92, sass/base/_forms.scss */
+  /* line 101, sass/base/_forms.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em 0;
   }
 }
 
-/* line 105, sass/base/_forms.scss */
+/* line 114, sass/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: calc(14 / 16 * 1rem);
@@ -1181,7 +1192,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 @media screen and (min-width: 43em) {
-  /* line 105, sass/base/_forms.scss */
+  /* line 114, sass/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
@@ -1189,7 +1200,7 @@ input[type="radio"] {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 105, sass/base/_forms.scss */
+  /* line 114, sass/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
@@ -1199,20 +1210,20 @@ input[type="radio"] {
 /**
  * 1. Sidebar Overrides
  */
-/* line 130, sass/base/_forms.scss */
+/* line 139, sass/base/_forms.scss */
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 130, sass/base/_forms.scss */
+  /* line 139, sass/base/_forms.scss */
   .sidebar input[type="checkbox"],
   .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 
-/* line 139, sass/base/_forms.scss */
+/* line 148, sass/base/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
@@ -1220,7 +1231,7 @@ input[type="radio"] + label {
   float: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 139, sass/base/_forms.scss */
+  /* line 148, sass/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
     width: calc(100% - 1.25em);
