@@ -334,13 +334,10 @@ body {
    * tnum - Tabular figures (Fixed-width numbers)
    */
   -webkit-font-feature-settings: "kern", "liga";
-     -moz-font-feature-settings: "kern", "liga";
           font-feature-settings: "kern", "liga";
   -webkit-font-kerning: normal;
-     -moz-font-kerning: normal;
           font-kerning: normal;
   -webkit-font-variant-ligatures: common-ligatures;
-     -moz-font-variant-ligatures: common-ligatures;
           font-variant-ligatures: common-ligatures;
   font-variant-numeric: oldstyle-nums;
   text-rendering: optimizeLegibility;
@@ -859,7 +856,22 @@ hr {
 /**
  * B. Tables
  */
-/* line 96, sass/_base.scss */
+/**
+ * Table Styles
+ *
+ * Styles that make tables look nice and readable.
+ * 
+ * Table of Contents
+ *
+ * 1. Base Typography
+ * 2. Horizontal Tables
+ * 3. Padded Tables
+ * 4. DataTables
+ */
+/**
+ * 1. Base Table Styles
+ */
+/* line 18, sass/base/_tables.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -871,7 +883,7 @@ table {
   line-height: 1.42857142857143;
 }
 
-/* line 108, sass/_base.scss */
+/* line 30, sass/base/_tables.scss */
 caption {
   margin: 0 0 0.41666666666667em 0;
   font-size: 1.125rem;
@@ -879,7 +891,7 @@ caption {
   font-style: italic;
 }
 @media screen and (min-width: 43em) {
-  /* line 108, sass/_base.scss */
+  /* line 30, sass/base/_tables.scss */
   caption {
     margin: 0 0 0.39003588330126em 0;
     font-size: 1.202rem;
@@ -887,7 +899,7 @@ caption {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 108, sass/_base.scss */
+  /* line 30, sass/base/_tables.scss */
   caption {
     margin-top: 0.51503914297487em;
     font-size: 1.82rem;
@@ -895,7 +907,7 @@ caption {
   }
 }
 
-/* line 130, sass/_base.scss */
+/* line 52, sass/base/_tables.scss */
 tr.even,
 tr.odd {
   border-bottom-width: 0;
@@ -903,13 +915,13 @@ tr.odd {
   background-color: transparent;
 }
 
-/* line 138, sass/_base.scss */
+/* line 60, sass/base/_tables.scss */
 th,
 td {
   text-align: left;
 }
 
-/* line 143, sass/_base.scss */
+/* line 65, sass/base/_tables.scss */
 th {
   border-bottom-width: 0;
   color: black;
@@ -917,7 +929,7 @@ th {
   vertical-align: bottom;
 }
 
-/* line 150, sass/_base.scss */
+/* line 72, sass/base/_tables.scss */
 tbody th,
 td {
   border: 0 solid #ccc;
@@ -925,34 +937,31 @@ td {
   padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;
   color: #333;
   -webkit-font-feature-settings: "lnum", "tnum";
-     -moz-font-feature-settings: "lnum", "tnum";
           font-feature-settings: "lnum", "tnum";
   font-variant-numeric: lining-nums tabular-nums;
   vertical-align: top;
 }
 
-/* line 163, sass/_base.scss */
+/* line 85, sass/base/_tables.scss */
 tbody > tr:first-child > th,
 tbody > tr:first-child > td {
   border-top-color: black;
 }
 
-/* line 168, sass/_base.scss */
+/* line 90, sass/base/_tables.scss */
+th:last-child,
 td:last-child {
   padding-right: 0;
 }
 
-/* line 172, sass/_base.scss */
+/* line 95, sass/base/_tables.scss */
 td strong,
 tfoot td {
   color: black;
   font-weight: bold;
 }
 
-/*tr:first-child td{
-	border-color: #000;
-}*/
-/* line 183, sass/_base.scss */
+/* line 102, sass/base/_tables.scss */
 th > :first-child,
 td > :first-child,
 td > ul:first-child li:first-child > p:first-child,
@@ -960,7 +969,7 @@ td > ol:first-child li:first-child > p:first-child {
   margin-top: 0;
 }
 
-/* line 190, sass/_base.scss */
+/* line 109, sass/base/_tables.scss */
 th > :last-child,
 td > :last-child,
 td > ul:last-child li:last-child > p:last-child,
@@ -968,29 +977,45 @@ td > ol:last-child li:last-child > p:last-child {
   margin-bottom: 0;
 }
 
-/* line 1, sass/base/_tables.scss */
+/* line 116, sass/base/_tables.scss */
 table a {
   border-bottom-width: 0;
 }
 
-/* line 6, sass/base/_tables.scss */
+/* line 120, sass/base/_tables.scss */
+.tnum {
+  text-align: right;
+}
+
+/**
+ * 2. Horizontal Tables
+ *
+ * For tables with the th left of the tds.
+ */
+/* line 129, sass/base/_tables.scss */
 .horizontal-table th {
   border-top: 1px solid #ccc;
   padding: 0.37037em 1.1111111111em 1.1111111111em 0;
   vertical-align: top;
 }
 
-/* line 13, sass/base/_tables.scss */
+/* line 136, sass/base/_tables.scss */
 .horizontal-table tr:first-child th {
   border-top: 1px solid black;
 }
 
-/* line 17, sass/base/_tables.scss */
+/* line 140, sass/base/_tables.scss */
 .horizontal-table:last-child {
   border-bottom-width: 0;
 }
 
-/* line 24, sass/base/_tables.scss */
+/**
+ * 3. Padded Tables
+ *
+ * For normal tables that need the left-padding for whatever reason
+ * (e.g. background-colors that make the text look funny).
+ */
+/* line 151, sass/base/_tables.scss */
 .padded-table th,
 .padded-table td,
 .accordion-table th,
@@ -998,7 +1023,7 @@ table a {
 .striped-table td {
   padding-left: 1.1111111111em;
 }
-/* line 31, sass/base/_tables.scss */
+/* line 158, sass/base/_tables.scss */
 .padded-table th:last-child,
 .padded-table td:last-child,
 .accordion-table th:last-child,
@@ -1007,30 +1032,32 @@ table a {
   padding-right: 1.1111111111em;
 }
 
-/* line 36, sass/base/_tables.scss */
+/* line 163, sass/base/_tables.scss */
 .striped-table > tbody > tr:nth-child(odd) {
   background-color: #edeaef;
 }
 
 /**
- * DataTables
+ * 4. DataTables
+ *
+ * JavaScript DataTables plugin.
  */
-/* line 44, sass/base/_tables.scss */
+/* line 173, sass/base/_tables.scss */
 .dataTable th:hover {
   cursor: pointer;
 }
 
-/* line 49, sass/base/_tables.scss */
+/* line 178, sass/base/_tables.scss */
 .sorting_asc::before {
   content: "↓\00A0";
 }
 
-/* line 53, sass/base/_tables.scss */
+/* line 181, sass/base/_tables.scss */
 .sorting_desc::before {
   content: "↑\00A0";
 }
 
-/* line 57, sass/base/_tables.scss */
+/* line 185, sass/base/_tables.scss */
 .dataTables_filter label {
   font-weight: bold;
 }
@@ -1062,16 +1089,17 @@ fieldset {
 
 /* line 23, sass/base/_forms.scss */
 legend {
+  padding: 0;
   display: table;
   font-style: italic;
 }
 
-/* line 30, sass/base/_forms.scss */
+/* line 32, sass/base/_forms.scss */
 label {
   display: inline;
 }
 
-/* line 34, sass/base/_forms.scss */
+/* line 36, sass/base/_forms.scss */
 input,
 select,
 textarea {
@@ -1083,14 +1111,14 @@ textarea {
   line-height: 1.42857142857143;
   border-radius: 2px;
 }
-/* line 47, sass/base/_forms.scss */
+/* line 49, sass/base/_forms.scss */
 input:focus,
 select:focus,
 textarea:focus {
   box-shadow: 0 0 2px 1px rgba(30, 19, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
-  /* line 34, sass/base/_forms.scss */
+  /* line 36, sass/base/_forms.scss */
   input,
   select,
   textarea {
@@ -1099,14 +1127,14 @@ textarea:focus {
   }
 }
 
-/* line 57, sass/base/_forms.scss */
+/* line 59, sass/base/_forms.scss */
 input {
   height: 1.875rem;
   padding: 0 0.5em;
   font-size: 1em;
 }
 
-/* line 65, sass/base/_forms.scss */
+/* line 67, sass/base/_forms.scss */
 input[type="text"],
 input[type="password"],
 input[type="email"] {
@@ -1114,7 +1142,7 @@ input[type="email"] {
   max-width: calc(45ch - 1em);
 }
 
-/* line 72, sass/base/_forms.scss */
+/* line 74, sass/base/_forms.scss */
 select {
   padding: 0 0.5em;
   height: calc(30 / 16 * 1rem);
@@ -1122,27 +1150,27 @@ select {
   box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset;
   cursor: pointer;
 }
-/* line 82, sass/base/_forms.scss */
+/* line 84, sass/base/_forms.scss */
 select:hover {
   border-bottom-style: dashed;
   background-color: #e1dee3;
 }
 
-/* line 90, sass/base/_forms.scss */
+/* line 92, sass/base/_forms.scss */
 textarea {
-  padding: 0.5em 0.75em;
+  padding: calc(7.5 / 16 * 1rem) 0.75em;
   width: 100%;
   min-width: 50%;
-  max-width: calc(45ch + 1.5em);
+  max-width: calc(45ch + 1em);
 }
 @media screen and (min-width: 43em) {
-  /* line 90, sass/base/_forms.scss */
+  /* line 92, sass/base/_forms.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em 0;
   }
 }
 
-/* line 104, sass/base/_forms.scss */
+/* line 105, sass/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: calc(14 / 16 * 1rem);
@@ -1153,7 +1181,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 @media screen and (min-width: 43em) {
-  /* line 104, sass/base/_forms.scss */
+  /* line 105, sass/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
@@ -1161,7 +1189,7 @@ input[type="radio"] {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 104, sass/base/_forms.scss */
+  /* line 105, sass/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
@@ -1171,20 +1199,20 @@ input[type="radio"] {
 /**
  * 1. Sidebar Overrides
  */
-/* line 129, sass/base/_forms.scss */
+/* line 130, sass/base/_forms.scss */
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 129, sass/base/_forms.scss */
+  /* line 130, sass/base/_forms.scss */
   .sidebar input[type="checkbox"],
   .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 
-/* line 138, sass/base/_forms.scss */
+/* line 139, sass/base/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
@@ -1192,7 +1220,7 @@ input[type="radio"] + label {
   float: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 138, sass/base/_forms.scss */
+  /* line 139, sass/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
     width: calc(100% - 1.25em);
@@ -1202,25 +1230,25 @@ input[type="radio"] + label {
 /**
  * 2. Views Module Forms
  */
-/* line 154, sass/base/_forms.scss */
+/* line 155, sass/base/_forms.scss */
 .views-exposed-form .views-submit-button,
 .views-exposed-form .views-reset-button {
   display: inline-block;
 }
 
-/* line 158, sass/base/_forms.scss */
+/* line 159, sass/base/_forms.scss */
 .tertiary-nav-wrapper .views-exposed-form {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
 }
 @media screen and (min-width: 43em) {
-  /* line 158, sass/base/_forms.scss */
+  /* line 159, sass/base/_forms.scss */
   .tertiary-nav-wrapper .views-exposed-form {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 
-/* line 166, sass/base/_forms.scss */
+/* line 167, sass/base/_forms.scss */
 .tertiary-nav-wrapper .views-exposed-widget {
   padding: 0;
 }
@@ -1228,15 +1256,40 @@ input[type="radio"] + label {
 /**
  * 3. Webform Module
  */
-/* line 173, sass/base/_forms.scss */
+/* line 174, sass/base/_forms.scss */
 .webform-client-form label {
   font-weight: normal;
 }
 
-/* line 176, sass/base/_forms.scss */
-.form-item,
-.form-actions {
+/* line 178, sass/base/_forms.scss */
+.webform-client-form .form-item,
+.webform-client-form .form-actions {
   clear: left;
+}
+
+/* line 183, sass/base/_forms.scss */
+.webform-client-form input.year {
+  width: calc(4.1ch + 1em);
+}
+
+/* line 187, sass/base/_forms.scss */
+.webform-container-inline input[type="radio"],
+.webform-container-inline input[type="checkbox"] {
+  margin-right: 0;
+  float: none;
+}
+
+/* line 195, sass/base/_forms.scss */
+.webform-container-inline input + label {
+  margin-right: 1ch;
+  float: none;
+}
+
+/* line 202, sass/base/_forms.scss */
+.resizable-textarea .grippie {
+  width: 100%;
+  min-width: 50%;
+  max-width: calc(45ch + 1em);
 }
 
 /**
@@ -1469,7 +1522,7 @@ a:link,
 .big-fact{
 	hyphens: none;
 }*/
-/* line 220, sass/_base.scss */
+/* line 119, sass/_base.scss */
 .looong-word {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -4195,14 +4248,35 @@ ul.accordion-inner {
  * See the social media icons in the footer, for example.
  */
 /* line 68, sass/modules/_lists.scss */
-.lineup > li {
-  display: inline-block;
+.lineup {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
 }
 
-/* line 72, sass/modules/_lists.scss */
+/*.lineup > li{
+	display: inline-block;
+}*/
+/* line 78, sass/modules/_lists.scss */
 .lineup > li img {
-  max-height: 1rem;
+  height: 3em;
+  margin: 0 0.5ch 1em;
+  width: 3em;
   display: block;
+}
+@media screen and (min-width: 43em) {
+  /* line 78, sass/modules/_lists.scss */
+  .lineup > li img {
+    height: 2em;
+    width: 2em;
+  }
 }
 
 /**
@@ -4210,7 +4284,7 @@ ul.accordion-inner {
  *
  * @subsubsection mod-typography-l-accordion
  */
-/* line 84, sass/modules/_lists.scss */
+/* line 98, sass/modules/_lists.scss */
 .accordion,
 .accordion-table {
   border: 1px solid #c8c1cd;
@@ -4219,22 +4293,22 @@ ul.accordion-inner {
   border-radius: 2px;
 }
 
-/* line 94, sass/modules/_lists.scss */
+/* line 108, sass/modules/_lists.scss */
 .accordion dt a,
 .accordion dd {
   padding: 0.631100639515315em 2%;
 }
 
-/* line 98, sass/modules/_lists.scss */
+/* line 112, sass/modules/_lists.scss */
 .accordion dt {
   border-top: 1px solid #25162f;
   margin-top: 0;
 }
-/* line 102, sass/modules/_lists.scss */
+/* line 116, sass/modules/_lists.scss */
 .accordion dt:first-child {
   border-top-width: 0;
 }
-/* line 106, sass/modules/_lists.scss */
+/* line 120, sass/modules/_lists.scss */
 .accordion dt:hover {
   background-color: #e1dee3;
   border-color: #d0cad4;
@@ -4243,33 +4317,33 @@ ul.accordion-inner {
   transition: background-color .2s ease-out;
 }
 
-/* line 115, sass/modules/_lists.scss */
+/* line 129, sass/modules/_lists.scss */
 .accordion dt a {
   border-bottom-width: 0;
   width: 100%;
   display: block;
 }
 
-/* line 122, sass/modules/_lists.scss */
+/* line 136, sass/modules/_lists.scss */
 .accordion dt a:before {
   margin-right: 2%;
   display: inline-block;
   content: "▶";
 }
 
-/* line 129, sass/modules/_lists.scss */
+/* line 143, sass/modules/_lists.scss */
 .accordion dd {
   margin-bottom: 0;
   background-color: #f2f2f2;
   box-shadow: inset 0 2px 2px #999;
 }
 
-/* line 138, sass/modules/_lists.scss */
+/* line 152, sass/modules/_lists.scss */
 .accordion-table .group {
   font-weight: bold;
   color: #492c5d;
 }
-/* line 142, sass/modules/_lists.scss */
+/* line 156, sass/modules/_lists.scss */
 .accordion-table .group:hover {
   color: #0086ee;
   cursor: pointer;
@@ -4283,7 +4357,7 @@ ul.accordion-inner {
  * @see http://evergreen.edu/studies
  */
 @media screen and (min-width: 20em) {
-  /* line 158, sass/modules/_lists.scss */
+  /* line 172, sass/modules/_lists.scss */
   ul.flexible {
     margin-left: 0;
     -webkit-column-count: 2;
@@ -4296,7 +4370,7 @@ ul.accordion-inner {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 158, sass/modules/_lists.scss */
+  /* line 172, sass/modules/_lists.scss */
   ul.flexible {
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -4305,7 +4379,7 @@ ul.accordion-inner {
 }
 
 @media screen and (min-width: 20em) {
-  /* line 175, sass/modules/_lists.scss */
+  /* line 189, sass/modules/_lists.scss */
   .flexible > li {
     margin: 0 2% 0.46875rem 2%;
     overflow: hidden;
@@ -4313,7 +4387,7 @@ ul.accordion-inner {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 186, sass/modules/_lists.scss */
+  /* line 200, sass/modules/_lists.scss */
   .unit-2-7 .flexible {
     -webkit-column-count: 2;
        -moz-column-count: 2;
@@ -4322,7 +4396,7 @@ ul.accordion-inner {
 }
 
 @media screen and (min-width: 70em) {
-  /* line 192, sass/modules/_lists.scss */
+  /* line 206, sass/modules/_lists.scss */
   .unit-3-7 .flexible {
     -webkit-column-count: 2;
        -moz-column-count: 2;
@@ -4330,7 +4404,7 @@ ul.accordion-inner {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 192, sass/modules/_lists.scss */
+  /* line 206, sass/modules/_lists.scss */
   .unit-3-7 .flexible {
     -webkit-column-count: 3;
        -moz-column-count: 3;
@@ -4343,25 +4417,25 @@ ul.accordion-inner {
  *
  * A list of steps to follow.
  */
-/* line 207, sass/modules/_lists.scss */
+/* line 221, sass/modules/_lists.scss */
 .step-list {
   margin-left: 0;
   counter-reset: li;
   list-style-type: none;
 }
-/* line 214, sass/modules/_lists.scss */
+/* line 228, sass/modules/_lists.scss */
 .step-list > li {
   border-bottom: 1px solid #c8c1cd;
   padding-left: 3em;
   position: relative;
 }
 @media screen and (min-width: 43em) {
-  /* line 214, sass/modules/_lists.scss */
+  /* line 228, sass/modules/_lists.scss */
   .step-list > li {
     padding-left: 4em;
   }
 }
-/* line 225, sass/modules/_lists.scss */
+/* line 239, sass/modules/_lists.scss */
 .step-list > li::before {
   width: .75em;
   counter-increment: li;
@@ -4376,25 +4450,25 @@ ul.accordion-inner {
   content: counter(li) ".";
 }
 @media screen and (min-width: 32em) {
-  /* line 225, sass/modules/_lists.scss */
+  /* line 239, sass/modules/_lists.scss */
   .step-list > li::before {
     font-size: 2.291rem;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 225, sass/modules/_lists.scss */
+  /* line 239, sass/modules/_lists.scss */
   .step-list > li::before {
     width: 1em;
     font-size: 2.782rem;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 225, sass/modules/_lists.scss */
+  /* line 239, sass/modules/_lists.scss */
   .step-list > li::before {
     font-size: 3.146rem;
   }
 }
-/* line 259, sass/modules/_lists.scss */
+/* line 273, sass/modules/_lists.scss */
 .step-list > li p,
 .step-list > li li {
   font-size: 0.875rem;
@@ -4402,7 +4476,7 @@ ul.accordion-inner {
   font-weight: normal;
 }
 @media screen and (min-width: 43em) {
-  /* line 259, sass/modules/_lists.scss */
+  /* line 273, sass/modules/_lists.scss */
   .step-list > li p,
   .step-list > li li {
     font-size: 1.125rem;
@@ -4415,7 +4489,7 @@ ul.accordion-inner {
  *
  * Links with icons attached to them, e.g. PDFs or social media chicklets.
  */
-/* line 277, sass/modules/_lists.scss */
+/* line 291, sass/modules/_lists.scss */
 .link-icon::before,
 .link-icon-alt::before {
   height: 1rem;
@@ -4430,47 +4504,47 @@ ul.accordion-inner {
   content: "";
 }
 
-/* line 295, sass/modules/_lists.scss */
+/* line 309, sass/modules/_lists.scss */
 .link-icon::after {
   margin-left: .5em;
 }
 
-/* line 298, sass/modules/_lists.scss */
+/* line 312, sass/modules/_lists.scss */
 .link-icon-alt::before {
   margin-right: .5em;
 }
 
-/* line 301, sass/modules/_lists.scss */
+/* line 315, sass/modules/_lists.scss */
 .icon-blog::before {
   background-image: url("/_inc/images/icons/external/blog32x32.png");
   content: "Blog";
 }
 
-/* line 307, sass/modules/_lists.scss */
+/* line 321, sass/modules/_lists.scss */
 .icon-facebook::before {
   background-image: url("/_inc/images/icons/external/facebook32x32.png");
   content: "Facebook";
 }
 
-/* line 313, sass/modules/_lists.scss */
+/* line 327, sass/modules/_lists.scss */
 .icon-instagram::before {
   background-image: url("/_inc/images/icons/external/instagram32x32.png");
   content: "Instagram";
 }
 
-/* line 319, sass/modules/_lists.scss */
+/* line 333, sass/modules/_lists.scss */
 .icon-pinterest::before {
   background-image: url("/_inc/images/icons/external/pinterest32x32.png");
   content: "Pinterest";
 }
 
-/* line 325, sass/modules/_lists.scss */
+/* line 339, sass/modules/_lists.scss */
 .icon-twitter::before {
   background-image: url("/_inc/images/icons/external/twitter32x32.png");
   content: "Twitter";
 }
 
-/* line 331, sass/modules/_lists.scss */
+/* line 345, sass/modules/_lists.scss */
 .icon-youtube::before {
   background-image: url("/_inc/images/icons/external/youtube32x32.png");
   content: "YouTube";
@@ -4481,23 +4555,23 @@ ul.accordion-inner {
  *
  * Tag cloud sizing.
  */
-/* line 344, sass/modules/_lists.scss */
+/* line 358, sass/modules/_lists.scss */
 .few {
   font-size: 0.695rem;
   line-height: 1.34831460674157;
 }
-/* line 348, sass/modules/_lists.scss */
+/* line 362, sass/modules/_lists.scss */
 .few a {
   font-weight: normal;
 }
 
-/* line 352, sass/modules/_lists.scss */
+/* line 366, sass/modules/_lists.scss */
 .many {
   font-size: 1.125rem;
   line-height: 1.38888888888889;
 }
 @media screen and (min-width: 125em) {
-  /* line 352, sass/modules/_lists.scss */
+  /* line 366, sass/modules/_lists.scss */
   .many {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
@@ -4509,7 +4583,7 @@ ul.accordion-inner {
  *
  * An index of the letters of the alphabet, for skipping around the page.
  */
-/* line 365, sass/modules/_lists.scss */
+/* line 379, sass/modules/_lists.scss */
 .alpha-label {
   border: 1px solid #d2cad7;
   border-bottom-width: 0;
@@ -4524,7 +4598,7 @@ ul.accordion-inner {
   border-radius: 2px 2px 0 0;
 }
 
-/* line 382, sass/modules/_lists.scss */
+/* line 396, sass/modules/_lists.scss */
 .alpha-index {
   border: 1px solid #d2cad7;
   margin-left: 0;
@@ -4539,7 +4613,7 @@ ul.accordion-inner {
   list-style-type: none;
 }
 @media screen and (min-width: 32em) {
-  /* line 382, sass/modules/_lists.scss */
+  /* line 396, sass/modules/_lists.scss */
   .alpha-index {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4551,19 +4625,19 @@ ul.accordion-inner {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 382, sass/modules/_lists.scss */
+  /* line 396, sass/modules/_lists.scss */
   .alpha-index {
     top: calc(.5em + 1.202rem * 1.46814);
   }
 }
 
-/* line 410, sass/modules/_lists.scss */
+/* line 424, sass/modules/_lists.scss */
 .alpha-label + .alpha-index {
   border-top-left-radius: 0;
   margin-top: -1px;
 }
 
-/* line 414, sass/modules/_lists.scss */
+/* line 428, sass/modules/_lists.scss */
 .alpha-index > li {
   padding: 0 2px;
   display: inline;
@@ -4576,7 +4650,7 @@ ul.accordion-inner {
  *
  * @see http://evergreen.edu/admissions
  */
-/* line 428, sass/modules/_lists.scss */
+/* line 442, sass/modules/_lists.scss */
 .badge-list {
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -4594,19 +4668,19 @@ ul.accordion-inner {
           justify-content: space-around;
   overflow: hidden;
 }
-/* line 435, sass/modules/_lists.scss */
+/* line 449, sass/modules/_lists.scss */
 .badge-list > li {
   margin: 0 1em;
   float: left;
   text-align: center;
 }
 
-/* line 444, sass/modules/_lists.scss */
+/* line 458, sass/modules/_lists.scss */
 .badge {
   max-height: 90px;
 }
 
-/* line 448, sass/modules/_lists.scss */
+/* line 462, sass/modules/_lists.scss */
 .badge-alt {
   max-width: 115px;
 }
@@ -4617,12 +4691,12 @@ ul.accordion-inner {
  * A parent container, whose direct children are zebra-striped.
  * Strictly speaking, this doesn't have to be a list element.
  */
-/* line 461, sass/modules/_lists.scss */
+/* line 475, sass/modules/_lists.scss */
 .zebra-striped > * {
   padding-right: 1em;
   padding-left: 1em;
 }
-/* line 465, sass/modules/_lists.scss */
+/* line 479, sass/modules/_lists.scss */
 .zebra-striped > *:nth-child(odd) {
   background-color: #e4dfe7;
 }
