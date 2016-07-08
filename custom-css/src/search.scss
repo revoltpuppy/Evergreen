@@ -5,14 +5,6 @@
  *
  * Style overrides for the Google search engine results page integrated
  * into Evergreen’s website.
- *
- * @project    The Evergreen State College
- * @version    1.0
- * @package    HTML5 and CSS
- * @author     The Evergreen State College
- * @copyright  2013 by the author
- * @cssdoc     0.2.22
- * @license    Copyrighted
  */
 #___gcse_0 .cse .gsc-control-cse,
 #___gcse_0 .gsc-control-cse{  // search tool wrapper
@@ -23,9 +15,10 @@
 	background-color: transparent;
 }
 
+.gsc-control-cse,
 .gsc-control-cse{
 	font-family: $text-face !important;
-	font-family: "proxima-nova" !important;  // Typekit
+	font-family: "proxima-nova" $text-face !important;  // Typekit
 }
 
 .gsc-control-cse table{
@@ -39,8 +32,8 @@
 .gsc-control-wrapper-cse table.gsc-search-box{
 	margin: 0;
 }
-.gsc-input,
-.gsc-search-button,
+.gsc-input
+.gsc-input:focus,
 .gsc-clear-button{
 	// box model
 	padding: 0;
@@ -63,17 +56,20 @@
 .cse .gsc-search-box .gsc-search-button input.gsc-search-button-v2,
 .gsc-search-box input.gsc-search-button-v2{
 	// box model
+	box-sizing: content-box;
 	height: auto;
   margin: 0;
-  padding: 7px 27px;
+  padding: 7px 4ch;
   width: auto;
   // layout
   display: block;
+  // backgrounds and borders
+  box-shadow: none;
 }
 
 // Sort by
 div.gsc-selected-option-container{
-	padding: 0 1em;
+	padding: 0 3ch 0 1ch;
 	width: auto !important;
 	max-width: none;
 	min-width: 0;
