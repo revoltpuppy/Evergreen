@@ -20,7 +20,7 @@
  */
 .bx-wrapper .bx-viewport { border: 1px solid #00355f; background: black; box-shadow: 0 2px 2px rgba(30, 19, 37, 0.25); /*fix other elements on the page moving (on Chrome)*/ -webkit-transform: translatez(0); -ms-transform: translatez(0); transform: translatez(0); }
 
-.bx-wrapper .bxslider { margin: 0; -webkit-align-items: center; -ms-flex-align: center; -webkit-box-align: center; align-items: center; display: -webkit-flex; display: -ms-flexbox; display: -webkit-box; display: flex; }
+.bx-wrapper .bxslider { margin: 0; -webkit-align-items: center; -ms-flex-align: center; align-items: center; display: -webkit-flex; display: -ms-flexbox; display: flex; }
 
 .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto { position: absolute; bottom: -30px; width: 100%; }
 

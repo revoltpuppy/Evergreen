@@ -104,7 +104,6 @@ Once we can change this in the HTML, we can take this out. */
 	padding-bottom: 5px;
 	border-bottom: 7px solid #64933a;
 	background: #f3f3f3;
-	display:-webkit-box;
 	display:-webkit-flex;
 	display:-ms-flexbox;
 	display:flex;
@@ -167,7 +166,6 @@ html>body #SelectionBox {
 /* ------- Tab Styles ------- */
 
 #Logo {
-	-webkit-box-ordinal-group:1;
 	-webkit-order:0;
 	    -ms-flex-order:0;
 	        order:0;
@@ -180,7 +178,6 @@ html>body #SelectionBox {
 }
 
 #Tabs {
-	-webkit-box-ordinal-group:2;
 	-webkit-order:1;
 	    -ms-flex-order:1;
 	        order:1;
@@ -188,7 +185,6 @@ html>body #SelectionBox {
 }
 
 #SuperTabs {
-	-webkit-box-ordinal-group:4;
 	-webkit-order:3;
 	    -ms-flex-order:3;
 	        order:3;
@@ -199,7 +195,6 @@ html>body #SelectionBox {
 }
 
 #ContactName {
-	-webkit-box-ordinal-group: 3;
 	-webkit-order: 2;
 	    -ms-flex-order: 2;
 	        order: 2;

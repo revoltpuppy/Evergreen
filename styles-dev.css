@@ -231,16 +231,12 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -690,7 +686,6 @@ a,
   color: #492c5d;
   font-weight: bold;
   text-decoration: none;
-  -webkit-transition: color .2s, border-color .2s ease;
   transition: color .2s, border-color .2s ease;
 }
 
@@ -1413,7 +1408,6 @@ input[type="submit"] {
   font-weight: normal;
   text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
   background-color: #d0cad4;
-  background-image: -webkit-linear-gradient(rgba(191, 175, 151, 0.575), #b7adbe);
   background-image: linear-gradient(rgba(191, 175, 151, 0.575), #b7adbe);
   border-radius: .2em;
   box-shadow: 0 0.2em 0.2em rgba(30, 19, 37, 0.25);
@@ -1436,7 +1430,6 @@ input[type="button"]:hover,
 input[type="submit"]:hover {
   color: #2c1a38;
   background-color: #e1dee3;
-  background-image: -webkit-linear-gradient(rgba(228, 217, 170, 0.525), #c8c1cd);
   background-image: linear-gradient(rgba(228, 217, 170, 0.525), #c8c1cd);
   border-color: #8d7b99;
 }
@@ -1456,7 +1449,6 @@ button:active,
 input[type="button"]:active,
 input[type="submit"]:active {
   background-color: #8d7b99;
-  background-image: -webkit-linear-gradient(#8d7b99, rgba(133, 111, 123, 0.7));
   background-image: linear-gradient(#8d7b99, rgba(133, 111, 123, 0.7));
   box-shadow: inset 0 0.1em 0.2em rgba(0, 0, 0, 0.25);
 }
@@ -1477,7 +1469,6 @@ input.prime,
   color: white;
   text-shadow: 0 -1px 0 rgba(30, 19, 37, 0.25);
   background-color: #64933a;
-  background-image: -webkit-linear-gradient(#a1ba6c, #64933a);
   background-image: linear-gradient(#a1ba6c, #64933a);
 }
 
@@ -1489,7 +1480,6 @@ input.prime:hover,
   color: #46502b;
   text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
   background-color: #83a961;
-  background-image: -webkit-linear-gradient(#c0cd84, #83a961);
   background-image: linear-gradient(#c0cd84, #83a961);
 }
 
@@ -1505,7 +1495,6 @@ input.prime:focus,
 input.prime:active,
 .webform-client-form .button-primary:active {
   background-color: #a2be89;
-  background-image: -webkit-linear-gradient(#64933a, #83a653);
   background-image: linear-gradient(#64933a, #83a653);
 }
 
@@ -1617,14 +1606,12 @@ a:link,
 .grid,
 .grid.element-list {
   margin-left: -1em;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1637,7 +1624,6 @@ a:link,
 
 /* line 46, sass/layout/_grid.scss */
 .grid-alt {
-  -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -1988,7 +1974,6 @@ a:link,
 }
 /* line 49, sass/_layout.scss */
 .wrapper.grid, .wrapper.grid-alt {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -2016,7 +2001,6 @@ a:link,
 [role="banner"],
 body > div + header,
 .header-nav-wrapper {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -2032,8 +2016,6 @@ body > div + header,
   [role="banner"],
   body > div + header,
   .header-nav-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
     -webkit-flex-direction: row-reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
@@ -2042,7 +2024,6 @@ body > div + header,
 
 /* line 87, sass/_layout.scss */
 .page-header {
-  -webkit-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
 }
 @media screen and (min-width: 43em) {
@@ -2543,14 +2524,12 @@ input[name="header-toggle"] {
 input + .header-dropdown {
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: .5s all ease;
   transition: .5s all ease;
 }
 
 /* line 50, sass/modules/_header.scss */
 input:checked + .header-dropdown {
   max-height: 8em;
-  -webkit-transition: .5s all ease;
   transition: .5s all ease;
 }
 
@@ -2888,11 +2867,9 @@ li.internal-users-alt img {
 @media screen and (min-width: 20em) {
   /* line 338, sass/modules/_header.scss */
   .top-nav-list {
-    -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -2913,16 +2890,13 @@ li.internal-users-alt img {
   /* line 365, sass/modules/_header.scss */
   .top-nav-list > li {
     border-left: 1px solid #333;
-    -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
     display: inline-block;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -2937,7 +2911,6 @@ li.internal-users-alt img {
   /* line 365, sass/modules/_header.scss */
   .top-nav-list > li {
     width: 20%;
-    -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -2966,7 +2939,6 @@ li.internal-users-alt img {
   background-color: #92809e;
   color: white;
   box-shadow: 0 0 1px rgba(253, 244, 182, 0.5) inset, 0 0 1em rgba(253, 244, 182, 0) inset;
-  -webkit-transition: all .1s ease-out;
   transition: all .1s ease-out;
 }
 /* line 424, sass/modules/_header.scss */
@@ -2979,15 +2951,12 @@ li.internal-users-alt img {
   .top-nav-link,
   .secondary-nav-link {
     padding: 0.46875rem 0.25rem;
-    -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -3059,7 +3028,6 @@ li.internal-users-alt img {
 @media screen and (min-width: 20em) {
   /* line 473, sass/modules/_header.scss */
   .secondary-nav-list {
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -3081,7 +3049,6 @@ li.internal-users-alt img {
 @media screen and (min-width: 22em) {
   /* line 473, sass/modules/_header.scss */
   .secondary-nav-list {
-    -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -3115,7 +3082,6 @@ li.internal-users-alt img {
   .secondary-nav-list > li {
     margin: 0;
     width: 25%;
-    -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -3131,7 +3097,6 @@ li.internal-users-alt img {
   .secondary-nav-list > li {
     width: auto;
     display: inline-block;
-    -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -3185,7 +3150,6 @@ li.internal-users-alt img {
   background-color: #92809e;
   color: white;
   box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
-  -webkit-transition: all .1s ease-out;
   transition: all .1s ease-out;
 }
 /* line 607, sass/modules/_header.scss */
@@ -3412,12 +3376,9 @@ li.internal-users-alt img {
 @media screen and (min-width: 20em) {
   /* line 100, sass/modules/_homepage-hero.scss */
   .homepage-hero-content {
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
@@ -3429,7 +3390,6 @@ li.internal-users-alt img {
 @media screen and (min-width: 25em) {
   /* line 100, sass/modules/_homepage-hero.scss */
   .homepage-hero-content {
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -3456,7 +3416,6 @@ li.internal-users-alt img {
 
 /* line 136, sass/modules/_homepage-hero.scss */
 .homepage-hero-content-grad {
-  -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -3620,67 +3579,59 @@ li.internal-users-alt img {
   }
 }
 
-/* line 117, sass/_modules.scss */
-.profile-list > li {
-  overflow: hidden;
+/*.profile-list > li{  // deprecated
+	// layout
+	overflow: hidden;
+	// position
   position: relative;
 }
 
-/* line 124, sass/_modules.scss */
-.profile-list .profile-img-link {
+.profile-list .profile-img-link{
+  // layout
   display: block;
   overflow: hidden;
 }
 
-/* line 130, sass/_modules.scss */
-.profile-list .box {
-  margin-top: 0;
-  margin-bottom: 0;
+.profile-list .box{
+	// box model
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
-/* line 136, sass/_modules.scss */
-.profile-img {
-  margin-left: -50%;
+.profile-img{
+	// box model
+	margin-left: -50%;
   width: 200%;
   max-width: 685px;
+  // layout
   display: block;
-}
-@media screen and (min-width: 20em) {
-  /* line 136, sass/_modules.scss */
-  .profile-img {
+  
+  @include breakpoint($lil-groot){
     margin-left: -25%;
     width: 150%;
   }
-}
-@media screen and (min-width: 32em) {
-  /* line 136, sass/_modules.scss */
-  .profile-img {
+  
+  @include breakpoint($starlord){
     margin-left: 0%;
     width: 100%;
   }
-}
-@media screen and (min-width: 43em) {
-  /* line 136, sass/_modules.scss */
-  .profile-img {
+  
+  @include breakpoint($gamora){
     width: 120%;
     margin-left: -10%;
   }
-}
-@media screen and (min-width: 60em) {
-  /* line 136, sass/_modules.scss */
-  .profile-img {
+  
+  @media screen and (min-width: 60em){
     width: 100%;
     margin-left: 0%;
   }
 }
-
-/* line 164, sass/_modules.scss */
-.profile-list .box {
-  margin-top: -1.40625rem;
+.profile-list .box{
+	margin-top: -1.40625rem;  //22.5/16
+  //margin-top: -2.142857142857143em;  //30/14
   position: absolute;
   bottom: 0;
-}
-
+}*/
 /**
  * D. Tertiary Nav
  */
@@ -3898,7 +3849,6 @@ li.internal-users-alt img {
 
 /* line 195, sass/modules/_tertiary-nav.scss */
 [name="accordion-group"] + .accordion-h label::before {
-  -webkit-transition: -webkit-transform .1s linear;
   transition: -webkit-transform .1s linear;
   transition: transform .1s linear;
   transition: transform .1s linear, -webkit-transform .1s linear;
@@ -3909,7 +3859,6 @@ li.internal-users-alt img {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
-  -webkit-transition: -webkit-transform .1s linear;
   transition: -webkit-transform .1s linear;
   transition: transform .1s linear;
   transition: transform .1s linear, -webkit-transform .1s linear;
@@ -3973,7 +3922,6 @@ li.internal-users-alt img {
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.25);
   box-shadow: 0 2px 2px rgba(30, 19, 37, 0.25) inset;
-  -webkit-transition: max-height .25s ease 0s;
   transition: max-height .25s ease 0s;
 }
 @media screen and (min-width: 43em) {
@@ -4000,8 +3948,7 @@ li.internal-users-alt img {
 /* line 277, sass/modules/_tertiary-nav.scss */
 [name="accordion-group"]:checked ~ .accordion-body {
   max-height: 500px;
-  -webkit-transition-duration: .75s;
-          transition-duration: .75s;
+  transition-duration: .75s;
 }
 @media screen and (min-width: 43em) {
   /* line 277, sass/modules/_tertiary-nav.scss */
@@ -4285,7 +4232,6 @@ ul.accordion-inner {
  */
 /* line 68, sass/modules/_lists.scss */
 .lineup {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4349,7 +4295,6 @@ ul.accordion-inner {
   background-color: #e1dee3;
   border-color: #d0cad4;
   border-top-color: #311d3e;
-  -webkit-transition: background-color .2s ease-out;
   transition: background-color .2s ease-out;
 }
 
@@ -4651,7 +4596,6 @@ ul.accordion-inner {
 @media screen and (min-width: 32em) {
   /* line 396, sass/modules/_lists.scss */
   .alpha-index {
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -4688,11 +4632,9 @@ ul.accordion-inner {
  */
 /* line 442, sass/modules/_lists.scss */
 .badge-list {
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4826,7 +4768,6 @@ ul.accordion-inner {
   text-align: center;
   background-color: #64933a;
   border-radius: 50%;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 @media screen and (min-width: 22em) {
@@ -4854,7 +4795,6 @@ ul.accordion-inner {
   -webkit-transform: scale(0.6);
       -ms-transform: scale(0.6);
           transform: scale(0.6);
-  -webkit-transition: -webkit-transform .1s ease;
   transition: -webkit-transform .1s ease;
   transition: transform .1s ease;
   transition: transform .1s ease, -webkit-transform .1s ease;
@@ -4880,7 +4820,6 @@ ul.accordion-inner {
 .media {
   clear: left;
   display: block;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4927,7 +4866,6 @@ ul.accordion-inner {
 
 /* line 51, sass/modules/_media-segment.scss */
 .media-body {
-  -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -4946,8 +4884,6 @@ ul.accordion-inner {
 
 /* line 67, sass/modules/_media-segment.scss */
 .media-alt {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
   -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
@@ -4963,12 +4899,9 @@ ul.accordion-inner {
 /* line 76, sass/modules/_media-segment.scss */
 .media-column,
 .media-squishy {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: stretch;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
               -ms-grid-row-align: stretch;
@@ -4991,12 +4924,9 @@ ul.accordion-inner {
 @media screen and (min-width: 32em) {
   /* line 93, sass/modules/_media-segment.scss */
   .media-squishy {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
                 -ms-grid-row-align: stretch;
@@ -5054,16 +4984,12 @@ ul.accordion-inner {
 /* line 15, sass/modules/_spread-segment.scss */
 .spread {
   margin: 4.28571428571429em auto;
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -5071,8 +4997,6 @@ ul.accordion-inner {
 @media screen and (min-width: 70em) {
   /* line 15, sass/modules/_spread-segment.scss */
   .spread {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
@@ -5268,7 +5192,6 @@ p.alert {
   width: 100%;
   border-radius: 0;
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
-  -webkit-transition: all .5s ease-in;
   transition: all .5s ease-in;
 }
 
@@ -5741,7 +5664,6 @@ p.alert {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -5764,7 +5686,6 @@ p.alert {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -5875,12 +5796,9 @@ p.alert {
 /* line 276, sass/modules/_calendars.scss */
 .schedule .h-event {
   padding: 1em;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -5974,7 +5892,6 @@ p.alert {
 
 /* line 377, sass/modules/_calendars.scss */
 .bulletin .grid {
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
               -ms-grid-row-align: center;
@@ -6015,11 +5932,9 @@ p.alert {
 /* line 408, sass/modules/_calendars.scss */
 .chrono-meter {
   width: 100%;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -6029,8 +5944,6 @@ p.alert {
   .chrono-meter {
     margin-right: 1em;
     width: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
@@ -6043,12 +5956,9 @@ p.alert {
   .chrono-meter {
     margin-right: 0;
     width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -6098,7 +6008,6 @@ p.alert {
 @media screen and (min-width: 43em) {
   /* line 471, sass/modules/_calendars.scss */
   .bulletin-calendar {
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -6375,15 +6284,12 @@ p.alert {
 .calendar-calendar .day-view .full td.single-day {
   height: inherit;
   margin-bottom: inherit;
-  -webkit-box-align: stretch;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: stretch;
   -webkit-justify-content: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
@@ -6523,15 +6429,12 @@ p.alert {
 .calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents {
   border-top: 1px solid #d0cad4;
   width: auto;
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -6565,11 +6468,9 @@ p.alert {
   height: inherit;
   padding: 0 0.25em 0 0;
   width: auto;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -6849,15 +6750,12 @@ p.alert {
 .lazy-load::after {
   height: 100%;
   width: 100%;
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -6983,7 +6881,6 @@ p.alert {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
-  -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
 
