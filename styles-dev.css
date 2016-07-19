@@ -1242,19 +1242,35 @@ input[type="radio"] + label {
   display: inline-block;
 }
 
-/* line 5, sass/base/forms/_drupal-views.scss */
+/* line 6, sass/base/forms/_drupal-views.scss */
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: calc(20 / 16 * 1rem);
+}
+@media screen and (min-width: 43em) {
+  /* line 6, sass/base/forms/_drupal-views.scss */
+  .views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: calc(22.5 / 16 * 1rem);
+  }
+}
+
+/* line 14, sass/base/forms/_drupal-views.scss */
+.views-widget-filter-combine input {
+  margin-bottom: 0;
+}
+
+/* line 18, sass/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-form {
   margin: 0.535714285714286em 0 1.071428571428571em 0;
 }
 @media screen and (min-width: 43em) {
-  /* line 5, sass/base/forms/_drupal-views.scss */
+  /* line 18, sass/base/forms/_drupal-views.scss */
   .tertiary-nav-wrapper .views-exposed-form {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 
-/* line 13, sass/base/forms/_drupal-views.scss */
+/* line 26, sass/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-widget {
   padding: 0;
 }
@@ -4238,9 +4254,6 @@ ul.accordion-inner {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
 }
 
 /*.lineup > li{
@@ -4249,7 +4262,7 @@ ul.accordion-inner {
 /* line 78, sass/modules/_lists.scss */
 .lineup > li img {
   height: 3em;
-  margin: 0 0.5ch 1em;
+  margin: 0 1ch 1em 0;
   width: 3em;
   display: block;
 }
