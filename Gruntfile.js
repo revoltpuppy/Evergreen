@@ -21,38 +21,48 @@ module.exports = function(grunt) {
 		 * Copy files from one directory to another.
 		 */
 		copy: {
-		  to_drupal: {
-		    files: [
-		      {
-			      expand: true,
-			      src: 'styles.css',
-			      dest: '../www-drupal/themes/wwwevergreen/css/build/',
-			      /*rename: function(dest){
-				      return dest + 'screen.css';
-			      },*/
-			      filter: 'isFile',  // Make sure it's a file, not a directory or something else (I think)
-		      },
-		      {
-			      expand: true,
-			      cwd: 'custom-css/build/',
-			      src: 'ckeditor.css',
-			      dest: '../www-drupal/themes/wwwevergreen/css/build/',
-			      filter: 'isFile',
-		      },
-		      
-		      /*// includes files within path
-		      {expand: true, src: ['path/*'], dest: 'dest/', filter: 'isFile'},
-		
-		      // includes files within path and its sub-directories
-		      {expand: true, src: ['path/**'], dest: 'dest/'},
-		
-		      // makes all src relative to cwd
-		      {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
-		
-		      // flattens results to a single level
-		      {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'},*/
+			to_drupal: {
+				files: [
+					{
+						expand: true,
+						src: 'styles.css',
+						dest: '../www-drupal/themes/wwwevergreen/css/build/',
+						/*rename: function(dest){
+							return dest + 'screen.css';
+						},*/
+						filter: 'isFile',	 // Make sure it's a file, not a directory or something else (I think)
+					},
+					{
+						expand: true,
+						cwd: 'custom-css/build/',
+						src: 'ckeditor.css',
+						dest: '../www-drupal/themes/wwwevergreen/css/build/',
+						filter: 'isFile',
+					},
+					
+					/*// includes files within path
+					{expand: true, src: ['path/*'], dest: 'dest/', filter: 'isFile'},
+					
+					// includes files within path and its sub-directories
+					{expand: true, src: ['path/**'], dest: 'dest/'},
+					
+					// makes all src relative to cwd
+					{expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
+					
+					// flattens results to a single level
+					{expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'},*/
 		    ],
 		  },
+		  to_banner: {
+			  files: [
+				  {
+			      expand: true,
+			      src: '_tools.scss',
+			      dest: '../themes/banner/css/src/',
+			      filter: 'isFile',  // Make sure it's a file, not a directory or something else (I think)
+		      },
+			  ]
+		  }
 		},
 		
 		imagemin: {                          // Task
@@ -262,6 +272,10 @@ module.exports = function(grunt) {
 			gruntfile: {  // Validate Gruntfile.
 				files: 'Gruntfile.js',
 				tasks: ['jshint'],
+			},
+			tools: {  // Copy latest version of _tools to Banner theme
+				files: '_tools.scss',
+				tasks: ['copy:to_banner']
 			},
 			css: {  // Autoprefix, then process Sass into CSS.
 				files: ['styles.scss', 'print.scss', 'sass/**/*.scss', 'custom-css/src/*.scss'],
