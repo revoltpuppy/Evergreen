@@ -68,7 +68,7 @@
 .lineup{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	//justify-content: space-around;
 }
 
 /*.lineup > li{
@@ -78,7 +78,7 @@
 .lineup > li img{
 	//box model
 	height: 3em;
-	margin: 0 0.5ch 1em;
+	margin: 0 1ch 1em 0;
 	width: 3em;
 	//max-width: calc(100% - 1ch);
 	//layout
