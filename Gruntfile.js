@@ -4,6 +4,18 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		
+		/**
+		 * Concatenate files.
+		 */
+		concat: {
+			options: {
+				separator: ';',
+			},
+			scripts: {
+				src: ['js/src/events.js', 'scripts.js'],
+				dest: 'js/build/scripts-dev.js',
+			},
+		},
 		
 		/**
 		 * Copy files from one directory to another.
@@ -63,7 +75,7 @@ module.exports = function(grunt) {
 		 */
 		jshint: {
 			Gruntfile: ['Gruntfile.js'],
-			scripts: ['scripts.js']
+			scripts: ['js/src/*.js']
 		},
 		
 		/**
@@ -238,7 +250,7 @@ module.exports = function(grunt) {
 				//banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
 			//},
 			scripts: {
-				src: 'scripts.js',
+				src: 'js/build/scripts-dev.js',
 				dest: 'js/build/scripts.min.js'
 			}
 		},
@@ -255,15 +267,16 @@ module.exports = function(grunt) {
 				files: ['styles.scss', 'print.scss', 'sass/**/*.scss', 'custom-css/src/*.scss'],
 				tasks: ['sass', 'postcss', 'copy:to_drupal']
 			},
-			js: {  // Uglify JavaScript.
-				files: ['scripts.js'],
-				tasks: ['jshint', 'uglify']
+			js: {  // Concatenate and uglify JavaScript.
+				files: ['js/src/*.js'],
+				tasks: ['jshint', 'newer:concat', 'newer:uglify']
 			},
 		},
     
 	});
 
 	// Load the plugins (alphabetical order).
+	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -277,6 +290,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s) (in the order you want to run them).
-	grunt.registerTask('default', ['sass', 'postcss', 'newer:uglify', 'copy']);
+	grunt.registerTask('default', ['sass', 'postcss', 'newer:concat', 'newer:uglify', 'copy']);
 
 };

@@ -13,15 +13,15 @@ var allPanels = $('.accordion > dd').hide();  //Hide all accordion panels, but..
 //console.log("Panels hidden.");
 var defaultPanel = $(".is-expanded").parent().next().show();  //Show default accordion panel
 $('.accordion > dt > a').click(function(event) {
-    event.preventDefault();
-    allPanels.slideUp();
-    if($(this).hasClass("is-expanded")){
-        allPanels.prev().children("a").removeClass("is-expanded");
-    } else {
-        allPanels.prev().children("a").removeClass("is-expanded");
-        $(this).addClass("is-expanded").parent().next().slideDown();
-    }
-    return false;
+  event.preventDefault();
+  allPanels.slideUp();
+  if($(this).hasClass("is-expanded")){
+      allPanels.prev().children("a").removeClass("is-expanded");
+  } else {
+      allPanels.prev().children("a").removeClass("is-expanded");
+      $(this).addClass("is-expanded").parent().next().slideDown();
+  }
+  return false;
 });
 
 /**
