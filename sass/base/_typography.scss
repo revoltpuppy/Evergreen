@@ -339,7 +339,7 @@ a,
 .search-tools a:visited,
 .tertiary-nav-list a:visited{
 	//box model
-	border-bottom: 1px solid mix(white, $blueberry-susan, 75);
+	border-bottom: 1px solid mix(white, $blueberry-susan, 75%);
 	//typography
 	color: $blueberry-susan;
 	font-weight: bold;
@@ -347,7 +347,7 @@ a,
 	transition: color .2s, border-color .2s ease;
 }
 a:visited{
-    border-bottom-color: mix(white, $wine, 75);
+    border-bottom-color: mix(white, $wine, 75%);
     color: $wine;
 }
 a:hover,
@@ -360,7 +360,7 @@ a:hover,
 a:focus,
 a:active{
   outline-width: 0;
-  background-color: transparentize($blueberry-susan, .9);
+  background-color: transparentize($blueberry-susan, 0.9);
 }
 
 	/**
@@ -455,6 +455,18 @@ abbr{
 	text-decoration: none;
 	// misc
 	cursor: help;
+}
+
+q{
+	quotes: "“" "”" "‘" "’";
+}
+
+q::before{
+	content: open-quote;
+}
+
+q::after{
+	content: close-quote;
 }
 
 code,
