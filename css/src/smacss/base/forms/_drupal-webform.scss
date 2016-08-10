@@ -1,11 +1,10 @@
-
 .webform-client-form label{
 	font-weight: normal;
 }
 
 .webform-client-form .description{
 	// box model
-	margin: calc(7.5 / 11.12 * 1em) 0 calc(15 / 11.12 * 1em);
+	margin: calc(15 / 11.12 * -1em) 0 calc(22.5 / 11.12 * 1em);
 	// typography
 	@include small-type;
 	
@@ -20,7 +19,15 @@
 
 .webform-client-form .form-item,
 .webform-client-form .form-actions{
+	// box model
+	//@include margin-default;
+	margin: 0;
+	// layout
 	clear:left;
+	
+	/*@include breakpoint($gamora){
+		@include margin-default-lg;
+	}*/
 }
 
 .webform-client-form input.year{  // input is specified because sometimes select boxes can be years, and their width should be auto
@@ -33,6 +40,10 @@
 	margin-right: 0;
 	// layout
 	float: none;
+}
+
+.webform-container-inline input{
+	margin-right: 0;
 }
 
 .webform-container-inline input + label{

@@ -16,17 +16,23 @@
  */
 fieldset{
 	border-width: 0;
-	margin: 0;
+	margin: calc(30 / 16 * 1rem) 0;
 	padding: 0;
 }
 
 legend{
 	// box model
+	@include margin-default;
 	padding: 0;
 	// layout
 	display: table;  // Allows line-wrapping in IE.
 	// typography
-	font-style: italic;
+	text-transform: uppercase;
+	letter-spacing: 0.25ch;
+	
+	@include breakpoint($gamora){
+		@include margin-default-lg;
+	}
 }
 
 label{
@@ -38,7 +44,7 @@ select,
 textarea{
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 60%);
-	margin-bottom: 1.262201279030629em;  // 15/11.884
+	margin-bottom: calc(15 / 16 * 1rem);
 	max-width: 100%;
 	//typography
 	font-family: $text-face;

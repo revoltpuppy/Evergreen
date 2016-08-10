@@ -78,38 +78,6 @@
  *
  * @see http://www.modularscale.com/?17,345&px&1.618&web&text
  */
-/* Step #    Pixels     Ems    Rems
- *     18   903.184  53.128  56.449
- *     17   798.512  46.971  49.907
- *     16   558.210  32.836  34.888
- *     15   493.518  29.030  30.845
- *     14   345.000  20.294  21.563
- *     13   305.017  17.942  19.064
- *     12   213.226  12.543  13.327
- *     11   188.515  11.089  11.782
- *     10   131.784   7.752   8.237
- *      9   116.511   6.854   7.282
- *      8    81.449   4.791   5.091
- *      7    72.009   4.236   4.501
- *      6    50.339   2.961   3.146
- *      5    44.505   2.618   2.782
- *      4    31.112   1.830   1.945
- *      3    27.506   1.618   1.719
- *      2    19.229   1.131   1.202
- *      1    17.000   1       1.063*
- *      0.5  14.000   0.824   0.875  Fudged for better readability, especially on mobile.
- *     -1    11.884   0.699   0.743
- *     -2    10.507   0.618   0.657
- *     -3     7.345   0.432   0.459
- *     -4     6.494   0.382   0.406
- *     -5     4.540   0.267   0.284
- *     -6     4.014   0.236   0.251
- *     -7     2.806   0.165   0.175
- *     -8     2.481   0.146   0.155
- *     -9     1.734   0.102   0.108
- *    -10     1.533   0.090   0.096
- *    -11     1.072   0.063   0.067
- */
 /**
  * New Modular Scale
  *
@@ -1093,42 +1061,50 @@ table a {
 /* line 17, ../src/smacss/base/_forms.scss */
 fieldset {
   border-width: 0;
-  margin: 0;
+  margin: calc(30 / 16 * 1rem) 0;
   padding: 0;
 }
 
 /* line 23, ../src/smacss/base/_forms.scss */
 legend {
+  margin: 0.535714285714286em 0 1.071428571428571em 0;
   padding: 0;
   display: table;
-  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.25ch;
+}
+@media screen and (min-width: 43em) {
+  /* line 23, ../src/smacss/base/_forms.scss */
+  legend {
+    margin: 0.41666666666667em 0 0.83333333333333em 0;
+  }
 }
 
-/* line 32, ../src/smacss/base/_forms.scss */
+/* line 38, ../src/smacss/base/_forms.scss */
 label {
   display: inline;
 }
 
-/* line 36, ../src/smacss/base/_forms.scss */
+/* line 42, ../src/smacss/base/_forms.scss */
 input,
 select,
 textarea {
   border: 1px solid #aea3b6;
-  margin-bottom: 1.262201279030629em;
+  margin-bottom: calc(15 / 16 * 1rem);
   max-width: 100%;
   font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.42857142857143;
   border-radius: 2px;
 }
-/* line 49, ../src/smacss/base/_forms.scss */
+/* line 55, ../src/smacss/base/_forms.scss */
 input:focus,
 select:focus,
 textarea:focus {
   box-shadow: 0 0 2px 1px rgba(30, 19, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
-  /* line 36, ../src/smacss/base/_forms.scss */
+  /* line 42, ../src/smacss/base/_forms.scss */
   input,
   select,
   textarea {
@@ -1137,33 +1113,33 @@ textarea:focus {
   }
 }
 
-/* line 59, ../src/smacss/base/_forms.scss */
+/* line 65, ../src/smacss/base/_forms.scss */
 input {
   height: 1.875rem;
   padding: 0 0.5em;
   font-size: 1em;
 }
 
-/* line 67, ../src/smacss/base/_forms.scss */
+/* line 73, ../src/smacss/base/_forms.scss */
 input[type="text"] {
   width: 100%;
   max-width: calc(45ch + 1em);
 }
 
-/* line 72, ../src/smacss/base/_forms.scss */
+/* line 78, ../src/smacss/base/_forms.scss */
 input[type="email"] {
   width: 100%;
   max-width: calc(30ch + 1em);
 }
 
-/* line 77, ../src/smacss/base/_forms.scss */
+/* line 83, ../src/smacss/base/_forms.scss */
 input[type="password"],
 input[type="tel"] {
   width: 100%;
   max-width: calc(15ch + 1em);
 }
 
-/* line 83, ../src/smacss/base/_forms.scss */
+/* line 89, ../src/smacss/base/_forms.scss */
 select {
   padding: 0 0.5em;
   height: calc(30 / 16 * 1rem);
@@ -1171,13 +1147,13 @@ select {
   box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset;
   cursor: pointer;
 }
-/* line 93, ../src/smacss/base/_forms.scss */
+/* line 99, ../src/smacss/base/_forms.scss */
 select:hover {
   border-bottom-style: dashed;
   background-color: #e1dee3;
 }
 
-/* line 101, ../src/smacss/base/_forms.scss */
+/* line 107, ../src/smacss/base/_forms.scss */
 textarea {
   padding: calc(7.5 / 16 * 1rem) 0.75em;
   width: 100%;
@@ -1185,13 +1161,13 @@ textarea {
   max-width: calc(45ch + 1em);
 }
 @media screen and (min-width: 43em) {
-  /* line 101, ../src/smacss/base/_forms.scss */
+  /* line 107, ../src/smacss/base/_forms.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em 0;
   }
 }
 
-/* line 114, ../src/smacss/base/_forms.scss */
+/* line 120, ../src/smacss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: calc(14 / 16 * 1rem);
@@ -1202,7 +1178,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 @media screen and (min-width: 43em) {
-  /* line 114, ../src/smacss/base/_forms.scss */
+  /* line 120, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
@@ -1210,7 +1186,7 @@ input[type="radio"] {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 114, ../src/smacss/base/_forms.scss */
+  /* line 120, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
@@ -1220,20 +1196,20 @@ input[type="radio"] {
 /**
  * 1. Sidebar Overrides
  */
-/* line 139, ../src/smacss/base/_forms.scss */
+/* line 145, ../src/smacss/base/_forms.scss */
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 139, ../src/smacss/base/_forms.scss */
+  /* line 145, ../src/smacss/base/_forms.scss */
   .sidebar input[type="checkbox"],
   .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 
-/* line 148, ../src/smacss/base/_forms.scss */
+/* line 154, ../src/smacss/base/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
@@ -1241,7 +1217,7 @@ input[type="radio"] + label {
   float: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 148, ../src/smacss/base/_forms.scss */
+  /* line 154, ../src/smacss/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
     width: calc(100% - 1.25em);
@@ -1293,20 +1269,20 @@ input[type="radio"] + label {
 /**
  * 3. Webform Module
  */
-/* line 2, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 1, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form label {
   font-weight: normal;
 }
 
-/* line 6, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 5, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .description {
-  margin: calc(7.5 / 11.12 * 1em) 0 calc(15 / 11.12 * 1em);
+  margin: calc(15 / 11.12 * -1em) 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
   line-height: 1.34831460674157;
 }
 @media screen and (min-width: 43em) {
-  /* line 6, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 5, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .description {
     margin: 0.535714285714286em 0 1.071428571428571em 0;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1315,31 +1291,40 @@ input[type="radio"] + label {
   }
 }
 
-/* line 21, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 20, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .form-item,
 .webform-client-form .form-actions {
+  margin: 0;
   clear: left;
+  /*@include breakpoint($gamora){
+  	@include margin-default-lg;
+  }*/
 }
 
-/* line 26, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input.year {
   width: calc(4.1ch + 1em);
 }
 
-/* line 30, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 37, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input[type="radio"],
 .webform-container-inline input[type="checkbox"] {
   margin-right: 0;
   float: none;
 }
 
-/* line 38, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 45, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-container-inline input {
+  margin-right: 0;
+}
+
+/* line 49, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input + label {
   margin-right: 1ch;
   float: none;
 }
 
-/* line 45, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 56, ../src/smacss/base/forms/_drupal-webform.scss */
 .resizable-textarea .grippie {
   width: 100%;
   min-width: 50%;
