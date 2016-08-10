@@ -6,7 +6,7 @@
 	width: device-width;
 }
 //@import "compass";
-@import "sass/css-header";  //Just for funsies
+@import "smacss/css-header";  //Just for funsies
 /*!*
  * View the source and fork these styles on Github:
  *
@@ -35,10 +35,10 @@
 
 @import "tools";  //constants, mixins, functions, etc.
 
-@import "sass/base";
-@import "sass/layout";
-@import "sass/modules";
-@import "sass/states";
+@import "smacss/base";
+@import "smacss/layout";
+@import "smacss/modules";
+@import "smacss/states";
 
 /**
  * Appendix A

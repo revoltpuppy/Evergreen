@@ -1,0 +1,210 @@
+/*!*
+ * View the source and fork these styles on Github:
+ *
+ * @see https://github.com/revoltpuppy/Evergreen
+ */
+/**
+ * Print Styles
+ *
+ * Print styles for the 2013 Evergreen template.
+ *
+ * To make something not printable, use the class .do-not-print.
+ *
+ * Styles in this file are organized according to the SMACSS principles:
+ * http://smacss.com/
+ *
+ * @project    The Evergreen State College
+ * @package    HTML 5 and CSS
+ * @author     The Evergreen State College
+ * @copyright  2013 by the author
+ * @cssdoc     0.2.22
+ * @license    Copyrighted
+ 
+ * Table of Contents
+ *
+ * 1. Base Styles ................... (base)
+ * 2. Layout Styles ................. (layout)
+ * 3. Module Styles ................. (module)
+ * 4. State Styles .................. (states)
+ */
+/**
+ * 1. Base Styles
+ *
+ * @section base
+ * @see http://smacss.com/book/type-base
+ */
+/* line 38, ../src/print.scss */
+body {
+  margin: 0 auto;
+  display: block;
+}
+
+/*a::after{
+	//typography
+	font-size: .657rem;
+	line-height: 1.427619682116684;  //15/10.507
+	    word-wrap: break-word;  //IE, Firefox
+	overflow-wrap: break-word;
+	//misc
+	content: " (" attr(href) ")";
+}
+//Print internal URLs referencing the root with the root prefix.
+a[href^="/"]::after{
+	content: " (http://evergreen.edu" attr(href) ")";
+}*/
+/**
+ * 2. Layout Styles
+ *
+ * @section layout
+ * @see http://smacss.com/book/type-layout
+ */
+/* line 66, ../src/print.scss */
+[role=search],
+[role=navigation],
+.off-canvas {
+  display: none;
+}
+
+/* line 71, ../src/print.scss */
+.site-content,
+[role="main"] {
+  position: static;
+}
+
+/* line 75, ../src/print.scss */
+body,
+[role=banner],
+wrapper {
+  background: transparent none;
+}
+
+/* line 80, ../src/print.scss */
+[role="banner"] {
+  box-shadow: none;
+}
+
+/* line 83, ../src/print.scss */
+.wrapper {
+  min-height: none;
+  max-width: none;
+}
+
+/* line 87, ../src/print.scss */
+.main-row-grid {
+  margin-left: 0;
+  display: block;
+}
+
+/* line 93, ../src/print.scss */
+.primary-content-wrapper,
+.sidebar-wrapper,
+.primary-content-wrapper .main-content,
+.sidebar {
+  margin: 0;
+  width: auto;
+  max-width: none;
+  background: transparent none;
+}
+
+/* line 105, ../src/print.scss */
+.primary-content-wrapper {
+  border-color: black;
+}
+
+/* line 110, ../src/print.scss */
+.page-footer {
+  border-top: 1px solid black;
+  margin: 0;
+  padding-bottom: 0;
+  color: black;
+  background-color: transparent;
+}
+
+/* line 121, ../src/print.scss */
+.unit-1-1,
+.unit-2-7,
+.unit-3-7,
+.unit-4-7,
+.unit-5-7 {
+  margin: 0;
+}
+
+/**
+ * 3. Module Styles
+ *
+ * @section module
+ * @see http://smacss.com/book/type-module
+ */
+/* line 135, ../src/print.scss */
+.logo {
+  margin: 0;
+}
+
+/* line 138, ../src/print.scss */
+.logo a::after,
+.site-name a::after {
+  content: "";
+}
+
+/* line 142, ../src/print.scss */
+.site-name a,
+.site-name a:link,
+.site-name a:visited {
+  color: black;
+  text-shadow: none;
+}
+
+/* line 148, ../src/print.scss */
+.main-background,
+.main-background2 {
+  display: none;
+}
+
+/* line 152, ../src/print.scss */
+.hero,
+.supplement-alt-1-2 {
+  margin-left: 2%;
+  width: auto;
+  max-width: 49%;
+  float: right;
+  position: static;
+  z-index: auto;
+}
+
+/* line 164, ../src/print.scss */
+#sitewide-alert,
+.hero,
+#tertiary-nav,
+.do-not-print {
+  display: none;
+}
+
+/* line 171, ../src/print.scss */
+.box,
+.pull-box {
+  border: 1px solid black;
+  background: transparent none;
+}
+
+/* line 177, ../src/print.scss */
+.pull-quote,
+.pull-quote + .figcaption {
+  color: black;
+}
+
+/* line 182, ../src/print.scss */
+.page-footer .org,
+.page-footer .adr,
+.page-footer .street-address,
+.page-footer .location,
+.page-footer .tel {
+  display: inline;
+}
+
+/**
+ * 4. State Styles
+ *
+ * @section state
+ * @see http://smacss.com/book/type-state
+ */
+/*This file was written by Justin McDowell. ((O)O)*/

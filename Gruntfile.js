@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 				files: [
 					{
 						expand: true,
-						src: 'styles.css',
+						src: 'css/dist/styles.css',
 						dest: '../www-drupal/themes/wwwevergreen/css/build/',
 						/*rename: function(dest){
 							return dest + 'screen.css';
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 					},
 					{
 						expand: true,
-						cwd: 'custom-css/build/',
+						cwd: 'css/dist/custom-css/',
 						src: 'ckeditor.css',
 						dest: '../www-drupal/themes/wwwevergreen/css/build/',
 						filter: 'isFile',
@@ -153,22 +153,22 @@ module.exports = function(grunt) {
 				]
 			},
 			default_styles: {
-				src: 'styles.css',
-				dest: 'styles.css'
+				src: 'css/dist/styles.css',
+				dest: 'css/dist/styles.css'
 			},
 			print_styles: {
-				src: 'print.css',
-				dest: 'print.css'
+				src: 'css/dist/print.css',
+				dest: 'css/dist/print.css'
 			},
 			custom_css: {  // process a whole folder
 				expand: true,
 				flatten: true,
-				src: 'custom-css/build/*.css', // -> src/css/file1.css, src/css/file2.css
-				dest: 'custom-css/build/' // -> dest/css/file1.css, dest/css/file2.css
+				src: 'css/dist/custom-css/*.css', // -> src/css/file1.css, src/css/file2.css
+				dest: 'css/dist/custom-css/' // -> dest/css/file1.css, dest/css/file2.css
 			},
 			dev_styles: {
-				src: 'styles-dev.css',
-				dest: 'styles-dev.css'
+				src: 'css/build/styles-dev.css',
+				dest: 'css/build/styles-dev.css'
 			},
 			r25_styles: {
 				src: 'r25/r25.css',
@@ -186,13 +186,13 @@ module.exports = function(grunt) {
 					sourcemap: 'none'
 				},
 				files: [
-					{'styles.css': 'styles.scss'},  // 'destination': 'source'
-					{'print.css': 'print.scss'},
+					{'css/dist/styles.css': 'css/src/styles.scss'},  // 'destination': 'source'
+					{'css/dist/print.css': 'css/src/print.scss'},
 					{                               // process this whole folder
 						expand: true,
-						cwd: 'custom-css/src',  // source folder
+						cwd: 'css/src/custom-css',  // source folder
 						src: ['*.scss'],
-						dest: 'custom-css/build',  // destination folder
+						dest: 'css/dist/custom-css',  // destination folder
 						ext: '.css'
 					},
 				]
@@ -204,9 +204,9 @@ module.exports = function(grunt) {
 					sourcemap: 'none'
 				},
 				files: [
-					{'styles-dev.css': 'styles.scss'},  // 'destination': 'source'
-					/*{'print.css': 'print.scss'},
-					{                               // process this whole folder
+					{'css/build/styles-dev.css': 'css/src/styles.scss'},  // 'destination': 'source'
+					{'css/build/print.css': 'css/src/print.scss'},
+					/*{                               // process this whole folder
 						expand: true,
 						cwd: 'custom-css/',
 						src: ['*.scss'],
@@ -278,7 +278,7 @@ module.exports = function(grunt) {
 				tasks: ['copy:to_banner']
 			},
 			css: {  // Autoprefix, then process Sass into CSS.
-				files: ['styles.scss', 'print.scss', 'sass/**/*.scss', 'custom-css/src/*.scss'],
+				files: ['css/src/styles.scss', 'css/src/print.scss', 'css/src/smacss/**/*.scss', 'css/src/custom-css/*.scss'],
 				tasks: ['sass', 'postcss', 'copy:to_drupal']
 			},
 			js: {  // Concatenate and uglify JavaScript.

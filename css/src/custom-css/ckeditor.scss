@@ -24,10 +24,10 @@
  * @license    Copyrighted
  */
 
-@import "../../tools";  //constants, mixins, functions, etc.
+@import "../tools";  //constants, mixins, functions, etc.
 
-@import "../../sass/base";
-@import "../../sass/modules";
+@import "../smacss/base";
+@import "../smacss/modules";
 
 /**
  * Fixes
