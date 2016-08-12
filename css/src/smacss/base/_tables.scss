@@ -16,18 +16,18 @@
  */
 
 table{
-		// box model
-		border-collapse: collapse;
-		border-spacing: 0;
-		border-width: 0;
-		margin: 2.14285714285714em 0 3.21428571428571em;  // 30/14  45/14
-		width: 100%;
-		max-width: 100%;
-		// typography
-		@include base-type;
+	// box model
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-width: 0;
+	margin: 2.14285714285714em 0 3.21428571428571em;  // 30/14  45/14
+	width: 100%;
+	max-width: 100%;
+	// typography
+	@include base-type;
 }
 
-caption{  // styled after h4
+caption{
 	// box model
 	margin: 0 0 0.41666666666667em 0;  // 7.5/18
 	@include base-type-lg;
