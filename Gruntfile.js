@@ -25,7 +25,8 @@ module.exports = function(grunt) {
 				files: [
 					{
 						expand: true,
-						src: 'css/dist/styles.css',
+						cwd: 'css/dist/',
+						src: 'styles.css',
 						dest: '../www-drupal/themes/wwwevergreen/css/build/',
 						/*rename: function(dest){
 							return dest + 'screen.css';
