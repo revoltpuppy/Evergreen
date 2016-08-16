@@ -1,0 +1,107 @@
+#########################
+## Sample Sass Lint File
+#########################
+# Linter Options
+options:
+  # Don't merge default rules
+  merge-default-rules: false
+  # Set the formatter to 'html'
+  formatter: html
+  # Output file instead of logging results
+  output-file: 'linters/sass-lint.html'
+# File Options
+files:
+  include: 'sass/**/*.s+(a|c)ss'
+  ignore:
+    - 'sass/vendor/**/*.*'
+# Rule Configuration
+rules:
+  border-zero: 2
+  brace-style: 2
+  empty-line-between-blocks: 2
+  extends-before-mixins: 2
+  extends-before-declarations: 2
+  hex-notation:
+    - 2
+    -
+      style: lowercase
+  indentation:
+    - 2
+    -
+      size: tab
+  leading-zero:
+    - 2
+    -
+      include: true
+  #mixins-before-declarations:
+  #  - 2
+  #  -
+  #    exclude:
+  #      - breakpoint
+  #      - mq
+  nesting-depth:
+    - 2
+    -
+      max-depth: 1
+  no-color-literals: 1
+  no-duplicate-properties:
+    - 2
+    -
+      exclude:
+       - display
+  no-empty-rulesets: 2
+  no-invalid-hex: 2
+  no-mergeable-selectors: 2
+  no-misspelled-properties: 2
+  no-qualifying-elements:
+    - 1
+    -
+      allow-element-with-attribute: true
+  no-trailing-whitespace: 2
+  no-trailing-zero: 2
+  no-url-protocols: 2
+  no-vendor-prefixes:
+    - 2
+    -
+      additional-identifiers:
+        - khtml
+        - o
+      ignore-non-standard: true
+  no-warn: 1
+  no-debug: 1
+  no-ids: 1
+  no-important: 1
+  one-declaration-per-line: 2
+  placeholder-in-extend: 1
+  #property-sort-order:
+  #  - 1
+  #  -
+  #    order:
+  #      - display
+  #      - margin
+  #    ignore-custom-properties: true
+  quotes:
+    - 2
+    -
+      style: double
+  shorthand-values: 2
+  space-after-colon: 2
+  space-after-comma: 2
+  space-around-operator: 2
+  space-before-bang: 2
+  space-before-brace:
+    - 2
+    -
+      include: false
+  space-between-parens: 2
+  trailing-semicolon: 2
+  url-quotes: 2
+  #variable-for-property:
+  #  - 1
+  #  -
+  #    properties:
+  #      # typography
+  #      - color
+  #      # decoration
+  #      - background-color
+  zero-unit: 2
