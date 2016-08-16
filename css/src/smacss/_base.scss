@@ -41,8 +41,8 @@ body{
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	// backgrounds & borders
-	background-color: hsl(0, 0%, 95%);
+	// decoration
+	background-color: $tint;
 }
 
 img,
@@ -117,6 +117,6 @@ a:link,
 }*/
 
 .looong-word{  // For words that are so long they may cause overflow, like dichlorodiphenyltrichloroethane. Holy crap!
-    word-wrap: break-word;  // Firefox, IE
-    overflow-wrap: break-word;  // W3C
+	word-wrap: break-word;  // Firefox, IE
+	overflow-wrap: break-word;  // W3C
 }

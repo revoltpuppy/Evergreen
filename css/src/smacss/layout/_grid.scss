@@ -18,7 +18,6 @@
 	display: block;
 }
 
-
 /**
  * 1. Flexbox-based Grid Layout
  *
@@ -36,7 +35,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	
+
 	&.zebra-striped{
 		margin-right: 0;
 	}
@@ -77,11 +76,11 @@
 .unit-1-2{
 	// box model
 	width: 100%;
-	
+
 	@media (min-width: 32em){
 		// box model
 		width: 50%;
-		
+
 		&:nth-child(odd){  // IE 9
 			clear: left;
 		}
@@ -91,7 +90,7 @@
 .unit-1-3{  // Switches from a one- to a three-column layout.
 	// box model
 	width: 100%;
-	
+
 	@include breakpoint($gamora){
 		width: 33.3333333333%;
 	}
@@ -100,25 +99,25 @@
 .unit-1-3-alt{ // Switches up from a one- to a two- and then to a three-column layout.
 	//box model
 	width: 100%;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		width: 50%;
-	
+
 		&:nth-child(odd){
 			// layout
 			clear: left;  // IE 9
 		}
 	}
-	
+
 	@include breakpoint($drax){
 		// box model
 		width: 33.3333333333%;
-	
+
 		&:nth-child(odd){  // IE 9
 			clear: none;
 		}
-		
+
 		&:nth-child(3n+1){  // IE 9
 			clear: left;
 		}
@@ -128,7 +127,7 @@
 .unit-2-3{
 	// box model
 	width: 100%;
-	
+
 	@include breakpoint($gamora){
 		width: 66.6666666667%;
 	}
@@ -140,7 +139,7 @@
 
 .unit-1-5{
 	width: 100%;
-	
+
 	@include breakpoint($drax){
 		width: 20%;
 	}
@@ -149,15 +148,15 @@
 .unit-1-6{  // Switches from 1 to 2 to 3 to 6 columns.
 	// box model
 	width: 100%;
-	
+
 	@include breakpoint($lil-groot){
 		width: 50%;
 	}
-	
+
 	@include breakpoint($rocket){
 		width: 33.3333333333%;
 	}
-	
+
 	@include breakpoint($gamora){
 		width: 16.666666666667%;  // 1/6
 	}
@@ -165,16 +164,16 @@
 
 .unit-1-6-alt{  // Switches from 2 to 3 to 4 to 6 columns.
 	width: 50%;
-	
+
 	@include breakpoint($lil-groot){
 		// box model
 		width: 33.3333333333%;
 	}
-	
+
 	@include breakpoint($gamora){
 		width: 25%;
 	}
-	
+
 	@include breakpoint($drax){
 		// box model
 		width: 16.666666666667%;  // 1/6
@@ -184,15 +183,15 @@
 .unit-1-7{
 	// box model
 	width: 100%;
-	
+
 	@include breakpoint($lil-groot){
 		width: 50%;
 	}
-	
+
 	@include breakpoint($rocket){
 		width: 33.3333333333%;
 	}
-	
+
 	@include breakpoint($gamora){
 		// box model
 		width: 14.285714285714%;
@@ -202,7 +201,7 @@
 .unit-2-7{
 	// box model
 	width: 100%;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		width: 28.571428571429%;
@@ -212,7 +211,7 @@
 .unit-3-7{
 	// box model
 	width: 100%;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		width: 42.857142857143%;
@@ -224,12 +223,12 @@
 	padding-right: 1em;
 	padding-left: 0;
 	width: 100%;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		width: 80%;  // 4/5
 	}
-	
+
 	@include breakpoint($drax){
 		// box model
 		width: 57.142857142857%;  // 4/7
@@ -239,7 +238,7 @@
 .unit-5-7{
 	//box model
 	width: 100%;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		width: 71.428571428571%;
@@ -249,7 +248,7 @@
 .unit-6-7{
 	// box model
 	width: 100%;
-	
+
 	@include breakpoint($gamora){
 		width: 85.714285714286%;  // 6/7
 	}
@@ -268,15 +267,15 @@
 .right,  // deprecated
 .supplement,  // This should mirror .supplement-1-2; it’s just a more user-friendly name
 .supplement-1-2{  // deprecated, use .supplement instead
-	
+
 	@include breakpoint($starlord){
-    // box model
-    margin-left: 1em;
-    width: calc(66.6666666667% - 1em);
-    // layout
-    float: right;
+		// box model
+		margin-left: 1em;
+		width: calc(66.6666666667% - 1em);
+		// layout
+		float: right;
 	}
-	
+
 	@include breakpoint($gamora){
 		// box model
 		margin-right: -2em;
@@ -290,22 +289,22 @@
 }
 
 .supplement-alt-1-2{
-	
-  @include breakpoint($rocket){
+
+	@include breakpoint($rocket){
 		// box model
 		margin-right: -1em;
-	  margin-left: 1em;
+		margin-left: 1em;
 		width: calc(50% + 1em);
-	  // layout
-	  float: right;
+		// layout
+		float: right;
 	}
-	
+
 	@include breakpoint($starlord){
 		// box model
 		margin-right: 0;
 		width: calc(66.666666667% - 1em);
 	}
-	
+
 	@include breakpoint($gamora){
 		// box model
 		margin-right: 1em;
@@ -317,7 +316,7 @@
 		// typography
 		@include base-type;
 	}
-	
+
 	@include breakpoint($drax){
 		// box model
 		//margin-right: 2em;
@@ -328,7 +327,7 @@
 		// typography
 		//@include base-type;
 	}
-	
+
 	@include breakpoint($groot){
 		// box model
 		margin-left: calc(-50% - 2em);

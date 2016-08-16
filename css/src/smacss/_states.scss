@@ -17,10 +17,11 @@
  */
 .is-current-section{
 	// typography
-	color: white;
+	color: $tint;
 	// backgrounds and borders
 	background-color: $evergreen-old-style;
 }
+
 .is-current-section a,
 .is-current-section a:link
 .is-current-section a:visited,
@@ -37,7 +38,7 @@
 .is-expanded:before{
 	//transforms & transitions
 	transform: rotate(90deg);
-	transition: all .2s linear;
+	transition: all 0.2s linear;
 }
 
 /**
@@ -48,7 +49,7 @@
 	// box model
 	padding: 0 0.33em;
 	// typography
-	color: white;
+	color: $tint;
 	font-weight: bold;
 	// backgrounds and borders
 	background-color: $blueberry-susan;

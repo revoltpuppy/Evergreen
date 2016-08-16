@@ -19,14 +19,14 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	
+
 	@include breakpoint($drax){
 		flex-direction: row;
 	}
 }
 
 .index-wrapper .spread{
-	
+
 	@include breakpoint($gamora){
 		margin: 7.05882352941176em auto; // 120/17
 	}
@@ -35,27 +35,27 @@
 .spread:first-of-type,
 .index-wrapper .spread:first-of-type{
 	margin-top: calc(30 / 14 * 1em);
-	
+
 	@include breakpoint($gamora){
-  	margin-top: calc(30 / 18 * 1em);
+		margin-top: calc(30 / 18 * 1em);
   }
-  
-  @include breakpoint($groot){
-  	margin-top: calc(45 / 19.229 * 1em);
-  }
+
+	@include breakpoint($groot){
+		margin-top: calc(45 / 19.229 * 1em);
+	}
 }
 
 .spread-img,
 .spread-body{
 	max-width: 100%;
-	
+
 	@include breakpoint($drax){
 		float: left;  // IE 9
 	}
 }
 
 .spread-img{
-	
+
 	@include breakpoint($drax){
 		// box model
 		max-width: 50%;
@@ -63,9 +63,9 @@
 }
 
 .spread-body{
-	
+
 	@include breakpoint($drax){
-		background-color: transparentize($tint, .05);
+		background-color: transparentize($tint, 0.05);
 		// box model
 		margin-left: -3em;
 		padding-left: 2em;

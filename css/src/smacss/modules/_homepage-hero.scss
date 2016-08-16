@@ -11,16 +11,16 @@
 }
 
 .homepage-hero{
-	
+
 	@include breakpoint($lil-groot){
 		// box model
-  	width: 100%;
-    // layout
-  	overflow: hidden;
-  	// positioning
-    position: relative;  // Creates a stage for absolute positioning of child elements
+		width: 100%;
+		// layout
+		overflow: hidden;
+		// positioning
+		position: relative;  // Creates a stage for absolute positioning of child elements
 	}
-	
+
 	@include breakpoint($drax){
 		display: table;  // Gives it a block formatting context
 	}
@@ -28,7 +28,7 @@
 
 .homepage-hero-picture img{  // .homepage-hero-picture is the picturefill image
 	display: block;
-	
+
 	@include breakpoint($drax){
 		width: 100%;
 	}
@@ -40,7 +40,7 @@
 	max-width: none;
 	// layout
 	display: block;
-	
+
 	@include breakpoint($starlord){
 		.homepage-hero-img{
 			// box model
@@ -48,21 +48,21 @@
 			width: 150%;
 		}
 	}
-	
+
 	@include breakpoint($gamora){
 		.homepage-hero-img{
 			margin-left: -10%;
-	    width: 120%;
+			width: 120%;
 		}
 	}
-	
+
 	@include breakpoint($drax){
 		.homepage-hero-img{
 			margin-left: 0;
 			width: 100%;
 		}
 	}
-	
+
 	.homepage-hero-img-alt &{
 		margin-left: 0;
 	}
@@ -76,21 +76,22 @@
 	color: inherit;
 	font-weight: inherit;
 }
+
 .homepage-hero .call-to-action{
 	// box model
 	padding: 0 2%;
 	// layout
 	display: inline-block;
 	// typography
-	color: white;
+	color: $tint;
 	text-shadow: none;
 	// backgrounds and borders
 	background-color: $evergreen-neue;
-	
+
 	&:hover{
 		background-color: $sky-blue;
 	}
-	
+
 	@include breakpoint($drax){
 		font-size: 1.82rem;  // Step 3
 		line-height: 1.5451174289246; // 45 / 29.124
@@ -103,7 +104,7 @@
 	max-width: 82em;
 	// backgrounds & borders
 	background-color: $blueberry-susan;
-	
+
 	@include breakpoint($lil-groot){
 		// layout
 		display: flex;  // W3C
@@ -114,11 +115,11 @@
 		// backgrounds & borders
 		background-color: transparent;
 	}
-	
+
 	@media screen and (min-width: 25em){
 		justify-content: center;
 	}
-	
+
 	@include breakpoint($gamora){
 		height: 100%;
 	}
@@ -150,11 +151,11 @@
 	//margin: 0 0 2em 0;
 	//padding: 0 1em;
 	width: calc(66.6666666667% - 1em);
-	
+
 	@include breakpoint($starlord){
 		width: calc(50% - 1em);
 	}
-	
+
 	@include breakpoint($gamora){
 		// box model
 		width: calc(100% - 2em);
@@ -172,12 +173,12 @@
 .homepage-hero-content-grad .homepage-hero-copy img{
 	//max-width: 66.6666666667%;
 	max-height: calc(250 / 16 * 1rem);
-	
+
 	@include breakpoint($gamora){
 		margin-bottom: -2.2em;
-		width: 66.6666666667%
+		width: 66.6666666667%;
 	}
-	
+
 	@include breakpoint($drax){
 		margin-bottom: -2.5em;
 	}
@@ -185,43 +186,42 @@
 
 .homepage-hero-copy{
 	margin: 0 calc(15 / 14 * 1em);
-	
-	
+
 	@include breakpoint($lil-groot){
 		// box model
 		width: calc(66.6666666667% - 1em);
 		// layout
 		float: left;
 	}
-	
+
 	@include breakpoint($starlord){
 		// box model
 		margin: 0 1em;
 		width: calc(50% - 1em);
-		color: white;
+		color: $tint;
 		// typography
-		text-shadow: 0 1px 2px mix(black, $blueberry-susan, 80%);
+		text-shadow: 0 1px 2px mix($shade, $blueberry-susan, 80%);
 	}
-	
+
 	@include breakpoint($drax){
 		width: calc((3 / 7 * 100%) - 1em);  //3/7
 	}
-	
+
 	.homepage-hero-copy-alt &{
-		
+
 		@include breakpoint($lil-groot){
 			//layout
 			align-self: flex-end;
 			float: right;
 		}
-		
+
 		@include breakpoint($starlord){
 			//layout
 			float: right;  //IE9
 			align-self: flex-end;  //W3C
 		}
 	}
-	
+
 	.homepage-hero-img-detailed &{
 		//box model
 		height: 100%;
@@ -229,26 +229,26 @@
 		padding: 0 calc(7.5 / 15 * 1em);
 		width: 66.6666666667%;
 		//backgrounds & borders
-		background-color: transparentize($blueberry-susan, .5);
+		background-color: transparentize($blueberry-susan, 0.5);
 		border-radius: 2px;
-		
+
 		@include breakpoint($rocket){
 			padding: 0 calc(15 / 14 * 1em);
 		}
-		
+
 		@include breakpoint($starlord){
 			height: auto;
 			width: 50%;
 		}
-		
+
 		@include breakpoint($gamora){
 			padding: 0 calc(15 / 17 * 1em);
 		}
-		
+
 		@include breakpoint($drax){
 			width: calc(3 / 7 * 100%);
 		}
-		
+
 		@include breakpoint($groot){
 			padding: 0 calc(30 / 19.23333333333 * 1em);
 		}
@@ -256,24 +256,24 @@
 }
 
 .homepage-hero-copy h1{
-  font-size: 1.202rem;
+	font-size: 1.202rem;
 	line-height: 1.169925124792013;  //22.5/19.232
-	
+
 	@include breakpoint($lil-groot){
 		//typography
-		color: white;
-		text-shadow: 0 2px 1px mix(black, $blueberry-susan, 80%);
+		color: $tint;
+		text-shadow: 0 2px 1px mix($shade, $blueberry-susan, 80%);
 	}
-	
+
 	@include breakpoint($gamora){
 		//typography
-  	font-size: 1.416rem;
-  	line-height: 1.324152542372881;  //30/22.656
+		font-size: 1.416rem;
+		line-height: 1.324152542372881;  //30/22.656
 	}
-	
+
 	@media screen and (min-width: 86em){
 		//typography
-  	font-size: 2.291rem;  //36.656
-  	line-height: 1.227629855958097;  //45/36.656
+		font-size: 2.291rem;  //36.656
+		line-height: 1.227629855958097;  //45/36.656
 	}
 }

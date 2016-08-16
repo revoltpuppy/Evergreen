@@ -29,7 +29,7 @@ legend{
 	// typography
 	text-transform: uppercase;
 	letter-spacing: 0.25ch;
-	
+
 	@include breakpoint($gamora){
 		@include margin-default-lg;
 	}
@@ -51,12 +51,12 @@ textarea{
 	@include base-type;
 	// backgrounds & borders
 	border-radius: 2px;
-	
+
 	&:focus{
 		// misc
 		box-shadow: 0 0 2px 1px $drop-shadow;
 	}
-	
+
 	@include breakpoint($gamora){
 		@include base-type-lg;
 	}
@@ -95,7 +95,7 @@ select{
 	// misc
 	box-shadow: 0 0.1em 0.1em $drop-shadow inset;
 	cursor: pointer;
-	
+
 	&:hover{
 		// box model
 		border-bottom-style: dashed;
@@ -110,7 +110,7 @@ textarea{
 	width: 100%;
 	min-width: 50%;
 	max-width: calc(45ch + 1em);
-	
+
 	@include breakpoint($gamora){
 		// box model
 		@include margin-default-lg;
@@ -127,12 +127,12 @@ input[type="radio"]{
 	clear: left;
 	float: left;
 	vertical-align: top;
-	
+
 	@include breakpoint($gamora){
 		height: calc(18 / 16 * 1rem);
 		margin: calc(2.5 / 16 * 1rem) 0.25em calc(20 / 16 * 1rem) 0;
 	}
-	
+
 	@include breakpoint($groot){
 		height: calc(19.229 / 16 * 1rem);
 	}
@@ -145,7 +145,7 @@ input[type="radio"]{
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"]{
 	height: calc(14 / 16 * 1rem);
-	
+
 	@include breakpoint($groot){
 		height: calc(18 / 16 * 1rem);
 	}
@@ -158,7 +158,7 @@ input[type="radio"] + label{
 	width: calc(100% - 1em - 0.5ch);
 	// layout
 	float: left;
-	
+
 	@include breakpoint($gamora){
 		width: calc(100% - 1.25em);
 	}

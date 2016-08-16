@@ -14,7 +14,7 @@
  * 6. Full Box
  * 7. UI Group
  */
- 
+
 /**
  * 1. Default Box
  */
@@ -28,12 +28,12 @@ p.box{  // WYSIWYG
 	// layout
 	overflow: hidden;
 	// typography
-	color: mix(black, $sky-blue, 66.667%);
+	color: mix($shade, $sky-blue, 66.667%);
 	// backgrounds & borders
-	background-color: transparentize(mix(white, $sky-blue, 80%), .05);
+	background-color: transparentize(mix(white, $sky-blue, 80%), 0.05);
 	background-image: url("images/texture-1.png");
 	border-radius: 2px;
-	
+
 	@include breakpoint($gamora){
 		margin-top: 2.5em;  // 45/18
 		margin-bottom: 3.33333333333333em;  // 60/18
@@ -44,7 +44,7 @@ p.box{  // WYSIWYG
 .box h2,
 .notice h4,  // deprecated
 .box h4{
-	color: mix(black, $sky-blue, 50%);
+	color: mix($shade, $sky-blue, 50%);
 }
 
 .notice h3,  // deprecated
@@ -59,16 +59,14 @@ p.box{  // WYSIWYG
 	color: mix($shade, $sky-blue, 33.333%);
 }
 
-
-
 .box.supplement,
 .box.supplement-alt-1-2{
-	
+
 	@include breakpoint($lil-groot){
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
 	}
-	
+
 	@include breakpoint($gamora){
 		// box model
 		margin-top: 0.41666666666667em;  // Margins should match margin-default-lg
@@ -77,7 +75,7 @@ p.box{  // WYSIWYG
 		border-top-right-radius: 2px;
 		border-bottom-right-radius: 2px;
 	}
-	
+
 	@include breakpoint($groot){
 		margin-top: 0.52004784440168em;  // Margins should match margin-default-xl
 		margin-bottom: 1.04009568880337em;
@@ -91,8 +89,8 @@ p.box{  // WYSIWYG
  */
 .notice,  // deprecated
 .note{
-	border-left: 5px solid mix(white, $sky-blue, 60%);
-	
+	border-left: 5px solid mix($tint, $sky-blue, 60%);
+
 	@include breakpoint($rocket){
 		padding-left: calc(1em - 5px);
 	}
@@ -103,8 +101,9 @@ p.box{  // WYSIWYG
  *
  * Stands out a lot more than a default box.
  */
+
 .alert,
-p.alert{
+p.alert{  // WYSIWYG
 	// box model
 	//border: 1px solid $wine;  // Conflicts with sitewide alert JS. Might be worth changing how that works.
 	// typography
@@ -113,6 +112,7 @@ p.alert{
 	background-color: $highlight;
 	border-radius: 0;
 }
+
 #sitewide-alert{
 	// box model
 	margin: 0;
@@ -122,7 +122,7 @@ p.alert{
 	// typography
 	font-family: $monospace-face;
 	// animations and transitions
-	transition: all .5s ease-in;
+	transition: all 0.5s ease-in;
 }
 
 /**
@@ -131,11 +131,12 @@ p.alert{
  * Lends a bit more readability to boxes while still standing out
  * against the content a little bit more.
  */
+
 .caption-box{
 	// typography
-	text-shadow: 0 1px 0 hsla(0, 0%, 100%, .5);
+	text-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.5);
 	// backgrounds and borders
-	background-color: hsla(0, 0%, 95%, .95);
+	background-color: hsla(0, 0%, 95%, 0.95);
 }
 
 .caption-box img{
@@ -148,30 +149,30 @@ p.alert{
  */
 .pull-box{
 	// backgrounds and borders
-	background-color: transparentize($evergreen-neue, .05);
+	background-color: transparentize($evergreen-neue, 0.05);
 	// typography
-	color: hsl(0, 0%, 100%);
-	-moz-osx-font-smoothing: auto;  // Better rendering of reverse-out text
-	 -webkit-font-smoothing: subpixel-antialiased;  // Better rendering of reverse-out text
-	
-	@media screen and (min-width: 43em){
+	color: $tint;
+	//-moz-osx-font-smoothing: grayscale;  // Better rendering of reverse-out text
+	//-webkit-font-smoothing: antialiased;  // Better rendering of reverse-out text
+
+	@include breakpoint($gamora){
 		margin-bottom: 1.071428571428571em;  // 15px
 	}
-	
+
 	a{
 		// box model
 		border-bottom: 2px solid mix($tint, $blueberry-susan, 66%);
 		// typography
 		color: mix($tint, $blueberry-susan, 75%);
 	}
-	
+
 	a:visited{
 		// box model
 		border-bottom-color: mix($tint, $wine, 66%);
 		// typography
 		color: mix($tint, $wine, 75%);
 	}
-	
+
 	a:hover{
 		// box model
 		border-bottom-color: mix($tint, $sky-blue, 66%);
@@ -186,19 +187,19 @@ p.alert{
 
 .pull-quote{
 	// box model
-	margin: 0.44117647058824em 0 0.88235294117647em 0;  // 7.5/17 15/17
+	margin: 0.44117647058824em 0 0.88235294117647em;  // 7.5/17 15/17
 	// typography
 	@include base-type-lg;
 	font-style: italic;
-	
+
 	@include breakpoint($drax){
 		// box model
-		margin: 0.36358347876672em 0 0.72716695753345em 0;  // 10/27.504 20/27.504
+		margin: 0.36358347876672em 0 0.72716695753345em;  // 10/27.504 20/27.504
 		// typography
 		font-size: 1.719rem;  // 27.504px
 		line-height: 1.09075043630017;  // 30/27.504
 	}
-	
+
 	@include breakpoint($groot){
 		// box model
 		margin: 0.48200514138817em 0 0.96401028277635em;  // 15/31.12 30/31.12
@@ -209,7 +210,7 @@ p.alert{
 }
 
 .supplement-alt-1-2 .pull-quote{
-	
+
 	@include breakpoint($gamora){
 		@include base-type-xl;
 	}
@@ -228,12 +229,14 @@ p.alert{
 	padding: 0;
 	background: $sky-blue url("images/texture-1.png");
 }
+
 .full-box h2,
 .full-box h3{
-	color: #fff;
+	color: $tint;
 }
+
 .full-box > .box{
-	background-color: #f5f5f5;
+	background-color: $tint;
 }
 
 /**
@@ -245,17 +248,18 @@ p.alert{
  
  * @section ui-group
  */
+
 .ui-group{
 	// box model
-	border: 1px solid mix(white, $blueberry-susan, 75%);
+	border: 1px solid mix($tint, $blueberry-susan, 75%);
 	margin-bottom: 0.46875rem;  // 7.5px
 	padding: 0 1em;
 	// layout
 	overflow: hidden;
 	// backgrounds & borders
-	background-color: mix(white, $blueberry-susan, 85%);
+	background-color: mix($tint, $blueberry-susan, 85%);
 	border-radius: 2px;
-		
+
 	/*&:hover{
 		// backgrounds & borders
 		background-color: mix(white, $blueberry-susan, 90%);
@@ -264,26 +268,26 @@ p.alert{
 		-webkit-transition: all .2s ease-out;
 		        transition: all .2s ease-out;
 	}*/
-	
+
 	@include breakpoint($starlord){
 		&.unit-1-2{
 			margin: 0.234375rem;  // 3.75px
 			width: calc(50% - 0.46875rem);  // 7.5px
 		}
 	}
-	
+
 	@include breakpoint($drax){
 		&.unit-1-3{
 			margin: 0.234375rem;  // 3.75px
 			width: calc(33.3333333333% - 0.46875rem);  // 7.5px
 		}
-		
+
 		.media{
 			//padding: 0 0.9375rem;  //17px
 			width: 100%;
 		}
 	}
-	
+
 	> :last-child{
 		margin-bottom: 0.9375rem;  // 15px
 	}

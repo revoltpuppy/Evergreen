@@ -16,6 +16,7 @@
 	display: block;  // IE 9
 	display: flex;  // W3C
 }
+
 .media-img,
 .media-img:link{
 	// box model
@@ -26,7 +27,7 @@
 	// layout
 	float: left;  // IE9
 	flex-shrink: 0;  // Do not allow the image to shrink. Note: this does respect the max-width property.
-	
+
 	@include breakpoint($gamora){
 		padding-right: 0.882352941176471em;  // 15px
 	}
@@ -67,6 +68,7 @@
 .media-alt{
 	flex-direction: row-reverse;
 }
+
 .media-alt .media-img{
 	padding-right: 0;
 	padding-left: 1.071428571428571em;
@@ -77,30 +79,26 @@
 .media-squishy{  // Put .media-img on top, then move to the side
 	flex-direction: column;
 	align-items: stretch;
-	        
-	> .media-img{
-	  padding-right: 0;
-	  max-width: 100%;
-	  float: none;  // IE 9
-	  text-align: center;
-	  
-	  img{
-		  margin: 0 auto;
-	  }
-	}
 }
 
 .media-squishy{
-	
+
 	@include breakpoint($starlord){
 		flex-direction: row;
 		align-items: stretch;
 	}
 }
 
+.media-column > .media-img,
+.media-squishy > .media-img{
+	padding-right: 0;
+	max-width: 100%;
+	float: none;  // IE 9
+	text-align: center;
+}
 
 .media-squishy > .media-img{
-	
+
 	@include breakpoint($starlord){
 		margin-bottom: 1.071428571428571em;  // 15px
 		padding-right: 1.071428571428571em;  // 15px
@@ -109,11 +107,17 @@
 		float: left;  // IE9
 		flex-shrink: 0;  // Do not allow the image to shrink. Note: this does respect the max-width property.
 	}
-		
+
 	@include breakpoint($gamora){
 		padding-right: 0.882352941176471em;  // 15px
 	}
 }
+
+.media-column > .media-img img,
+.media-squishy > .media-img img{
+	margin: 0 auto;
+}
+
 
 /*@media screen and (min-width:32em){
 	.media-list .media{

@@ -49,20 +49,16 @@
 		border-bottom-width: 0;
 		// typography
 		color: $evergreen-neue;
-	
-		.transporter-icon{
-			background: $evergreen-neue;
-		}
 	}
-	
+
 	&:hover{
 		color: $sky-blue;
-		
+
 		.transporter-icon{
 			background: $sky-blue;
 			// misc
-			box-shadow: 0 0 .2em $highlight inset;
-		}		
+			box-shadow: 0 0 0.2em $highlight inset;
+		}
 	}
 }
 
@@ -80,9 +76,9 @@
 	// positioning
 	position: relative;  // For responsive SVG.
 	// typography
-	color: white;
+	color: $tint;
 	text-align: center;
-	// backgrounds & borders
+	// decoration
 	background-color: $evergreen-neue;
 	border-radius: 50%;
 	// misc
@@ -92,15 +88,15 @@
 		margin: 0 auto;
 		max-width: 80%;
 	}
-	
+
 	@include breakpoint($starlord){
 		max-width: 100%;
 	}
-	
+
 	@include breakpoint($drax){
 		max-width: 90%;
 	}
-	
+
 	img{
 		// layout
 		display: block;
@@ -110,6 +106,6 @@
 		//left: 0;
 		// behavior
 		transform: scale(0.6);
-		transition: transform .1s ease;
+		transition: transform 0.1s ease;
 	}
 }

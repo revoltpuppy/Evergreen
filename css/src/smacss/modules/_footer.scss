@@ -11,15 +11,15 @@
 	// layout
 	clear: left;
 	// typography
-	color: #fff;
+	color: $tint;
 	@include base-type;
-	// backgrounds & borders
-	background-color: #000;
-	
+	// decoration
+	background-color: $shade;
+
 	@include breakpoint($drax){
 		@include base-type-lg;
 	}
-	
+
 	@include breakpoint($groot){
 		@include base-type-xl;
 	}
@@ -35,7 +35,7 @@
 .page-footer a,
 .page-footer a:link,
 .page-footer a:visited{
-	border-color: mix(black, $evergreen-neue, 40%);
+	border-color: mix($shade, $evergreen-neue, 40%);
 	color: $evergreen-neue;
 }
 
@@ -51,7 +51,7 @@
 	// layout
 	display: block;
 	float: right;
-	
+
 	@include breakpoint($rocket){
 		width: 50%;
 		max-width: 280px;

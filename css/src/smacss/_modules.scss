@@ -42,7 +42,7 @@
  * A. Header
  */
 @import "modules/header";
-    
+
 /**
  * B. Background Image
  */
@@ -56,10 +56,6 @@
 	top: 0;
 	left: 0;
 	z-index: -1;
-	
-	/*@include breakpoint($gamora){
-		width: 100%;
-	}*/
 }
 
 .main-background .main-background-img,  // deprecated, use main-background2
@@ -68,12 +64,12 @@
 .main-background2 > :first-child{
 	width: 100%;
 	display: block;
-  
-  @include breakpoint($gamora){
-	  width: 100%;
-	  max-width: 80%;  // 4/5
-  }
-	
+
+	@include breakpoint($gamora){
+		width: 100%;
+		max-width: 80%;  // 4/5
+	}
+
 	@include breakpoint($drax){
 		//max-width: 57.142857142857143%;  // 4/7
 		max-width: calc(77em * 0.57142857142857143);  // 4/7, based on the context of the main content area
@@ -81,14 +77,14 @@
 }
 
 .main-background2{
-	position: sticky;	
+	position: sticky;
 }
 
 .main-background2 > .main-background-img,
 .main-background2 > :first-child{
 	// position
 	position: absolute;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		width: auto;
@@ -113,7 +109,7 @@
  * C. Homepage Hero Image
  */
 @import "modules/homepage-hero";
-    
+
 /*.profile-list > li{  // deprecated
 	// layout
 	overflow: hidden;
@@ -183,11 +179,13 @@
  *
  * Special, non-base element typography.
  */
+
 .lead{
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
+
 .follow{
-    margin-top: 0;
+	margin-top: 0;
 }
 
 .intro,  // deprecated, use .field-intro instead.
@@ -197,7 +195,7 @@
 	// typography
 	color: $evergreen-neue;
 	@include base-type-xl;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		margin: 1.03007828594973em 0;  // 30/29.124
@@ -205,7 +203,7 @@
 		font-size: 1.82rem;  // 29.124px  Step 3
 		line-height: 1.5451174289246; // 45/29.124
 	}
-	
+
 	@include breakpoint($groot){
 		// box model
 		margin: 0.96425816405246em 0;  // 30/31.112
@@ -214,29 +212,29 @@
 		line-height: 1.44638724607868;  // 45/31.112
 	}
 }
-	
+
 .intro-alt{
-	color: #333;
+	color: mix($tint, $shade, 20%);
 	font-weight: bold;
 }
 
 .big-fact{
 	@include base-type-xl;
-	
+
 	@include breakpoint($drax){
 		font-size: 1.82rem;  // 29.124px  Step 3
-    line-height: 1.03007828594973; // 45/29.124
+		line-height: 1.03007828594973; // 45/29.124
 	}
-	
+
 	@include breakpoint($groot){
-    font-size: 1.945rem;  // 31.112px  Step 4
-    line-height: 1.44638724607868; // 45/31.112
+		font-size: 1.945rem;  // 31.112px  Step 4
+		line-height: 1.44638724607868; // 45/31.112
 	}
 }
 
 .key-number{  // e.g. http://www.evergreen.edu/about/facts
 	// box model
-	margin: 0.818419903972065em 0 0 0;
+	margin: 0.818419903972065em 0 0;
 	// layout
 	display: block;
 	// typography
@@ -244,7 +242,7 @@
 	font-size: 1.945rem;  // 31.112px  Step 4
 	font-weight: normal;
 	line-height: 1.44638724607868;  // 45/31.112
-	
+
 	@include breakpoint($gamora){
 		font-size: 2.945rem;  // 47.123px  Step 5
 		line-height: 1.27326358678352;  // 60/47.123
@@ -261,7 +259,7 @@
 .main-content > dl:last-child > dd:last-child::after{
 	white-space: nowrap;
 	content: "\00A0" url("/_inc/images/endnote.png");
-	
+
 	@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 150dpi){
 		content: "\00A0" url("/_inc/images/endnote.svg");
 	}
@@ -277,7 +275,7 @@
  */
 .dataTable{
 	//font-family: "Proxima Nova Condensed", "Avenir Next Condensed", "Avenir", Helvetica, Arial, sans-serif;
-	
+
 	/*@include breakpoint($starlord){
 		font-family: $text-face;
 	}*/
@@ -287,7 +285,7 @@
  * I. Icons
  */
 @import "modules/icons";
-    
+
 /**
  * J. Media Segment
  */
@@ -318,34 +316,34 @@
  * O. News
  */
 .news{
-  // box model
-  //border-top: 1px solid mix($tint, $blueberry-susan, 80%);
-  //border-bottom: 1px solid #d1cad6;
-  // layout
-  overflow: hidden;
-  // backgrounds & borders
-  //background-color: mix($tint, $blueberry-susan, 90%);
+	// box model
+	//border-top: 1px solid mix($tint, $blueberry-susan, 80%);
+	//border-bottom: 1px solid #d1cad6;
+	// layout
+	overflow: hidden;
+	// backgrounds & borders
+	//background-color: mix($tint, $blueberry-susan, 90%);
 }
 
 .news-wrapper{
-  // box model
-  margin: 0 auto;
-  width: calc(100% - 2em);
+	// box model
+	margin: 0 auto;
+	width: calc(100% - 2em);
 }
 
 .news-story{
-  // box model
-  border: 1px solid mix($tint, $blueberry-susan, 80%);
-  height: calc(100% - 1em);
-  margin-bottom: 1em;
-  padding: 1em 1em 0;
-  // typography
-  color: #333;
-  //font-family: "Minion Pro", Minion, "Times New Roman", Times, serif;
-  // backgrounds and borders
-  background-color: $tint;
-  border-radius: 2px;
-  // misc
+	// box model
+	border: 1px solid mix($tint, $blueberry-susan, 80%);
+	height: calc(100% - 1em);
+	margin-bottom: 1em;
+	padding: 1em 1em 0;
+	// typography
+	color: mix($tint, $shade, 20%);
+	//font-family: "Minion Pro", Minion, "Times New Roman", Times, serif;
+	// backgrounds and borders
+	background-color: $tint;
+	border-radius: 2px;
+	// misc
 }
 
 /**
@@ -357,20 +355,21 @@
 	shape-margin: 1em;
 	shape-outside: circle() border-box;
 }
+
 .profession{
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
-	
+
 	@include breakpoint($starlord){
 		@include base-type;
 		font-weight: bold;
 	}
 }
- 
+
 .mini-bio-photo,  // deprecated, use .mini-profile-photo instead.
 .mini-profile-photo{  // Deprecates .program-faculty in catalog.css; use this instead.
 	// box model
-	border: 1px solid mix(black, $sky-blue, 60%);
+	border: 1px solid mix($shade, $sky-blue, 60%);
 	height: 3rem;
 	// backgrounds & borders;
 	border-radius: 50%;
@@ -385,16 +384,16 @@
  * R. Embeded Content
  */
 .lazy-load{
-  // box model
-  border-bottom-width: 0;
-  max-width: 100%;
-  // layout
-  display: block;
-  overflow: hidden;
-  // position
-  position: relative;
-  
-  &::after{
+	// box model
+	border-bottom-width: 0;
+	max-width: 100%;
+	// layout
+	display: block;
+	overflow: hidden;
+	// position
+	position: relative;
+
+	&::after{
 		// box model
 		height: 100%;
 		width: 100%;
@@ -412,17 +411,17 @@
 		// misc
 		content: url("/_inc/images/icons/green/play.png");
   }
-  
-  &:hover::after{
-    opacity: .85;
-  }
-  
-  img{
-  	// box model
-  	margin: 0;
-  	// layout
-	  display: block;
-  }
+
+	&:hover::after{
+		opacity: 0.85;
+	}
+
+	img{
+		// box model
+		margin: 0;
+		// layout
+		display: block;
+	}
 }
 
 .blog .entries{
@@ -451,11 +450,11 @@
 .item-list ul{  // This should match the default unordered list styles. If it doesn’t, update this.
 	@include margin-default;
 	margin-left: 1.07142857142857em;  // 15/14
-	
+
 	@include breakpoint($gamora){
 		margin-left: 1.66666666666667em;  // 30/18
 	}
-	
+
 	@include breakpoint($groot){
 		margin-left: 1.56014353320505em; // 30/19.229
 	}
@@ -483,5 +482,5 @@
 }
 
 #toolbar{  // Drupal
-	box-shadow: 0 1px .25em $drop-shadow;
+	box-shadow: 0 1px 0.25em $drop-shadow;
 }

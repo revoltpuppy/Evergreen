@@ -1,4 +1,32 @@
+/**
+ * NOTE:
+ *
+ * Webform .form-items wrap around each label + input pair, so put margins
+ * on .form-items and remove them from form fields.
+ */
+
+.webform-client-form .form-item,
+.webform-client-form .form-actions{
+	// box model
+	@include margin-default;
+	margin: 0;
+	// layout
+	clear: left;
+
+	@include breakpoint($gamora){
+		@include margin-default-lg;
+	}
+}
+
+.webform-client-form input[type="text"],
+.webform-client-form select{
+	margin: 0;  // See note, above.
+}
+
 .webform-client-form label{
+	// box model
+	margin: 0;
+	// typography
 	font-weight: normal;
 }
 
@@ -7,7 +35,7 @@
 	margin: calc(15 / 11.12 * -1em) 0 calc(22.5 / 11.12 * 1em);
 	// typography
 	@include small-type;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		@include margin-default;
@@ -15,19 +43,6 @@
 		font-family: $text-face;
 		@include base-type;
 	}
-}
-
-.webform-client-form .form-item,
-.webform-client-form .form-actions{
-	// box model
-	//@include margin-default;
-	margin: 0;
-	// layout
-	clear:left;
-	
-	/*@include breakpoint($gamora){
-		@include margin-default-lg;
-	}*/
 }
 
 .webform-client-form input.year{  // input is specified because sometimes select boxes can be years, and their width should be auto
@@ -42,7 +57,7 @@
 	float: none;
 }
 
-.webform-container-inline input{
+.webform-container-inline label{
 	margin-right: 0;
 }
 

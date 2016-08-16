@@ -3,16 +3,17 @@
  *
  * Table of Contents
  *
- *  1. Text List
- *  2. Lineup
- *  3. Accordion
- *  4. Flexible Lists
- *  5. Step List
- *  6. Link Icons
- *  7. Tag Clouds
- *  8. Alphabetical Order Index
- *  9. Badge List
- * 10. Zebra-Striped
+ *  1.   Text List
+ *  1.a. Alternate Text List
+ *  2.   Lineup
+ *  3.   Accordion
+ *  4.   Flexible Lists
+ *  5.   Step List
+ *  6.   Link Icons
+ *  7.   Tag Clouds
+ *  8.   Alphabetical Order Index
+ *  9.   Badge List
+ * 10.   Zebra-Striped
  */
 
 /**
@@ -25,7 +26,7 @@
 	margin-left: 1em;
 	//lists
 	list-style-type: disc;
-	
+
 	ul{
 		//box-model
 		margin-left: 1em;
@@ -34,29 +35,29 @@
 	}
 }
 
-	/**
-	 * A. Alternate Text List
-	 *
-	 * A different style for a text list. This one has with more
-	 * generous spacing below, to distinguish individual list
-	 * items.
-	 *
-	 * Extends .text-list or .element-list.
-	 */
-	 
-	 .text-list-alt > li{
-		 //box model
-		 margin: 0.53571428571429em 0;  // 7.5/14
-		 
-		 @include breakpoint ($gamora){
-			 margin: 0.44117647058824em 0;  // 7.5/17
-		 }
-	 }
+/**
+ * 1.a. Alternate Text List
+ *
+ * A different style for a text list. This one has with more
+ * generous spacing below, to distinguish individual list
+ * items.
+ *
+ * Extends .text-list or .element-list.
+ */
+
+.text-list-alt > li{
+	//box model
+	margin: 0.53571428571429em 0;  // 7.5/14
+
+	@include breakpoint ($gamora){
+		margin: 0.44117647058824em 0;  // 7.5/17
+	}
+}
 
 //Not sure where this is used. Probably delete whenever and see if anybody complains.
-.singleton a{  //deprecated
+/*.singleton a{  //deprecated
 	font-weight: normal;
-}
+}*/
 
 /**
  * 2. Lineup
@@ -65,6 +66,7 @@
  *
  * See the social media icons in the footer, for example.
  */
+
 .lineup{
 	display: flex;
 	flex-wrap: wrap;
@@ -83,7 +85,7 @@
 	//max-width: calc(100% - 1ch);
 	//layout
 	display: block;
-	
+
 	@include breakpoint($gamora){
 		height: 2em;
 		width: 2em;
@@ -105,27 +107,30 @@
 	background-color:  mix($tint, $blueberry-susan, 85%);
 	border-radius: 2px;
 }
+
 .accordion dt a,
 .accordion dd{
 	padding: 0.631100639515315em 2%;  //15/11.884/2
 }
+
 .accordion dt{
 	border-top: 1px solid mix($shade, $blueberry-susan, 50%);  //Use border-top, cuz dts aren't last-childs
 	margin-top: 0;
-	
+
 	&:first-child{  //Use first-child cuz dts aren't last-childs
 		border-top-width: 0;
 	}
-	
+
 	&:hover{
-	  // backgrounds & borders
-	  background-color: mix($tint, $blueberry-susan, 90%);
-	  border-color: mix($tint, $blueberry-susan, 80%);
-	  border-top-color: mix($shade, $blueberry-susan, 33%);
-	  // transition
-	  transition: background-color .2s ease-out;
+		// backgrounds & borders
+		background-color: mix($tint, $blueberry-susan, 90%);
+		border-color: mix($tint, $blueberry-susan, 80%);
+		border-top-color: mix($shade, $blueberry-susan, 33%);
+		// transition
+		transition: background-color 0.2s ease-out;
 	}
 }
+
 .accordion dt a{
 	// box model
 	border-bottom-width: 0;
@@ -133,6 +138,7 @@
 	// layout
 	display: block;
 }
+
 .accordion dt a:before{
 	// box model
 	margin-right: 2%;
@@ -140,25 +146,26 @@
 	display: inline-block;
 	content: "▶";
 }
+
 .accordion dd{
 	// box model
 	margin-bottom: 0;
 	// backgrounds & borders
-	background-color: hsl(0, 0%, 95%);
+	background-color: $tint;
 	// misc
-	box-shadow: inset 0 2px 2px #999;
+	box-shadow: inset 0 2px 2px mix($tint, $shade, 60%);
 }
 
 .accordion-table .group{
-  font-weight: bold;
-  color: $blueberry-susan;
-  
-  &:hover{
-  	// typography
-    color: $sky-blue;
-    // misc
-    cursor: pointer;
-  }
+	font-weight: bold;
+	color: $blueberry-susan;
+
+	&:hover{
+		// typography
+		color: $sky-blue;
+		// misc
+		cursor: pointer;
+	}
 }
 
 /**
@@ -169,45 +176,45 @@
  * @see http://evergreen.edu/studies
  */
 // Lists have a hard time breaking across columns, so there are some tricky fixes here.
-ul.flexible{
-	
+.flexible{
+
 	@media screen and (min-width: 20em){
-  	// box model
-  	margin-left: 0;
-  	// layout
-    column-count: 2;
-    column-gap: 15px;
+		// box model
+		margin-left: 0;
+		// layout
+		column-count: 2;
+		column-gap: 15px;
 		list-style-position: inside;  // a compromise that makes bullets visible
   }
-            
+
 	@media screen and (min-width: 32em){
-		-webkit-column-count: 3;
-		   -moz-column-count: 3;
-		        column-count: 3;
+		column-count: 3;
 	}
 }
+
 .flexible > li{
+
 	@media screen and (min-width: 20em){
-  	// box model
-  	margin: 0 2% 0.46875rem 2%;  // 7.5/16
-  	//width: 46%;
-  	// layout
-  	//float: left;
-  	overflow: hidden;
+		// box model
+		margin: 0 2% 0.46875rem;  // 7.5/16
+		//width: 46%;
+		// layout
+		//float: left;
+		overflow: hidden;
 	}
 }
 
 .unit-2-7 .flexible{
-	@media screen and (min-width:32em){
+	@media screen and (min-width: 32em){
 		column-count: 2;
 	}
 }
-  
+
 .unit-3-7 .flexible{
 	@media screen and (min-width: 70em){
 		column-count: 2;
 	}
-	
+
 	@media screen and (min-width: 70em){
 		column-count: 3;
 	}
@@ -224,61 +231,61 @@ ul.flexible{
 	// list
 	counter-reset: li;
 	list-style-type: none;
-	
-	> li{
+}
+
+.step-list > li{
+	// box model
+	border-bottom: 1px solid mix($tint, $blueberry-susan, 75%);
+	padding-left: 3em;
+	// position
+	position: relative;  // Creates new positioning context
+
+	@include breakpoint($gamora){
+		padding-left: 4em;
+	}
+
+	&::before{
 		// box model
-		border-bottom: 1px solid mix($tint, $blueberry-susan, 75%);
-		padding-left: 3em;
+		width: 0.75em;
+		// list
+		counter-increment: li;
 		// position
-		position: relative;  // Creates new positioning context
-		
+		position: absolute;
+		left: 0;
+		// typography
+		color: mix($tint, $blueberry-susan, 40%);
+		font-variant-numeric: tabular-nums;
+		font-size: 1.945rem;  //31.12px  Step 4
+		line-height: 1em;
+		font-weight: bold;
+		text-align: right;
+		// misc
+		content: counter(li) ".";
+
+		@include breakpoint($starlord){
+			font-size: 2.291rem;  //36.656px
+	  }
+
 		@include breakpoint($gamora){
-			padding-left: 4em;
-		}
-		
-		&::before{
 			// box model
-			width: .75em;
-			// list
-			counter-increment: li;
-			// position
-			position: absolute;
-			left: 0;
+			width: 1em;
 			// typography
-			color: mix($tint, $blueberry-susan, 40%);
-			font-variant-numeric: tabular-nums;
-			font-size: 1.945rem;  //31.12px  Step 4
-		  line-height: 1em;
-			font-weight: bold;
-			text-align: right;
-			// misc
-			content: counter(li) ".";
-		  
-		  @include breakpoint($starlord){
-			  font-size: 2.291rem;  //36.656px
-		  }
-		  
-		  @include breakpoint($gamora){
-			  // box model
-			  width: 1em;
-			  // typography
-				font-size: 2.782rem;  //44.512px  Step 5
-			}
-			
-			@include breakpoint($groot){
-				font-size: 3.146rem;  //50.336  Step 6
-			}
+			font-size: 2.782rem;  //44.512px  Step 5
 		}
-		
-		p,
-		li{
-			// typography
-			@include base-type;
-			font-weight: normal;
-			
-			@include breakpoint($gamora){
-				@include base-type-lg;
-			}
+
+		@include breakpoint($groot){
+			font-size: 3.146rem;  //50.336  Step 6
+		}
+	}
+
+	p,
+	li{
+		// typography
+		@include base-type;
+		font-weight: normal;
+
+		@include breakpoint($gamora){
+			@include base-type-lg;
 		}
 	}
 }
@@ -306,49 +313,56 @@ ul.flexible{
 	// misc
 	content: "";
 }
+
 .link-icon::after{
-  margin-left: .5em;
-}
-.link-icon-alt::before{
-  margin-right: .5em;
-}
-.icon-blog::before{
-	// backgrounds & borders
-  background-image: url("/_inc/images/icons/external/blog32x32.png");
-  // misc
-  content: "Blog";
-}
-.icon-facebook::before{
-	// backgrounds & borders
-  background-image: url("/_inc/images/icons/external/facebook32x32.png");
-  // misc
-  content: "Facebook";
-}
-.icon-instagram::before{
-	// backgrounds & borders
-  background-image: url("/_inc/images/icons/external/instagram32x32.png");
-  // misc
-  content: "Instagram";
-}
-.icon-pinterest::before{
-	// backgrounds & borders
-  background-image: url("/_inc/images/icons/external/pinterest32x32.png");
-  // misc
-  content: "Pinterest";
-}
-.icon-twitter::before{
-	// backgrounds & borders
-  background-image: url("/_inc/images/icons/external/twitter32x32.png");
-  // misc
-  content: "Twitter";
-}
-.icon-youtube::before{
-	// backgrounds & borders
-  background-image: url("/_inc/images/icons/external/youtube32x32.png");
-  // misc
-  content: "YouTube";
+	margin-left: 0.5em;
 }
 
+.link-icon-alt::before{
+	margin-right: 0.5em;
+}
+
+.icon-blog::before{
+	// backgrounds & borders
+	background-image: url("/_inc/images/icons/external/blog32x32.png");
+	// misc
+	content: "Blog";
+}
+
+.icon-facebook::before{
+	// backgrounds & borders
+	background-image: url("/_inc/images/icons/external/facebook32x32.png");
+	// misc
+	content: "Facebook";
+}
+
+.icon-instagram::before{
+	// backgrounds & borders
+	background-image: url("/_inc/images/icons/external/instagram32x32.png");
+	// misc
+	content: "Instagram";
+}
+
+.icon-pinterest::before{
+	// backgrounds & borders
+	background-image: url("/_inc/images/icons/external/pinterest32x32.png");
+	// misc
+	content: "Pinterest";
+}
+
+.icon-twitter::before{
+	// backgrounds & borders
+	background-image: url("/_inc/images/icons/external/twitter32x32.png");
+	// misc
+	content: "Twitter";
+}
+
+.icon-youtube::before{
+	// backgrounds & borders
+	background-image: url("/_inc/images/icons/external/youtube32x32.png");
+	// misc
+	content: "YouTube";
+}
 
 /**
  * 7. Tag Clouds
@@ -356,16 +370,17 @@ ul.flexible{
  * Tag cloud sizing.
  */
 .few{
-  font-size: 0.695rem;
-  line-height: 1.34831460674157;  // 15/11.125
-  
-  a{
-    font-weight: normal;
-  }
+	font-size: 0.695rem;
+	line-height: 1.34831460674157;  // 15/11.125
+
+	a{
+		font-weight: normal;
+	}
 }
+
 .many{
 	@include base-type-lg;
-	
+
 	@include breakpoint($groot){
 		@include base-type-xl;
 	}
@@ -378,7 +393,7 @@ ul.flexible{
  */
 .alpha-label{
 	// box model
-	border: 1px solid mix(white, $blueberry-susan, 75%);
+	border: 1px solid mix($tint, $blueberry-susan, 75%);
 	border-bottom-width: 0;
 	margin-bottom: -1px;
 	padding: 0 1em;
@@ -387,44 +402,47 @@ ul.flexible{
 	// position
 	position: sticky;
 	// position
-	top: .5em;
+	top: 0.5em;
 	z-index: 1;
 	// backgrounds & borders
-	background-color: mix(white, $blueberry-susan, 85%);
+	background-color: mix($tint, $blueberry-susan, 85%);
 	border-radius: 2px 2px 0 0;
 }
+
 .alpha-index{
 	// box model
-	border: 1px solid mix(white, $blueberry-susan, 75%);
+	border: 1px solid mix($tint, $blueberry-susan, 75%);
 	margin-left: 0;
 	padding-left: 0;
 	// layout
 	display: block;
 	// position
 	position: sticky;
-	top: calc(.5em + .875rem * 1.60714);
+	top: calc(0.5em + 0.875rem * 1.60714);
 	// typography
 	word-wrap: break-word;
 	// backgrounds & borders
-	background-color: mix(white, $blueberry-susan, 85%);
+	background-color: mix($tint, $blueberry-susan, 85%);
 	border-radius: 2px;
 	// lists
 	list-style-type: none;
-	
+
 	@media screen and (min-width: 32em){
 		// layout
 		display: flex;
 		justify-content: space-around;
 	}
-	
+
 	@media screen and (min-width: 43em){
-		top: calc(.5em + 1.202rem * 1.46814);
+		top: calc(0.5em + 1.202rem * 1.46814);
 	}
 }
+
 .alpha-label + .alpha-index{
-  border-top-left-radius: 0;
-  margin-top: -1px;
+	border-top-left-radius: 0;
+	margin-top: -1px;
 }
+
 .alpha-index > li{
 	// box model
 	padding: 0 2px;
@@ -439,28 +457,30 @@ ul.flexible{
  *
  * @see http://evergreen.edu/admissions
  */
+
 .badge-list{
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  overflow: hidden;
-  
-  > li{
-  	// box model
-    margin: 0 1em;
-    // layout
-    float: left;
-    // typography
-    text-align: center;
-  }
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	overflow: hidden;
+
+	> li{
+		// box model
+		margin: 0 1em;
+		// layout
+		float: left;
+		// typography
+		text-align: center;
+	}
 }
+
 .badge{
-  max-height: 90px;
+	max-height: 90px;
 }
 
 .badge-alt{
-  max-width: 115px;  // For badges in landscape mode
+	max-width: 115px;  // For badges in landscape mode
 }
 
 
@@ -470,14 +490,11 @@ ul.flexible{
  * A parent container, whose direct children are zebra-striped.
  * Strictly speaking, this doesn't have to be a list element.
  */
-.zebra-striped{
-	
-	> *{
-		padding-right: 1em;
-		padding-left: 1em;
-		
-		&:nth-child(odd){
-			background-color: mix(white, $blueberry-susan, 85%);
-		}
+.zebra-striped > *{
+	padding-right: 1em;
+	padding-left: 1em;
+
+	&:nth-child(odd){
+		background-color: mix($tint, $blueberry-susan, 85%);
 	}
 }

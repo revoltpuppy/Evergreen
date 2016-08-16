@@ -29,23 +29,23 @@ table{
 
 caption{
 	// box model
-	margin: 0 0 0.41666666666667em 0;  // 7.5/18
+	margin: 0 0 0.41666666666667em;  // 7.5/18
 	@include base-type-lg;
 	font-style: italic;
-	
+
 	@include breakpoint($gamora){
 		// box model
-		margin: 0 0 0.39003588330126em 0;  // 7.5/19.229
+		margin: 0 0 0.39003588330126em;  // 7.5/19.229
 		// typography
 		@include base-type-xl;
 	}
-	
+
 	@include breakpoint($groot){
-  	// box model
-    margin-top: 0.51503914297487em;  // 15/29.124
-    // typography
-    font-size: 1.82rem;  // 29.124px  Step 3
-    line-height: 1.03007828594973;  // 30/29.124
+		// box model
+		margin-top: 0.51503914297487em;  // 15/29.124
+		// typography
+		font-size: 1.82rem;  // 29.124px  Step 3
+		line-height: 1.03007828594973;  // 30/29.124
 	}
 }
 
@@ -72,12 +72,12 @@ th{
 tbody th,
 td{
 	// box model
-	border: 0 solid #ccc;
+	border: 0 solid mix($tint, $shade, 80%);
 	border-top-width: 1px;
 	padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;  // 5/13.5  15/13.5
 	// typography
-	color: #333;
-  font-feature-settings: "lnum", "tnum";  // "lnum" is needed for lining numbers in Firefox.
+	color: mix($tint, $shade, 20%);
+	font-feature-settings: "lnum", "tnum";  // "lnum" is needed for lining numbers in Firefox.
 	font-variant-numeric: lining-nums tabular-nums;  // "lining-nums" is not applying in Firefox.
 	vertical-align: top;
 }
@@ -103,14 +103,15 @@ th > :first-child,
 td > :first-child,
 td > ul:first-child li:first-child > p:first-child,
 td > ol:first-child li:first-child > p:first-child{
-    margin-top: 0;
+	margin-top: 0;
 }
+
 // Collapse bottom space between cell padding and element margins.
 th > :last-child,
 td > :last-child,
 td > ul:last-child li:last-child > p:last-child,
 td > ol:last-child li:last-child > p:last-child{
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 table a{
@@ -128,15 +129,17 @@ table a{
  */
 .horizontal-table th{
 	// box model
-	border-top: 1px solid #ccc;
+	border-top: 1px solid mix($tint, $shade, 80%);
 	padding: 0.37037em 1.1111111111em 1.1111111111em 0;  //15/13.5 Should match the padding on td
 	// layout
 	vertical-align: top;
 }
+
 .horizontal-table tr:first-child th{
 	// box model
-	border-top: 1px solid black;
+	border-top: 1px solid $shade;
 }
+
 .horizontal-table:last-child{
 	// box model
 	border-bottom-width: 0;
@@ -154,14 +157,14 @@ table a{
 .accordion-table td,
 .striped-table td{
 	padding-left: 1.1111111111em;  // 15/13.5 Should match the padding on td
-	
+
 	&:last-child{
 		padding-right: 1.1111111111em;  // 15/13.5 Should match the padding on td
 	}
 }
 
 .striped-table > tbody > tr:nth-child(odd){
-	background-color: mix(white, $blueberry-susan, 90%);
+	background-color: mix($tint, $blueberry-susan, 90%);
 }
 
 /**
@@ -178,6 +181,7 @@ table a{
 .sorting_asc::before{
 	content: "↓\00A0";  //non-breaking space
 }
+
 .sorting_desc::before{
 	content: "↑\00A0";  //non-breaking space
 }

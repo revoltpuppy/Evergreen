@@ -11,10 +11,10 @@
 
 /**
  * 1. Event Calendar
- */	
+ */
 .calendar-dt{
 	// box model
-	border: 1px solid mix(white, $blueberry-susan, 66%);
+	border: 1px solid mix($tint, $blueberry-susan, 66%);
 	margin: 0 auto;
 	width: 3em;
 	// layout
@@ -22,18 +22,18 @@
 	// typography
 	text-align: center;
 	// backgrounds and borders
-	background-color: hsl(0, 0%, 95%);
+	background-color: $tint;
 	border-radius: 2px;
 }
 
 .calendar-month{
 	// box model
-	padding: 0 .5em;
+	padding: 0 0.5em;
 	width: 100%;
 	// layout
 	display: block;
 	// typography
-	color: hsl(0, 0%, 100%);
+	color: $tint;
 	@include small-type;
 	font-weight: bold;
 	letter-spacing: 0.1em;
@@ -45,7 +45,7 @@
 .calendar-dt-mini{  // A calendar that starts small and then expands to normal size.
 	@media screen{
 		width: 2em;
-		
+
 		.calendar-month{
 			// box model
 			//height: 2px;
@@ -58,7 +58,7 @@
 			font-size: 0.625rem;  // 10/16; magic number - the biggest font size it can be and still fit in the box
 			font-weight: normal;
 		}
-		
+
 		.calendar-day{
 			// box model
 			height: 1.42857em;  // matches line-height of type
@@ -69,10 +69,10 @@
 }
 
 .calendar-dt-null{
-	background-color: mix(white, $blueberry-susan, 80%);
-	
+	background-color: mix($tint, $blueberry-susan, 80%);
+
 	.calendar-month{
-		background-color: mix(white, $blueberry-susan, 60%);
+		background-color: mix($tint, $blueberry-susan, 60%);
 	}
 }
 
@@ -88,21 +88,21 @@
 .upcoming-events-homepage{
 	// box model
 	margin: 0 auto;
-	
+
 	.media{
-		border-bottom: 1px solid mix(white, $blueberry-susan, 66%);
+		border-bottom: 1px solid mix($tint, $blueberry-susan, 66%);
 	}
-	
+
 	.media-body{
 		text-align: center;
 	}
-	
-	@media screen and (min-width: 32em){
+
+	@include breakpoint($starlord){
 		margin: 0 auto 1rem;
 		max-width: 66.6666666666%;
 	}
-	
-	@media screen and (min-width: 43em){
+
+	@include breakpoint($gamora){
 		// box model
 		margin-top: 1rem;
 		margin-left: -24.58203125%;  // 442/2048 + 3%
@@ -112,40 +112,40 @@
 		// position
 		position: absolute;  // Removes nav from the document flow
 	}
-	
-	@media screen and (min-width: 70em){
+
+	@include breakpoint($drax){
 		// box model
 		margin-left: -25.520833333333%;
 		width: 23.484848484848%;
 		@include base-type-lg;
-		
+
 		li{
 			@include margin-default-lg;
 		}
 	}
 }
 
-.upcoming-events-homepage2 {
+.upcoming-events-homepage2{
 	margin: 0 auto;
 
-	@include breakpoint($gamora) {
+	@include breakpoint($gamora){
 		// typography
 		@include base-type;
 	}
-	
+
 	@include breakpoint($drax){
 		// typography
 		@include base-type-lg;
 	}
-	
+
 	@include breakpoint($groot){
 		// typography
 		@include base-type-xl;
 	}
-	
-	li {
+
+	li{
 		@include margin-default;
-		
+
 		@include breakpoint($drax){
 			// box model
 			@include margin-default-lg;
@@ -156,7 +156,7 @@
 .upcoming-events-list-wrapper{
 	overflow: hidden;
 	position: relative;
-	
+
 	@include breakpoint($gamora){
 		overflow-x: visible;
 	}
@@ -173,15 +173,15 @@
 	scroll-snap-destination: 0 0;
 	scroll-snap-points-x: repeat(0%);
 	scroll-snap-type: mandatory;
-	
+
 	@include breakpoint($lil-groot){
 		//scroll-snap-points-x: repeat(60%);
 	}
-	
+
 	@include breakpoint($starlord){
 		//scroll-snap-points-x: repeat(71%);
 	}
-	
+
 	@include breakpoint($gamora){
 		// layout
 		flex-wrap: wrap;
@@ -189,57 +189,7 @@
 		// scrolling
 		scroll-snap-type: none;
 	}
-	
-	> .unit-1-4,
-	> .unit-1-7{
-		// box model
-		width: 66.666666%;  // magic number: allows next event to peek out, indicating horizontal scrolling
-		// layout
-		flex-shrink: 0;
-		// scrolling
-		scroll-snap-coordinate: 0 0;
-		
-		@include breakpoint($lil-groot){
-			width: 40%;  // magic number: allows next event to peek out, indicating horizontal scrolling
-		}
-		
-		@include breakpoint($starlord){
-			width: 29%;  // magic number: allows next event to peek out, indicating horizontal scrolling
-		}
-		
-		&:last-child{
-			scroll-snap-coordinate: -50% 0;
-		
-			@include breakpoint($lil-groot){
-				scroll-snap-coordinate: -150% 0;
-			}
-			
-			@include breakpoint($starlord){
-				scroll-snap-coordinate: none;
-			}
-		}
-	}
-	
-	> .unit-1-4{
-		
-		@include breakpoint($gamora){
-			// box model
-			width: 25%;
-			// layout
-			flex-shrink: 1;
-		}
-	}
-	
-	> .unit-1-7{
-		
-		@include breakpoint($gamora){
-			// box model
-			width: 14.285714285714%;
-			// layout
-			flex-shrink: 1;
-		}
-	}
-	
+
 	&::after{  // pseudo-element that adds a drop shadow
 		// box model
 		height: 100%;
@@ -252,15 +202,65 @@
 		// miscellaneous
 		box-shadow: -0.25em 0 1em $drop-shadow;
 		content: "";
-		
+
 		@include breakpoint($gamora){
 			display: none;
 		}
 	}
-	
-	.media-body{
-		text-align: center;
+}
+
+.grid.upcoming-events-list > .unit-1-4,
+.grid.upcoming-events-list > .unit-1-7{
+	// box model
+	width: 66.666666%;  // magic number: allows next event to peek out, indicating horizontal scrolling
+	// layout
+	flex-shrink: 0;
+	// scrolling
+	scroll-snap-coordinate: 0 0;
+
+	@include breakpoint($lil-groot){
+		width: 40%;  // magic number: allows next event to peek out, indicating horizontal scrolling
 	}
+
+	@include breakpoint($starlord){
+		width: 29%;  // magic number: allows next event to peek out, indicating horizontal scrolling
+	}
+
+	&:last-child{
+		scroll-snap-coordinate: -50% 0;
+
+		@include breakpoint($lil-groot){
+			scroll-snap-coordinate: -150% 0;
+		}
+
+		@include breakpoint($starlord){
+			scroll-snap-coordinate: none;
+		}
+	}
+}
+
+.grid.upcoming-events-list > .unit-1-4{
+
+	@include breakpoint($gamora){
+		// box model
+		width: 25%;
+		// layout
+		flex-shrink: 1;
+	}
+}
+
+.grid.upcoming-events-list > .unit-1-7{
+
+	@include breakpoint($gamora){
+		// box model
+		width: 14.285714285714%;
+		// layout
+		flex-shrink: 1;
+	}
+}
+
+.grid.upcoming-events-list .media-body{
+	text-align: center;
 }
 
 /**
@@ -272,43 +272,43 @@
 	@include margin-default;
 	// backgrounds and borders
 	border-radius: 2px;
-	
-	.h-event{
-		// box model
-		padding: 1em;
-		// layout
-		display: flex;
-		flex-direction: column;
-		overflow: hidden;
-		// backgrounds & borders
-		border-radius: 2px;
-		
-		&:nth-child(even){
-			background-color: mix(white, $blueberry-susan, 85%);
-		}
+}
+
+.schedule .h-event{
+	// box model
+	padding: 1em;
+	// layout
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	// backgrounds & borders
+	border-radius: 2px;
+
+	&:nth-child(even){
+		background-color: mix($tint, $blueberry-susan, 85%);
 	}
 }
-	
+
 .schedule-event-required{
 	border: 2px solid $evergreen-neue;
-	
+
 	+ .schedule-event-required{
 		margin-top: 2px;
 	}
-	
+
 	&:nth-of-type(odd){
-		background-color: mix(white, $evergreen-neue, 90%);
+		background-color: mix($tint, $evergreen-neue, 90%);
 	}
-	
+
 	&:nth-of-type(even){
-		background-color: mix(white, $evergreen-neue, 80%);
+		background-color: mix($tint, $evergreen-neue, 80%);
 	}
-	
+
 	.p-name{
 		color: $evergreen-old-style;
 	}
 }
-	
+
 .schedule-event-morning{
 	background-color: $morning-light;
 }
@@ -316,18 +316,18 @@
 .schedule-event-evening{
 
 	&:nth-of-type(odd){
-		background-color: mix(white, $sky-blue, 90%);
+		background-color: mix($tint, $sky-blue, 90%);
 	}
-	
+
 	&:nth-of-type(even){
-		background-color: mix(white, $sky-blue, 80%);
+		background-color: mix($tint, $sky-blue, 80%);
 	}
-	
+
 	.p-name{
-		color: mix(black, $sky-blue, 60%);
+		color: mix($shade, $sky-blue, 60%);
 	}
 }
-	
+
 .schedule-event-evening-start::before{
 	// box model
 	border-bottom: 1px solid $sky-blue;
@@ -339,7 +339,7 @@
 	// misc
 	content: "Evening Events";
 }
-	
+
 .schedule-event-time{
 	// box model
 	border-bottom: 1px solid mix($tint, $evergreen-old-style, 50%);
@@ -348,27 +348,25 @@
 	color: $evergreen-old-style;
 	font-weight: bold;
 }
-	
-.schedule-event-details{
-}
 
 /**
  * 4. Bulletin
  *
  * The section that says, “This is Week X”.
  */
+
 .bulletin{
 	// box model
-	border-bottom: 1px solid mix(white, $blueberry-susan, 60%);
+	border-bottom: 1px solid mix($tint, $blueberry-susan, 60%);
 	// backgrounds & borders
-	background-color: mix(white, $blueberry-susan, 90%);
+	background-color: mix($tint, $blueberry-susan, 90%);
 	// typography
 	@include base-type;
-	
+
 	@include breakpoint($drax){
 		@include base-type-lg;
 	}
-	
+
 	> .wrapper{
 		width: calc(100% - 2em);  // min-margins
 	}
@@ -384,34 +382,35 @@
 	padding-left: 1em;  // grid system
 }
 
-.bulletin-header{		
+.bulletin-header{
 	@include breakpoint($lil-groot){
 		width: 33.3333333333%;
 	}
-	
+
 	@include breakpoint($gamora){
 		width: 14.285714285714%;
 	}
-	
+
 	h2{
 		// box-model
 		@include margin-default;
 		// typography
 		text-align: left;
-		
+
 		@include breakpoint($lil-groot){
 			// typography
 			text-align: right;
 		}
 	}
 }
+
 .chrono-meter{
 	// box model
 	width: 100%;
 	// layout
 	display: flex;
 	justify-content: space-between;
-	
+
 	@include breakpoint($lil-groot){
 		// box model
 		margin-right: 1em;
@@ -421,7 +420,7 @@
 		float: left;
 		overflow: hidden;
 	}
-	
+
 	@include breakpoint($gamora){
 		// box model
 		margin-right: 0;
@@ -431,15 +430,15 @@
 		justify-content: space-between;
 	}
 }
-	
+
 .chrono-meter	> li{
 	// box model
-	border: 1px solid mix(white, $blueberry-susan, 60%);
+	border: 1px solid mix($tint, $blueberry-susan, 60%);
 	height: 7.5px;
 	width: 7.5px;
 	// layout
 	display: inline-block;
-	
+
 	@include breakpoint($lil-groot){
 		// box model
 		margin-bottom: 2px;
@@ -450,29 +449,33 @@
 		border-radius: 2px;
 	}
 }
+
 .chrono-stop-current{
 	// backgrounds & borders
-	background-color: mix(white, $blueberry-susan, 80%);
+	background-color: mix($tint, $blueberry-susan, 80%);
 }
+
 .chrono-stop-complete{
 	// backgrounds & borders
-	background-color: mix(white, $blueberry-susan, 60%);
+	background-color: mix($tint, $blueberry-susan, 60%);
 }
 
 .bulletin-body{
 	@include breakpoint($lil-groot){
 		width: 66.6666666667%;
 	}
-	
+
 	@include breakpoint($gamora){
 		width: 85.714285714286%;
 	}
 }
+
 .bulletin-calendar{
 	@include breakpoint($gamora){
-			display: flex;
+		display: flex;
 	}
 }
+
 .bulletin-calendar > li{
 	@include breakpoint($gamora){
 		float: left;
@@ -487,465 +490,8 @@
  * The list of upcoming events around campus on the Drupal site. Replaces
  * the Google Calendar listing.
  */
-.calendar-item{  // This might be deprecated now. I'm not sure if this class appears on the page now.
-	
-	padding: 0.535714285714286em 1em 1.071428571428571em;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
-	
-	@include breakpoint($gamora){
-		padding: 0.441176470588235em 1em 0.882352941176471em;  //7.5/17/3  15/17  So, 22.5 + 7.5 + 15 = 45
-	}
-	
-	@include breakpoint($groot){
-		padding: 0.51996672212978em 1em 1.03993344425957em;  //10/19.232 20/19.232  So, 30 + 10 + 20 = 60
-	}
-}
+@import "calendars/campus-events-calendar";
 
-.calendar-calendar{
-	background-clip: transparent;
-}
-
-.calendar-calendar table,
-.calendar-calendar .month-view table{
-	@include margin-default;
-}
-
-.calendar-calendar th{
-	text-align: inherit;
-}
-
-.calendar-calendar tr{
-	background-color: transparent;
-}
-
-.calendar-calendar td{
-	width: auto;
-}
-
-.calendar-calendar td.empty{
-	color: inherit;
-}
-
-.calendar-calendar td a:hover{
-	text-decoration: none;
-}
-
-.calendar-calendar div.calendar{
-	//typography
-	font-size: inherit;
-}
-
-.calendar-calendar td.calendar-agenda-items div.calendar{
-	// box model
-	border-right-width: 0;
-	padding: 0;
-	width: 100%;
-	// backgrounds and borders
-	background-color: transparent;
-}
-
-.calendar-calendar td .inner div.calendar .contents{
-	padding: 0.25rem 0.25em 0.625rem;  // 4/16    10/16
-}
-
-.calendar-calendar .month-view .full .inner .monthview,
-.calendar-calendar .week-view .full .inner .weekview,
-.calendar-calendar .day-view .full .inner .dayview{
-	border-radius: 2px;
-}
-
-.calendar-calendar .month-view .full td.single-day div.monthview,
-.calendar-calendar .week-view .full td.single-day div.weekview,
-.calendar-calendar .day-view .full td.single-day div.dayview{
-	padding: 0;
-}
-
-.calendar-calendar .month-view .full .inner,
-.calendar-calendar .week-view .full .multi-day .inner{
-	//margin-right: 0.5em;
-}
-
-	/**
-	 * Calendar Heading
-	 */
-	.view .date-nav-wrapper .date-nav{
-		margin-bottom: 0;
-		padding-bottom: 0;
-	}
-	
-	.item-list ul{
-		margin: inherit;
-	}
-	
-	.item-list ul li{
-		// box model
-		margin-left: 0;
-	}
-	
-	.view .date-nav-wrapper .date-heading h3,
-	.date-nav div.date-heading h3,
-	.date-nav-wrapper .date-heading h3{	
-		// box model
-		margin-top: 1.66666666666667em;  // 30/18
-		margin-bottom: 0.46875rem; // 7.5px  // Bottom margin should match the p's top margin exactly, for consistency. If they don't match, change this rule.
-		// typography
-		@include base-type-lg;
-		  
-		@include breakpoint($gamora){
-			// box model
-			margin-top: 1.10603155876714em;  // 30/27.124
-			// typography
-			font-size: 1.69525rem;  // 27.124px - otherwise appears optically taller than h2; Step 3 - 2px
-			line-height: 1.10603155876714;  // 30/27.124
-		}
-	    
-		@include breakpoint($groot){
-			// box model
-			margin-top: 1.54575432811212em;  // 45/29.112
-			margin-bottom: 0.625rem;  // 10px  // Bottom margin should match the p's top margin exactly, for consistency. If they don't match, change this rule.
-			// typography
-			font-size: 1.8195rem;  // 29.112px - otherwise appears optically taller than h2; Step 4 - 3px
-			line-height: 1.03050288540808;  // 30/29.112
-		}
-	}
-	
-	.view .date-nav-wrapper .date-prev{
-		// position
-		right: auto;
-		left: 0;
-	}
-	
-	.view .date-nav-wrapper .date-prev,
-	.view .date-nav-wrapper .date-next{
-		// position
-		position: static;
-		// typography
-		font-size: inherit;
-		
-		@include breakpoint($starlord){
-			position: absolute;
-		}
-	}
-	
-	.view .date-nav-wrapper .date-prev{
-		float: left;
-	}
-	
-	.view .date-nav-wrapper .date-next{
-		float: right;
-	}
-	
-	.view .date-nav-wrapper .date-prev a,
-	.view .date-nav-wrapper .date-next a{
-		// box model
-		margin: 0 0.25em;
-		// typography
-		color: $blueberry-susan;
-		
-		&:visited{
-			color: $wine;
-		}
-		&:hover{
-			color: $sky-blue;
-		}
-	}
-	
-	/**
-	 * Calendar List View
-	 */
-	
-	.calendar-calendar .day-view td,
-	.calendar-calendar .day-view td.calendar-agenda-items{
-		// box model
-		border-width: 0;
-		// typography
-		color: inherit;
-	}
-	
-	.calendar-calendar td .inner div,
-	.calendar-calendar td .inner div a{
-		background-color: transparent;
-	}
-	
-	.calendar-calendar .day-view div.calendar,
-	.calendar-calendar .day-view .calendar-agenda-hour span.calendar-hour,
-	.calendar-calendar .day-view .calendar-agenda-hour span.calendar-ampm{  // Since these entries are “full width”, they can be the default font-size.
-		text-align: left;
-		
-		@include breakpoint($gamora){
-			@include base-type-lg;
-		}
-		
-		@include breakpoint($groot){
-			@include base-type-xl;
-		}
-	}
-	
-	.calendar-calendar td.calendar-agenda-hour,
-	.calendar-calendar .day-view .full .calendar-agenda-hour,
-	.calendar-calendar td.calendar-agenda-items .calendar.dayview{
-		// box model
-		border-bottom: 1px solid mix($tint, $blueberry-susan, 80%);
-		border-right-width: 0;
-		border-left-width: 0;
-		padding: 0;
-	}
-	
-	.calendar-calendar .day-view .calendar-agenda-items{
-		padding-left: 1em;
-	}
-	
-	.calendar-calendar .month-view .full .inner .monthview,
-	.calendar-calendar .week-view .full .inner .weekview,
-	.calendar-calendar .day-view .full .inner .dayview{
-		margin: 0;
-	}
-	
-	.calendar-calendar .month-view .full td.multi-day div.monthview,
-	.calendar-calendar .week-view .full td.multi-day div.weekview,
-	.calendar-calendar .day-view .full td.multi-day div.dayview,
-	.calendar-calendar .month-view .full td.single-day div.monthview,
-	.calendar-calendar .week-view .full td.single-day div.weekview,
-	.calendar-calendar .day-view .full td.single-day div.dayview,
-	.calendar-calendar .day-view .full td.single-day{
-		// box model
-		height: inherit;
-		margin-bottom: inherit;
-		//padding: 0;
-		// layout
-		align-items: stretch;
-		display: flex;
-		justify-content: stretch;
-		// typography
-		color: inherit;
-		// backgrounds and borders
-		background: transparent none;
-	}
-	
-		/**
-		 * Time Column
-		 */
-		.calendar-agenda-hour{
-			white-space: nowrap;  // Make sure the space doesn't break between, e.g. 12 and pm.
-		}
-		
-		.all-day .calendar-agenda-hour{
-			white-space: normal;  // When the time is “All day”, the space can break.
-		}
-		
-		.calendar-calendar .day-view .full .calendar-agenda-hour{
-			padding-top: 0.535714285714286em;  // Should match margin-default
-			padding-bottom: 1.071428571428571em;  // Should match margin-default
-		}
-		
-		.calendar-calendar td.calendar-agenda-hour .calendar-hour,
-		.calendar-calendar td.calendar-agenda-hour .calendar-ampm{
-			// box model
-			//@include margin-default;
-			display: inline-block;
-			// typography
-			font-size: inherit;
-			font-weight: inherit;
-		}
-		
-		.calendar-hour{
-			
-			&::after{
-				content: "\a0";  // Non-breaking space
-			}
-		}
-	
-		/**
-		 * Items Column
-		 */
-		
-		.calendar-calendar .day-view .full td .inner div.calendar div,
-		.calendar-calendar .day-view .full td .inner div.calendar div a{
-			margin: 0;
-		}
-		
-		.calendar-calendar .day-view .full td .inner div.calendar div a{
-			padding: 0;
-		}
-	
-	/**
-	 * Calendar Week and Month View
-	 */
-	.week-view .full,
-	.month-view .full{
-		background-color: $tint;
-	}
-	
-	.calendar-calendar .week-view .calendar,
-	.calendar-calendar .week-view .calendar-agenda-hour,
-	.calendar-calendar .month-view .calendar,
-	.calendar-calendar .month-view .calendar-agenda-hour{
-		@include small-type;
-		letter-spacing: -0.03em;
-		text-align: left;
-	}
-	
-	.calendar-calendar .week-view .full .calendar-agenda-hour{
-		padding: 0 0.25em;
-		width: auto;
-	}
-	
-	.calendar-calendar .week-view td,
-	.calendar-calendar .week-view .full td.multi-day,
-	.calendar-calendar .week-view td.calendar-agenda-items{
-		// box model
-		border-right-width: 0;
-		border-left-width: 0;
-		padding: 0;
-		// typography
-		color: inherit;
-	}
-	
-	.calendar-calendar .month-view .full td.single-day .calendar-empty,
-	.calendar-calendar .month-view .full td.single-day.empty,
-	.calendar-calendar .month-view .full td.date-box.empty{
-		background: transparent none;
-	}
-	
-	.calendar-calendar .month-view .full td{
-		padding: 0;
-	}
-	
-	.calendar-calendar .month-view .full td .inner div.day,
-	.calendar-calendar .month-view .full td .inner div.day a{
-		width: auto;
-	}
-	
-	.calendar-calendar .month-view .full tr td.today,
-	.calendar-calendar .month-view .full tr td.single-day.today,
-	.calendar-calendar .month-view .full tr.odd td.today,
-	.calendar-calendar .month-view .full tr.even td.today,
-	.calendar-calendar .month-view .full td.date-box.today,
-	.calendar-calendar .month-view .full tr td.multi-day.starts-today{
-		// box model\
-		border-color: $evergreen-old-style;
-		// background and borders
-		background-color: $morning-light;
-	}
-	
-	.calendar-calendar .month-view .full tr td.multi-day.ends-today{
-		// box model\
-		border-color: $evergreen-old-style;
-	}
-	
-	.calendar-calendar .month-view .full tr.date-box,
-	.calendar-calendar .month-view .full tr.date-box td,
-	.calendar-calendar .month-view .full tr.multi-day,
-	.calendar-calendar .month-view .full tr.multi-day td{
-		height: inherit;
-		max-height: none;
-	}
-	
-	.calendar-calendar .month-view .full td.single-day .calendar.monthview .contents,
-	.calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
-	.calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents{
-		// box model
-		border-top: 1px solid mix($tint, $blueberry-susan, 80%);
-		width: auto;
-		// layout
-		align-items: center;
-		display: flex;
-		flex-grow: 1;
-		// position
-		position: static;
-	}
-	
-	/**
-	 * Single-day
-	 */
-	
-	.calendar-calendar .month-view .full td.single-day div.monthview,
-	.calendar-calendar .week-view .full td.single-day div.weekview{
-		//padding: 0 0.25em;
-	}
-	
-	/**
-	 * Multi-day
-	 */
-	.calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
-	.calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents{
-		// backgrounds and borders
-		background-color: mix($tint, $blueberry-susan, 90%);
-	}
-	
-	.calendar-calendar .month-view .full td.multi-day .inner .monthview .continuation,
-	.calendar-calendar .week-view .full td.multi-day .inner .weekview .continuation{
-		height: inherit;
-		margin: 0 0.25em 0 0;
-		padding: 0;
-	}
-	
-	.calendar-calendar .month-view .full td.multi-day .inner .monthview .continues,
-	.calendar-calendar .week-view .full td.multi-day .inner .weekview .continues{
-		// box model
-		border-top: 1px solid mix($tint, $blueberry-susan, 80%);
-		height: inherit;
-		padding: 0 0.25em 0 0;
-		width: auto;
-		// layout
-		display: flex;
-		align-items: center;
-		// position
-		position: static;
-		//z-index: 0;
-		// backgrounds & borders
-		background-color: mix($tint, $blueberry-susan, 90%);
-	}
-	
-	.calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff,
-	.calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff{
-		// box model
-		border-top: 1px solid mix($tint, $blueberry-susan, 80%);
-		height: inherit;
-		padding-left: 0;
-		width: 0.5em;
-		// position
-		position: static;
-		// backgrounds and borders
-		background-color: mix($tint, $blueberry-susan, 80%);
-		border-radius: 0 2px 2px 0;
-	}
-	
-	/**
-	 * Events by Category
-	 */
-	.view-calendar .views-field-title{
-		margin-top: 0.535714285714286em;  // Should match default top margins exactly.
-		
-		@include breakpoint($gamora){
-			margin-top: 0.41666666666667em;  // Should match default top margins exactly.
-		}
-		
-		@include breakpoint($groot){
-			margin-top: 0.52004784440168em;  // Should match default top margins exactly.
-		}
-	}
-	
-	.date-display-range,
-	.view-calendar .date-display-range,  // Needed to override specificity in .view-calendar.
-	.date-display-single{
-		// box model
-		margin-bottom: 1.071428571428571em;  // Should match default top margins exactly.
-		// display
-		display: inline;  // This keeps the year from being awkwardly bumped to the next line.
-		
-		@include breakpoint($gamora){
-			margin-bottom: 0.83333333333333em;  // Should match default top margins exactly.
-		}
-		
-		@include breakpoint($groot){
-			margin-bottom: 1.04009568880337em;  // Should match default top margins exactly.
-		}
-	}
-	
-	.views-exposed-form label{
-		font-weight: inherit;
-	}
-	
 /**
  * 6. Event Page
  *
@@ -954,15 +500,17 @@
 .event-details{
 	font-weight: bold;
 }
+
 .event-description{
 	margin-top: calc(2.14285714285714em);  // 30/14
 	margin-bottom: calc(2.14285714285714em);  // 30/14
-	
+
 	@include breakpoint($gamora){
 		margin-top: calc(2.8125);  // 45/16
 		margin-bottom: calc(2.8125);  // 45/16
 	}
 }
+
 .event-sponsor{
 	font-style: italic;
 }

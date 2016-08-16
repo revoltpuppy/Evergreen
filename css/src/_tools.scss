@@ -3,7 +3,7 @@
  *
  * @section sass-constants
  */
- 
+
 /**
  * Colors
  */
@@ -21,7 +21,7 @@ $highlight: transparentize($morning-light, 0.5);
 $tint: hsl(0, 0%, 95%);
 $shade: hsl(0, 0%, 0%);
 
-$drop-shadow: hsla(275, 33%, 11%, .25);
+$drop-shadow: hsla(275, 33%, 11%, 0.25);
 
 $display-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 $text-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -40,18 +40,18 @@ $gamora:    (min:  43em);
 $drax:      (min:  70em);
 $groot:     (min: 125em);
 
-@mixin breakpoint($map) {
+@mixin breakpoint($map){
 	$query: null;
-	@if map-has-key($map, min) {
-		$query: append($query, unquote("(min-width: #{map-get($map, min)})"))
+	@if map-has-key($map, min){
+		$query: append($query, unquote("(min-width: #{map-get($map, min)})"));
 	}
-	@if map-has-key($map, min) and map-has-key($map, max) {
-		$query: append($query, unquote("and"))
+	@if map-has-key($map, min) and map-has-key($map, max){
+		$query: append($query, unquote("and"));
 	}
-	@if map-has-key($map, max) {
-		$query: append($query, unquote("(max-width: #{map-get($map, max)})"))
+	@if map-has-key($map, max){
+		$query: append($query, unquote("(max-width: #{map-get($map, max)})"));
 	}
-	@media screen and #{$query} {
+	@media screen and #{$query}{
 		@content;
 	}
 }
@@ -115,13 +115,13 @@ $groot:     (min: 125em);
  * Margins
  */
 @mixin margin-default{
-	margin: 0.535714285714286em 0 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
+	margin: 0.535714285714286em 0 1.071428571428571em;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
 }
 @mixin margin-default-lg{
-	margin: 0.41666666666667em 0 0.83333333333333em 0;  //22.5/18/3  15/18  So, 22.5 + 7.5 + 15 = 45
+	margin: 0.41666666666667em 0 0.83333333333333em;  //22.5/18/3  15/18  So, 22.5 + 7.5 + 15 = 45
 }
 @mixin margin-default-xl{
-	margin: 0.52004784440168em 0 1.04009568880337em 0;  // 10/19.229 20/19.229  So, 30 + 10 + 20 = 60
+	margin: 0.52004784440168em 0 1.04009568880337em;  // 10/19.229 20/19.229  So, 30 + 10 + 20 = 60
 }
 
 /**

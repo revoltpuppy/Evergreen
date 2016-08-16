@@ -29,6 +29,8 @@
  * 4. State Styles .................. (states)
  */
 
+@import "tools";  //constants, mixins, functions, etc.
+
 /**
  * 1. Base Styles
  *
@@ -68,28 +70,34 @@ a[href^="/"]::after{
 .off-canvas{
 	display: none;
 }
+
 .site-content,
 [role="main"]{
 	position: static;
 }
+
 body,
 [role=banner],
 wrapper{
-    background: transparent none;  //Don't waste ink
+	background: transparent none;  //Don't waste ink
 }
+
 [role="banner"]{
 	box-shadow: none;
 }
+
 .wrapper{
 	min-height: none;
 	max-width: none;
 }
+
 .main-row-grid{
 	// box model
 	margin-left: 0;
 	// layout
 	display: block;
 }
+
 .primary-content-wrapper,
 .sidebar-wrapper,
 .primary-content-wrapper .main-content,
@@ -104,16 +112,16 @@ wrapper{
 
 .primary-content-wrapper{
 	// backgrounds and borders
-	border-color: black;
+	border-color: $shade;
 }
 
 .page-footer{
 	//box model
-	border-top: 1px solid black;
+	border-top: 1px solid $shade;
 	margin: 0;
 	padding-bottom: 0;
 	//typography
-	color: black;
+	color: $shade;
 	//backgrounds and borders
 	background-color: transparent;
 }
@@ -135,20 +143,24 @@ wrapper{
 .logo{
 	margin: 0;
 }
+
 .logo a::after,
 .site-name a::after{
 	content: "";
 }
+
 .site-name a,
 .site-name a:link,
 .site-name a:visited{
-	color: black;
+	color: $shade;
 	text-shadow: none;
 }
+
 .main-background,
 .main-background2{
 	display: none;
 }
+
 .hero,  //deprecated
 .supplement-alt-1-2{
 	//box model
@@ -161,6 +173,7 @@ wrapper{
 	position: static;
 	z-index: auto;
 }
+
 #sitewide-alert,
 .hero,
 #tertiary-nav,
@@ -170,13 +183,13 @@ wrapper{
 
 .box,
 .pull-box{
-	border: 1px solid black;
+	border: 1px solid $shade;
 	background: transparent none;
 }
 
 .pull-quote,
 .pull-quote + .figcaption{
-	color: hsl(0, 0%, 0%);
+	color: $shade;
 }
 
 .page-footer .org,

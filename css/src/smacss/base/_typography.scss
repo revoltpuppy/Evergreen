@@ -5,11 +5,12 @@
  * 
  * Table of Contents
  *
- * 1. Base Typography ........... (base-type)
- * 2. Headings .................. (h)
- * 3. Lists ..................... (l)
- * 4. Links ..................... (a)
- * 5. Other Typography .......... (other-type)
+ * 1.   Base Typography
+ * 2.   Headings
+ * 3.   Lists
+ * 4.   Links
+ * 4.a. Site Name Link
+ * 5.   Other Typography
  */
 
 /**
@@ -49,18 +50,18 @@ body{
 body,
 input,
 button{
-	-webkit-font-smoothing: antialiased;  // Reduce text chubbiness in Safari, Chrome
 	-moz-osx-font-smoothing: grayscale;  // Reduce text chubbiness in Firefox
+	-webkit-font-smoothing: antialiased;  // Reduce text chubbiness in Safari, Chrome
 }
 
 body,
 .base{
 	@include base-type;  // Step 0.5
-	
+
 	@include breakpoint($gamora){
 		@include base-type-lg;  // Step 1
 	}
-	
+
 	@include breakpoint($groot){
 		@include base-type-xl;  // Step 2
 	}
@@ -74,11 +75,11 @@ blockquote,
 figure,
 .base{
 	@include margin-default;
-	
+
 	@include breakpoint($gamora){
 		@include margin-default-lg;
 	}
-	
+
 	@include breakpoint($groot){
 		@include margin-default-xl;
 	}
@@ -102,7 +103,7 @@ figure,
  */
 h1{
 	// box model
-	margin: 0.96401028277635em 0 0 0;  // 30/31.12
+	margin: 0.96401028277635em 0 0;  // 30/31.12
 	// typography
 	font-size: 1.945rem;  // 31.12px  Step 4
 	font-weight: normal;
@@ -115,7 +116,7 @@ h1{
 		font-size: 2.291rem;  // 36.656px  // Where does this come from? I don't remember.
 		line-height: 1.227629855958097;  // 45/36.656
 	}
-    
+
 	@include breakpoint($gamora){
 		// box model
 		margin-top: 0.63663179339176em;   // 30/47.123
@@ -123,12 +124,12 @@ h1{
 		font-size: 2.945rem;  // 47.123px  Step 5
 		line-height: 0.95494769008764;  // 45/47.123
 	}
-	
+
 	@include breakpoint($drax){
 		color: mix($tint, $shade, 33.33333%);
 		font-weight: bold;
 	}
-	
+
 	@include breakpoint($groot){
 		// box model
 		margin-top: 1.19191879059973em;  // 60/50.339
@@ -140,28 +141,28 @@ h1{
 
 h2{
 	// box model
-  margin-top: 1.56014353320505em;  // 30/19.229
-  // typography
-  color: mix($tint, $black, 40%);
-  font-size: 1.202rem;  // 19.229px  Step 2
-  font-weight: bold;
-  line-height: 1.56014353320505;  // 30/19.229
-  
-  @include breakpoint($gamora){
-  	// box model
-  	margin-top: 1.03007828594973em;  // 30/29.124
-  	// typography
-    font-size: 1.82rem;  // 29.124px  Step 3
-    line-height: 1.03007828594973; // 30/29.124
-  }
-  
-  @include breakpoint($groot){
-  	// box model
-  	margin-top: 1.44638724607868em;  // 45/31.112
-  	// typography
-    font-size: 1.945rem;  // 31.112px  Step 4
-    line-height: 0.96425816405246;  // 30/31.112
-  }
+	margin-top: 1.56014353320505em;  // 30/19.229
+	// typography
+	color: mix($tint, $black, 40%);
+	font-size: 1.202rem;  // 19.229px  Step 2
+	font-weight: bold;
+	line-height: 1.56014353320505;  // 30/19.229
+
+	@include breakpoint($gamora){
+		// box model
+		margin-top: 1.03007828594973em;  // 30/29.124
+		// typography
+		font-size: 1.82rem;  // 29.124px  Step 3
+		line-height: 1.03007828594973; // 30/29.124
+	}
+
+	@include breakpoint($groot){
+		// box model
+		margin-top: 1.44638724607868em;  // 45/31.112
+		// typography
+		font-size: 1.945rem;  // 31.112px  Step 4
+		line-height: 0.96425816405246;  // 30/31.112
+	}
 }
 
 h3{
@@ -171,7 +172,7 @@ h3{
 	color: mix($tint, $black, 20%);
 	@include base-type-lg;
 	font-weight: normal;
-    
+
 	@include breakpoint($gamora){
 		// box model
 		margin-top: 1.10603155876714em;  // 30/27.124
@@ -179,7 +180,7 @@ h3{
 		font-size: 1.69525rem;  // 27.124px - otherwise appears optically taller than h2; Step 3 - 2px
 		line-height: 1.10603155876714;  // 30/27.124
 	}
-    
+
 	@include breakpoint($groot){
 		// box model
 		margin-top: 1.54575432811212em;  // 45/29.112
@@ -191,46 +192,46 @@ h3{
 
 h4{
 	// box model
-  margin-top: 2.14285714285714em;  // 30/14
-  // typography
-  font-size: 0.875rem;  // 14px  Step 0.5
-  font-weight: bold;
-  line-height: 1.60714285714286;  // 22.5/14
-  
-  @include breakpoint($gamora){
-  	// box model
-  	margin-top: 1.56014353320505em;  // 30/19.229
-  	// typography
+	margin-top: 2.14285714285714em;  // 30/14
+	// typography
+	font-size: 0.875rem;  // 14px  Step 0.5
+	font-weight: bold;
+	line-height: 1.60714285714286;  // 22.5/14
+
+	@include breakpoint($gamora){
+		// box model
+		margin-top: 1.56014353320505em;  // 30/19.229
+		// typography
 		font-size: 1.202rem;  // 19.229px  Step 2
 		line-height: 1.56014353320505;  // 30/19.229
-  }
-  
+	}
+
 	/*@include breakpoint($groot){
-		// box model
-		margin-top: 1.5451174289246em;  // 45/29.124
-		// typography
-		font-size: 1.82rem;  // 29.124px  Step 3
-		line-height: 1.03007828594973; // 30/29.124
+	// box model
+	margin-top: 1.5451174289246em;  // 45/29.124
+	// typography
+	font-size: 1.82rem;  // 29.124px  Step 3
+	line-height: 1.03007828594973; // 30/29.124
 	}*/
 }
 
 h5{
 	// box model
-  margin-top: 2.14285714285714em;  // 30/14
-  // typography
+	margin-top: 2.14285714285714em;  // 30/14
+	// typography
 	color: mix($tint, $black, 40%);
-  font-size: 0.875rem;  // 14px  Step 0.5
-  font-weight: bold;
+	font-size: 0.875rem;  // 14px  Step 0.5
+	font-weight: bold;
 	letter-spacing: 0.1em;
-  line-height: 1.60714285714286;  // 22.5/14
+	line-height: 1.60714285714286;  // 22.5/14
 	text-transform: uppercase;
-	
+
 	@include breakpoint($gamora){
-  	// box model
-  	margin-top: 1.66666666666667em;  // 30/18
-  	// typography
+		// box model
+		margin-top: 1.66666666666667em;  // 30/18
+		// typography
 		@include base-type-lg;
-  }
+	}
 }
 
 h6{
@@ -240,10 +241,10 @@ h6{
 	// typography
 	color: mix($tint, $black, 40%);
 	@include small-type;
-  font-weight: normal;
+	font-weight: normal;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		margin-top: 2.14285714285714em;  // 30/14
@@ -252,7 +253,7 @@ h6{
 		font-family: $display-face;
 		@include base-type;
 	}
-		
+
 	@include breakpoint($groot){
 		// box model
 		margin-top: 2.5em;  // 45/18
@@ -284,11 +285,11 @@ ul,
 ol{
 	margin-left: 1.07142857142857em;  // 15/14
 	padding-left: 0;
-	
+
 	@include breakpoint($gamora){
 		margin-left: 1.66666666666667em;  // 30/18
 	}
-	
+
 	@include breakpoint($groot){
 		margin-left: 1.56014353320505em; // 30/19.229
 	}
@@ -296,7 +297,7 @@ ol{
 
 ul,
 dl{
-    padding: 0;
+	padding: 0;
 }
 
 ol ol{
@@ -308,19 +309,21 @@ dt{
 	margin-top: 0.535714285714286em;  // 22.5/14/3 - Same as p margin-top
 	//typography
 	font-weight: bold;
-	
+
 	@include breakpoint($groot){
 		margin-top: 0.52004784440168em;  // 10/19.229 - Same as p margin-top
 	}
 }
+
 dd{
 	margin-bottom: 1.071428571428571em;  // 15/14 - Same as p margin-bottom
 	margin-left: 0;
-	
+
 	@include breakpoint($groot){
 		margin-bottom: 1.04009568880337em;  // 20/19.229 - Same as p margin-bottom
 	}
 }
+
 dd > p:first-child,
 dd > ul:first-child,
 dd > ol:first-child,
@@ -339,76 +342,64 @@ a,
 .search-tools a:visited,
 .tertiary-nav-list a:visited{
 	//box model
-	border-bottom: 1px solid mix(white, $blueberry-susan, 75%);
+	border-bottom: 1px solid mix($tint, $blueberry-susan, 75%);
 	//typography
 	color: $blueberry-susan;
 	font-weight: bold;
 	text-decoration: none;
-	transition: color .2s, border-color .2s ease;
+	transition: color 0.2s, border-color 0.2s ease;
 }
+
 a:visited{
-    border-bottom-color: mix(white, $wine, 75%);
-    color: $wine;
+	border-bottom-color: mix($tint, $wine, 75%);
+	color: $wine;
 }
+
 a:hover,
 .internal-users a:hover,
 .search-tools a:hover,
 .tertiary-nav-list a:hover{
-  border-bottom-color: $sky-blue;
-  color: $sky-blue;
-}
-a:focus,
-a:active{
-  outline-width: 0;
-  background-color: transparentize($blueberry-susan, 0.9);
+	border-bottom-color: $sky-blue;
+	color: $sky-blue;
 }
 
-	/**
-	 * 4.1 Site Name Link
-	 *
-	 * @section a-site-name
-	 */
-	.site-name a{
-		border-bottom-width: 0;
-	
-		&,
-		&:visited{
-	    color: #fff;
-	    text-shadow: 0 1px 3px hsl(275, 33%, 11%);
-	    
-	    /*@include breakpoint($drax){
-	    	text-shadow:
-					-1px 1px $blueberry-susan,
-					-1px 2px $blueberry-susan,
-					-2px 3px $blueberry-susan,
-					-2px 4px $blueberry-susan,
-					-3px 5px $blueberry-susan,
-					-3px 6px $blueberry-susan,
-					-4px 7px 0.5px $blueberry-susan
-	    }*/
-	    
-	    @include breakpoint($drax){
-		    color: $evergreen-old-style;
-		    font-weight: normal;
-		    text-shadow: 0 1px 2px $tint;
-	    }
-		}
-		
-		&:hover{
-	    
-	    /*@include breakpoint($drax){
-	    	text-shadow:
-					-1px 1px $sky-blue,
-					-1px 2px $sky-blue,
-					-2px 3px $sky-blue,
-					-2px 4px $sky-blue,
-					-3px 5px $sky-blue,
-					-3px 6px $sky-blue,
-					-4px 7px 0.5px $sky-blue
-	    }*/
+a:focus,
+a:active{
+	outline-width: 0;
+	background-color: transparentize($blueberry-susan, 0.9);
+}
+
+/**
+ * 4.a Site Name Link
+ *
+ * @section a-site-name
+ */
+.site-name a{
+	border-bottom-width: 0;
+
+	&,
+	&:visited{
+		color: $tint;
+		text-shadow: 0 1px 3px mix($shade, $blueberry-susan, 60%);
+
+		/*@include breakpoint($drax){
+			text-shadow:
+				-1px 1px $blueberry-susan,
+				-1px 2px $blueberry-susan,
+				-2px 3px $blueberry-susan,
+				-2px 4px $blueberry-susan,
+				-3px 5px $blueberry-susan,
+				-3px 6px $blueberry-susan,
+				-4px 7px 0.5px $blueberry-susan;
+    }*/
+
+		@include breakpoint($drax){
+			color: $evergreen-old-style;
+			font-weight: normal;
+			text-shadow: 0 1px 2px $tint;
 		}
 	}
-	
+}
 
 /**
  * 5. Other Typography
@@ -429,7 +420,7 @@ small,
 .details,  // deprecated
 .caption{
 	@include small-type;
-	
+
 	@include breakpoint($groot){
 		font-family: $text-face;
 		@include base-type;
@@ -442,9 +433,9 @@ figcaption p{
 }
 
 small{
-	
+
 	[role="contentinfo"] &{
-		color: #ccc;
+		color: mix($tint, $shade, 80%);
 	}
 }
 

@@ -14,7 +14,7 @@
 .image-full img,  // WYSIWYG
 .field-image img{  // Drupal event calendar
 	// box model
-	border: 1px solid mix(black, $sky-blue, 60%);
+	border: 1px solid mix($shade, $sky-blue, 60%);
 	height: auto;
 	margin: 0 auto;
 	max-width: 100%;
@@ -22,9 +22,9 @@
 	display: block;
 	border-radius: 2px;
 	// typography
-	color: white;  // for readability in the WYSIWYG
+	color: $tint;  // for readability in the WYSIWYG
 	// backgrounds & borders
-	background-color: mix(black, $sky-blue, 60%);
+	background-color: mix($shade, $sky-blue, 60%);
 	// miscelaneous
 	box-shadow: 0 2px 2px $drop-shadow;
 }
@@ -36,13 +36,13 @@
 	@include margin-default;
 	margin-left: auto;
 	margin-right: auto;
-	
+
 	@include breakpoint($gamora){
 		@include margin-default-lg;
 		margin-left: auto;
 		margin-right: auto;
 	}
-	
+
 	@include breakpoint($groot){
 		@include margin-default-xl;
 		margin-left: auto;
@@ -56,24 +56,24 @@
 .image,
 .image img,  // WYSIWYG
 .image-alt{
-	
+
 	@include breakpoint($starlord){
 		// box model
 		margin: 0 0 0.53571428571429em 1em;  // 7.5/14
-		max-width: calc(66.6666666667% - .5em);
+		max-width: calc(66.6666666667% - 0.5em);
 		// layout
 		clear: right;
 		float: right;
   }
-  
+
 	@include breakpoint($gamora){
 		margin-bottom: 0.83333333333333em;  // 15/18
-		
+
 		.main-content &{
 			margin-right: -2em;
 		}
 	}
-	
+
 	@include breakpoint($groot){
 		margin-bottom: 1.56014353320505em;  // 30/19.229
 	}
@@ -90,7 +90,7 @@
 		margin-right: -3em;
 		max-width: calc(50% + 2.5em);
 	}
-	
+
 	//.illus-alt,  // deprecated
 	.image-alt{
 		// box model
@@ -106,7 +106,7 @@
 //This overrides the margin-right: -em for images in boxes so that they don't get cut off. 
 .box .image{
 	@include breakpoint($gamora){
-			margin-right: 0;
+		margin-right: 0;
 	}
 }
 

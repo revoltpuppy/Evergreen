@@ -12,7 +12,7 @@
 
 .directory > thead{
 	display: none;
-	
+
 	@include breakpoint($gamora){
 		display: table-header-group;
 	}
@@ -20,18 +20,18 @@
 
 .directory > tbody > tr{
 	// box model
-	border: 1px solid mix(white, $blueberry-susan, 66%);
+	border: 1px solid mix($tint, $blueberry-susan, 66%);
 	@include margin-default;
 	padding: 0 1em;
 	// layout
 	display: block;
 	overflow: hidden;
 	// backgrounds & borders
-	background-color: mix(white, $blueberry-susan, 90%);
+	background-color: mix($tint, $blueberry-susan, 90%);
 	border-radius: 2px;
 	// misc
 	box-shadow: 0 1px 1px $drop-shadow;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		border-width: 0;
@@ -52,7 +52,7 @@
 	padding: 0;
 	// layout
 	display: block;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		border-top-width: 1px;
@@ -92,7 +92,7 @@
 	max-width: 75px;
 	// layout
 	float: right;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		margin: 0;

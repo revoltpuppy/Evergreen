@@ -15,11 +15,11 @@ input[type="submit"]{
 	border: 1px solid mix($tint, $blueberry-susan, 40%);
 	height: auto;
 	margin-bottom: 1.262201279030629em;  // 15/14
-	padding: 5px .5em;
+	padding: 5px 0.5em;
 	// layout
 	display: inline-block;
 	// typography
-	color: #333333;
+	color: mix($tint, $shade, 20%);
 	font-family: $display-face;
 	font-size: 1em;
 	font-weight: normal;
@@ -27,17 +27,18 @@ input[type="submit"]{
 	// backgrounds & borders
 	background-color: mix($tint, $blueberry-susan, 80%);  // IE 9
 	background-image: linear-gradient(mix($highlight, $blueberry-susan, 85%), mix($tint, $blueberry-susan, 65%));
-	border-radius: .2em;
+	border-radius: 0.2em;
 	// miscelaneous
-	box-shadow: 0 .2em .2em $drop-shadow;
-	
+	box-shadow: 0 0.2em 0.2em $drop-shadow;
+
 	@include breakpoint($gamora){
 		margin-bottom: 0.83333333333333em; // 15/18
 	}
 }
+
 button:hover,
 .button:hover,
-input[type="button"]:hover, 
+input[type="button"]:hover,
 input[type="submit"]:hover{
 	color: mix($shade, $blueberry-susan, 40%);
 	// backgrounds & borders
@@ -45,13 +46,15 @@ input[type="submit"]:hover{
 	background-image: linear-gradient(mix($highlight, $blueberry-susan, 95%), mix($tint, $blueberry-susan, 75%));
 	border-color: mix($tint, $blueberry-susan, 40%);
 }
+
 button:focus,
 .button:focus,
 input[type="button"]:focus,
 input[type="submit"]:focus{
-	border-color: #999;
+	border-color: mix($tint, $shade, 60%);
 	outline-width: 0;
 }
+
 button:active,
 .button:active,
 input[type="button"]:active,
@@ -76,12 +79,13 @@ input.prime{
 	// box model
 	border-color: $evergreen-old-style;
 	// typography
-	color: white;
+	color: $tint;
 	text-shadow: 0 -1px 0 $drop-shadow;
 	// backgrounds & borders
 	background-color: $evergreen-neue;  // IE 9
 	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 40%), $evergreen-neue);
 }
+
 .prime:hover,
 input.prime:hover{
 	// box model
@@ -90,17 +94,19 @@ input.prime:hover{
 	color: $evergreen-old-style;
 	text-shadow: 0 1px 0 $highlight;
 	// backgrounds & borders
-	background-color: mix(white, $evergreen-neue, 20%);  // IE 9
-	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 60%), mix(white, $evergreen-neue, 20%));
+	background-color: mix($tint, $evergreen-neue, 20%);  // IE 9
+	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 60%), mix($tint, $evergreen-neue, 20%));
 }
+
 .prime:focus,
 input.prime:focus{
-	border-color: #999;
+	border-color: mix($tint, $shade, 60%);
 }
+
 .prime:active,
 input.prime:active{
 	// backgrounds & borders
-	background-color: mix(white, $evergreen-neue, 40%);  // IE 9
+	background-color: mix($tint, $evergreen-neue, 40%);  // IE 9
 	background-image: linear-gradient($evergreen-neue, mix($morning-light, $evergreen-neue, 20%));
 }
 
@@ -121,15 +127,16 @@ button[disabled]:hover,
 input.is-disabled,
 input.is-disabled:hover{
 	// typography
-	color: #666;
+	color: mix($tint, $shade, 40%);
 	text-shadow: 0 0.05em 0 $highlight;
 	// backgrounds & borders
 	background: mix($tint, $blueberry-susan, 60%) none;
-	border-color: #999;
+	border-color: mix($tint, $shade, 60%);
 	// miscelaneous
 	box-shadow: 0 0.1em 0.1em $drop-shadow inset;
 	cursor: not-allowed;
 }
+
 .prime.is-disabled,
 .prime.is-disabled:hover,
 .prime.is-disabled:visited,
@@ -137,5 +144,5 @@ input.is-disabled:hover{
 .prime[disabled]:hover,
 input.prime.is-disabled,
 input.prime.is-disabled:hover{
-	background: mix(white, $evergreen-neue, 20%) none;
+	background: mix($tint, $evergreen-neue, 20%) none;
 }

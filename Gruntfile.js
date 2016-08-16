@@ -218,6 +218,13 @@ module.exports = function(grunt) {
 			},
 		},
 		
+		sasslint: {
+			options: {
+				configFile: 'css/config/.sass-lint.yml',
+			},
+			target: ['css/src/*.scss', 'css/src/smacss/**/*.scss']
+    },
+		
 		/**
 		 * Create spritesheets out of SVG files in a folder.
 		 */
@@ -295,14 +302,15 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-perfbudget');
+	grunt.loadNpmTasks('grunt-sass-lint');
 	grunt.loadNpmTasks('grunt-svgstore');
 	/*grunt.loadNpmTasks('grunt-svg-sprite');*/
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s) (in the order you want to run them).
 	grunt.registerTask('default', ['sass', 'postcss', 'newer:concat', 'newer:uglify', 'copy']);

@@ -5,7 +5,7 @@
 
 .views-exposed-form .views-exposed-widget .form-submit{  // Inline submit button? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
 	margin-top: calc(20 / 16 * 1rem);
-	
+
 	@include breakpoint($gamora){
 		margin-top: calc(22.5 / 16 * 1rem);
 	}
@@ -17,7 +17,7 @@
 
 .tertiary-nav-wrapper .views-exposed-form{
 	@include margin-default;
-	
+
 	@include breakpoint($gamora){
 		@include base-type;
 	}

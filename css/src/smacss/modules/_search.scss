@@ -41,18 +41,18 @@
 	// position
 	position: relative;
 	// backgrounds and borders
-	background: none #fff;
-	border-radius: 0 0 0 0;
+	background: none $tint;
+	border-radius: 0;
 	// miscellaneous
 	cursor: pointer;
 	appearance: none;
 	box-shadow: none;
-	
+
 	&:hover{
-		background: none #ccc;
+		background: none mix($tint, $shade, 80%);
 	}
 }
-	
+
 .search-button > img{
 	max-height: 100%;
 }

@@ -20,18 +20,18 @@
  */
 .header-dropdowns{
 	width: 100%;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		width: 49%;
 		// layout
 		float: right;
 	}
-	
+
 	@include breakpoint($drax){
 		width: 40%;
 	}
-	
+
 	@include breakpoint($groot){
 		width: 20%;
 	}
@@ -42,15 +42,18 @@ input[name="header-toggle"]{  // Don't show the checkboxes
 	position: absolute;  // Removes from the document flow
 	visibility: hidden;  // Hides the checkbox
 }
+
 input + .header-dropdown{
 	max-height: 0;
 	overflow: hidden;
-	transition: .5s all ease;
+	transition: 0.5s all ease;
 }
+
 input:checked + .header-dropdown{
 	max-height: 8em;
-	transition: .5s all ease;
+	transition: 0.5s all ease;
 }
+
 .internal-users,
 .header-dropdown .search{
 	// box model
@@ -58,15 +61,28 @@ input:checked + .header-dropdown{
 }
 
 .internal-users{
+	// box model
+	margin-top: 0;
+	// layout
 	overflow: hidden;
-	background-color: mix(white, $blueberry-susan, 80%);
+	// decoration
+	background-color: mix($tint, $blueberry-susan, 80%);
 }
+
 .internal-users > li{
 	// box model
 	padding: 0.9375rem 1em;  // 15px
 	width: 50%;
 	// layout
 	float: left;
+}
+
+.internal-users img{
+	// box model
+	margin-right: 5px;  // magic-number
+	width: 10px;  // magic-number; visually fits with text height
+	// layout
+	display: inline-block;
 }
 
 #search-flag + .header-dropdown{
@@ -81,8 +97,8 @@ input:checked + .header-dropdown{
 	margin: 0;
 	padding: 0.9375rem 1em;  // 15px
 	overflow: hidden;
-	background-color: mix(white, $evergreen-neue, 80%);
-	
+	background-color: mix($tint, $evergreen-neue, 80%);
+
 	@include breakpoint($gamora){
 		// box model
 		padding: 0.9375rem 1em 0.9375rem 0;  //Use padding for height calculations in JS.
@@ -95,11 +111,11 @@ input:checked + .header-dropdown{
 
 .page-header{
 	width: 100%;
-	
+
 	@include breakpoint($gamora){
 		width: 51%;
 	}
-	
+
 	@include breakpoint($drax){
 		width: 60%;
 	}
@@ -109,20 +125,20 @@ input:checked + .header-dropdown{
  * 2. Logo
  */
 .logo{
-	margin: 0.46875rem 0.5em 0 0.5em;  // 7.5px 7px 7px
+	margin: 0.46875rem 0.5em 0;  // 7.5px 7px 7px
 	width: calc(100% - 1em);
-	
+
 	@include breakpoint($lil-groot){
 		// box model
 		width: 58%;
 		// layout
 		float: left;
 	}
-	
+
 	@include breakpoint($starlord){
 		//width: 58%;
 	}
-	
+
 	@include breakpoint($gamora){
 		// box model
 		//width: 48%;
@@ -130,11 +146,11 @@ input:checked + .header-dropdown{
 		// layout
 		float: none;
 	}
-	
+
 	@include breakpoint($drax){
 		//width: 36%;
 	}
-	
+
 	@include breakpoint($groot){
 		// box model
 		margin-right: auto;
@@ -152,16 +168,17 @@ input:checked + .header-dropdown{
 	a:hover{
 		border-bottom-width: 0;
 	}
-	
+
 	img{
 		max-height: 4em;
-		
+
 		@include breakpoint($groot){
 			max-height: none;  // max-height doesn't center correctly in Blink.
 			max-width: 20em;
 		}
 	}
 }
+
 /**
  * 3. Header Search
  *
@@ -174,9 +191,11 @@ input:checked + .header-dropdown{
 	overflow: hidden;
 	position: absolute;
 }
+
 .off-canvas{
 	margin-right: 2%;
 }
+
 .search-toggle,   // button to reveal search
 .student-toggle{  // button to reveal profile
 	// box model
@@ -187,22 +206,26 @@ input:checked + .header-dropdown{
 	// typography
 	text-align: center;
 	text-decoration: none;
-	
+
 	@include breakpoint($gamora){
 		display: none;
 	}
 }
+
 .search-toggle{
-	border-radius: 0 0 4.5px 0;
+	border-radius: 0 0 4.5px;
 }
+
 .student-toggle{
-	border-right: 1px solid #333;
+	border-right: 1px solid mix($tint, $shade, 20%);
 	border-radius: 0 0 0 4.5px;
 }
+
 .search-toggle,
 .student-toggle{
 	border-bottom-width: 0;
 }
+
 .search-toggle:hover,
 .student-toggle:hover{
 	// backgrounds & borders
@@ -231,9 +254,11 @@ input:checked + .header-dropdown{
 [placeholder]:focus::-webkit-input-placeholder{  // Safari & Chrome
 	color: transparent;
 }
+
 [placeholder]:focus::-moz-placeholder{  // Firefox
 	color: transparent;
 }
+
 [placeholder]:focus:-ms-placeholder{  // IE
 	color: transparent;
 }
@@ -241,26 +266,16 @@ input:checked + .header-dropdown{
 .internal-users,
 .search-tools{
 	margin-bottom: 0;
-	
+
 	@include breakpoint($starlord){
 		@include base-type-lg;
 	}
-	
+
 	@include breakpoint($groot){
 		@include base-type-xl;
 	}
 }
-.internal-users{
-	margin-top: 0;
-	
-	img{
-		// box model
-		margin-right: 5px;  // magic-number
-		width: 10px;  // magic-number; visually fits with text height
-		// layout
-		display: inline-block;
-	}
-}
+
 .search-tools{
 	// box model
 	margin-left: 0;  // Can be removed once .element-list propogates on .search-tools
@@ -271,48 +286,48 @@ input:checked + .header-dropdown{
 
 .search-tools li{
 	display: inline;
-	
+
 	&::after{
 		content: " | ";
 	}
-	
+
 	&:last-child::after{
 		content: "";
 	}
-	
+
 	@include breakpoint($groot){
 		display: block;
-		
+
 		&:after{
 			content: "";
 		}
-		
+
 		&:not(:first-child){
 			margin-left: 19px;  // magic-number; should fit with .internal-users img
 		}
 	}
 }
 
-li.internal-users-alt{
+.search-tools .internal-users-alt{
 	display: none;
-	
+
 	@include breakpoint($gamora){
 		display: inline;
 	}
-	
+
 	@include breakpoint($groot){
 		display: block;
 	}
 }
 
-li.internal-users-alt img{
+.internal-users-alt img{
 	// box model
 	margin-right: 5px;  // magic-number
 	width: 14px;  // magic-number; visually fits with text height
 	// layout
 	display: inline-block;
 }
-    
+
 .menu-button,
 .search-toggle,
 .student-toggle{
@@ -326,10 +341,10 @@ li.internal-users-alt img{
 .search-toggle,
 .student-toggle,
 .top-nav-list .active{
-	color: white;
+	color: $tint;
 	background-color: $evergreen-neue;
 }
-    
+
 /**
  * 4. Primary Nav
  *
@@ -337,66 +352,65 @@ li.internal-users-alt img{
  */
 .top-nav-list{
 	// box model
-  margin: 0 auto;
-  margin-top: 0;
-  width: 100%;
+	margin: 0 auto;
+	margin-top: 0;
+	width: 100%;
 	min-height: 45px;
-  // positioning
-  position: relative;
-  // tyopography
-  text-align: center;
-  // list
-  list-style-type: none;
-  
-  @include breakpoint($lil-groot){
+	// positioning
+	position: relative;
+	// tyopography
+	text-align: center;
+	// list
+	list-style-type: none;
+
+	@include breakpoint($lil-groot){
 		// layout
 		align-items: stretch;
 		display: flex;
 	}
-  
-  &:before,
-  &:after{
-  	width: 0;
-    display: table;
-    clear: both;
-    content: "";
-  }
 
-	> li{
-		display: inline-block;
-		
-		
-		@include breakpoint($lil-groot){
+	&::before,
+	&::after{
+		width: 0;
+		display: table;
+		clear: both;
+		content: "";
+	}
+}
+
+.top-nav-list > li{
+	display: inline-block;
+
+	@include breakpoint($lil-groot){
+		// box model
+		border-left: 1px solid mix($tint, $shade, 20%);
+		// layout
+		align-items: stretch;
+		display: inline-block;  // IE9
+		display: flex;
+		flex-grow: 1;
+		overflow: hidden;
+		// typography
+		//font-family: "Proxima Nova Condensed", "Avenir Next Condensed", Helvetica, Arial, sans-serif;
+
+		&:first-child{
 			// box model
-			border-left: 1px solid #333;
-			// layout
-			align-items: stretch;
-			display: inline-block;  // IE9
-			display: flex;
-			flex-grow: 1;
-			overflow: hidden;
-			// typography
-			//font-family: "Proxima Nova Condensed", "Avenir Next Condensed", Helvetica, Arial, sans-serif;
-	    
-	    &:first-child{
-	    	// box model
-	    	border-left-width: 0;
-			}
+			border-left-width: 0;
 		}
-	  
-	  @include breakpoint($starlord){
-			// box model
-			width: 20%;
-			// layout
-			flex-grow: 1;
-			// typography
-			font-family: $text-face;
-			letter-spacing: normal;
-		}
-	
-		@include breakpoint($gamora){
-			height: auto;
-		}
+	}
+
+	@include breakpoint($starlord){
+		// box model
+		width: 20%;
+		// layout
+		flex-grow: 1;
+		// typography
+		font-family: $text-face;
+		letter-spacing: normal;
+	}
+
+	@include breakpoint($gamora){
+		height: auto;
 	}
 }
 
@@ -408,23 +422,22 @@ li.internal-users-alt img{
 	width: 100%;
 	// layout
 	display: block;
-	
+
 	&:hover{
 		// backgrounds & borders
-		background-color: mix(white, $blueberry-susan, 40%);
+		background-color: mix($tint, $blueberry-susan, 40%);
 		// typography
-		color: white;
+		color: $tint;
 		// misc
 		box-shadow: 0 0 1px $highlight inset,
-		            0 0 1em transparentize($highlight, 0.75) inset;
-		transition: all .1s ease-out;
-		
+		/*        */0 0 1em transparentize($highlight, 0.75) inset;
+		transition: all 0.1s ease-out;
 	}
-	
+
 	&:focus{
 		background-color: $blueberry-susan;
 	}
-	
+
 	@include breakpoint($lil-groot){
 		// box model
 		padding: 0.46875rem 0.25rem;  // 7.5/16 2.48/16
@@ -435,30 +448,31 @@ li.internal-users-alt img{
 		// misc
 		text-shadow: 0 2px 0 $drop-shadow;
 	}
-	
+
 	@include breakpoint($rocket){
 		// box model
 		padding-right: 0.6666666667em;
 		padding-left: 0.6666666667em;
 	}
-	
+
 	@include breakpoint($drax){
 		font-size: inherit;
 		line-height: inherit;
 	}
 }
+
 .top-nav-list a,
 .top-nav-list a:visited,
 .top-nav-link,
 .top-nav-link:visited{
 	// typography
-	color: #fff;
+	color: $tint;
 	font-weight: 600;
-	
+
 	@include breakpoint($starlord){
 		text-shadow: none;
 	}
-	
+
 	@include breakpoint($gamora){
 		font-weight: bold;
 	}
@@ -478,23 +492,23 @@ li.internal-users-alt img{
 	// typography
 	text-align: center;
 	// backgrounds & borders
-	background: $evergreen-neue url(images/texture-1.png);
+	background: $evergreen-neue url("images/texture-1.png");
 	// list
 	list-style-type: none;
-	
+
 	/*> li{
 		display: inline-block;
 	}*/
-	
+
 	@include breakpoint($lil-groot){
 		display: flex;
 		overflow: hidden;  // IE 9
-		
+
 		/*> li:first-child,
 		> li:last-child{
 			margin: 0;
 		}
-		
+
 		> li{
 			margin: 0;
 			width: 25%;  // IE 9
@@ -503,7 +517,7 @@ li.internal-users-alt img{
 			float: left;  // IE9
 		}*/
 	}
-	
+
 	@include breakpoint($rocket){
 		// layout
 		justify-content: flex-end;
@@ -520,7 +534,7 @@ li.internal-users-alt img{
 			white-space: nowrap;
 		}*/
 	}
-	
+
 	@include breakpoint($starlord){
 		font-family: $text-face;
 		line-height: 2.14285714285714;  // 30/14
@@ -529,20 +543,20 @@ li.internal-users-alt img{
 
 .secondary-nav-list > li{
 	display: inline-block;
-	
+
 	@include breakpoint($lil-groot){
 		margin: 0;
 		width: 25%;  // IE 9
 		// layout
 		flex-grow: 1;
 		float: left;  // IE 9
-		
+
 		&:first-child,
 		&:last-child{
 			margin: 0;
 		}
 	}
-	
+
 	@include breakpoint($rocket){
 		// box model
 		width: auto;
@@ -554,12 +568,12 @@ li.internal-users-alt img{
 		line-height: 2.52440255806126;  // 30/11.884
 		white-space: nowrap;
 	}
-	
+
 	@include breakpoint($gamora){
 		@include base-type;
 		line-height: 3.21428571428571;  // 45/14
 	}
-	
+
 	@include breakpoint($groot){
 		@include base-type-lg;
 		line-height: 2.5;  // 45/18
@@ -577,9 +591,9 @@ li.internal-users-alt img{
 		// layout
 		//display: block;
 		// typography
-		color: white;
+		color: $tint;
 		font-weight: normal;
-		
+
 		@include breakpoint($rocket){
 			// box model
 			height: auto;
@@ -587,23 +601,23 @@ li.internal-users-alt img{
 			// layout
 			display: inline-block;
 		}
-	
+
 		@include breakpoint($drax){
 			font-size: inherit;
 			line-height: inherit;
 		}
 	}
-	
+
 	&:hover{
 		// backgrounds & borders
-		background-color: mix(white, $blueberry-susan, 40%);
+		background-color: mix($tint, $blueberry-susan, 40%);
 		// typography
-		color: white;
+		color: $tint;
 		// misc
 		box-shadow: 0 0 2px $highlight inset;
-		transition: all .1s ease-out;	
+		transition: all 0.1s ease-out;
 	}
-	
+
 	&:focus{
 		background-color: $blueberry-susan;
 	}
@@ -615,12 +629,13 @@ li.internal-users-alt img{
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration
  */
+
 .site-name{
 	// box model
 	//border-bottom: 4px solid $evergreen-old-style;
 	margin-top: 3.75rem;  // 60/16
 	//margin-bottom: -4px;  // Compensates for 4px border and maintains 15px vertical cadence.
-	
+
 	@include breakpoint($drax){
 		// box model
 		margin-right: 1em;
@@ -630,9 +645,9 @@ li.internal-users-alt img{
 		background-color: transparentize($tint, 0.33);
 		border-radius: 2px 2px 0 0;
 	}
-	
+
 	h1{
-		
+
 		@media screen and (min-height: 35em){  // Note this is a height-based media query
 			margin-bottom: calc(30 / 16 * 1rem);
 		}
