@@ -54,7 +54,7 @@ rules:
   no-mergeable-selectors: 2
   no-misspelled-properties: 2
   no-qualifying-elements:
-    - 1
+    - 0
     -
       allow-element-with-attribute: true
   no-trailing-whitespace: 2
@@ -73,13 +73,7 @@ rules:
   no-important: 1
   one-declaration-per-line: 2
   placeholder-in-extend: 1
-  #property-sort-order:
-  #  - 1
-  #  -
-  #    order:
-  #      - display
-  #      - margin
-  #    ignore-custom-properties: true
+  #property-sort-order: This is very long. See the bottom of the list.
   quotes:
     - 2
     -
