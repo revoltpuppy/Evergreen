@@ -189,8 +189,8 @@ wrapper {
 
 /* line 89, ../src/print.scss */
 .wrapper {
-  min-height: none;
   max-width: none;
+  min-height: none;
 }
 
 /* line 94, ../src/print.scss */
@@ -275,7 +275,7 @@ wrapper {
   z-index: auto;
 }
 
-/* line 177, ../src/print.scss */
+/* line 176, ../src/print.scss */
 #sitewide-alert,
 .hero,
 #tertiary-nav,
@@ -283,20 +283,20 @@ wrapper {
   display: none;
 }
 
-/* line 184, ../src/print.scss */
+/* line 183, ../src/print.scss */
 .box,
 .pull-box {
   border: 1px solid black;
   background: transparent none;
 }
 
-/* line 190, ../src/print.scss */
+/* line 189, ../src/print.scss */
 .pull-quote,
 .pull-quote + .figcaption {
   color: black;
 }
 
-/* line 195, ../src/print.scss */
+/* line 194, ../src/print.scss */
 .page-footer .org,
 .page-footer .adr,
 .page-footer .street-address,
