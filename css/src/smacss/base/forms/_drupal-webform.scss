@@ -70,8 +70,8 @@
 
 .resizable-textarea .grippie{  // This should match the dimensions of the textarea; if it doesn't, update these styles
 	width: 100%;
-	min-width: 50%;
 	max-width: calc(45ch + 1em);
+	min-width: 50%;
 }
 
 .webform-client-form .button-primary{
