@@ -193,7 +193,7 @@
 	// box model
 	margin: 1.17010764990379em 0;  // 22.5/19.229
 	// typography
-	color: $evergreen-neue;
+	color: mix($shade, $evergreen-neue, 20%);
 	@include base-type-xl;
 
 	@include breakpoint($gamora){
