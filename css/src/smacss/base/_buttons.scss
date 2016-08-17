@@ -24,7 +24,7 @@ input[type="submit"]{
 	font-size: 1em;
 	font-weight: normal;
 	text-shadow: 0 1px 0 $highlight;
-	// backgrounds & borders
+	// decoration
 	background-color: mix($tint, $blueberry-susan, 80%);  // IE 9
 	background-image: linear-gradient(mix($highlight, $blueberry-susan, 85%), mix($tint, $blueberry-susan, 65%));
 	border-radius: 0.2em;
@@ -41,7 +41,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover{
 	color: mix($shade, $blueberry-susan, 40%);
-	// backgrounds & borders
+	// decoration
 	background-color: mix($tint, $blueberry-susan, 90%);  // IE 9
 	background-image: linear-gradient(mix($highlight, $blueberry-susan, 95%), mix($tint, $blueberry-susan, 75%));
 	border-color: mix($tint, $blueberry-susan, 40%);
@@ -59,7 +59,7 @@ button:active,
 .button:active,
 input[type="button"]:active,
 input[type="submit"]:active{
-	// backgrounds & borders
+	// decoration
 	background-color: mix($tint, $blueberry-susan, 40%);  // IE 9
 	background-image: linear-gradient(mix($tint, $blueberry-susan, 40%), mix($highlight, $blueberry-susan, 60%));
 	// miscelaneous
@@ -76,26 +76,24 @@ input[type="submit"]:active{
 .prime,
 .prime:visited,
 input.prime{
-	// box model
-	border-color: $evergreen-old-style;
 	// typography
 	color: $tint;
 	text-shadow: 0 -1px 0 $drop-shadow;
-	// backgrounds & borders
+	// decoration
 	background-color: $evergreen-neue;  // IE 9
 	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 40%), $evergreen-neue);
+	border-color: $evergreen-old-style;
 }
 
 .prime:hover,
 input.prime:hover{
-	// box model
-	border-bottom-color: $evergreen-old-style;
 	// typography
 	color: $evergreen-old-style;
 	text-shadow: 0 1px 0 $highlight;
-	// backgrounds & borders
+	// decoration
 	background-color: mix($tint, $evergreen-neue, 20%);  // IE 9
 	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 60%), mix($tint, $evergreen-neue, 20%));
+	border-bottom-color: $evergreen-old-style;
 }
 
 .prime:focus,
@@ -105,7 +103,7 @@ input.prime:focus{
 
 .prime:active,
 input.prime:active{
-	// backgrounds & borders
+	// decoration
 	background-color: mix($tint, $evergreen-neue, 40%);  // IE 9
 	background-image: linear-gradient($evergreen-neue, mix($morning-light, $evergreen-neue, 20%));
 }
@@ -129,7 +127,7 @@ input.is-disabled:hover{
 	// typography
 	color: mix($tint, $shade, 40%);
 	text-shadow: 0 0.05em 0 $highlight;
-	// backgrounds & borders
+	// decoration
 	background: mix($tint, $blueberry-susan, 60%) none;
 	border-color: mix($tint, $shade, 60%);
 	// miscelaneous

@@ -117,11 +117,11 @@ p.alert{  // WYSIWYG
 	// box model
 	margin: 0;
 	width: 100%;
-	// backgrounds and borders
-	border-radius: 0;
 	// typography
 	font-family: $monospace-face;
-	// animations and transitions
+	// decoration
+	border-radius: 0;
+	// movement
 	transition: all 0.5s ease-in;
 }
 
@@ -148,12 +148,12 @@ p.alert{  // WYSIWYG
  * 5. Pull Quotes
  */
 .pull-box{
-	// backgrounds and borders
-	background-color: transparentize($evergreen-neue, 0.05);
 	// typography
 	color: $tint;
 	//-moz-osx-font-smoothing: grayscale;  // Better rendering of reverse-out text
 	//-webkit-font-smoothing: antialiased;  // Better rendering of reverse-out text
+	// decoration
+	background-color: transparentize($evergreen-neue, 0.05);
 
 	@include breakpoint($gamora){
 		margin-bottom: 1.071428571428571em;  // 15px
@@ -167,17 +167,17 @@ p.alert{  // WYSIWYG
 	}
 
 	a:visited{
-		// box model
-		border-bottom-color: mix($tint, $wine, 66%);
 		// typography
 		color: mix($tint, $wine, 75%);
+		// decoration
+		border-bottom-color: mix($tint, $wine, 66%);
 	}
 
 	a:hover{
-		// box model
-		border-bottom-color: mix($tint, $sky-blue, 66%);
 		// typography
 		color: mix($tint, $sky-blue, 66%);
+		// decoration
+		border-bottom-color: mix($tint, $sky-blue, 66%);
 	}
 }
 

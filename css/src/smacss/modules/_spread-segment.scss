@@ -65,12 +65,13 @@
 .spread-body{
 
 	@include breakpoint($drax){
-		background-color: transparentize($tint, 0.05);
 		// box model
 		margin-left: -3em;
 		padding-left: 2em;
 		max-width: calc(50% + 3em);
 		// layout
 		z-index: 1;
+		// decoration
+		background-color: transparentize($tint, 0.05);
 	}
 }

@@ -15,8 +15,8 @@
  */
 .tertiary-nav-wrapper{
 	width: 100%;
-	min-height: 1px;  // gives the box layout even when empty (taking pity on IE 9)
 	max-width: calc(100% - 0.5em);
+	min-height: 1px;  // gives the box layout even when empty (taking pity on IE 9)
 
 	@include breakpoint($rocket){
 		max-width: 345px;  // the other significant number in the grid system
@@ -186,9 +186,10 @@
 .accordion-h label::before{
 	// layout
 	display: inline-block;
-	// misc
-	content: "▶\00A0";  // non-breaking space
+	// typgography
 	color: $shade;
+	// miscellaneous
+	content: "▶\00A0";  // non-breaking space
 
 	@include breakpoint($gamora){
 		content: "";

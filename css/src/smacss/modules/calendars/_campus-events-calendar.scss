@@ -349,10 +349,9 @@
 .calendar-calendar .month-view .full tr.even td.today,
 .calendar-calendar .month-view .full td.date-box.today,
 .calendar-calendar .month-view .full tr td.multi-day.starts-today{
-	// box model\
-	border-color: $evergreen-old-style;
 	// background and borders
 	background-color: $morning-light;
+	border-color: $evergreen-old-style;
 }
 
 .calendar-calendar .month-view .full tr td.multi-day.ends-today{
@@ -415,12 +414,12 @@
 	padding: 0 0.25em 0 0;
 	width: auto;
 	// layout
-	display: flex;
 	align-items: center;
+	display: flex;
 	// position
 	position: static;
 	//z-index: 0;
-	// backgrounds & borders
+	// decoration
 	background-color: mix($tint, $blueberry-susan, 90%);
 }
 
@@ -433,7 +432,7 @@
 	width: 0.5em;
 	// position
 	position: static;
-	// backgrounds and borders
+	// decoration
 	background-color: mix($tint, $blueberry-susan, 80%);
 	border-radius: 0 2px 2px 0;
 }

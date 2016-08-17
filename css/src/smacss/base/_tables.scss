@@ -63,9 +63,11 @@ td{
 }
 
 th{
+	// box model
 	border-bottom-width: 0;  // Drupal theme override
-	color: $shade;
 	padding: 0 1.111111111111111em 0 0;
+	// typography
+	color: $shade;
 	vertical-align: bottom;
 }
 

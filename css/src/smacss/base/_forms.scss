@@ -27,8 +27,8 @@ legend{
 	// layout
 	display: table;  // Allows line-wrapping in IE.
 	// typography
-	text-transform: uppercase;
 	letter-spacing: 0.25ch;
+	text-transform: uppercase;
 
 	@include breakpoint($gamora){
 		@include margin-default-lg;
@@ -88,8 +88,8 @@ input[type="tel"]{
 
 select{
 	// box model
-	padding: 0 0.5em;
 	height: calc(30 / 16 * 1rem);
+	padding: 0 0.5em;
 	// typography
 	text-shadow: 0 1px 0 $highlight;
 	// misc
@@ -97,10 +97,9 @@ select{
 	cursor: pointer;
 
 	&:hover{
-		// box model
-		border-bottom-style: dashed;
 		// backgrounds & borders
 		background-color: mix($tint, $blueberry-susan, 90%);
+		border-bottom-style: dashed;
 	}
 }
 
@@ -108,8 +107,8 @@ textarea{
 	// box model
 	padding: calc(7.5 / 16 * 1rem) 0.75em;
 	width: 100%;
-	min-width: 50%;
 	max-width: calc(45ch + 1em);
+	min-width: 50%;
 
 	@include breakpoint($gamora){
 		// box model

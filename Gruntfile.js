@@ -221,6 +221,8 @@ module.exports = function(grunt) {
 		sasslint: {
 			options: {
 				configFile: 'css/config/.sass-lint.yml',
+				formatter: 'html',
+				outputFile: 'css/config/report.html',
 			},
 			target: ['css/src/*.scss', 'css/src/smacss/**/*.scss']
     },

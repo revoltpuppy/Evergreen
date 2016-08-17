@@ -217,8 +217,8 @@
 
 		@include breakpoint($starlord){
 			//layout
-			float: right;  //IE9
 			align-self: flex-end;  //W3C
+			float: right;  //IE9
 		}
 	}
 

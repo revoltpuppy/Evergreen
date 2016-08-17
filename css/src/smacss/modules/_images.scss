@@ -20,12 +20,11 @@
 	max-width: 100%;
 	// layout
 	display: block;
-	border-radius: 2px;
 	// typography
 	color: $tint;  // for readability in the WYSIWYG
-	// backgrounds & borders
+	// decoration
 	background-color: mix($shade, $sky-blue, 60%);
-	// miscelaneous
+	border-radius: 2px;
 	box-shadow: 0 2px 2px $drop-shadow;
 }
 
@@ -34,19 +33,19 @@
 .image-full img,  // WYSIWYG
 .field-image img{  // Drupal event calendar
 	@include margin-default;
-	margin-left: auto;
 	margin-right: auto;
+	margin-left: auto;
 
 	@include breakpoint($gamora){
 		@include margin-default-lg;
-		margin-left: auto;
 		margin-right: auto;
+		margin-left: auto;
 	}
 
 	@include breakpoint($groot){
 		@include margin-default-xl;
-		margin-left: auto;
 		margin-right: auto;
+		margin-left: auto;
 	}
 }
 

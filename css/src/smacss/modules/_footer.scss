@@ -27,21 +27,27 @@
 
 .page-footer:after,
 .page-footer:before{
-	display: table;
+	// layout
 	clear: both;
+	display: table;
+	// miscellaneous
 	content: "";
 }
 
 .page-footer a,
 .page-footer a:link,
 .page-footer a:visited{
-	border-color: mix($shade, $evergreen-neue, 40%);
+	// typography
 	color: $evergreen-neue;
+	// decoration
+	border-color: mix($shade, $evergreen-neue, 40%);
 }
 
 .page-footer a:hover{
-	border-color: $sky-blue;
+	// typography
 	color: $sky-blue;
+	// decoration
+	border-color: $sky-blue;
 }
 
 .footer-map{

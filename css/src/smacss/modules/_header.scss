@@ -371,9 +371,12 @@ input:checked + .header-dropdown{
 
 	&::before,
 	&::after{
+		// box model
 		width: 0;
-		display: table;
+		// layout
 		clear: both;
+		display: table;
+		// miscellaneous
 		content: "";
 	}
 }
@@ -417,17 +420,17 @@ input:checked + .header-dropdown{
 .top-nav-link,
 .secondary-nav-link{
 	// box model
-	padding: 0.46875rem 1rem;  // 7.5/16
 	border-bottom-width: 0;
+	padding: 0.46875rem 1rem;  // 7.5/16
 	width: 100%;
 	// layout
 	display: block;
 
 	&:hover{
-		// backgrounds & borders
-		background-color: mix($tint, $blueberry-susan, 40%);
 		// typography
 		color: $tint;
+		// decoration
+		background-color: mix($tint, $blueberry-susan, 40%);
 		// misc
 		box-shadow: 0 0 1px $highlight inset,
 		/*        */0 0 1em transparentize($highlight, 0.75) inset;
@@ -609,10 +612,10 @@ input:checked + .header-dropdown{
 	}
 
 	&:hover{
-		// backgrounds & borders
-		background-color: mix($tint, $blueberry-susan, 40%);
 		// typography
 		color: $tint;
+		// decoration
+		background-color: mix($tint, $blueberry-susan, 40%);
 		// misc
 		box-shadow: 0 0 2px $highlight inset;
 		transition: all 0.1s ease-out;

@@ -38,7 +38,7 @@
 	font-weight: bold;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	// backgrounds and borders
+	// decoration
 	background-color: $wine;
 }
 
@@ -378,8 +378,8 @@
 
 .bulletin-header,
 .bulletin-body{
-	width: 100%;
 	padding-left: 1em;  // grid system
+	width: 100%;
 }
 
 .bulletin-header{
@@ -478,9 +478,9 @@
 
 .bulletin-calendar > li{
 	@include breakpoint($gamora){
-		float: left;
 		padding-left: 1em;
 		width: 33.333333333%;
+		float: left;
 	}
 }
 

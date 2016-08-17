@@ -18,7 +18,7 @@
 .is-current-section{
 	// typography
 	color: $tint;
-	// backgrounds and borders
+	// decoration
 	background-color: $evergreen-old-style;
 }
 
@@ -36,8 +36,9 @@
  */
 
 .is-expanded:before{
-	//transforms & transitions
+	// layout
 	transform: rotate(90deg);
+	// behavior
 	transition: all 0.2s linear;
 }
 
@@ -51,7 +52,7 @@
 	// typography
 	color: $tint;
 	font-weight: bold;
-	// backgrounds and borders
+	// decoration
 	background-color: $blueberry-susan;
 }
 

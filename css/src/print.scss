@@ -87,8 +87,8 @@ wrapper{
 }
 
 .wrapper{
-	min-height: none;
 	max-width: none;
+	min-height: none;
 }
 
 .main-row-grid{
@@ -169,7 +169,6 @@ wrapper{
 	max-width: 49%;
 	//layout
 	float: right;
-	//positioning
 	position: static;
 	z-index: auto;
 }

@@ -58,10 +58,13 @@
 
 .wrapper:before,  // nega-clearfix! Clearfix that wraps the element around TOP margins.
 .wrapper:after{
+	// box model
 	width: 0;
-	content: "";
-	display: table;
+	// layout
 	clear: both;
+	display: table;
+	// miscellaneous
+	content: "";
 }
 
 /**
@@ -118,8 +121,8 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 
 	@include breakpoint($lil-groot){
 		font-size: 0.695rem;  // Step -1
-		line-height: 1.34831460674157;  // 15/11.125
 		letter-spacing: -0.01em;  // Gives margins a touch more breathing room
+		line-height: 1.34831460674157;  // 15/11.125
 	}
 
 	@include breakpoint($starlord){

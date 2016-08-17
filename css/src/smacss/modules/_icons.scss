@@ -34,10 +34,10 @@
 	margin: 0.9375rem 0;  // 15/16
 	// layout
 	display: block;
-	vertical-align: top;
 	float: left;
 	// typography
 	text-align: center;
+	vertical-align: top;
 }
 
 .transporter a{
@@ -100,12 +100,12 @@
 	img{
 		// layout
 		display: block;
-		// positioning
 		//position: absolute;  // For responsive SVG.
 		//top: 0;
 		//left: 0;
-		// behavior
 		transform: scale(0.6);
+		// behavior
 		transition: transform 0.1s ease;
+		// miscellaneous
 	}
 }

@@ -347,26 +347,32 @@ a,
 	color: $blueberry-susan;
 	font-weight: bold;
 	text-decoration: none;
+	// movement
 	transition: color 0.2s, border-color 0.2s ease;
 }
 
 a:visited{
-	border-bottom-color: mix($tint, $wine, 75%);
+	// typography
 	color: $wine;
+	// decoration
+	border-bottom-color: mix($tint, $wine, 75%);
 }
 
 a:hover,
 .internal-users a:hover,
 .search-tools a:hover,
 .tertiary-nav-list a:hover{
-	border-bottom-color: $sky-blue;
+	// typography
 	color: $sky-blue;
+	// decoration
+	border-bottom-color: $sky-blue;
 }
 
 a:focus,
 a:active{
-	outline-width: 0;
+	// decoration
 	background-color: transparentize($blueberry-susan, 0.9);
+	outline-width: 0;
 }
 
 /**

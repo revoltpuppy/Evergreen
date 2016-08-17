@@ -157,8 +157,8 @@
 }
 
 .accordion-table .group{
-	font-weight: bold;
 	color: $blueberry-susan;
+	font-weight: bold;
 
 	&:hover{
 		// typography
@@ -247,19 +247,19 @@
 	&::before{
 		// box model
 		width: 0.75em;
-		// list
-		counter-increment: li;
-		// position
+		// layout
 		position: absolute;
 		left: 0;
 		// typography
 		color: mix($tint, $blueberry-susan, 40%);
-		font-variant-numeric: tabular-nums;
 		font-size: 1.945rem;  //31.12px  Step 4
-		line-height: 1em;
+		font-variant-numeric: tabular-nums;
 		font-weight: bold;
+		line-height: 1em;
 		text-align: right;
-		// misc
+		// decoration
+		counter-increment: li;
+		// miscellaneous
 		content: counter(li) ".";
 
 		@include breakpoint($starlord){
@@ -303,11 +303,11 @@
 	// layout
 	display: inline-block;
 	overflow: hidden;
-	vertical-align: middle;
 	// typography
 	text-indent: 100%;
+	vertical-align: middle;
 	white-space: nowrap;
-	// backgrounds & borders
+	// decoration
 	background-repeat: no-repeat;
 	background-size: 1rem 1rem;
 	// misc
@@ -421,7 +421,7 @@
 	top: calc(0.5em + 0.875rem * 1.60714);
 	// typography
 	word-wrap: break-word;
-	// backgrounds & borders
+	// decoration
 	background-color: mix($tint, $blueberry-susan, 85%);
 	border-radius: 2px;
 	// lists
@@ -439,8 +439,10 @@
 }
 
 .alpha-label + .alpha-index{
-	border-top-left-radius: 0;
+	// box model
 	margin-top: -1px;
+	// decoration
+	border-top-left-radius: 0;
 }
 
 .alpha-index > li{

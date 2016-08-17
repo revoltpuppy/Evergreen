@@ -7,10 +7,12 @@
 [type="search"],
 #search-block-form,  // Drupal service center site top search form
 #edit-search-block-form--2{  // Drupal service center site top search form input
+	// box model
 	margin: 0 -100% 0 0;
-	position: relative;
 	width: 100%;
+	// layout
 	appearance: none;
+	position: relative;
 }
 
 #edit-search-block-form--2{
@@ -29,24 +31,24 @@
 #search-block-form #edit-submit,  // Drupal service center site top search form
 #search-block-form #edit-submit--2{  // Drupal service center secondary content search, when logged out(?)
 	// box model
-	border-color: mix($tint, $blueberry-susan, 60%);
 	border-width: 1px 1px 1px 0;
 	height: 1.875rem;
-	margin-bottom: 0;
 	margin-right: 0;
+	margin-bottom: 0;
 	padding: 2px;
 	// layout
+	appearance: none;
 	float: right;
-	vertical-align: top;
-	// position
 	position: relative;
-	// backgrounds and borders
+	// typography
+	vertical-align: top;
+	// decoration
 	background: none $tint;
+	border-color: mix($tint, $blueberry-susan, 60%);
 	border-radius: 0;
+	box-shadow: none;
 	// miscellaneous
 	cursor: pointer;
-	appearance: none;
-	box-shadow: none;
 
 	&:hover{
 		background: none mix($tint, $shade, 80%);
