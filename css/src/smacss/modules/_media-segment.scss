@@ -3,13 +3,25 @@
  *
  * A common pattern wherein copy is tightly coupled to an icon.
  *
+ * Table of Contents
+ *
+ * 1. Default
+ * 2. Alternate
+ * 3. Vertically-Centered
+ * 4. Column And Squishy
+ */
+/**
+ * 1. Default
+ *
  * .media
- * +---------+------------------+
- * |         |                  |
- * | .media- | .media-body      |
- * |  img    |                  |
- * |         |                  |
- * +---------+------------------+
+ * +---------+ +------------------+
+ * |         | |                  |
+ * | .media- | | .media-body      |
+ * |  img    | |                  |
+ * |         | |                  |
+ * +---------+ |                  |
+ *             |                  |
+ *             +------------------+
  */
 .media{
 	clear: left;  // IE 9
@@ -33,12 +45,6 @@
 	}
 }
 
-// Vertically center .media-img. Extends .media-img or .media-body.
-.media-img-alt,  // deprecated, use .media-child-alt instead
-.media-child-alt{
-	align-self: center;  // W3C
-}
-
 .media-img img{
 	margin-top: 0.46875rem;  // Align the .media-body content with the .media-img content.
 	display: block;
@@ -54,9 +60,11 @@
 	flex: 1 1 auto;
 	overflow: auto;  // IE 9  // Gives block formatting context
 	/**
-	 * Alternate way to give block formatting context
-	 * display: table-cell;  // Gives block formatting context (pretty nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
-	 * width: 3000px;  // Stretches box to fit the remaining width; this is not the actual value that comes out.
+	 * Alternate way to give block formatting context:
+	 *  * display: table-cell;  // Gives block formatting context (pretty
+	 *    nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
+	 *  * width: 3000px;  // Stretches box to fit the remaining width; this is
+	 *    not the actual value that comes out.
 	 */
 }
 
@@ -64,7 +72,21 @@
 	margin-top: 0.46875rem;  // Align the .media-body content with the .media-img content.
 }
 
-// Put .media-img on the right. Extends .media
+/**
+ * 2. Alternate
+ *
+ * Put .media-img on the right. Extends .media
+ *
+ * .media
+ * +------------------+ +---------+
+ * |                  | |         |
+ * | .media-body      | | .media- |
+ * |                  | |  img    |
+ * |                  | |         |
+ * |                  | +---------+
+ * |                  |
+ * +------------------+
+ */
 .media-alt{
 	flex-direction: row-reverse;
 }
@@ -75,7 +97,67 @@
 	float: right;  // IE 9
 }
 
-.media-column,  // Put .media-img on the top. Extends .media
+/**
+ * 3. Vertically-Centered
+ * 
+ * Vertically center .media-child-alt. Extends .media-img or .media-body.
+ *
+ * .media
+ *                 +------------------+
+ * +-------------+ |                  |
+ * |             | | .media-body      |
+ * | .media-     | |                  |
+ * |  img.media- | |                  |
+ * |  child-alt  | |                  |
+ * |             | |                  |
+ * +-------------+ |                  |
+ *                 +------------------+
+ *
+ * OR
+ *
+ * .media
+ * +-------------+
+ * |             | +--------------------+
+ * | .media-     | |                    |
+ * |  img        | | .media-body.media- |
+ * |             | |  child-alt         |
+ * |             | |                    |
+ * |             | +--------------------+
+ * +-------------+
+ */
+.media-img-alt,  // deprecated, use .media-child-alt instead
+.media-child-alt{
+	align-self: center;  // W3C
+}
+
+/**
+ * 4. Column And Squishy
+ *
+ * .media-column puts .media-img on the top. Extends .media.
+ *
+ * .media-squish puts .media-img on top, then moves it to the side (as
+ * above) as screen width increases. Extends .media
+ *
+ * .media.media-column or .media.media-squishy
+ *    +------------+
+ *    |            |
+ *    | .media-img |
+ *    |            |
+ *    |            |
+ *    |            |
+ *    +------------+
+ * +------------------+
+ * |                  |
+ * | .media-body      |
+ * |                  |
+ * |                  |
+ * |                  |
+ * |                  |
+ * |                  |
+ * +------------------+
+ */
+
+.media-column,
 .media-squishy{  // Put .media-img on top, then move to the side
 	align-items: stretch;
 	flex-direction: column;
@@ -117,17 +199,3 @@
 .media-squishy > .media-img img{
 	margin: 0 auto;
 }
-
-
-/*@media screen and (min-width:32em){
-	.media-list .media{
-		//box model
-		width: 31.3333333333%;
-		//layout
-		display: inline-block;
-		vertical-align: top;
-	}
-	.media-list .media:nth-child(3n){
-		margin-right: 0;
-	}
-}*/
