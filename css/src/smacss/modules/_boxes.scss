@@ -145,6 +145,71 @@ p.alert{  // WYSIWYG
 }
 
 /**
+ * 5. Action Box
+ *
+ * A box with one or two calls to action.
+ *
+ * The content in this box should not ramble on and on. They should be
+ * focused down to distinct calls to action with *maybe* a bit of
+ * supporting content. If you want to ramble, consider using a default .box
+ * instead, or even just make it regular content.
+ *
+ * One call-to-action:
+ *   +-------------------------------------------+
+ *   |                                           |
+ *   |         Singular call-to-action.          |
+ *   |                                           |
+ *   +-------------------------------------------+
+ *
+ * Two calls to action:
+ *   +-------------------------------------------+
+ *   |                                           |
+ *   |   Primary call-to-  |  Secondary call-to- |
+ *   |   action (.action-  |   action (.action-  |
+     |      item-1-2)      |      item-2-2)      |
+ *   |                                           |
+ *   +-------------------------------------------+
+ */
+.action-box{
+	// box model
+	border: 1px solid mix($tint, $blueberry-susan, 80%);
+	margin-right: auto;
+	margin-left: auto;
+	// layout
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	// typography
+	text-align: center;
+	// decoration
+	background: transparent none;
+	
+	@include breakpoint($lil-groot){
+		flex-direction: row;
+	}
+	
+	@include breakpoint($starlord){
+		width: 75%;
+	}
+}
+
+.action-item-1-2,
+.action-item-2-2{
+	float: left;
+}
+
+.action-item-1-2{
+	border-right: 1px solid mix($tint, $blueberry-susan, 80%);
+	padding-right: 1em;
+	width: 50%;
+}
+
+.action-item-2-2{
+	margin-left: 1em;
+	width: calc(50% - 1em);
+}
+
+/**
  * 5. Pull Quotes
  */
 .pull-box{
