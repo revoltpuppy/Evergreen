@@ -198,7 +198,7 @@
 
 	@include breakpoint($gamora){
 		// box model
-		margin: 1.03007828594973em 0;  // 30/29.124
+		margin: calc(30 / 29.124 * 1em) 0 calc(60 / 29.124 * 1em);
 		// typography
 		font-size: 1.82rem;  // 29.124px  Step 3
 		line-height: 1.5451174289246; // 45/29.124
@@ -206,7 +206,7 @@
 
 	@include breakpoint($groot){
 		// box model
-		margin: 0.96425816405246em 0;  // 30/31.112
+		margin: calc(30 / 31.112 * 1em) 0 calc(60 / 31.112 * 1em);  // 30/31.112
 		// typography
 		font-size: 1.945rem;  // 31.112px  Step 4
 		line-height: 1.44638724607868;  // 45/31.112
