@@ -445,6 +445,14 @@ small{
 	}
 }
 
+/**
+ * Small (inline) text can inherit the line-height of its parent. Switching
+ * to inline-block forces small to use its own line-height.
+ */
+.small{
+	display: inline-block;
+}
+
 abbr{
 	// box model
 	border-bottom: 1px dotted mix($tint, $black, 75%);
