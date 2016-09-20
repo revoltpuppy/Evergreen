@@ -284,12 +284,12 @@
 	// backgrounds & borders
 	border-radius: 2px;
 
-	&:nth-child(even){
-		background-color: mix($tint, $blueberry-susan, 85%);
-	}
+	/*&:nth-child(even){
+		background-color: mix($tint, $blueberry-susan, 95%);
+	}*/
 }
 
-.schedule-event-required{
+.schedule-event-required{  // deprecated, use .schedule-event-group-required, or similar, instead
 	border: 2px solid $evergreen-neue;
 
 	+ .schedule-event-required{
@@ -297,11 +297,11 @@
 	}
 
 	&:nth-of-type(odd){
-		background-color: mix($tint, $evergreen-neue, 90%);
+		background-color: mix($tint, $evergreen-neue, 95%);
 	}
 
 	&:nth-of-type(even){
-		background-color: mix($tint, $evergreen-neue, 80%);
+		background-color: mix($tint, $evergreen-neue, 90%);
 	}
 
 	.p-name{
@@ -309,18 +309,18 @@
 	}
 }
 
-.schedule-event-morning{
+.h-event.schedule-event-morning{
 	background-color: $morning-light;
 }
 
-.schedule-event-evening{
+.h-event.schedule-event-evening{  // deprecated, use .schedule-event-group-geoducks-at-nite, or similar, instead
 
 	&:nth-of-type(odd){
-		background-color: mix($tint, $sky-blue, 90%);
+		background-color: mix($tint, $sky-blue, 95%);
 	}
 
 	&:nth-of-type(even){
-		background-color: mix($tint, $sky-blue, 80%);
+		background-color: mix($tint, $sky-blue, 90%);
 	}
 
 	.p-name{
@@ -328,7 +328,7 @@
 	}
 }
 
-.schedule-event-evening-start::before{
+.schedule-event-evening-start::before{  // deprecated, use .schedule-event-group-geoducks-at-nite::before, or similar, instead
 	// box model
 	border-bottom: 1px solid $sky-blue;
 	width: 100%;
@@ -338,6 +338,57 @@
 	text-align: center;
 	// misc
 	content: "Evening Events";
+}
+
+.schedule-event-group-geoducks-at-nite::before,
+.schedule-event-group-required::before{
+	// box model
+	border-width: 0 0 1px;
+	width: 100%;
+	// layout
+	display: block;
+	// typography
+	text-align: center;
+	// decoration
+	border-style: solid;
+}
+
+.schedule-event-group-geoducks-at-nite::before{
+	// decoration
+	border-bottom-color: $evergreen-neue;
+	// misc
+	content: "Geoducks@Nite";
+}
+
+.schedule-event-group-geoducks-at-nite{
+	// decoration
+	background-color: mix($tint, $evergreen-neue, 95%);
+}
+
+/*.schedule-event-group-geoducks-at-nite .h-event:nth-child(even){
+	background-color: mix($tint, $evergreen-neue, 90%);
+}*/
+
+.schedule-event-group-geoducks-at-nite .p-name{
+	color: mix($shade, $evergreen-neue, 60%);
+}
+
+.schedule-event-group-required::before{
+	// decoration
+	border-bottom-color: $wine;
+}
+
+.schedule-event-group-required{
+	// decoration
+	background-color: mix($tint, $wine, 95%);
+}
+
+/*.schedule-event-group-required .h-event:nth-child(even){
+	background-color: mix($tint, $wine, 90%);
+}*/
+
+.schedule-event-group-required .p-name{
+	color: mix($shade, $wine, 60%);
 }
 
 .schedule-event-time{
