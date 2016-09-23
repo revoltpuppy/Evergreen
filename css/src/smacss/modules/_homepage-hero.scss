@@ -2,8 +2,25 @@
  * C. Homepage Hero Image
  *
  * @section mod-hero-homepage
+ *
+ * +------------------------------+
+ * |                              |
+ * | .homepage-hero-       /---\  |
+ * | content goes here.    |. .|  |
+ * |  ---------------      \ - /  |
+ * | [.call-to-action]     /; ;\  |
+ * |                      /;  ;|  |
+ * |  -----------------   u'===|' |
+ * | |.box.caption-box |  |  v |  |
+ * +------------------------------+
+ *
+ * Table of Contents
+ *
+ * 1. Default
+ * 2. Graduation Day Hero Image
+ * 3. Copy
+ * 4. Copy Modifiers
  */
-// Zoom in on the center of images on small screens
 .homepage-hero,
 .homepage-hero-content{
 	height: 100%;
@@ -34,15 +51,16 @@
 	}
 }
 
-.homepage-hero-img{  // fallback image
-	margin-left: -50%;
-	width: 200%;
+// Zoom in on the center of images on small screens
+.homepage-hero-img{  // fallback image for Internet Explorer 11
+	margin-left: -50%;  // deprecated; there's no need to support this for IE 11
+	width: 200%;  // deprecated; there's no need to support this for IE 11
 	max-width: none;
 	// layout
 	display: block;
 
 	@include breakpoint($starlord){
-		.homepage-hero-img{
+		.homepage-hero-img{  // deprecated; there's no need to support this for IE 11
 			// box model
 			margin-left: -25%;
 			width: 150%;
@@ -68,8 +86,7 @@
 	}
 }
 
-.homepage-hero a,
-.homepage-hero a:link,
+.homepage-hero a,  // The link so you can click basically the whole image instead of just the call-to-action button.
 .homepage-hero a:visited,
 .homepage-hero a:hover{
 	border-width: 0;
@@ -98,11 +115,11 @@
 	}
 }
 
-.homepage-hero-content{
+.homepage-hero-content{  // Holds the .caption-box and .homepage-hero-copy
 	// box model
 	width: 100%;
 	max-width: 82em;
-	// backgrounds & borders
+	// decoration
 	background-color: $blueberry-susan;
 
 	@include breakpoint($lil-groot){
@@ -112,7 +129,7 @@
 		// positioning
 		position: absolute;
 		bottom: 0;
-		// backgrounds & borders
+		// decoration
 		background-color: transparent;
 	}
 
@@ -134,12 +151,18 @@
 	}
 }
 
+/**
+ * 2. Graduation Day Hero Image
+ *
+ * The hero image changes to graduation-centric imagery copy.
+ *
+ * (I wonder if this section should be below section 3-Copy and maybe
+ * 4-Copy Modifiers. I think this was put here for some reason, but I’m not
+ * sure why now. Check it out when you have some time sometime.)
+ */
+
 .homepage-hero-content-grad{
 	justify-content: flex-end;
-}
-
-.homepage-hero-content-grad .call-to-action{
-	//margin-bottom: 0;
 }
 
 .homepage-hero-content-grad .caption-box{
@@ -148,8 +171,6 @@
 
 .homepage-hero-content-grad .homepage-hero-copy{
 	// box model
-	//margin: 0 0 2em 0;
-	//padding: 0 1em;
 	width: calc(66.6666666667% - 1em);
 
 	@include breakpoint($starlord){
@@ -162,8 +183,6 @@
 		// typography
 		text-align: center;
 	}
-	// backgrounds & borders
-	//background-color: transparentize($blueberry-susan, 0.5);
 }
 
 .homepage-hero-content-grad h1{
@@ -171,7 +190,6 @@
 }
 
 .homepage-hero-content-grad .homepage-hero-copy img{
-	//max-width: 66.6666666667%;
 	max-height: calc(250 / 16 * 1rem);
 
 	@include breakpoint($gamora){
@@ -184,6 +202,9 @@
 	}
 }
 
+/**
+ * 3. Copy
+ */
 .homepage-hero-copy{
 	margin: 0 calc(15 / 14 * 1em);
 
@@ -206,53 +227,6 @@
 	@include breakpoint($drax){
 		width: calc((3 / 7 * 100%) - 1em);  //3/7
 	}
-
-	.homepage-hero-copy-alt &{
-
-		@include breakpoint($lil-groot){
-			//layout
-			align-self: flex-end;
-			float: right;
-		}
-
-		@include breakpoint($starlord){
-			//layout
-			align-self: flex-end;  //W3C
-			float: right;  //IE9
-		}
-	}
-
-	.homepage-hero-img-detailed &{
-		//box model
-		height: 100%;
-		margin: 0;
-		padding: 0 calc(7.5 / 15 * 1em);
-		width: 66.6666666667%;
-		//backgrounds & borders
-		background-color: transparentize($blueberry-susan, 0.5);
-		border-radius: 2px;
-
-		@include breakpoint($rocket){
-			padding: 0 calc(15 / 14 * 1em);
-		}
-
-		@include breakpoint($starlord){
-			height: auto;
-			width: 50%;
-		}
-
-		@include breakpoint($gamora){
-			padding: 0 calc(15 / 17 * 1em);
-		}
-
-		@include breakpoint($drax){
-			width: calc(3 / 7 * 100%);
-		}
-
-		@include breakpoint($groot){
-			padding: 0 calc(30 / 19.23333333333 * 1em);
-		}
-	}
 }
 
 .homepage-hero-copy h1{
@@ -271,9 +245,67 @@
 		line-height: 1.324152542372881;  //30/22.656
 	}
 
-	@media screen and (min-width: 86em){
+	@media screen and (min-width: 86em){  // Odd-sized media query, for better text appearance.
 		//typography
 		font-size: 2.291rem;  //36.656
 		line-height: 1.227629855958097;  //45/36.656
+	}
+}
+
+/**
+ * 4. Copy Modifiers
+ *
+ * Some hero images require different placement or design of the hero copy.
+ * Add both of these to the .homepage-hero parent class.
+ *
+ * - .homepage-hero-copy-alt      Moves the copy to the right side of the
+ *                                image.
+ * - .homepage-hero-img-detailed  Adds a violet background to make the text
+ *                                more readable on detailed images.
+ */
+.homepage-hero-copy-alt .homepage-hero-copy{
+
+	@include breakpoint($lil-groot){
+		//layout
+		align-self: flex-end;
+		float: right;
+	}
+
+	@include breakpoint($starlord){
+		//layout
+		align-self: flex-end;  //W3C
+		float: right;  //IE9
+	}
+}
+
+.homepage-hero-img-detailed .homepage-hero-copy{
+	// box model
+	height: 100%;
+	margin: 0;
+	padding: 0 calc(7.5 / 15 * 1em);
+	width: 66.6666666667%;
+	// decoration
+	background-color: transparentize($blueberry-susan, 0.5);
+	border-radius: 2px;
+
+	@include breakpoint($rocket){
+		padding: 0 calc(15 / 14 * 1em);
+	}
+
+	@include breakpoint($starlord){
+		height: auto;
+		width: 50%;
+	}
+
+	@include breakpoint($gamora){
+		padding: 0 calc(15 / 17 * 1em);
+	}
+
+	@include breakpoint($drax){
+		width: calc(3 / 7 * 100%);
+	}
+
+	@include breakpoint($groot){
+		padding: 0 calc(30 / 19.23333333333 * 1em);
 	}
 }

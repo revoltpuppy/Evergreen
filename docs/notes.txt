@@ -1,4 +1,11 @@
 Faces of Evergreen
 ------------------
 Who should be included?
+	
 What does it look like?
+	Pretty basic. Photo with name and quote underneath.
+	Depends on how the information gets loaded into a table.
+
+Where do you see this fitting?
+	Fields of Study
+	Replacing the recent student projects, or at least putting it before them.
