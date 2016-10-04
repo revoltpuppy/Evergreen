@@ -47,10 +47,10 @@
 
 .text-list-alt > li{
 	//box model
-	margin: 0.53571428571429em 0;  // 7.5/14
+	margin: calc(7.5 / 14 * 1em) 0;
 
 	@include breakpoint ($gamora){
-		margin: 0.44117647058824em 0;  // 7.5/17
+		margin: calc(7.5/ 18 * 1em) 0;
 	}
 }
 
