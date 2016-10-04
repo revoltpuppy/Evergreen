@@ -337,13 +337,21 @@
 	height: calc(100% - 1em);
 	margin-bottom: 1em;
 	padding: 1em 1em 0;
+	// layout
+	display: flex;  // Drupal style
+	flex-direction: column;  // Drupal style
+	justify-content: flex-start;  // Drupal style
 	// typography
 	color: mix($tint, $shade, 20%);
-	//font-family: "Minion Pro", Minion, "Times New Roman", Times, serif;
-	// backgrounds and borders
+	// decoration
 	background-color: $tint;
 	border-radius: 2px;
-	// misc
+}
+
+.news-story footer{  // Drupal styles
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
 }
 
 /**
