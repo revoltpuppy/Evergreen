@@ -1,0 +1,14 @@
+/*
+   this overrides many of the default styles for blog post listings
+   also has some probably pretty common tweaks to blog layout?
+   can be added to any site in the site-info block
+   need to also add the blog's class to this file
+*/
+
+/* don't show in bulleted list */
+.news-features .entries, .in-the-news .entries {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+/* ideas for future additions: make the post title bigger and/or excerpt smaller, make the date, author etc smaller/grey */

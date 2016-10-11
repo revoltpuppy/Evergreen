@@ -1,0 +1,8 @@
+form div.info {display:none !important;}
+form ul li#errorLi {margin: 10px 0;}
+form ul li#errorLi h3#errorMsgLbl {}
+form ul li#errorLi p#errorMsg {}
+form ul {margin: 10px 0px 0px 0px; padding: 0px;}
+
+form.wufoo h2 {text-align: left; margin: 10px 0px 0px 0px; padding: 0px;}
+form.wufoo, iframe { background-color: transparent; }
