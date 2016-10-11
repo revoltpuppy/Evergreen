@@ -26,20 +26,19 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						cwd: 'css/dist/',
-						src: 'styles.css',
-						dest: '../www-drupal/themes/wwwevergreen/css/build/',
-						/*rename: function(dest){
-							return dest + 'screen.css';
-						},*/
-						filter: 'isFile',	 // Make sure it's a file, not a directory or something else (I think)
+						src: ['**'],
+						dest: '../www-drupal/themes/wwwevergreen/css/dist/',
 					},
-					{
+					/*{
 						expand: true,
-						cwd: 'css/dist/custom-css/',
-						src: 'ckeditor.css',
-						dest: '../www-drupal/themes/wwwevergreen/css/build/',
-						filter: 'isFile',
-					},
+						cwd: 'css/dist/',
+						src: 'styles.css',
+						dest: '../www-drupal/themes/wwwevergreen/css/dist/',
+						//rename: function(dest){
+							//return dest + 'screen.css';
+						//},
+						filter: 'isFile',	 // Make sure it's a file, not a directory or something else (I think)
+					},*/
 					
 					/*// includes files within path
 					{expand: true, src: ['path/*'], dest: 'dest/', filter: 'isFile'},
