@@ -10,9 +10,10 @@
  * 2. Note
  * 3. Alert
  * 4. Captioned Figures
- * 5. Pull Quotes
- * 6. Full Box
- * 7. UI Group
+ * 5. Action Box
+ * 6. Pull Quotes
+ * 7. Full Box
+ * 8. UI Group
  */
 
 /**
@@ -160,15 +161,17 @@ p.alert{  // WYSIWYG
  *   |         Singular call-to-action.          |
  *   |                                           |
  *   +-------------------------------------------+
+ * Seen on Emergency Campus Notifications: http://www.evergreen.edu/news/weatherdelays
  *
  * Two calls to action:
  *   +-------------------------------------------+
  *   |                                           |
  *   |   Primary call-to-  |  Secondary call-to- |
  *   |   action (.action-  |   action (.action-  |
-     |      item-1-2)      |      item-2-2)      |
+ *   |      item-1-2)      |      item-2-2)      |
  *   |                                           |
  *   +-------------------------------------------+
+ * Seen on New Student Orientation: http://www.evergreen.edu/events/orientation/
  */
 .action-box{
 	// box model
@@ -210,7 +213,7 @@ p.alert{  // WYSIWYG
 }
 
 /**
- * 5. Pull Quotes
+ * 6. Pull Quotes
  */
 .pull-box{
 	// typography
@@ -282,7 +285,7 @@ p.alert{  // WYSIWYG
 }
 
 /**
- * 6. Full Box
+ * 7. Full Box
  *
  * A box with a header and possibly a footer.
  *
@@ -305,7 +308,7 @@ p.alert{  // WYSIWYG
 }
 
 /**
- * 7. UI Group
+ * 8. UI Group
  *
  * A different kind of box; a group of elements, typically UI
  * that need visual separation from one another, or from other

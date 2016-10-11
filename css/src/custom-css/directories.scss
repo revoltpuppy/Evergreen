@@ -88,10 +88,10 @@
 
 .dir-key{
 	font-weight: bold;
-	
-	.dir-phone-list &{
-		font-weight: normal;
-	}
+}
+
+.dir-phone-list .dir-key{
+	font-weight: normal;
 }
 
 .dir-phone,
@@ -102,10 +102,6 @@
 		letter-spacing: 0;
 	}
 }
-
-/*.dir-icon{
-	max-height: 1em;
-}*/
 
 .dir-email::before{
 	content: "Email: ";

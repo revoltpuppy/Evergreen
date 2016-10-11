@@ -4266,12 +4266,12 @@ ul.accordion-inner {
  */
 /* line 48, ../src/smacss/modules/_lists.scss */
 .text-list-alt > li {
-  margin: 0.53571428571429em 0;
+  margin: calc(7.5 / 14 * 1em) 0;
 }
 @media screen and (min-width: 43em) {
   /* line 48, ../src/smacss/modules/_lists.scss */
   .text-list-alt > li {
-    margin: 0.44117647058824em 0;
+    margin: calc(7.5/ 18 * 1em) 0;
   }
 }
 
@@ -5198,14 +5198,15 @@ ul.accordion-inner {
  * 2. Note
  * 3. Alert
  * 4. Captioned Figures
- * 5. Pull Quotes
- * 6. Full Box
- * 7. UI Group
+ * 5. Action Box
+ * 6. Pull Quotes
+ * 7. Full Box
+ * 8. UI Group
  */
 /**
  * 1. Default Box
  */
-/* line 21, ../src/smacss/modules/_boxes.scss */
+/* line 22, ../src/smacss/modules/_boxes.scss */
 .notice,
 .box,
 p.box {
@@ -5219,7 +5220,7 @@ p.box {
   border-radius: 2px;
 }
 @media screen and (min-width: 43em) {
-  /* line 21, ../src/smacss/modules/_boxes.scss */
+  /* line 22, ../src/smacss/modules/_boxes.scss */
   .notice,
   .box,
   p.box {
@@ -5228,7 +5229,7 @@ p.box {
   }
 }
 
-/* line 43, ../src/smacss/modules/_boxes.scss */
+/* line 44, ../src/smacss/modules/_boxes.scss */
 .notice h2,
 .box h2,
 .notice h4,
@@ -5236,13 +5237,13 @@ p.box {
   color: #004377;
 }
 
-/* line 50, ../src/smacss/modules/_boxes.scss */
+/* line 51, ../src/smacss/modules/_boxes.scss */
 .notice h3,
 .box h3 {
   color: #004377;
 }
 
-/* line 55, ../src/smacss/modules/_boxes.scss */
+/* line 56, ../src/smacss/modules/_boxes.scss */
 .notice h5,
 .box h5,
 .notice h6,
@@ -5251,7 +5252,7 @@ p.box {
 }
 
 @media screen and (min-width: 20em) {
-  /* line 62, ../src/smacss/modules/_boxes.scss */
+  /* line 63, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     border-top-right-radius: 0;
@@ -5259,7 +5260,7 @@ p.box {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 62, ../src/smacss/modules/_boxes.scss */
+  /* line 63, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     margin-top: 0.41666666666667em;
@@ -5269,7 +5270,7 @@ p.box {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 62, ../src/smacss/modules/_boxes.scss */
+  /* line 63, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     margin-top: 0.52004784440168em;
@@ -5282,13 +5283,13 @@ p.box {
  *
  * Stands out a little bit more than a default box.
  */
-/* line 90, ../src/smacss/modules/_boxes.scss */
+/* line 91, ../src/smacss/modules/_boxes.scss */
 .notice,
 .note {
   border-left: 5px solid #91c7f0;
 }
 @media screen and (min-width: 22em) {
-  /* line 90, ../src/smacss/modules/_boxes.scss */
+  /* line 91, ../src/smacss/modules/_boxes.scss */
   .notice,
   .note {
     padding-left: calc(1em - 5px);
@@ -5300,7 +5301,7 @@ p.box {
  *
  * Stands out a lot more than a default box.
  */
-/* line 105, ../src/smacss/modules/_boxes.scss */
+/* line 106, ../src/smacss/modules/_boxes.scss */
 .alert,
 p.alert {
   color: #600f21;
@@ -5308,7 +5309,7 @@ p.alert {
   border-radius: 0;
 }
 
-/* line 116, ../src/smacss/modules/_boxes.scss */
+/* line 117, ../src/smacss/modules/_boxes.scss */
 #sitewide-alert {
   margin: 0;
   width: 100%;
@@ -5323,13 +5324,13 @@ p.alert {
  * Lends a bit more readability to boxes while still standing out
  * against the content a little bit more.
  */
-/* line 135, ../src/smacss/modules/_boxes.scss */
+/* line 136, ../src/smacss/modules/_boxes.scss */
 .caption-box {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: rgba(242, 242, 242, 0.95);
 }
 
-/* line 142, ../src/smacss/modules/_boxes.scss */
+/* line 143, ../src/smacss/modules/_boxes.scss */
 .caption-box img {
   margin-top: 0.9375rem;
   margin-bottom: 0.9375rem;
@@ -5351,17 +5352,19 @@ p.alert {
  *   |         Singular call-to-action.          |
  *   |                                           |
  *   +-------------------------------------------+
+ * Seen on Emergency Campus Notifications: http://www.evergreen.edu/news/weatherdelays
  *
  * Two calls to action:
  *   +-------------------------------------------+
  *   |                                           |
  *   |   Primary call-to-  |  Secondary call-to- |
  *   |   action (.action-  |   action (.action-  |
-     |      item-1-2)      |      item-2-2)      |
+ *   |      item-1-2)      |      item-2-2)      |
  *   |                                           |
  *   +-------------------------------------------+
+ * Seen on New Student Orientation: http://www.evergreen.edu/events/orientation/
  */
-/* line 173, ../src/smacss/modules/_boxes.scss */
+/* line 176, ../src/smacss/modules/_boxes.scss */
 .action-box {
   border: 1px solid #d0cad4;
   margin-right: auto;
@@ -5379,7 +5382,7 @@ p.alert {
   background: transparent none;
 }
 @media screen and (min-width: 20em) {
-  /* line 173, ../src/smacss/modules/_boxes.scss */
+  /* line 176, ../src/smacss/modules/_boxes.scss */
   .action-box {
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -5387,67 +5390,72 @@ p.alert {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 173, ../src/smacss/modules/_boxes.scss */
+  /* line 176, ../src/smacss/modules/_boxes.scss */
   .action-box {
     width: 75%;
   }
 }
 
-/* line 196, ../src/smacss/modules/_boxes.scss */
+/* line 199, ../src/smacss/modules/_boxes.scss */
+.action-item-1-1 {
+  margin: 0 auto;
+}
+
+/* line 203, ../src/smacss/modules/_boxes.scss */
 .action-item-1-2,
 .action-item-2-2 {
   float: left;
 }
 
-/* line 201, ../src/smacss/modules/_boxes.scss */
+/* line 208, ../src/smacss/modules/_boxes.scss */
 .action-item-1-2 {
   border-right: 1px solid #d0cad4;
   padding-right: 1em;
   width: 50%;
 }
 
-/* line 207, ../src/smacss/modules/_boxes.scss */
+/* line 214, ../src/smacss/modules/_boxes.scss */
 .action-item-2-2 {
   margin-left: 1em;
   width: calc(50% - 1em);
 }
 
 /**
- * 5. Pull Quotes
+ * 6. Pull Quotes
  */
-/* line 215, ../src/smacss/modules/_boxes.scss */
+/* line 222, ../src/smacss/modules/_boxes.scss */
 .pull-box {
   color: #f2f2f2;
   background-color: rgba(100, 147, 58, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 215, ../src/smacss/modules/_boxes.scss */
+  /* line 222, ../src/smacss/modules/_boxes.scss */
   .pull-box {
     margin-bottom: 1.071428571428571em;
   }
 }
-/* line 227, ../src/smacss/modules/_boxes.scss */
+/* line 234, ../src/smacss/modules/_boxes.scss */
 .pull-box a {
   border-bottom: 2px solid #b9afbf;
   color: #c8c1cd;
 }
-/* line 234, ../src/smacss/modules/_boxes.scss */
+/* line 241, ../src/smacss/modules/_boxes.scss */
 .pull-box a:visited {
   color: #ceb9be;
   border-bottom-color: #c0a5ab;
 }
-/* line 241, ../src/smacss/modules/_boxes.scss */
+/* line 248, ../src/smacss/modules/_boxes.scss */
 .pull-box a:hover {
   color: #a0cdf1;
   border-bottom-color: #a0cdf1;
 }
 
-/* line 249, ../src/smacss/modules/_boxes.scss */
+/* line 256, ../src/smacss/modules/_boxes.scss */
 .pull-box-alt {
   background-color: #0086ee;
 }
 
-/* line 253, ../src/smacss/modules/_boxes.scss */
+/* line 260, ../src/smacss/modules/_boxes.scss */
 .pull-quote {
   margin: 0.44117647058824em 0 0.88235294117647em;
   font-size: 1.125rem;
@@ -5455,7 +5463,7 @@ p.alert {
   font-style: italic;
 }
 @media screen and (min-width: 70em) {
-  /* line 253, ../src/smacss/modules/_boxes.scss */
+  /* line 260, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.36358347876672em 0 0.72716695753345em;
     font-size: 1.719rem;
@@ -5463,7 +5471,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 253, ../src/smacss/modules/_boxes.scss */
+  /* line 260, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.48200514138817em 0 0.96401028277635em;
     font-size: 1.945rem;
@@ -5472,7 +5480,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 277, ../src/smacss/modules/_boxes.scss */
+  /* line 284, ../src/smacss/modules/_boxes.scss */
   .supplement-alt-1-2 .pull-quote {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
@@ -5480,32 +5488,32 @@ p.alert {
 }
 
 /**
- * 6. Full Box
+ * 7. Full Box
  *
  * A box with a header and possibly a footer.
  *
  * @section box-full
  */
-/* line 292, ../src/smacss/modules/_boxes.scss */
+/* line 299, ../src/smacss/modules/_boxes.scss */
 .full-box {
   border: 1px solid #0086ee;
   padding: 0;
   background: #0086ee url("images/texture-1.png");
 }
 
-/* line 298, ../src/smacss/modules/_boxes.scss */
+/* line 305, ../src/smacss/modules/_boxes.scss */
 .full-box h2,
 .full-box h3 {
   color: #f2f2f2;
 }
 
-/* line 303, ../src/smacss/modules/_boxes.scss */
+/* line 310, ../src/smacss/modules/_boxes.scss */
 .full-box > .box {
   background-color: #f2f2f2;
 }
 
 /**
- * 7. UI Group
+ * 8. UI Group
  *
  * A different kind of box; a group of elements, typically UI
  * that need visual separation from one another, or from other
@@ -5513,7 +5521,7 @@ p.alert {
  
  * @section ui-group
  */
-/* line 317, ../src/smacss/modules/_boxes.scss */
+/* line 324, ../src/smacss/modules/_boxes.scss */
 .ui-group {
   border: 1px solid #c8c1cd;
   margin-bottom: 0.46875rem;
@@ -5531,24 +5539,24 @@ p.alert {
   }*/
 }
 @media screen and (min-width: 32em) {
-  /* line 338, ../src/smacss/modules/_boxes.scss */
+  /* line 345, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-2 {
     margin: 0.234375rem;
     width: calc(50% - 0.46875rem);
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 345, ../src/smacss/modules/_boxes.scss */
+  /* line 352, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-3 {
     margin: 0.234375rem;
     width: calc(33.3333333333% - 0.46875rem);
   }
-  /* line 350, ../src/smacss/modules/_boxes.scss */
+  /* line 357, ../src/smacss/modules/_boxes.scss */
   .ui-group .media {
     width: 100%;
   }
 }
-/* line 356, ../src/smacss/modules/_boxes.scss */
+/* line 363, ../src/smacss/modules/_boxes.scss */
 .ui-group > :last-child {
   margin-bottom: 0.9375rem;
 }
@@ -6853,15 +6861,37 @@ p.alert {
   height: calc(100% - 1em);
   margin-bottom: 1em;
   padding: 1em 1em 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   color: #303030;
   background-color: #f2f2f2;
   border-radius: 2px;
 }
 
+/* line 351, ../src/smacss/_modules.scss */
+.news-story footer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 /**
  * P. Profiles
  */
-/* line 352, ../src/smacss/_modules.scss */
+/* line 360, ../src/smacss/_modules.scss */
 .profile .portrait-1-1 {
   border-radius: 50%;
   -webkit-shape-margin: 1em;
@@ -6870,13 +6900,13 @@ p.alert {
           shape-outside: circle() border-box;
 }
 
-/* line 359, ../src/smacss/_modules.scss */
+/* line 367, ../src/smacss/_modules.scss */
 .profession {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 32em) {
-  /* line 359, ../src/smacss/_modules.scss */
+  /* line 367, ../src/smacss/_modules.scss */
   .profession {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -6884,7 +6914,7 @@ p.alert {
   }
 }
 
-/* line 369, ../src/smacss/_modules.scss */
+/* line 377, ../src/smacss/_modules.scss */
 .mini-bio-photo,
 .mini-profile-photo {
   border: 1px solid #00365f;
@@ -6997,7 +7027,7 @@ p.alert {
 /**
  * R. Embeded Content
  */
-/* line 386, ../src/smacss/_modules.scss */
+/* line 394, ../src/smacss/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -7005,7 +7035,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 396, ../src/smacss/_modules.scss */
+/* line 404, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -7024,24 +7054,24 @@ p.alert {
   background-image: url("/_inc/images/texture-1.png");
   content: url("/_inc/images/icons/green/play.png");
 }
-/* line 415, ../src/smacss/_modules.scss */
+/* line 423, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 419, ../src/smacss/_modules.scss */
+/* line 427, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 427, ../src/smacss/_modules.scss */
+/* line 435, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 435, ../src/smacss/_modules.scss */
+/* line 443, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -7052,30 +7082,30 @@ p.alert {
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 446, ../src/smacss/_modules.scss */
+/* line 454, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 450, ../src/smacss/_modules.scss */
+/* line 458, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 450, ../src/smacss/_modules.scss */
+  /* line 458, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 450, ../src/smacss/_modules.scss */
+  /* line 458, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 463, ../src/smacss/_modules.scss */
+/* line 471, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -7087,7 +7117,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 475, ../src/smacss/_modules.scss */
+/* line 483, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -7095,7 +7125,7 @@ p.alert {
   display: block;
 }
 
-/* line 484, ../src/smacss/_modules.scss */
+/* line 492, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(30, 19, 37, 0.25);
 }

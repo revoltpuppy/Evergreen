@@ -1,26 +1,12 @@
 @charset "UTF-8";
-@import "../tools";
 /*!*
  * Fields of Study Styles
  *
  * Styles for the fields of study pages.
  *
- * @project    The Evergreen State College
- * @author     The Evergreen State College
- * @copyright  2013 by the author
- * @cssdoc     0.2.22
- * @license    Copyrighted
+ * These styles were originally developed by Justin McDowell.
  */
-
-.ui-group{
-	
-	a.media{
-		border-bottom-width: 0;
-	}
-	.media-img img{
-		border-radius: 50%;
-	}
-}
+@import "../tools";
 
 .studies-list{
 	

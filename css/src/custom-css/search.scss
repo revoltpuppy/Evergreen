@@ -1,11 +1,14 @@
-@import "../tools";
-
-/*!*
+@charset "UTF-8";
+/**
  * Search Styles
  *
  * Style overrides for the Google search engine results page integrated
  * into Evergreen’s website.
+ *
+ * These styles were originally developed by Justin McDowell.
  */
+@import "../tools";
+
 #___gcse_0 .cse .gsc-control-cse,
 #___gcse_0 .gsc-control-cse{  // search tool wrapper
 	// box model
@@ -17,8 +20,7 @@
 
 .gsc-control-cse,
 .gsc-control-cse{
-	font-family: $text-face !important;
-	font-family: "proxima-nova" $text-face !important;  // Typekit
+	font-family: "proxima-nova" $text-face !important;  // Proxima Nova is included as a Typekit override
 }
 
 .gsc-control-cse table{

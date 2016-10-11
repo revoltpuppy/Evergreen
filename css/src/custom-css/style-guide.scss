@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!*
  * Style Guide Styles
  *
@@ -10,58 +11,27 @@
  * Styles in this file are organized according to the SMACSS principles:
  * http://smacss.com/
  *
- * @project    The Evergreen State College
- * @version    1.0
- * @package    XHTML (Transitional) and CSS
- * @author     The Evergreen State College
- * @copyright  2013 by the author
- * @cssdoc     0.2.22
- * @license    Copyrighted
- 
  * Table of Contents
  *
- * 1. Base Styles ................... (base)
- * 2. Layout Styles ................. (layout)
- * 3. Module Styles ................. (module)
- * 4. State Styles .................. (states)
- * 5. Uncategorized Styles .......... (uncategorized)
+ * 1. Base Styles
+ * 2. Layout Styles
+ * 3. Module Styles
+ * 4. State Styles
+ * 5. Uncategorized Styles
  */
-/**
- * 0. Sass Constants
- *
- * @section sass-constants
- */
-$morning-light: #fdf4b6;
-$sky-blue: #0086ee;
-$evergreen-neue: #64933a;
-$evergreen-old-style: #46502b;
-$blueberry-susan: #492c5d;
-$wine: #600f21;
-$black: #000;
-
-$drop-shadow: hsla(275, 33%, 11%, .25);
-$highlight: hsla(52, 95%, 85%, .5); //$morning-light
+@import "../tools";
 
 /**
  * 1. Base Styles
  *
- * @section base
  * @see http://smacss.com/book/type-base
  */
-*{
-	box-sizing: border-box;
-}
-
-table{
-    width:100%;
-}
 
 @import "buttons";
 
 /**
  * 2. Layout Styles
  *
- * @section layout
  * @see http://smacss.com/book/type-layout
  */
 
@@ -74,7 +44,7 @@ ul.banned-list{
 	list-style-image: url(/style-guide/images/no.png);
 }
 
-@media screen and (min-width: 32em) {
+@include breakpoint($starlord) {
 	.sample-list > li{
 		margin:0.535714285714286em 4% 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
 		width: 48%;
@@ -88,7 +58,6 @@ ul.banned-list{
 /**
  * 3. Module Styles
  *
- * @section module
  * @see http://smacss.com/book/type-module
  */
 
@@ -97,7 +66,6 @@ ul.banned-list{
 /**
  * 4. State Styles
  *
- * @section state
  * @see http://smacss.com/book/type-state
  */
 .is-dark{
