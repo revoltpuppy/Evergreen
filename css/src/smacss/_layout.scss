@@ -191,7 +191,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	padding: 0;
 	width: calc(100% - 1.5em);
 	// decoration
-	background-color: hsla(0, 0%, 95%, 0.95);
+	background-color: transparentize($tint, 0.05);
 	border-radius: 2px;
 
 	@include breakpoint($gamora){
@@ -251,7 +251,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	// layout
 	overflow: hidden;
 	// decoration
-	background-color: hsla(0, 0%, 95%, 0.95);
+	background-color: transparentize($tint, 0.05);
 
 	@include breakpoint($gamora){
 		// box model

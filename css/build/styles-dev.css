@@ -1098,7 +1098,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 0 0 2px 1px rgba(30, 19, 37, 0.25);
+  box-shadow: 0 0 2px 1px rgba(29, 18, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
   /* line 42, ../src/smacss/base/_forms.scss */
@@ -1141,7 +1141,7 @@ select {
   height: calc(30 / 16 * 1rem);
   padding: 0 0.5em;
   text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
-  box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset;
+  box-shadow: 0 0.1em 0.1em rgba(29, 18, 37, 0.25) inset;
   cursor: pointer;
 }
 /* line 99, ../src/smacss/base/_forms.scss */
@@ -1441,7 +1441,7 @@ input[type="submit"] {
   background-color: #d0cad4;
   background-image: linear-gradient(rgba(191, 175, 151, 0.575), #b7adbe);
   border-radius: 0.2em;
-  box-shadow: 0 0.2em 0.2em rgba(30, 19, 37, 0.25);
+  box-shadow: 0 0.2em 0.2em rgba(29, 18, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
   /* line 9, ../src/smacss/base/_buttons.scss */
@@ -1481,7 +1481,7 @@ input[type="button"]:active,
 input[type="submit"]:active {
   background-color: #8d7b99;
   background-image: linear-gradient(#8d7b99, rgba(133, 111, 123, 0.7));
-  box-shadow: inset 0 0.1em 0.2em rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0.1em 0.2em rgba(29, 18, 37, 0.25);
 }
 
 /**
@@ -1497,7 +1497,7 @@ input[type="submit"]:active {
 input.prime,
 .webform-client-form .button-primary {
   color: #f2f2f2;
-  text-shadow: 0 -1px 0 rgba(30, 19, 37, 0.25);
+  text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
   background-color: #64933a;
   background-image: linear-gradient(#a1ba6c, #64933a);
   border-color: #46502b;
@@ -1549,7 +1549,7 @@ input.is-disabled:hover {
   text-shadow: 0 0.05em 0 rgba(253, 244, 182, 0.5);
   background: #aea3b6 none;
   border-color: #919191;
-  box-shadow: 0 0.1em 0.1em rgba(30, 19, 37, 0.25) inset;
+  box-shadow: 0 0.1em 0.1em rgba(29, 18, 37, 0.25) inset;
   cursor: not-allowed;
 }
 
@@ -2040,7 +2040,7 @@ body > div + header,
           flex-wrap: wrap;
   overflow: hidden;
   background-color: #f2f2f2;
-  box-shadow: 0 0 3px rgba(30, 19, 37, 0.25);
+  box-shadow: 0 0 3px rgba(29, 18, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
   /* line 74, ../src/smacss/_layout.scss */
@@ -2989,7 +2989,7 @@ input:checked + .header-dropdown {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    text-shadow: 0 2px 0 rgba(30, 19, 37, 0.25);
+    text-shadow: 0 2px 0 rgba(29, 18, 37, 0.25);
   }
 }
 @media screen and (min-width: 22em) {
@@ -3803,7 +3803,7 @@ input:checked + .header-dropdown {
 }
 /* line 91, ../src/smacss/modules/_tertiary-nav.scss */
 #tertiary-nav .accordion dd {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(242, 242, 242, 0.25);
 }
 
 /* line 96, ../src/smacss/modules/_tertiary-nav.scss */
@@ -3976,8 +3976,8 @@ input:checked + .header-dropdown {
   height: auto;
   max-height: 0;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 2px 2px rgba(30, 19, 37, 0.25) inset;
+  background-color: rgba(242, 242, 242, 0.25);
+  box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25) inset;
   transition: max-height 0.25s ease 0s;
 }
 @media screen and (min-width: 43em) {
@@ -4999,6 +4999,7 @@ ul.accordion-inner {
 .media-child-alt {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
           align-self: center;
 }
 
@@ -5033,7 +5034,6 @@ ul.accordion-inner {
 .media-squishy {
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
-              -ms-grid-row-align: stretch;
           align-items: stretch;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
@@ -5045,7 +5045,6 @@ ul.accordion-inner {
   .media-squishy {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
-                -ms-grid-row-align: stretch;
             align-items: stretch;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -5326,7 +5325,7 @@ p.alert {
  */
 /* line 136, ../src/smacss/modules/_boxes.scss */
 .caption-box {
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 0 rgba(242, 242, 242, 0.5);
   background-color: rgba(242, 242, 242, 0.95);
 }
 
@@ -5585,7 +5584,7 @@ p.alert {
   color: #f2f2f2;
   background-color: #00365f;
   border-radius: 2px;
-  box-shadow: 0 2px 2px rgba(30, 19, 37, 0.25);
+  box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25);
 }
 
 /* line 32, ../src/smacss/modules/_images.scss */
@@ -5907,7 +5906,7 @@ p.alert {
   position: absolute;
   top: 0;
   right: -100%;
-  box-shadow: -0.25em 0 1em rgba(30, 19, 37, 0.25);
+  box-shadow: -0.25em 0 1em rgba(29, 18, 37, 0.25);
   content: "";
 }
 @media screen and (min-width: 43em) {
@@ -6150,7 +6149,6 @@ p.alert {
 .bulletin .grid {
   -webkit-align-items: center;
       -ms-flex-align: center;
-              -ms-grid-row-align: center;
           align-items: center;
 }
 
@@ -6953,7 +6951,7 @@ p.alert {
   overflow: hidden;
   background-color: #e1dee3;
   border-radius: 2px;
-  box-shadow: 0 1px 1px rgba(30, 19, 37, 0.25);
+  box-shadow: 0 1px 1px rgba(29, 18, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
   /* line 21, ../src/smacss/modules/_directories.scss */
@@ -7127,7 +7125,7 @@ p.alert {
 
 /* line 492, ../src/smacss/_modules.scss */
 #toolbar {
-  box-shadow: 0 1px 0.25em rgba(30, 19, 37, 0.25);
+  box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }
 
 /**

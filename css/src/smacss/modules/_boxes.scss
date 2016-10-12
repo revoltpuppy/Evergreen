@@ -135,9 +135,9 @@ p.alert{  // WYSIWYG
 
 .caption-box{
 	// typography
-	text-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.5);
+	text-shadow: 0 1px 0 transparentize($tint, 0.5);
 	// backgrounds and borders
-	background-color: hsla(0, 0%, 95%, 0.95);
+	background-color: transparentize($tint, 0.05);
 }
 
 .caption-box img{
@@ -186,11 +186,11 @@ p.alert{  // WYSIWYG
 	text-align: center;
 	// decoration
 	background: transparent none;
-	
+
 	@include breakpoint($lil-groot){
 		flex-direction: row;
 	}
-	
+
 	@include breakpoint($starlord){
 		width: 75%;
 	}

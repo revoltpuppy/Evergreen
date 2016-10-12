@@ -43,7 +43,7 @@ rules:
     - 2
     -
       max-depth: 1
-  no-color-literals: 1
+  no-color-literals: 2
   no-duplicate-properties:
     - 2
     -
@@ -61,7 +61,7 @@ rules:
   no-trailing-zero: 2
   no-url-protocols: 2
   no-vendor-prefixes:
-    - 2
+    - 1
     -
       additional-identifiers:
         - khtml
@@ -72,7 +72,7 @@ rules:
   no-ids: 1
   no-important: 1
   one-declaration-per-line: 2
-  placeholder-in-extend: 1
+  #placeholder-in-extend: 1
   #property-sort-order: This is very long. See the bottom of the list.
   quotes:
     - 2
@@ -103,6 +103,10 @@ rules:
     - 2
     -
       order:
+      	# ordered by
+      		# category (vaguely by importance)
+      		# direction (e.g. for box model: top, right, bottom, left)
+      		# alphabetically
         # box model
         - border
         - border-top
@@ -148,6 +152,8 @@ rules:
         - float
         - justify-content
         - overflow
+        - overflow-x
+        - overflow-y
         - position
         - top
         - right

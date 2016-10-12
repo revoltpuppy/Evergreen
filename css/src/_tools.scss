@@ -21,7 +21,7 @@ $highlight: transparentize($morning-light, 0.5);
 $tint: hsl(0, 0%, 95%);
 $shade: hsl(0, 0%, 0%);
 
-$drop-shadow: hsla(275, 33%, 11%, 0.25);
+$drop-shadow: transparentize(mix($shade, $blueberry-susan, 60%), 0.75);
 
 $display-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 $text-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;

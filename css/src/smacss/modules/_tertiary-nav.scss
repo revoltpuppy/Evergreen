@@ -89,7 +89,7 @@
 	background-color: transparent;
 
 	dd{
-		background-color: hsla(0, 0%, 100%, 0.25);
+		background-color: transparentize($tint, 0.75);
 	}
 }
 
@@ -251,8 +251,8 @@
 	max-height: 0;
 	// layout
 	overflow: hidden;
-	// backgrounds & borders
-	background-color: hsla(0, 0%, 100%, 0.25);
+	// decoration
+	background-color: transparentize($tint, 0.75);
 	// misc
 	box-shadow: 0 2px 2px $drop-shadow inset;
 	// transition
@@ -261,7 +261,7 @@
 	@include breakpoint ($gamora){
 		border-bottom-width: 0;
 		max-height: 600px;
-		// backgrounds & borders
+		// decoration
 		background-color: transparent;
 		// misc
 		box-shadow: none;
