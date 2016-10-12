@@ -1,5 +1,6 @@
 .sass-cache
 
+# Temporary "trash" folder; if there is no current trash folder, remove this line
 trash
 
 lib-cov
