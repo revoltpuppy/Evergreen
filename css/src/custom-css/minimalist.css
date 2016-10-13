@@ -1,3 +1,10 @@
+/**
+ * Flowplayer Styles
+ *
+ * Note: We are unsure if we will still need this file in Drupal. That
+ * depends on who will be fixing Flowplayer, which is up in the air
+ * right now, because nobody wants to take ownership of the problem.
+ */
 @font-face {
   font-family: 'fpicons';
   src:url('fonts/fpicons.eot?yg5dv7');

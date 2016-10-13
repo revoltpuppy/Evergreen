@@ -1,3 +1,8 @@
+/**
+ * Deprecated
+ *
+ * This file is not needed in Drupal.
+ */
 form div.info {display:none !important;}
 form ul li#errorLi {margin: 10px 0;}
 form ul li#errorLi h3#errorMsgLbl {}

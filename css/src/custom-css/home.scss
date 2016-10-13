@@ -1,3 +1,51 @@
 @charset "UTF-8";
+/**
+ * Homepage
+ *
+ * Special styles just for the homepage.
+ *
+ * Table of Contents
+ * 1. Unpublished Content
+ * 2. SVG Transporter
+ * 3. Slick Slider
+ */
+
+/**
+ * 1. Unpublished Content
+ *
+ * Playing around with styles for unpublished content (still needs some work)
+ */
+.node-unpublished .content::before {
+	// box model
+	padding-right: 1ch;
+	padding-left: 1ch;
+	// typography
+	font-weight: bold;
+	text-transform: uppercase;
+	// decoration
+	background-color: #FF9494;
+	border-radius: 2px;
+	// misc
+	content: "Unpublished";
+}
+
+/**
+ * 2. SVG Transporter
+ *
+ * We’d like to have SVG icons that can be themed with CSS, but browsers
+ * make this very challenging.
+ *
+ * This is currently in an experimental test phase, so it’s commented out.
+ */
+
+//@import "home/svg-transporter";
+
+/**
+ * 3. Slick Slider
+ *
+ * Slick Slider is used on the homepage for Upcoming Events Calendar at
+ * smaller screen sizes.
+ */
+
 @import "slick";  // Import styles for Slick carousel
 @import "slick-theme";  // Import styles for Slick theme

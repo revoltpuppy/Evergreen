@@ -1,0 +1,69 @@
+/**
+ * SVG Transporter
+ *
+ * We’d like to have SVG icons that can be themed with CSS, but browsers
+ * make this very challenging.
+ *
+ * These styles were written by Naomi Touchet.
+ */
+
+/* not sure about this--it gets rid of the bottom and top margins--need to test
+more */
+.transporter li{
+	margin: 0;
+}
+
+/* padding hack styles for the green circle
+ transporters */
+.transporter-icon{
+	width: 100%;
+	height: 0;
+	padding-top: 85%;
+}
+
+/* general styles for transporter-icon svg, 
+plus padding hack for aspect ratio */
+.transporter-icon svg{
+	// box model
+	height: 75px;
+	margin: auto;
+	width: 50%;
+	// layout
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	// decoration
+	fill: $tint;
+	// behavior
+	//transition: width 0.1s ease;
+}
+
+/* Hover effect for transporters */
+.transporter-icon svg:hover{
+	// box model
+	//width: 60%;
+	// behavior
+	transform: scale(1.2);
+	transition: transform 0.1s ease;
+}
+
+/*Sizes the icons appropriately to the text*/
+.icon-scale{
+	transform: scale(0.8);
+}
+
+.transporter-text{
+	transform: scale(1.2);
+}
+
+/*sets height & color for fun facts svgs
+(have to set height here instead of in html 
+for it to work correctly in all browsers)*/
+.media-img svg{
+	// box model
+	height: 75px;
+	// decoration
+	fill: $evergreen-neue;
+}
