@@ -209,6 +209,7 @@ rules:
         - border-bottom-left-radius
         - box-shadow
         - counter-increment
+        - fill
         - outline
         - outline-width
         # behavior
